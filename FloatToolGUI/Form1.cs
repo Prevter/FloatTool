@@ -9,6 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,6 +17,7 @@ namespace FloatToolGUI
 {
     public partial class FloatTool : Form
     {
+        Thread thread1;
         public static string ToExactString(double d)
         {
             if (double.IsPositiveInfinity(d))
@@ -222,22 +224,27 @@ namespace FloatToolGUI
                 //}
                 if (flot.StartsWith(want) || ("" + flotOrigin).StartsWith(want.Replace(".", ",")))
                 {
-                    textBox2.Text += "Коомбинация найдена!" + Environment.NewLine;
-                    textBox2.Text += "Возможный флоат: " + flotOrigin + Environment.NewLine;
-                    //textBox2.Text += "IEEE754: " + flot + Environment.NewLine;
-                    textBox2.Text += "Список флоатов: [";
-                    for (int i = 0; i < 10; i++)
+                    this.Invoke((MethodInvoker)(() =>
                     {
-                        textBox2.Text += inputs[i];
-                        if (i != 9)
+                        textBox2.Text += "Коомбинация найдена!" + Environment.NewLine;
+                        textBox2.Text += "Возможный флоат: " + flotOrigin + Environment.NewLine;
+                        textBox2.Text += "Список флоатов: [";
+                        for (int i = 0; i < 10; i++)
                         {
-                            textBox2.Text += ", ";
-                        }
-                        else
-                        {
-                            textBox2.Text += "]" + Environment.NewLine +"======================================" + Environment.NewLine;
+                            textBox2.Text += inputs[i];
+                            if (i != 9)
+                            {
+                                textBox2.Text += ", ";
+                            }
+                            else
+                            {
+                                textBox2.Text += "]" + Environment.NewLine + "======================================" + Environment.NewLine;
+                            }
                         }
                     }
+                    ));
+                    
+                    //textBox2.Text += "IEEE754: " + flot + Environment.NewLine;
                     return;
                 }
             }
@@ -262,7 +269,23 @@ namespace FloatToolGUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            thread1 = new Thread(StartCalculation);
+            comboBox2.Items.Clear();
+            using (StreamReader r = new StreamReader("itemData.json"))
+            {
+                string json = r.ReadToEnd();
+                dynamic items = JsonConvert.DeserializeObject(json);
+                foreach (var skin in items)
+                {
 
+                    if (skin["name"].ToString().Split('|')[0].TrimEnd() == comboBox1.Text)
+                    {
+                        Console.WriteLine(skin["name"].ToString().Split('|')[1].Remove(0, 1));
+                        comboBox2.Items.Add(skin["name"].ToString().Split('|')[1].Remove(0, 1));
+                    }
+                }
+            }
+            updateSearchStr();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -310,22 +333,39 @@ namespace FloatToolGUI
             updateSearchStr();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void StartCalculation()
         {
-            textBox2.Text = "Добро пожаловать в FloatTool!" + Environment.NewLine + "Инструмент для создания флоатов при помощи крафтов CS:GO";
-            textBox2.Text += "Время начала процесса: "+ DateTime.Now.ToString("h:mm:ss tt");
+            this.Invoke((MethodInvoker)(() =>
+                {
+                    textBox2.Text = "Добро пожаловать в FloatTool!" + Environment.NewLine + "Инструмент для создания флоатов при помощи крафтов CS:GO" + Environment.NewLine;
+                    textBox2.Text += "Время начала процесса: " + DateTime.Now.ToString("hh:mm:ss tt") + Environment.NewLine;
+                    button2.Text = "Стоп";
+                }
+            ));
+            
             string count = "" + numericUpDown1.Value;
             string start = "" + numericUpDown2.Value;
             string wanted = textBox3.Text;
             string q = textBox1.Text;
             string url = "https://steamcommunity.com/market/listings/730/" + q + "/render/?query=&language=russian&count=" + count + "&start=" + start + "&currency=5";
-            textBox2.Text += Environment.NewLine + "Загрузка скинов с торговой площадки..." + Environment.NewLine;
+            this.Invoke((MethodInvoker)(() =>
+            {
+                textBox2.Text += "Загрузка скинов с торговой площадки..." + Environment.NewLine;
+                progressBar1.Maximum = int.Parse(count);
+                progressBar1.Value = 0;
+            }
+            ));
+            
             List<double> floats = new List<double>();
             using (WebClient wc = new WebClient())
             {
                 string json = wc.DownloadString(url);
                 dynamic r = JsonConvert.DeserializeObject(json);
-                textBox2.Text += "Получение флоатов..." + Environment.NewLine;
+                this.Invoke((MethodInvoker)(() =>
+                    {
+                        textBox2.Text += "Получение флоатов..." + Environment.NewLine;
+                    }
+                ));
                 int counter = 0;
                 foreach (var el in r["listinginfo"])
                 {
@@ -348,8 +388,12 @@ namespace FloatToolGUI
                             Console.Write("");
                         }
                     }
-                    int loaded = (int)Math.Round(40 * ((float)counter / int.Parse(count)));
-                    progressBar1.Value = loaded;
+                    this.Invoke((MethodInvoker)(() =>
+                    {
+                        progressBar1.Value = counter;
+                    }
+                    ));
+                    
                 }
             }
             if (checkBox2.Checked)
@@ -368,7 +412,12 @@ namespace FloatToolGUI
             //foreach (double v in floats) {
             //    Console.WriteLine(v);
             //}
-            textBox2.Text += "Поиск ауткамов..." + Environment.NewLine;
+            this.Invoke((MethodInvoker)(() =>
+            {
+                textBox2.Text += "Поиск ауткамов..." + Environment.NewLine;
+            }
+            ));
+            
             string currData = getSkinData(q.Split('(')[0].TrimEnd());
             List<dynamic> craftList = new List<dynamic>();
             using (StreamReader r = new StreamReader("itemData.json"))
@@ -388,7 +437,11 @@ namespace FloatToolGUI
                     }
                 }
             }
-            textBox2.Text += "Ауткамы найдены! Начинаю подбор..." + Environment.NewLine + Environment.NewLine;
+            this.Invoke((MethodInvoker)(() =>
+            {
+                textBox2.Text += "Ауткамы найдены! Начинаю подбор..." + Environment.NewLine + Environment.NewLine;
+            }
+            ));
             //return;
             double[] pool = floats.ToArray();
             int n = floats.Count;
@@ -419,7 +472,30 @@ namespace FloatToolGUI
                 //
                 iter++;
             }
-            textBox2.Text += "Программа завершила проверку всех комбинаций!" + Environment.NewLine;
+            this.Invoke((MethodInvoker)(() =>
+                {
+                    textBox2.Text += "Программа завершила проверку всех комбинаций!" + Environment.NewLine;
+                }
+            ));
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(button2.Text == "Старт") {
+                thread1.Start();
+            }
+            else
+            {
+                thread1.Abort();
+                button2.Text = "Старт";
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            textBox1.SelectionStart = textBox1.Text.Length;
+            textBox2.ScrollToCaret();
         }
     }
 }
