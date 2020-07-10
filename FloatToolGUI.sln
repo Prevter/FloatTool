@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatToolGUI", "FloatToolGUI\FloatToolGUI.csproj", "{A5906B52-BA1B-481C-BF4C-3028EF52A925}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5906B52-BA1B-481C-BF4C-3028EF52A925}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5906B52-BA1B-481C-BF4C-3028EF52A925}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5906B52-BA1B-481C-BF4C-3028EF52A925}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5906B52-BA1B-481C-BF4C-3028EF52A925}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD77D20C-F287-4395-A963-6EC6CCE65704}
+	EndGlobalSection
+EndGlobal
