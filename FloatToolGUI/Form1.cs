@@ -151,15 +151,15 @@ namespace FloatToolGUI
                                 decimalPoint);
             }
         }
-        static public double craft(double[] ingridients, float minFloat, float maxFloat)
+        static public decimal craft(double[] ingridients, float minFloat, float maxFloat)
         {
-            double avgFloat = 0;
+            decimal avgFloat = 0;
             foreach (double f in ingridients)
             {
-                avgFloat += f;
+                avgFloat += (decimal)f;
             }
             avgFloat /= 10;
-            return (maxFloat - minFloat) * avgFloat + minFloat;
+            return ((decimal)(maxFloat - minFloat) * avgFloat) + (decimal)minFloat;
         }
         static public string getNextRarity(string rarity)
         {
@@ -216,8 +216,9 @@ namespace FloatToolGUI
                 //want = want.Replace(".", ",");
                 float minWear = item["minWear"];
                 float maxWear = item["maxWear"];
-                double flotOrigin = craft(inputs.ToArray(), minWear, maxWear);
-                string flot = ToExactString(flotOrigin);
+                decimal flotOrigin = Math.Round(craft(inputs.ToArray(), minWear, maxWear), 9);
+                string flot = ToExactString((double)flotOrigin);
+                Console.WriteLine(flot);
                 //Debug.WriteLine("[DEBUG] flot = " + flot);
                 // if (wasSort && ((!asc && (double.Parse(flot) > double.Parse(want))) || (asc && (double.Parse(flot) < double.Parse(want))))) {
                 //     okSort = true;
@@ -226,6 +227,20 @@ namespace FloatToolGUI
                 {
                     this.Invoke((MethodInvoker)(() =>
                     {
+                        using (WebClient wcf = new WebClient())
+                        {
+                            try
+                            {
+                                //string jsonf = wcf.DownloadString(url);
+                                //dynamic rf = JsonConvert.DeserializeObject(jsonf);
+                                //Debug.WriteLine("[DEBUG] " + counter + "/" + count + " load from csgofloat = " + jsonf);
+                                //floats.Add(Convert.ToDouble(rf["iteminfo"]["floatvalue"]));
+                            }
+                            catch
+                            {
+                                Console.Write("");
+                            }
+                        }
                         textBox2.Text += "Коомбинация найдена!" + Environment.NewLine;
                         textBox2.Text += "Возможный флоат: " + flotOrigin + Environment.NewLine;
                         textBox2.Text += "Список флоатов: [";
@@ -241,6 +256,8 @@ namespace FloatToolGUI
                                 textBox2.Text += "]" + Environment.NewLine + "======================================" + Environment.NewLine;
                             }
                         }
+                        textBox1.SelectionStart = textBox1.Text.Length;
+                        textBox2.ScrollToCaret();
                     }
                     ));
                     
@@ -248,6 +265,20 @@ namespace FloatToolGUI
                     return;
                 }
             }
+        }
+
+        public void SwitchEnabled()
+        {
+            comboBox1.Enabled = !comboBox1.Enabled;
+            comboBox2.Enabled = !comboBox2.Enabled;
+            textBox1.Enabled = !textBox1.Enabled;
+            comboBox3.Enabled = !comboBox3.Enabled;
+            textBox3.Enabled = !textBox3.Enabled;
+            numericUpDown1.Enabled = !numericUpDown1.Enabled;
+            numericUpDown2.Enabled = !numericUpDown2.Enabled;
+            checkBox1.Enabled = !checkBox1.Enabled;
+            checkBox2.Enabled = !checkBox2.Enabled;
+            checkBox3.Enabled = !checkBox3.Enabled;
         }
         public void updateSearchStr()
         {
@@ -269,7 +300,6 @@ namespace FloatToolGUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            thread1 = new Thread(StartCalculation);
             comboBox2.Items.Clear();
             using (StreamReader r = new StreamReader("itemData.json"))
             {
@@ -338,8 +368,10 @@ namespace FloatToolGUI
             this.Invoke((MethodInvoker)(() =>
                 {
                     textBox2.Text = "Добро пожаловать в FloatTool!" + Environment.NewLine + "Инструмент для создания флоатов при помощи крафтов CS:GO" + Environment.NewLine;
-                    textBox2.Text += "Время начала процесса: " + DateTime.Now.ToString("hh:mm:ss tt") + Environment.NewLine;
+                    textBox2.Text += "Время начала процесса: " + DateTime.Now.ToString("HH:mm:ss tt") + Environment.NewLine;
                     button2.Text = "Стоп";
+                    textBox1.SelectionStart = textBox1.Text.Length;
+                    textBox2.ScrollToCaret();
                 }
             ));
             
@@ -348,11 +380,14 @@ namespace FloatToolGUI
             string wanted = textBox3.Text;
             string q = textBox1.Text;
             string url = "https://steamcommunity.com/market/listings/730/" + q + "/render/?query=&language=russian&count=" + count + "&start=" + start + "&currency=5";
+            Console.WriteLine(url);
             this.Invoke((MethodInvoker)(() =>
             {
                 textBox2.Text += "Загрузка скинов с торговой площадки..." + Environment.NewLine;
                 progressBar1.Maximum = int.Parse(count);
                 progressBar1.Value = 0;
+                textBox1.SelectionStart = textBox1.Text.Length;
+                textBox2.ScrollToCaret();
             }
             ));
             
@@ -364,6 +399,8 @@ namespace FloatToolGUI
                 this.Invoke((MethodInvoker)(() =>
                     {
                         textBox2.Text += "Получение флоатов..." + Environment.NewLine;
+                        textBox1.SelectionStart = textBox1.Text.Length;
+                        textBox2.ScrollToCaret();
                     }
                 ));
                 int counter = 0;
@@ -415,6 +452,8 @@ namespace FloatToolGUI
             this.Invoke((MethodInvoker)(() =>
             {
                 textBox2.Text += "Поиск ауткамов..." + Environment.NewLine;
+                textBox1.SelectionStart = textBox1.Text.Length;
+                textBox2.ScrollToCaret();
             }
             ));
             
@@ -440,6 +479,8 @@ namespace FloatToolGUI
             this.Invoke((MethodInvoker)(() =>
             {
                 textBox2.Text += "Ауткамы найдены! Начинаю подбор..." + Environment.NewLine + Environment.NewLine;
+                textBox1.SelectionStart = textBox1.Text.Length;
+                textBox2.ScrollToCaret();
             }
             ));
             //return;
@@ -475,6 +516,8 @@ namespace FloatToolGUI
             this.Invoke((MethodInvoker)(() =>
                 {
                     textBox2.Text += "Программа завершила проверку всех комбинаций!" + Environment.NewLine;
+                    textBox1.SelectionStart = textBox1.Text.Length;
+                    textBox2.ScrollToCaret();
                 }
             ));
             
@@ -483,6 +526,7 @@ namespace FloatToolGUI
         private void button2_Click(object sender, EventArgs e)
         {
             if(button2.Text == "Старт") {
+                thread1 = new Thread(StartCalculation);
                 thread1.Start();
             }
             else
@@ -490,6 +534,7 @@ namespace FloatToolGUI
                 thread1.Abort();
                 button2.Text = "Старт";
             }
+            SwitchEnabled();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

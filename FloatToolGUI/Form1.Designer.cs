@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FloatTool));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -66,6 +66,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(267, 21);
             this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "Nova | Predator (Field-Tested)";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -88,17 +89,6 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Поиск Скина";
-            // 
-            // button1
-            // 
-            this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(224, 107);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(10, 177);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Проверить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
             // 
             // label4
             // 
@@ -223,6 +213,17 @@
             this.comboBox1.Text = "Nova";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // button1
+            // 
+            this.button1.Enabled = false;
+            this.button1.Location = new System.Drawing.Point(224, 107);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(10, 177);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Проверить";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.checkBox3);
@@ -239,7 +240,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
             this.groupBox2.Location = new System.Drawing.Point(12, 102);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(210, 182);
+            this.groupBox2.Size = new System.Drawing.Size(210, 207);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Подбор";
@@ -335,18 +336,18 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(7, 119);
+            this.progressBar1.Location = new System.Drawing.Point(7, 120);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(197, 21);
+            this.progressBar1.Size = new System.Drawing.Size(197, 29);
             this.progressBar1.Step = 1;
             this.progressBar1.TabIndex = 1;
             // 
             // button2
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(6, 146);
+            this.button2.Location = new System.Drawing.Point(6, 155);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(198, 30);
+            this.button2.Size = new System.Drawing.Size(198, 46);
             this.button2.TabIndex = 0;
             this.button2.Text = "Старт";
             this.button2.UseVisualStyleBackColor = true;
@@ -358,7 +359,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox3.Location = new System.Drawing.Point(236, 100);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(386, 184);
+            this.groupBox3.Size = new System.Drawing.Size(386, 209);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Результат";
@@ -373,7 +374,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox2.Size = new System.Drawing.Size(372, 157);
+            this.textBox2.Size = new System.Drawing.Size(372, 174);
             this.textBox2.TabIndex = 0;
             this.textBox2.Text = "Добро пожаловать в FloatTool!\r\nИнструмент для создания флоатов при помощи крафтов" +
     " CS:GO";
@@ -385,7 +386,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(630, 287);
+            this.ClientSize = new System.Drawing.Size(634, 321);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -393,8 +394,8 @@
             this.ForeColor = System.Drawing.Color.Navy;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(650, 330);
-            this.MinimumSize = new System.Drawing.Size(650, 330);
+            this.MaximumSize = new System.Drawing.Size(650, 360);
+            this.MinimumSize = new System.Drawing.Size(650, 360);
             this.Name = "FloatTool";
             this.Text = "FloatTool";
             this.Load += new System.EventHandler(this.Form1_Load);
