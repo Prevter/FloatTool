@@ -217,13 +217,13 @@ namespace FloatToolGUI
                 float minWear = item["minWear"];
                 float maxWear = item["maxWear"];
                 decimal flotOrigin = Math.Round(craft(inputs.ToArray(), minWear, maxWear), 9);
-                string flot = ToExactString((double)flotOrigin);
-                Console.WriteLine(flot);
+                //string flot = ToExactString((double)flotOrigin);
+                Console.WriteLine(flotOrigin);
                 //Debug.WriteLine("[DEBUG] flot = " + flot);
                 // if (wasSort && ((!asc && (double.Parse(flot) > double.Parse(want))) || (asc && (double.Parse(flot) < double.Parse(want))))) {
                 //     okSort = true;
                 //}
-                if (flot.StartsWith(want) || ("" + flotOrigin).StartsWith(want.Replace(".", ",")))
+                if (/*flot.StartsWith(want) ||*/ ("" + flotOrigin).StartsWith(want.Replace(".", ",")))
                 {
                     this.Invoke((MethodInvoker)(() =>
                     {
@@ -241,27 +241,25 @@ namespace FloatToolGUI
                                 Console.Write("");
                             }
                         }
-                        textBox2.Text += "Коомбинация найдена!" + Environment.NewLine;
-                        textBox2.Text += "Возможный флоат: " + flotOrigin + Environment.NewLine;
-                        textBox2.Text += "Список флоатов: [";
+                        textBox2.AppendText("Коомбинация найдена!" + Environment.NewLine);
+                        textBox2.AppendText("Возможный флоат: " + flotOrigin + Environment.NewLine);
+                        textBox2.AppendText("Список флоатов: [");
                         for (int i = 0; i < 10; i++)
                         {
-                            textBox2.Text += inputs[i];
+                            textBox2.AppendText(inputs[i].ToString().Replace(",","."));
                             if (i != 9)
                             {
-                                textBox2.Text += ", ";
+                                textBox2.AppendText(", ");
                             }
                             else
                             {
-                                textBox2.Text += "]" + Environment.NewLine + "======================================" + Environment.NewLine;
+                                textBox2.AppendText("]" + Environment.NewLine + "======================================" + Environment.NewLine);
                             }
                         }
-                        textBox1.SelectionStart = textBox1.Text.Length;
-                        textBox2.ScrollToCaret();
                     }
                     ));
                     
-                    //textBox2.Text += "IEEE754: " + flot + Environment.NewLine;
+                    //textBox2.AppendText( "IEEE754: " + flot + Environment.NewLine;
                     return;
                 }
             }
@@ -368,7 +366,7 @@ namespace FloatToolGUI
             this.Invoke((MethodInvoker)(() =>
                 {
                     textBox2.Text = "Добро пожаловать в FloatTool!" + Environment.NewLine + "Инструмент для создания флоатов при помощи крафтов CS:GO" + Environment.NewLine;
-                    textBox2.Text += "Время начала процесса: " + DateTime.Now.ToString("HH:mm:ss tt") + Environment.NewLine;
+                    textBox2.AppendText( "Время начала процесса: " + DateTime.Now.ToString("HH:mm:ss tt") + Environment.NewLine);
                     button2.Text = "Стоп";
                     textBox1.SelectionStart = textBox1.Text.Length;
                     textBox2.ScrollToCaret();
@@ -383,7 +381,7 @@ namespace FloatToolGUI
             Console.WriteLine(url);
             this.Invoke((MethodInvoker)(() =>
             {
-                textBox2.Text += "Загрузка скинов с торговой площадки..." + Environment.NewLine;
+                textBox2.AppendText( "Загрузка скинов с торговой площадки..." + Environment.NewLine);
                 progressBar1.Maximum = int.Parse(count);
                 progressBar1.Value = 0;
                 textBox1.SelectionStart = textBox1.Text.Length;
@@ -398,7 +396,7 @@ namespace FloatToolGUI
                 dynamic r = JsonConvert.DeserializeObject(json);
                 this.Invoke((MethodInvoker)(() =>
                     {
-                        textBox2.Text += "Получение флоатов..." + Environment.NewLine;
+                        textBox2.AppendText( "Получение флоатов..." + Environment.NewLine);
                         textBox1.SelectionStart = textBox1.Text.Length;
                         textBox2.ScrollToCaret();
                     }
@@ -451,7 +449,7 @@ namespace FloatToolGUI
             //}
             this.Invoke((MethodInvoker)(() =>
             {
-                textBox2.Text += "Поиск ауткамов..." + Environment.NewLine;
+                textBox2.AppendText( "Поиск ауткамов..." + Environment.NewLine);
                 textBox1.SelectionStart = textBox1.Text.Length;
                 textBox2.ScrollToCaret();
             }
@@ -478,7 +476,7 @@ namespace FloatToolGUI
             }
             this.Invoke((MethodInvoker)(() =>
             {
-                textBox2.Text += "Ауткамы найдены! Начинаю подбор..." + Environment.NewLine + Environment.NewLine;
+                textBox2.AppendText( "Ауткамы найдены! Начинаю подбор..." + Environment.NewLine + Environment.NewLine);
                 textBox1.SelectionStart = textBox1.Text.Length;
                 textBox2.ScrollToCaret();
             }
@@ -515,7 +513,7 @@ namespace FloatToolGUI
             }
             this.Invoke((MethodInvoker)(() =>
                 {
-                    textBox2.Text += "Программа завершила проверку всех комбинаций!" + Environment.NewLine;
+                    textBox2.AppendText( "Программа завершила проверку всех комбинаций!" + Environment.NewLine);
                     textBox1.SelectionStart = textBox1.Text.Length;
                     textBox2.ScrollToCaret();
                 }
