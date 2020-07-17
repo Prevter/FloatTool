@@ -7,11 +7,14 @@ using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Media;
 using System.Net;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace FloatToolGUI
 {
@@ -216,7 +219,7 @@ namespace FloatToolGUI
                 //want = want.Replace(".", ",");
                 float minWear = item["minWear"];
                 float maxWear = item["maxWear"];
-                decimal flotOrigin = Math.Round(craft(inputs.ToArray(), minWear, maxWear), 9);
+                decimal flotOrigin = Math.Round(craft(inputs.ToArray(), minWear, maxWear), 14);
                 //string flot = ToExactString((double)flotOrigin);
                 Console.WriteLine(flotOrigin);
                 //Debug.WriteLine("[DEBUG] flot = " + flot);
@@ -244,9 +247,17 @@ namespace FloatToolGUI
                         textBox2.AppendText("Коомбинация найдена!" + Environment.NewLine);
                         textBox2.AppendText("Возможный флоат: " + flotOrigin + Environment.NewLine);
                         textBox2.AppendText("Список флоатов: [");
+                        if (toolStripMenuItem2.Checked)
+                        {
+                            //play sound
+                            System.Reflection.Assembly a = System.Reflection.Assembly.GetExecutingAssembly();
+                            System.IO.Stream s = a.GetManifestResourceStream(AssemblyName.GetAssemblyName("FloatTool GUI.exe").ToString()+".notify.wav");
+                            SoundPlayer player = new SoundPlayer(s);
+                            player.Play();
+                        }
                         for (int i = 0; i < 10; i++)
                         {
-                            textBox2.AppendText(inputs[i].ToString().Replace(",","."));
+                            textBox2.AppendText(Math.Round(inputs[i], 14).ToString().Replace(",","."));
                             if (i != 9)
                             {
                                 textBox2.AppendText(", ");
@@ -539,6 +550,103 @@ namespace FloatToolGUI
         {
             textBox1.SelectionStart = textBox1.Text.Length;
             textBox2.ScrollToCaret();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            updateSearchStr();
+            string skin = "";
+            skin += comboBox1.Text;
+            skin += " | ";
+            skin += comboBox2.Text;
+            //search += " (" + comboBox3.Text + ")";
+
+            using (StreamReader r = new StreamReader("itemData.json"))
+            {
+                string json = r.ReadToEnd();
+                dynamic items = JsonConvert.DeserializeObject(json);
+                foreach (var skn in items)
+                {
+                    if (skn["name"].ToString() == skin)
+                    {
+                        if (skn["highestRarity"] == "False")
+                        {
+                            if (floatRangeText(comboBox3.Text, skn["minWear"].ToString(), skn["maxWear"].ToString()))
+                            {
+                                MessageBox.Show("Данный скин доступен к поиску!", "FloatTool", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                return;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Качество которое вы выбрали недоступно для этого скина.", "FloatTool", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Вы не можете делать контракты из скинов максимальной редкости в этой коллекции.", "FloatTool", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                }
+            }
+
+            MessageBox.Show("Такого скина не существует! Перепроверьте настройки.", "FloatTool", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        bool testOverlap(float x1, float x2, float y1, float y2)
+        {
+            return (x1 >= y1 && x1 <= y2) ||
+                   (x2 >= y1 && x2 <= y2) ||
+                   (y1 >= x1 && y1 <= x2) ||
+                   (y2 >= x1 && y2 <= x2);
+        }
+
+        private bool floatRangeText(string text, string minVal, string maxVal)
+        {
+            Console.WriteLine(text + " in float range [" + minVal + ", " + maxVal + "]");
+            float minWear = float.Parse(minVal.Replace('.',','));
+            float maxWear = float.Parse(maxVal.Replace('.', ','));
+
+
+            if (text == "Factory New")
+            {
+                return testOverlap(minWear, maxWear, 0, 0.07f);
+            }
+            else if (text == "Minimal Wear")
+            {
+                return testOverlap(minWear, maxWear, 0.07f, 0.15f);
+            }
+            else if (text == "Field-Tested")
+            {
+                return testOverlap(minWear, maxWear, 0.15f, 0.38f);
+            }
+            else if (text == "Well-Wornr")
+            {
+                return testOverlap(minWear, maxWear, 0.38f, 0.45f);
+            }
+            else if (text == "Battle-Scarred")
+            {
+                return testOverlap(minWear, maxWear, 0.45f, 1);
+            }
+
+            return false;
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/Nemeshio/FloatTool-GUI");
+        }
+
+        private void туториалToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/Nemeshio/FloatTool-GUI/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F");
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About aboutForm = new About();
+            aboutForm.Show();
         }
     }
 }
