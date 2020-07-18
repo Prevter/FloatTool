@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using DiscordRPC;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -230,20 +231,6 @@ namespace FloatToolGUI
                 {
                     this.Invoke((MethodInvoker)(() =>
                     {
-                        using (WebClient wcf = new WebClient())
-                        {
-                            try
-                            {
-                                //string jsonf = wcf.DownloadString(url);
-                                //dynamic rf = JsonConvert.DeserializeObject(jsonf);
-                                //Debug.WriteLine("[DEBUG] " + counter + "/" + count + " load from csgofloat = " + jsonf);
-                                //floats.Add(Convert.ToDouble(rf["iteminfo"]["floatvalue"]));
-                            }
-                            catch
-                            {
-                                Console.Write("");
-                            }
-                        }
                         textBox2.AppendText("Коомбинация найдена!" + Environment.NewLine);
                         textBox2.AppendText("Возможный флоат: " + flotOrigin + Environment.NewLine);
                         textBox2.AppendText("Список флоатов: [");
@@ -251,10 +238,20 @@ namespace FloatToolGUI
                         {
                             //play sound
                             System.Reflection.Assembly a = System.Reflection.Assembly.GetExecutingAssembly();
-                            System.IO.Stream s = a.GetManifestResourceStream(AssemblyName.GetAssemblyName("FloatTool GUI.exe").ToString()+".notify.wav");
+                            System.IO.Stream s = a.GetManifestResourceStream("notify.wav");
                             SoundPlayer player = new SoundPlayer(s);
                             player.Play();
                         }
+                        client.SetPresence(new RichPresence()
+                        {
+                            Details = "Нашёл комбинацию!!!",
+                            State = "Крафчу " + flotOrigin,
+                            Assets = new Assets()
+                            {
+                                LargeImageKey = "icon",
+                                LargeImageText = "FloatTool"
+                            }
+                        });
                         for (int i = 0; i < 10; i++)
                         {
                             textBox2.AppendText(Math.Round(inputs[i], 14).ToString().Replace(",","."));
@@ -306,7 +303,7 @@ namespace FloatToolGUI
         {
             InitializeComponent();
         }
-
+        public DiscordRpcClient client;
         private void Form1_Load(object sender, EventArgs e)
         {
             comboBox2.Items.Clear();
@@ -325,6 +322,32 @@ namespace FloatToolGUI
                 }
             }
             updateSearchStr();
+
+            client = new DiscordRpcClient("734042978246721537");
+
+            //Subscribe to events
+            client.OnReady += (sender2, e2) =>
+            {
+                Console.WriteLine("Received Ready from user {0}", e2.User.Username);
+            };
+
+            client.OnPresenceUpdate += (sender2, e2) =>
+            {
+                Console.WriteLine("Received Update! {0}", e2.Presence);
+            };
+
+            //Connect to the RPC
+            client.Initialize();
+
+            client.SetPresence(new RichPresence()
+            {
+                Details = "Настраиваю поиск",
+                Assets = new Assets()
+                {
+                    LargeImageKey = "icon",
+                    LargeImageText = "FloatTool"
+                }
+            });
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -374,6 +397,17 @@ namespace FloatToolGUI
 
         private void StartCalculation()
         {
+            client.SetPresence(new RichPresence()
+            {
+                Details = "Начал поиск",
+                State = "Ищу " + textBox3.Text,
+                Timestamps = Timestamps.Now,
+                Assets = new Assets()
+                {
+                    LargeImageKey = "icon",
+                    LargeImageText = "FloatTool"
+                }
+            });
             this.Invoke((MethodInvoker)(() =>
                 {
                     textBox2.Text = "Добро пожаловать в FloatTool!" + Environment.NewLine + "Инструмент для создания флоатов при помощи крафтов CS:GO" + Environment.NewLine;
@@ -542,6 +576,16 @@ namespace FloatToolGUI
             {
                 thread1.Abort();
                 button2.Text = "Старт";
+                progressBar1.Value = 0;
+                client.SetPresence(new RichPresence()
+                {
+                    Details = "Настраиваю поиск",
+                    Assets = new Assets()
+                    {
+                        LargeImageKey = "icon",
+                        LargeImageText = "FloatTool"
+                    }
+                });
             }
             SwitchEnabled();
         }
@@ -647,6 +691,26 @@ namespace FloatToolGUI
         {
             About aboutForm = new About();
             aboutForm.Show();
+        }
+
+        private void перезапускToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            client.Invoke();
         }
     }
 }

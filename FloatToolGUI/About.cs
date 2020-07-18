@@ -24,7 +24,7 @@ namespace FloatToolGUI
 
         private void divam_Click(object sender, EventArgs e)
         {
-
+            System.Diagnostics.Process.Start("https://steamcommunity.com/id/divamyt");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace FloatToolGUI
 
         private void label3_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/Nemeshio/");
+            System.Diagnostics.Process.Start("https://steamcommunity.com/id/prevter");
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace FloatToolGUI
 
         private void granzi_Click(object sender, EventArgs e)
         {
-
+            System.Diagnostics.Process.Start("https://steamcommunity.com/profiles/76561198328715744");
         }
     }
 }

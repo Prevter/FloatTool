@@ -67,9 +67,9 @@
             this.label2.Font = new System.Drawing.Font("Righteous", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(52, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 21);
+            this.label2.Size = new System.Drawing.Size(131, 21);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Версия 0.2.0 GUI";
+            this.label2.Text = "Версия 0.2.1 GUI";
             // 
             // label3
             // 
