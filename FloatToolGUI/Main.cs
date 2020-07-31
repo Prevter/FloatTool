@@ -11,6 +11,7 @@ using System.Linq;
 using System.Media;
 using System.Net;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -22,139 +23,9 @@ namespace FloatToolGUI
     public partial class FloatTool : Form
     {
         Thread thread1;
-        public static string ToExactString(double d)
-        {
-            if (double.IsPositiveInfinity(d))
-                return "+Infinity";
-            if (double.IsNegativeInfinity(d))
-                return "-Infinity";
-            if (double.IsNaN(d))
-                return "NaN";
-            long bits = BitConverter.DoubleToInt64Bits(d);
-            bool negative = (bits < 0);
-            int exponent = (int)((bits >> 52) & 0x7ffL);
-            long mantissa = bits & 0xfffffffffffffL;
-            if (exponent == 0)
-            {
-                exponent++;
-            }
-            else
-            {
-                mantissa = mantissa | (1L << 52);
-            }
-            exponent -= 1075;
+        public bool muteSound = false;
 
-            if (mantissa == 0)
-            {
-                return "0";
-            }
-            while ((mantissa & 1) == 0)
-            {
-                mantissa >>= 1;
-                exponent++;
-            }
-            ArbitraryDecimal ad = new ArbitraryDecimal(mantissa);
-            if (exponent < 0)
-            {
-                for (int i = 0; i < -exponent; i++)
-                    ad.MultiplyBy(5);
-                ad.Shift(-exponent);
-            }
-            else
-            {
-                for (int i = 0; i < exponent; i++)
-                    ad.MultiplyBy(2);
-            }
-            if (negative)
-                return "-" + ad.ToString();
-            else
-                return ad.ToString();
-        }
-        class ArbitraryDecimal
-        {
-            byte[] digits;
-            int decimalPoint = 0;
-
-            internal ArbitraryDecimal(long x)
-            {
-                string tmp = x.ToString(CultureInfo.InvariantCulture);
-                digits = new byte[tmp.Length];
-                for (int i = 0; i < tmp.Length; i++)
-                    digits[i] = (byte)(tmp[i] - '0');
-                Normalize();
-            }
-            internal void MultiplyBy(int amount)
-            {
-                byte[] result = new byte[digits.Length + 1];
-                for (int i = digits.Length - 1; i >= 0; i--)
-                {
-                    int resultDigit = digits[i] * amount + result[i + 1];
-                    result[i] = (byte)(resultDigit / 10);
-                    result[i + 1] = (byte)(resultDigit % 10);
-                }
-                if (result[0] != 0)
-                {
-                    digits = result;
-                }
-                else
-                {
-                    Array.Copy(result, 1, digits, 0, digits.Length);
-                }
-                Normalize();
-            }
-            internal void Shift(int amount)
-            {
-                decimalPoint += amount;
-            }
-            internal void Normalize()
-            {
-                int first;
-                for (first = 0; first < digits.Length; first++)
-                    if (digits[first] != 0)
-                        break;
-                int last;
-                for (last = digits.Length - 1; last >= 0; last--)
-                    if (digits[last] != 0)
-                        break;
-
-                if (first == 0 && last == digits.Length - 1)
-                    return;
-
-                byte[] tmp = new byte[last - first + 1];
-                for (int i = 0; i < tmp.Length; i++)
-                    tmp[i] = digits[i + first];
-
-                decimalPoint -= digits.Length - (last + 1);
-                digits = tmp;
-            }
-            public override String ToString()
-            {
-                char[] digitString = new char[digits.Length];
-                for (int i = 0; i < digits.Length; i++)
-                    digitString[i] = (char)(digits[i] + '0');
-                if (decimalPoint == 0)
-                {
-                    return new string(digitString);
-                }
-                if (decimalPoint < 0)
-                {
-                    return new string(digitString) +
-                           new string('0', -decimalPoint);
-                }
-                if (decimalPoint >= digitString.Length)
-                {
-                    return "0." +
-                        new string('0', (decimalPoint - digitString.Length)) +
-                        new string(digitString);
-                }
-                return new string(digitString, 0,
-                                   digitString.Length - decimalPoint) +
-                    "." +
-                    new string(digitString,
-                                digitString.Length - decimalPoint,
-                                decimalPoint);
-            }
-        }
+        
         static public decimal craft(double[] ingridients, float minFloat, float maxFloat)
         {
             decimal avgFloat = 0;
@@ -234,12 +105,10 @@ namespace FloatToolGUI
                         textBox2.AppendText("Коомбинация найдена!" + Environment.NewLine);
                         textBox2.AppendText("Возможный флоат: " + flotOrigin + Environment.NewLine);
                         textBox2.AppendText("Список флоатов: [");
-                        if (toolStripMenuItem2.Checked)
+                        if (!muteSound)
                         {
                             //play sound
-                            System.Reflection.Assembly a = System.Reflection.Assembly.GetExecutingAssembly();
-                            System.IO.Stream s = a.GetManifestResourceStream("notify.wav");
-                            SoundPlayer player = new SoundPlayer(s);
+                            SoundPlayer player = new SoundPlayer();
                             player.Play();
                         }
                         client.SetPresence(new RichPresence()
@@ -261,7 +130,7 @@ namespace FloatToolGUI
                             }
                             else
                             {
-                                textBox2.AppendText("]" + Environment.NewLine + "======================================" + Environment.NewLine);
+                                textBox2.AppendText("]" + Environment.NewLine + "=====================================" + Environment.NewLine);
                             }
                         }
                     }
@@ -302,6 +171,7 @@ namespace FloatToolGUI
         public FloatTool()
         {
             InitializeComponent();
+            this.SetStyle(ControlStyles.ResizeRedraw, true);
         }
         public DiscordRpcClient client;
         private void Form1_Load(object sender, EventArgs e)
@@ -348,11 +218,20 @@ namespace FloatToolGUI
                     LargeImageText = "FloatTool"
                 }
             });
+
+            thread1 = new Thread(runCycle);
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void runCycle()
+        {
+            Console.WriteLine("Thread loaded!");
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -561,6 +440,10 @@ namespace FloatToolGUI
                     textBox2.AppendText( "Программа завершила проверку всех комбинаций!" + Environment.NewLine);
                     textBox1.SelectionStart = textBox1.Text.Length;
                     textBox2.ScrollToCaret();
+                    thread1.Abort();
+                    button2.Text = "Старт";
+                    progressBar1.Value = 0;
+                    SwitchEnabled();
                 }
             ));
             
@@ -569,6 +452,7 @@ namespace FloatToolGUI
         private void button2_Click(object sender, EventArgs e)
         {
             if(button2.Text == "Старт") {
+                thread1.Abort();
                 thread1 = new Thread(StartCalculation);
                 thread1.Start();
             }
@@ -677,40 +561,82 @@ namespace FloatToolGUI
             return false;
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/Nemeshio/FloatTool-GUI");
+            client.Invoke();
         }
 
-        private void туториалToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        private void panel3_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        private void panel9_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (muteSound)
+            {
+                muteSound = false;
+                button7.Image = FloatToolGUI.Properties.Resources.unmuted;
+                SoundPlayer player = new SoundPlayer();
+                player.Play();
+            }
+            else
+            {
+                muteSound = true;
+                button7.Image = FloatToolGUI.Properties.Resources.muted;
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/Nemeshio/FloatTool-GUI/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F");
         }
 
-        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/Nemeshio/FloatTool-GUI/");
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
             About aboutForm = new About();
             aboutForm.Show();
         }
 
-        private void перезапускToolStripMenuItem_Click(object sender, EventArgs e)
+        private void panel14_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            client.Invoke();
         }
     }
 }

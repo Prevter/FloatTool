@@ -126,9 +126,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="unmuted.png" />
     <None Include="notify.wav" />
     <None Include="Resources\GitHubIcon.bmp" />
     <None Include="github.png" />
+    <None Include="muted.png" />
     <Content Include="sketch-1586878181293.ico" />
   </ItemGroup>
   <ItemGroup>
