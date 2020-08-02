@@ -73,9 +73,9 @@ namespace FloatToolGUI.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap muted {
+        internal static System.Drawing.Bitmap mutedBlack {
             get {
-                object obj = ResourceManager.GetObject("muted", resourceCulture);
+                object obj = ResourceManager.GetObject("mutedBlack", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,29 @@ namespace FloatToolGUI.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap unmuted {
+        internal static System.Drawing.Bitmap mutedWhite {
             get {
-                object obj = ResourceManager.GetObject("unmuted", resourceCulture);
+                object obj = ResourceManager.GetObject("mutedWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unmutedBlack {
+            get {
+                object obj = ResourceManager.GetObject("unmutedBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unmutedWhite {
+            get {
+                object obj = ResourceManager.GetObject("unmutedWhite", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

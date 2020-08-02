@@ -50,20 +50,19 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.panel6 = new System.Windows.Forms.Panel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -88,6 +87,8 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -175,6 +176,7 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.panel9.Controls.Add(this.button10);
             this.panel9.Controls.Add(this.button9);
             this.panel9.Controls.Add(this.button7);
             this.panel9.Controls.Add(this.button6);
@@ -182,6 +184,18 @@
             resources.ApplyResources(this.panel9, "panel9");
             this.panel9.Name = "panel9";
             this.panel9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel9_MouseDown);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Transparent;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.button10, "button10");
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Name = "button10";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -204,31 +218,11 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Image = global::FloatToolGUI.Properties.Resources.github;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
-            // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             resources.ApplyResources(this.toolStripMenuItem3, "toolStripMenuItem3");
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.button7, "button7");
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Image = global::FloatToolGUI.Properties.Resources.unmuted;
-            this.button7.Name = "button7";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -290,14 +284,6 @@
             this.panel3.Name = "panel3";
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             // 
-            // progressBar1
-            // 
-            resources.ApplyResources(this.progressBar1, "progressBar1");
-            this.progressBar1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.progressBar1.ForeColor = System.Drawing.Color.Black;
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Step = 1;
-            // 
             // label9
             // 
             resources.ApplyResources(this.label9, "label9");
@@ -310,6 +296,14 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Name = "label8";
+            // 
+            // progressBar1
+            // 
+            resources.ApplyResources(this.progressBar1, "progressBar1");
+            this.progressBar1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.progressBar1.ForeColor = System.Drawing.Color.Black;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Step = 1;
             // 
             // panel6
             // 
@@ -339,7 +333,9 @@
             // 
             resources.ApplyResources(this.button1, "button1");
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.WindowFrame;
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = false;
@@ -468,7 +464,7 @@
             // panel14
             // 
             resources.ApplyResources(this.panel14, "panel14");
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.panel14.BackColor = System.Drawing.Color.Transparent;
             this.panel14.Controls.Add(this.progressBar1);
             this.panel14.Name = "panel14";
             this.panel14.Paint += new System.Windows.Forms.PaintEventHandler(this.panel14_Paint);
@@ -499,6 +495,7 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.WindowFrame;
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = false;
@@ -573,6 +570,26 @@
             this.panel4.Controls.Add(this.panel1);
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Image = global::FloatToolGUI.Properties.Resources.github;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.button7, "button7");
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Image = global::FloatToolGUI.Properties.Resources.unmutedWhite;
+            this.button7.Name = "button7";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // FloatTool
             // 
@@ -657,6 +674,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Button button10;
     }
 }
 

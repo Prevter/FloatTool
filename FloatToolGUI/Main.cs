@@ -237,6 +237,8 @@ namespace FloatToolGUI
             this.SetStyle(ControlStyles.ResizeRedraw, true);
         }
         public DiscordRpcClient client;
+        private bool darkTheme = true;
+
         private void Form1_Load(object sender, EventArgs e)
         {
             comboBox2.Items.Clear();
@@ -255,7 +257,7 @@ namespace FloatToolGUI
                 }
             }
             updateSearchStr();
-
+            button10.Text = darkTheme ? "🌙" : "☀";
             client = new DiscordRpcClient("734042978246721537");
 
             //Subscribe to events
@@ -665,20 +667,45 @@ namespace FloatToolGUI
             }
         }
 
+        void updateMuteIcon()
+        {
+            if (!muteSound)
+            {
+                if (darkTheme)
+                {
+                    button7.Image = FloatToolGUI.Properties.Resources.unmutedWhite;
+                }
+                else
+                {
+                    button7.Image = FloatToolGUI.Properties.Resources.unmutedBlack;
+                }
+            }
+            else
+            {
+                if (darkTheme)
+                {
+                    button7.Image = FloatToolGUI.Properties.Resources.mutedWhite;
+                }
+                else
+                {
+                    button7.Image = FloatToolGUI.Properties.Resources.mutedBlack;
+                }
+            }
+        }
+
         private void button7_Click(object sender, EventArgs e)
         {
             if (muteSound)
             {
                 muteSound = false;
-                button7.Image = FloatToolGUI.Properties.Resources.unmuted;
                 SoundPlayer player = new SoundPlayer();
                 player.Play();
             }
             else
             {
                 muteSound = true;
-                button7.Image = FloatToolGUI.Properties.Resources.muted;
             }
+            updateMuteIcon();
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -700,6 +727,145 @@ namespace FloatToolGUI
         private void panel14_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        void changeTheme(bool dark)
+        {
+            if (dark)
+            {
+                textBox2.BackColor = Color.FromArgb(31, 31, 31);
+                textBox2.ForeColor = Color.FromArgb(255, 255, 255);
+
+                panel10.BackColor = Color.FromArgb(31, 31, 31);
+                panel12.BackColor = Color.FromArgb(31, 31, 31);
+
+                panel3.BackColor = Color.FromArgb(37, 37, 37);
+                panel9.BackColor = Color.FromArgb(37, 37, 37);
+
+                label1.ForeColor = Color.FromArgb(255, 255, 255);
+                label2.ForeColor = Color.FromArgb(255, 255, 255);
+                label3.ForeColor = Color.FromArgb(255, 255, 255);
+                label4.ForeColor = Color.FromArgb(255, 255, 255);
+                label5.ForeColor = Color.FromArgb(255, 255, 255);
+                label6.ForeColor = Color.FromArgb(255, 255, 255);
+                label7.ForeColor = Color.FromArgb(255, 255, 255);
+                label8.ForeColor = Color.FromArgb(255, 255, 255);
+
+                panel5.BackColor = Color.FromArgb(44, 44, 44);
+                panel6.BackColor = Color.FromArgb(44, 44, 44);
+
+                comboBox1.BackColor = Color.FromArgb(32, 32, 32);
+                comboBox1.ForeColor = Color.FromArgb(150, 150, 150);
+                comboBox2.BackColor = Color.FromArgb(32, 32, 32);
+                comboBox2.ForeColor = Color.FromArgb(150, 150, 150);
+                comboBox3.BackColor = Color.FromArgb(32, 32, 32);
+                comboBox3.ForeColor = Color.FromArgb(150, 150, 150);
+
+                button6.ForeColor = Color.FromArgb(255, 255, 255);
+                updateMuteIcon();
+                button8.ForeColor = Color.FromArgb(255, 255, 255);
+                button9.ForeColor = Color.FromArgb(255, 255, 255);
+                button10.ForeColor = Color.FromArgb(255, 255, 255);
+
+                button6.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0);
+                button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0);
+                button8.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0);
+                button9.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0);
+                button10.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0);
+
+                checkBox1.ForeColor = Color.FromArgb(255, 255, 255);
+                checkBox2.ForeColor = Color.FromArgb(255, 255, 255);
+                checkBox3.ForeColor = Color.FromArgb(255, 255, 255);
+
+                button1.BackColor = Color.FromArgb(56, 56, 56);
+                button2.BackColor = Color.FromArgb(56, 56, 56);
+                button1.ForeColor = Color.FromArgb(255, 255, 255);
+                button2.ForeColor = Color.FromArgb(255, 255, 255);
+
+                button1.FlatAppearance.MouseOverBackColor = Color.FromName("WindowFrame");
+                button2.FlatAppearance.MouseOverBackColor = Color.FromName("WindowFrame");
+
+                textBox1.BackColor = Color.FromArgb(32, 32, 32);
+                textBox1.ForeColor = Color.FromArgb(150, 150, 150);
+                textBox3.BackColor = Color.FromArgb(32, 32, 32);
+                textBox3.ForeColor = Color.FromArgb(150, 150, 150);
+
+                numericUpDown1.BackColor = Color.FromArgb(32, 32, 32);
+                numericUpDown1.ForeColor = Color.FromArgb(150, 150, 150);
+                numericUpDown2.BackColor = Color.FromArgb(32, 32, 32);
+                numericUpDown2.ForeColor = Color.FromArgb(150, 150, 150);
+            }
+            else
+            {
+                textBox2.BackColor = Color.FromArgb(255, 255, 255);
+                textBox2.ForeColor = Color.FromArgb(0, 0, 0);
+
+                panel10.BackColor = Color.FromArgb(255, 255, 255);
+                panel12.BackColor = Color.FromArgb(255, 255, 255);
+
+                panel3.BackColor = Color.FromArgb(249, 249, 249);
+                panel9.BackColor = Color.FromArgb(249, 249, 249);
+
+                label1.ForeColor = Color.FromArgb(0, 0, 0);
+                label2.ForeColor = Color.FromArgb(0, 0, 0);
+                label3.ForeColor = Color.FromArgb(0, 0, 0);
+                label4.ForeColor = Color.FromArgb(0, 0, 0);
+                label5.ForeColor = Color.FromArgb(0, 0, 0);
+                label6.ForeColor = Color.FromArgb(0, 0, 0);
+                label7.ForeColor = Color.FromArgb(0, 0, 0);
+                label8.ForeColor = Color.FromArgb(0, 0, 0);
+
+                panel5.BackColor = Color.FromArgb(222, 222, 222);
+                panel6.BackColor = Color.FromArgb(222, 222, 222);
+
+                comboBox1.BackColor = Color.FromArgb(255, 255, 255);
+                comboBox1.ForeColor = Color.FromArgb(10, 10, 10);
+                comboBox2.BackColor = Color.FromArgb(255, 255, 255);
+                comboBox2.ForeColor = Color.FromArgb(10, 10, 10);
+                comboBox3.BackColor = Color.FromArgb(255, 255, 255);
+                comboBox3.ForeColor = Color.FromArgb(10, 10, 10);
+
+                button6.ForeColor = Color.FromArgb(0, 0, 0);
+                updateMuteIcon();
+                button8.ForeColor = Color.FromArgb(0, 0, 0);
+                button9.ForeColor = Color.FromArgb(0, 0, 0);
+                button10.ForeColor = Color.FromArgb(0, 0, 0);
+
+                button6.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 230, 230);
+                button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 230, 230);
+                button8.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 230, 230);
+                button9.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 230, 230);
+                button10.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 230, 230);
+
+                checkBox1.ForeColor = Color.FromArgb(0, 0, 0);
+                checkBox2.ForeColor = Color.FromArgb(0, 0, 0);
+                checkBox3.ForeColor = Color.FromArgb(0, 0, 0);
+
+                button1.BackColor = Color.FromArgb(249, 249, 249);
+                button2.BackColor = Color.FromArgb(249, 249, 249);
+                button1.ForeColor = Color.FromArgb(0, 0, 0);
+                button2.ForeColor = Color.FromArgb(0, 0, 0);
+
+                textBox1.BackColor = Color.FromArgb(255, 255, 255);
+                textBox1.ForeColor = Color.FromArgb(10, 10, 10);
+                textBox3.BackColor = Color.FromArgb(255, 255, 255);
+                textBox3.ForeColor = Color.FromArgb(10, 10, 10);
+
+                button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(240, 240, 240);
+                button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(240, 240, 240);
+
+                numericUpDown1.BackColor = Color.FromArgb(255, 255, 255);
+                numericUpDown1.ForeColor = Color.FromArgb(10, 10, 10);
+                numericUpDown2.BackColor = Color.FromArgb(255, 255, 255);
+                numericUpDown2.ForeColor = Color.FromArgb(10, 10, 10);
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            darkTheme = !darkTheme;
+            changeTheme(darkTheme);
+            button10.Text = darkTheme ? "🌙" : "☀";
         }
     }
 }
