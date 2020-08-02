@@ -25,7 +25,46 @@ namespace FloatToolGUI
         Thread thread1;
         public bool muteSound = false;
 
-        
+        public static string setprecission(double number, int figures)
+        {
+            int e = 0;
+
+            while (number >= 10.0)
+            {
+                e += 1;
+                number /= 10;
+            }
+
+            while (number < 1.0)
+            {
+                e -= 1;
+                number *= 10;
+            }
+
+            figures--;
+
+            number = (float)Math.Round(number, figures);
+
+            figures += 0 - e;
+            while (e > 0)
+            {
+                number *= 10;
+                e -= 1;
+            }
+
+            while (e < 0)
+            {
+                number /= 10;
+                e += 1;
+            }
+
+            if (figures < 0)
+            {
+                figures = 0;
+            }
+
+            return number.ToString($"f{figures}");
+        }
         static public decimal craft(double[] ingridients, float minFloat, float maxFloat)
         {
             decimal avgFloat = 0;
@@ -35,6 +74,22 @@ namespace FloatToolGUI
             }
             avgFloat /= 10;
             return ((decimal)(maxFloat - minFloat) * avgFloat) + (decimal)minFloat;
+        }
+        static public string craftF(string[] ingridients, float minFloat, float maxFloat)
+        {
+            float avgFloat = 0;
+            float[] arrInput = new float[10];
+            for (int i = 0; i < 10; i++)
+            {
+                arrInput[i] = Convert.ToSingle(ingridients[i].Replace(".", ","));
+            }
+            foreach (float f in arrInput)
+            {
+                
+                avgFloat += Convert.ToSingle(f);
+            }
+            avgFloat /= 10;
+            return setprecission(((maxFloat - minFloat) * avgFloat) + minFloat, 9);
         }
         static public string getNextRarity(string rarity)
         {
@@ -92,18 +147,26 @@ namespace FloatToolGUI
                 float minWear = item["minWear"];
                 float maxWear = item["maxWear"];
                 decimal flotOrigin = Math.Round(craft(inputs.ToArray(), minWear, maxWear), 14);
-                //string flot = ToExactString((double)flotOrigin);
-                Console.WriteLine(flotOrigin);
+
+                string[] inputStr = new string[10];
+                for(int i = 0; i < 10; i++)
+                {
+                    inputStr[i] = "" + inputs[i];
+                }
+
+                string flot = craftF(inputStr, minWear, maxWear);
+                Console.WriteLine(flotOrigin + " | " + flot);
                 //Debug.WriteLine("[DEBUG] flot = " + flot);
                 // if (wasSort && ((!asc && (double.Parse(flot) > double.Parse(want))) || (asc && (double.Parse(flot) < double.Parse(want))))) {
                 //     okSort = true;
                 //}
-                if (/*flot.StartsWith(want) ||*/ ("" + flotOrigin).StartsWith(want.Replace(".", ",")))
+                if (flot.StartsWith(want.Replace(".", ",")) || ("" + flotOrigin).StartsWith(want.Replace(".", ",")))
                 {
                     this.Invoke((MethodInvoker)(() =>
                     {
                         textBox2.AppendText("Коомбинация найдена!" + Environment.NewLine);
                         textBox2.AppendText("Возможный флоат: " + flotOrigin + Environment.NewLine);
+                        textBox2.AppendText("Проверочный флоат: " + flot + Environment.NewLine);
                         textBox2.AppendText("Список флоатов: [");
                         if (!muteSound)
                         {
