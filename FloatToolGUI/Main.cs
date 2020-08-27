@@ -1,6 +1,7 @@
 ﻿using DiscordRPC;
 using Newtonsoft.Json;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -89,7 +90,7 @@ namespace FloatToolGUI
                 avgFloat += Convert.ToSingle(f);
             }
             avgFloat /= 10;
-            return setprecission(((maxFloat - minFloat) * avgFloat) + minFloat, 9);
+            return setprecission(((maxFloat - minFloat) * avgFloat) + minFloat, 10);
         }
         static public string getNextRarity(string rarity)
         {
@@ -339,6 +340,63 @@ namespace FloatToolGUI
             updateSearchStr();
         }
 
+        private static bool NextCombination(IList<int> num, int n, int k)
+        {
+            bool finished;
+
+            var changed = finished = false;
+
+            if (k <= 0) return false;
+
+            for (var i = k - 1; !finished && !changed; i--)
+            {
+                if (num[i] < n - 1 - (k - 1) + i)
+                {
+                    num[i]++;
+
+                    if (i < k - 1)
+                        for (var j = i + 1; j < k; j++)
+                            num[j] = num[j - 1] + 1;
+                    changed = true;
+                }
+                finished = i == 0;
+            }
+
+            return changed;
+        }
+
+        private static IEnumerable Combinations<T>(IEnumerable<T> elements, int k, int start, int skip)
+        {
+            var elem = elements.ToArray();
+            var size = elem.Length;
+
+            if (k > size) yield break;
+
+            var numbers = new int[k];
+
+            for (var i = 0; i < k; i++)
+                numbers[i] = i;
+
+            int step = 0;
+
+            do
+            {
+                if((step+start)%skip == 0)
+                {
+                    yield return numbers.Select(n => elem[n]);
+                }
+                step++;
+            } while (NextCombination(numbers, size, k));
+        }
+
+        public void secndThread(List<dynamic> craftList, string wanted, double[] pool, int start, int skip)
+        {
+            foreach (IEnumerable<double> pair in Combinations(pool, 10, start, skip))
+            {
+                parseCraft(pair.ToArray(), craftList, wanted, checkBox2.Checked, checkBox3.Checked);
+            }
+        }
+        public List<Thread> t2 = new List<Thread>();
         private void StartCalculation()
         {
             client.SetPresence(new RichPresence()
@@ -443,7 +501,6 @@ namespace FloatToolGUI
                 textBox2.ScrollToCaret();
             }
             ));
-            
             string currData = getSkinData(q.Split('(')[0].TrimEnd());
             List<dynamic> craftList = new List<dynamic>();
             using (StreamReader r = new StreamReader("itemData.json"))
@@ -472,34 +529,86 @@ namespace FloatToolGUI
             ));
             //return;
             double[] pool = floats.ToArray();
-            int n = floats.Count;
-            if (10 > n) { Console.WriteLine("At least 10!"); return; }
-            int[] indices = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            List<double> first = new List<double>();
-            foreach (int i in indices) { first.Add(pool[i]); }
+            //int n = floats.Count;
+            //if (10 > n) { Console.WriteLine("At least 10!"); return; }
+            //int[] indices = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            //List<double> first = new List<double>();
+            //foreach (int i in indices) { first.Add(pool[i]); }
             //Craft
-            parseCraft(first.ToArray(), craftList, wanted, checkBox2.Checked, checkBox3.Checked);
+            //parseCraft(first.ToArray(), craftList, wanted, checkBox2.Checked, checkBox3.Checked);
             //
-            int iter = 2;
+            //int iter = 2;
+
+            var threads = 1;
+            if (checkBox4.Checked)
+            {
+                threads = (int)numericUpDown3.Value;
+                try
+                {
+                    for (int i = 1; i < threads; i++)
+                    {
+                        Thread newThread = new Thread(() => secndThread(craftList, wanted, pool, i, threads));
+                        newThread.Start();
+                        t2.Add(newThread);
+                    }
+                }
+                catch (Exception ex)
+                {
+                }
+            }
+
+            
+            
+            foreach (IEnumerable<double> pair in Combinations(pool, 10, 0, threads))
+            {
+                parseCraft(pair.ToArray(), craftList, wanted, checkBox2.Checked, checkBox3.Checked);
+            }
+            Console.WriteLine("Next group");
+
             while (true)
             {
-                //var startTime = DateTimeOffset.Now.ToUnixTimeMilliseconds();
-                //Debug.WriteLine("[DEBUG] start time = "+startTime);
-                int a = 9; bool run = true;
-                for (int i = 9; i >= 0; i--) { a = i; if (indices[i] != i + n - 10) { run = false; break; } }
-                if (run) { break; }
-                indices[a]++;
-                for (int j = a + 1; j < 10; j++) { indices[j] = indices[j - 1] + 1; }
-                List<double> current = new List<double>();
-                foreach (int i in indices) { current.Add(pool[i]); }
-                //Craft
-                parseCraft(current.ToArray(), craftList, wanted, checkBox2.Checked, checkBox3.Checked);
-                //var endTime = DateTimeOffset.Now.ToUnixTimeMilliseconds();
-                //Debug.WriteLine("[DEBUG] end time = " + endTime);
-                //Debug.WriteLine("[DEBUG] total time = " + (endTime - startTime));
-                //
-                iter++;
+                bool okey = true;
+                foreach (Thread t in t2)
+                {
+                    if (t.IsAlive)
+                    {
+                        okey = false;
+                        break;
+                    }
+                }
+                if (okey) break;
             }
+            
+            
+            
+
+
+            
+            /*
+            Parallel.For(2, 6, new ParallelOptions { MaxDegreeOfParallelism = 4 }, (iter) => {
+                while (true)
+                {
+                    //var startTime = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+                    //Debug.WriteLine("[DEBUG] start time = "+startTime);
+                    Console.WriteLine("iter = " + iter);
+                    int a = 9; bool run = true;
+                    for (int i = 9; i >= 0; i--) { a = i; if (indices[i] != i + n - 10) { run = false; break; } }
+                    if (run) { break; }
+                    indices[a]++;
+                    for (int j = a + 1; j < 10; j++) { indices[j] = indices[j - 1] + 1; }
+                    List<double> current = new List<double>();
+                    foreach (int i in indices) { current.Add(pool[i]); }
+                    //Craft
+                    
+                    //var endTime = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+                    //Debug.WriteLine("[DEBUG] end time = " + endTime);
+                    //Debug.WriteLine("[DEBUG] total time = " + (endTime - startTime));
+                    //
+                    iter++;
+                }
+            });
+            */
+
             this.Invoke((MethodInvoker)(() =>
                 {
                     textBox2.AppendText( "Программа завершила проверку всех комбинаций!" + Environment.NewLine);
@@ -512,6 +621,11 @@ namespace FloatToolGUI
                 }
             ));
             
+        }
+
+        private void parseCraft(List<double>[] lists, List<dynamic> craftList, string wanted, bool checked1, bool checked2)
+        {
+            throw new NotImplementedException();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -535,6 +649,13 @@ namespace FloatToolGUI
                         LargeImageText = "FloatTool"
                     }
                 });
+                foreach (Thread t in t2)
+                {
+                    if (t.IsAlive)
+                    {
+                        t.Abort();
+                    }
+                }
             }
             SwitchEnabled();
         }
@@ -794,6 +915,11 @@ namespace FloatToolGUI
                 numericUpDown1.ForeColor = Color.FromArgb(150, 150, 150);
                 numericUpDown2.BackColor = Color.FromArgb(32, 32, 32);
                 numericUpDown2.ForeColor = Color.FromArgb(150, 150, 150);
+
+                checkBox4.ForeColor = Color.FromName("White");
+                label10.ForeColor = Color.FromName("White");
+                numericUpDown3.BackColor = Color.FromArgb(32, 32, 32);
+                numericUpDown3.ForeColor = Color.FromArgb(150, 150, 150);
             }
             else
             {
@@ -858,6 +984,11 @@ namespace FloatToolGUI
                 numericUpDown1.ForeColor = Color.FromArgb(10, 10, 10);
                 numericUpDown2.BackColor = Color.FromArgb(255, 255, 255);
                 numericUpDown2.ForeColor = Color.FromArgb(10, 10, 10);
+
+                checkBox4.ForeColor = Color.FromName("Black");
+                label10.ForeColor = Color.FromName("Black");
+                numericUpDown3.BackColor = Color.FromArgb(255, 255, 255);
+                numericUpDown3.ForeColor = Color.FromArgb(10, 10, 10);
             }
         }
 
@@ -866,6 +997,11 @@ namespace FloatToolGUI
             darkTheme = !darkTheme;
             changeTheme(darkTheme);
             button10.Text = darkTheme ? "🌙" : "☀";
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            numericUpDown3.Enabled = checkBox4.Checked;
         }
     }
 }

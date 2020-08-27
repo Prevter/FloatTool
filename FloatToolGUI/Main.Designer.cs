@@ -1,4 +1,6 @@
-﻿namespace FloatToolGUI
+﻿using System.Threading;
+
+namespace FloatToolGUI
 {
     partial class FloatTool
     {
@@ -24,6 +26,13 @@
             if (thread1.IsAlive)
             {
                 thread1.Abort();
+            }
+            foreach (Thread t in t2)
+            {
+                if (t.IsAlive)
+                {
+                    t.Abort();
+                }
             }
             if (!base.IsDisposed) { 
                 base.Dispose(disposing);
@@ -53,7 +62,9 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -75,20 +86,23 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -99,9 +113,12 @@
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -187,11 +204,11 @@
             // 
             // button10
             // 
+            resources.ApplyResources(this.button10, "button10");
             this.button10.BackColor = System.Drawing.Color.Transparent;
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.button10, "button10");
             this.button10.ForeColor = System.Drawing.Color.White;
             this.button10.Name = "button10";
             this.button10.UseVisualStyleBackColor = false;
@@ -218,11 +235,31 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Image = global::FloatToolGUI.Properties.Resources.github;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             resources.ApplyResources(this.toolStripMenuItem3, "toolStripMenuItem3");
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.button7, "button7");
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Image = global::FloatToolGUI.Properties.Resources.unmutedWhite;
+            this.button7.Name = "button7";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -448,18 +485,50 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.panel5.Controls.Add(this.panel14);
-            this.panel5.Controls.Add(this.checkBox3);
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Controls.Add(this.checkBox2);
-            this.panel5.Controls.Add(this.button2);
-            this.panel5.Controls.Add(this.textBox3);
-            this.panel5.Controls.Add(this.label7);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.numericUpDown2);
-            this.panel5.Controls.Add(this.numericUpDown1);
+            this.panel5.Controls.Add(this.panel16);
+            this.panel5.Controls.Add(this.panel15);
             resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.Transparent;
+            this.panel16.Controls.Add(this.label5);
+            this.panel16.Controls.Add(this.numericUpDown1);
+            this.panel16.Controls.Add(this.panel14);
+            this.panel16.Controls.Add(this.numericUpDown2);
+            this.panel16.Controls.Add(this.checkBox3);
+            this.panel16.Controls.Add(this.label7);
+            this.panel16.Controls.Add(this.label6);
+            this.panel16.Controls.Add(this.textBox3);
+            this.panel16.Controls.Add(this.checkBox2);
+            this.panel16.Controls.Add(this.button2);
+            resources.ApplyResources(this.panel16, "panel16");
+            this.panel16.Name = "panel16";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Name = "label5";
+            // 
+            // numericUpDown1
+            // 
+            resources.ApplyResources(this.numericUpDown1, "numericUpDown1");
+            this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numericUpDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             // 
             // panel14
             // 
@@ -469,6 +538,24 @@
             this.panel14.Name = "panel14";
             this.panel14.Paint += new System.Windows.Forms.PaintEventHandler(this.panel14_Paint);
             // 
+            // numericUpDown2
+            // 
+            resources.ApplyResources(this.numericUpDown2, "numericUpDown2");
+            this.numericUpDown2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.numericUpDown2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numericUpDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            // 
             // checkBox3
             // 
             resources.ApplyResources(this.checkBox3, "checkBox3");
@@ -476,11 +563,25 @@
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Name = "label7";
+            // 
             // label6
             // 
             resources.ApplyResources(this.label6, "label6");
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Name = "label6";
+            // 
+            // textBox3
+            // 
+            resources.ApplyResources(this.textBox3, "textBox3");
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.textBox3.Name = "textBox3";
             // 
             // checkBox2
             // 
@@ -501,61 +602,46 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox3
+            // panel15
             // 
-            resources.ApplyResources(this.textBox3, "textBox3");
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.textBox3.Name = "textBox3";
+            this.panel15.BackColor = System.Drawing.Color.Transparent;
+            this.panel15.Controls.Add(this.label10);
+            this.panel15.Controls.Add(this.numericUpDown3);
+            this.panel15.Controls.Add(this.checkBox4);
+            resources.ApplyResources(this.panel15, "panel15");
+            this.panel15.Name = "panel15";
             // 
-            // label7
+            // label10
             // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Name = "label7";
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Name = "label10";
             // 
-            // label5
+            // numericUpDown3
             // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Name = "label5";
-            // 
-            // numericUpDown2
-            // 
-            resources.ApplyResources(this.numericUpDown2, "numericUpDown2");
-            this.numericUpDown2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.numericUpDown2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.numericUpDown2.Maximum = new decimal(new int[] {
-            9999999,
+            this.numericUpDown3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.numericUpDown3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.numericUpDown3, "numericUpDown3");
+            this.numericUpDown3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.numericUpDown3.Minimum = new decimal(new int[] {
+            2,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Value = new decimal(new int[] {
-            20,
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Value = new decimal(new int[] {
+            2,
             0,
             0,
             0});
             // 
-            // numericUpDown1
+            // checkBox4
             // 
-            resources.ApplyResources(this.numericUpDown1, "numericUpDown1");
-            this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
+            resources.ApplyResources(this.checkBox4, "checkBox4");
+            this.checkBox4.ForeColor = System.Drawing.Color.White;
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // panel2
             // 
@@ -570,26 +656,6 @@
             this.panel4.Controls.Add(this.panel1);
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Image = global::FloatToolGUI.Properties.Resources.github;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.button7, "button7");
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Image = global::FloatToolGUI.Properties.Resources.unmutedWhite;
-            this.button7.Name = "button7";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // FloatTool
             // 
@@ -615,10 +681,14 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -675,6 +745,11 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
     }
 }
 
