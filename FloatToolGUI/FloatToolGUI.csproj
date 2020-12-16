@@ -52,7 +52,7 @@
     <StartupObject>FloatToolGUI.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>sketch-1586878181293.ico</ApplicationIcon>
+    <ApplicationIcon>floattool.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -156,6 +156,7 @@
     <None Include="github.png" />
     <None Include="mutedWhite.png" />
     <None Include="mutedBlack.png" />
+    <Content Include="floattool.ico" />
     <Content Include="sketch-1586878181293.ico" />
   </ItemGroup>
   <ItemGroup>

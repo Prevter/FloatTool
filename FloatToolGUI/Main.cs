@@ -118,6 +118,7 @@ namespace FloatToolGUI
         }
         static public string getSkinData(string name)
         {
+            name = name.Replace("StatTrak™ ",""); //remove stattrack
             using (StreamReader r = new StreamReader("itemData.json"))
             {
                 string json = r.ReadToEnd();
@@ -155,19 +156,19 @@ namespace FloatToolGUI
                     inputStr[i] = "" + inputs[i];
                 }
 
-                string flot = craftF(inputStr, minWear, maxWear);
-                Console.WriteLine(flotOrigin + " | " + flot);
+                //string flot = craftF(inputStr, minWear, maxWear);
+                //Console.WriteLine(flotOrigin + " | " + flot);
                 //Debug.WriteLine("[DEBUG] flot = " + flot);
                 // if (wasSort && ((!asc && (double.Parse(flot) > double.Parse(want))) || (asc && (double.Parse(flot) < double.Parse(want))))) {
                 //     okSort = true;
                 //}
-                if (flot.StartsWith(want.Replace(".", ",")) || ("" + flotOrigin).StartsWith(want.Replace(".", ",")))
+                if (/*flot.StartsWith(want.Replace(".", ",")) ||*/ ("" + flotOrigin).StartsWith(want.Replace(".", ",")))
                 {
                     this.Invoke((MethodInvoker)(() =>
                     {
                         textBox2.AppendText("Коомбинация найдена!" + Environment.NewLine);
                         textBox2.AppendText("Возможный флоат: " + flotOrigin + Environment.NewLine);
-                        textBox2.AppendText("Проверочный флоат: " + flot + Environment.NewLine);
+                        //textBox2.AppendText("Проверочный флоат: " + flot + Environment.NewLine);
                         textBox2.AppendText("Список флоатов: [");
                         if (!muteSound)
                         {
@@ -433,6 +434,7 @@ namespace FloatToolGUI
                 progressBar1.Value = 0;
                 textBox1.SelectionStart = textBox1.Text.Length;
                 textBox2.ScrollToCaret();
+                
             }
             ));
             
@@ -440,6 +442,7 @@ namespace FloatToolGUI
             using (WebClient wc = new WebClient())
             {
                 string json = wc.DownloadString(url);
+                Console.WriteLine(json);
                 dynamic r = JsonConvert.DeserializeObject(json);
                 this.Invoke((MethodInvoker)(() =>
                     {
