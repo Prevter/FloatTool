@@ -725,7 +725,7 @@
     <value>NoControl</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 20</value>
+    <value>207, 20</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 15</value>
@@ -818,7 +818,7 @@
     <value>NoControl</value>
   </data>
   <data name="stattrackCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 63</value>
+    <value>9, 64</value>
   </data>
   <data name="stattrackCheckBox.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
@@ -863,7 +863,7 @@
     <value>150, 90</value>
   </data>
   <data name="checkPossibilityBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 24</value>
+    <value>267, 24</value>
   </data>
   <data name="checkPossibilityBtn.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -919,6 +919,48 @@
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="outcomeSelectorComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="outcomeSelectorComboBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="outcomeSelectorComboBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft JhengHei Light, 9pt</value>
+  </data>
+  <data name="outcomeSelectorComboBox.Items" xml:space="preserve">
+    <value>80% (AK-47 | Safari Mesh + 3)</value>
+  </data>
+  <data name="outcomeSelectorComboBox.Items1" xml:space="preserve">
+    <value>20% (Tec-9 | Varicamo)</value>
+  </data>
+  <data name="outcomeSelectorComboBox.Items2" xml:space="preserve">
+    <value>* Искать всё *</value>
+  </data>
+  <data name="outcomeSelectorComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 61</value>
+  </data>
+  <data name="outcomeSelectorComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 24</value>
+  </data>
+  <data name="outcomeSelectorComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="outcomeSelectorComboBox.Text" xml:space="preserve">
+    <value>80% (AK-47 | Safari Mesh + 3)</value>
+  </data>
+  <data name="&gt;&gt;outcomeSelectorComboBox.Name" xml:space="preserve">
+    <value>outcomeSelectorComboBox</value>
+  </data>
+  <data name="&gt;&gt;outcomeSelectorComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;outcomeSelectorComboBox.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;outcomeSelectorComboBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="weaponQualityBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -947,7 +989,7 @@
     <value>288, 31</value>
   </data>
   <data name="weaponQualityBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 24</value>
+    <value>129, 24</value>
   </data>
   <data name="weaponQualityBox.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -965,7 +1007,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;weaponQualityBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1001,7 +1043,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="label4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -1040,7 +1082,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="weaponTypeBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1175,7 +1217,43 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;weaponTypeBox.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
+  </data>
+  <data name="label11.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft JhengHei Light, 10pt</value>
+  </data>
+  <data name="label11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 65</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 18</value>
+  </data>
+  <data name="label11.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Ауткамы:</value>
+  </data>
+  <data name="&gt;&gt;label11.Name" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1211,7 +1289,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="fullSkinName.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
@@ -1250,7 +1328,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;fullSkinName.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="weaponSkinBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1283,7 +1361,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;weaponSkinBox.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="panel6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -2346,9 +2424,6 @@
         NMPQdcNIA4irhpFSdD2mGQgldS2U1g1fStM745rWEdO01rCqtvtS6fbWZMq32ecP1qTSceM7N2pPf7gX
         lcEgDkWiqA6FUR2O4OL8XLzY1sG2H8tA/j8A3hg1hV1H6QAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>900, 460</value>

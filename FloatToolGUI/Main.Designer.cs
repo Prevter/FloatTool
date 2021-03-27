@@ -80,7 +80,6 @@ namespace FloatToolGUI
             this.weaponQualityBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.weaponTypeBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.fullSkinName = new System.Windows.Forms.TextBox();
             this.weaponSkinBox = new System.Windows.Forms.ComboBox();
@@ -111,6 +110,9 @@ namespace FloatToolGUI
             this.WorkStatusUpdater = new System.Windows.Forms.Timer(this.components);
             this.openGithubButton = new System.Windows.Forms.ToolStripMenuItem();
             this.soundBtnSwitch = new System.Windows.Forms.Button();
+            this.outcomeSelectorComboBox = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.weaponTypeBox = new System.Windows.Forms.ComboBox();
             this.downloadProgressBar = new FloatToolGUI.CustomProgressBar();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -348,10 +350,12 @@ namespace FloatToolGUI
             this.panel6.Controls.Add(this.stattrackCheckBox);
             this.panel6.Controls.Add(this.checkPossibilityBtn);
             this.panel6.Controls.Add(this.label3);
+            this.panel6.Controls.Add(this.outcomeSelectorComboBox);
             this.panel6.Controls.Add(this.weaponQualityBox);
             this.panel6.Controls.Add(this.label1);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.weaponTypeBox);
+            this.panel6.Controls.Add(this.label11);
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.fullSkinName);
             this.panel6.Controls.Add(this.weaponSkinBox);
@@ -412,51 +416,6 @@ namespace FloatToolGUI
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Name = "label4";
             // 
-            // weaponTypeBox
-            // 
-            resources.ApplyResources(this.weaponTypeBox, "weaponTypeBox");
-            this.weaponTypeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.weaponTypeBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.weaponTypeBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.weaponTypeBox.FormattingEnabled = true;
-            this.weaponTypeBox.Items.AddRange(new object[] {
-            resources.GetString("weaponTypeBox.Items"),
-            resources.GetString("weaponTypeBox.Items1"),
-            resources.GetString("weaponTypeBox.Items2"),
-            resources.GetString("weaponTypeBox.Items3"),
-            resources.GetString("weaponTypeBox.Items4"),
-            resources.GetString("weaponTypeBox.Items5"),
-            resources.GetString("weaponTypeBox.Items6"),
-            resources.GetString("weaponTypeBox.Items7"),
-            resources.GetString("weaponTypeBox.Items8"),
-            resources.GetString("weaponTypeBox.Items9"),
-            resources.GetString("weaponTypeBox.Items10"),
-            resources.GetString("weaponTypeBox.Items11"),
-            resources.GetString("weaponTypeBox.Items12"),
-            resources.GetString("weaponTypeBox.Items13"),
-            resources.GetString("weaponTypeBox.Items14"),
-            resources.GetString("weaponTypeBox.Items15"),
-            resources.GetString("weaponTypeBox.Items16"),
-            resources.GetString("weaponTypeBox.Items17"),
-            resources.GetString("weaponTypeBox.Items18"),
-            resources.GetString("weaponTypeBox.Items19"),
-            resources.GetString("weaponTypeBox.Items20"),
-            resources.GetString("weaponTypeBox.Items21"),
-            resources.GetString("weaponTypeBox.Items22"),
-            resources.GetString("weaponTypeBox.Items23"),
-            resources.GetString("weaponTypeBox.Items24"),
-            resources.GetString("weaponTypeBox.Items25"),
-            resources.GetString("weaponTypeBox.Items26"),
-            resources.GetString("weaponTypeBox.Items27"),
-            resources.GetString("weaponTypeBox.Items28"),
-            resources.GetString("weaponTypeBox.Items29"),
-            resources.GetString("weaponTypeBox.Items30"),
-            resources.GetString("weaponTypeBox.Items31"),
-            resources.GetString("weaponTypeBox.Items32"),
-            resources.GetString("weaponTypeBox.Items33")});
-            this.weaponTypeBox.Name = "weaponTypeBox";
-            this.weaponTypeBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
@@ -515,6 +474,7 @@ namespace FloatToolGUI
             this.searchmodeGreater_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.searchmodeGreater_btn.Cursor = System.Windows.Forms.Cursors.Default;
             this.searchmodeGreater_btn.FlatAppearance.BorderSize = 0;
+            this.searchmodeGreater_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.WindowFrame;
             this.searchmodeGreater_btn.ForeColor = System.Drawing.Color.White;
             this.searchmodeGreater_btn.Name = "searchmodeGreater_btn";
             this.searchmodeGreater_btn.UseVisualStyleBackColor = false;
@@ -524,6 +484,7 @@ namespace FloatToolGUI
             // 
             resources.ApplyResources(this.searchmodeEqual_btn, "searchmodeEqual_btn");
             this.searchmodeEqual_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.searchmodeEqual_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.WindowFrame;
             this.searchmodeEqual_btn.ForeColor = System.Drawing.Color.White;
             this.searchmodeEqual_btn.Name = "searchmodeEqual_btn";
             this.searchmodeEqual_btn.UseVisualStyleBackColor = false;
@@ -534,6 +495,7 @@ namespace FloatToolGUI
             resources.ApplyResources(this.searchmodeLess_btn, "searchmodeLess_btn");
             this.searchmodeLess_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.searchmodeLess_btn.FlatAppearance.BorderSize = 0;
+            this.searchmodeLess_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.WindowFrame;
             this.searchmodeLess_btn.ForeColor = System.Drawing.Color.White;
             this.searchmodeLess_btn.Name = "searchmodeLess_btn";
             this.searchmodeLess_btn.UseVisualStyleBackColor = false;
@@ -746,6 +708,70 @@ namespace FloatToolGUI
             this.soundBtnSwitch.UseVisualStyleBackColor = false;
             this.soundBtnSwitch.Click += new System.EventHandler(this.SoundSwitchButton_Click);
             // 
+            // outcomeSelectorComboBox
+            // 
+            resources.ApplyResources(this.outcomeSelectorComboBox, "outcomeSelectorComboBox");
+            this.outcomeSelectorComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.outcomeSelectorComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.outcomeSelectorComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.outcomeSelectorComboBox.FormattingEnabled = true;
+            this.outcomeSelectorComboBox.Items.AddRange(new object[] {
+            resources.GetString("outcomeSelectorComboBox.Items"),
+            resources.GetString("outcomeSelectorComboBox.Items1"),
+            resources.GetString("outcomeSelectorComboBox.Items2")});
+            this.outcomeSelectorComboBox.Name = "outcomeSelectorComboBox";
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Name = "label11";
+            // 
+            // weaponTypeBox
+            // 
+            resources.ApplyResources(this.weaponTypeBox, "weaponTypeBox");
+            this.weaponTypeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.weaponTypeBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.weaponTypeBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.weaponTypeBox.FormattingEnabled = true;
+            this.weaponTypeBox.Items.AddRange(new object[] {
+            resources.GetString("weaponTypeBox.Items"),
+            resources.GetString("weaponTypeBox.Items1"),
+            resources.GetString("weaponTypeBox.Items2"),
+            resources.GetString("weaponTypeBox.Items3"),
+            resources.GetString("weaponTypeBox.Items4"),
+            resources.GetString("weaponTypeBox.Items5"),
+            resources.GetString("weaponTypeBox.Items6"),
+            resources.GetString("weaponTypeBox.Items7"),
+            resources.GetString("weaponTypeBox.Items8"),
+            resources.GetString("weaponTypeBox.Items9"),
+            resources.GetString("weaponTypeBox.Items10"),
+            resources.GetString("weaponTypeBox.Items11"),
+            resources.GetString("weaponTypeBox.Items12"),
+            resources.GetString("weaponTypeBox.Items13"),
+            resources.GetString("weaponTypeBox.Items14"),
+            resources.GetString("weaponTypeBox.Items15"),
+            resources.GetString("weaponTypeBox.Items16"),
+            resources.GetString("weaponTypeBox.Items17"),
+            resources.GetString("weaponTypeBox.Items18"),
+            resources.GetString("weaponTypeBox.Items19"),
+            resources.GetString("weaponTypeBox.Items20"),
+            resources.GetString("weaponTypeBox.Items21"),
+            resources.GetString("weaponTypeBox.Items22"),
+            resources.GetString("weaponTypeBox.Items23"),
+            resources.GetString("weaponTypeBox.Items24"),
+            resources.GetString("weaponTypeBox.Items25"),
+            resources.GetString("weaponTypeBox.Items26"),
+            resources.GetString("weaponTypeBox.Items27"),
+            resources.GetString("weaponTypeBox.Items28"),
+            resources.GetString("weaponTypeBox.Items29"),
+            resources.GetString("weaponTypeBox.Items30"),
+            resources.GetString("weaponTypeBox.Items31"),
+            resources.GetString("weaponTypeBox.Items32"),
+            resources.GetString("weaponTypeBox.Items33")});
+            this.weaponTypeBox.Name = "weaponTypeBox";
+            this.weaponTypeBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // downloadProgressBar
             // 
             resources.ApplyResources(this.downloadProgressBar, "downloadProgressBar");
@@ -861,6 +887,8 @@ namespace FloatToolGUI
         private System.Windows.Forms.Label searchModeLabel;
         private System.Windows.Forms.Button MaximizeButton;
         private CustomProgressBar downloadProgressBar;
+        private System.Windows.Forms.ComboBox outcomeSelectorComboBox;
+        private System.Windows.Forms.Label label11;
     }
 }
 

@@ -22,6 +22,16 @@ using System.Windows.Forms;
 
 namespace FloatToolGUI
 {
+    public enum Quality
+    {
+        Consumer,
+        Industrial,
+        MilSpec,
+        Restricted,
+        Classified,
+        Covert
+    }
+
     public partial class FloatTool : Form
     {
         Thread thread1;
@@ -88,17 +98,16 @@ namespace FloatToolGUI
             avgFloat /= 10;
             return ((decimal)(maxFloat - minFloat) * avgFloat) + (decimal)minFloat;
         }
-        static public string craftF(string[] ingridients, float minFloat, float maxFloat)
+        static public string craftF(double[] ingridients, float minFloat, float maxFloat)
         {
             float avgFloat = 0;
             float[] arrInput = new float[10];
             for (int i = 0; i < 10; i++)
             {
-                arrInput[i] = Convert.ToSingle(ingridients[i].Replace(".", ","));
+                arrInput[i] = Convert.ToSingle(ingridients[i]);
             }
             foreach (float f in arrInput)
             {
-                
                 avgFloat += Convert.ToSingle(f);
             }
             avgFloat /= 10;
@@ -152,7 +161,7 @@ namespace FloatToolGUI
         }
 
 
-        public void parseCraft(double[] inputs, List<dynamic> outputs, string want, bool wasSort, bool asc)
+        public void parseCraft(double[] inputs, List<Skin> outputs, string want, bool wasSort, bool asc)
         {
             //List<double> results = new List<double>();
             decimal wantFloat;
@@ -160,24 +169,9 @@ namespace FloatToolGUI
             
             foreach (var item in outputs)
             {
-                //want = want.Replace(".", ",");
-                float minWear = item["minWear"];
-                float maxWear = item["maxWear"];
-                decimal flotOrigin = Math.Round(craft(inputs.ToArray(), minWear, maxWear), 14);
+                decimal flotOrigin = Math.Round(craft(inputs.ToArray(), item.MinFloat, item.MaxFloat), 14);
+                string flot = craftF(inputs, item.MinFloat, item.MaxFloat);
 
-                string[] inputStr = new string[10];
-                for(int i = 0; i < 10; i++)
-                {
-                    inputStr[i] = "" + inputs[i];
-                }
-
-                string flot = craftF(inputStr, minWear, maxWear);
-                //Console.WriteLine(flotOrigin + " | " + flot);
-                //Debug.WriteLine("[DEBUG] flot = " + flot);
-                // if (wasSort && ((!asc && (double.Parse(flot) > double.Parse(want))) || (asc && (double.Parse(flot) < double.Parse(want))))) {
-                //     okSort = true;
-                //}
-                /*flot.StartsWith(want.Replace(".", ",")) ||*/
                 if (
                     ((flotOrigin.ToString(CultureInfo.InvariantCulture).StartsWith(want)) && CurrentSearchMode == SearchMode.Equal) ||
                     ((flotOrigin < wantFloat) && CurrentSearchMode == SearchMode.Less) ||
@@ -240,9 +234,45 @@ namespace FloatToolGUI
             sortCheckBox.Enabled = !sortCheckBox.Enabled;
             ascendingCheckBox.Enabled = !ascendingCheckBox.Enabled;
             multithreadCheckBox.Enabled = !multithreadCheckBox.Enabled;
+            outcomeSelectorComboBox.Enabled = !outcomeSelectorComboBox.Enabled;
             if (threadCountInput.Enabled && !multithreadCheckBox.Enabled)
                 threadCountInput.Enabled = false;
         }
+
+        public void UpdateOutcomes()
+        {
+            string skin = $"{weaponTypeBox.Text} | {weaponSkinBox.Text}";
+            outcomeSelectorComboBox.Items.Clear();
+            List<dynamic> craftList = new List<dynamic>();
+            using (StreamReader r = new StreamReader("itemData.json"))
+            {
+                string json = r.ReadToEnd();
+                dynamic items = JsonConvert.DeserializeObject(json);
+                foreach (var skn in items)
+                {
+                    if (skn["name"].ToString() == skin)
+                    {
+                        foreach (var skin2 in items)
+                            if (skn["case"].ToString() == skin2["case"].ToString())
+                            {
+                                if (skin2["rarity"].ToString().Split(' ')[0] == getNextRarity(skn["rarity"].ToString().Split(' ')[0]))
+                                    craftList.Add(skin2);
+                            }
+                    }
+                }
+                int totalSkins = 0;
+                foreach (var skinRange in GroupOutcomes(craftList))
+                    totalSkins += skinRange.Count;
+                foreach (var skinRange in GroupOutcomes(craftList))
+                {
+                    string tmp = (skinRange.Count > 1) ? $" + {(skinRange.Count - 1)}" : "";
+                    outcomeSelectorComboBox.Items.Add($"{((float)skinRange.Count) / totalSkins * 100}% ({skinRange[0].Name}{tmp})");
+                }
+                outcomeSelectorComboBox.Items.Add("* Искать всё *");
+                outcomeSelectorComboBox.SelectedIndex = 0;
+            }
+        }
+
         public void updateSearchStr()
         {
             string search = "";
@@ -255,6 +285,7 @@ namespace FloatToolGUI
             search += weaponSkinBox.Text;
             search += " (" + weaponQualityBox.Text + ")";
             fullSkinName.Text = search;
+            UpdateOutcomes();
         }
         public FloatTool()
         {
@@ -283,6 +314,7 @@ namespace FloatToolGUI
                 }
             }
             updateSearchStr();
+
             darkModeSwitchBtn.Text = darkTheme ? "🌙" : "☀";
             client = new DiscordRpcClient("824349399688937543");
 
@@ -404,7 +436,7 @@ namespace FloatToolGUI
             } while (NextCombination(numbers, size, k));
         }
 
-        public void secndThread(List<dynamic> craftList, string wanted, double[] pool, int start, int skip)
+        public void secndThread(List<Skin> craftList, string wanted, double[] pool, int start, int skip)
         {
             foreach (IEnumerable<double> pair in Combinations(pool, 10, start, skip))
             {
@@ -458,6 +490,7 @@ namespace FloatToolGUI
             string q = fullSkinName.Text;
             string url = "https://steamcommunity.com/market/listings/730/" + q + "/render/?query=&language=russian&count=" + count + "&start=" + start + "&currency=5";
             Console.WriteLine(url);
+           
             this.Invoke((MethodInvoker)(() =>
             {
                 outputConsoleBox.AppendText( "Загрузка скинов с торговой площадки..." + Environment.NewLine);
@@ -560,11 +593,28 @@ namespace FloatToolGUI
                     }
                 }
             }
+
+            int outcomeIndex = 0;
+            Invoke((MethodInvoker)(() => { outcomeIndex  = outcomeSelectorComboBox.SelectedIndex; } ));
+            
+            var allOutcomes = GroupOutcomes(craftList);
+            List<Skin> outcomes = new List<Skin>();
+
+            if(allOutcomes.Length > outcomeIndex) {
+                outcomes.Add(allOutcomes[outcomeIndex][0]);
+            }
+            else
+            {
+                foreach (var i in allOutcomes)
+                    outcomes.Add(i[0]);
+            }
+
             this.Invoke((MethodInvoker)(() =>
             {
-                outputConsoleBox.AppendText( "Ауткамы найдены! Начинаю подбор..." + Environment.NewLine + Environment.NewLine);
+                outputConsoleBox.AppendText( "Ауткамы найдены! Начинаю подбор..." + Environment.NewLine + "Выбрано для поиска:" + Environment.NewLine + String.Join(Environment.NewLine, outcomes) + Environment.NewLine + Environment.NewLine);
                 fullSkinName.SelectionStart = fullSkinName.Text.Length;
                 outputConsoleBox.ScrollToCaret();
+                downloadProgressBar.Value = 0;
                 downloadProgressBar.Maximum = 1000;
             }
             ));
@@ -581,7 +631,7 @@ namespace FloatToolGUI
                 {
                     for (int i = 1; i < threads; i++)
                     {
-                        Thread newThread = new Thread(() => secndThread(craftList, wanted, pool, i, threads));
+                        Thread newThread = new Thread(() => secndThread(outcomes, wanted, pool, i, threads));
                         newThread.Start();
                         t2.Add(newThread);
                     }
@@ -594,7 +644,7 @@ namespace FloatToolGUI
             
             foreach (IEnumerable<double> pair in Combinations(pool, 10, 0, threads))
             {
-                parseCraft(pair.ToArray(), craftList, wanted, sortCheckBox.Checked, ascendingCheckBox.Checked);
+                parseCraft(pair.ToArray(), outcomes, wanted, sortCheckBox.Checked, ascendingCheckBox.Checked);
                 currComb++;
             }
             Console.WriteLine("Next group");
@@ -686,6 +736,27 @@ namespace FloatToolGUI
                 {
                     if (skn["name"].ToString() == skin)
                     {
+                        #region Float ranges
+                        /* 
+                        List<dynamic> craftList = new List<dynamic>();
+
+                        foreach (var skin2 in items)
+                            if (skn["case"].ToString() == skin2["case"].ToString())
+                            {
+                                if (skin2["rarity"].ToString().Split(' ')[0] == getNextRarity(skn["rarity"].ToString().Split(' ')[0]))
+                                    craftList.Add(skin2);
+                            }
+                                
+
+                        foreach (var skinRange in GroupOutcomes(craftList))
+                        {
+                            ConsoleBuffer.Append($"{Environment.NewLine}--------Length: {skinRange.Count}--------");
+                            foreach (var skinObj in skinRange)
+                                ConsoleBuffer.Append(Environment.NewLine+skinObj.ToString());
+                        }
+                        */
+                        #endregion
+
                         if (skn["highestRarity"] == "False")
                         {
                             if (floatRangeText(weaponQualityBox.Text, skn["minWear"].ToString(), skn["maxWear"].ToString()))
@@ -707,7 +778,6 @@ namespace FloatToolGUI
                     }
                 }
             }
-
             MessageBox.Show("Такого скина не существует! Перепроверьте настройки.", "FloatTool", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
@@ -717,6 +787,40 @@ namespace FloatToolGUI
                    (x2 >= y1 && x2 <= y2) ||
                    (y1 >= x1 && y1 <= x2) ||
                    (y2 >= x1 && y2 <= x2);
+        }
+
+        private Quality FromString(string value)
+        {
+            if (value == "Consumer") return Quality.Consumer;
+            else if (value == "Industrial") return Quality.Industrial;
+            else if (value == "Mil-Spec") return Quality.MilSpec;
+            else if (value == "Restricted") return Quality.Restricted;
+            else if (value == "Classified") return Quality.Classified;
+            else return Quality.Covert;
+        }
+
+        private List<Skin>[] GroupOutcomes(List<dynamic> skins)
+        {
+            var allList = new List<List<Skin>>(); //List with all outcomes
+            float[] currIter = { 0f, 1f }; //Last iteration wear range
+            List<float[]> floatRanges = new List<float[]>(); //List of all ranges that has been parsed
+
+            foreach(var skin in skins)
+            {
+                float[] curr = { skin["maxWear"], skin["minWear"] };
+                List<Skin> list = new List<Skin>();
+                if (curr.SequenceEqual(currIter) || floatRanges.Any(x => (x.SequenceEqual(curr)))) continue; //If range already exists
+                else {
+                    currIter = curr;
+                    floatRanges.Add(currIter);
+                }
+                foreach (var skin1 in skins)
+                    if ((skin["maxWear"] == skin1["maxWear"]) && (skin["minWear"] == skin1["minWear"]))
+                        list.Add(new Skin(skin1["name"].ToString(), float.Parse(skin1["minWear"].ToString().Replace('.', ',')), float.Parse(skin1["maxWear"].ToString().Replace('.', ',')), FromString(skin1["rarity"].ToString().Split(' ')[0])));
+                allList.Add(list);
+            }
+
+            return allList.ToArray();
         }
 
         private bool floatRangeText(string text, string minVal, string maxVal)
@@ -790,7 +894,7 @@ namespace FloatToolGUI
             HTBOTTOMLEFT = 16,
             HTBOTTOMRIGHT = 17;
 
-        const int _ = 10; // you can rename this variable if you like
+        const int _ = 16;
 
         Rectangle TopCursor { get { return new Rectangle(0, 0, this.ClientSize.Width, _); } }
         Rectangle LeftCursor { get { return new Rectangle(0, 0, _, this.ClientSize.Height); } }
@@ -1145,7 +1249,6 @@ namespace FloatToolGUI
         private void timer2_Tick(object sender, EventArgs e)
         {
             var hundrMilsCount = currComb - last;
-            //Console.WriteLine($"{hundrMilsCount} in last {timer2.Interval} ms");
             var speed = (double)(hundrMilsCount) * 1000 / WorkStatusUpdater.Interval;
             speedStatusLabel.Text = $"Текущая скорость: {speed} комбинаций/сек";
             last = currComb;
