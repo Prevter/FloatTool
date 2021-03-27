@@ -64,8 +64,7 @@ namespace FloatToolGUI
             this.helpContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.openWebsiteButton = new System.Windows.Forms.ToolStripMenuItem();
             this.openAboutBox = new System.Windows.Forms.ToolStripMenuItem();
-            this.openGithubButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.soundBtnSwitch = new System.Windows.Forms.Button();
+            this.MaximizeButton = new System.Windows.Forms.Button();
             this.minimizeBtn = new System.Windows.Forms.Button();
             this.closeBtn = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -74,7 +73,6 @@ namespace FloatToolGUI
             this.panel3 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.downloadProgressBar = new System.Windows.Forms.ProgressBar();
             this.panel6 = new System.Windows.Forms.Panel();
             this.stattrackCheckBox = new System.Windows.Forms.CheckBox();
             this.checkPossibilityBtn = new System.Windows.Forms.Button();
@@ -102,7 +100,6 @@ namespace FloatToolGUI
             this.sortCheckBox = new System.Windows.Forms.CheckBox();
             this.startBtn = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.workProgressBar = new System.Windows.Forms.ProgressBar();
             this.speedStatusLabel = new System.Windows.Forms.Label();
             this.combinationsStatusLabel = new System.Windows.Forms.Label();
             this.gpuSearch_btn = new System.Windows.Forms.Button();
@@ -112,6 +109,9 @@ namespace FloatToolGUI
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.WorkStatusUpdater = new System.Windows.Forms.Timer(this.components);
+            this.openGithubButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.soundBtnSwitch = new System.Windows.Forms.Button();
+            this.downloadProgressBar = new FloatToolGUI.CustomProgressBar();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -204,6 +204,7 @@ namespace FloatToolGUI
             this.panel9.Controls.Add(this.darkModeSwitchBtn);
             this.panel9.Controls.Add(this.helpBtn);
             this.panel9.Controls.Add(this.soundBtnSwitch);
+            this.panel9.Controls.Add(this.MaximizeButton);
             this.panel9.Controls.Add(this.minimizeBtn);
             this.panel9.Controls.Add(this.closeBtn);
             resources.ApplyResources(this.panel9, "panel9");
@@ -256,25 +257,17 @@ namespace FloatToolGUI
             resources.ApplyResources(this.openAboutBox, "openAboutBox");
             this.openAboutBox.Click += new System.EventHandler(this.OpenAboutButton_Click);
             // 
-            // openGithubButton
+            // MaximizeButton
             // 
-            this.openGithubButton.Image = global::FloatToolGUI.Properties.Resources.github;
-            this.openGithubButton.Name = "openGithubButton";
-            resources.ApplyResources(this.openGithubButton, "openGithubButton");
-            this.openGithubButton.Click += new System.EventHandler(this.OpenGithubButton_Click);
-            // 
-            // soundBtnSwitch
-            // 
-            this.soundBtnSwitch.BackColor = System.Drawing.Color.Transparent;
-            this.soundBtnSwitch.FlatAppearance.BorderSize = 0;
-            this.soundBtnSwitch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.soundBtnSwitch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.soundBtnSwitch, "soundBtnSwitch");
-            this.soundBtnSwitch.ForeColor = System.Drawing.Color.White;
-            this.soundBtnSwitch.Image = global::FloatToolGUI.Properties.Resources.unmutedWhite;
-            this.soundBtnSwitch.Name = "soundBtnSwitch";
-            this.soundBtnSwitch.UseVisualStyleBackColor = false;
-            this.soundBtnSwitch.Click += new System.EventHandler(this.SoundSwitchButton_Click);
+            resources.ApplyResources(this.MaximizeButton, "MaximizeButton");
+            this.MaximizeButton.BackColor = System.Drawing.Color.Transparent;
+            this.MaximizeButton.FlatAppearance.BorderSize = 0;
+            this.MaximizeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.MaximizeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.MaximizeButton.ForeColor = System.Drawing.Color.White;
+            this.MaximizeButton.Name = "MaximizeButton";
+            this.MaximizeButton.UseVisualStyleBackColor = false;
+            this.MaximizeButton.Click += new System.EventHandler(this.MaximizeMinimizeButton);
             // 
             // minimizeBtn
             // 
@@ -286,7 +279,7 @@ namespace FloatToolGUI
             this.minimizeBtn.ForeColor = System.Drawing.Color.White;
             this.minimizeBtn.Name = "minimizeBtn";
             this.minimizeBtn.UseVisualStyleBackColor = false;
-            this.minimizeBtn.Click += new System.EventHandler(this.button6_Click);
+            this.minimizeBtn.Click += new System.EventHandler(this.MaximizeMinimizeButton);
             // 
             // closeBtn
             // 
@@ -348,14 +341,6 @@ namespace FloatToolGUI
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Name = "label8";
-            // 
-            // downloadProgressBar
-            // 
-            resources.ApplyResources(this.downloadProgressBar, "downloadProgressBar");
-            this.downloadProgressBar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.downloadProgressBar.ForeColor = System.Drawing.Color.Black;
-            this.downloadProgressBar.Name = "downloadProgressBar";
-            this.downloadProgressBar.Step = 1;
             // 
             // panel6
             // 
@@ -651,7 +636,6 @@ namespace FloatToolGUI
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.Transparent;
-            this.panel15.Controls.Add(this.workProgressBar);
             this.panel15.Controls.Add(this.speedStatusLabel);
             this.panel15.Controls.Add(this.combinationsStatusLabel);
             this.panel15.Controls.Add(this.gpuSearch_btn);
@@ -660,13 +644,6 @@ namespace FloatToolGUI
             this.panel15.Controls.Add(this.multithreadCheckBox);
             resources.ApplyResources(this.panel15, "panel15");
             this.panel15.Name = "panel15";
-            // 
-            // workProgressBar
-            // 
-            resources.ApplyResources(this.workProgressBar, "workProgressBar");
-            this.workProgressBar.Maximum = 256;
-            this.workProgressBar.Name = "workProgressBar";
-            this.workProgressBar.Step = 1;
             // 
             // speedStatusLabel
             // 
@@ -749,15 +726,49 @@ namespace FloatToolGUI
             this.WorkStatusUpdater.Interval = 250;
             this.WorkStatusUpdater.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // openGithubButton
+            // 
+            this.openGithubButton.Image = global::FloatToolGUI.Properties.Resources.github;
+            this.openGithubButton.Name = "openGithubButton";
+            resources.ApplyResources(this.openGithubButton, "openGithubButton");
+            this.openGithubButton.Click += new System.EventHandler(this.OpenGithubButton_Click);
+            // 
+            // soundBtnSwitch
+            // 
+            this.soundBtnSwitch.BackColor = System.Drawing.Color.Transparent;
+            this.soundBtnSwitch.FlatAppearance.BorderSize = 0;
+            this.soundBtnSwitch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.soundBtnSwitch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.soundBtnSwitch, "soundBtnSwitch");
+            this.soundBtnSwitch.ForeColor = System.Drawing.Color.White;
+            this.soundBtnSwitch.Image = global::FloatToolGUI.Properties.Resources.unmutedWhite;
+            this.soundBtnSwitch.Name = "soundBtnSwitch";
+            this.soundBtnSwitch.UseVisualStyleBackColor = false;
+            this.soundBtnSwitch.Click += new System.EventHandler(this.SoundSwitchButton_Click);
+            // 
+            // downloadProgressBar
+            // 
+            resources.ApplyResources(this.downloadProgressBar, "downloadProgressBar");
+            this.downloadProgressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.downloadProgressBar.ForeColor = System.Drawing.Color.White;
+            this.downloadProgressBar.Maximum = 100;
+            this.downloadProgressBar.Minimum = 0;
+            this.downloadProgressBar.Name = "downloadProgressBar";
+            this.downloadProgressBar.ProgressColor = System.Drawing.Color.Green;
+            this.downloadProgressBar.ProgressFont = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.downloadProgressBar.Value = 0F;
+            // 
             // FloatTool
             // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(227)))));
             this.ControlBox = false;
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FloatTool";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
@@ -807,7 +818,6 @@ namespace FloatToolGUI
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.CheckBox ascendingCheckBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ProgressBar downloadProgressBar;
         private System.Windows.Forms.CheckBox sortCheckBox;
         private System.Windows.Forms.Button startBtn;
         private System.Windows.Forms.TextBox searchFloatInput;
@@ -843,13 +853,14 @@ namespace FloatToolGUI
         private System.Windows.Forms.Button gpuSearch_btn;
         private System.Windows.Forms.Label combinationsStatusLabel;
         private System.Windows.Forms.Timer WorkStatusUpdater;
-        private System.Windows.Forms.ProgressBar workProgressBar;
         private System.Windows.Forms.Label speedStatusLabel;
         private System.Windows.Forms.Button searchmodeGreater_btn;
         private System.Windows.Forms.Button searchmodeEqual_btn;
         private System.Windows.Forms.Button searchmodeLess_btn;
         private System.Windows.Forms.ToolStripMenuItem openWebsiteButton;
         private System.Windows.Forms.Label searchModeLabel;
+        private System.Windows.Forms.Button MaximizeButton;
+        private CustomProgressBar downloadProgressBar;
     }
 }
 

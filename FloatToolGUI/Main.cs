@@ -424,6 +424,8 @@ namespace FloatToolGUI
         public List<Thread> t2 = new List<Thread>();
         BigInteger totalComb = 0;
         BigInteger currComb = 0;
+        public bool Searching = false;
+
         private void StartCalculation()
         {
             client.SetPresence(new RichPresence()
@@ -563,10 +565,13 @@ namespace FloatToolGUI
                 outputConsoleBox.AppendText( "Ауткамы найдены! Начинаю подбор..." + Environment.NewLine + Environment.NewLine);
                 fullSkinName.SelectionStart = fullSkinName.Text.Length;
                 outputConsoleBox.ScrollToCaret();
+                downloadProgressBar.Maximum = 1000;
             }
             ));
 
             double[] pool = floats.ToArray();
+
+            Searching = true;
 
             var threads = 1;
             if (multithreadCheckBox.Checked)
@@ -586,8 +591,6 @@ namespace FloatToolGUI
                     Console.WriteLine(ex.Message);
                 }
             }
-
-            
             
             foreach (IEnumerable<double> pair in Combinations(pool, 10, 0, threads))
             {
@@ -610,6 +613,8 @@ namespace FloatToolGUI
                 }
                 if (okey) break;
             }
+
+            Searching = false;
 
             this.Invoke((MethodInvoker)(() =>
                 {
@@ -634,6 +639,7 @@ namespace FloatToolGUI
             }
             else
             {
+                Searching = false;
                 thread1.Abort();
                 startBtn.Text = "Старт";
                 downloadProgressBar.Value = 0;
@@ -754,9 +760,15 @@ namespace FloatToolGUI
             Application.Exit();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void MaximizeMinimizeButton(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            var buttonText = ((System.Windows.Forms.Button)sender).Text;
+            if(buttonText == "_") WindowState = FormWindowState.Minimized;
+            else
+            {
+                WindowState = WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
+            }
+
         }
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -767,7 +779,51 @@ namespace FloatToolGUI
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        private void panel3_MouseDown(object sender, MouseEventArgs e)
+
+        private const int
+            HTLEFT = 10,
+            HTRIGHT = 11,
+            HTTOP = 12,
+            HTTOPLEFT = 13,
+            HTTOPRIGHT = 14,
+            HTBOTTOM = 15,
+            HTBOTTOMLEFT = 16,
+            HTBOTTOMRIGHT = 17;
+
+        const int _ = 10; // you can rename this variable if you like
+
+        Rectangle TopCursor { get { return new Rectangle(0, 0, this.ClientSize.Width, _); } }
+        Rectangle LeftCursor { get { return new Rectangle(0, 0, _, this.ClientSize.Height); } }
+        Rectangle BottomCursor { get { return new Rectangle(0, this.ClientSize.Height - _, this.ClientSize.Width, _); } }
+        Rectangle RightCursor { get { return new Rectangle(this.ClientSize.Width - _, 0, _, this.ClientSize.Height); } }
+
+        Rectangle TopLeft { get { return new Rectangle(0, 0, _, _); } }
+        Rectangle TopRight { get { return new Rectangle(this.ClientSize.Width - _, 0, _, _); } }
+        Rectangle BottomLeft { get { return new Rectangle(0, this.ClientSize.Height - _, _, _); } }
+        Rectangle BottomRight { get { return new Rectangle(this.ClientSize.Width - _, this.ClientSize.Height - _, _, _); } }
+
+
+        protected override void WndProc(ref Message message)
+        {
+            base.WndProc(ref message);
+
+            if (message.Msg == 0x84) // WM_NCHITTEST
+            {
+                var cursor = this.PointToClient(Cursor.Position);
+
+                if (TopLeft.Contains(cursor)) message.Result = (IntPtr)HTTOPLEFT;
+                else if (TopRight.Contains(cursor)) message.Result = (IntPtr)HTTOPRIGHT;
+                else if (BottomLeft.Contains(cursor)) message.Result = (IntPtr)HTBOTTOMLEFT;
+                else if (BottomRight.Contains(cursor)) message.Result = (IntPtr)HTBOTTOMRIGHT;
+
+                else if (TopCursor.Contains(cursor)) message.Result = (IntPtr)HTTOP;
+                else if (LeftCursor.Contains(cursor)) message.Result = (IntPtr)HTLEFT;
+                else if (RightCursor.Contains(cursor)) message.Result = (IntPtr)HTRIGHT;
+                else if (BottomCursor.Contains(cursor)) message.Result = (IntPtr)HTBOTTOM;
+            }
+        }
+
+    private void panel3_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -882,12 +938,14 @@ namespace FloatToolGUI
                 minimizeBtn.ForeColor = Color.FromArgb(255, 255, 255);
                 updateMuteIcon();
                 closeBtn.ForeColor = Color.FromArgb(255, 255, 255);
+                MaximizeButton.ForeColor = Color.FromArgb(255, 255, 255);
                 helpBtn.ForeColor = Color.FromArgb(255, 255, 255);
                 darkModeSwitchBtn.ForeColor = Color.FromArgb(255, 255, 255);
 
                 minimizeBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0);
                 soundBtnSwitch.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0);
                 closeBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0);
+                MaximizeButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0);
                 helpBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0);
                 darkModeSwitchBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0);
 
@@ -931,6 +989,10 @@ namespace FloatToolGUI
 
                 gpuSearch_btn.BackColor = Color.FromArgb(56, 56, 56);
                 gpuSearch_btn.ForeColor = Color.FromArgb(255, 255, 255);
+
+                downloadProgressBar.ForeColor = Color.White;
+                downloadProgressBar.ProgressColor = Color.Green;
+                downloadProgressBar.BackColor = Color.FromArgb(32, 32, 32);
             }
             else
             {
@@ -965,12 +1027,14 @@ namespace FloatToolGUI
                 minimizeBtn.ForeColor = Color.FromArgb(0, 0, 0);
                 updateMuteIcon();
                 closeBtn.ForeColor = Color.FromArgb(0, 0, 0);
+                MaximizeButton.ForeColor = Color.FromArgb(0, 0, 0);
                 helpBtn.ForeColor = Color.FromArgb(0, 0, 0);
                 darkModeSwitchBtn.ForeColor = Color.FromArgb(0, 0, 0);
 
                 minimizeBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 230, 230);
                 soundBtnSwitch.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 230, 230);
                 closeBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 230, 230);
+                MaximizeButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 230, 230);
                 helpBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 230, 230);
                 darkModeSwitchBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 230, 230);
 
@@ -1014,6 +1078,10 @@ namespace FloatToolGUI
 
                 gpuSearch_btn.BackColor = Color.FromArgb(249, 249, 249);
                 gpuSearch_btn.ForeColor = Color.FromArgb(0, 0, 0);
+
+                downloadProgressBar.ForeColor = Color.Black;
+                downloadProgressBar.ProgressColor = Color.FromArgb(119, 194, 119);
+                downloadProgressBar.BackColor = Color.FromArgb(234, 234, 234);
             }
         }
 
@@ -1090,8 +1158,8 @@ namespace FloatToolGUI
                 outputConsoleBox.ScrollToCaret();
             }
 
-            if (totalComb != 0 && currComb < totalComb)
-                workProgressBar.Value = (int)( (double)(currComb) / (double)(totalComb) * 256);
+            if (totalComb != 0 && currComb < totalComb && Searching)
+                downloadProgressBar.Value = ((float)((double)(currComb) / (double)(totalComb) * 1000));
         }
 
         private void changeSearchMode(object sender, EventArgs e)

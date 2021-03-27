@@ -139,7 +139,7 @@
     <value>Both</value>
   </data>
   <data name="outputConsoleBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>447, 454</value>
+    <value>459, 408</value>
   </data>
   <data name="outputConsoleBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -170,7 +170,7 @@
     <value>0, 10</value>
   </data>
   <data name="panel11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>447, 454</value>
+    <value>459, 408</value>
   </data>
   <data name="panel11.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -194,7 +194,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>447, 10</value>
+    <value>459, 10</value>
   </data>
   <data name="panel12.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -218,7 +218,7 @@
     <value>10, 0</value>
   </data>
   <data name="panel13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>447, 464</value>
+    <value>459, 418</value>
   </data>
   <data name="panel13.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -242,7 +242,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 464</value>
+    <value>10, 418</value>
   </data>
   <data name="panel10.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -266,7 +266,7 @@
     <value>0, 40</value>
   </data>
   <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>457, 464</value>
+    <value>469, 418</value>
   </data>
   <data name="panel8.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -296,7 +296,7 @@
     <value>NoControl</value>
   </data>
   <data name="darkModeSwitchBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>289, 0</value>
+    <value>269, 1</value>
   </data>
   <data name="darkModeSwitchBtn.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 1, 1, 1</value>
@@ -308,7 +308,7 @@
     <value>5</value>
   </data>
   <data name="darkModeSwitchBtn.Text" xml:space="preserve">
-    <value>O</value>
+    <value>L</value>
   </data>
   <data name="&gt;&gt;darkModeSwitchBtn.Name" xml:space="preserve">
     <value>darkModeSwitchBtn</value>
@@ -371,10 +371,10 @@
     <value>NoControl</value>
   </data>
   <data name="helpBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>335, 1</value>
+    <value>309, 1</value>
   </data>
   <data name="helpBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 40</value>
+    <value>40, 39</value>
   </data>
   <data name="helpBtn.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -430,6 +430,42 @@
   <data name="&gt;&gt;soundBtnSwitch.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="MaximizeButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="MaximizeButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="MaximizeButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft JhengHei Light, 16pt</value>
+  </data>
+  <data name="MaximizeButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="MaximizeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>389, 1</value>
+  </data>
+  <data name="MaximizeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="MaximizeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="MaximizeButton.Text" xml:space="preserve">
+    <value>O</value>
+  </data>
+  <data name="&gt;&gt;MaximizeButton.Name" xml:space="preserve">
+    <value>MaximizeButton</value>
+  </data>
+  <data name="&gt;&gt;MaximizeButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MaximizeButton.Parent" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="&gt;&gt;MaximizeButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="minimizeBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -443,10 +479,10 @@
     <value>NoControl</value>
   </data>
   <data name="minimizeBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>375, 1</value>
+    <value>349, 1</value>
   </data>
   <data name="minimizeBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 40</value>
+    <value>40, 39</value>
   </data>
   <data name="minimizeBtn.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -464,7 +500,7 @@
     <value>panel9</value>
   </data>
   <data name="&gt;&gt;minimizeBtn.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="closeBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -479,7 +515,7 @@
     <value>NoControl</value>
   </data>
   <data name="closeBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>417, 1</value>
+    <value>429, 1</value>
   </data>
   <data name="closeBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 40</value>
@@ -500,7 +536,7 @@
     <value>panel9</value>
   </data>
   <data name="&gt;&gt;closeBtn.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="panel9.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -509,7 +545,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>457, 40</value>
+    <value>469, 40</value>
   </data>
   <data name="panel9.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -539,7 +575,7 @@
     <value>NoControl</value>
   </data>
   <data name="button5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 0</value>
+    <value>379, 0</value>
   </data>
   <data name="button5.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 26</value>
@@ -575,7 +611,7 @@
     <value>NoControl</value>
   </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>397, 0</value>
+    <value>409, 0</value>
   </data>
   <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 26</value>
@@ -611,7 +647,7 @@
     <value>NoControl</value>
   </data>
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>427, 0</value>
+    <value>439, 0</value>
   </data>
   <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 26</value>
@@ -641,7 +677,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>457, 40</value>
+    <value>469, 40</value>
   </data>
   <data name="panel7.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -665,7 +701,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>457, 504</value>
+    <value>469, 458</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -768,33 +804,6 @@
   </data>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="downloadProgressBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="downloadProgressBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="downloadProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 154</value>
-  </data>
-  <data name="downloadProgressBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>406, 22</value>
-  </data>
-  <data name="downloadProgressBar.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;downloadProgressBar.Name" xml:space="preserve">
-    <value>downloadProgressBar</value>
-  </data>
-  <data name="&gt;&gt;downloadProgressBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;downloadProgressBar.Parent" xml:space="preserve">
-    <value>panel16</value>
-  </data>
-  <data name="&gt;&gt;downloadProgressBar.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="stattrackCheckBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1300,6 +1309,33 @@
   <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="downloadProgressBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="downloadProgressBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 160</value>
+  </data>
+  <data name="downloadProgressBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="downloadProgressBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>405, 24</value>
+  </data>
+  <data name="downloadProgressBar.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;downloadProgressBar.Name" xml:space="preserve">
+    <value>downloadProgressBar</value>
+  </data>
+  <data name="&gt;&gt;downloadProgressBar.Type" xml:space="preserve">
+    <value>FloatToolGUI.CustomProgressBar, FloatTool, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;downloadProgressBar.Parent" xml:space="preserve">
+    <value>panel16</value>
+  </data>
+  <data name="&gt;&gt;downloadProgressBar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="searchmodeGreater_btn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1313,7 +1349,7 @@
     <value>NoControl</value>
   </data>
   <data name="searchmodeGreater_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>169, 29</value>
+    <value>169, 32</value>
   </data>
   <data name="searchmodeGreater_btn.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 32</value>
@@ -1349,7 +1385,7 @@
     <value>NoControl</value>
   </data>
   <data name="searchmodeEqual_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 29</value>
+    <value>91, 32</value>
   </data>
   <data name="searchmodeEqual_btn.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 32</value>
@@ -1381,8 +1417,11 @@
   <data name="searchmodeLess_btn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft JhengHei UI, 12.75pt, style=Bold</value>
   </data>
+  <data name="searchmodeLess_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="searchmodeLess_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 29</value>
+    <value>12, 32</value>
   </data>
   <data name="searchmodeLess_btn.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 32</value>
@@ -1418,7 +1457,7 @@
     <value>NoControl</value>
   </data>
   <data name="searchModeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 8</value>
+    <value>9, 11</value>
   </data>
   <data name="searchModeLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 18</value>
@@ -1454,7 +1493,7 @@
     <value>NoControl</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 67</value>
+    <value>9, 70</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>108, 18</value>
@@ -1484,7 +1523,7 @@
     <value>Microsoft JhengHei Light, 10pt</value>
   </data>
   <data name="quantityInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>122, 96</value>
+    <value>122, 99</value>
   </data>
   <data name="quantityInput.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 21</value>
@@ -1511,7 +1550,7 @@
     <value>Microsoft JhengHei Light, 10pt</value>
   </data>
   <data name="skipValueInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>122, 127</value>
+    <value>122, 130</value>
   </data>
   <data name="skipValueInput.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 21</value>
@@ -1541,7 +1580,7 @@
     <value>NoControl</value>
   </data>
   <data name="ascendingCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>245, 39</value>
+    <value>245, 42</value>
   </data>
   <data name="ascendingCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 22</value>
@@ -1574,7 +1613,7 @@
     <value>NoControl</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 126</value>
+    <value>9, 129</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 18</value>
@@ -1610,7 +1649,7 @@
     <value>NoControl</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 95</value>
+    <value>9, 98</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 18</value>
@@ -1640,7 +1679,7 @@
     <value>Microsoft JhengHei Light, 10pt</value>
   </data>
   <data name="searchFloatInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>122, 67</value>
+    <value>122, 70</value>
   </data>
   <data name="searchFloatInput.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 18</value>
@@ -1673,7 +1712,7 @@
     <value>NoControl</value>
   </data>
   <data name="sortCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>245, 15</value>
+    <value>245, 18</value>
   </data>
   <data name="sortCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 22</value>
@@ -1709,7 +1748,7 @@
     <value>NoControl</value>
   </data>
   <data name="startBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 67</value>
+    <value>244, 70</value>
   </data>
   <data name="startBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>173, 81</value>
@@ -1739,7 +1778,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>427, 182</value>
+    <value>427, 197</value>
   </data>
   <data name="panel16.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -1756,27 +1795,6 @@
   <data name="&gt;&gt;panel16.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="workProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 78</value>
-  </data>
-  <data name="workProgressBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 10</value>
-  </data>
-  <data name="workProgressBar.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;workProgressBar.Name" xml:space="preserve">
-    <value>workProgressBar</value>
-  </data>
-  <data name="&gt;&gt;workProgressBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;workProgressBar.Parent" xml:space="preserve">
-    <value>panel15</value>
-  </data>
-  <data name="&gt;&gt;workProgressBar.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="speedStatusLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1787,7 +1805,7 @@
     <value>NoControl</value>
   </data>
   <data name="speedStatusLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 43</value>
+    <value>9, 34</value>
   </data>
   <data name="speedStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>221, 16</value>
@@ -1808,7 +1826,7 @@
     <value>panel15</value>
   </data>
   <data name="&gt;&gt;speedStatusLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="combinationsStatusLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1816,8 +1834,11 @@
   <data name="combinationsStatusLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft JhengHei Light, 9pt</value>
   </data>
+  <data name="combinationsStatusLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="combinationsStatusLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 59</value>
+    <value>9, 50</value>
   </data>
   <data name="combinationsStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 16</value>
@@ -1838,10 +1859,13 @@
     <value>panel15</value>
   </data>
   <data name="&gt;&gt;combinationsStatusLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="gpuSearch_btn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom</value>
+  </data>
+  <data name="gpuSearch_btn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="gpuSearch_btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1849,17 +1873,23 @@
   <data name="gpuSearch_btn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft JhengHei Light, 14pt</value>
   </data>
+  <data name="gpuSearch_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="gpuSearch_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 94</value>
+    <value>231, 37</value>
   </data>
   <data name="gpuSearch_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 35</value>
+    <value>186, 29</value>
   </data>
   <data name="gpuSearch_btn.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="gpuSearch_btn.Text" xml:space="preserve">
     <value>GPU Тест</value>
+  </data>
+  <data name="gpuSearch_btn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;gpuSearch_btn.Name" xml:space="preserve">
     <value>gpuSearch_btn</value>
@@ -1871,13 +1901,16 @@
     <value>panel15</value>
   </data>
   <data name="&gt;&gt;gpuSearch_btn.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>220, 13</value>
+    <value>216, 10</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 18</value>
@@ -1898,10 +1931,10 @@
     <value>panel15</value>
   </data>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="threadCountInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>298, 12</value>
+    <value>297, 9</value>
   </data>
   <data name="threadCountInput.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 21</value>
@@ -1919,13 +1952,16 @@
     <value>panel15</value>
   </data>
   <data name="&gt;&gt;threadCountInput.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="multithreadCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="multithreadCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="multithreadCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 11</value>
+    <value>12, 8</value>
   </data>
   <data name="multithreadCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 22</value>
@@ -1946,16 +1982,16 @@
     <value>panel15</value>
   </data>
   <data name="&gt;&gt;multithreadCheckBox.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="panel15.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
   </data>
   <data name="panel15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 182</value>
+    <value>0, 197</value>
   </data>
   <data name="panel15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>427, 137</value>
+    <value>427, 76</value>
   </data>
   <data name="panel15.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1982,7 +2018,7 @@
     <value>0, 185</value>
   </data>
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>427, 319</value>
+    <value>427, 273</value>
   </data>
   <data name="panel5.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2003,10 +2039,10 @@
     <value>Left</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>2, 0</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>427, 504</value>
+    <value>427, 458</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -2027,10 +2063,10 @@
     <value>Fill</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>427, 0</value>
+    <value>429, 0</value>
   </data>
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>457, 504</value>
+    <value>469, 458</value>
   </data>
   <data name="panel4.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -2056,14 +2092,11 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>60</value>
   </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 15</value>
-  </data>
   <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Center</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>884, 504</value>
+    <value>900, 460</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft JhengHei Light, 8.25pt</value>
@@ -2314,11 +2347,20 @@
         lcEgDkWiqA6FUR2O4OL8XLzY1sG2H8tA/j8A3hg1hV1H6QAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>900, 520</value>
+    <value>900, 460</value>
+  </data>
+  <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 2</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>FloatTool</value>
   </data>
   <data name="&gt;&gt;DiscordUpdater.Name" xml:space="preserve">
     <value>DiscordUpdater</value>
@@ -2338,17 +2380,17 @@
   <data name="&gt;&gt;openAboutBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;openGithubButton.Name" xml:space="preserve">
-    <value>openGithubButton</value>
-  </data>
-  <data name="&gt;&gt;openGithubButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;WorkStatusUpdater.Name" xml:space="preserve">
     <value>WorkStatusUpdater</value>
   </data>
   <data name="&gt;&gt;WorkStatusUpdater.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openGithubButton.Name" xml:space="preserve">
+    <value>openGithubButton</value>
+  </data>
+  <data name="&gt;&gt;openGithubButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FloatTool</value>
