@@ -11,6 +11,7 @@ using System.IO;
 using System.Linq;
 using System.Media;
 using System.Net;
+using System.Numerics;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -25,6 +26,17 @@ namespace FloatToolGUI
     {
         Thread thread1;
         public bool muteSound = false;
+
+        public StringBuilder ConsoleBuffer;
+
+        public enum SearchMode
+        {
+            Less,
+            Equal,
+            Greater
+        }
+
+        public SearchMode CurrentSearchMode = SearchMode.Equal;
 
         public static string setprecission(double number, int figures)
         {
@@ -142,7 +154,10 @@ namespace FloatToolGUI
 
         public void parseCraft(double[] inputs, List<dynamic> outputs, string want, bool wasSort, bool asc)
         {
-            List<double> results = new List<double>();
+            //List<double> results = new List<double>();
+            decimal wantFloat;
+            decimal.TryParse(want, System.Globalization.NumberStyles.Any, CultureInfo.InvariantCulture, out wantFloat);
+            
             foreach (var item in outputs)
             {
                 //want = want.Replace(".", ",");
@@ -156,24 +171,29 @@ namespace FloatToolGUI
                     inputStr[i] = "" + inputs[i];
                 }
 
-                //string flot = craftF(inputStr, minWear, maxWear);
+                string flot = craftF(inputStr, minWear, maxWear);
                 //Console.WriteLine(flotOrigin + " | " + flot);
                 //Debug.WriteLine("[DEBUG] flot = " + flot);
                 // if (wasSort && ((!asc && (double.Parse(flot) > double.Parse(want))) || (asc && (double.Parse(flot) < double.Parse(want))))) {
                 //     okSort = true;
                 //}
-                if (/*flot.StartsWith(want.Replace(".", ",")) ||*/ ("" + flotOrigin).StartsWith(want.Replace(".", ",")))
+                /*flot.StartsWith(want.Replace(".", ",")) ||*/
+                if (
+                    ((flotOrigin.ToString(CultureInfo.InvariantCulture).StartsWith(want)) && CurrentSearchMode == SearchMode.Equal) ||
+                    ((flotOrigin < wantFloat) && CurrentSearchMode == SearchMode.Less) ||
+                    ((flotOrigin > wantFloat) && CurrentSearchMode == SearchMode.Greater)
+                )
                 {
                     this.Invoke((MethodInvoker)(() =>
                     {
-                        textBox2.AppendText("Коомбинация найдена!" + Environment.NewLine);
-                        textBox2.AppendText("Возможный флоат: " + flotOrigin + Environment.NewLine);
-                        //textBox2.AppendText("Проверочный флоат: " + flot + Environment.NewLine);
-                        textBox2.AppendText("Список флоатов: [");
+                        ConsoleBuffer.Append($"[{DateTime.Now.ToString("HH:mm:ss")}] Коомбинация найдена!{Environment.NewLine}");
+                        ConsoleBuffer.Append($"Возможный флоат: {flotOrigin}{Environment.NewLine}");
+                        ConsoleBuffer.Append($"Проверочный флоат: {flot}{Environment.NewLine}");
+                        ConsoleBuffer.Append("Список флоатов: [");
                         if (!muteSound)
                         {
                             //play sound
-                            SoundPlayer player = new SoundPlayer();
+                            SoundPlayer player = new SoundPlayer(Properties.Resources.notification);
                             player.Play();
                         }
                         client.SetPresence(new RichPresence()
@@ -188,14 +208,14 @@ namespace FloatToolGUI
                         });
                         for (int i = 0; i < 10; i++)
                         {
-                            textBox2.AppendText(Math.Round(inputs[i], 14).ToString().Replace(",","."));
+                            ConsoleBuffer.Append(Math.Round(inputs[i], 14).ToString().Replace(",","."));
                             if (i != 9)
                             {
-                                textBox2.AppendText(", ");
+                                ConsoleBuffer.Append(", ");
                             }
                             else
                             {
-                                textBox2.AppendText("]" + Environment.NewLine + "=====================================" + Environment.NewLine);
+                                ConsoleBuffer.Append("]" + Environment.NewLine + "=====================================" + Environment.NewLine);
                             }
                         }
                     }
@@ -209,41 +229,45 @@ namespace FloatToolGUI
 
         public void SwitchEnabled()
         {
-            comboBox1.Enabled = !comboBox1.Enabled;
-            comboBox2.Enabled = !comboBox2.Enabled;
-            textBox1.Enabled = !textBox1.Enabled;
-            comboBox3.Enabled = !comboBox3.Enabled;
-            textBox3.Enabled = !textBox3.Enabled;
-            numericUpDown1.Enabled = !numericUpDown1.Enabled;
-            numericUpDown2.Enabled = !numericUpDown2.Enabled;
-            checkBox1.Enabled = !checkBox1.Enabled;
-            checkBox2.Enabled = !checkBox2.Enabled;
-            checkBox3.Enabled = !checkBox3.Enabled;
+            weaponTypeBox.Enabled = !weaponTypeBox.Enabled;
+            weaponSkinBox.Enabled = !weaponSkinBox.Enabled;
+            fullSkinName.Enabled = !fullSkinName.Enabled;
+            weaponQualityBox.Enabled = !weaponQualityBox.Enabled;
+            searchFloatInput.Enabled = !searchFloatInput.Enabled;
+            quantityInput.Enabled = !quantityInput.Enabled;
+            skipValueInput.Enabled = !skipValueInput.Enabled;
+            stattrackCheckBox.Enabled = !stattrackCheckBox.Enabled;
+            sortCheckBox.Enabled = !sortCheckBox.Enabled;
+            ascendingCheckBox.Enabled = !ascendingCheckBox.Enabled;
+            multithreadCheckBox.Enabled = !multithreadCheckBox.Enabled;
+            if (threadCountInput.Enabled && !multithreadCheckBox.Enabled)
+                threadCountInput.Enabled = false;
         }
         public void updateSearchStr()
         {
             string search = "";
-            if (checkBox1.Checked)
+            if (stattrackCheckBox.Checked)
             {
                 search += "StatTrak™ ";
             }
-            search += comboBox1.Text;
+            search += weaponTypeBox.Text;
             search += " | ";
-            search += comboBox2.Text;
-            search += " (" + comboBox3.Text + ")";
-            textBox1.Text = search;
+            search += weaponSkinBox.Text;
+            search += " (" + weaponQualityBox.Text + ")";
+            fullSkinName.Text = search;
         }
         public FloatTool()
         {
             InitializeComponent();
-            this.SetStyle(ControlStyles.ResizeRedraw, true);
+            SetStyle(ControlStyles.ResizeRedraw | ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.DoubleBuffer, true);
+            ConsoleBuffer = new StringBuilder();
         }
         public DiscordRpcClient client;
         private bool darkTheme = true;
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            comboBox2.Items.Clear();
+            weaponSkinBox.Items.Clear();
             using (StreamReader r = new StreamReader("itemData.json"))
             {
                 string json = r.ReadToEnd();
@@ -251,16 +275,16 @@ namespace FloatToolGUI
                 foreach (var skin in items)
                 {
 
-                    if (skin["name"].ToString().Split('|')[0].TrimEnd() == comboBox1.Text)
+                    if (skin["name"].ToString().Split('|')[0].TrimEnd() == weaponTypeBox.Text)
                     {
                         Console.WriteLine(skin["name"].ToString().Split('|')[1].Remove(0, 1));
-                        comboBox2.Items.Add(skin["name"].ToString().Split('|')[1].Remove(0, 1));
+                        weaponSkinBox.Items.Add(skin["name"].ToString().Split('|')[1].Remove(0, 1));
                     }
                 }
             }
             updateSearchStr();
-            button10.Text = darkTheme ? "🌙" : "☀";
-            client = new DiscordRpcClient("734042978246721537");
+            darkModeSwitchBtn.Text = darkTheme ? "🌙" : "☀";
+            client = new DiscordRpcClient("824349399688937543");
 
             //Subscribe to events
             client.OnReady += (sender2, e2) =>
@@ -288,12 +312,7 @@ namespace FloatToolGUI
 
             thread1 = new Thread(runCycle);
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            this.threadCountInput.Value = Environment.ProcessorCount;
         }
 
         private void runCycle()
@@ -301,14 +320,9 @@ namespace FloatToolGUI
             Console.WriteLine("Thread loaded!");
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBox2.Items.Clear();
+            weaponSkinBox.Items.Clear();
             using (StreamReader r = new StreamReader("itemData.json"))
             {
                 string json = r.ReadToEnd();
@@ -316,10 +330,10 @@ namespace FloatToolGUI
                 foreach (var skin in items)
                 {
                     
-                    if (skin["name"].ToString().Split('|')[0].TrimEnd() == comboBox1.Text)
+                    if (skin["name"].ToString().Split('|')[0].TrimEnd() == weaponTypeBox.Text)
                     {
-                        Console.WriteLine(skin["name"].ToString().Split('|')[1].Remove(0,1));
-                        comboBox2.Items.Add(skin["name"].ToString().Split('|')[1].Remove(0,1));
+                        //Console.WriteLine(skin["name"].ToString().Split('|')[1].Remove(0,1));
+                        weaponSkinBox.Items.Add(skin["name"].ToString().Split('|')[1].Remove(0,1));
                     }
                 }
             }
@@ -394,16 +408,28 @@ namespace FloatToolGUI
         {
             foreach (IEnumerable<double> pair in Combinations(pool, 10, start, skip))
             {
-                parseCraft(pair.ToArray(), craftList, wanted, checkBox2.Checked, checkBox3.Checked);
+                parseCraft(pair.ToArray(), craftList, wanted, sortCheckBox.Checked, ascendingCheckBox.Checked);
+                currComb++;
+                //Console.WriteLine(currComb);
             }
         }
+        public BigInteger Fact(int number)
+        {
+            if (number == 1)
+                return 1;
+            else
+                return number * Fact(number - 1);
+        }
+
         public List<Thread> t2 = new List<Thread>();
+        BigInteger totalComb = 0;
+        BigInteger currComb = 0;
         private void StartCalculation()
         {
             client.SetPresence(new RichPresence()
             {
                 Details = "Начал поиск",
-                State = "Ищу " + textBox3.Text,
+                State = "Ищу " + searchFloatInput.Text,
                 Timestamps = Timestamps.Now,
                 Assets = new Assets()
                 {
@@ -411,30 +437,33 @@ namespace FloatToolGUI
                     LargeImageText = "FloatTool"
                 }
             });
+
+            totalComb = quantityInput.Value == 10 ? 1 : Fact((int)quantityInput.Value) / (Fact(10) * Fact((int)quantityInput.Value - 10));
+            currComb = 0;
             this.Invoke((MethodInvoker)(() =>
                 {
-                    textBox2.Text = "Добро пожаловать в FloatTool!" + Environment.NewLine + "Инструмент для создания флоатов при помощи крафтов CS:GO" + Environment.NewLine;
-                    textBox2.AppendText( "Время начала процесса: " + DateTime.Now.ToString("HH:mm:ss tt") + Environment.NewLine);
-                    button2.Text = "Стоп";
-                    textBox1.SelectionStart = textBox1.Text.Length;
-                    textBox2.ScrollToCaret();
+                    outputConsoleBox.Text = "Добро пожаловать в FloatTool!" + Environment.NewLine + "Инструмент для создания флоатов при помощи крафтов CS:GO" + Environment.NewLine;
+                    outputConsoleBox.AppendText( "Время начала процесса: " + DateTime.Now.ToString("HH:mm:ss tt") + Environment.NewLine);
+                    startBtn.Text = "Стоп";
+                    fullSkinName.SelectionStart = fullSkinName.Text.Length;
+                    outputConsoleBox.ScrollToCaret();
                 }
             ));
             
-            string count = "" + numericUpDown1.Value;
-            string start = "" + numericUpDown2.Value;
-            string wanted = textBox3.Text;
-            string q = textBox1.Text;
+            string count = "" + quantityInput.Value;
+            string start = "" + skipValueInput.Value;
+            string wanted = searchFloatInput.Text;
+            string q = fullSkinName.Text;
             string url = "https://steamcommunity.com/market/listings/730/" + q + "/render/?query=&language=russian&count=" + count + "&start=" + start + "&currency=5";
             Console.WriteLine(url);
             this.Invoke((MethodInvoker)(() =>
             {
-                textBox2.AppendText( "Загрузка скинов с торговой площадки..." + Environment.NewLine);
-                progressBar1.Maximum = int.Parse(count);
-                progressBar1.Value = 0;
-                textBox1.SelectionStart = textBox1.Text.Length;
-                textBox2.ScrollToCaret();
-                
+                outputConsoleBox.AppendText( "Загрузка скинов с торговой площадки..." + Environment.NewLine);
+                downloadProgressBar.Maximum = int.Parse(count);
+                downloadProgressBar.Value = 0;
+                fullSkinName.SelectionStart = fullSkinName.Text.Length;
+                outputConsoleBox.ScrollToCaret();
+                combinationsStatusLabel.Text = $"Проверено комбинаций: 0 / {totalComb}";
             }
             ));
             
@@ -446,9 +475,9 @@ namespace FloatToolGUI
                 dynamic r = JsonConvert.DeserializeObject(json);
                 this.Invoke((MethodInvoker)(() =>
                     {
-                        textBox2.AppendText( "Получение флоатов..." + Environment.NewLine);
-                        textBox1.SelectionStart = textBox1.Text.Length;
-                        textBox2.ScrollToCaret();
+                        outputConsoleBox.AppendText( "Получение флоатов..." + Environment.NewLine);
+                        fullSkinName.SelectionStart = fullSkinName.Text.Length;
+                        outputConsoleBox.ScrollToCaret();
                     }
                 ));
                 int counter = 0;
@@ -475,15 +504,15 @@ namespace FloatToolGUI
                     }
                     this.Invoke((MethodInvoker)(() =>
                     {
-                        progressBar1.Value = counter;
+                        downloadProgressBar.Value = counter;
                     }
                     ));
                     
                 }
             }
-            if (checkBox2.Checked)
+            if (sortCheckBox.Checked)
             {
-                if (checkBox3.Checked)
+                if (ascendingCheckBox.Checked)
                 {
                     floats.Sort((a, b) => a.CompareTo(b));
                     Console.WriteLine("Sorted ascending");
@@ -499,9 +528,15 @@ namespace FloatToolGUI
             //}
             this.Invoke((MethodInvoker)(() =>
             {
-                textBox2.AppendText( "Поиск ауткамов..." + Environment.NewLine);
-                textBox1.SelectionStart = textBox1.Text.Length;
-                textBox2.ScrollToCaret();
+                outputConsoleBox.AppendText( "Поиск ауткамов..." + Environment.NewLine);
+                outputConsoleBox.SelectionStart = fullSkinName.Text.Length;
+                /*string line = "[";
+                foreach(var i in floats)
+                    line += $"{i.ToString().Replace(',','.')}, ";
+                line = line.Remove(line.Length - 2);
+                textBox2.AppendText("Список флоатов:" + Environment.NewLine + line + "]" + Environment.NewLine);*/
+                outputConsoleBox.ScrollToCaret();
+
             }
             ));
             string currData = getSkinData(q.Split('(')[0].TrimEnd());
@@ -525,27 +560,18 @@ namespace FloatToolGUI
             }
             this.Invoke((MethodInvoker)(() =>
             {
-                textBox2.AppendText( "Ауткамы найдены! Начинаю подбор..." + Environment.NewLine + Environment.NewLine);
-                textBox1.SelectionStart = textBox1.Text.Length;
-                textBox2.ScrollToCaret();
+                outputConsoleBox.AppendText( "Ауткамы найдены! Начинаю подбор..." + Environment.NewLine + Environment.NewLine);
+                fullSkinName.SelectionStart = fullSkinName.Text.Length;
+                outputConsoleBox.ScrollToCaret();
             }
             ));
-            //return;
+
             double[] pool = floats.ToArray();
-            //int n = floats.Count;
-            //if (10 > n) { Console.WriteLine("At least 10!"); return; }
-            //int[] indices = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            //List<double> first = new List<double>();
-            //foreach (int i in indices) { first.Add(pool[i]); }
-            //Craft
-            //parseCraft(first.ToArray(), craftList, wanted, checkBox2.Checked, checkBox3.Checked);
-            //
-            //int iter = 2;
 
             var threads = 1;
-            if (checkBox4.Checked)
+            if (multithreadCheckBox.Checked)
             {
-                threads = (int)numericUpDown3.Value;
+                threads = (int)threadCountInput.Value;
                 try
                 {
                     for (int i = 1; i < threads; i++)
@@ -557,6 +583,7 @@ namespace FloatToolGUI
                 }
                 catch (Exception ex)
                 {
+                    Console.WriteLine(ex.Message);
                 }
             }
 
@@ -564,13 +591,15 @@ namespace FloatToolGUI
             
             foreach (IEnumerable<double> pair in Combinations(pool, 10, 0, threads))
             {
-                parseCraft(pair.ToArray(), craftList, wanted, checkBox2.Checked, checkBox3.Checked);
+                parseCraft(pair.ToArray(), craftList, wanted, sortCheckBox.Checked, ascendingCheckBox.Checked);
+                currComb++;
             }
             Console.WriteLine("Next group");
 
             while (true)
-            {
+            {   
                 bool okey = true;
+                
                 foreach (Thread t in t2)
                 {
                     if (t.IsAlive)
@@ -581,59 +610,24 @@ namespace FloatToolGUI
                 }
                 if (okey) break;
             }
-            
-            
-            
-
-
-            
-            /*
-            Parallel.For(2, 6, new ParallelOptions { MaxDegreeOfParallelism = 4 }, (iter) => {
-                while (true)
-                {
-                    //var startTime = DateTimeOffset.Now.ToUnixTimeMilliseconds();
-                    //Debug.WriteLine("[DEBUG] start time = "+startTime);
-                    Console.WriteLine("iter = " + iter);
-                    int a = 9; bool run = true;
-                    for (int i = 9; i >= 0; i--) { a = i; if (indices[i] != i + n - 10) { run = false; break; } }
-                    if (run) { break; }
-                    indices[a]++;
-                    for (int j = a + 1; j < 10; j++) { indices[j] = indices[j - 1] + 1; }
-                    List<double> current = new List<double>();
-                    foreach (int i in indices) { current.Add(pool[i]); }
-                    //Craft
-                    
-                    //var endTime = DateTimeOffset.Now.ToUnixTimeMilliseconds();
-                    //Debug.WriteLine("[DEBUG] end time = " + endTime);
-                    //Debug.WriteLine("[DEBUG] total time = " + (endTime - startTime));
-                    //
-                    iter++;
-                }
-            });
-            */
 
             this.Invoke((MethodInvoker)(() =>
                 {
-                    textBox2.AppendText( "Программа завершила проверку всех комбинаций!" + Environment.NewLine);
-                    textBox1.SelectionStart = textBox1.Text.Length;
-                    textBox2.ScrollToCaret();
+                    outputConsoleBox.AppendText( "Программа завершила проверку всех комбинаций!" + Environment.NewLine);
+                    fullSkinName.SelectionStart = fullSkinName.Text.Length;
+                    outputConsoleBox.ScrollToCaret();
                     thread1.Abort();
-                    button2.Text = "Старт";
-                    progressBar1.Value = 0;
+                    startBtn.Text = "Старт";
+                    downloadProgressBar.Value = 0;
                     SwitchEnabled();
                 }
             ));
             
         }
 
-        private void parseCraft(List<double>[] lists, List<dynamic> craftList, string wanted, bool checked1, bool checked2)
-        {
-            throw new NotImplementedException();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
-            if(button2.Text == "Старт") {
+            if(startBtn.Text == "Старт") {
                 thread1.Abort();
                 thread1 = new Thread(StartCalculation);
                 thread1.Start();
@@ -641,8 +635,8 @@ namespace FloatToolGUI
             else
             {
                 thread1.Abort();
-                button2.Text = "Старт";
-                progressBar1.Value = 0;
+                startBtn.Text = "Старт";
+                downloadProgressBar.Value = 0;
                 client.SetPresence(new RichPresence()
                 {
                     Details = "Настраиваю поиск",
@@ -665,17 +659,17 @@ namespace FloatToolGUI
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            textBox1.SelectionStart = textBox1.Text.Length;
-            textBox2.ScrollToCaret();
+            fullSkinName.SelectionStart = fullSkinName.Text.Length;
+            outputConsoleBox.ScrollToCaret();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             updateSearchStr();
             string skin = "";
-            skin += comboBox1.Text;
+            skin += weaponTypeBox.Text;
             skin += " | ";
-            skin += comboBox2.Text;
+            skin += weaponSkinBox.Text;
             //search += " (" + comboBox3.Text + ")";
 
             using (StreamReader r = new StreamReader("itemData.json"))
@@ -688,7 +682,7 @@ namespace FloatToolGUI
                     {
                         if (skn["highestRarity"] == "False")
                         {
-                            if (floatRangeText(comboBox3.Text, skn["minWear"].ToString(), skn["maxWear"].ToString()))
+                            if (floatRangeText(weaponQualityBox.Text, skn["minWear"].ToString(), skn["maxWear"].ToString()))
                             {
                                 MessageBox.Show("Данный скин доступен к поиску!", "FloatTool", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 return;
@@ -797,32 +791,32 @@ namespace FloatToolGUI
             {
                 if (darkTheme)
                 {
-                    button7.Image = FloatToolGUI.Properties.Resources.unmutedWhite;
+                    soundBtnSwitch.Image = FloatToolGUI.Properties.Resources.unmutedWhite;
                 }
                 else
                 {
-                    button7.Image = FloatToolGUI.Properties.Resources.unmutedBlack;
+                    soundBtnSwitch.Image = FloatToolGUI.Properties.Resources.unmutedBlack;
                 }
             }
             else
             {
                 if (darkTheme)
                 {
-                    button7.Image = FloatToolGUI.Properties.Resources.mutedWhite;
+                    soundBtnSwitch.Image = FloatToolGUI.Properties.Resources.mutedWhite;
                 }
                 else
                 {
-                    button7.Image = FloatToolGUI.Properties.Resources.mutedBlack;
+                    soundBtnSwitch.Image = FloatToolGUI.Properties.Resources.mutedBlack;
                 }
             }
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void SoundSwitchButton_Click(object sender, EventArgs e)
         {
             if (muteSound)
             {
                 muteSound = false;
-                SoundPlayer player = new SoundPlayer();
+                SoundPlayer player = new SoundPlayer(Properties.Resources.notification);
                 player.Play();
             }
             else
@@ -832,33 +826,33 @@ namespace FloatToolGUI
             updateMuteIcon();
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void OpenWikiButton_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/Nemeshio/FloatTool-GUI/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F");
+            System.Diagnostics.Process.Start("https://nemeshio.github.io/FloatTool-GUI/"); //https://github.com/Nemeshio/FloatTool-GUI/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F
         }
 
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        private void OpenGithubButton_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/Nemeshio/FloatTool-GUI/");
         }
 
-        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        private void OpenWebsiteButton_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://nemeshio.github.io/FloatTool-GUI/");
+        }
+
+        private void OpenAboutButton_Click(object sender, EventArgs e)
         {
             About aboutForm = new About();
             aboutForm.Show();
         }
 
-        private void panel14_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        void changeTheme(bool dark)
+        void ChangeTheme(bool dark)
         {
             if (dark)
             {
-                textBox2.BackColor = Color.FromArgb(31, 31, 31);
-                textBox2.ForeColor = Color.FromArgb(255, 255, 255);
+                outputConsoleBox.BackColor = Color.FromArgb(31, 31, 31);
+                outputConsoleBox.ForeColor = Color.FromArgb(255, 255, 255);
 
                 panel10.BackColor = Color.FromArgb(31, 31, 31);
                 panel12.BackColor = Color.FromArgb(31, 31, 31);
@@ -878,56 +872,70 @@ namespace FloatToolGUI
                 panel5.BackColor = Color.FromArgb(44, 44, 44);
                 panel6.BackColor = Color.FromArgb(44, 44, 44);
 
-                comboBox1.BackColor = Color.FromArgb(32, 32, 32);
-                comboBox1.ForeColor = Color.FromArgb(150, 150, 150);
-                comboBox2.BackColor = Color.FromArgb(32, 32, 32);
-                comboBox2.ForeColor = Color.FromArgb(150, 150, 150);
-                comboBox3.BackColor = Color.FromArgb(32, 32, 32);
-                comboBox3.ForeColor = Color.FromArgb(150, 150, 150);
+                weaponTypeBox.BackColor = Color.FromArgb(32, 32, 32);
+                weaponTypeBox.ForeColor = Color.FromArgb(150, 150, 150);
+                weaponSkinBox.BackColor = Color.FromArgb(32, 32, 32);
+                weaponSkinBox.ForeColor = Color.FromArgb(150, 150, 150);
+                weaponQualityBox.BackColor = Color.FromArgb(32, 32, 32);
+                weaponQualityBox.ForeColor = Color.FromArgb(150, 150, 150);
 
-                button6.ForeColor = Color.FromArgb(255, 255, 255);
+                minimizeBtn.ForeColor = Color.FromArgb(255, 255, 255);
                 updateMuteIcon();
-                button8.ForeColor = Color.FromArgb(255, 255, 255);
-                button9.ForeColor = Color.FromArgb(255, 255, 255);
-                button10.ForeColor = Color.FromArgb(255, 255, 255);
+                closeBtn.ForeColor = Color.FromArgb(255, 255, 255);
+                helpBtn.ForeColor = Color.FromArgb(255, 255, 255);
+                darkModeSwitchBtn.ForeColor = Color.FromArgb(255, 255, 255);
 
-                button6.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0);
-                button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0);
-                button8.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0);
-                button9.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0);
-                button10.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0);
+                minimizeBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0);
+                soundBtnSwitch.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0);
+                closeBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0);
+                helpBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0);
+                darkModeSwitchBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0);
 
-                checkBox1.ForeColor = Color.FromArgb(255, 255, 255);
-                checkBox2.ForeColor = Color.FromArgb(255, 255, 255);
-                checkBox3.ForeColor = Color.FromArgb(255, 255, 255);
+                stattrackCheckBox.ForeColor = Color.FromArgb(255, 255, 255);
+                sortCheckBox.ForeColor = Color.FromArgb(255, 255, 255);
+                ascendingCheckBox.ForeColor = Color.FromArgb(255, 255, 255);
 
-                button1.BackColor = Color.FromArgb(56, 56, 56);
-                button2.BackColor = Color.FromArgb(56, 56, 56);
-                button1.ForeColor = Color.FromArgb(255, 255, 255);
-                button2.ForeColor = Color.FromArgb(255, 255, 255);
+                checkPossibilityBtn.BackColor = Color.FromArgb(56, 56, 56);
+                startBtn.BackColor = Color.FromArgb(56, 56, 56);
+                checkPossibilityBtn.ForeColor = Color.FromArgb(255, 255, 255);
+                startBtn.ForeColor = Color.FromArgb(255, 255, 255);
 
-                button1.FlatAppearance.MouseOverBackColor = Color.FromName("WindowFrame");
-                button2.FlatAppearance.MouseOverBackColor = Color.FromName("WindowFrame");
+                checkPossibilityBtn.FlatAppearance.MouseOverBackColor = Color.FromName("WindowFrame");
+                startBtn.FlatAppearance.MouseOverBackColor = Color.FromName("WindowFrame");
 
-                textBox1.BackColor = Color.FromArgb(32, 32, 32);
-                textBox1.ForeColor = Color.FromArgb(150, 150, 150);
-                textBox3.BackColor = Color.FromArgb(32, 32, 32);
-                textBox3.ForeColor = Color.FromArgb(150, 150, 150);
+                fullSkinName.BackColor = Color.FromArgb(32, 32, 32);
+                fullSkinName.ForeColor = Color.FromArgb(150, 150, 150);
+                searchFloatInput.BackColor = Color.FromArgb(32, 32, 32);
+                searchFloatInput.ForeColor = Color.FromArgb(150, 150, 150);
 
-                numericUpDown1.BackColor = Color.FromArgb(32, 32, 32);
-                numericUpDown1.ForeColor = Color.FromArgb(150, 150, 150);
-                numericUpDown2.BackColor = Color.FromArgb(32, 32, 32);
-                numericUpDown2.ForeColor = Color.FromArgb(150, 150, 150);
+                quantityInput.BackColor = Color.FromArgb(32, 32, 32);
+                quantityInput.ForeColor = Color.FromArgb(150, 150, 150);
+                skipValueInput.BackColor = Color.FromArgb(32, 32, 32);
+                skipValueInput.ForeColor = Color.FromArgb(150, 150, 150);
 
-                checkBox4.ForeColor = Color.FromName("White");
+                multithreadCheckBox.ForeColor = Color.FromName("White");
                 label10.ForeColor = Color.FromName("White");
-                numericUpDown3.BackColor = Color.FromArgb(32, 32, 32);
-                numericUpDown3.ForeColor = Color.FromArgb(150, 150, 150);
+                threadCountInput.BackColor = Color.FromArgb(32, 32, 32);
+                threadCountInput.ForeColor = Color.FromArgb(150, 150, 150);
+
+                searchModeLabel.ForeColor = Color.White;
+                speedStatusLabel.ForeColor = Color.White;
+                combinationsStatusLabel.ForeColor = Color.White;
+
+                searchmodeLess_btn.BackColor = Color.FromArgb(56, 56, 56);
+                searchmodeLess_btn.ForeColor = Color.FromArgb(255, 255, 255);
+                searchmodeEqual_btn.BackColor = Color.FromArgb(56, 56, 56);
+                searchmodeEqual_btn.ForeColor = Color.FromArgb(255, 255, 255);
+                searchmodeGreater_btn.BackColor = Color.FromArgb(56, 56, 56);
+                searchmodeGreater_btn.ForeColor = Color.FromArgb(255, 255, 255);
+
+                gpuSearch_btn.BackColor = Color.FromArgb(56, 56, 56);
+                gpuSearch_btn.ForeColor = Color.FromArgb(255, 255, 255);
             }
             else
             {
-                textBox2.BackColor = Color.FromArgb(255, 255, 255);
-                textBox2.ForeColor = Color.FromArgb(0, 0, 0);
+                outputConsoleBox.BackColor = Color.FromArgb(255, 255, 255);
+                outputConsoleBox.ForeColor = Color.FromArgb(0, 0, 0);
 
                 panel10.BackColor = Color.FromArgb(255, 255, 255);
                 panel12.BackColor = Color.FromArgb(255, 255, 255);
@@ -947,64 +955,170 @@ namespace FloatToolGUI
                 panel5.BackColor = Color.FromArgb(222, 222, 222);
                 panel6.BackColor = Color.FromArgb(222, 222, 222);
 
-                comboBox1.BackColor = Color.FromArgb(255, 255, 255);
-                comboBox1.ForeColor = Color.FromArgb(10, 10, 10);
-                comboBox2.BackColor = Color.FromArgb(255, 255, 255);
-                comboBox2.ForeColor = Color.FromArgb(10, 10, 10);
-                comboBox3.BackColor = Color.FromArgb(255, 255, 255);
-                comboBox3.ForeColor = Color.FromArgb(10, 10, 10);
+                weaponTypeBox.BackColor = Color.FromArgb(255, 255, 255);
+                weaponTypeBox.ForeColor = Color.FromArgb(10, 10, 10);
+                weaponSkinBox.BackColor = Color.FromArgb(255, 255, 255);
+                weaponSkinBox.ForeColor = Color.FromArgb(10, 10, 10);
+                weaponQualityBox.BackColor = Color.FromArgb(255, 255, 255);
+                weaponQualityBox.ForeColor = Color.FromArgb(10, 10, 10);
 
-                button6.ForeColor = Color.FromArgb(0, 0, 0);
+                minimizeBtn.ForeColor = Color.FromArgb(0, 0, 0);
                 updateMuteIcon();
-                button8.ForeColor = Color.FromArgb(0, 0, 0);
-                button9.ForeColor = Color.FromArgb(0, 0, 0);
-                button10.ForeColor = Color.FromArgb(0, 0, 0);
+                closeBtn.ForeColor = Color.FromArgb(0, 0, 0);
+                helpBtn.ForeColor = Color.FromArgb(0, 0, 0);
+                darkModeSwitchBtn.ForeColor = Color.FromArgb(0, 0, 0);
 
-                button6.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 230, 230);
-                button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 230, 230);
-                button8.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 230, 230);
-                button9.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 230, 230);
-                button10.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 230, 230);
+                minimizeBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 230, 230);
+                soundBtnSwitch.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 230, 230);
+                closeBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 230, 230);
+                helpBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 230, 230);
+                darkModeSwitchBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 230, 230);
 
-                checkBox1.ForeColor = Color.FromArgb(0, 0, 0);
-                checkBox2.ForeColor = Color.FromArgb(0, 0, 0);
-                checkBox3.ForeColor = Color.FromArgb(0, 0, 0);
+                stattrackCheckBox.ForeColor = Color.FromArgb(0, 0, 0);
+                sortCheckBox.ForeColor = Color.FromArgb(0, 0, 0);
+                ascendingCheckBox.ForeColor = Color.FromArgb(0, 0, 0);
 
-                button1.BackColor = Color.FromArgb(249, 249, 249);
-                button2.BackColor = Color.FromArgb(249, 249, 249);
-                button1.ForeColor = Color.FromArgb(0, 0, 0);
-                button2.ForeColor = Color.FromArgb(0, 0, 0);
+                checkPossibilityBtn.BackColor = Color.FromArgb(249, 249, 249);
+                startBtn.BackColor = Color.FromArgb(249, 249, 249);
+                checkPossibilityBtn.ForeColor = Color.FromArgb(0, 0, 0);
+                startBtn.ForeColor = Color.FromArgb(0, 0, 0);
 
-                textBox1.BackColor = Color.FromArgb(255, 255, 255);
-                textBox1.ForeColor = Color.FromArgb(10, 10, 10);
-                textBox3.BackColor = Color.FromArgb(255, 255, 255);
-                textBox3.ForeColor = Color.FromArgb(10, 10, 10);
+                fullSkinName.BackColor = Color.FromArgb(255, 255, 255);
+                fullSkinName.ForeColor = Color.FromArgb(10, 10, 10);
+                searchFloatInput.BackColor = Color.FromArgb(255, 255, 255);
+                searchFloatInput.ForeColor = Color.FromArgb(10, 10, 10);
 
-                button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(240, 240, 240);
-                button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(240, 240, 240);
+                checkPossibilityBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(240, 240, 240);
+                startBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(240, 240, 240);
 
-                numericUpDown1.BackColor = Color.FromArgb(255, 255, 255);
-                numericUpDown1.ForeColor = Color.FromArgb(10, 10, 10);
-                numericUpDown2.BackColor = Color.FromArgb(255, 255, 255);
-                numericUpDown2.ForeColor = Color.FromArgb(10, 10, 10);
+                quantityInput.BackColor = Color.FromArgb(255, 255, 255);
+                quantityInput.ForeColor = Color.FromArgb(10, 10, 10);
+                skipValueInput.BackColor = Color.FromArgb(255, 255, 255);
+                skipValueInput.ForeColor = Color.FromArgb(10, 10, 10);
 
-                checkBox4.ForeColor = Color.FromName("Black");
+                multithreadCheckBox.ForeColor = Color.FromName("Black");
                 label10.ForeColor = Color.FromName("Black");
-                numericUpDown3.BackColor = Color.FromArgb(255, 255, 255);
-                numericUpDown3.ForeColor = Color.FromArgb(10, 10, 10);
+                threadCountInput.BackColor = Color.FromArgb(255, 255, 255);
+                threadCountInput.ForeColor = Color.FromArgb(10, 10, 10);
+
+                searchModeLabel.ForeColor = Color.Black;
+                speedStatusLabel.ForeColor = Color.Black;
+                combinationsStatusLabel.ForeColor = Color.Black;
+
+                searchmodeLess_btn.BackColor = Color.FromArgb(249, 249, 249);
+                searchmodeLess_btn.ForeColor = Color.FromArgb(0, 0, 0);
+                searchmodeEqual_btn.BackColor = Color.FromArgb(249, 249, 249);
+                searchmodeEqual_btn.ForeColor = Color.FromArgb(0, 0, 0);
+                searchmodeGreater_btn.BackColor = Color.FromArgb(249, 249, 249);
+                searchmodeGreater_btn.ForeColor = Color.FromArgb(0, 0, 0);
+
+                gpuSearch_btn.BackColor = Color.FromArgb(249, 249, 249);
+                gpuSearch_btn.ForeColor = Color.FromArgb(0, 0, 0);
             }
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void DarkModeSwitchButton_Click(object sender, EventArgs e)
         {
             darkTheme = !darkTheme;
-            changeTheme(darkTheme);
-            button10.Text = darkTheme ? "🌙" : "☀";
+            ChangeTheme(darkTheme);
+            darkModeSwitchBtn.Text = darkTheme ? "🌙" : "☀";
         }
 
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        private void MultithreadSwitched(object sender, EventArgs e)
         {
-            numericUpDown3.Enabled = checkBox4.Checked;
+            threadCountInput.Enabled = multithreadCheckBox.Checked;
+        }
+
+        private void gpuSearch_btn_Click(object sender, EventArgs e)
+        {
+            double[] floats = {
+                0.246938750147820, 0.196652039885521,
+                0.154839321970940, 0.333326697349548, 
+                0.163415759801865, 0.291821509599686, 
+                0.374309629201889, 0.378754675388336, 
+                0.231419935822487, 0.311867892742157, 
+                0.374067693948746, 0.377068012952805, 
+                0.244467452168465, 0.355135351419449, 
+                0.352264583110809, 0.227853879332542, 
+                0.340960860252380, 0.375657349824905, 
+                0.157685652375221, 0.217334255576134, 
+                0.323678821325302, 0.363768666982651, 
+                0.350994020700455, 0.369551151990891, 
+                0.350340574979782, 0.338801741600037, 
+                0.329752802848816, 0.369740217924118, 
+                0.370476812124252, 0.205233186483383, 
+                0.360520750284195, 0.373722523450851, 
+                0.161364838480949, 0.263432979583740, 
+                0.314681977033615, 0.310743361711502, 
+                0.349280923604965, 0.355936050415039, 
+                0.269742101430893, 0.199420168995857, 
+                0.364472836256027, 0.218964993953705, 
+                0.239638179540634, 0.325499594211578, 
+                0.228406846523285, 0.307701110839844, 
+                0.156294032931328, 0.179465100169182, 
+                0.327553898096085, 0.150170117616653
+            };
+
+            client.SetPresence(new RichPresence()
+            {
+                Details = "GPU Тест",
+                State = "Тестирование подбора на видеокарте",
+                Timestamps = Timestamps.Now,
+                Assets = new Assets()
+                {
+                    LargeImageKey = "icon",
+                    LargeImageText = "FloatTool"
+                }
+            });
+            SwitchEnabled();
+        }
+
+        BigInteger last = 0;
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            var hundrMilsCount = currComb - last;
+            //Console.WriteLine($"{hundrMilsCount} in last {timer2.Interval} ms");
+            var speed = (double)(hundrMilsCount) * 1000 / WorkStatusUpdater.Interval;
+            speedStatusLabel.Text = $"Текущая скорость: {speed} комбинаций/сек";
+            last = currComb;
+            combinationsStatusLabel.Text = $"Проверено комбинаций: {currComb} / {totalComb}";
+
+            if (ConsoleBuffer.Length > 0)
+            {
+                outputConsoleBox.Text += ConsoleBuffer.ToString();
+                ConsoleBuffer.Clear();
+                outputConsoleBox.ScrollToCaret();
+            }
+
+            if (totalComb != 0 && currComb < totalComb)
+                workProgressBar.Value = (int)( (double)(currComb) / (double)(totalComb) * 256);
+        }
+
+        private void changeSearchMode(object sender, EventArgs e)
+        {
+            var selectedMode = ((System.Windows.Forms.Button)sender).Text;
+
+            if(selectedMode == "=")
+            {
+                searchmodeLess_btn.FlatAppearance.BorderSize = 0;
+                searchmodeEqual_btn.FlatAppearance.BorderSize = 1;
+                searchmodeGreater_btn.FlatAppearance.BorderSize = 0;
+                CurrentSearchMode = SearchMode.Equal;
+            }
+            else if(selectedMode == ">")
+            {
+                searchmodeLess_btn.FlatAppearance.BorderSize = 0;
+                searchmodeEqual_btn.FlatAppearance.BorderSize = 0;
+                searchmodeGreater_btn.FlatAppearance.BorderSize = 1;
+                CurrentSearchMode = SearchMode.Greater;
+            }
+            else if(selectedMode == "<")
+            {
+                searchmodeLess_btn.FlatAppearance.BorderSize = 1;
+                searchmodeEqual_btn.FlatAppearance.BorderSize = 0;
+                searchmodeGreater_btn.FlatAppearance.BorderSize = 0;
+                CurrentSearchMode = SearchMode.Less;
+            }
         }
     }
 }

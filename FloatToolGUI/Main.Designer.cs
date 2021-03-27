@@ -49,8 +49,8 @@ namespace FloatToolGUI
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FloatTool));
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.outputConsoleBox = new System.Windows.Forms.TextBox();
+            this.DiscordUpdater = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -59,86 +59,94 @@ namespace FloatToolGUI
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.darkModeSwitchBtn = new System.Windows.Forms.Button();
+            this.helpBtn = new System.Windows.Forms.Button();
+            this.helpContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.openWebsiteButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.openAboutBox = new System.Windows.Forms.ToolStripMenuItem();
+            this.openGithubButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.soundBtnSwitch = new System.Windows.Forms.Button();
+            this.minimizeBtn = new System.Windows.Forms.Button();
+            this.closeBtn = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.downloadProgressBar = new System.Windows.Forms.ProgressBar();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.stattrackCheckBox = new System.Windows.Forms.CheckBox();
+            this.checkPossibilityBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.weaponQualityBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.weaponTypeBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.fullSkinName = new System.Windows.Forms.TextBox();
+            this.weaponSkinBox = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.searchmodeGreater_btn = new System.Windows.Forms.Button();
+            this.searchmodeEqual_btn = new System.Windows.Forms.Button();
+            this.searchmodeLess_btn = new System.Windows.Forms.Button();
+            this.searchModeLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.quantityInput = new System.Windows.Forms.NumericUpDown();
+            this.skipValueInput = new System.Windows.Forms.NumericUpDown();
+            this.ascendingCheckBox = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.searchFloatInput = new System.Windows.Forms.TextBox();
+            this.sortCheckBox = new System.Windows.Forms.CheckBox();
+            this.startBtn = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.workProgressBar = new System.Windows.Forms.ProgressBar();
+            this.speedStatusLabel = new System.Windows.Forms.Label();
+            this.combinationsStatusLabel = new System.Windows.Forms.Label();
+            this.gpuSearch_btn = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.threadCountInput = new System.Windows.Forms.NumericUpDown();
+            this.multithreadCheckBox = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.WorkStatusUpdater = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
+            this.helpContextMenu.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            this.panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quantityInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skipValueInput)).BeginInit();
             this.panel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.threadCountInput)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox2
+            // outputConsoleBox
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.outputConsoleBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.outputConsoleBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.outputConsoleBox.Cursor = System.Windows.Forms.Cursors.Default;
+            resources.ApplyResources(this.outputConsoleBox, "outputConsoleBox");
+            this.outputConsoleBox.ForeColor = System.Drawing.Color.White;
+            this.outputConsoleBox.Name = "outputConsoleBox";
+            this.outputConsoleBox.ReadOnly = true;
+            this.outputConsoleBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // timer1
+            // DiscordUpdater
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 15000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.DiscordUpdater.Enabled = true;
+            this.DiscordUpdater.Interval = 15000;
+            this.DiscordUpdater.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // panel1
             // 
@@ -164,7 +172,7 @@ namespace FloatToolGUI
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.textBox2);
+            this.panel11.Controls.Add(this.outputConsoleBox);
             resources.ApplyResources(this.panel11, "panel11");
             this.panel11.Name = "panel11";
             // 
@@ -193,97 +201,104 @@ namespace FloatToolGUI
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.panel9.Controls.Add(this.button10);
-            this.panel9.Controls.Add(this.button9);
-            this.panel9.Controls.Add(this.button7);
-            this.panel9.Controls.Add(this.button6);
-            this.panel9.Controls.Add(this.button8);
+            this.panel9.Controls.Add(this.darkModeSwitchBtn);
+            this.panel9.Controls.Add(this.helpBtn);
+            this.panel9.Controls.Add(this.soundBtnSwitch);
+            this.panel9.Controls.Add(this.minimizeBtn);
+            this.panel9.Controls.Add(this.closeBtn);
             resources.ApplyResources(this.panel9, "panel9");
             this.panel9.Name = "panel9";
             this.panel9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel9_MouseDown);
             // 
-            // button10
+            // darkModeSwitchBtn
             // 
-            resources.ApplyResources(this.button10, "button10");
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Name = "button10";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            resources.ApplyResources(this.darkModeSwitchBtn, "darkModeSwitchBtn");
+            this.darkModeSwitchBtn.BackColor = System.Drawing.Color.Transparent;
+            this.darkModeSwitchBtn.FlatAppearance.BorderSize = 0;
+            this.darkModeSwitchBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.darkModeSwitchBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.darkModeSwitchBtn.ForeColor = System.Drawing.Color.White;
+            this.darkModeSwitchBtn.Name = "darkModeSwitchBtn";
+            this.darkModeSwitchBtn.UseVisualStyleBackColor = false;
+            this.darkModeSwitchBtn.Click += new System.EventHandler(this.DarkModeSwitchButton_Click);
             // 
-            // button9
+            // helpBtn
             // 
-            resources.ApplyResources(this.button9, "button9");
-            this.button9.BackColor = System.Drawing.Color.Transparent;
-            this.button9.ContextMenuStrip = this.contextMenuStrip1;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Name = "button9";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            resources.ApplyResources(this.helpBtn, "helpBtn");
+            this.helpBtn.BackColor = System.Drawing.Color.Transparent;
+            this.helpBtn.ContextMenuStrip = this.helpContextMenu;
+            this.helpBtn.FlatAppearance.BorderSize = 0;
+            this.helpBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.helpBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.helpBtn.ForeColor = System.Drawing.Color.White;
+            this.helpBtn.Name = "helpBtn";
+            this.helpBtn.UseVisualStyleBackColor = false;
+            this.helpBtn.Click += new System.EventHandler(this.OpenWikiButton_Click);
             // 
-            // contextMenuStrip1
+            // helpContextMenu
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem3});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
+            this.helpContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openWebsiteButton,
+            this.openAboutBox,
+            this.openGithubButton});
+            this.helpContextMenu.Name = "contextMenuStrip1";
+            resources.ApplyResources(this.helpContextMenu, "helpContextMenu");
             // 
-            // toolStripMenuItem2
+            // openWebsiteButton
             // 
-            this.toolStripMenuItem2.Image = global::FloatToolGUI.Properties.Resources.github;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            this.openWebsiteButton.Name = "openWebsiteButton";
+            resources.ApplyResources(this.openWebsiteButton, "openWebsiteButton");
+            this.openWebsiteButton.Click += new System.EventHandler(this.OpenWebsiteButton_Click);
             // 
-            // toolStripMenuItem3
+            // openAboutBox
             // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            resources.ApplyResources(this.toolStripMenuItem3, "toolStripMenuItem3");
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            this.openAboutBox.Name = "openAboutBox";
+            resources.ApplyResources(this.openAboutBox, "openAboutBox");
+            this.openAboutBox.Click += new System.EventHandler(this.OpenAboutButton_Click);
             // 
-            // button7
+            // openGithubButton
             // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.button7, "button7");
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Image = global::FloatToolGUI.Properties.Resources.unmutedWhite;
-            this.button7.Name = "button7";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.openGithubButton.Image = global::FloatToolGUI.Properties.Resources.github;
+            this.openGithubButton.Name = "openGithubButton";
+            resources.ApplyResources(this.openGithubButton, "openGithubButton");
+            this.openGithubButton.Click += new System.EventHandler(this.OpenGithubButton_Click);
             // 
-            // button6
+            // soundBtnSwitch
             // 
-            resources.ApplyResources(this.button6, "button6");
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Name = "button6";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.soundBtnSwitch.BackColor = System.Drawing.Color.Transparent;
+            this.soundBtnSwitch.FlatAppearance.BorderSize = 0;
+            this.soundBtnSwitch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.soundBtnSwitch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.soundBtnSwitch, "soundBtnSwitch");
+            this.soundBtnSwitch.ForeColor = System.Drawing.Color.White;
+            this.soundBtnSwitch.Image = global::FloatToolGUI.Properties.Resources.unmutedWhite;
+            this.soundBtnSwitch.Name = "soundBtnSwitch";
+            this.soundBtnSwitch.UseVisualStyleBackColor = false;
+            this.soundBtnSwitch.Click += new System.EventHandler(this.SoundSwitchButton_Click);
             // 
-            // button8
+            // minimizeBtn
             // 
-            resources.ApplyResources(this.button8, "button8");
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Name = "button8";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            resources.ApplyResources(this.minimizeBtn, "minimizeBtn");
+            this.minimizeBtn.BackColor = System.Drawing.Color.Transparent;
+            this.minimizeBtn.FlatAppearance.BorderSize = 0;
+            this.minimizeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.minimizeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.minimizeBtn.ForeColor = System.Drawing.Color.White;
+            this.minimizeBtn.Name = "minimizeBtn";
+            this.minimizeBtn.UseVisualStyleBackColor = false;
+            this.minimizeBtn.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // closeBtn
+            // 
+            resources.ApplyResources(this.closeBtn, "closeBtn");
+            this.closeBtn.BackColor = System.Drawing.Color.Transparent;
+            this.closeBtn.FlatAppearance.BorderSize = 0;
+            this.closeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.closeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.closeBtn.ForeColor = System.Drawing.Color.White;
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.UseVisualStyleBackColor = false;
+            this.closeBtn.Click += new System.EventHandler(this.button8_Click);
             // 
             // button5
             // 
@@ -334,49 +349,49 @@ namespace FloatToolGUI
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Name = "label8";
             // 
-            // progressBar1
+            // downloadProgressBar
             // 
-            resources.ApplyResources(this.progressBar1, "progressBar1");
-            this.progressBar1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.progressBar1.ForeColor = System.Drawing.Color.Black;
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Step = 1;
+            resources.ApplyResources(this.downloadProgressBar, "downloadProgressBar");
+            this.downloadProgressBar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.downloadProgressBar.ForeColor = System.Drawing.Color.Black;
+            this.downloadProgressBar.Name = "downloadProgressBar";
+            this.downloadProgressBar.Step = 1;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.panel6.Controls.Add(this.checkBox1);
-            this.panel6.Controls.Add(this.button1);
+            this.panel6.Controls.Add(this.stattrackCheckBox);
+            this.panel6.Controls.Add(this.checkPossibilityBtn);
             this.panel6.Controls.Add(this.label3);
-            this.panel6.Controls.Add(this.comboBox3);
+            this.panel6.Controls.Add(this.weaponQualityBox);
             this.panel6.Controls.Add(this.label1);
             this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.comboBox1);
+            this.panel6.Controls.Add(this.weaponTypeBox);
             this.panel6.Controls.Add(this.label2);
-            this.panel6.Controls.Add(this.textBox1);
-            this.panel6.Controls.Add(this.comboBox2);
+            this.panel6.Controls.Add(this.fullSkinName);
+            this.panel6.Controls.Add(this.weaponSkinBox);
             resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             // 
-            // checkBox1
+            // stattrackCheckBox
             // 
-            resources.ApplyResources(this.checkBox1, "checkBox1");
-            this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            resources.ApplyResources(this.stattrackCheckBox, "stattrackCheckBox");
+            this.stattrackCheckBox.ForeColor = System.Drawing.Color.White;
+            this.stattrackCheckBox.Name = "stattrackCheckBox";
+            this.stattrackCheckBox.UseVisualStyleBackColor = true;
+            this.stattrackCheckBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // button1
+            // checkPossibilityBtn
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.WindowFrame;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            resources.ApplyResources(this.checkPossibilityBtn, "checkPossibilityBtn");
+            this.checkPossibilityBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.checkPossibilityBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkPossibilityBtn.FlatAppearance.BorderSize = 0;
+            this.checkPossibilityBtn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.checkPossibilityBtn.ForeColor = System.Drawing.Color.White;
+            this.checkPossibilityBtn.Name = "checkPossibilityBtn";
+            this.checkPossibilityBtn.UseVisualStyleBackColor = false;
+            this.checkPossibilityBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -384,21 +399,21 @@ namespace FloatToolGUI
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Name = "label3";
             // 
-            // comboBox3
+            // weaponQualityBox
             // 
-            resources.ApplyResources(this.comboBox3, "comboBox3");
-            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.comboBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            resources.GetString("comboBox3.Items"),
-            resources.GetString("comboBox3.Items1"),
-            resources.GetString("comboBox3.Items2"),
-            resources.GetString("comboBox3.Items3"),
-            resources.GetString("comboBox3.Items4")});
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            resources.ApplyResources(this.weaponQualityBox, "weaponQualityBox");
+            this.weaponQualityBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.weaponQualityBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.weaponQualityBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.weaponQualityBox.FormattingEnabled = true;
+            this.weaponQualityBox.Items.AddRange(new object[] {
+            resources.GetString("weaponQualityBox.Items"),
+            resources.GetString("weaponQualityBox.Items1"),
+            resources.GetString("weaponQualityBox.Items2"),
+            resources.GetString("weaponQualityBox.Items3"),
+            resources.GetString("weaponQualityBox.Items4")});
+            this.weaponQualityBox.Name = "weaponQualityBox";
+            this.weaponQualityBox.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -412,50 +427,50 @@ namespace FloatToolGUI
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Name = "label4";
             // 
-            // comboBox1
+            // weaponTypeBox
             // 
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            resources.GetString("comboBox1.Items"),
-            resources.GetString("comboBox1.Items1"),
-            resources.GetString("comboBox1.Items2"),
-            resources.GetString("comboBox1.Items3"),
-            resources.GetString("comboBox1.Items4"),
-            resources.GetString("comboBox1.Items5"),
-            resources.GetString("comboBox1.Items6"),
-            resources.GetString("comboBox1.Items7"),
-            resources.GetString("comboBox1.Items8"),
-            resources.GetString("comboBox1.Items9"),
-            resources.GetString("comboBox1.Items10"),
-            resources.GetString("comboBox1.Items11"),
-            resources.GetString("comboBox1.Items12"),
-            resources.GetString("comboBox1.Items13"),
-            resources.GetString("comboBox1.Items14"),
-            resources.GetString("comboBox1.Items15"),
-            resources.GetString("comboBox1.Items16"),
-            resources.GetString("comboBox1.Items17"),
-            resources.GetString("comboBox1.Items18"),
-            resources.GetString("comboBox1.Items19"),
-            resources.GetString("comboBox1.Items20"),
-            resources.GetString("comboBox1.Items21"),
-            resources.GetString("comboBox1.Items22"),
-            resources.GetString("comboBox1.Items23"),
-            resources.GetString("comboBox1.Items24"),
-            resources.GetString("comboBox1.Items25"),
-            resources.GetString("comboBox1.Items26"),
-            resources.GetString("comboBox1.Items27"),
-            resources.GetString("comboBox1.Items28"),
-            resources.GetString("comboBox1.Items29"),
-            resources.GetString("comboBox1.Items30"),
-            resources.GetString("comboBox1.Items31"),
-            resources.GetString("comboBox1.Items32"),
-            resources.GetString("comboBox1.Items33")});
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            resources.ApplyResources(this.weaponTypeBox, "weaponTypeBox");
+            this.weaponTypeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.weaponTypeBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.weaponTypeBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.weaponTypeBox.FormattingEnabled = true;
+            this.weaponTypeBox.Items.AddRange(new object[] {
+            resources.GetString("weaponTypeBox.Items"),
+            resources.GetString("weaponTypeBox.Items1"),
+            resources.GetString("weaponTypeBox.Items2"),
+            resources.GetString("weaponTypeBox.Items3"),
+            resources.GetString("weaponTypeBox.Items4"),
+            resources.GetString("weaponTypeBox.Items5"),
+            resources.GetString("weaponTypeBox.Items6"),
+            resources.GetString("weaponTypeBox.Items7"),
+            resources.GetString("weaponTypeBox.Items8"),
+            resources.GetString("weaponTypeBox.Items9"),
+            resources.GetString("weaponTypeBox.Items10"),
+            resources.GetString("weaponTypeBox.Items11"),
+            resources.GetString("weaponTypeBox.Items12"),
+            resources.GetString("weaponTypeBox.Items13"),
+            resources.GetString("weaponTypeBox.Items14"),
+            resources.GetString("weaponTypeBox.Items15"),
+            resources.GetString("weaponTypeBox.Items16"),
+            resources.GetString("weaponTypeBox.Items17"),
+            resources.GetString("weaponTypeBox.Items18"),
+            resources.GetString("weaponTypeBox.Items19"),
+            resources.GetString("weaponTypeBox.Items20"),
+            resources.GetString("weaponTypeBox.Items21"),
+            resources.GetString("weaponTypeBox.Items22"),
+            resources.GetString("weaponTypeBox.Items23"),
+            resources.GetString("weaponTypeBox.Items24"),
+            resources.GetString("weaponTypeBox.Items25"),
+            resources.GetString("weaponTypeBox.Items26"),
+            resources.GetString("weaponTypeBox.Items27"),
+            resources.GetString("weaponTypeBox.Items28"),
+            resources.GetString("weaponTypeBox.Items29"),
+            resources.GetString("weaponTypeBox.Items30"),
+            resources.GetString("weaponTypeBox.Items31"),
+            resources.GetString("weaponTypeBox.Items32"),
+            resources.GetString("weaponTypeBox.Items33")});
+            this.weaponTypeBox.Name = "weaponTypeBox";
+            this.weaponTypeBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -463,24 +478,23 @@ namespace FloatToolGUI
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Name = "label2";
             // 
-            // textBox1
+            // fullSkinName
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.textBox1.Name = "textBox1";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.fullSkinName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.fullSkinName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.fullSkinName, "fullSkinName");
+            this.fullSkinName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.fullSkinName.Name = "fullSkinName";
             // 
-            // comboBox2
+            // weaponSkinBox
             // 
-            resources.ApplyResources(this.comboBox2, "comboBox2");
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            resources.ApplyResources(this.weaponSkinBox, "weaponSkinBox");
+            this.weaponSkinBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.weaponSkinBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.weaponSkinBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.weaponSkinBox.FormattingEnabled = true;
+            this.weaponSkinBox.Name = "weaponSkinBox";
+            this.weaponSkinBox.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // panel5
             // 
@@ -493,18 +507,58 @@ namespace FloatToolGUI
             // panel16
             // 
             this.panel16.BackColor = System.Drawing.Color.Transparent;
+            this.panel16.Controls.Add(this.downloadProgressBar);
+            this.panel16.Controls.Add(this.searchmodeGreater_btn);
+            this.panel16.Controls.Add(this.searchmodeEqual_btn);
+            this.panel16.Controls.Add(this.searchmodeLess_btn);
+            this.panel16.Controls.Add(this.searchModeLabel);
             this.panel16.Controls.Add(this.label5);
-            this.panel16.Controls.Add(this.numericUpDown1);
-            this.panel16.Controls.Add(this.panel14);
-            this.panel16.Controls.Add(this.numericUpDown2);
-            this.panel16.Controls.Add(this.checkBox3);
+            this.panel16.Controls.Add(this.quantityInput);
+            this.panel16.Controls.Add(this.skipValueInput);
+            this.panel16.Controls.Add(this.ascendingCheckBox);
             this.panel16.Controls.Add(this.label7);
             this.panel16.Controls.Add(this.label6);
-            this.panel16.Controls.Add(this.textBox3);
-            this.panel16.Controls.Add(this.checkBox2);
-            this.panel16.Controls.Add(this.button2);
+            this.panel16.Controls.Add(this.searchFloatInput);
+            this.panel16.Controls.Add(this.sortCheckBox);
+            this.panel16.Controls.Add(this.startBtn);
             resources.ApplyResources(this.panel16, "panel16");
             this.panel16.Name = "panel16";
+            // 
+            // searchmodeGreater_btn
+            // 
+            resources.ApplyResources(this.searchmodeGreater_btn, "searchmodeGreater_btn");
+            this.searchmodeGreater_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.searchmodeGreater_btn.Cursor = System.Windows.Forms.Cursors.Default;
+            this.searchmodeGreater_btn.FlatAppearance.BorderSize = 0;
+            this.searchmodeGreater_btn.ForeColor = System.Drawing.Color.White;
+            this.searchmodeGreater_btn.Name = "searchmodeGreater_btn";
+            this.searchmodeGreater_btn.UseVisualStyleBackColor = false;
+            this.searchmodeGreater_btn.Click += new System.EventHandler(this.changeSearchMode);
+            // 
+            // searchmodeEqual_btn
+            // 
+            resources.ApplyResources(this.searchmodeEqual_btn, "searchmodeEqual_btn");
+            this.searchmodeEqual_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.searchmodeEqual_btn.ForeColor = System.Drawing.Color.White;
+            this.searchmodeEqual_btn.Name = "searchmodeEqual_btn";
+            this.searchmodeEqual_btn.UseVisualStyleBackColor = false;
+            this.searchmodeEqual_btn.Click += new System.EventHandler(this.changeSearchMode);
+            // 
+            // searchmodeLess_btn
+            // 
+            resources.ApplyResources(this.searchmodeLess_btn, "searchmodeLess_btn");
+            this.searchmodeLess_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.searchmodeLess_btn.FlatAppearance.BorderSize = 0;
+            this.searchmodeLess_btn.ForeColor = System.Drawing.Color.White;
+            this.searchmodeLess_btn.Name = "searchmodeLess_btn";
+            this.searchmodeLess_btn.UseVisualStyleBackColor = false;
+            this.searchmodeLess_btn.Click += new System.EventHandler(this.changeSearchMode);
+            // 
+            // searchModeLabel
+            // 
+            resources.ApplyResources(this.searchModeLabel, "searchModeLabel");
+            this.searchModeLabel.ForeColor = System.Drawing.Color.White;
+            this.searchModeLabel.Name = "searchModeLabel";
             // 
             // label5
             // 
@@ -512,56 +566,48 @@ namespace FloatToolGUI
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Name = "label5";
             // 
-            // numericUpDown1
+            // quantityInput
             // 
-            resources.ApplyResources(this.numericUpDown1, "numericUpDown1");
-            this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            resources.ApplyResources(this.quantityInput, "quantityInput");
+            this.quantityInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.quantityInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.quantityInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.quantityInput.Minimum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.quantityInput.Name = "quantityInput";
+            this.quantityInput.Value = new decimal(new int[] {
             100,
             0,
             0,
             0});
             // 
-            // panel14
+            // skipValueInput
             // 
-            resources.ApplyResources(this.panel14, "panel14");
-            this.panel14.BackColor = System.Drawing.Color.Transparent;
-            this.panel14.Controls.Add(this.progressBar1);
-            this.panel14.Name = "panel14";
-            this.panel14.Paint += new System.Windows.Forms.PaintEventHandler(this.panel14_Paint);
-            // 
-            // numericUpDown2
-            // 
-            resources.ApplyResources(this.numericUpDown2, "numericUpDown2");
-            this.numericUpDown2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.numericUpDown2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            resources.ApplyResources(this.skipValueInput, "skipValueInput");
+            this.skipValueInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.skipValueInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.skipValueInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.skipValueInput.Maximum = new decimal(new int[] {
             9999999,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.skipValueInput.Name = "skipValueInput";
+            this.skipValueInput.Value = new decimal(new int[] {
             20,
             0,
             0,
             0});
             // 
-            // checkBox3
+            // ascendingCheckBox
             // 
-            resources.ApplyResources(this.checkBox3, "checkBox3");
-            this.checkBox3.ForeColor = System.Drawing.Color.White;
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.ascendingCheckBox, "ascendingCheckBox");
+            this.ascendingCheckBox.ForeColor = System.Drawing.Color.White;
+            this.ascendingCheckBox.Name = "ascendingCheckBox";
+            this.ascendingCheckBox.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -575,41 +621,74 @@ namespace FloatToolGUI
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Name = "label6";
             // 
-            // textBox3
+            // searchFloatInput
             // 
-            resources.ApplyResources(this.textBox3, "textBox3");
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.textBox3.Name = "textBox3";
+            resources.ApplyResources(this.searchFloatInput, "searchFloatInput");
+            this.searchFloatInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.searchFloatInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.searchFloatInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.searchFloatInput.Name = "searchFloatInput";
             // 
-            // checkBox2
+            // sortCheckBox
             // 
-            resources.ApplyResources(this.checkBox2, "checkBox2");
-            this.checkBox2.ForeColor = System.Drawing.Color.White;
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.sortCheckBox, "sortCheckBox");
+            this.sortCheckBox.ForeColor = System.Drawing.Color.White;
+            this.sortCheckBox.Name = "sortCheckBox";
+            this.sortCheckBox.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // startBtn
             // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.WindowFrame;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            resources.ApplyResources(this.startBtn, "startBtn");
+            this.startBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.startBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.startBtn.FlatAppearance.BorderSize = 0;
+            this.startBtn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.startBtn.ForeColor = System.Drawing.Color.White;
+            this.startBtn.Name = "startBtn";
+            this.startBtn.UseVisualStyleBackColor = false;
+            this.startBtn.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.Transparent;
+            this.panel15.Controls.Add(this.workProgressBar);
+            this.panel15.Controls.Add(this.speedStatusLabel);
+            this.panel15.Controls.Add(this.combinationsStatusLabel);
+            this.panel15.Controls.Add(this.gpuSearch_btn);
             this.panel15.Controls.Add(this.label10);
-            this.panel15.Controls.Add(this.numericUpDown3);
-            this.panel15.Controls.Add(this.checkBox4);
+            this.panel15.Controls.Add(this.threadCountInput);
+            this.panel15.Controls.Add(this.multithreadCheckBox);
             resources.ApplyResources(this.panel15, "panel15");
             this.panel15.Name = "panel15";
+            // 
+            // workProgressBar
+            // 
+            resources.ApplyResources(this.workProgressBar, "workProgressBar");
+            this.workProgressBar.Maximum = 256;
+            this.workProgressBar.Name = "workProgressBar";
+            this.workProgressBar.Step = 1;
+            // 
+            // speedStatusLabel
+            // 
+            resources.ApplyResources(this.speedStatusLabel, "speedStatusLabel");
+            this.speedStatusLabel.ForeColor = System.Drawing.Color.White;
+            this.speedStatusLabel.Name = "speedStatusLabel";
+            // 
+            // combinationsStatusLabel
+            // 
+            resources.ApplyResources(this.combinationsStatusLabel, "combinationsStatusLabel");
+            this.combinationsStatusLabel.ForeColor = System.Drawing.Color.White;
+            this.combinationsStatusLabel.Name = "combinationsStatusLabel";
+            // 
+            // gpuSearch_btn
+            // 
+            resources.ApplyResources(this.gpuSearch_btn, "gpuSearch_btn");
+            this.gpuSearch_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.gpuSearch_btn.FlatAppearance.BorderSize = 0;
+            this.gpuSearch_btn.ForeColor = System.Drawing.Color.White;
+            this.gpuSearch_btn.Name = "gpuSearch_btn";
+            this.gpuSearch_btn.UseVisualStyleBackColor = false;
+            this.gpuSearch_btn.Click += new System.EventHandler(this.gpuSearch_btn_Click);
             // 
             // label10
             // 
@@ -617,31 +696,38 @@ namespace FloatToolGUI
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Name = "label10";
             // 
-            // numericUpDown3
+            // threadCountInput
             // 
-            this.numericUpDown3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.numericUpDown3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.numericUpDown3, "numericUpDown3");
-            this.numericUpDown3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.numericUpDown3.Minimum = new decimal(new int[] {
+            this.threadCountInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.threadCountInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.threadCountInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            resources.ApplyResources(this.threadCountInput, "threadCountInput");
+            this.threadCountInput.Maximum = new decimal(new int[] {
+            1024,
+            0,
+            0,
+            0});
+            this.threadCountInput.Minimum = new decimal(new int[] {
             2,
             0,
             0,
             0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Value = new decimal(new int[] {
+            this.threadCountInput.Name = "threadCountInput";
+            this.threadCountInput.Value = new decimal(new int[] {
             2,
             0,
             0,
             0});
             // 
-            // checkBox4
+            // multithreadCheckBox
             // 
-            resources.ApplyResources(this.checkBox4, "checkBox4");
-            this.checkBox4.ForeColor = System.Drawing.Color.White;
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            resources.ApplyResources(this.multithreadCheckBox, "multithreadCheckBox");
+            this.multithreadCheckBox.Checked = true;
+            this.multithreadCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.multithreadCheckBox.ForeColor = System.Drawing.Color.White;
+            this.multithreadCheckBox.Name = "multithreadCheckBox";
+            this.multithreadCheckBox.UseVisualStyleBackColor = true;
+            this.multithreadCheckBox.CheckedChanged += new System.EventHandler(this.MultithreadSwitched);
             // 
             // panel2
             // 
@@ -656,6 +742,12 @@ namespace FloatToolGUI
             this.panel4.Controls.Add(this.panel1);
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
+            // 
+            // WorkStatusUpdater
+            // 
+            this.WorkStatusUpdater.Enabled = true;
+            this.WorkStatusUpdater.Interval = 250;
+            this.WorkStatusUpdater.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // FloatTool
             // 
@@ -675,7 +767,7 @@ namespace FloatToolGUI
             this.panel11.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.helpContextMenu.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -683,12 +775,11 @@ namespace FloatToolGUI
             this.panel5.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            this.panel14.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quantityInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skipValueInput)).EndInit();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.threadCountInput)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -696,60 +787,69 @@ namespace FloatToolGUI
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox outputConsoleBox;
+        private System.Windows.Forms.Timer DiscordUpdater;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox stattrackCheckBox;
+        private System.Windows.Forms.Button checkPossibilityBtn;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox weaponQualityBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox weaponTypeBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox fullSkinName;
+        private System.Windows.Forms.ComboBox weaponSkinBox;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox ascendingCheckBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ProgressBar downloadProgressBar;
+        private System.Windows.Forms.CheckBox sortCheckBox;
+        private System.Windows.Forms.Button startBtn;
+        private System.Windows.Forms.TextBox searchFloatInput;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown skipValueInput;
+        private System.Windows.Forms.NumericUpDown quantityInput;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button minimizeBtn;
+        private System.Windows.Forms.Button closeBtn;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.Button soundBtnSwitch;
+        private System.Windows.Forms.Button helpBtn;
+        private System.Windows.Forms.ContextMenuStrip helpContextMenu;
+        private System.Windows.Forms.ToolStripMenuItem openGithubButton;
+        private System.Windows.Forms.ToolStripMenuItem openAboutBox;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button darkModeSwitchBtn;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox multithreadCheckBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown threadCountInput;
+        private System.Windows.Forms.Button gpuSearch_btn;
+        private System.Windows.Forms.Label combinationsStatusLabel;
+        private System.Windows.Forms.Timer WorkStatusUpdater;
+        private System.Windows.Forms.ProgressBar workProgressBar;
+        private System.Windows.Forms.Label speedStatusLabel;
+        private System.Windows.Forms.Button searchmodeGreater_btn;
+        private System.Windows.Forms.Button searchmodeEqual_btn;
+        private System.Windows.Forms.Button searchmodeLess_btn;
+        private System.Windows.Forms.ToolStripMenuItem openWebsiteButton;
+        private System.Windows.Forms.Label searchModeLabel;
     }
 }
 
