@@ -63,6 +63,46 @@ namespace FloatToolGUI.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap benchmarkBlack {
+            get {
+                object obj = ResourceManager.GetObject("benchmarkBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap benchmarkWhite {
+            get {
+                object obj = ResourceManager.GetObject("benchmarkWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gearBlack {
+            get {
+                object obj = ResourceManager.GetObject("gearBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gearWhite {
+            get {
+                object obj = ResourceManager.GetObject("gearWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap github {
             get {
                 object obj = ResourceManager.GetObject("github", resourceCulture);
@@ -87,6 +127,15 @@ namespace FloatToolGUI.Properties {
             get {
                 object obj = ResourceManager.GetObject("mutedWhite", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.IO.UnmanagedMemoryStream, аналогичного System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream notification {
+            get {
+                return ResourceManager.GetStream("notification", resourceCulture);
             }
         }
         

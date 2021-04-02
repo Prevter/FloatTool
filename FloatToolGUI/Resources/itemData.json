@@ -1,0 +1,7355 @@
+[
+  {
+    "name": "M4A1-S | Printstream",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Operation Broken Fang Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "AWP | The Prince",
+    "rarity": "Covert Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The Canals Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "MAG-7 | Cinquedea",
+    "rarity": "Classified Shotgun",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Canals Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Stained Glass",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The Canals Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Red Filigree",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The Canals Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Baroque Orange",
+    "rarity": "Restricted Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The Canals Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Baroque Red",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The Canals Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Emerald",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Canals Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SSG 08 | Orange Filigree",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The Canals Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "G3SG1 | Violet Murano",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The Canals Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AK-47 | Baroque Purple",
+    "rarity": "Industrial Grade Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Canals Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SG 553 | Candy Apple",
+    "rarity": "Industrial Grade Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "The Canals Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Orange Murano",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Canals Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Dark Filigree",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The Canals Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "CZ75-Auto | Indigo",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Canals Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SCAR-20 | Stone Mosaico",
+    "rarity": "Consumer Grade Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.50",
+    "case": "The Canals Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Navy Murano",
+    "rarity": "Consumer Grade Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Canals Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Negev | Boroque Sand",
+    "rarity": "Consumer Grade Machine Gun",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Canals Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AWP | Containment Breach",
+    "rarity": "Covert Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Shattered Web Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "MAC-10 | Stalker",
+    "rarity": "Covert SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Shattered Web Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "SSG 08 | Bloodshot",
+    "rarity": "Classified Sniper Rifle",
+    "minWear": "0.14",
+    "maxWear": "0.60",
+    "case": "The Shattered Web Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SG 553 | Colony IV",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Shattered Web Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Decimator",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.75",
+    "case": "The Shattered Web Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AK-47 | Rat Rod",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Shattered Web Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Arctic Wolf",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "The Shattered Web Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP7 | Neon Ply",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Shattered Web Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P2000 | Obsidian",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Shattered Web Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Embargo",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Shattered Web Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Balance",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Shattered Web Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MP5-SD | Acid Wash",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.68",
+    "case": "The Shattered Web Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SCAR-20 | Torn",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.45",
+    "case": "The Shattered Web Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "R8 Revolver | Momento",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "The Shattered Web Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "G3SG1 | Black Sand",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "The Shattered Web Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "M249 | Warbird",
+    "rarity": "Mil-Spec Machine Gun",
+    "minWear": "0.05",
+    "maxWear": "0.65",
+    "case": "The Shattered Web Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Plume",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "The Shattered Web Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AWP | Wildfire",
+    "rarity": "Covert Sniper Rifle",
+    "minWear": "0.01",
+    "maxWear": "0.70",
+    "case": "The CS20 Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "FAMAS | Commemoration",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The CS20 Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "MP9 | Hydra",
+    "rarity": "Classified SMG",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "The CS20 Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Death by Puppy",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "The CS20 Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Nostalgia",
+    "rarity": "Classified SMG",
+    "minWear": "0.00",
+    "maxWear": "0.57",
+    "case": "The CS20 Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP5-SD | Agent",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The CS20 Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Inferno",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.68",
+    "case": "The CS20 Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Plastique",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "The CS20 Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Buddy",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.55",
+    "case": "The CS20 Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M249 | Aztec",
+    "rarity": "Restricted Machine Gun",
+    "minWear": "0.00",
+    "maxWear": "0.75",
+    "case": "The CS20 Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Glock-18 | Sacrifice",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The CS20 Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "FAMAS | Decommissioned",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The CS20 Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Classic Crate",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The CS20 Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MAG-7 | Popdog",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "The CS20 Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Flash Out",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "The CS20 Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Elite 1.6",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "The CS20 Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SCAR-20 | Assault",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.62",
+    "case": "The CS20 Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-Seven | Angry Mob",
+    "rarity": "Covert Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "The Prisma Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+   },
+   {
+    "name": "M4A4 | The Emperor",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "The Prisma Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "XM1014 | Incinegator",
+    "rarity": "Classified Shotgun",
+    "minWear": "0.14",
+    "maxWear": "0.65",
+    "case": "The Prisma Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+   },
+   {
+    "name": "R8 Revolver | Skull Crusher",
+    "rarity": "Classified Pistol",
+    "minWear": "0.25",
+    "maxWear": "0.80",
+    "case": "The Prisma Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+   },
+   {
+    "name": "AUG | Momentum",
+    "rarity": "Classified Rifle",
+    "minWear": "0.05",
+    "maxWear": "1.00",
+    "case": "The Prisma Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+   },
+  {
+    "name": "AWP | Atheris",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Prisma Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+   },
+   {
+    "name": "Tec-9 | Bamboozle",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "The Prisma Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+   },
+   {
+    "name": "Desert Eagle | Light Rail",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.90",
+    "case": "The Prisma Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+   },
+   {
+    "name": "MP5-SD | Gauss",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Prisma Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+   },
+   {
+    "name": "UMP-45 | Moonrise",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "The Prisma Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+   },
+  {
+    "name": "FAMAS | Crypsis",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.55",
+    "case": "The Prisma Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+   },
+   {
+    "name": "AK-47 | Uncharted",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.75",
+    "case": "The Prisma Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+   },
+   {
+    "name": "MAC-10 | Whitefish",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Prisma Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+   },
+   {
+    "name": "MP7 | Mischief",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.10",
+    "maxWear": "1.00",
+    "case": "The Prisma Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+   },
+   {
+    "name": "P250 | Verdigris",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "The Prisma Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+   },
+  {
+    "name": "MP5-SD | Lab Rats",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.35",
+    "case": "The Blacksite Collection",
+    "lowestRarity": true,
+    "highestRarity": true
+  },
+  {
+    "name": "AK-47 | Asiimov",
+    "rarity": "Covert Rifle",
+    "minWear": "0.05",
+    "maxWear": "0.70",
+    "case": "Danger Zone Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "AWP | Neo-Noir",
+    "rarity": "Covert Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Danger Zone Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "MP5-SD | Phosphor",
+    "rarity": "Classified SMG",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Danger Zone Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Desert Eagle | Mecha Industries",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "Danger Zone Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Momentum",
+    "rarity": "Classified SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Danger Zone Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Pipe Down",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.90",
+    "case": "Danger Zone Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "USP-S | Flashback",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Danger Zone Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Nevermore",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "Danger Zone Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | Signal",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Danger Zone Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "G3SG1 | Scavenger",
+    "rarity": "Restricted Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.65",
+    "case": "Danger Zone Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A4 | Magnesium",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Danger Zone Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Fubar",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.14",
+    "maxWear": "1.00",
+    "case": "Danger Zone Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Glock-18 | Oxide Blaze",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.85",
+    "case": "Danger Zone Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SG 553 | Danger Close",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.02",
+    "maxWear": "0.80",
+    "case": "Danger Zone Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Modest Threat",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.75",
+    "case": "Danger Zone Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Black Sand",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.90",
+    "case": "Danger Zone Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Wood Fired",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.75",
+    "case": "Danger Zone Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AK-47 | Neon Rider",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Horizon Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "Desert Eagle | Code Red",
+    "rarity": "Covert Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Horizon Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "M4A1-S | Nightmare",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Horizon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Devourer",
+    "rarity": "Classified Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Horizon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "FAMAS | Eye of Athena",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "Horizon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AWP | PAW",
+    "rarity": "Restricted Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Horizon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "CZ75-Auto | Eco",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Horizon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "G3SG1 | High Seas",
+    "rarity": "Restricted Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "Horizon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Toy Soldier",
+    "rarity": "Restricted Shotgun",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Horizon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP7 | Powercore",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Horizon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Glock-18 | Warhawk",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Horizon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Traction",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Horizon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Amber Slipstream",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.55",
+    "case": "Horizon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Snek-9",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Horizon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Capillary",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "Horizon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "R8 Revolver | Survivalist",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "Horizon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Shred",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Horizon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A4 | Neo-Noir",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.90",
+    "case": "Clutch Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "MP7 | Bloodsport",
+    "rarity": "Covert SMG",
+    "minWear": "0.00",
+    "maxWear": "0.65",
+    "case": "Clutch Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "USP-S | Cortex",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Clutch Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AWP | Mortis",
+    "rarity": "Classified Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.64",
+    "case": "Clutch Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Stymphalian",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.63",
+    "case": "Clutch Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Glock-18 | Moonrise",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.65",
+    "case": "Clutch Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Arctic Wolf",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Clutch Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAG-7 | SWAG-7",
+    "rarity": "Restricted Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.92",
+    "case": "Clutch Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Wild Six",
+    "rarity": "Restricted Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Clutch Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Negev | Lionfish",
+    "rarity": "Restricted Machine Gun",
+    "minWear": "0.00",
+    "maxWear": "0.55",
+    "case": "Clutch Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SG 553 | Aloha",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.55",
+    "case": "Clutch Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Flame Test",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.65",
+    "case": "Clutch Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "R8 Revolver | Grip",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Clutch Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P2000 | Urban Hazard",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Clutch Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Black Sand",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Clutch Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "XM1014 | Oxide Blaze",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "Clutch Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Night Riot",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Clutch Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AK-47 | The Empress",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Spectrum 2 Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "P250 | See Ya Later",
+    "rarity": "Covert Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "Spectrum 2 Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "M4A1-S | Leaded Glass",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "Spectrum 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "R8 Revolver | Llama Cannon",
+    "rarity": "Classified Pistol",
+    "minWear": "0.03",
+    "maxWear": "0.70",
+    "case": "Spectrum 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | High Roller",
+    "rarity": "Classified SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Spectrum 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "CZ75-Auto | Tacticat",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "Spectrum 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SG 553 | Phantom",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "Spectrum 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Exposure",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.55",
+    "case": "Spectrum 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "XM1014 | Ziggy",
+    "rarity": "Restricted Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.72",
+    "case": "Spectrum 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Goo",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "Spectrum 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Glock-18 | Off World",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Spectrum 2 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Triqua",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Spectrum 2 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Cracked Opal",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Spectrum 2 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Oceanic",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "Spectrum 2 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "G3SG1 | Hunter",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Spectrum 2 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Morris",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Spectrum 2 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SCAR-20 | Jungle Slipstream",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Spectrum 2 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A1-S | Mecha Industries",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Gamma Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "Glock-18 | Wasteland Rebel",
+    "rarity": "Covert Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.54",
+    "case": "Gamma Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "M4A4 | Desolate Space",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Gamma Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SCAR-20 | Bloodsport",
+    "rarity": "Classified Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.45",
+    "case": "Gamma Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P2000 | Imperial Dragon",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.63",
+    "case": "Gamma Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AWP | Phobos",
+    "rarity": "Restricted Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "Gamma Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Aristocrat",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.66",
+    "case": "Gamma Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "R8 Revolver | Reboot",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Gamma Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Chopper",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "Gamma Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Limelight",
+    "rarity": "Restricted Shotgun",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Gamma Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Violent Daimyo",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "Gamma Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SG 553 | Aerial",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "Gamma Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Iron Clad",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.05",
+    "maxWear": "0.80",
+    "case": "Gamma Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Ice Cap",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Gamma Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Carnivore",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Gamma Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Exo",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Gamma Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Harvester",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Gamma Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AK-47 | Neon Revolution",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Gamma 2 Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "FAMAS | Roll Cage",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Gamma 2 Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "AUG | Syd Mead",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Gamma 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Airlock",
+    "rarity": "Classified SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Gamma 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Fuel Injector",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Gamma 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Desert Eagle | Directive",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.06",
+    "maxWear": "1.00",
+    "case": "Gamma 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Glock-18 | Weasel",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Gamma 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SG 553 | Triarch",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Gamma 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SCAR-20 | Powercore",
+    "rarity": "Restricted Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Gamma 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAG-7 | Petroglyph",
+    "rarity": "Restricted Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.44",
+    "case": "Gamma 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Grim",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Gamma 2 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Briefing",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Gamma 2 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "CZ75-Auto | Imprint",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Gamma 2 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Negev | Dazzle",
+    "rarity": "Mil-Spec Machine Gun",
+    "minWear": "0.10",
+    "maxWear": "0.65",
+    "case": "Gamma 2 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Scumbria",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Gamma 2 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "XM1014 | Slipstream",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Gamma 2 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "G3SG1 | Ventilator",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.45",
+    "case": "Gamma 2 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A4 | Buzz Kill",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "Glove Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "SSG 08 | Dragonfire",
+    "rarity": "Covert Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Glove Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "P90 | Shallow Grave",
+    "rarity": "Classified SMG",
+    "minWear": "0.00",
+    "maxWear": "0.75",
+    "case": "Glove Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "FAMAS | Mecha Industries",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Glove Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Wasteland Princess",
+    "rarity": "Classified Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "Glove Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "USP-S | Cyrex",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.55",
+    "case": "Glove Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A1-S | Flashback",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Glove Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Royal Consorts",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Glove Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Gila",
+    "rarity": "Restricted Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.30",
+    "case": "Glove Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "G3SG1 | Stinger",
+    "rarity": "Restricted Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "Glove Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Glock-18 | Ironwork",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Glove Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MP7 | Cirrus",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.75",
+    "case": "Glove Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P2000 | Turf",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Glove Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | Black Sand",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Glove Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "CZ75-Auto | Polymer",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Glove Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MAG-7 | Sonar",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.45",
+    "case": "Glove Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Sand Scale",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.45",
+    "case": "Glove Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AK-47 | Bloodsport",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.45",
+    "case": "Spectrum Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "USP-S | Neo-Noir",
+    "rarity": "Covert Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "Spectrum Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "AWP | Fever Dream",
+    "rarity": "Classified Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.55",
+    "case": "Spectrum Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A1-S | Decimator",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.85",
+    "case": "Spectrum Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "CZ75-Auto | Xiangliu",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.56",
+    "case": "Spectrum Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Scaffold",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Spectrum Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "XM1014 | Seasons",
+    "rarity": "Restricted Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Spectrum Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M249 | Emerald Poison Dart",
+    "rarity": "Restricted Machine Gun",
+    "minWear": "0.00",
+    "maxWear": "0.45",
+    "case": "Spectrum Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | Crimson Tsunami",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.55",
+    "case": "Spectrum Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Last Dive",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.52",
+    "case": "Spectrum Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Desert Eagle | Oxide Blaze",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Spectrum Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Capillary",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "Spectrum Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Ripple",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Spectrum Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Zander",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.05",
+    "maxWear": "1.00",
+    "case": "Spectrum Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SCAR-20 | Blueprint",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.75",
+    "case": "Spectrum Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Jungle Slipstream",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Spectrum Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MP7 | Akoben",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "Spectrum Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AWP | Lightning Strike",
+    "rarity": "Covert Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "CS:GO Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "AK-47 | Case Hardened",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "CS:GO Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Desert Eagle | Hypnotic",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "CS:GO Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Glock-18 | Dragon Tattoo",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "CS:GO Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "USP-S | Dark Water",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.10",
+    "maxWear": "0.26",
+    "case": "CS:GO Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A1-S | Dark Water",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.10",
+    "maxWear": "0.26",
+    "case": "CS:GO Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SG 553 | Ultraviolet",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "CS:GO Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Wings",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.14",
+    "case": "CS:GO Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MP7 | Skulls",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.10",
+    "maxWear": "0.26",
+    "case": "CS:GO Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SSG 08 | Blood in the Water",
+    "rarity": "Covert Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.20",
+    "case": "CS:GO Weapon Case 2",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "P90 | Cold Blooded",
+    "rarity": "Classified SMG",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "CS:GO Weapon Case 2",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "USP-S | Serum",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.25",
+    "case": "CS:GO Weapon Case 2",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Case Hardened",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "CS:GO Weapon Case 2",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Hypnotic",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "CS:GO Weapon Case 2",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Hemoglobin",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.20",
+    "case": "CS:GO Weapon Case 2",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Graphite",
+    "rarity": "Restricted Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.12",
+    "case": "CS:GO Weapon Case 2",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SCAR-20 | Crimson Web",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "CS:GO Weapon Case 2",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A1-S | Blood Tiger",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.30",
+    "case": "CS:GO Weapon Case 2",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "FAMAS | Hexane",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "CS:GO Weapon Case 2",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Hive",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.30",
+    "case": "CS:GO Weapon Case 2",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Blue Titanium",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.04",
+    "case": "CS:GO Weapon Case 2",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "CZ75-Auto | Victoria",
+    "rarity": "Covert Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.75",
+    "case": "CS:GO Weapon Case 3",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "CZ75-Auto | The Fuschia Is Now",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "CS:GO Weapon Case 3",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Undertow",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.20",
+    "case": "CS:GO Weapon Case 3",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Desert Eagle | Heirloom",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "CS:GO Weapon Case 3",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Copper Galaxy",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.20",
+    "case": "CS:GO Weapon Case 3",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "CZ75-Auto | Tread Plate",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.20",
+    "case": "CS:GO Weapon Case 3",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Titanium Bit",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.20",
+    "case": "CS:GO Weapon Case 3",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "CZ75-Auto | Crimson Web",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "CS:GO Weapon Case 3",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "USP-S | Stainless",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "CS:GO Weapon Case 3",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Glock-18 | Blue Fissure",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.58",
+    "case": "CS:GO Weapon Case 3",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Panther",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.58",
+    "case": "CS:GO Weapon Case 3",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P2000 | Red FragCam",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "CS:GO Weapon Case 3",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | Chatterbox",
+    "rarity": "Covert Rifle",
+    "minWear": "0.35",
+    "maxWear": "0.85",
+    "case": "Chroma Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "AWP | Man-o'-war",
+    "rarity": "Covert Sniper Rifle",
+    "minWear": "0.10",
+    "maxWear": "0.20",
+    "case": "Chroma Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "M4A4 | 龍王 (Dragon King)",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.75",
+    "case": "Chroma Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AK-47 | Cartel",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.75",
+    "case": "Chroma Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Muertos",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "Chroma Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Desert Eagle | Naga",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Chroma Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Serenity",
+    "rarity": "Restricted Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Chroma Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Malachite",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Chroma Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Urban Shock",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.47",
+    "case": "Chroma Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Glock-18 | Catacombs",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Chroma Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Deadly Poison",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Chroma Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M249 | System Lock",
+    "rarity": "Mil-Spec Machine Gun",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Chroma Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "XM1014 | Quicksilver",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Chroma Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SCAR-20 | Grotto",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Chroma Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A1-S | Hyper Beast",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Chroma 2 Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "MAC-10 | Neon Rider",
+    "rarity": "Covert SMG",
+    "minWear": "0.00",
+    "maxWear": "0.45",
+    "case": "Chroma 2 Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "Five-SeveN | Monkey Business",
+    "rarity": "Classified Pistol",
+    "minWear": "0.10",
+    "maxWear": "0.90",
+    "case": "Chroma 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "FAMAS | Djinn",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Chroma 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | Eco",
+    "rarity": "Classified Rifle",
+    "minWear": "0.10",
+    "maxWear": "0.85",
+    "case": "Chroma 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AWP | Worm God",
+    "rarity": "Restricted Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.45",
+    "case": "Chroma 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAG-7 | Heat",
+    "rarity": "Restricted Shotgun",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Chroma 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "CZ75-Auto | Pole Position",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "Chroma 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Grand Prix",
+    "rarity": "Restricted SMG",
+    "minWear": "0.25",
+    "maxWear": "0.35",
+    "case": "Chroma 2 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AK-47 | Elite Build",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Chroma 2 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Desert Eagle | Bronze Deco",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.46",
+    "case": "Chroma 2 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Valence",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Chroma 2 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Origami",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.55",
+    "case": "Chroma 2 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MP7 | Armor Core",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Chroma 2 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Negev | Man-o'-war",
+    "rarity": "Mil-Spec Machine Gun",
+    "minWear": "0.10",
+    "maxWear": "0.20",
+    "case": "Chroma 2 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A1-S | Chantico's Fire",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.99",
+    "case": "Chroma 3 Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "PP-Bizon | Judgement of Anubis",
+    "rarity": "Covert SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Chroma 3 Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "P250 | Asiimov",
+    "rarity": "Classified Pistol",
+    "minWear": "0.10",
+    "maxWear": "1.00",
+    "case": "Chroma 3 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Primal Saber",
+    "rarity": "Classified SMG",
+    "minWear": "0.00",
+    "maxWear": "0.77",
+    "case": "Chroma 3 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Fleet Flock",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Chroma 3 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SSG 08 | Ghost Crusader",
+    "rarity": "Restricted Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Chroma 3 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "CZ75-Auto | Red Astor",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Chroma 3 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "XM1014 | Black Tie",
+    "rarity": "Restricted Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.75",
+    "case": "Chroma 3 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | Firefight",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Chroma 3 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Re-Entry",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.43",
+    "case": "Chroma 3 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SG 553 | Atlas",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.81",
+    "case": "Chroma 3 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Bioleak",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Chroma 3 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P2000 | Oceanic",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "Chroma 3 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Ventilators",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.45",
+    "case": "Chroma 3 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "M249 | Spectre",
+    "rarity": "Mil-Spec Machine Gun",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Chroma 3 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "G3SG1 | Orange Crash",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.52",
+    "case": "Chroma 3 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Fubar",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.40",
+    "maxWear": "1.00",
+    "case": "Chroma 3 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Death by Kitty",
+    "rarity": "Covert SMG",
+    "minWear": "0.08",
+    "maxWear": "0.32",
+    "case": "eSports 2013 Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "AK-47 | Red Laminate",
+    "rarity": "Classified Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "eSports 2013 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AWP | BOOM",
+    "rarity": "Classified Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.28",
+    "case": "eSports 2013 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | Orange DDPAT",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "eSports 2013 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Orange DDPAT",
+    "rarity": "Restricted Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "eSports 2013 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Splash",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.18",
+    "case": "eSports 2013 Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A4 | Faded Zebra",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "eSports 2013 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MAG-7 | Memento",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.02",
+    "maxWear": "0.18",
+    "case": "eSports 2013 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "FAMAS | Doomkitty",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.08",
+    "maxWear": "0.22",
+    "case": "eSports 2013 Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A4 | X-Ray",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.30",
+    "case": "eSports 2013 Winter Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "AWP | Electric Hive",
+    "rarity": "Classified Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "eSports 2013 Winter Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Desert Eagle | Cobalt Disruption",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.20",
+    "case": "eSports 2013 Winter Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "FAMAS | Afterimage",
+    "rarity": "Classified Rifle",
+    "minWear": "0.02",
+    "maxWear": "0.40",
+    "case": "eSports 2013 Winter Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AK-47 | Blue Laminate",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.02",
+    "maxWear": "0.40",
+    "case": "eSports 2013 Winter Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Blind Spot",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "eSports 2013 Winter Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Ghost Camo",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "eSports 2013 Winter Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | Blue Titanium",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.04",
+    "case": "eSports 2013 Winter Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Steel Disruption",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.20",
+    "case": "eSports 2013 Winter Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Nightshade",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "eSports 2013 Winter Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Water Sigil",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "eSports 2013 Winter Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "G3SG1 | Azure Zebra",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.28",
+    "case": "eSports 2013 Winter Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AK-47 | Jaguar",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "eSports 2014 Summer Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "M4A4 | Bullet Rain",
+    "rarity": "Covert Rifle",
+    "minWear": "0.02",
+    "maxWear": "0.46",
+    "case": "eSports 2014 Summer Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "AWP | Corticera",
+    "rarity": "Classified Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.30",
+    "case": "eSports 2014 Summer Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Bengal Tiger",
+    "rarity": "Classified Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "eSports 2014 Summer Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Bloomstick",
+    "rarity": "Classified Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "eSports 2014 Summer Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P2000 | Corticera",
+    "rarity": "Classified Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.30",
+    "case": "eSports 2014 Summer Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Desert Eagle | Crimson Web",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "eSports 2014 Summer Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Blue Streak",
+    "rarity": "Restricted SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "eSports 2014 Summer Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Virus",
+    "rarity": "Restricted SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "eSports 2014 Summer Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP7 | Ocean Foam",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "eSports 2014 Summer Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Glock-18 | Steel Disruption",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.20",
+    "case": "eSports 2014 Summer Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Ultraviolet",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "eSports 2014 Summer Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "USP-S | Blood Tiger",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.30",
+    "case": "eSports 2014 Summer Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Negev | Bratatat",
+    "rarity": "Mil-Spec Machine Gun",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "eSports 2014 Summer Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "CZ75-Auto | Hexane",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "eSports 2014 Summer Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SSG 08 | Dark Water",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.10",
+    "maxWear": "0.26",
+    "case": "eSports 2014 Summer Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "XM1014 | Red Python",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.08",
+    "maxWear": "0.50",
+    "case": "eSports 2014 Summer Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AWP | Hyper Beast",
+    "rarity": "Covert Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Falchion Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "AK-47 | Aquamarine Revenge",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Falchion Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "SG 553 | Cyrex",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Falchion Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP7 | Nemesis",
+    "rarity": "Classified SMG",
+    "minWear": "0.00",
+    "maxWear": "0.32",
+    "case": "Falchion Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "CZ75-Auto | Yellow Jacket",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Falchion Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A4 | Evil Daimyo",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.52",
+    "case": "Falchion Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Negev | Loudmouth",
+    "rarity": "Restricted Machine Gun",
+    "minWear": "0.14",
+    "maxWear": "0.65",
+    "case": "Falchion Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P2000 | Handgun",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Falchion Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "FAMAS | Neural Net",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "Falchion Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Ruby Poison Dart",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Falchion Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "USP-S | Torque",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.46",
+    "case": "Falchion Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | Rocket Pop",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Falchion Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Glock-18 | Bunsen Burner",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Falchion Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Elite Build",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Falchion Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Riot",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "Falchion Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Ranger",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Falchion Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A4 | Howl",
+    "rarity": "Contraband Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "",
+    "lowestRarity": true,
+    "highestRarity": true
+  },
+  {
+    "name": "USP-S | Orion",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The Huntsman Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Curse",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The Huntsman Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "CZ75-Auto | Poison Dart",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "The Huntsman Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Retribution",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.45",
+    "case": "The Huntsman Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Desert Warfare",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The Huntsman Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A4 | Desert-Strike",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "Huntsman Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "AK-47 | Vulcan",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.90",
+    "case": "Huntsman Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "USP-S | Caiman",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "Huntsman Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A1-S | Atomic Alloy",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.90",
+    "case": "Huntsman Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SCAR-20 | Cyrex",
+    "rarity": "Classified Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Huntsman Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Tatter",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Huntsman Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Torque",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Huntsman Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "XM1014 | Heaven Guard",
+    "rarity": "Restricted Shotgun",
+    "minWear": "0.03",
+    "maxWear": "0.50",
+    "case": "Huntsman Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Antique",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Huntsman Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Module",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.35",
+    "case": "Huntsman Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "CZ75-Auto | Twist",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Huntsman Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P2000 | Pulse",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "Huntsman Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Isaac",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Huntsman Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SSG 08 | Slashed",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.15",
+    "maxWear": "0.80",
+    "case": "Huntsman Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | Kami",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "Huntsman Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AK-47 | Fire Serpent",
+    "rarity": "Covert Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.76",
+    "case": "Operation Bravo Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "Desert Eagle | Golden Koi",
+    "rarity": "Covert Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.12",
+    "case": "Operation Bravo Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "P90 | Emerald Dragon",
+    "rarity": "Classified SMG",
+    "minWear": "0.06",
+    "maxWear": "0.52",
+    "case": "Operation Bravo Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P2000 | Ocean Foam",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.12",
+    "case": "Operation Bravo Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AWP | Graphite",
+    "rarity": "Classified Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.12",
+    "case": "Operation Bravo Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "USP-S | Overgrowth",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "Operation Bravo Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A4 | Zirka",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.42",
+    "case": "Operation Bravo Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Graven",
+    "rarity": "Restricted SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "Operation Bravo Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A1-S | Bright Water",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.10",
+    "maxWear": "0.22",
+    "case": "Operation Bravo Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | Shattered",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "Operation Bravo Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Bone Pile",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.06",
+    "maxWear": "0.34",
+    "case": "Operation Bravo Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Tempest",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.22",
+    "case": "Operation Bravo Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Black Limba",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "Operation Bravo Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SG 553 | Wave Spray",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "Operation Bravo Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "G3SG1 | Demeter",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "Operation Bravo Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Asiimov",
+    "rarity": "Covert SMG",
+    "minWear": "0.00",
+    "maxWear": "0.92",
+    "case": "Operation Breakout Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "M4A1-S | Cyrex",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Operation Breakout Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "Glock-18 | Water Elemental",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "Operation Breakout Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Desert Eagle | Conspiracy",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.30",
+    "case": "Operation Breakout Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Fowl Play",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Operation Breakout Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "CZ75-Auto | Tigris",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Operation Breakout Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Supernova",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "Operation Breakout Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Koi",
+    "rarity": "Restricted Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.30",
+    "case": "Operation Breakout Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Osiris",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Operation Breakout Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SSG 08 | Abyss",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Operation Breakout Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P2000 | Ivory",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Operation Breakout Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Labyrinth",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "Operation Breakout Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MP7 | Urban Hazard",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Operation Breakout Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Negev | Desert-Strike",
+    "rarity": "Mil-Spec Machine Gun",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Operation Breakout Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AWP | Oni Taiji",
+    "rarity": "Covert Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Operation Hydra Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "Five-SeveN | Hyper Beast",
+    "rarity": "Covert Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Operation Hydra Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "M4A4 | Hellfire",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Operation Hydra Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | Sugar Rush",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.55",
+    "case": "Operation Hydra Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Cobra Strike",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "Operation Hydra Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AK-47 | Orbit Mk01",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.55",
+    "case": "Operation Hydra Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SSG 08 | Death's Head",
+    "rarity": "Restricted Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.51",
+    "case": "Operation Hydra Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Death Grip",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Operation Hydra Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Red Rock",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Operation Hydra Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P2000 | Woodsman",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Operation Hydra Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "USP-S | Blueprint",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.86",
+    "case": "Operation Hydra Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A1-S | Briefing",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Operation Hydra Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MAG-7 | Hard Water",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.45",
+    "case": "Operation Hydra Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Metal Flowers",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "Operation Hydra Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Cut Out",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Operation Hydra Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "FAMAS | Macabre",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "Operation Hydra Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Aloha",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.65",
+    "case": "Operation Hydra Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AWP | Asiimov",
+    "rarity": "Covert Sniper Rifle",
+    "minWear": "0.18",
+    "maxWear": "1.00",
+    "case": "Operation Phoenix Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "AUG | Chameleon",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Operation Phoenix Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "AK-47 | Redline",
+    "rarity": "Classified Rifle",
+    "minWear": "0.10",
+    "maxWear": "0.70",
+    "case": "Operation Phoenix Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Antique",
+    "rarity": "Classified Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.30",
+    "case": "Operation Phoenix Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Trigon",
+    "rarity": "Classified SMG",
+    "minWear": "0.08",
+    "maxWear": "0.75",
+    "case": "Operation Phoenix Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "USP-S | Guardian",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.38",
+    "case": "Operation Phoenix Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SG 553 | Pulse",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.10",
+    "maxWear": "0.60",
+    "case": "Operation Phoenix Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Heat",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Operation Phoenix Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "FAMAS | Sergeant",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.10",
+    "maxWear": "1.00",
+    "case": "Operation Phoenix Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Corporal",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.05",
+    "maxWear": "0.75",
+    "case": "Operation Phoenix Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Sandstorm",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.10",
+    "maxWear": "0.70",
+    "case": "Operation Phoenix Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MAG-7 | Heaven Guard",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "Operation Phoenix Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Negev | Terrain",
+    "rarity": "Mil-Spec Machine Gun",
+    "minWear": "0.00",
+    "maxWear": "0.45",
+    "case": "Operation Phoenix Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AK-47 | Wasteland Rebel",
+    "rarity": "Covert Rifle",
+    "minWear": "0.05",
+    "maxWear": "0.70",
+    "case": "Operation Vanguard Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "P2000 | Fire Elemental",
+    "rarity": "Covert Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "Operation Vanguard Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "P250 | Cartel",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.75",
+    "case": "Operation Vanguard Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "XM1014 | Tranquility",
+    "rarity": "Classified Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Operation Vanguard Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SCAR-20 | Cardiac",
+    "rarity": "Classified Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Operation Vanguard Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A4 | Griffin",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Operation Vanguard Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A1-S | Basilisk",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.68",
+    "case": "Operation Vanguard Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Glock-18 | Grinder",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.02",
+    "maxWear": "0.25",
+    "case": "Operation Vanguard Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Highwayman",
+    "rarity": "Restricted Shotgun",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Operation Vanguard Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAG-7 | Firestarter",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.49",
+    "case": "Operation Vanguard Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Dart",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.46",
+    "case": "Operation Vanguard Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Delusion",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.06",
+    "maxWear": "0.35",
+    "case": "Operation Vanguard Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Urban Hazard",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.25",
+    "case": "Operation Vanguard Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "G3SG1 | Murky",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.25",
+    "case": "Operation Vanguard Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AK-47 | Fuel Injector",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Operation Wildfire Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "M4A4 | The Battlestar",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.64",
+    "case": "Operation Wildfire Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "Desert Eagle | Kumicho Dragon",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.76",
+    "case": "Operation Wildfire Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Hyper Beast",
+    "rarity": "Classified Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "Operation Wildfire Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AWP | Elite Build",
+    "rarity": "Classified Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Operation Wildfire Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Glock-18 | Royal Legion",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Operation Wildfire Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "FAMAS | Valence",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Operation Wildfire Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Triumvirate",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.61",
+    "case": "Operation Wildfire Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP7 | Impire",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "Operation Wildfire Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAG-7 | Praetorian",
+    "rarity": "Restricted Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.45",
+    "case": "Operation Wildfire Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "USP-S | Lead Conduit",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Operation Wildfire Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SSG 08 | Necropos",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Operation Wildfire Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Photic Zone",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Operation Wildfire Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Cartel",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Operation Wildfire Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Jambiya",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Operation Wildfire Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Lapis Gator",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Operation Wildfire Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A4 | Royal Paladin",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Revolver Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "R8 Revolver | Fade",
+    "rarity": "Covert Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "Revolver Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "G3SG1 | The Executioner",
+    "rarity": "Classified Sniper Rifle",
+    "minWear": "0.14",
+    "maxWear": "0.85",
+    "case": "Revolver Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AK-47 | Point Disarray",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.67",
+    "case": "Revolver Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Shapewood",
+    "rarity": "Classified SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Revolver Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Negev | Power Loader",
+    "rarity": "Restricted Machine Gun",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Revolver Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SG 553 | Tiger Moth",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Revolver Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Retrobution",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Revolver Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "XM1014 | Teclu Burner",
+    "rarity": "Restricted Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.65",
+    "case": "Revolver Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Avalanche",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Revolver Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Fuel Rod",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Revolver Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Desert Eagle | Corinthian",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.44",
+    "case": "Revolver Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "R8 Revolver | Crimson Web",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "Revolver Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Ricochet",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Revolver Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P2000 | Imperial",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.20",
+    "case": "Revolver Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Yorick",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Revolver Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SCAR-20 | Outbreak",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Revolver Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "USP-S | Kill Confirmed",
+    "rarity": "Covert Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Shadow Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "M4A1-S | Golden Coil",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Shadow Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "AK-47 | Frontside Misty",
+    "rarity": "Classified Rifle",
+    "minWear": "0.02",
+    "maxWear": "0.87",
+    "case": "Shadow Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "G3SG1 | Flux",
+    "rarity": "Classified Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.90",
+    "case": "Shadow Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SSG 08 | Big Iron",
+    "rarity": "Classified Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.64",
+    "case": "Shadow Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Wingshot",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.90",
+    "case": "Shadow Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | Stone Cold",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.90",
+    "case": "Shadow Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M249 | Nebula Crusader",
+    "rarity": "Restricted Machine Gun",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Shadow Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP7 | Special Delivery",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.62",
+    "case": "Shadow Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Glock-18 | Wraiths",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Shadow Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Dualing Dragons",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Shadow Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "FAMAS | Survivor Z",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "Shadow Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Rangeen",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Shadow Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MAG-7 | Cobalt Core",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Shadow Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SCAR-20 | Green Marine",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "Shadow Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "XM1014 | Scumbria",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Shadow Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A4 | Asiimov",
+    "rarity": "Covert Rifle",
+    "minWear": "0.18",
+    "maxWear": "1.00",
+    "case": "Winter Offensive Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "Sawed-Off | The Kraken",
+    "rarity": "Covert Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "Winter Offensive Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "AWP | Redline",
+    "rarity": "Classified Sniper Rifle",
+    "minWear": "0.10",
+    "maxWear": "0.40",
+    "case": "Winter Offensive Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Mehndi",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "Winter Offensive Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A1-S | Guardian",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Winter Offensive Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Marina",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.05",
+    "maxWear": "0.50",
+    "case": "Winter Offensive Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Rose Iron",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.30",
+    "case": "Winter Offensive Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "FAMAS | Pulse",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "Winter Offensive Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Rising Skull",
+    "rarity": "Restricted Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "Winter Offensive Weapon Case",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | Sandstorm",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.10",
+    "maxWear": "0.60",
+    "case": "Winter Offensive Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Cobalt Halftone",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.05",
+    "maxWear": "0.45",
+    "case": "Winter Offensive Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Kami",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.30",
+    "case": "Winter Offensive Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "M249 | Magma",
+    "rarity": "Mil-Spec Machine Gun",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "Winter Offensive Weapon Case",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MP5-SD | Lab Rats",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.35",
+    "case": "The Blacksite Collection",
+    "lowestRarity": true,
+    "highestRarity": true
+  },
+  {
+    "name": "SG 553 | Integrale",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The 2018 Inferno Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "Dual Berettas | Twin Turbo",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The 2018 Inferno Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "AK-47 | Safety Net",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The 2018 Inferno Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP7 | Fade",
+    "rarity": "Restricted SMG",
+    "minWear": "0.00",
+    "maxWear": "0.25",
+    "case": "The 2018 Inferno Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Vino Primo",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The 2018 Inferno Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A4 | Converter",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "The 2018 Inferno Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "USP-S | Check Engine",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The 2018 Inferno Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SSG 08 | Hand Brake",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The 2018 Inferno Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Brake Light",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The 2018 Inferno Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Glock-18 | High Beam",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The 2018 Inferno Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "R8 Revolver | Nitro",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The 2018 Inferno Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Calf Skin",
+    "rarity": "Industrial Grade SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The 2018 Inferno Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Candy Apple",
+    "rarity": "Industrial Grade SMG",
+    "minWear": "0.00",
+    "maxWear": "0.30",
+    "case": "The 2018 Inferno Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP5-SD | Dirt Drop",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The 2018 Inferno Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Slide",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The 2018 Inferno Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Sweeper",
+    "rarity": "Consumer Grade Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The 2018 Inferno Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Mudder",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The 2018 Inferno Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MAG-7 | Rust Coat",
+    "rarity": "Consumer Grade Shotgun",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The 2018 Inferno Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A1-S | Control Panel",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The 2018 Nuke Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "Tec-9 | Remote Control",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The 2018 Nuke Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "Glock-18 | Nuclear Garden",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "The 2018 Nuke Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Random Access",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The 2018 Nuke Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAG-7 | Core Breach",
+    "rarity": "Restricted Shotgun",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The 2018 Nuke Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AWP | Acheron",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.83",
+    "case": "The 2018 Nuke Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP5-SD | Co-Processor",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The 2018 Nuke Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Facility Negative",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The 2018 Nuke Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Exchanger",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The 2018 Nuke Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A4 | Mainframe",
+    "rarity": "Industrial Grade Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The 2018 Nuke Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | Cold Fusion",
+    "rarity": "Industrial Grade Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.83",
+    "case": "The 2018 Nuke Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Negev | Bulkhead",
+    "rarity": "Industrial Grade Machine Gun",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The 2018 Nuke Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP7 | Motherboard",
+    "rarity": "Industrial Grade SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The 2018 Nuke Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Facility Draft",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The 2018 Nuke Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Coolant",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The 2018 Nuke Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Facility Dark",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The 2018 Nuke Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Facility Sketch",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The 2018 Nuke Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Mandrel",
+    "rarity": "Consumer Grade Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The 2018 Nuke Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "FAMAS | Spitfire",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Alpha Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "SCAR-20 | Emerald",
+    "rarity": "Restricted Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Alpha Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "MAG-7 | Hazard",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Alpha Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Anodized Navy",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Alpha Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Rust Coat",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Alpha Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Facets",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Alpha Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Glock-18 | Sand Dune",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Alpha Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SSG 08 | Mayan Dreams",
+    "rarity": "Industrial Grade Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Alpha Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Negev | Palm",
+    "rarity": "Industrial Grade Machine Gun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Alpha Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Mosaico",
+    "rarity": "Industrial Grade Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Alpha Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Dry Season",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Alpha Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "M249 | Jungle DDPAT",
+    "rarity": "Consumer Grade Machine Gun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Alpha Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Tornado",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Alpha Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MP7 | Groundwater",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Alpha Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "XM1014 | Jungle",
+    "rarity": "Consumer Grade Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Alpha Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Anodized Gunmetal",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Alpha Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Glock-18 | Fade",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Assault Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "MP9 | Bulldozer",
+    "rarity": "Restricted SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Assault Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "AUG | Hot Rod",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Assault Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Negev | Anodized Navy",
+    "rarity": "Mil-Spec Machine Gun",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Assault Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Candy Apple",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.30",
+    "case": "The Assault Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Caramel",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Assault Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SG 553 | Tornado",
+    "rarity": "Consumer Grade Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Assault Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Ossified",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Aztec Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "M4A4 | Jungle Tiger",
+    "rarity": "Industrial Grade Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Aztec Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AK-47 | Jungle Spray",
+    "rarity": "Industrial Grade Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Aztec Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SSG 08 | Lichen Dashed",
+    "rarity": "Consumer Grade Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Aztec Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Jungle",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Aztec Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Forest Leaves",
+    "rarity": "Consumer Grade Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Aztec Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AK-47 | Jet Set",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Baggage Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "Desert Eagle | Pilot",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Baggage Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AK-47 | First Class",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Baggage Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | First Class",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The Baggage Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "USP-S | Business Class",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Baggage Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "XM1014 | Red Leather",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.56",
+    "case": "The Baggage Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SG 553 | Traveler",
+    "rarity": "Industrial Grade Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Baggage Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Commuter",
+    "rarity": "Industrial Grade SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Baggage Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Leather",
+    "rarity": "Industrial Grade SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Baggage Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P2000 | Coach Class",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Baggage Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SSG 08 | Sand Dune",
+    "rarity": "Consumer Grade Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Baggage Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MP7 | Olive Plaid",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.00",
+    "maxWear": "0.58",
+    "case": "The Baggage Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "G3SG1 | Contractor",
+    "rarity": "Consumer Grade Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Baggage Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "CZ75-Auto | Green Plaid",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.58",
+    "case": "The Baggage Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Green Plaid",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.00",
+    "maxWear": "0.58",
+    "case": "The Baggage Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Franklin",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "The Bank Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "AK-47 | Emerald Pinstripe",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Bank Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Desert Eagle | Meteorite",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.18",
+    "case": "The Bank Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | Tuxedo",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "The Bank Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "CZ75-Auto | Tuxedo",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "The Bank Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Silver",
+    "rarity": "Industrial Grade SMG",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Bank Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Glock-18 | Death Rattle",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.08",
+    "maxWear": "0.50",
+    "case": "The Bank Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Carbon Fiber",
+    "rarity": "Industrial Grade SMG",
+    "minWear": "0.00",
+    "maxWear": "0.12",
+    "case": "The Bank Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "G3SG1 | Green Apple",
+    "rarity": "Industrial Grade Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.30",
+    "case": "The Bank Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Caged Steel",
+    "rarity": "Industrial Grade Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.20",
+    "case": "The Bank Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "R8 Revolver | Bone Mask",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Bank Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Urban DDPAT",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Bank Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Forest DDPAT",
+    "rarity": "Consumer Grade Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Bank Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MP7 | Forest DDPAT",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Bank Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Negev | Army Sheen",
+    "rarity": "Consumer Grade Machine Gun",
+    "minWear": "0.00",
+    "maxWear": "0.30",
+    "case": "The Bank Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SG 553 | Army Sheen",
+    "rarity": "Consumer Grade Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.30",
+    "case": "The Bank Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | Cerberus",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.90",
+    "case": "The Cache Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "FAMAS | Styx",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The Cache Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "Glock-18 | Reactor",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Cache Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Setting Sun",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Cache Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Toxic",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "The Cache Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Nuclear Garden",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "The Cache Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "XM1014 | Bone Machine",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The Cache Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Radiation Hazard",
+    "rarity": "Industrial Grade Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.55",
+    "case": "The Cache Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SG 553 | Fallout Warning",
+    "rarity": "Industrial Grade Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "The Cache Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Hot Shot",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Cache Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Contamination",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.83",
+    "case": "The Cache Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Chemical Green",
+    "rarity": "Industrial Grade SMG",
+    "minWear": "0.00",
+    "maxWear": "0.90",
+    "case": "The Cache Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Negev | Nuclear Waste",
+    "rarity": "Industrial Grade Machine Gun",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "The Cache Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A1-S | Hot Rod",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Chop Shop Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "Glock-18 | Twilight Galaxy",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.20",
+    "case": "The Chop Shop Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "SG 553 | Bulldozer",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Chop Shop Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Duelist",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Chop Shop Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Whiteout",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Chop Shop Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Fade",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Chop Shop Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "CZ75-Auto | Emerald",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Chop Shop Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Nitro",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Chop Shop Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP7 | Full Stop",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The Chop Shop Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Desert Eagle | Night",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Chop Shop Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "USP-S | Para Green",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "The Chop Shop Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | Urban Rubble",
+    "rarity": "Industrial Grade Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The Chop Shop Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M249 | Impact Drill",
+    "rarity": "Consumer Grade Machine Gun",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Chop Shop Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MAG-7 | Seabird",
+    "rarity": "Consumer Grade Shotgun",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Chop Shop Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SCAR-20 | Army Sheen",
+    "rarity": "Consumer Grade Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.30",
+    "case": "The Chop Shop Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "CZ75-Auto | Army Sheen",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.30",
+    "case": "The Chop Shop Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AWP | Dragon Lore",
+    "rarity": "Covert Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "The Cobblestone Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "M4A1-S | Knight",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.10",
+    "case": "The Cobblestone Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Desert Eagle | Hand Cannon",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.01",
+    "maxWear": "0.70",
+    "case": "The Cobblestone Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "CZ75-Auto | Chalice",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.10",
+    "case": "The Cobblestone Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Dark Age",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.22",
+    "case": "The Cobblestone Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P2000 | Chainmail",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.22",
+    "case": "The Cobblestone Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "USP-S | Royal Blue",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Cobblestone Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAG-7 | Silver",
+    "rarity": "Industrial Grade Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Cobblestone Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Green Apple",
+    "rarity": "Industrial Grade Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.30",
+    "case": "The Cobblestone Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Rust Coat",
+    "rarity": "Industrial Grade Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "The Cobblestone Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Indigo",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Cobblestone Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Indigo",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Cobblestone Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Storm",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Cobblestone Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SCAR-20 | Storm",
+    "rarity": "Consumer Grade Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Cobblestone Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Briar",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.22",
+    "case": "The Cobblestone Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Desert Eagle | Blaze",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Dust Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "Glock-18 | Brass",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Dust Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "P2000 | Scorpion",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Dust Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "AWP | Snake Camo",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Dust Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Copper",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Dust Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Copperhead",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.12",
+    "maxWear": "0.38",
+    "case": "The Dust Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A4 | Desert Storm",
+    "rarity": "Industrial Grade Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Dust Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AK-47 | Predator",
+    "rarity": "Industrial Grade Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Dust Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SCAR-20 | Palm",
+    "rarity": "Industrial Grade Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Dust Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "R8 Revolver | Amber Fade",
+    "rarity": "Classified Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "The Dust 2 Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "P2000 | Amber Fade",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "The Dust 2 Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SG 553 | Damascus Steel",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Dust 2 Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A1-S | VariCamo",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The Dust 2 Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Brass",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Dust 2 Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AK-47 | Safari Mesh",
+    "rarity": "Industrial Grade Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Dust 2 Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Orange Peel",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Dust 2 Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Palm",
+    "rarity": "Industrial Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Dust 2 Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Snake Camo",
+    "rarity": "Industrial Grade Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Dust 2 Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | VariCamo",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The Dust 2 Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Sand Dune",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Dust 2 Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "G3SG1 | Desert Storm",
+    "rarity": "Consumer Grade Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Dust 2 Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Sand Dashed",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Dust 2 Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Sand Spray",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Dust 2 Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Predator",
+    "rarity": "Consumer Grade Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Dust 2 Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SCAR-20 | Sand Mesh",
+    "rarity": "Consumer Grade Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Dust 2 Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AWP | Medusa",
+    "rarity": "Covert Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Gods and Monsters Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "M4A4 | Poseidon",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.33",
+    "case": "The Gods and Monsters Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "G3SG1 | Chronos",
+    "rarity": "Restricted Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "The Gods and Monsters Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A1-S | Icarus Fell",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.10",
+    "case": "The Gods and Monsters Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Minotaur's Labyrinth",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.39",
+    "case": "The Gods and Monsters Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Pandora's Box",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.30",
+    "case": "The Gods and Monsters Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AWP | Sun in Leo",
+    "rarity": "Industrial Grade Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The Gods and Monsters Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P2000 | Pathfinder",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.35",
+    "case": "The Gods and Monsters Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Hades",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Gods and Monsters Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M249 | Shipping Forecast",
+    "rarity": "Industrial Grade Machine Gun",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The Gods and Monsters Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Moon in Libra",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The Gods and Monsters Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Moon in Libra",
+    "rarity": "Consumer Grade Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The Gods and Monsters Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Daedalus",
+    "rarity": "Consumer Grade Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.55",
+    "case": "The Gods and Monsters Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MP7 | Asterion",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.00",
+    "maxWear": "0.55",
+    "case": "The Gods and Monsters Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Brass",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Inferno Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "Dual Berettas | Anodized Navy",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Inferno Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "M4A4 | Tornado",
+    "rarity": "Industrial Grade Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Inferno Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Gunsmoke",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Inferno Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Walnut",
+    "rarity": "Consumer Grade Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Inferno Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MAG-7 | Sand Dune",
+    "rarity": "Consumer Grade Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Inferno Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AWP | Pit Viper",
+    "rarity": "Restricted Sniper Rifle",
+    "minWear": "0.08",
+    "maxWear": "0.50",
+    "case": "The Italy Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "MP7 | Anodized Navy",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Italy Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Full Stop",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The Italy Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Glock-18 | Candy Apple",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.30",
+    "case": "The Italy Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Candy Apple",
+    "rarity": "Industrial Grade Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.30",
+    "case": "The Italy Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A1-S | Boreal Forest",
+    "rarity": "Industrial Grade Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Italy Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "XM1014 | CaliCamo",
+    "rarity": "Industrial Grade Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The Italy Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Gunsmoke",
+    "rarity": "Industrial Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Italy Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Stained",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Italy Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P2000 | Granite Marbleized",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Italy Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "FAMAS | Colony",
+    "rarity": "Consumer Grade Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Italy Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Contractor",
+    "rarity": "Consumer Grade Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Italy Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Sand Dashed",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Italy Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Sand Dune",
+    "rarity": "Consumer Grade Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Italy Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Groundwater",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Italy Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Cobalt Quartz",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "The Lake Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "USP-S | Night Ops",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The Lake Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Teardown",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The Lake Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SG 553 | Anodized Navy",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Lake Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AWP | Safari Mesh",
+    "rarity": "Industrial Grade Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Lake Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Desert Eagle | Mudder",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Lake Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Night Ops",
+    "rarity": "Industrial Grade SMG",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The Lake Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "XM1014 | Blue Steel",
+    "rarity": "Industrial Grade Shotgun",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Lake Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "FAMAS | Cyanospatter",
+    "rarity": "Industrial Grade Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Lake Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "G3SG1 | Jungle Dashed",
+    "rarity": "Consumer Grade Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Lake Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | Sage Spray",
+    "rarity": "Consumer Grade Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Lake Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Storm",
+    "rarity": "Consumer Grade Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Lake Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SG 553 | Waves Perforated",
+    "rarity": "Consumer Grade Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Lake Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Boreal Forest",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Lake Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "XM1014 | Blue Spruce",
+    "rarity": "Consumer Grade Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Lake Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SCAR-20 | Splash Jam",
+    "rarity": "Classified Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Militia Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "M4A4 | Modern Hunter",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Militia Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Modern Hunter",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Militia Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Modern Hunter",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Militia Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Blaze Orange",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Militia Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Modern Hunter",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Militia Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "XM1014 | Blaze Orange",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Militia Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P2000 | Grassland Leaves",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Militia Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Tornado",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Militia Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "XM1014 | Grassland",
+    "rarity": "Consumer Grade Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Militia Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Forest Leaves",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Militia Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MAG-7 | Bulldozer",
+    "rarity": "Restricted Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Mirage Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "UMP-45 | Blaze",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Mirage Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Hot Rod",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Mirage Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Amber Fade",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "The Mirage Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Glock-18 | Groundwater",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Mirage Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SSG 08 | Tropical Storm",
+    "rarity": "Industrial Grade Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Mirage Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP7 | Orange Peel",
+    "rarity": "Industrial Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Mirage Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SG 553 | Gator Mesh",
+    "rarity": "Industrial Grade Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The Mirage Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Negev | CaliCamo",
+    "rarity": "Industrial Grade Machine Gun",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The Mirage Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "G3SG1 | Safari Mesh",
+    "rarity": "Consumer Grade Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Mirage Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Scorched",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Mirage Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Contractor",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Mirage Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Colony",
+    "rarity": "Consumer Grade Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Mirage Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Bone Mask",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Mirage Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | Hunting Blind",
+    "rarity": "Consumer Grade Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The Mirage Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Nuclear Threat",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Nuke Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "P250 | Nuclear Threat",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Nuke Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "M4A4 | Radiation Hazard",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Nuke Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "XM1014 | Fallout Warning",
+    "rarity": "Industrial Grade Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Nuke Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Fallout Warning",
+    "rarity": "Industrial Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Nuke Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Fallout Warning",
+    "rarity": "Industrial Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Nuke Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAG-7 | Irradiated Alert",
+    "rarity": "Consumer Grade Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Nuke Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Irradiated Alert",
+    "rarity": "Consumer Grade Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Nuke Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Irradiated Alert",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Nuke Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MP7 | Whiteout",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Office Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "P2000 | Silver",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Office Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "G3SG1 | Arctic Camo",
+    "rarity": "Industrial Grade Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Office Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M249 | Blizzard Marbleized",
+    "rarity": "Industrial Grade Machine Gun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Office Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | Winter Forest",
+    "rarity": "Industrial Grade Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Office Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "FAMAS | Contrast Spray",
+    "rarity": "Consumer Grade Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Office Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A1-S | Master Piece",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Overpass Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "AWP | Pink DDPAT",
+    "rarity": "Restricted Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Overpass Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "USP-S | Road Rash",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Overpass Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "CZ75-Auto | Nitro",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Overpass Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SSG 08 | Detour",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.43",
+    "case": "The Overpass Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "XM1014 | VariCamo Blue",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The Overpass Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Glock-18 | Night",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Overpass Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Desert Eagle | Urban DDPAT",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Overpass Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP7 | Gunsmoke",
+    "rarity": "Industrial Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Overpass Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P2000 | Grassland",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Overpass Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Storm",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Overpass Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Scorched",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Overpass Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "M249 | Contrast Spray",
+    "rarity": "Consumer Grade Machine Gun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Overpass Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MAG-7 | Storm",
+    "rarity": "Consumer Grade Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Overpass Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Sage Spray",
+    "rarity": "Consumer Grade Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Overpass Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Akihabara Accept",
+    "rarity": "Covert Rifle",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Rising Sun Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "AK-47 | Hydroponic",
+    "rarity": "Classified Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "The Rising Sun Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Desert Eagle | Sunset Storm 弐",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.75",
+    "case": "The Rising Sun Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Desert Eagle | Sunset Storm 壱",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.75",
+    "case": "The Rising Sun Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Neon Kimono",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "The Rising Sun Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A4 | Daybreak",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The Rising Sun Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Terrace",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "1.00",
+    "case": "The Rising Sun Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAG-7 | Counter Terrace",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.65",
+    "case": "The Rising Sun Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | Aqua Terrace",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.70",
+    "case": "The Rising Sun Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Desert Eagle | Midnight Storm",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.75",
+    "case": "The Rising Sun Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Crimson Kimono",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "The Rising Sun Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Mint Kimono",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "The Rising Sun Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "G3SG1 | Orange Kimono",
+    "rarity": "Consumer Grade Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "The Rising Sun Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Bamboo Forest",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The Rising Sun Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Bamboo Print",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.00",
+    "maxWear": "0.80",
+    "case": "The Rising Sun Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Bamboo Shadow",
+    "rarity": "Consumer Grade Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The Rising Sun Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A1-S | Nitro",
+    "rarity": "Restricted Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Safehouse Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "SSG 08 | Acid Fade",
+    "rarity": "Mil-Spec Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.03",
+    "case": "The Safehouse Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "FAMAS | Teardown",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The Safehouse Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Silver Quartz",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "The Safehouse Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M249 | Gator Mesh",
+    "rarity": "Industrial Grade Machine Gun",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The Safehouse Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "USP-S | Forest Leaves",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Safehouse Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "AUG | Condemned",
+    "rarity": "Industrial Grade Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Safehouse Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Galil AR | VariCamo",
+    "rarity": "Industrial Grade Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The Safehouse Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "G3SG1 | VariCamo",
+    "rarity": "Industrial Grade Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The Safehouse Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MP9 | Orange Peel",
+    "rarity": "Industrial Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Safehouse Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SCAR-20 | Contractor",
+    "rarity": "Consumer Grade Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Safehouse Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Contractor",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Safehouse Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "SSG 08 | Blue Spruce",
+    "rarity": "Consumer Grade Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Safehouse Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Army Mesh",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.60",
+    "case": "The Safehouse Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MP7 | Army Recon",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Safehouse Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Tec-9 | Red Quartz",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "The Train Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "Desert Eagle | Urban Rubble",
+    "rarity": "Mil-Spec Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.50",
+    "case": "The Train Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "Sawed-Off | Amber Fade",
+    "rarity": "Mil-Spec Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.40",
+    "case": "The Train Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "M4A4 | Urban DDPAT",
+    "rarity": "Industrial Grade Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Train Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P250 | Metallic DDPAT",
+    "rarity": "Industrial Grade Pistol",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Train Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Candy Apple",
+    "rarity": "Industrial Grade SMG",
+    "minWear": "0.00",
+    "maxWear": "0.30",
+    "case": "The Train Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "SCAR-20 | Carbon Fiber",
+    "rarity": "Industrial Grade Sniper Rifle",
+    "minWear": "0.00",
+    "maxWear": "0.12",
+    "case": "The Train Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "MAG-7 | Metallic DDPAT",
+    "rarity": "Industrial Grade Shotgun",
+    "minWear": "0.00",
+    "maxWear": "0.08",
+    "case": "The Train Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Ash Wood",
+    "rarity": "Industrial Grade SMG",
+    "minWear": "0.00",
+    "maxWear": "0.45",
+    "case": "The Train Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "G3SG1 | Polar Camo",
+    "rarity": "Consumer Grade Sniper Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Train Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "UMP-45 | Urban DDPAT",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Train Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Five-SeveN | Forest Night",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Train Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Colony",
+    "rarity": "Consumer Grade Pistol",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Train Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Nova | Polar Mesh",
+    "rarity": "Consumer Grade Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Train Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Urban Dashed",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Train Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "Dual Berettas | Demolition",
+    "rarity": "Restricted Pistol",
+    "minWear": "0.26",
+    "maxWear": "0.60",
+    "case": "The Vertigo Collection",
+    "lowestRarity": false,
+    "highestRarity": true
+  },
+  {
+    "name": "AK-47 | Black Laminate",
+    "rarity": "Mil-Spec Rifle",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Vertigo Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "P90 | Glacier Mesh",
+    "rarity": "Mil-Spec SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Vertigo Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "PP-Bizon | Carbon Fiber",
+    "rarity": "Industrial Grade SMG",
+    "minWear": "0.00",
+    "maxWear": "0.12",
+    "case": "The Vertigo Collection",
+    "lowestRarity": false,
+    "highestRarity": false
+  },
+  {
+    "name": "XM1014 | Urban Perforated",
+    "rarity": "Consumer Grade Shotgun",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Vertigo Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  },
+  {
+    "name": "MAC-10 | Urban DDPAT",
+    "rarity": "Consumer Grade SMG",
+    "minWear": "0.06",
+    "maxWear": "0.80",
+    "case": "The Vertigo Collection",
+    "lowestRarity": true,
+    "highestRarity": false
+  }
+]
