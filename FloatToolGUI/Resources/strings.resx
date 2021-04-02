@@ -117,35 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="benchmarkBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\benchmarkBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CombinationFound" xml:space="preserve">
+    <value>Коомбинация найдена!</value>
   </data>
-  <data name="benchmarkWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\benchmarkWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FloatList" xml:space="preserve">
+    <value>Список флоатов</value>
   </data>
-  <data name="gearBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gearBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PossibleFloat" xml:space="preserve">
+    <value>Возможный флоат</value>
   </data>
-  <data name="gearWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gearWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="github" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\github.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mutedBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mutedBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mutedWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mutedWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="notification" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\notification.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="unmutedBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\unmutedBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="unmutedWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\unmutedWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TestFloat" xml:space="preserve">
+    <value>Проверочный флоат</value>
   </data>
 </root>

@@ -283,152 +283,83 @@
   <data name="&gt;&gt;panel8.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="darkModeSwitchBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="benchmarkButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
   </data>
-  <data name="darkModeSwitchBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="benchmarkButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="darkModeSwitchBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft JhengHei Light, 16pt</value>
-  </data>
-  <data name="darkModeSwitchBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="darkModeSwitchBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>269, 1</value>
-  </data>
-  <data name="darkModeSwitchBtn.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>1, 1, 1, 1</value>
-  </data>
-  <data name="darkModeSwitchBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 40</value>
-  </data>
-  <data name="darkModeSwitchBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="darkModeSwitchBtn.Text" xml:space="preserve">
-    <value>L</value>
-  </data>
-  <data name="&gt;&gt;darkModeSwitchBtn.Name" xml:space="preserve">
-    <value>darkModeSwitchBtn</value>
-  </data>
-  <data name="&gt;&gt;darkModeSwitchBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;darkModeSwitchBtn.Parent" xml:space="preserve">
-    <value>panel9</value>
-  </data>
-  <data name="&gt;&gt;darkModeSwitchBtn.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="helpBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <metadata name="helpContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>219, 17</value>
-  </metadata>
-  <data name="openWebsiteButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="openWebsiteButton.Text" xml:space="preserve">
-    <value>Сайт</value>
-  </data>
-  <data name="openAboutBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="openAboutBox.Text" xml:space="preserve">
-    <value>О программе</value>
-  </data>
-  <data name="openAboutBox.ToolTipText" xml:space="preserve">
-    <value>Информация о разработчике</value>
-  </data>
-  <data name="openGithubButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="openGithubButton.Text" xml:space="preserve">
-    <value>GitHub</value>
-  </data>
-  <data name="openGithubButton.ToolTipText" xml:space="preserve">
-    <value>Ссылка на репозиторий проекта</value>
-  </data>
-  <data name="helpContextMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 70</value>
-  </data>
-  <data name="&gt;&gt;helpContextMenu.Name" xml:space="preserve">
-    <value>helpContextMenu</value>
-  </data>
-  <data name="&gt;&gt;helpContextMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="helpBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="helpBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft JhengHei Light, 16pt</value>
-  </data>
-  <data name="helpBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="helpBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>309, 1</value>
-  </data>
-  <data name="helpBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 39</value>
-  </data>
-  <data name="helpBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="helpBtn.Text" xml:space="preserve">
-    <value>?</value>
-  </data>
-  <data name="&gt;&gt;helpBtn.Name" xml:space="preserve">
-    <value>helpBtn</value>
-  </data>
-  <data name="&gt;&gt;helpBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;helpBtn.Parent" xml:space="preserve">
-    <value>panel9</value>
-  </data>
-  <data name="&gt;&gt;helpBtn.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="soundBtnSwitch.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="soundBtnSwitch.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="benchmarkButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft JhengHei Light, 40px</value>
   </data>
-  <data name="soundBtnSwitch.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="benchmarkButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="soundBtnSwitch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1</value>
+  <data name="benchmarkButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 0</value>
   </data>
-  <data name="soundBtnSwitch.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>1, 1, 1, 1</value>
+  <data name="benchmarkButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="soundBtnSwitch.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+  <data name="benchmarkButton.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
   </data>
-  <data name="soundBtnSwitch.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="benchmarkButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 40</value>
   </data>
-  <data name="soundBtnSwitch.TabIndex" type="System.Int32, mscorlib">
+  <data name="benchmarkButton.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;soundBtnSwitch.Name" xml:space="preserve">
-    <value>soundBtnSwitch</value>
+  <data name="&gt;&gt;benchmarkButton.Name" xml:space="preserve">
+    <value>benchmarkButton</value>
   </data>
-  <data name="&gt;&gt;soundBtnSwitch.Type" xml:space="preserve">
+  <data name="&gt;&gt;benchmarkButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;soundBtnSwitch.Parent" xml:space="preserve">
+  <data name="&gt;&gt;benchmarkButton.Parent" xml:space="preserve">
     <value>panel9</value>
   </data>
-  <data name="&gt;&gt;soundBtnSwitch.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;benchmarkButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="settingsButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="settingsButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="settingsButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft JhengHei Light, 40px</value>
+  </data>
+  <data name="settingsButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="settingsButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="settingsButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="settingsButton.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="settingsButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="settingsButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;settingsButton.Name" xml:space="preserve">
+    <value>settingsButton</value>
+  </data>
+  <data name="&gt;&gt;settingsButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;settingsButton.Parent" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="&gt;&gt;settingsButton.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="MaximizeButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -464,7 +395,7 @@
     <value>panel9</value>
   </data>
   <data name="&gt;&gt;MaximizeButton.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="minimizeBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -500,7 +431,7 @@
     <value>panel9</value>
   </data>
   <data name="&gt;&gt;minimizeBtn.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="closeBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -536,7 +467,7 @@
     <value>panel9</value>
   </data>
   <data name="&gt;&gt;closeBtn.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="panel9.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -718,34 +649,34 @@
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
+  <data name="versionLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="versionLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>207, 20</value>
+  <data name="versionLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 20</value>
   </data>
-  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 15</value>
+  <data name="versionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 15</value>
   </data>
-  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+  <data name="versionLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="label9.Text" xml:space="preserve">
-    <value>v.0.5.0 beta</value>
+  <data name="versionLabel.Text" xml:space="preserve">
+    <value>v.0.5.1</value>
   </data>
-  <data name="&gt;&gt;label9.Name" xml:space="preserve">
-    <value>label9</value>
+  <data name="&gt;&gt;versionLabel.Name" xml:space="preserve">
+    <value>versionLabel</value>
   </data>
-  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+  <data name="&gt;&gt;versionLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+  <data name="&gt;&gt;versionLabel.Parent" xml:space="preserve">
     <value>panel3</value>
   </data>
-  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;versionLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
@@ -761,13 +692,13 @@
     <value>5, 2</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 38</value>
+    <value>140, 38</value>
   </data>
   <data name="label8.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
-    <value>FloatTool DEV</value>
+    <value>FloatTool</value>
   </data>
   <data name="&gt;&gt;label8.Name" xml:space="preserve">
     <value>label8</value>
@@ -805,41 +736,20 @@
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="stattrackCheckBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="stattrackCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="stattrackCheckBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft JhengHei Light, 10pt</value>
-  </data>
-  <data name="stattrackCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="stattrackCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 64</value>
-  </data>
-  <data name="stattrackCheckBox.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
+    <value>79, 61</value>
   </data>
   <data name="stattrackCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 22</value>
+    <value>38, 24</value>
   </data>
   <data name="stattrackCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="stattrackCheckBox.Text" xml:space="preserve">
-    <value>:StatTrack</value>
-  </data>
-  <data name="stattrackCheckBox.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;stattrackCheckBox.Name" xml:space="preserve">
     <value>stattrackCheckBox</value>
   </data>
   <data name="&gt;&gt;stattrackCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>FloatToolGUI.CustomControls.CustomToggleSwitch, FloatTool, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;stattrackCheckBox.Parent" xml:space="preserve">
     <value>panel6</value>
@@ -938,10 +848,10 @@
     <value>* Искать всё *</value>
   </data>
   <data name="outcomeSelectorComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 61</value>
+    <value>203, 61</value>
   </data>
   <data name="outcomeSelectorComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 24</value>
+    <value>214, 24</value>
   </data>
   <data name="outcomeSelectorComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1009,6 +919,42 @@
   <data name="&gt;&gt;weaponQualityBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="label12.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft JhengHei Light, 10pt</value>
+  </data>
+  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 64</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 18</value>
+  </data>
+  <data name="label12.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>StatTrack:</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -1043,7 +989,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="label4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -1082,7 +1028,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="weaponTypeBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1217,7 +1163,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;weaponTypeBox.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="label11.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1232,7 +1178,7 @@
     <value>NoControl</value>
   </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>108, 65</value>
+    <value>129, 64</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 18</value>
@@ -1253,7 +1199,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1289,7 +1235,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="fullSkinName.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
@@ -1328,7 +1274,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;fullSkinName.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="weaponSkinBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1361,7 +1307,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;weaponSkinBox.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="panel6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1955,10 +1901,10 @@
     <value>NoControl</value>
   </data>
   <data name="gpuSearch_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>231, 37</value>
+    <value>261, 6</value>
   </data>
   <data name="gpuSearch_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 29</value>
+    <value>160, 60</value>
   </data>
   <data name="gpuSearch_btn.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1988,7 +1934,7 @@
     <value>NoControl</value>
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 10</value>
+    <value>9, 2</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 18</value>
@@ -2012,7 +1958,7 @@
     <value>3</value>
   </data>
   <data name="threadCountInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>297, 9</value>
+    <value>87, 2</value>
   </data>
   <data name="threadCountInput.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 21</value>
@@ -2031,36 +1977,6 @@
   </data>
   <data name="&gt;&gt;threadCountInput.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="multithreadCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="multithreadCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="multithreadCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 8</value>
-  </data>
-  <data name="multithreadCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 22</value>
-  </data>
-  <data name="multithreadCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="multithreadCheckBox.Text" xml:space="preserve">
-    <value>Многопоточность</value>
-  </data>
-  <data name="&gt;&gt;multithreadCheckBox.Name" xml:space="preserve">
-    <value>multithreadCheckBox</value>
-  </data>
-  <data name="&gt;&gt;multithreadCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;multithreadCheckBox.Parent" xml:space="preserve">
-    <value>panel15</value>
-  </data>
-  <data name="&gt;&gt;multithreadCheckBox.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <data name="panel15.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
@@ -2135,7 +2051,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -2159,10 +2075,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <metadata name="WorkStatusUpdater.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>374, 17</value>
+    <value>198, 16</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2443,29 +2359,11 @@
   <data name="&gt;&gt;DiscordUpdater.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;openWebsiteButton.Name" xml:space="preserve">
-    <value>openWebsiteButton</value>
-  </data>
-  <data name="&gt;&gt;openWebsiteButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;openAboutBox.Name" xml:space="preserve">
-    <value>openAboutBox</value>
-  </data>
-  <data name="&gt;&gt;openAboutBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;WorkStatusUpdater.Name" xml:space="preserve">
     <value>WorkStatusUpdater</value>
   </data>
   <data name="&gt;&gt;WorkStatusUpdater.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;openGithubButton.Name" xml:space="preserve">
-    <value>openGithubButton</value>
-  </data>
-  <data name="&gt;&gt;openGithubButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FloatTool</value>

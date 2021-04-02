@@ -117,4 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CombinationFound" xml:space="preserve">
+    <value>Combination found!</value>
+  </data>
+  <data name="FloatList" xml:space="preserve">
+    <value>Float list</value>
+  </data>
+  <data name="PossibleFloat" xml:space="preserve">
+    <value>Possible float</value>
+  </data>
+  <data name="TestFloat" xml:space="preserve">
+    <value>Test float</value>
+  </data>
 </root>
