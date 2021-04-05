@@ -553,14 +553,15 @@ namespace FloatToolGUI
                     {
                         try
                         {
+                            wcf.Headers.Add("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)");
                             string jsonf = wcf.DownloadString(url);
                             dynamic rf = JsonConvert.DeserializeObject(jsonf);
                             //Debug.WriteLine("[DEBUG] " + counter + "/" + count + " load from csgofloat = " + jsonf);
                             floats.Add(Convert.ToDouble(rf["iteminfo"]["floatvalue"]));
                         }
-                        catch
+                        catch (Exception e)
                         {
-                            Console.Write("");
+                            Console.WriteLine($"{url} = {e.Message}");
                         }
                     }
                     this.Invoke((MethodInvoker)(() =>
