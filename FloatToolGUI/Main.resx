@@ -118,20 +118,74 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="outputConsoleBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="splitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="splitContainer1.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="flowLayoutPanel1.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="flowLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="flowLayoutPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>449, 292</value>
+  </data>
+  <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Name" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitContainer1.Panel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Name" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="outputConsoleBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="outputConsoleBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft JhengHei UI Light, 10pt</value>
   </data>
   <data name="outputConsoleBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>5, 5</value>
   </data>
   <data name="outputConsoleBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>40, 40, 40, 40</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="outputConsoleBox.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -139,7 +193,7 @@
     <value>Both</value>
   </data>
   <data name="outputConsoleBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>459, 408</value>
+    <value>449, 92</value>
   </data>
   <data name="outputConsoleBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -155,9 +209,45 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;outputConsoleBox.Parent" xml:space="preserve">
-    <value>panel11</value>
+    <value>splitContainer1.Panel2</value>
   </data>
   <data name="&gt;&gt;outputConsoleBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitContainer1.Panel2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>459, 408</value>
+  </data>
+  <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
+    <value>302</value>
+  </data>
+  <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="DiscordUpdater.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -649,6 +739,39 @@
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="label24.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="label24.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label24.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>173, 20</value>
+  </data>
+  <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 15</value>
+  </data>
+  <data name="label24.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label24.Text" xml:space="preserve">
+    <value>by Prevter</value>
+  </data>
+  <data name="&gt;&gt;label24.Name" xml:space="preserve">
+    <value>label24</value>
+  </data>
+  <data name="&gt;&gt;label24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label24.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="versionLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -665,7 +788,7 @@
     <value>1</value>
   </data>
   <data name="versionLabel.Text" xml:space="preserve">
-    <value>v.0.5.2</value>
+    <value>v.0.6.0</value>
   </data>
   <data name="&gt;&gt;versionLabel.Name" xml:space="preserve">
     <value>versionLabel</value>
@@ -677,7 +800,7 @@
     <value>panel3</value>
   </data>
   <data name="&gt;&gt;versionLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -710,7 +833,7 @@
     <value>panel3</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="panel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -737,7 +860,7 @@
     <value>2</value>
   </data>
   <data name="stattrackCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>79, 61</value>
+    <value>79, 64</value>
   </data>
   <data name="stattrackCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>38, 24</value>
@@ -770,7 +893,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkPossibilityBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 90</value>
+    <value>150, 96</value>
   </data>
   <data name="checkPossibilityBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>267, 24</value>
@@ -806,7 +929,7 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>285, 10</value>
+    <value>285, 13</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 18</value>
@@ -848,7 +971,7 @@
     <value>* Искать всё *</value>
   </data>
   <data name="outcomeSelectorComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 61</value>
+    <value>203, 64</value>
   </data>
   <data name="outcomeSelectorComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>214, 24</value>
@@ -896,7 +1019,7 @@
     <value>Battle-Scarred</value>
   </data>
   <data name="weaponQualityBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 31</value>
+    <value>288, 34</value>
   </data>
   <data name="weaponQualityBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>129, 24</value>
@@ -932,7 +1055,7 @@
     <value>NoControl</value>
   </data>
   <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 64</value>
+    <value>9, 67</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 18</value>
@@ -968,7 +1091,7 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 10</value>
+    <value>9, 13</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 18</value>
@@ -1004,7 +1127,7 @@
     <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 93</value>
+    <value>9, 99</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 18</value>
@@ -1112,7 +1235,7 @@
     <value>P90</value>
   </data>
   <data name="weaponTypeBox.Items24" xml:space="preserve">
-    <value>PP-19 Bizon</value>
+    <value>PP-Bizon</value>
   </data>
   <data name="weaponTypeBox.Items25" xml:space="preserve">
     <value>R8 Revolver</value>
@@ -1142,7 +1265,7 @@
     <value>XM1014</value>
   </data>
   <data name="weaponTypeBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 31</value>
+    <value>12, 34</value>
   </data>
   <data name="weaponTypeBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 24</value>
@@ -1178,7 +1301,7 @@
     <value>NoControl</value>
   </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>129, 64</value>
+    <value>129, 67</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 18</value>
@@ -1214,7 +1337,7 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 10</value>
+    <value>147, 13</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 18</value>
@@ -1244,7 +1367,7 @@
     <value>Microsoft JhengHei Light, 12pt</value>
   </data>
   <data name="fullSkinName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 120</value>
+    <value>0, 126</value>
   </data>
   <data name="fullSkinName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 12, 10, 12</value>
@@ -1286,7 +1409,7 @@
     <value>Microsoft JhengHei Light, 9pt</value>
   </data>
   <data name="weaponSkinBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 31</value>
+    <value>150, 34</value>
   </data>
   <data name="weaponSkinBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 24</value>
@@ -1316,7 +1439,7 @@
     <value>0, 40</value>
   </data>
   <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>427, 145</value>
+    <value>427, 151</value>
   </data>
   <data name="panel6.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1337,7 +1460,7 @@
     <value>None</value>
   </data>
   <data name="downloadProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 160</value>
+    <value>12, 157</value>
   </data>
   <data name="downloadProgressBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1373,7 +1496,7 @@
     <value>NoControl</value>
   </data>
   <data name="searchmodeGreater_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>169, 32</value>
+    <value>169, 29</value>
   </data>
   <data name="searchmodeGreater_btn.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 32</value>
@@ -1409,7 +1532,7 @@
     <value>NoControl</value>
   </data>
   <data name="searchmodeEqual_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 32</value>
+    <value>91, 29</value>
   </data>
   <data name="searchmodeEqual_btn.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 32</value>
@@ -1445,7 +1568,7 @@
     <value>NoControl</value>
   </data>
   <data name="searchmodeLess_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 32</value>
+    <value>12, 29</value>
   </data>
   <data name="searchmodeLess_btn.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 32</value>
@@ -1481,7 +1604,7 @@
     <value>NoControl</value>
   </data>
   <data name="searchModeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 11</value>
+    <value>9, 8</value>
   </data>
   <data name="searchModeLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 18</value>
@@ -1517,7 +1640,7 @@
     <value>NoControl</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 70</value>
+    <value>9, 67</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>108, 18</value>
@@ -1547,7 +1670,7 @@
     <value>Microsoft JhengHei Light, 10pt</value>
   </data>
   <data name="quantityInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>122, 99</value>
+    <value>122, 96</value>
   </data>
   <data name="quantityInput.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 21</value>
@@ -1574,7 +1697,7 @@
     <value>Microsoft JhengHei Light, 10pt</value>
   </data>
   <data name="skipValueInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>122, 130</value>
+    <value>122, 127</value>
   </data>
   <data name="skipValueInput.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 21</value>
@@ -1604,7 +1727,7 @@
     <value>NoControl</value>
   </data>
   <data name="ascendingCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>245, 42</value>
+    <value>245, 39</value>
   </data>
   <data name="ascendingCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 22</value>
@@ -1637,7 +1760,7 @@
     <value>NoControl</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 129</value>
+    <value>9, 126</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 18</value>
@@ -1673,7 +1796,7 @@
     <value>NoControl</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 98</value>
+    <value>9, 95</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 18</value>
@@ -1703,7 +1826,7 @@
     <value>Microsoft JhengHei Light, 10pt</value>
   </data>
   <data name="searchFloatInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>122, 70</value>
+    <value>122, 67</value>
   </data>
   <data name="searchFloatInput.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 18</value>
@@ -1736,7 +1859,7 @@
     <value>NoControl</value>
   </data>
   <data name="sortCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>245, 18</value>
+    <value>245, 15</value>
   </data>
   <data name="sortCheckBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 22</value>
@@ -1772,7 +1895,7 @@
     <value>NoControl</value>
   </data>
   <data name="startBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 70</value>
+    <value>244, 67</value>
   </data>
   <data name="startBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>173, 81</value>
@@ -1802,7 +1925,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>427, 197</value>
+    <value>427, 191</value>
   </data>
   <data name="panel16.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -1901,10 +2024,10 @@
     <value>NoControl</value>
   </data>
   <data name="gpuSearch_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>261, 6</value>
+    <value>244, 0</value>
   </data>
   <data name="gpuSearch_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 60</value>
+    <value>177, 71</value>
   </data>
   <data name="gpuSearch_btn.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1982,7 +2105,7 @@
     <value>Bottom</value>
   </data>
   <data name="panel15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 197</value>
+    <value>0, 191</value>
   </data>
   <data name="panel15.Size" type="System.Drawing.Size, System.Drawing">
     <value>427, 76</value>
@@ -2009,10 +2132,10 @@
     <value>Microsoft JhengHei Light, 10pt</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 185</value>
+    <value>0, 191</value>
   </data>
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>427, 273</value>
+    <value>427, 267</value>
   </data>
   <data name="panel5.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>

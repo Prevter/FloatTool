@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static FloatToolGUI.Utils;
 
 namespace FloatToolGUI
 {
@@ -18,23 +19,16 @@ namespace FloatToolGUI
         public SettingsForm()
         {
             InitializeComponent();
+            currencyComboBox.DataSource = Enum.GetValues(typeof(Currency));
+            CheckRegistry();
             registryData = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\FloatTool");
-            if (registryData == null)
-            {
-                registryData = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\FloatTool");
-                registryData.SetValue("darkMode", true);
-                registryData.SetValue("sound", true);
-                registryData.SetValue("updateCheck", true);
-                registryData.SetValue("bufferSpeed", 250);
-                registryData.Close();
-            }
-            else
-            {
-                darkModeToggle.Checked = Convert.ToBoolean(registryData.GetValue("darkMode"));
-                soundToggle.Checked = Convert.ToBoolean(registryData.GetValue("sound"));
-                checkUpdatesToggle.Checked = Convert.ToBoolean(registryData.GetValue("updateCheck"));
-                bufferSpeedNUP.Value = (int)registryData.GetValue("bufferSpeed");
-            }
+            darkModeToggle.Checked = Convert.ToBoolean(registryData.GetValue("darkMode"));
+            soundToggle.Checked = Convert.ToBoolean(registryData.GetValue("sound"));
+            checkUpdatesToggle.Checked = Convert.ToBoolean(registryData.GetValue("updateCheck"));
+            bufferSpeedNUP.Value = (int)registryData.GetValue("bufferSpeed");
+            discordRpcToggle.Checked = Convert.ToBoolean(registryData.GetValue("discordRPC"));
+            currencyComboBox.SelectedItem = (Currency)registryData.GetValue("currency");
+            saveChangesBtn.Enabled = false;
         }
 
         private void CloseForm(object sender, EventArgs e)
@@ -82,46 +76,28 @@ namespace FloatToolGUI
 
         private void saveChangesBtn_Click(object sender, EventArgs e)
         {
+            CheckRegistry();
             registryData = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\FloatTool", true);
-            if (registryData == null)
-            {
-                registryData = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\FloatTool");
-                registryData.SetValue("darkMode", darkModeToggle.Checked);
-                registryData.SetValue("sound", soundToggle.Checked);
-                registryData.SetValue("updateCheck", checkUpdatesToggle.Checked);
-                registryData.SetValue("bufferSpeed", bufferSpeedNUP.Value);
-                registryData.Close();
-            }
-            else
-            {
-                registryData.SetValue("darkMode", darkModeToggle.Checked);
-                registryData.SetValue("sound", soundToggle.Checked);
-                registryData.SetValue("updateCheck", checkUpdatesToggle.Checked);
-                registryData.SetValue("bufferSpeed", (int)bufferSpeedNUP.Value);
-                registryData.Close();
-            }
+            registryData.SetValue("darkMode", darkModeToggle.Checked);
+            registryData.SetValue("sound", soundToggle.Checked);
+            registryData.SetValue("updateCheck", checkUpdatesToggle.Checked);
+            registryData.SetValue("bufferSpeed", (int)bufferSpeedNUP.Value);
+            registryData.SetValue("discordRPC", discordRpcToggle.Checked);
+            registryData.SetValue("currency", (int)currencyComboBox.SelectedValue);
+            registryData.Close();
             saveChangesBtn.Enabled = false;
         }
 
         private void resetChangesBtn_Click(object sender, EventArgs e)
         {
+            CheckRegistry();
             registryData = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\FloatTool");
-            if (registryData == null)
-            {
-                registryData = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\FloatTool");
-                registryData.SetValue("darkMode", true);
-                registryData.SetValue("sound", true);
-                registryData.SetValue("updateCheck", true);
-                registryData.SetValue("bufferSpeed", 250);
-                registryData.Close();
-            }
-            else
-            {
-                darkModeToggle.Checked = Convert.ToBoolean(registryData.GetValue("darkMode"));
-                soundToggle.Checked = Convert.ToBoolean(registryData.GetValue("sound"));
-                checkUpdatesToggle.Checked = Convert.ToBoolean(registryData.GetValue("updateCheck"));
-                bufferSpeedNUP.Value = (int)registryData.GetValue("bufferSpeed");
-            }
+            darkModeToggle.Checked = Convert.ToBoolean(registryData.GetValue("darkMode"));
+            soundToggle.Checked = Convert.ToBoolean(registryData.GetValue("sound"));
+            checkUpdatesToggle.Checked = Convert.ToBoolean(registryData.GetValue("updateCheck"));
+            bufferSpeedNUP.Value = (int)registryData.GetValue("bufferSpeed");
+            discordRpcToggle.Checked = Convert.ToBoolean(registryData.GetValue("discordRPC"));
+            currencyComboBox.SelectedItem = (Currency)registryData.GetValue("currency");
             saveChangesBtn.Enabled = false;
         }
     }

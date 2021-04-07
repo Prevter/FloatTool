@@ -21,6 +21,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
 using System.Numerics;
+using Button = System.Windows.Forms.Button;
 
 namespace FloatToolGUI
 {
@@ -32,6 +33,31 @@ namespace FloatToolGUI
         Restricted,
         Classified,
         Covert
+    }
+
+    public enum Currency
+    {
+        USD = 1, GBP = 2,
+        EUR = 3, CHF = 4,
+        RUB = 5, PLN = 6,
+        BRL = 7, JPY = 8,
+        NOK = 9, IDR = 10,
+        MYR = 11, PHP = 12,
+        SGD = 13, THB = 14,
+        VND = 15, KRW = 16,
+        TRY = 17, UAH = 18,
+        MXN = 19, CAD = 20,
+        AUD = 21, NZD = 22,
+        CNY = 23, INR = 24,
+        CLP = 25, PEN = 26,
+        COP = 27, ZAR = 28,
+        HKD = 29, TWD = 30,
+        SAR = 31, AED = 32,
+        ARS = 34, ILS = 35,
+        BYN = 36, KZT = 37,
+        KWD = 38, QAR = 39,
+        CRC = 40, UYU = 41,
+        RMB = 9000, NXP = 9001
     }
 
     public partial class FloatTool : Form
@@ -48,64 +74,52 @@ namespace FloatToolGUI
         }
 
         public SearchMode CurrentSearchMode = SearchMode.Equal;
+        public Currency currentCurr = Currency.USD;
+        public bool discordWorker = true;
 
         public static string setprecission(double number, int figures)
         {
             int e = 0;
-
-            while (number >= 10.0)
-            {
+            while (number >= 10.0) {
                 e += 1;
                 number /= 10;
             }
-
-            while (number < 1.0)
-            {
+            while (number < 1.0) {
                 e -= 1;
                 number *= 10;
             }
-
             figures--;
-
             number = (float)Math.Round(number, figures);
-
             figures += 0 - e;
-            while (e > 0)
-            {
+            while (e > 0) {
                 number *= 10;
                 e -= 1;
             }
-
-            while (e < 0)
-            {
+            while (e < 0) {
                 number /= 10;
                 e += 1;
             }
-
             if (figures < 0)
-            {
                 figures = 0;
-            }
-
-            return number.ToString($"f{figures}");
+            return number.ToString($"f{figures}", CultureInfo.InvariantCulture);
         }
-        static public decimal craft(double[] ingridients, float minFloat, float maxFloat)
+        static public decimal craft(List<InputSkin> ingridients, float minFloat, float maxFloat)
         {
             decimal avgFloat = 0;
-            foreach (double f in ingridients)
+            foreach (InputSkin f in ingridients)
             {
-                avgFloat += (decimal)f;
+                avgFloat += (decimal)f.WearValue;
             }
             avgFloat /= 10;
             return ((decimal)(maxFloat - minFloat) * avgFloat) + (decimal)minFloat;
         }
-        static public string craftF(double[] ingridients, float minFloat, float maxFloat)
+        static public string craftF(List<InputSkin> ingridients, float minFloat, float maxFloat)
         {
             float avgFloat = 0;
             float[] arrInput = new float[10];
             for (int i = 0; i < 10; i++)
             {
-                arrInput[i] = Convert.ToSingle(ingridients[i]);
+                arrInput[i] = Convert.ToSingle(ingridients[i].WearValue);
             }
             foreach (float f in arrInput)
             {
@@ -161,8 +175,7 @@ namespace FloatToolGUI
             }
         }
 
-
-        public void parseCraft(double[] inputs, List<Skin> outputs, string want)
+        public void parseCraft(List<InputSkin> inputs, List<Skin> outputs, string want)
         {
             //List<double> results = new List<double>();
             decimal wantFloat;
@@ -170,7 +183,7 @@ namespace FloatToolGUI
             
             foreach (var item in outputs)
             {
-                decimal flotOrigin = Math.Round(craft(inputs.ToArray(), item.MinFloat, item.MaxFloat), 14);
+                decimal flotOrigin = Math.Round(craft(inputs, item.MinFloat, item.MaxFloat), 14);
                 string flot = craftF(inputs, item.MinFloat, item.MaxFloat);
 
                 if (
@@ -181,9 +194,18 @@ namespace FloatToolGUI
                 {
                     this.Invoke((MethodInvoker)(() =>
                     {
+                        float price = 0f;
+                        List<string> floatStrings = new List<string>();
+                        foreach (var fl in inputs)
+                        {
+                            floatStrings.Add(Math.Round(fl.WearValue, 14).ToString().Replace(",", "."));
+                            price += fl.Price;
+                        }
+                        AddCombinationToList(DateTime.Now.ToString("HH:mm:ss"), flotOrigin, flot, price, floatStrings);
                         ConsoleBuffer.Append($"[{DateTime.Now.ToString("HH:mm:ss")}] {strings.CombinationFound}{newLine}");
                         ConsoleBuffer.Append($"{strings.PossibleFloat}: {flotOrigin}{newLine}");
                         ConsoleBuffer.Append($"{strings.TestFloat}: {flot}{newLine}");
+                        ConsoleBuffer.Append($"Цена: {price} {inputs[0].SkinCurrency}{newLine}");
                         ConsoleBuffer.Append($"{strings.FloatList}: ");
                         if (!muteSound)
                         {
@@ -191,18 +213,20 @@ namespace FloatToolGUI
                             SoundPlayer player = new SoundPlayer(Properties.Resources.notification);
                             player.Play();
                         }
-                        client.SetPresence(new RichPresence()
+                        if (discordWorker)
                         {
-                            Details = "Нашёл комбинацию!!!",
-                            State = "Крафчу " + flotOrigin,
-                            Assets = new Assets()
+                            client.SetPresence(new RichPresence()
                             {
-                                LargeImageKey = "icon",
-                                LargeImageText = "FloatTool"
-                            }
-                        });
-                        List<string> floatStrings = new List<string>();
-                        foreach (var fl in inputs) floatStrings.Add(Math.Round(fl, 14).ToString().Replace(",", "."));
+                                Details = "Нашёл комбинацию!!!",
+                                State = "Крафчу " + flotOrigin,
+                                Assets = new Assets()
+                                {
+                                    LargeImageKey = "icon",
+                                    LargeImageText = "FloatTool"
+                                }
+                            });
+                        }
+                        
                         ConsoleBuffer.Append($"[{String.Join(", ", floatStrings)}]{newLine}====================================={newLine}");
                     }
                     ));
@@ -285,37 +309,28 @@ namespace FloatToolGUI
             SetStyle(ControlStyles.ResizeRedraw | ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.DoubleBuffer, true);
             ConsoleBuffer = new StringBuilder();
             newLine = Environment.NewLine;
+            CheckRegistry();
             registryData = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\FloatTool");
-            if (registryData == null)
+            ChangeTheme(Convert.ToBoolean(registryData.GetValue("darkMode")));
+            muteSound = !Convert.ToBoolean(registryData.GetValue("sound"));
+            WorkStatusUpdater.Interval = (int)registryData.GetValue("bufferSpeed");
+            discordWorker = Convert.ToBoolean(registryData.GetValue("discordRPC"));
+            currentCurr = (Currency)registryData.GetValue("currency");
+            if (Convert.ToBoolean(registryData.GetValue("updateCheck")))
             {
-                registryData = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\FloatTool");
-                registryData.SetValue("darkMode", true);
-                registryData.SetValue("sound", true);
-                registryData.SetValue("updateCheck", true);
-                registryData.SetValue("bufferSpeed", 250);
-                registryData.Close();
-            }
-            else
-            {
-                ChangeTheme(Convert.ToBoolean(registryData.GetValue("darkMode")));
-                muteSound = !Convert.ToBoolean(registryData.GetValue("sound"));
-                WorkStatusUpdater.Interval = (int)registryData.GetValue("bufferSpeed");
-                if (Convert.ToBoolean(registryData.GetValue("updateCheck")))
+                string ver = CheckUpdates();
+                if (ver != versionLabel.Text)
                 {
-                    string ver = CheckUpdates();
-                    if (ver != versionLabel.Text)
-                    {
-                        DialogResult result = MessageBox.Show(
-                            $"Доступна версия {ver}! Хотите открыть страницу загрузки?",
-                            "Обновление",
-                            MessageBoxButtons.YesNo,
-                            MessageBoxIcon.Information,
-                            MessageBoxDefaultButton.Button1,
-                            MessageBoxOptions.DefaultDesktopOnly);
+                    DialogResult result = MessageBox.Show(
+                    $"Доступна версия {ver}! Хотите открыть страницу загрузки?",
+                    "Обновление",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Information,
+                    MessageBoxDefaultButton.Button1,
+                    MessageBoxOptions.DefaultDesktopOnly);
 
-                        if (result == DialogResult.Yes)
-                            System.Diagnostics.Process.Start("https://github.com/Nemeshio/FloatTool-GUI/releases/latest");
-                    }
+                    if (result == DialogResult.Yes)
+                        System.Diagnostics.Process.Start("https://github.com/Nemeshio/FloatTool-GUI/releases/latest");
                 }
             }
         }
@@ -343,31 +358,32 @@ namespace FloatToolGUI
             //dev  = 824349399688937543
             //main = 734042978246721537
             client = new DiscordRpcClient("734042978246721537");
-
-            //Subscribe to events
-            client.OnReady += (sender2, e2) =>
+            if (discordWorker)
             {
-                Console.WriteLine("Received Ready from user {0}", e2.User.Username);
-            };
-
-            client.OnPresenceUpdate += (sender2, e2) =>
-            {
-                Console.WriteLine("Received Update! {0}", e2.Presence);
-            };
-
-            //Connect to the RPC
-            client.Initialize();
-
-            client.SetPresence(new RichPresence()
-            {
-                Details = "Настраиваю поиск",
-                Assets = new Assets()
+                //Subscribe to events
+                client.OnReady += (sender2, e2) =>
                 {
-                    LargeImageKey = "icon",
-                    LargeImageText = "FloatTool"
-                }
-            });
+                    Console.WriteLine("Received Ready from user {0}", e2.User.Username);
+                };
 
+                client.OnPresenceUpdate += (sender2, e2) =>
+                {
+                    Console.WriteLine("Received Update! {0}", e2.Presence);
+                };
+
+                //Connect to the RPC
+                client.Initialize();
+
+                client.SetPresence(new RichPresence()
+                {
+                    Details = "Настраиваю поиск",
+                    Assets = new Assets()
+                    {
+                        LargeImageKey = "icon",
+                        LargeImageText = "FloatTool"
+                    }
+                });
+            }
             thread1 = new Thread(runCycle);
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.threadCountInput.Value = Environment.ProcessorCount;
@@ -462,15 +478,86 @@ namespace FloatToolGUI
             } while (NextCombination(numbers, size, k));
         }
 
-        public void secndThread(List<Skin> craftList, string wanted, double[] pool, int start, int skip)
+        public void secndThread(List<Skin> craftList, string wanted, List<InputSkin> pool, int start, int skip)
         {
-            foreach (IEnumerable<double> pair in Combinations(pool, 10, start, skip))
+            foreach (IEnumerable<InputSkin> pair in Combinations(pool, 10, start, skip))
             {
-                parseCraft(pair.ToArray(), craftList, wanted);
+                parseCraft(pair.ToList(), craftList, wanted);
                 currComb++;
                 //Console.WriteLine(currComb);
             }
         }
+
+        public List<Panel> combinationWindows = new List<Panel>();
+
+        public void AddCombinationToList(string time, decimal flotOrigin, string flot, float price, List<string> floatStrings)
+        {
+            Panel tmpPanel = new Panel
+            {
+                BackColor = Color.FromArgb(44, 44, 44),
+                ForeColor = Color.White,
+                Size = new Size(425, 220),
+                Margin = new Padding(3),
+                Font = new Font("Microsoft JhengHei Light", 10f)
+            };
+            #region Labels
+            tmpPanel.Controls.Add(new Label
+            {
+                AutoSize = true,
+                Location = new Point(3,3),
+                Text = $"{outcomeSelectorComboBox.Text}\nВозможный флоат: {flotOrigin.ToString(CultureInfo.InvariantCulture)}\nПроверочный флоат: {flot}"
+            });
+            tmpPanel.Controls.Add(new Label
+            {
+                AutoSize = false,
+                Size = new Size(160, 54),
+                Location = new Point(263, 3),
+                TextAlign = ContentAlignment.MiddleRight,
+                Text = $"{time}\nЦена: {price.ToString("0.00")} {currentCurr}"
+            });
+            tmpPanel.Controls.Add(new Label
+            {
+                AutoSize = true,
+                Location = new Point(3, 62),
+                Text = "Ингредиенты:"
+            });
+            #endregion
+            #region TextBoxes & Buttons
+            for(int i = 0; i < 10; i++)
+            {
+                int y = 27 * (i % 5) + 81;
+                int x = i > 4 ? 220 : 6;
+                tmpPanel.Controls.Add(new TextBox
+                {
+                    BackColor = Color.FromArgb(32, 32, 32),
+                    ForeColor = Color.White,
+                    ReadOnly = true,
+                    BorderStyle = BorderStyle.FixedSingle,
+                    Location = new Point(x, y),
+                    Size = new Size(116, 25),
+                    Text = floatStrings[i]
+                });
+
+                var tmpButton = new Button
+                {
+                    BackColor = Color.FromArgb(56, 56, 56),
+                    Location = new Point(117 + x, y),
+                    Font = new Font("Microsoft JhengHei Light", 8f),
+                    Size = new Size(84, 25),
+                    Text = "Копировать",
+                    Tag = floatStrings[i],
+                    FlatStyle = FlatStyle.Flat
+                };
+
+                tmpButton.FlatAppearance.BorderSize = 0;
+                tmpButton.Click += copyButtonClick;
+                tmpPanel.Controls.Add(tmpButton);
+            }
+            #endregion
+
+            combinationWindows.Add(tmpPanel);
+        }
+
         public BigInteger Fact(int number)
         {
             if (number == 1)
@@ -486,17 +573,20 @@ namespace FloatToolGUI
 
         private void StartCalculation()
         {
-            client.SetPresence(new RichPresence()
-            {
-                Details = "Начал поиск",
-                State = "Ищу " + searchFloatInput.Text,
-                Timestamps = Timestamps.Now,
-                Assets = new Assets()
+            if (discordWorker) {
+                client.SetPresence(new RichPresence()
                 {
-                    LargeImageKey = "icon",
-                    LargeImageText = "FloatTool"
-                }
-            });
+                    Details = "Начал поиск",
+                    State = "Ищу " + searchFloatInput.Text,
+                    Timestamps = Timestamps.Now,
+                    Assets = new Assets()
+                    {
+                        LargeImageKey = "icon",
+                        LargeImageText = "FloatTool"
+                    }
+                });
+            }
+            
 
             totalComb = quantityInput.Value == 10 ? 1 : Fact((int)quantityInput.Value) / (Fact(10) * Fact((int)quantityInput.Value - 10));
             currComb = 0;
@@ -507,6 +597,7 @@ namespace FloatToolGUI
                     startBtn.Text = "Стоп";
                     fullSkinName.SelectionStart = fullSkinName.Text.Length;
                     outputConsoleBox.ScrollToCaret();
+                    flowLayoutPanel1.Controls.Clear();
                 }
             ));
             
@@ -514,7 +605,7 @@ namespace FloatToolGUI
             string start = "" + skipValueInput.Value;
             string wanted = searchFloatInput.Text;
             string q = fullSkinName.Text;
-            string url = "https://steamcommunity.com/market/listings/730/" + q + "/render/?query=&language=russian&count=" + count + "&start=" + start + "&currency=5";
+            string url = $"https://steamcommunity.com/market/listings/730/{q}/render/?query=&language=russian&count={count}&start={start}&currency={(int)currentCurr}";
             Console.WriteLine(url);
            
             this.Invoke((MethodInvoker)(() =>
@@ -528,7 +619,7 @@ namespace FloatToolGUI
             }
             ));
             
-            List<double> floats = new List<double>();
+            List<InputSkin> inputSkins = new List<InputSkin>();
             using (WebClient wc = new WebClient())
             {
                 string json = wc.DownloadString(url);
@@ -557,7 +648,9 @@ namespace FloatToolGUI
                             string jsonf = wcf.DownloadString(url);
                             dynamic rf = JsonConvert.DeserializeObject(jsonf);
                             //Debug.WriteLine("[DEBUG] " + counter + "/" + count + " load from csgofloat = " + jsonf);
-                            floats.Add(Convert.ToDouble(rf["iteminfo"]["floatvalue"]));
+                            inputSkins.Add(new InputSkin(Convert.ToDouble(rf["iteminfo"]["floatvalue"]), 
+                                (float.Parse(r["listinginfo"][el.Name]["converted_price"].ToString()) + float.Parse(r["listinginfo"][el.Name]["converted_fee"].ToString())) / 100, 
+                                currentCurr));
                         }
                         catch (Exception e)
                         {
@@ -576,18 +669,15 @@ namespace FloatToolGUI
             {
                 if (ascendingCheckBox.Checked)
                 {
-                    floats.Sort((a, b) => a.CompareTo(b));
+                    inputSkins.Sort((a, b) => a.CompareTo(b));
                     Console.WriteLine("Sorted ascending");
                 }
                 else
                 {
-                    floats.Sort((a, b) => b.CompareTo(a));
+                    inputSkins.Sort((a, b) => b.CompareTo(a));
                     Console.WriteLine("Sorted descending");
                 }
             }
-            //foreach (double v in floats) {
-            //    Console.WriteLine(v);
-            //}
             this.Invoke((MethodInvoker)(() =>
             {
                 outputConsoleBox.AppendText( "Поиск ауткамов..." + newLine);
@@ -646,8 +736,6 @@ namespace FloatToolGUI
             }
             ));
 
-            double[] pool = floats.ToArray();
-
             Searching = true;
 
             int threads = (int)threadCountInput.Value;
@@ -655,7 +743,7 @@ namespace FloatToolGUI
             {
                 for (int i = 1; i < threads; i++)
                 {
-                    Thread newThread = new Thread(() => secndThread(outcomes, wanted, pool, i, threads));
+                    Thread newThread = new Thread(() => secndThread(outcomes, wanted, inputSkins, i, threads));
                     newThread.Start();
                     t2.Add(newThread);
                 }
@@ -665,9 +753,9 @@ namespace FloatToolGUI
                 Console.WriteLine(ex.Message);
             }
             
-            foreach (IEnumerable<double> pair in Combinations(pool, 10, 0, threads))
+            foreach (IEnumerable<InputSkin> pair in Combinations(inputSkins, 10, 0, threads))
             {
-                parseCraft(pair.ToArray(), outcomes, wanted);
+                parseCraft(pair.ToList(), outcomes, wanted);
                 currComb++;
             }
             Console.WriteLine("Next group");
@@ -968,26 +1056,22 @@ namespace FloatToolGUI
             }
         }
 
+        private void copyButtonClick(object sender, EventArgs e)
+        {
+            Clipboard.SetText(((System.Windows.Forms.Button)sender).Tag.ToString());
+        }
+
         private void settingsButton_Click(object sender, EventArgs e)
         {
             SettingsForm settings = new SettingsForm();
             settings.ShowDialog();
+            CheckRegistry();
             registryData = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\FloatTool");
-            if (registryData == null)
-            {
-                registryData = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\FloatTool");
-                registryData.SetValue("darkMode", true);
-                registryData.SetValue("sound", true);
-                registryData.SetValue("updateCheck", true);
-                registryData.SetValue("bufferSpeed", 250);
-                registryData.Close();
-            }
-            else
-            {
-                ChangeTheme(Convert.ToBoolean(registryData.GetValue("darkMode")));
-                muteSound = !Convert.ToBoolean(registryData.GetValue("sound"));
-                WorkStatusUpdater.Interval = (int)registryData.GetValue("bufferSpeed");
-            }
+            ChangeTheme(Convert.ToBoolean(registryData.GetValue("darkMode")));
+            muteSound = !Convert.ToBoolean(registryData.GetValue("sound"));
+            WorkStatusUpdater.Interval = (int)registryData.GetValue("bufferSpeed");
+            discordWorker = Convert.ToBoolean(registryData.GetValue("discordRPC"));
+            currentCurr = (Currency)registryData.GetValue("currency");
         }
 
         private void benchmarkButton_Click(object sender, EventArgs e)
@@ -1216,18 +1300,20 @@ namespace FloatToolGUI
                 0.156294032931328, 0.179465100169182, 
                 0.327553898096085, 0.150170117616653
             };
-
-            client.SetPresence(new RichPresence()
+            if (discordWorker)
             {
-                Details = "GPU Тест",
-                State = "Тестирование подбора на видеокарте",
-                Timestamps = Timestamps.Now,
-                Assets = new Assets()
+                client.SetPresence(new RichPresence()
                 {
-                    LargeImageKey = "icon",
-                    LargeImageText = "FloatTool"
-                }
-            });
+                    Details = "GPU Тест",
+                    State = "Тестирование подбора на видеокарте",
+                    Timestamps = Timestamps.Now,
+                    Assets = new Assets()
+                    {
+                        LargeImageKey = "icon",
+                        LargeImageText = "FloatTool"
+                    }
+                });
+            }
             SwitchEnabled();
         }
 
@@ -1239,6 +1325,14 @@ namespace FloatToolGUI
             speedStatusLabel.Text = $"Текущая скорость: {speed} комбинаций/сек";
             last = currComb;
             combinationsStatusLabel.Text = $"Проверено комбинаций: {currComb} / {totalComb}";
+
+            foreach (var tmpPanel in combinationWindows)
+            {
+                flowLayoutPanel1.Controls.Add(tmpPanel);
+                flowLayoutPanel1.ScrollControlIntoView(tmpPanel);
+            }
+
+            combinationWindows.Clear();
 
             if (ConsoleBuffer.Length > 0)
             {

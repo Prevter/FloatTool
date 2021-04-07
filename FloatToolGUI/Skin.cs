@@ -23,7 +23,7 @@ namespace FloatToolGUI
 
         public override string ToString()
         {
-            return $"{Name} ({Rarity.ToString()}) | {MinFloat}-{MaxFloat}";
+            return $"{Name} ({Rarity}) | {MinFloat}-{MaxFloat}";
         }
     }
 }

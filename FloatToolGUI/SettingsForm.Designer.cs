@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
             this.panel3 = new System.Windows.Forms.Panel();
             this.closeBtn = new System.Windows.Forms.Button();
@@ -42,8 +43,16 @@
             this.checkUpdatesToggle = new FloatToolGUI.CustomControls.CustomToggleSwitch();
             this.soundToggle = new FloatToolGUI.CustomControls.CustomToggleSwitch();
             this.darkModeToggle = new FloatToolGUI.CustomControls.CustomToggleSwitch();
+            this.discordRpcToggle = new FloatToolGUI.CustomControls.CustomToggleSwitch();
+            this.label5 = new System.Windows.Forms.Label();
+            this.currencyComboBox = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.currencyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.currencyBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bufferSpeedNUP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currencyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currencyBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -134,7 +143,7 @@
             this.saveChangesBtn.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
             this.saveChangesBtn.ForeColor = System.Drawing.Color.White;
             this.saveChangesBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.saveChangesBtn.Location = new System.Drawing.Point(8, 250);
+            this.saveChangesBtn.Location = new System.Drawing.Point(8, 320);
             this.saveChangesBtn.Name = "saveChangesBtn";
             this.saveChangesBtn.Size = new System.Drawing.Size(185, 32);
             this.saveChangesBtn.TabIndex = 4;
@@ -151,7 +160,7 @@
             this.resetChangesBtn.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
             this.resetChangesBtn.ForeColor = System.Drawing.Color.White;
             this.resetChangesBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.resetChangesBtn.Location = new System.Drawing.Point(199, 250);
+            this.resetChangesBtn.Location = new System.Drawing.Point(199, 320);
             this.resetChangesBtn.Name = "resetChangesBtn";
             this.resetChangesBtn.Size = new System.Drawing.Size(185, 32);
             this.resetChangesBtn.TabIndex = 4;
@@ -165,7 +174,7 @@
             this.bufferSpeedNUP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bufferSpeedNUP.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
             this.bufferSpeedNUP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.bufferSpeedNUP.Location = new System.Drawing.Point(12, 207);
+            this.bufferSpeedNUP.Location = new System.Drawing.Point(8, 280);
             this.bufferSpeedNUP.Maximum = new decimal(new int[] {
             5000,
             0,
@@ -177,7 +186,7 @@
             0,
             0});
             this.bufferSpeedNUP.Name = "bufferSpeedNUP";
-            this.bufferSpeedNUP.Size = new System.Drawing.Size(366, 32);
+            this.bufferSpeedNUP.Size = new System.Drawing.Size(376, 32);
             this.bufferSpeedNUP.TabIndex = 5;
             this.bufferSpeedNUP.Value = new decimal(new int[] {
             250,
@@ -191,7 +200,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(8, 180);
+            this.label4.Location = new System.Drawing.Point(4, 253);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(320, 24);
             this.label4.TabIndex = 3;
@@ -233,17 +242,77 @@
             this.darkModeToggle.TurnedOnColor = System.Drawing.Color.Green;
             this.darkModeToggle.OnToggled += new System.EventHandler(this.darkModeToggle_OnToggled);
             // 
+            // discordRpcToggle
+            // 
+            this.discordRpcToggle.Checked = true;
+            this.discordRpcToggle.ForeColor = System.Drawing.Color.White;
+            this.discordRpcToggle.Location = new System.Drawing.Point(8, 173);
+            this.discordRpcToggle.Name = "discordRpcToggle";
+            this.discordRpcToggle.Size = new System.Drawing.Size(64, 36);
+            this.discordRpcToggle.TabIndex = 2;
+            this.discordRpcToggle.TurnedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.discordRpcToggle.TurnedOnColor = System.Drawing.Color.Green;
+            this.discordRpcToggle.OnToggled += new System.EventHandler(this.checkUpdatesToggle_OnToggled);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(75, 179);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(188, 24);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Интеграция Discord";
+            // 
+            // currencyComboBox
+            // 
+            this.currencyComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.currencyComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.currencyComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.currencyComboBox.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
+            this.currencyComboBox.ForeColor = System.Drawing.Color.White;
+            this.currencyComboBox.FormattingEnabled = true;
+            this.currencyComboBox.Location = new System.Drawing.Point(90, 218);
+            this.currencyComboBox.Name = "currencyComboBox";
+            this.currencyComboBox.Size = new System.Drawing.Size(173, 32);
+            this.currencyComboBox.TabIndex = 6;
+            this.currencyComboBox.SelectedIndexChanged += new System.EventHandler(this.bufferSpeedNUP_ValueChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(4, 221);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 24);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Валюта:";
+            // 
+            // currencyBindingSource
+            // 
+            this.currencyBindingSource.DataSource = typeof(FloatToolGUI.Utils.Currency);
+            // 
+            // currencyBindingSource1
+            // 
+            this.currencyBindingSource1.DataSource = typeof(FloatToolGUI.Utils.Currency);
+            // 
             // SettingsForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.ClientSize = new System.Drawing.Size(390, 294);
+            this.ClientSize = new System.Drawing.Size(390, 364);
+            this.Controls.Add(this.currencyComboBox);
             this.Controls.Add(this.bufferSpeedNUP);
             this.Controls.Add(this.resetChangesBtn);
             this.Controls.Add(this.saveChangesBtn);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.discordRpcToggle);
             this.Controls.Add(this.checkUpdatesToggle);
             this.Controls.Add(this.soundToggle);
             this.Controls.Add(this.label1);
@@ -257,6 +326,8 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bufferSpeedNUP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currencyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currencyBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,5 +348,11 @@
         private System.Windows.Forms.Button resetChangesBtn;
         private System.Windows.Forms.NumericUpDown bufferSpeedNUP;
         private System.Windows.Forms.Label label4;
+        private CustomControls.CustomToggleSwitch discordRpcToggle;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox currencyComboBox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.BindingSource currencyBindingSource;
+        private System.Windows.Forms.BindingSource currencyBindingSource1;
     }
 }

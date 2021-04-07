@@ -41,20 +41,20 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.Updater = new System.Windows.Forms.Timer(this.components);
             this.customProgressBar1 = new FloatToolGUI.CustomProgressBar();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.closeBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // startBenchmarkBtn
@@ -64,7 +64,7 @@
             this.startBenchmarkBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.startBenchmarkBtn.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startBenchmarkBtn.ForeColor = System.Drawing.Color.White;
-            this.startBenchmarkBtn.Location = new System.Drawing.Point(394, 247);
+            this.startBenchmarkBtn.Location = new System.Drawing.Point(394, 255);
             this.startBenchmarkBtn.Name = "startBenchmarkBtn";
             this.startBenchmarkBtn.Size = new System.Drawing.Size(304, 39);
             this.startBenchmarkBtn.TabIndex = 1;
@@ -80,7 +80,7 @@
             this.submitScoreBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitScoreBtn.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 12F);
             this.submitScoreBtn.ForeColor = System.Drawing.Color.White;
-            this.submitScoreBtn.Location = new System.Drawing.Point(394, 212);
+            this.submitScoreBtn.Location = new System.Drawing.Point(394, 221);
             this.submitScoreBtn.Name = "submitScoreBtn";
             this.submitScoreBtn.Size = new System.Drawing.Size(304, 29);
             this.submitScoreBtn.TabIndex = 2;
@@ -153,14 +153,14 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.flowLayoutPanel1.Controls.Add(this.panel1);
-            this.flowLayoutPanel1.Controls.Add(this.panel2);
+            this.flowLayoutPanel1.Controls.Add(this.panel10);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.ForeColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(384, 321);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(388, 333);
             this.flowLayoutPanel1.TabIndex = 4;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -169,8 +169,8 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(10)))), ((int)(((byte)(27)))));
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(10, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.panel1.Location = new System.Drawing.Point(10, 12);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0, 2, 0, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(350, 35);
             this.panel1.TabIndex = 0;
@@ -200,42 +200,6 @@
             this.label6.Text = "AMD Ryzen 5 2600 Six-Core Processor (12 Threads)";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(10, 50);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(350, 35);
-            this.panel2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 8F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 14);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "934030 к/с (v.0.5.0 beta)";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 8F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 3);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(289, 14);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Intel(R) Core(TM) i5-7300HQ CPU @ 2.50GHz (4 Threads)";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // Updater
             // 
             this.Updater.Enabled = true;
@@ -245,7 +209,7 @@
             // 
             this.customProgressBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.customProgressBar1.ForeColor = System.Drawing.Color.White;
-            this.customProgressBar1.Location = new System.Drawing.Point(394, 289);
+            this.customProgressBar1.Location = new System.Drawing.Point(394, 297);
             this.customProgressBar1.Margin = new System.Windows.Forms.Padding(0);
             this.customProgressBar1.Maximum = 184756;
             this.customProgressBar1.Minimum = 0;
@@ -271,7 +235,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 40);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(704, 321);
+            this.panel4.Size = new System.Drawing.Size(704, 333);
             this.panel4.TabIndex = 6;
             // 
             // label8
@@ -319,11 +283,47 @@
             this.panel3.TabIndex = 5;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DragWindowMouseDown);
             // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.panel10.Controls.Add(this.label17);
+            this.panel10.Controls.Add(this.label18);
+            this.panel10.Location = new System.Drawing.Point(10, 52);
+            this.panel10.Margin = new System.Windows.Forms.Padding(0, 2, 0, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(350, 35);
+            this.panel10.TabIndex = 19;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 8F);
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(3, 18);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(126, 14);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "934030 к/с (v.0.5.0 beta)";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 8F);
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(3, 3);
+            this.label18.Margin = new System.Windows.Forms.Padding(0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(289, 14);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Intel(R) Core(TM) i5-7300HQ CPU @ 2.50GHz (4 Threads)";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Benchmark
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(704, 361);
+            this.ClientSize = new System.Drawing.Size(704, 373);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -334,12 +334,12 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -359,12 +359,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button closeBtn;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
     }
 }

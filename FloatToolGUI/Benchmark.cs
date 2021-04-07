@@ -67,60 +67,50 @@ namespace FloatToolGUI
         public static string setprecission(double number, int figures)
         {
             int e = 0;
-
             while (number >= 10.0)
             {
                 e += 1;
                 number /= 10;
             }
-
             while (number < 1.0)
             {
                 e -= 1;
                 number *= 10;
             }
-
             figures--;
-
             number = (float)Math.Round(number, figures);
-
             figures += 0 - e;
             while (e > 0)
             {
                 number *= 10;
                 e -= 1;
             }
-
             while (e < 0)
             {
                 number /= 10;
                 e += 1;
             }
-
             if (figures < 0)
-            {
                 figures = 0;
-            }
-
-            return number.ToString($"f{figures}");
+            return number.ToString($"f{figures}", CultureInfo.InvariantCulture);
         }
-        static public decimal craft(double[] ingridients, float minFloat, float maxFloat)
+        static public decimal craft(List<InputSkin> ingridients, float minFloat, float maxFloat)
         {
             decimal avgFloat = 0;
-            foreach (double f in ingridients)
+            foreach (InputSkin f in ingridients)
             {
-                avgFloat += (decimal)f;
+                avgFloat += (decimal)f.WearValue;
             }
             avgFloat /= 10;
             return ((decimal)(maxFloat - minFloat) * avgFloat) + (decimal)minFloat;
         }
-        static public string craftF(double[] ingridients, float minFloat, float maxFloat)
+        static public string craftF(List<InputSkin> ingridients, float minFloat, float maxFloat)
         {
             float avgFloat = 0;
             float[] arrInput = new float[10];
             for (int i = 0; i < 10; i++)
             {
-                arrInput[i] = Convert.ToSingle(ingridients[i]);
+                arrInput[i] = Convert.ToSingle(ingridients[i].WearValue);
             }
             foreach (float f in arrInput)
             {
@@ -130,14 +120,15 @@ namespace FloatToolGUI
             return setprecission(((maxFloat - minFloat) * avgFloat) + minFloat, 10);
         }
 
-        public void parseCraft(double[] inputs, List<Skin> outputs, string want)
+        public void parseCraft(List<InputSkin> inputs, List<Skin> outputs, string want)
         {
+            //List<double> results = new List<double>();
             decimal wantFloat;
             decimal.TryParse(want, System.Globalization.NumberStyles.Any, CultureInfo.InvariantCulture, out wantFloat);
 
             foreach (var item in outputs)
             {
-                decimal flotOrigin = Math.Round(craft(inputs.ToArray(), item.MinFloat, item.MaxFloat), 14);
+                decimal flotOrigin = Math.Round(craft(inputs, item.MinFloat, item.MaxFloat), 14);
                 string flot = craftF(inputs, item.MinFloat, item.MaxFloat);
 
                 if (
@@ -151,11 +142,11 @@ namespace FloatToolGUI
             }
         }
 
-        public void secndThread(List<Skin> craftList, string wanted, double[] pool, int start, int skip)
+        public void secndThread(List<Skin> craftList, string wanted, List<InputSkin> pool, int start, int skip)
         {
-            foreach (IEnumerable<double> pair in Combinations(pool, 10, start, skip))
+            foreach (IEnumerable<InputSkin> pair in Combinations(pool, 10, start, skip))
             {
-                parseCraft(pair.ToArray(), craftList, wanted);
+                parseCraft(pair.ToList(), craftList, wanted);
                 currComb++;
             }
         }
@@ -191,6 +182,9 @@ namespace FloatToolGUI
                 0.157685652375221, 0.217334255576134
             };
 
+            List<InputSkin> inputSkins = new List<InputSkin>();
+            foreach (double f in pool) inputSkins.Add(new InputSkin(f, 0.03f, Currency.USD));
+
             Stopwatch timer = Stopwatch.StartNew();
 
             var threads = Environment.ProcessorCount;
@@ -198,7 +192,7 @@ namespace FloatToolGUI
             {
                 for (int i = 0; i < threads; i++)
                 {
-                    Thread newThread = new Thread(() => secndThread(outcomes, "1", pool, i, threads));
+                    Thread newThread = new Thread(() => secndThread(outcomes, "1", inputSkins, i, threads));
                     newThread.Start();
                     t2.Add(newThread);
                 }
@@ -347,6 +341,21 @@ namespace FloatToolGUI
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

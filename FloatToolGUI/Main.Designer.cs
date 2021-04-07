@@ -49,6 +49,8 @@ namespace FloatToolGUI
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FloatTool));
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.outputConsoleBox = new System.Windows.Forms.TextBox();
             this.DiscordUpdater = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -68,10 +70,10 @@ namespace FloatToolGUI
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
             this.versionLabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.stattrackCheckBox = new FloatToolGUI.CustomControls.CustomToggleSwitch();
             this.checkPossibilityBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.outcomeSelectorComboBox = new System.Windows.Forms.ComboBox();
@@ -86,7 +88,6 @@ namespace FloatToolGUI
             this.weaponSkinBox = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.downloadProgressBar = new FloatToolGUI.CustomProgressBar();
             this.searchmodeGreater_btn = new System.Windows.Forms.Button();
             this.searchmodeEqual_btn = new System.Windows.Forms.Button();
             this.searchmodeLess_btn = new System.Windows.Forms.Button();
@@ -109,6 +110,12 @@ namespace FloatToolGUI
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.WorkStatusUpdater = new System.Windows.Forms.Timer(this.components);
+            this.downloadProgressBar = new FloatToolGUI.CustomProgressBar();
+            this.stattrackCheckBox = new FloatToolGUI.CustomControls.CustomToggleSwitch();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -126,6 +133,31 @@ namespace FloatToolGUI
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            resources.ApplyResources(this.splitContainer1, "splitContainer1");
+            this.splitContainer1.ForeColor = System.Drawing.Color.White;
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.splitContainer1.Panel1.Controls.Add(this.flowLayoutPanel1);
+            resources.ApplyResources(this.splitContainer1.Panel1, "splitContainer1.Panel1");
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.splitContainer1.Panel2.Controls.Add(this.outputConsoleBox);
+            resources.ApplyResources(this.splitContainer1.Panel2, "splitContainer1.Panel2");
+            // 
+            // flowLayoutPanel1
+            // 
+            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             // 
             // outputConsoleBox
             // 
@@ -168,7 +200,7 @@ namespace FloatToolGUI
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.outputConsoleBox);
+            this.panel11.Controls.Add(this.splitContainer1);
             resources.ApplyResources(this.panel11, "panel11");
             this.panel11.Name = "panel11";
             // 
@@ -298,11 +330,18 @@ namespace FloatToolGUI
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.panel3.Controls.Add(this.label24);
             this.panel3.Controls.Add(this.versionLabel);
             this.panel3.Controls.Add(this.label8);
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
+            // 
+            // label24
+            // 
+            resources.ApplyResources(this.label24, "label24");
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.label24.Name = "label24";
             // 
             // versionLabel
             // 
@@ -335,16 +374,6 @@ namespace FloatToolGUI
             this.panel6.Controls.Add(this.weaponSkinBox);
             resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
-            // 
-            // stattrackCheckBox
-            // 
-            this.stattrackCheckBox.Checked = false;
-            this.stattrackCheckBox.ForeColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.stattrackCheckBox, "stattrackCheckBox");
-            this.stattrackCheckBox.Name = "stattrackCheckBox";
-            this.stattrackCheckBox.TurnedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.stattrackCheckBox.TurnedOnColor = System.Drawing.Color.Green;
-            this.stattrackCheckBox.OnToggled += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkPossibilityBtn
             // 
@@ -513,18 +542,6 @@ namespace FloatToolGUI
             this.panel16.Controls.Add(this.startBtn);
             resources.ApplyResources(this.panel16, "panel16");
             this.panel16.Name = "panel16";
-            // 
-            // downloadProgressBar
-            // 
-            resources.ApplyResources(this.downloadProgressBar, "downloadProgressBar");
-            this.downloadProgressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.downloadProgressBar.ForeColor = System.Drawing.Color.White;
-            this.downloadProgressBar.Maximum = 100;
-            this.downloadProgressBar.Minimum = 0;
-            this.downloadProgressBar.Name = "downloadProgressBar";
-            this.downloadProgressBar.ProgressColor = System.Drawing.Color.Green;
-            this.downloadProgressBar.ProgressFont = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.downloadProgressBar.Value = 0F;
             // 
             // searchmodeGreater_btn
             // 
@@ -735,6 +752,28 @@ namespace FloatToolGUI
             this.WorkStatusUpdater.Interval = 250;
             this.WorkStatusUpdater.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // downloadProgressBar
+            // 
+            resources.ApplyResources(this.downloadProgressBar, "downloadProgressBar");
+            this.downloadProgressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.downloadProgressBar.ForeColor = System.Drawing.Color.White;
+            this.downloadProgressBar.Maximum = 100;
+            this.downloadProgressBar.Minimum = 0;
+            this.downloadProgressBar.Name = "downloadProgressBar";
+            this.downloadProgressBar.ProgressColor = System.Drawing.Color.Green;
+            this.downloadProgressBar.ProgressFont = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.downloadProgressBar.Value = 0F;
+            // 
+            // stattrackCheckBox
+            // 
+            this.stattrackCheckBox.Checked = false;
+            this.stattrackCheckBox.ForeColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.stattrackCheckBox, "stattrackCheckBox");
+            this.stattrackCheckBox.Name = "stattrackCheckBox";
+            this.stattrackCheckBox.TurnedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.stattrackCheckBox.TurnedOnColor = System.Drawing.Color.Green;
+            this.stattrackCheckBox.OnToggled += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // FloatTool
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -748,11 +787,15 @@ namespace FloatToolGUI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FloatTool";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -834,6 +877,9 @@ namespace FloatToolGUI
         private CustomControls.CustomToggleSwitch stattrackCheckBox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button benchmarkButton;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label24;
     }
 }
 
