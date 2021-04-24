@@ -75,7 +75,7 @@
             this.closeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.closeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeBtn.Font = new System.Drawing.Font("Microsoft JhengHei Light", 16F);
+            this.closeBtn.Font = new System.Drawing.Font("Inter", 16F);
             this.closeBtn.ForeColor = System.Drawing.Color.White;
             this.closeBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.closeBtn.Location = new System.Drawing.Point(350, 0);
@@ -90,12 +90,12 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft JhengHei Light", 22F);
+            this.label8.Font = new System.Drawing.Font("Inter", 22F);
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label8.Location = new System.Drawing.Point(1, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(167, 38);
+            this.label8.Size = new System.Drawing.Size(175, 36);
             this.label8.TabIndex = 0;
             this.label8.Text = "Настройки";
             this.label8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DragWindowMouseDown);
@@ -103,33 +103,33 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
+            this.label1.Font = new System.Drawing.Font("Inter", 14F);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(75, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 24);
+            this.label1.Size = new System.Drawing.Size(131, 23);
             this.label1.TabIndex = 3;
             this.label1.Text = "Тёмная тема";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
+            this.label2.Font = new System.Drawing.Font("Inter", 14F);
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(75, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(205, 24);
+            this.label2.Size = new System.Drawing.Size(213, 23);
             this.label2.TabIndex = 3;
             this.label2.Text = "Звук при нахождении";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
+            this.label3.Font = new System.Drawing.Font("Inter", 14F);
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(75, 137);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(214, 24);
+            this.label3.Size = new System.Drawing.Size(217, 23);
             this.label3.TabIndex = 3;
             this.label3.Text = "Проверка обновлений";
             // 
@@ -140,7 +140,7 @@
             this.saveChangesBtn.Enabled = false;
             this.saveChangesBtn.FlatAppearance.BorderSize = 0;
             this.saveChangesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveChangesBtn.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
+            this.saveChangesBtn.Font = new System.Drawing.Font("Inter", 14F);
             this.saveChangesBtn.ForeColor = System.Drawing.Color.White;
             this.saveChangesBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.saveChangesBtn.Location = new System.Drawing.Point(8, 320);
@@ -157,7 +157,7 @@
             this.resetChangesBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.resetChangesBtn.FlatAppearance.BorderSize = 0;
             this.resetChangesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.resetChangesBtn.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
+            this.resetChangesBtn.Font = new System.Drawing.Font("Inter", 14F);
             this.resetChangesBtn.ForeColor = System.Drawing.Color.White;
             this.resetChangesBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.resetChangesBtn.Location = new System.Drawing.Point(199, 320);
@@ -172,7 +172,7 @@
             // 
             this.bufferSpeedNUP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.bufferSpeedNUP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bufferSpeedNUP.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
+            this.bufferSpeedNUP.Font = new System.Drawing.Font("Inter", 14F);
             this.bufferSpeedNUP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.bufferSpeedNUP.Location = new System.Drawing.Point(8, 280);
             this.bufferSpeedNUP.Maximum = new decimal(new int[] {
@@ -186,7 +186,7 @@
             0,
             0});
             this.bufferSpeedNUP.Name = "bufferSpeedNUP";
-            this.bufferSpeedNUP.Size = new System.Drawing.Size(376, 32);
+            this.bufferSpeedNUP.Size = new System.Drawing.Size(376, 30);
             this.bufferSpeedNUP.TabIndex = 5;
             this.bufferSpeedNUP.Value = new decimal(new int[] {
             250,
@@ -198,11 +198,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
+            this.label4.Font = new System.Drawing.Font("Inter", 14F);
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(4, 253);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(320, 24);
+            this.label4.Size = new System.Drawing.Size(333, 23);
             this.label4.TabIndex = 3;
             this.label4.Text = "Скорость обновления буфера (мс)";
             // 
@@ -216,7 +216,7 @@
             this.checkUpdatesToggle.TabIndex = 2;
             this.checkUpdatesToggle.TurnedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.checkUpdatesToggle.TurnedOnColor = System.Drawing.Color.Green;
-            this.checkUpdatesToggle.OnToggled += new System.EventHandler(this.checkUpdatesToggle_OnToggled);
+            this.checkUpdatesToggle.OnToggled += new System.EventHandler(this.Toggle_OnToggled);
             // 
             // soundToggle
             // 
@@ -228,7 +228,7 @@
             this.soundToggle.TabIndex = 2;
             this.soundToggle.TurnedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.soundToggle.TurnedOnColor = System.Drawing.Color.Green;
-            this.soundToggle.OnToggled += new System.EventHandler(this.soundToggle_OnToggled);
+            this.soundToggle.OnToggled += new System.EventHandler(this.Toggle_OnToggled);
             // 
             // darkModeToggle
             // 
@@ -240,7 +240,7 @@
             this.darkModeToggle.TabIndex = 2;
             this.darkModeToggle.TurnedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.darkModeToggle.TurnedOnColor = System.Drawing.Color.Green;
-            this.darkModeToggle.OnToggled += new System.EventHandler(this.darkModeToggle_OnToggled);
+            this.darkModeToggle.OnToggled += new System.EventHandler(this.Toggle_OnToggled);
             // 
             // discordRpcToggle
             // 
@@ -252,16 +252,16 @@
             this.discordRpcToggle.TabIndex = 2;
             this.discordRpcToggle.TurnedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.discordRpcToggle.TurnedOnColor = System.Drawing.Color.Green;
-            this.discordRpcToggle.OnToggled += new System.EventHandler(this.checkUpdatesToggle_OnToggled);
+            this.discordRpcToggle.OnToggled += new System.EventHandler(this.Toggle_OnToggled);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
+            this.label5.Font = new System.Drawing.Font("Inter", 14F);
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(75, 179);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(188, 24);
+            this.label5.Size = new System.Drawing.Size(197, 23);
             this.label5.TabIndex = 3;
             this.label5.Text = "Интеграция Discord";
             // 
@@ -270,23 +270,23 @@
             this.currencyComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.currencyComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.currencyComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.currencyComboBox.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
+            this.currencyComboBox.Font = new System.Drawing.Font("Inter", 14F);
             this.currencyComboBox.ForeColor = System.Drawing.Color.White;
             this.currencyComboBox.FormattingEnabled = true;
             this.currencyComboBox.Location = new System.Drawing.Point(90, 218);
             this.currencyComboBox.Name = "currencyComboBox";
-            this.currencyComboBox.Size = new System.Drawing.Size(173, 32);
+            this.currencyComboBox.Size = new System.Drawing.Size(173, 31);
             this.currencyComboBox.TabIndex = 6;
             this.currencyComboBox.SelectedIndexChanged += new System.EventHandler(this.bufferSpeedNUP_ValueChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
+            this.label6.Font = new System.Drawing.Font("Inter", 14F);
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(4, 221);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 24);
+            this.label6.Size = new System.Drawing.Size(85, 23);
             this.label6.TabIndex = 3;
             this.label6.Text = "Валюта:";
             // 

@@ -50,7 +50,7 @@ namespace FloatToolGUI
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FloatTool));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.foundCombinationContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.outputConsoleBox = new System.Windows.Forms.TextBox();
             this.DiscordUpdater = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -144,7 +144,7 @@ namespace FloatToolGUI
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.splitContainer1.Panel1.Controls.Add(this.flowLayoutPanel1);
+            this.splitContainer1.Panel1.Controls.Add(this.foundCombinationContainer);
             resources.ApplyResources(this.splitContainer1.Panel1, "splitContainer1.Panel1");
             // 
             // splitContainer1.Panel2
@@ -153,11 +153,11 @@ namespace FloatToolGUI
             this.splitContainer1.Panel2.Controls.Add(this.outputConsoleBox);
             resources.ApplyResources(this.splitContainer1.Panel2, "splitContainer1.Panel2");
             // 
-            // flowLayoutPanel1
+            // foundCombinationContainer
             // 
-            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            resources.ApplyResources(this.foundCombinationContainer, "foundCombinationContainer");
+            this.foundCombinationContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.foundCombinationContainer.Name = "foundCombinationContainer";
             // 
             // outputConsoleBox
             // 
@@ -236,12 +236,11 @@ namespace FloatToolGUI
             this.panel9.Controls.Add(this.closeBtn);
             resources.ApplyResources(this.panel9, "panel9");
             this.panel9.Name = "panel9";
-            this.panel9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel9_MouseDown);
+            this.panel9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowDragEvent);
             // 
             // benchmarkButton
             // 
             this.benchmarkButton.BackColor = System.Drawing.Color.Transparent;
-            this.benchmarkButton.BackgroundImage = global::FloatToolGUI.Properties.Resources.benchmarkWhite;
             resources.ApplyResources(this.benchmarkButton, "benchmarkButton");
             this.benchmarkButton.FlatAppearance.BorderSize = 0;
             this.benchmarkButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
@@ -254,7 +253,6 @@ namespace FloatToolGUI
             // settingsButton
             // 
             this.settingsButton.BackColor = System.Drawing.Color.Transparent;
-            this.settingsButton.BackgroundImage = global::FloatToolGUI.Properties.Resources.gearWhite;
             resources.ApplyResources(this.settingsButton, "settingsButton");
             this.settingsButton.FlatAppearance.BorderSize = 0;
             this.settingsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
@@ -335,7 +333,7 @@ namespace FloatToolGUI
             this.panel3.Controls.Add(this.label8);
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
-            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
+            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowDragEvent);
             // 
             // label24
             // 
@@ -420,7 +418,7 @@ namespace FloatToolGUI
             resources.GetString("weaponQualityBox.Items3"),
             resources.GetString("weaponQualityBox.Items4")});
             this.weaponQualityBox.Name = "weaponQualityBox";
-            this.weaponQualityBox.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.weaponQualityBox.SelectedIndexChanged += new System.EventHandler(this.SkinComboboxChanged);
             // 
             // label12
             // 
@@ -513,7 +511,7 @@ namespace FloatToolGUI
             this.weaponSkinBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.weaponSkinBox.FormattingEnabled = true;
             this.weaponSkinBox.Name = "weaponSkinBox";
-            this.weaponSkinBox.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.weaponSkinBox.SelectedIndexChanged += new System.EventHandler(this.SkinComboboxChanged);
             // 
             // panel5
             // 
@@ -668,7 +666,7 @@ namespace FloatToolGUI
             this.startBtn.ForeColor = System.Drawing.Color.White;
             this.startBtn.Name = "startBtn";
             this.startBtn.UseVisualStyleBackColor = false;
-            this.startBtn.Click += new System.EventHandler(this.button2_Click);
+            this.startBtn.Click += new System.EventHandler(this.StartButtonClick);
             // 
             // panel15
             // 
@@ -713,8 +711,8 @@ namespace FloatToolGUI
             // 
             this.threadCountInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.threadCountInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.threadCountInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             resources.ApplyResources(this.threadCountInput, "threadCountInput");
+            this.threadCountInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.threadCountInput.Maximum = new decimal(new int[] {
             1024,
             0,
@@ -761,7 +759,7 @@ namespace FloatToolGUI
             this.downloadProgressBar.Minimum = 0;
             this.downloadProgressBar.Name = "downloadProgressBar";
             this.downloadProgressBar.ProgressColor = System.Drawing.Color.Green;
-            this.downloadProgressBar.ProgressFont = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.downloadProgressBar.ProgressFont = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold);
             this.downloadProgressBar.Value = 0F;
             // 
             // stattrackCheckBox
@@ -772,7 +770,7 @@ namespace FloatToolGUI
             this.stattrackCheckBox.Name = "stattrackCheckBox";
             this.stattrackCheckBox.TurnedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.stattrackCheckBox.TurnedOnColor = System.Drawing.Color.Green;
-            this.stattrackCheckBox.OnToggled += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.stattrackCheckBox.OnToggled += new System.EventHandler(this.SkinComboboxChanged);
             // 
             // FloatTool
             // 
@@ -878,7 +876,7 @@ namespace FloatToolGUI
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button benchmarkButton;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel foundCombinationContainer;
         private System.Windows.Forms.Label label24;
     }
 }

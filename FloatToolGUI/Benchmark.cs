@@ -14,48 +14,12 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static FloatToolGUI.Calculation;
 
 namespace FloatToolGUI
 {
     public partial class Benchmark : Form
     {
-        private static bool NextCombination(IList<int> num, int n, int k)
-        {
-            bool finished;
-            var changed = finished = false;
-            if (k <= 0) return false;
-            for (var i = k - 1; !finished && !changed; i--)
-            {
-                if (num[i] < n - 1 - (k - 1) + i)
-                {
-                    num[i]++;
-                    if (i < k - 1)
-                        for (var j = i + 1; j < k; j++)
-                            num[j] = num[j - 1] + 1;
-                    changed = true;
-                }
-                finished = i == 0;
-            }
-            return changed;
-        }
-
-        private static IEnumerable Combinations<T>(IEnumerable<T> elements, int k, int start, int skip)
-        {
-            var elem = elements.ToArray();
-            var size = elem.Length;
-            if (k > size) yield break;
-            var numbers = new int[k];
-            for (var i = 0; i < k; i++)
-                numbers[i] = i;
-            int step = 0;
-            do
-            {
-                if ((step + start) % skip == 0)
-                    yield return numbers.Select(n => elem[n]);
-                step++;
-            } while (NextCombination(numbers, size, k));
-        }
-
         public enum SearchMode
         {
             Less,
@@ -63,62 +27,6 @@ namespace FloatToolGUI
             Greater
         }
         SearchMode CurrentSearchMode = SearchMode.Equal;
-
-        public static string setprecission(double number, int figures)
-        {
-            int e = 0;
-            while (number >= 10.0)
-            {
-                e += 1;
-                number /= 10;
-            }
-            while (number < 1.0)
-            {
-                e -= 1;
-                number *= 10;
-            }
-            figures--;
-            number = (float)Math.Round(number, figures);
-            figures += 0 - e;
-            while (e > 0)
-            {
-                number *= 10;
-                e -= 1;
-            }
-            while (e < 0)
-            {
-                number /= 10;
-                e += 1;
-            }
-            if (figures < 0)
-                figures = 0;
-            return number.ToString($"f{figures}", CultureInfo.InvariantCulture);
-        }
-        static public decimal craft(List<InputSkin> ingridients, float minFloat, float maxFloat)
-        {
-            decimal avgFloat = 0;
-            foreach (InputSkin f in ingridients)
-            {
-                avgFloat += (decimal)f.WearValue;
-            }
-            avgFloat /= 10;
-            return ((decimal)(maxFloat - minFloat) * avgFloat) + (decimal)minFloat;
-        }
-        static public string craftF(List<InputSkin> ingridients, float minFloat, float maxFloat)
-        {
-            float avgFloat = 0;
-            float[] arrInput = new float[10];
-            for (int i = 0; i < 10; i++)
-            {
-                arrInput[i] = Convert.ToSingle(ingridients[i].WearValue);
-            }
-            foreach (float f in arrInput)
-            {
-                avgFloat += Convert.ToSingle(f);
-            }
-            avgFloat /= 10;
-            return setprecission(((maxFloat - minFloat) * avgFloat) + minFloat, 10);
-        }
 
         public void parseCraft(List<InputSkin> inputs, List<Skin> outputs, string want)
         {
@@ -162,6 +70,7 @@ namespace FloatToolGUI
 
         private void StartCalculation()
         {
+            Logger.Log($"[{DateTime.Now}]: Started benchmark");
             currComb = 0;
             List<Skin> outcomes = new List<Skin>();
             outcomes.Add(new Skin("AK-47 | Safari Mesh", 0.06f, 0.8f, Quality.Industrial));
@@ -218,7 +127,7 @@ namespace FloatToolGUI
 
             timer.Stop();
             TimeSpan timespan = timer.Elapsed;
-
+            Logger.Log($"[{DateTime.Now}]: Benchmark ended, speed = {Math.Round(currComb / timespan.TotalSeconds)}");
             Invoke((MethodInvoker)(() =>
             {
                 submitScoreBtn.Enabled = true;
@@ -232,14 +141,16 @@ namespace FloatToolGUI
         public Benchmark(string version)
         {
             InitializeComponent();
+            Logger.Log($"[{DateTime.Now}]: Opened benchmark window");
             versionLabel2.Text = version;
             threadCountLabel.Text = $"{Environment.ProcessorCount} Threads";
             ManagementObjectSearcher mos = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_Processor");
             foreach (ManagementObject mo in mos.Get())
                 cpuNameLabel.Text = mo["Name"].ToString().Trim();
-
+            Logger.Log($"[{DateTime.Now}]: CPU Name: {cpuNameLabel.Text} ({threadCountLabel.Text})");
             thread1 = new Thread(runCycle);
             LoadStats();
+            
         }
 
         private void startBenchmarkBtn_Click(object sender, EventArgs e)
@@ -254,23 +165,23 @@ namespace FloatToolGUI
             customProgressBar1.Value = currComb;
         }
 
-        string uri = "https://prevterapi.000webhostapp.com/";
+        string uri = "http://prevter.tk/";
 
-        private void AddCpuToList(string cpu, string speed, string ver)
+        private void AddCpuToList(string cpu, string speed, string ver, bool bigMargin)
         {
-            Color backColor = cpu.Contains("AMD") ? Color.FromArgb(157, 0, 20) : (cpu.Contains("Intel") ? Color.FromArgb(0, 125, 195) : Color.FromArgb(56, 56, 56));
-            Color foreColor = Color.White;
+            Color backColor = cpu.Contains("AMD") ? Color.FromArgb(157, 0, 20) : (cpu.Contains("Intel") ? Color.FromArgb(0, 125, 195) : (cpu.Contains("NVidia") ? Color.FromArgb(118, 185, 0) : Color.FromArgb(56, 56, 56)));
+            Color foreColor = cpu.Contains("NVidia") ? Color.Black : Color.White;
 
             var tmpPanel = new Panel
             {
                 BackColor = backColor,
                 Size = new Size(350, 35),
-                Margin = new Padding(0,0,0,5)
+                Margin = new Padding(0,0,0,bigMargin?20:5)
             };
             tmpPanel.Controls.Add(new Label
             {
                 Location = new Point(3,3),
-                Font = new Font("Microsoft JhengHei UI Light", 8f),
+                Font = new Font("Inter", 8f),
                 Text = cpu,
                 AutoSize = true,
                 ForeColor = foreColor
@@ -278,7 +189,7 @@ namespace FloatToolGUI
             tmpPanel.Controls.Add(new Label
             {
                 Location = new Point(3, 18),
-                Font = new Font("Microsoft JhengHei UI Light", 8f),
+                Font = new Font("Inter", 8f),
                 Text = $"{speed} к/с ({ver})",
                 AutoSize = true,
                 ForeColor = foreColor
@@ -288,40 +199,69 @@ namespace FloatToolGUI
 
         private void LoadStats()
         {
-            flowLayoutPanel1.Controls.Clear();
-            WebRequest request = WebRequest.Create($"{uri}getBenchmarks.php");
-            request.Credentials = CredentialCache.DefaultCredentials;
-            WebResponse response = request.GetResponse();
-
-            using (Stream dataStream = response.GetResponseStream())
+            try
             {
-                StreamReader reader = new StreamReader(dataStream);
-                string responseFromServer = reader.ReadToEnd();
-                Console.WriteLine(responseFromServer);
-                if(responseFromServer.Contains('|'))
+                flowLayoutPanel1.Controls.Clear();
+                WebRequest request = WebRequest.Create($"{uri}getBenchmarks.php");
+                request.Credentials = CredentialCache.DefaultCredentials;
+                WebResponse response = request.GetResponse();
+                
+                using (Stream dataStream = response.GetResponseStream())
                 {
-                    foreach (var cpu in responseFromServer.Remove(responseFromServer.Length - 1).Split('&'))
+                    StreamReader reader = new StreamReader(dataStream);
+                    string responseFromServer = reader.ReadToEnd();
+                    Logger.Log($"[{DateTime.Now}]: Loaded benchmark scores");
+                    Console.WriteLine(responseFromServer);
+                    if(responseFromServer.Contains('|'))
                     {
-                        var items = cpu.Split('|');
-                        AddCpuToList(items[0], items[1], items[2]);
+                        var results = responseFromServer.Remove(responseFromServer.Length - 1).Split('&');
+                        int index = 0;
+                        foreach (var cpu in results)
+                        {
+                            index++;
+                            var items = cpu.Split('|');
+                            AddCpuToList(items[0], items[1], items[2], index== results.Length);
+                        }
                     }
                 }
+                response.Close();
             }
-            response.Close();
+            catch(Exception ex)
+            {
+                flowLayoutPanel1.Controls.Add(new Label
+                {
+                    Text = "Произошла ошибка подключения",
+                    AutoSize = true,
+                    ForeColor = Color.White
+                });
+
+                Logger.Log($"[{DateTime.Now}]: {{EXCEPTION}} {ex.Message}{Environment.NewLine}{ex.StackTrace}");
+                Logger.SaveCrashReport();
+            }
         }
 
         private void submitScoreBtn_Click(object sender, EventArgs e)
         {
-            submitScoreBtn.Enabled = false;
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create($"{uri}addBenchmark.php?cpu={cpuNameLabel.Text} ({threadCountLabel.Text})&speed={speedLabel.Text.Split(' ')[0]}");
-            req.UserAgent = $"FloatTool/{versionLabel2.Text}";
-            HttpWebResponse res = (HttpWebResponse)req.GetResponse();
-            res.Close();
-            MessageBox.Show("Ваш результат был принят.");
+            try
+            {
+                submitScoreBtn.Enabled = false;
+                HttpWebRequest req = (HttpWebRequest)WebRequest.Create($"{uri}addBenchmark.php?cpu={cpuNameLabel.Text} ({threadCountLabel.Text})&speed={speedLabel.Text.Split(' ')[0]}");
+                req.UserAgent = $"FloatTool/{versionLabel2.Text}";
+                HttpWebResponse res = (HttpWebResponse)req.GetResponse();
+                res.Close();
+                MessageBox.Show("Ваш результат был принят.");
+                Logger.Log($"[{DateTime.Now}] Recorded benchmark score: {speedLabel.Text.Split(' ')[0]}");
+            }
+            catch (Exception ex)
+            {
+                Logger.Log($"[{DateTime.Now}]: {{EXCEPTION}} {ex.Message}{Environment.NewLine}{ex.StackTrace}");
+                Logger.SaveCrashReport();
+            }
         }
 
         private void closeBtn_Click(object sender, EventArgs e)
         {
+            Logger.Log($"[{DateTime.Now}]: Benchmark window closed");
             Close();
         }
 
@@ -341,21 +281,6 @@ namespace FloatToolGUI
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
-        }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel7_Paint_1(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

@@ -29,10 +29,12 @@ namespace FloatToolGUI
             discordRpcToggle.Checked = Convert.ToBoolean(registryData.GetValue("discordRPC"));
             currencyComboBox.SelectedItem = (Currency)registryData.GetValue("currency");
             saveChangesBtn.Enabled = false;
+            Logger.Log($"[{DateTime.Now}]: Settings window opened");
         }
 
         private void CloseForm(object sender, EventArgs e)
         {
+            Logger.Log($"[{DateTime.Now}]: Settings window closed");
             Close();
         }
 
@@ -54,19 +56,10 @@ namespace FloatToolGUI
             }
         }
 
-        private void darkModeToggle_OnToggled(object sender, EventArgs e)
+        private void Toggle_OnToggled(object sender, EventArgs e)
         {
             saveChangesBtn.Enabled = true;
-        }
-
-        private void soundToggle_OnToggled(object sender, EventArgs e)
-        {
-            saveChangesBtn.Enabled = true;
-        }
-
-        private void checkUpdatesToggle_OnToggled(object sender, EventArgs e)
-        {
-            saveChangesBtn.Enabled = true;
+            Logger.Log($"[{DateTime.Now}]: Option been toggled.");
         }
 
         private void bufferSpeedNUP_ValueChanged(object sender, EventArgs e)
@@ -86,6 +79,7 @@ namespace FloatToolGUI
             registryData.SetValue("currency", (int)currencyComboBox.SelectedValue);
             registryData.Close();
             saveChangesBtn.Enabled = false;
+            Logger.Log($"[{DateTime.Now}]: Settings saved");
         }
 
         private void resetChangesBtn_Click(object sender, EventArgs e)
@@ -99,6 +93,7 @@ namespace FloatToolGUI
             discordRpcToggle.Checked = Convert.ToBoolean(registryData.GetValue("discordRPC"));
             currencyComboBox.SelectedItem = (Currency)registryData.GetValue("currency");
             saveChangesBtn.Enabled = false;
+            Logger.Log($"[{DateTime.Now}]: Settings reseted");
         }
     }
 }

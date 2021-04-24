@@ -81,9 +81,11 @@
   <ItemGroup>
     <Reference Include="DiscordRPC, Version=1.0.175.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DiscordRichPresence.1.0.175\lib\net35\DiscordRPC.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -108,6 +110,7 @@
     <Compile Include="Benchmark.Designer.cs">
       <DependentUpon>Benchmark.cs</DependentUpon>
     </Compile>
+    <Compile Include="Calculation.cs" />
     <Compile Include="CustomControls\CustomProgressBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -121,6 +124,7 @@
       <DependentUpon>CustomToggleSwitch.cs</DependentUpon>
     </Compile>
     <Compile Include="InputSkin.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +133,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\strings.Designer.cs" />
     <Compile Include="SettingsForm.cs">
       <SubType>Form</SubType>
@@ -158,14 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Resources\strings.en.resx" />
     <EmbeddedResource Include="Resources\strings.resx" />
     <EmbeddedResource Include="SettingsForm.resx">
@@ -189,7 +193,10 @@
   <ItemGroup>
     <Content Include="floattool.ico" />
     <Content Include="FodyWeavers.xml" />
-    <None Include="Resources\itemData.json" />
+    <EmbeddedResource Include="itemData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Resources\Inter-Regular.ttf" />
     <None Include="Resources\unmutedWhite.png" />
     <None Include="Resources\unmutedBlack.png" />
     <None Include="Resources\mutedWhite.png" />

@@ -1,6 +1,7 @@
 ﻿using DiscordRPC;
 using FloatToolGUI.Resources;
 using static FloatToolGUI.Utils;
+using static FloatToolGUI.Calculation;
 using Newtonsoft.Json;
 using System;
 using System.Collections;
@@ -77,81 +78,6 @@ namespace FloatToolGUI
         public Currency currentCurr = Currency.USD;
         public bool discordWorker = true;
 
-        public static string setprecission(double number, int figures)
-        {
-            int e = 0;
-            while (number >= 10.0) {
-                e += 1;
-                number /= 10;
-            }
-            while (number < 1.0) {
-                e -= 1;
-                number *= 10;
-            }
-            figures--;
-            number = (float)Math.Round(number, figures);
-            figures += 0 - e;
-            while (e > 0) {
-                number *= 10;
-                e -= 1;
-            }
-            while (e < 0) {
-                number /= 10;
-                e += 1;
-            }
-            if (figures < 0)
-                figures = 0;
-            return number.ToString($"f{figures}", CultureInfo.InvariantCulture);
-        }
-        static public decimal craft(List<InputSkin> ingridients, float minFloat, float maxFloat)
-        {
-            decimal avgFloat = 0;
-            foreach (InputSkin f in ingridients)
-            {
-                avgFloat += (decimal)f.WearValue;
-            }
-            avgFloat /= 10;
-            return ((decimal)(maxFloat - minFloat) * avgFloat) + (decimal)minFloat;
-        }
-        static public string craftF(List<InputSkin> ingridients, float minFloat, float maxFloat)
-        {
-            float avgFloat = 0;
-            float[] arrInput = new float[10];
-            for (int i = 0; i < 10; i++)
-            {
-                arrInput[i] = Convert.ToSingle(ingridients[i].WearValue);
-            }
-            foreach (float f in arrInput)
-            {
-                avgFloat += Convert.ToSingle(f);
-            }
-            avgFloat /= 10;
-            return setprecission(((maxFloat - minFloat) * avgFloat) + minFloat, 10);
-        }
-        static public string getNextRarity(string rarity)
-        {
-            if (rarity == "Consumer")
-            {
-                return "Industrial";
-            }
-            else if (rarity == "Industrial")
-            {
-                return "Mil-Spec";
-            }
-            else if (rarity == "Mil-Spec")
-            {
-                return "Restricted";
-            }
-            else if (rarity == "Restricted")
-            {
-                return "Classified";
-            }
-            else if (rarity == "Classified")
-            {
-                return "Covert";
-            }
-            return "Nothing";
-        }
         static public string getSkinData(string name)
         {
             name = name.Replace("StatTrak™ ",""); //remove stattrack
@@ -201,6 +127,13 @@ namespace FloatToolGUI
                             floatStrings.Add(Math.Round(fl.WearValue, 14).ToString().Replace(",", "."));
                             price += fl.Price;
                         }
+
+                        Logger.Log($"[{DateTime.Now.ToString()}]: Found coombination {{");
+                        Logger.Log($"   Float      = {flotOrigin}{newLine}" +
+                                   $"   Test Float = {flot}{newLine}" +
+                                   $"   Price      = {price} {inputs[0].SkinCurrency}{newLine}" +
+                                   $"   Float list = [{String.Join(", ", floatStrings)}]{newLine}}}");
+
                         AddCombinationToList(DateTime.Now.ToString("HH:mm:ss"), flotOrigin, flot, price, floatStrings);
                         ConsoleBuffer.Append($"[{DateTime.Now.ToString("HH:mm:ss")}] {strings.CombinationFound}{newLine}");
                         ConsoleBuffer.Append($"{strings.PossibleFloat}: {flotOrigin}{newLine}");
@@ -300,25 +233,57 @@ namespace FloatToolGUI
             search += " (" + weaponQualityBox.Text + ")";
             fullSkinName.Text = search;
             UpdateOutcomes();
+            Logger.Log($"[{DateTime.Now.ToString()}]: Changed search skin to: {search}");
         }
 
         RegistryKey registryData;
         public FloatTool()
         {
             InitializeComponent();
+            Logger.ClearLogs();
+            Logger.Log($"[{DateTime.Now}]: FloatTool-GUI {versionLabel.Text}");
             SetStyle(ControlStyles.ResizeRedraw | ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.DoubleBuffer, true);
             ConsoleBuffer = new StringBuilder();
             newLine = Environment.NewLine;
             CheckRegistry();
+
             registryData = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\FloatTool");
-            ChangeTheme(Convert.ToBoolean(registryData.GetValue("darkMode")));
-            muteSound = !Convert.ToBoolean(registryData.GetValue("sound"));
-            WorkStatusUpdater.Interval = (int)registryData.GetValue("bufferSpeed");
-            discordWorker = Convert.ToBoolean(registryData.GetValue("discordRPC"));
-            currentCurr = (Currency)registryData.GetValue("currency");
-            if (Convert.ToBoolean(registryData.GetValue("updateCheck")))
+
+            var darkThemeRK = registryData.GetValue("darkMode");
+            var soundRK = registryData.GetValue("sound");
+            var bufferSpeedRK = registryData.GetValue("bufferSpeed");
+            var discordRPCRK = registryData.GetValue("discordRPC");
+            var currencyRK = registryData.GetValue("currency");
+            var updateCheckRK = registryData.GetValue("updateCheck");
+
+            ChangeTheme(Convert.ToBoolean(darkThemeRK));
+            muteSound = !Convert.ToBoolean(soundRK);
+            WorkStatusUpdater.Interval = (int)bufferSpeedRK;
+            discordWorker = Convert.ToBoolean(discordRPCRK);
+            currentCurr = (Currency)currencyRK;
+
+            Logger.Log($"[{DateTime.Now}]: Loaded registry settings:");
+            Logger.Log($"Dark mode     = {darkThemeRK}");
+            Logger.Log($"Sound         = {soundRK}");
+            Logger.Log($"Buffer speed  = {bufferSpeedRK}");
+            Logger.Log($"Discord RPC   = {discordRPCRK}");
+            Logger.Log($"Currency      = {currencyRK}");
+            Logger.Log($"Check updates = {updateCheckRK}");
+
+            if (Convert.ToBoolean(updateCheckRK))
             {
-                string ver = CheckUpdates();
+                string ver = versionLabel.Text;
+                try
+                {
+                    ver = CheckUpdates();
+                }
+                catch(Exception ex)
+                {
+                    Logger.Log($"[{DateTime.Now}]: {{EXCEPTION}} {ex.Message}{newLine}{ex.StackTrace}");
+                    Logger.SaveCrashReport();
+                }
+
+                Logger.Log($"Checked version is: {ver}{newLine}Installed: {versionLabel.Text}");
                 if (ver != versionLabel.Text)
                 {
                     DialogResult result = MessageBox.Show(
@@ -333,6 +298,7 @@ namespace FloatToolGUI
                         System.Diagnostics.Process.Start("https://github.com/Nemeshio/FloatTool-GUI/releases/latest");
                 }
             }
+            Logger.Log($"[{DateTime.Now.ToString()}]: Initialized");
         }
         public DiscordRpcClient client;
 
@@ -387,6 +353,7 @@ namespace FloatToolGUI
             thread1 = new Thread(runCycle);
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.threadCountInput.Value = Environment.ProcessorCount;
+            AddFont(Properties.Resources.Inter_Regular);
         }
 
         private void runCycle()
@@ -412,70 +379,12 @@ namespace FloatToolGUI
                 }
             }
             updateSearchStr();
+            
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void SkinComboboxChanged(object sender, EventArgs e)
         {
             updateSearchStr();
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            updateSearchStr();
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            updateSearchStr();
-        }
-
-        private static bool NextCombination(IList<int> num, int n, int k)
-        {
-            bool finished;
-
-            var changed = finished = false;
-
-            if (k <= 0) return false;
-
-            for (var i = k - 1; !finished && !changed; i--)
-            {
-                if (num[i] < n - 1 - (k - 1) + i)
-                {
-                    num[i]++;
-
-                    if (i < k - 1)
-                        for (var j = i + 1; j < k; j++)
-                            num[j] = num[j - 1] + 1;
-                    changed = true;
-                }
-                finished = i == 0;
-            }
-
-            return changed;
-        }
-
-        private static IEnumerable Combinations<T>(IEnumerable<T> elements, int k, int start, int skip)
-        {
-            var elem = elements.ToArray();
-            var size = elem.Length;
-
-            if (k > size) yield break;
-
-            var numbers = new int[k];
-
-            for (var i = 0; i < k; i++)
-                numbers[i] = i;
-
-            int step = 0;
-
-            do
-            {
-                if((step+start)%skip == 0)
-                {
-                    yield return numbers.Select(n => elem[n]);
-                }
-                step++;
-            } while (NextCombination(numbers, size, k));
         }
 
         public void secndThread(List<Skin> craftList, string wanted, List<InputSkin> pool, int start, int skip)
@@ -498,7 +407,7 @@ namespace FloatToolGUI
                 ForeColor = Color.White,
                 Size = new Size(425, 220),
                 Margin = new Padding(3),
-                Font = new Font("Microsoft JhengHei Light", 10f)
+                Font = new Font("Inter", 10f)
             };
             #region Labels
             tmpPanel.Controls.Add(new Label
@@ -542,7 +451,7 @@ namespace FloatToolGUI
                 {
                     BackColor = Color.FromArgb(56, 56, 56),
                     Location = new Point(117 + x, y),
-                    Font = new Font("Microsoft JhengHei Light", 8f),
+                    Font = new Font("Inter", 8f),
                     Size = new Size(84, 25),
                     Text = "Копировать",
                     Tag = floatStrings[i],
@@ -573,6 +482,7 @@ namespace FloatToolGUI
 
         private void StartCalculation()
         {
+            Logger.Log($"[{DateTime.Now.ToString()}]: Started search");
             if (discordWorker) {
                 client.SetPresence(new RichPresence()
                 {
@@ -597,15 +507,23 @@ namespace FloatToolGUI
                     startBtn.Text = "Стоп";
                     fullSkinName.SelectionStart = fullSkinName.Text.Length;
                     outputConsoleBox.ScrollToCaret();
-                    flowLayoutPanel1.Controls.Clear();
+                    foundCombinationContainer.Controls.Clear();
                 }
             ));
-            
             string count = "" + quantityInput.Value;
             string start = "" + skipValueInput.Value;
             string wanted = searchFloatInput.Text;
             string q = fullSkinName.Text;
-            string url = $"https://steamcommunity.com/market/listings/730/{q}/render/?query=&language=russian&count={count}&start={start}&currency={(int)currentCurr}";
+
+            Logger.Log($"Settings: {{{newLine}" +
+                       $"   Float    = {wanted}{newLine}" +
+                       $"   Count    = {count}{newLine}" +
+                       $"   Skip     = {start}{newLine}" +
+                       $"   Name     = {q}{newLine}" +
+                       $"   Threads  = {threadCountInput.Value}{newLine}" +
+                       $"}}");
+
+            string url = $"https://steamcommunity.com/market/listings/730/{ q }/render/?query=&language=russian&count={ count }&start={ start }&currency={ (int)currentCurr }";
             Console.WriteLine(url);
            
             this.Invoke((MethodInvoker)(() =>
@@ -620,49 +538,62 @@ namespace FloatToolGUI
             ));
             
             List<InputSkin> inputSkins = new List<InputSkin>();
-            using (WebClient wc = new WebClient())
+            try
             {
-                string json = wc.DownloadString(url);
-                Console.WriteLine(json);
-                dynamic r = JsonConvert.DeserializeObject(json);
-                this.Invoke((MethodInvoker)(() =>
+                using (WebClient wc = new WebClient())
+                {
+                    string json = wc.DownloadString(url);
+                    Console.WriteLine(json);
+                    dynamic r = JsonConvert.DeserializeObject(json);
+                    this.Invoke((MethodInvoker)(() =>
                     {
-                        outputConsoleBox.AppendText( "Получение флоатов..." + newLine);
+                        outputConsoleBox.AppendText("Получение флоатов..." + newLine);
                         fullSkinName.SelectionStart = fullSkinName.Text.Length;
                         outputConsoleBox.ScrollToCaret();
                     }
-                ));
-                int counter = 0;
-                foreach (var el in r["listinginfo"])
-                {
-                    counter++;
-                    string lid = r["listinginfo"][el.Name]["listingid"];
-                    string aid = r["listinginfo"][el.Name]["asset"]["id"];
-                    string link = r["listinginfo"][el.Name]["asset"]["market_actions"][0]["link"];
-                    url = "https://api.csgofloat.com/?url=" + link.Replace("%assetid%", aid).Replace("%listingid%", lid);
-                    using (WebClient wcf = new WebClient())
-                    {
-                        try
-                        {
-                            wcf.Headers.Add("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)");
-                            string jsonf = wcf.DownloadString(url);
-                            dynamic rf = JsonConvert.DeserializeObject(jsonf);
-                            //Debug.WriteLine("[DEBUG] " + counter + "/" + count + " load from csgofloat = " + jsonf);
-                            inputSkins.Add(new InputSkin(Convert.ToDouble(rf["iteminfo"]["floatvalue"]), 
-                                (float.Parse(r["listinginfo"][el.Name]["converted_price"].ToString()) + float.Parse(r["listinginfo"][el.Name]["converted_fee"].ToString())) / 100, 
-                                currentCurr));
-                        }
-                        catch (Exception e)
-                        {
-                            Console.WriteLine($"{url} = {e.Message}");
-                        }
-                    }
-                    this.Invoke((MethodInvoker)(() =>
-                    {
-                        downloadProgressBar.Value = counter;
-                    }
                     ));
-                    
+                    int counter = 0;
+                    foreach (var el in r["listinginfo"])
+                    {
+                        counter++;
+                        string lid = r["listinginfo"][el.Name]["listingid"];
+                        string aid = r["listinginfo"][el.Name]["asset"]["id"];
+                        string link = r["listinginfo"][el.Name]["asset"]["market_actions"][0]["link"];
+                        url = "https://api.csgofloat.com/?url=" + link.Replace("%assetid%", aid).Replace("%listingid%", lid);
+                        using (WebClient wcf = new WebClient())
+                        {
+                            try
+                            {
+                                wcf.Headers.Add("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)");
+                                string jsonf = wcf.DownloadString(url);
+                                dynamic rf = JsonConvert.DeserializeObject(jsonf);
+                                //Debug.WriteLine("[DEBUG] " + counter + "/" + count + " load from csgofloat = " + jsonf);
+                                inputSkins.Add(new InputSkin(Convert.ToDouble(rf["iteminfo"]["floatvalue"]),
+                                    (float.Parse(r["listinginfo"][el.Name]["converted_price"].ToString()) + float.Parse(r["listinginfo"][el.Name]["converted_fee"].ToString())) / 100,
+                                    currentCurr));
+                            }
+                            catch (Exception ex)
+                            {
+                                if (ex.GetType() != typeof(ThreadAbortException))
+                                {
+                                    Logger.Log($"[{DateTime.Now}]: {{EXCEPTION}} {ex.Message}{Environment.NewLine}{ex.StackTrace}");
+                                    Logger.SaveCrashReport();
+                                }
+                            }
+                        }
+                        this.Invoke((MethodInvoker)(() =>
+                        {
+                            downloadProgressBar.Value = counter;
+                        }));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                if(ex.GetType() != typeof(ThreadAbortException))
+                {
+                    Logger.Log($"[{DateTime.Now}]: {{EXCEPTION}} {ex.Message}{Environment.NewLine}{ex.StackTrace}");
+                    Logger.SaveCrashReport();
                 }
             }
             if (sortCheckBox.Checked)
@@ -741,7 +672,7 @@ namespace FloatToolGUI
             int threads = (int)threadCountInput.Value;
             try
             {
-                for (int i = 1; i < threads; i++)
+                for (int i = 0; i < threads; i++)
                 {
                     Thread newThread = new Thread(() => secndThread(outcomes, wanted, inputSkins, i, threads));
                     newThread.Start();
@@ -753,12 +684,7 @@ namespace FloatToolGUI
                 Console.WriteLine(ex.Message);
             }
             
-            foreach (IEnumerable<InputSkin> pair in Combinations(inputSkins, 10, 0, threads))
-            {
-                parseCraft(pair.ToList(), outcomes, wanted);
-                currComb++;
-            }
-            Console.WriteLine("Next group");
+            Console.WriteLine($"[DEBUG] {threads} threads started!");
 
             while (true)
             {   
@@ -791,7 +717,7 @@ namespace FloatToolGUI
             
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void StartButtonClick(object sender, EventArgs e)
         {
             if(startBtn.Text == "Старт") {
                 thread1.Abort();
@@ -800,6 +726,7 @@ namespace FloatToolGUI
             }
             else
             {
+                Logger.Log($"[{DateTime.Now}] Stopping search");
                 Searching = false;
                 thread1.Abort();
                 startBtn.Text = "Старт";
@@ -892,47 +819,7 @@ namespace FloatToolGUI
             MessageBox.Show("Такого скина не существует! Перепроверьте настройки.", "FloatTool", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        bool testOverlap(float x1, float x2, float y1, float y2)
-        {
-            return (x1 >= y1 && x1 <= y2) ||
-                   (x2 >= y1 && x2 <= y2) ||
-                   (y1 >= x1 && y1 <= x2) ||
-                   (y2 >= x1 && y2 <= x2);
-        }
-
-        private Quality FromString(string value)
-        {
-            if (value == "Consumer") return Quality.Consumer;
-            else if (value == "Industrial") return Quality.Industrial;
-            else if (value == "Mil-Spec") return Quality.MilSpec;
-            else if (value == "Restricted") return Quality.Restricted;
-            else if (value == "Classified") return Quality.Classified;
-            else return Quality.Covert;
-        }
-
-        private List<Skin>[] GroupOutcomes(List<dynamic> skins)
-        {
-            var allList = new List<List<Skin>>(); //List with all outcomes
-            float[] currIter = { 0f, 1f }; //Last iteration wear range
-            List<float[]> floatRanges = new List<float[]>(); //List of all ranges that has been parsed
-
-            foreach(var skin in skins)
-            {
-                float[] curr = { skin["maxWear"], skin["minWear"] };
-                List<Skin> list = new List<Skin>();
-                if (curr.SequenceEqual(currIter) || floatRanges.Any(x => (x.SequenceEqual(curr)))) continue; //If range already exists
-                else {
-                    currIter = curr;
-                    floatRanges.Add(currIter);
-                }
-                foreach (var skin1 in skins)
-                    if ((skin["maxWear"] == skin1["maxWear"]) && (skin["minWear"] == skin1["minWear"]))
-                        list.Add(new Skin(skin1["name"].ToString(), float.Parse(skin1["minWear"].ToString().Replace('.', ',')), float.Parse(skin1["maxWear"].ToString().Replace('.', ',')), FromString(skin1["rarity"].ToString().Split(' ')[0])));
-                allList.Add(list);
-            }
-
-            return allList.ToArray();
-        }
+        
 
         private bool floatRangeText(string text, string minVal, string maxVal)
         {
@@ -953,7 +840,7 @@ namespace FloatToolGUI
             {
                 return testOverlap(minWear, maxWear, 0.15f, 0.38f);
             }
-            else if (text == "Well-Wornr")
+            else if (text == "Well-Worn")
             {
                 return testOverlap(minWear, maxWear, 0.38f, 0.45f);
             }
@@ -977,7 +864,7 @@ namespace FloatToolGUI
 
         private void MaximizeMinimizeButton(object sender, EventArgs e)
         {
-            var buttonText = ((System.Windows.Forms.Button)sender).Text;
+            var buttonText = ((Button)sender).Text;
             if(buttonText == "_") WindowState = FormWindowState.Minimized;
             else
             {
@@ -1038,16 +925,7 @@ namespace FloatToolGUI
             }
         }
 
-        private void panel3_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
-            }
-        }
-
-        private void panel9_MouseDown(object sender, MouseEventArgs e)
+        private void WindowDragEvent(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -1084,8 +962,14 @@ namespace FloatToolGUI
         {
             if (dark)
             {
+                BackColor = Color.FromArgb(44, 44, 44);
                 outputConsoleBox.BackColor = Color.FromArgb(31, 31, 31);
                 outputConsoleBox.ForeColor = Color.FromArgb(255, 255, 255);
+                splitContainer1.BackColor = Color.FromArgb(31, 31, 31);
+                splitContainer1.Panel1.BackColor = Color.FromArgb(31, 31, 31);
+                splitContainer1.Panel2.BackColor = Color.FromArgb(31, 31, 31);
+
+                foundCombinationContainer.BackColor = Color.FromArgb(37, 37, 37);
 
                 panel10.BackColor = Color.FromArgb(31, 31, 31);
                 panel12.BackColor = Color.FromArgb(31, 31, 31);
@@ -1178,8 +1062,14 @@ namespace FloatToolGUI
             }
             else
             {
+                BackColor = Color.FromArgb(222, 222, 222);
                 outputConsoleBox.BackColor = Color.FromArgb(255, 255, 255);
                 outputConsoleBox.ForeColor = Color.FromArgb(0, 0, 0);
+                splitContainer1.BackColor = Color.FromArgb(255, 255, 255);
+                splitContainer1.Panel1.BackColor = Color.FromArgb(255, 255, 255);
+                splitContainer1.Panel2.BackColor = Color.FromArgb(255, 255, 255);
+
+                foundCombinationContainer.BackColor = Color.FromArgb(222, 222, 222);
 
                 panel10.BackColor = Color.FromArgb(255, 255, 255);
                 panel12.BackColor = Color.FromArgb(255, 255, 255);
@@ -1273,33 +1163,6 @@ namespace FloatToolGUI
 
         private void gpuSearch_btn_Click(object sender, EventArgs e)
         {
-            double[] floats = {
-                0.246938750147820, 0.196652039885521,
-                0.154839321970940, 0.333326697349548, 
-                0.163415759801865, 0.291821509599686, 
-                0.374309629201889, 0.378754675388336, 
-                0.231419935822487, 0.311867892742157, 
-                0.374067693948746, 0.377068012952805, 
-                0.244467452168465, 0.355135351419449, 
-                0.352264583110809, 0.227853879332542, 
-                0.340960860252380, 0.375657349824905, 
-                0.157685652375221, 0.217334255576134, 
-                0.323678821325302, 0.363768666982651, 
-                0.350994020700455, 0.369551151990891, 
-                0.350340574979782, 0.338801741600037, 
-                0.329752802848816, 0.369740217924118, 
-                0.370476812124252, 0.205233186483383, 
-                0.360520750284195, 0.373722523450851, 
-                0.161364838480949, 0.263432979583740, 
-                0.314681977033615, 0.310743361711502, 
-                0.349280923604965, 0.355936050415039, 
-                0.269742101430893, 0.199420168995857, 
-                0.364472836256027, 0.218964993953705, 
-                0.239638179540634, 0.325499594211578, 
-                0.228406846523285, 0.307701110839844, 
-                0.156294032931328, 0.179465100169182, 
-                0.327553898096085, 0.150170117616653
-            };
             if (discordWorker)
             {
                 client.SetPresence(new RichPresence()
@@ -1328,8 +1191,8 @@ namespace FloatToolGUI
 
             foreach (var tmpPanel in combinationWindows)
             {
-                flowLayoutPanel1.Controls.Add(tmpPanel);
-                flowLayoutPanel1.ScrollControlIntoView(tmpPanel);
+                foundCombinationContainer.Controls.Add(tmpPanel);
+                foundCombinationContainer.ScrollControlIntoView(tmpPanel);
             }
 
             combinationWindows.Clear();
@@ -1370,6 +1233,17 @@ namespace FloatToolGUI
                 searchmodeGreater_btn.FlatAppearance.BorderSize = 0;
                 CurrentSearchMode = SearchMode.Less;
             }
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.F1)
+            {
+                System.Diagnostics.Process.Start("https://prevter.github.io/FloatTool-GUI/table.html");
+                return true;
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }
