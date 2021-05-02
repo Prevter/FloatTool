@@ -43,9 +43,9 @@ namespace FloatToolGUI
             {
                 arrInput[i] = Convert.ToSingle(ingridients[i].WearValue);
             }
-            foreach (float f in arrInput)
+            for (int i = 0; i < 10; i++)
             {
-                avgFloat += Convert.ToSingle(f);
+                avgFloat += Convert.ToSingle(arrInput[i]);
             }
             avgFloat /= 10;
             return setprecission(((maxFloat - minFloat) * avgFloat) + minFloat, 10);

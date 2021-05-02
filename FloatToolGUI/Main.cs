@@ -23,6 +23,7 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using System.Numerics;
 using Button = System.Windows.Forms.Button;
+using System.Diagnostics;
 
 namespace FloatToolGUI
 {
@@ -104,8 +105,9 @@ namespace FloatToolGUI
         public void parseCraft(List<InputSkin> inputs, List<Skin> outputs, string want)
         {
             //List<double> results = new List<double>();
-            decimal wantFloat;
-            decimal.TryParse(want, System.Globalization.NumberStyles.Any, CultureInfo.InvariantCulture, out wantFloat);
+            decimal wantFloat = 1;
+            if (CurrentSearchMode != SearchMode.Equal)
+                decimal.TryParse(want, System.Globalization.NumberStyles.Any, CultureInfo.InvariantCulture, out wantFloat);
             
             foreach (var item in outputs)
             {
@@ -236,6 +238,33 @@ namespace FloatToolGUI
             Logger.Log($"[{DateTime.Now.ToString()}]: Changed search skin to: {search}");
         }
 
+        public void AutoUpdater()
+        {
+            string ver = versionLabel.Text;
+            string data = CheckUpdates();
+            string lastver = data.Split('|')[0];
+            Logger.Log($"Checked version is: {lastver}{newLine}Installed: {ver}");
+            if (ver != lastver)
+            {
+                DialogResult result = MessageBox.Show(
+                    $"Доступна версия {lastver}! Хотите обновить?",
+                    "Доступно обновление",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Information,
+                    MessageBoxDefaultButton.Button1,
+                    MessageBoxOptions.DefaultDesktopOnly);
+
+                if (result == DialogResult.Yes)
+                {
+                    string strExeFilePath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+                    string strWorkPath = System.IO.Path.GetDirectoryName(strExeFilePath);
+                    Process.Start($@"{strWorkPath}\Updater.exe", data.Split('|')[1]);
+                    Invoke((MethodInvoker)(() => { Close(); } ));
+                }
+            }
+        }
+
+
         RegistryKey registryData;
         public FloatTool()
         {
@@ -275,7 +304,9 @@ namespace FloatToolGUI
                 string ver = versionLabel.Text;
                 try
                 {
-                    ver = CheckUpdates();
+                    Thread updater = new Thread(AutoUpdater);
+                    updater.Start();
+                    //ver = CheckUpdates();
                 }
                 catch(Exception ex)
                 {
@@ -283,7 +314,7 @@ namespace FloatToolGUI
                     Logger.SaveCrashReport();
                 }
 
-                Logger.Log($"Checked version is: {ver}{newLine}Installed: {versionLabel.Text}");
+                /*Logger.Log($"Checked version is: {ver}{newLine}Installed: {versionLabel.Text}");
                 if (ver != versionLabel.Text)
                 {
                     DialogResult result = MessageBox.Show(
@@ -296,7 +327,7 @@ namespace FloatToolGUI
 
                     if (result == DialogResult.Yes)
                         System.Diagnostics.Process.Start("https://github.com/Nemeshio/FloatTool-GUI/releases/latest");
-                }
+                }*/
             }
             Logger.Log($"[{DateTime.Now.ToString()}]: Initialized");
         }

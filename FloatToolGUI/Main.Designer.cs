@@ -74,6 +74,7 @@ namespace FloatToolGUI
             this.versionLabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.stattrackCheckBox = new FloatToolGUI.CustomControls.CustomToggleSwitch();
             this.checkPossibilityBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.outcomeSelectorComboBox = new System.Windows.Forms.ComboBox();
@@ -88,6 +89,7 @@ namespace FloatToolGUI
             this.weaponSkinBox = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.downloadProgressBar = new FloatToolGUI.CustomProgressBar();
             this.searchmodeGreater_btn = new System.Windows.Forms.Button();
             this.searchmodeEqual_btn = new System.Windows.Forms.Button();
             this.searchmodeLess_btn = new System.Windows.Forms.Button();
@@ -110,8 +112,6 @@ namespace FloatToolGUI
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.WorkStatusUpdater = new System.Windows.Forms.Timer(this.components);
-            this.downloadProgressBar = new FloatToolGUI.CustomProgressBar();
-            this.stattrackCheckBox = new FloatToolGUI.CustomControls.CustomToggleSwitch();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -373,6 +373,16 @@ namespace FloatToolGUI
             resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             // 
+            // stattrackCheckBox
+            // 
+            this.stattrackCheckBox.Checked = false;
+            this.stattrackCheckBox.ForeColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.stattrackCheckBox, "stattrackCheckBox");
+            this.stattrackCheckBox.Name = "stattrackCheckBox";
+            this.stattrackCheckBox.TurnedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.stattrackCheckBox.TurnedOnColor = System.Drawing.Color.Green;
+            this.stattrackCheckBox.OnToggled += new System.EventHandler(this.SkinComboboxChanged);
+            // 
             // checkPossibilityBtn
             // 
             resources.ApplyResources(this.checkPossibilityBtn, "checkPossibilityBtn");
@@ -540,6 +550,18 @@ namespace FloatToolGUI
             this.panel16.Controls.Add(this.startBtn);
             resources.ApplyResources(this.panel16, "panel16");
             this.panel16.Name = "panel16";
+            // 
+            // downloadProgressBar
+            // 
+            resources.ApplyResources(this.downloadProgressBar, "downloadProgressBar");
+            this.downloadProgressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.downloadProgressBar.ForeColor = System.Drawing.Color.White;
+            this.downloadProgressBar.Maximum = 100;
+            this.downloadProgressBar.Minimum = 0;
+            this.downloadProgressBar.Name = "downloadProgressBar";
+            this.downloadProgressBar.ProgressColor = System.Drawing.Color.Green;
+            this.downloadProgressBar.ProgressFont = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold);
+            this.downloadProgressBar.Value = 0F;
             // 
             // searchmodeGreater_btn
             // 
@@ -749,28 +771,6 @@ namespace FloatToolGUI
             this.WorkStatusUpdater.Enabled = true;
             this.WorkStatusUpdater.Interval = 250;
             this.WorkStatusUpdater.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // downloadProgressBar
-            // 
-            resources.ApplyResources(this.downloadProgressBar, "downloadProgressBar");
-            this.downloadProgressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.downloadProgressBar.ForeColor = System.Drawing.Color.White;
-            this.downloadProgressBar.Maximum = 100;
-            this.downloadProgressBar.Minimum = 0;
-            this.downloadProgressBar.Name = "downloadProgressBar";
-            this.downloadProgressBar.ProgressColor = System.Drawing.Color.Green;
-            this.downloadProgressBar.ProgressFont = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold);
-            this.downloadProgressBar.Value = 0F;
-            // 
-            // stattrackCheckBox
-            // 
-            this.stattrackCheckBox.Checked = false;
-            this.stattrackCheckBox.ForeColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.stattrackCheckBox, "stattrackCheckBox");
-            this.stattrackCheckBox.Name = "stattrackCheckBox";
-            this.stattrackCheckBox.TurnedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.stattrackCheckBox.TurnedOnColor = System.Drawing.Color.Green;
-            this.stattrackCheckBox.OnToggled += new System.EventHandler(this.SkinComboboxChanged);
             // 
             // FloatTool
             // 

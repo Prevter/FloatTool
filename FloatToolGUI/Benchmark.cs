@@ -30,9 +30,9 @@ namespace FloatToolGUI
 
         public void parseCraft(List<InputSkin> inputs, List<Skin> outputs, string want)
         {
-            //List<double> results = new List<double>();
-            decimal wantFloat;
-            decimal.TryParse(want, System.Globalization.NumberStyles.Any, CultureInfo.InvariantCulture, out wantFloat);
+            decimal wantFloat = 1;
+            if (CurrentSearchMode != SearchMode.Equal)
+                decimal.TryParse(want, System.Globalization.NumberStyles.Any, CultureInfo.InvariantCulture, out wantFloat);
 
             foreach (var item in outputs)
             {
@@ -96,7 +96,7 @@ namespace FloatToolGUI
 
             Stopwatch timer = Stopwatch.StartNew();
 
-            var threads = Environment.ProcessorCount;
+            int threads = (int)benchmarkThreadsNumericUpdown.Value;
             try
             {
                 for (int i = 0; i < threads; i++)
@@ -149,8 +149,10 @@ namespace FloatToolGUI
                 cpuNameLabel.Text = mo["Name"].ToString().Trim();
             Logger.Log($"[{DateTime.Now}]: CPU Name: {cpuNameLabel.Text} ({threadCountLabel.Text})");
             thread1 = new Thread(runCycle);
-            LoadStats();
-            
+            benchmarkThreadsNumericUpdown.Value = Environment.ProcessorCount;
+            warningPic.Image = SystemIcons.Warning.ToBitmap();
+            Thread t = new Thread(new ThreadStart(LoadStats));
+            t.Start();
         }
 
         private void startBenchmarkBtn_Click(object sender, EventArgs e)
@@ -194,18 +196,22 @@ namespace FloatToolGUI
                 AutoSize = true,
                 ForeColor = foreColor
             });
-            flowLayoutPanel1.Controls.Add(tmpPanel);
+            Invoke((MethodInvoker)(() =>
+                {
+                    benchmarkScoreboardLayout.Controls.Add(tmpPanel);
+                })
+            );
+            
         }
 
         private void LoadStats()
         {
             try
             {
-                flowLayoutPanel1.Controls.Clear();
                 WebRequest request = WebRequest.Create($"{uri}getBenchmarks.php");
                 request.Credentials = CredentialCache.DefaultCredentials;
                 WebResponse response = request.GetResponse();
-                
+
                 using (Stream dataStream = response.GetResponseStream())
                 {
                     StreamReader reader = new StreamReader(dataStream);
@@ -216,11 +222,12 @@ namespace FloatToolGUI
                     {
                         var results = responseFromServer.Remove(responseFromServer.Length - 1).Split('&');
                         int index = 0;
+                        Invoke((MethodInvoker)(() => { benchmarkScoreboardLayout.Controls.Clear(); }));
                         foreach (var cpu in results)
                         {
                             index++;
                             var items = cpu.Split('|');
-                            AddCpuToList(items[0], items[1], items[2], index== results.Length);
+                            AddCpuToList(items[0], items[1], items[2], index == results.Length);
                         }
                     }
                 }
@@ -228,13 +235,15 @@ namespace FloatToolGUI
             }
             catch(Exception ex)
             {
-                flowLayoutPanel1.Controls.Add(new Label
-                {
-                    Text = "Произошла ошибка подключения",
-                    AutoSize = true,
-                    ForeColor = Color.White
-                });
-
+                Invoke((MethodInvoker)(() => {
+                    benchmarkScoreboardLayout.Controls.Clear();
+                    benchmarkScoreboardLayout.Controls.Add(new Label
+                    {
+                        Text = "Произошла ошибка подключения",
+                        AutoSize = true,
+                        ForeColor = Color.White
+                    });
+                }));
                 Logger.Log($"[{DateTime.Now}]: {{EXCEPTION}} {ex.Message}{Environment.NewLine}{ex.StackTrace}");
                 Logger.SaveCrashReport();
             }
@@ -245,7 +254,7 @@ namespace FloatToolGUI
             try
             {
                 submitScoreBtn.Enabled = false;
-                HttpWebRequest req = (HttpWebRequest)WebRequest.Create($"{uri}addBenchmark.php?cpu={cpuNameLabel.Text} ({threadCountLabel.Text})&speed={speedLabel.Text.Split(' ')[0]}");
+                HttpWebRequest req = (HttpWebRequest)WebRequest.Create($"{uri}addBenchmark.php?cpu={cpuNameLabel.Text} ({benchmarkThreadsNumericUpdown.Value.ToString()})&speed={speedLabel.Text.Split(' ')[0]}");
                 req.UserAgent = $"FloatTool/{versionLabel2.Text}";
                 HttpWebResponse res = (HttpWebResponse)req.GetResponse();
                 res.Close();
@@ -281,6 +290,45 @@ namespace FloatToolGUI
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void benchmarkThreadsNumericUpdown_ValueChanged(object sender, EventArgs e)
+        {
+            if (benchmarkThreadsNumericUpdown.Value > Environment.ProcessorCount)
+            {
+                warningPic.Enabled = true;
+                warningPic.Visible = true;
+            }
+            else
+            {
+                warningPic.Enabled = false;
+                warningPic.Visible = false;
+            }
+        }
+
+        private void updateBenchmarksButton_Click(object sender, EventArgs e)
+        {
+            benchmarkScoreboardLayout.Controls.Clear();
+
+            benchmarkScoreboardLayout.Controls.Add(new Panel { 
+                Size = new Size(300, 100)
+            });
+            benchmarkScoreboardLayout.Controls.Add(new Label
+            {
+                Size = new Size(361, 19),
+                Text = "Загрузка бенчмарков...",
+                AutoSize = false,
+                TextAlign = ContentAlignment.MiddleCenter
+            });
+            benchmarkScoreboardLayout.Controls.Add(new PictureBox
+            {
+                Size = new Size(362, 64),
+                Image = Properties.Resources.loading,
+                SizeMode = PictureBoxSizeMode.Zoom
+            });
+
+            Thread t = new Thread(new ThreadStart(LoadStats));
+            t.Start();
         }
     }
 }

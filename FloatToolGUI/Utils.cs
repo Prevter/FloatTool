@@ -61,7 +61,7 @@ namespace FloatToolGUI
                     var json = response.Content.ReadAsStringAsync().Result;
 
                     dynamic release = JsonConvert.DeserializeObject(json);
-                    return release["tag_name"];
+                    return release["tag_name"]+"|"+release["assets"][0]["browser_download_url"];
                 }
             }
         }

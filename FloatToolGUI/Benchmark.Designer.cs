@@ -37,28 +37,27 @@
             this.versionLabel2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.speedLabel = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.benchmarkScoreboardLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Updater = new System.Windows.Forms.Timer(this.components);
             this.customProgressBar1 = new FloatToolGUI.CustomProgressBar();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.closeBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.benchmarkThreadsNumericUpdown = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel10.SuspendLayout();
+            this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.warningPic = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.updateBenchmarksButton = new System.Windows.Forms.Button();
+            this.benchmarkScoreboardLayout.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.benchmarkThreadsNumericUpdown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.warningPic)).BeginInit();
             this.SuspendLayout();
             // 
             // startBenchmarkBtn
@@ -84,11 +83,12 @@
             this.submitScoreBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitScoreBtn.Font = new System.Drawing.Font("Inter", 12F);
             this.submitScoreBtn.ForeColor = System.Drawing.Color.White;
-            this.submitScoreBtn.Location = new System.Drawing.Point(394, 221);
+            this.submitScoreBtn.Location = new System.Drawing.Point(484, 221);
             this.submitScoreBtn.Name = "submitScoreBtn";
-            this.submitScoreBtn.Size = new System.Drawing.Size(304, 29);
+            this.submitScoreBtn.Size = new System.Drawing.Size(214, 29);
             this.submitScoreBtn.TabIndex = 2;
             this.submitScoreBtn.Text = "Опубликовать";
+            this.ToolTip.SetToolTip(this.submitScoreBtn, "Просьба не отправлять много запросов на сервер в связи с его скоростью");
             this.submitScoreBtn.UseVisualStyleBackColor = false;
             this.submitScoreBtn.Click += new System.EventHandler(this.submitScoreBtn_Click);
             // 
@@ -129,7 +129,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(390, 151);
+            this.label4.Location = new System.Drawing.Point(390, 123);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 19);
             this.label4.TabIndex = 3;
@@ -140,102 +140,48 @@
             // 
             this.speedLabel.AutoSize = true;
             this.speedLabel.ForeColor = System.Drawing.Color.White;
-            this.speedLabel.Location = new System.Drawing.Point(390, 171);
+            this.speedLabel.Location = new System.Drawing.Point(390, 143);
             this.speedLabel.Name = "speedLabel";
             this.speedLabel.Size = new System.Drawing.Size(43, 19);
             this.speedLabel.TabIndex = 3;
             this.speedLabel.Text = "0 к/с";
             this.speedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // flowLayoutPanel1
+            // benchmarkScoreboardLayout
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.flowLayoutPanel1.Controls.Add(this.panel1);
-            this.flowLayoutPanel1.Controls.Add(this.panel10);
-            this.flowLayoutPanel1.Controls.Add(this.panel2);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.ForeColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(388, 333);
-            this.flowLayoutPanel1.TabIndex = 4;
-            this.flowLayoutPanel1.WrapContents = false;
+            this.benchmarkScoreboardLayout.AutoScroll = true;
+            this.benchmarkScoreboardLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.benchmarkScoreboardLayout.Controls.Add(this.panel1);
+            this.benchmarkScoreboardLayout.Controls.Add(this.label1);
+            this.benchmarkScoreboardLayout.Controls.Add(this.pictureBox1);
+            this.benchmarkScoreboardLayout.Dock = System.Windows.Forms.DockStyle.Left;
+            this.benchmarkScoreboardLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.benchmarkScoreboardLayout.ForeColor = System.Drawing.Color.White;
+            this.benchmarkScoreboardLayout.Location = new System.Drawing.Point(0, 0);
+            this.benchmarkScoreboardLayout.Name = "benchmarkScoreboardLayout";
+            this.benchmarkScoreboardLayout.Padding = new System.Windows.Forms.Padding(10);
+            this.benchmarkScoreboardLayout.Size = new System.Drawing.Size(388, 333);
+            this.benchmarkScoreboardLayout.TabIndex = 4;
+            this.benchmarkScoreboardLayout.WrapContents = false;
             // 
-            // panel1
+            // label1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(10)))), ((int)(((byte)(27)))));
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(10, 12);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0, 2, 0, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(350, 35);
-            this.panel1.TabIndex = 0;
+            this.label1.Location = new System.Drawing.Point(13, 116);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(361, 19);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Загрузка бенчмарков...";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label7
+            // pictureBox1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Inter", 8F);
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(3, 18);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(142, 14);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "1021779 к/с (v.0.5.0 beta)";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Inter", 8F);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(3, 3);
-            this.label6.Margin = new System.Windows.Forms.Padding(0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(281, 14);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "AMD Ryzen 5 2600 Six-Core Processor (12 Threads)";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
-            this.panel10.Controls.Add(this.label17);
-            this.panel10.Controls.Add(this.label18);
-            this.panel10.ForeColor = System.Drawing.Color.Black;
-            this.panel10.Location = new System.Drawing.Point(10, 52);
-            this.panel10.Margin = new System.Windows.Forms.Padding(0, 2, 0, 3);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(350, 35);
-            this.panel10.TabIndex = 19;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Inter", 8F);
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(3, 18);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(141, 14);
-            this.label17.TabIndex = 3;
-            this.label17.Text = "934030 к/с (v.0.5.0 beta)";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Inter", 8F);
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(3, 3);
-            this.label18.Margin = new System.Windows.Forms.Padding(0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(310, 14);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "Intel(R) Core(TM) i5-7300HQ CPU @ 2.50GHz (4 Threads)";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pictureBox1.Image = global::FloatToolGUI.Properties.Resources.loading;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 138);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(362, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // Updater
             // 
@@ -260,13 +206,17 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.panel4.Controls.Add(this.updateBenchmarksButton);
+            this.panel4.Controls.Add(this.warningPic);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.benchmarkThreadsNumericUpdown);
             this.panel4.Controls.Add(this.versionLabel2);
             this.panel4.Controls.Add(this.threadCountLabel);
             this.panel4.Controls.Add(this.cpuNameLabel);
             this.panel4.Controls.Add(this.startBenchmarkBtn);
             this.panel4.Controls.Add(this.customProgressBar1);
             this.panel4.Controls.Add(this.submitScoreBtn);
-            this.panel4.Controls.Add(this.flowLayoutPanel1);
+            this.panel4.Controls.Add(this.benchmarkScoreboardLayout);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.speedLabel);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -321,42 +271,81 @@
             this.panel3.TabIndex = 5;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DragWindowMouseDown);
             // 
-            // panel2
+            // benchmarkThreadsNumericUpdown
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(185)))), ((int)(((byte)(0)))));
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.ForeColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(10, 92);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0, 2, 0, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(350, 35);
-            this.panel2.TabIndex = 20;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Inter", 8F);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(3, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 14);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "10000 к/с (CUDA alpha)";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.benchmarkThreadsNumericUpdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.benchmarkThreadsNumericUpdown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.benchmarkThreadsNumericUpdown.ForeColor = System.Drawing.Color.White;
+            this.benchmarkThreadsNumericUpdown.Location = new System.Drawing.Point(551, 190);
+            this.benchmarkThreadsNumericUpdown.Maximum = new decimal(new int[] {
+            1024,
+            0,
+            0,
+            0});
+            this.benchmarkThreadsNumericUpdown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.benchmarkThreadsNumericUpdown.Name = "benchmarkThreadsNumericUpdown";
+            this.benchmarkThreadsNumericUpdown.Size = new System.Drawing.Size(147, 25);
+            this.benchmarkThreadsNumericUpdown.TabIndex = 5;
+            this.benchmarkThreadsNumericUpdown.Value = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.benchmarkThreadsNumericUpdown.ValueChanged += new System.EventHandler(this.benchmarkThreadsNumericUpdown_ValueChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Inter", 8F);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(3, 3);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(390, 192);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(259, 14);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "NVidia GeForce GTX 1660 Ti (1536 CUDA Cores)";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Size = new System.Drawing.Size(75, 19);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Потоков:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ToolTip
+            // 
+            this.ToolTip.ToolTipTitle = "Внимание";
+            // 
+            // warningPic
+            // 
+            this.warningPic.Enabled = false;
+            this.warningPic.Location = new System.Drawing.Point(520, 190);
+            this.warningPic.Name = "warningPic";
+            this.warningPic.Size = new System.Drawing.Size(25, 25);
+            this.warningPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.warningPic.TabIndex = 7;
+            this.warningPic.TabStop = false;
+            this.ToolTip.SetToolTip(this.warningPic, "Не рекомендуется указывать большее количество \r\nпотоков, чем имеется в вашем проц" +
+        "ессоре. \r\nСкорость будет значительно ниже.");
+            this.warningPic.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(13, 13);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(362, 100);
+            this.panel1.TabIndex = 7;
+            // 
+            // updateBenchmarksButton
+            // 
+            this.updateBenchmarksButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.updateBenchmarksButton.FlatAppearance.BorderSize = 0;
+            this.updateBenchmarksButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateBenchmarksButton.Font = new System.Drawing.Font("Inter", 10F);
+            this.updateBenchmarksButton.ForeColor = System.Drawing.Color.White;
+            this.updateBenchmarksButton.Location = new System.Drawing.Point(394, 221);
+            this.updateBenchmarksButton.Name = "updateBenchmarksButton";
+            this.updateBenchmarksButton.Size = new System.Drawing.Size(84, 29);
+            this.updateBenchmarksButton.TabIndex = 8;
+            this.updateBenchmarksButton.Text = "Обновить";
+            this.updateBenchmarksButton.UseVisualStyleBackColor = false;
+            this.updateBenchmarksButton.Click += new System.EventHandler(this.updateBenchmarksButton_Click);
             // 
             // Benchmark
             // 
@@ -370,17 +359,14 @@
             this.Name = "Benchmark";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Бенчмарк";
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
+            this.benchmarkScoreboardLayout.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.benchmarkThreadsNumericUpdown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.warningPic)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -395,20 +381,19 @@
         private System.Windows.Forms.Label versionLabel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label speedLabel;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel benchmarkScoreboardLayout;
         private System.Windows.Forms.Timer Updater;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button closeBtn;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown benchmarkThreadsNumericUpdown;
+        private System.Windows.Forms.ToolTip ToolTip;
+        private System.Windows.Forms.PictureBox warningPic;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button updateBenchmarksButton;
     }
 }
