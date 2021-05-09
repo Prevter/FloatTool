@@ -20,9 +20,9 @@ namespace FloatToolGUI
         static public decimal craft(List<InputSkin> ingridients, float minFloat, float maxFloat)
         {
             decimal avgFloat = 0;
-            foreach (InputSkin f in ingridients)
+            for (int i = 0; i < 10; i++)
             {
-                avgFloat += f.WearValue;
+                avgFloat += ingridients[i].WearValue;
             }
             avgFloat /= 10;
             return ((decimal)(maxFloat - minFloat) * avgFloat) + (decimal)minFloat;
