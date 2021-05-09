@@ -33,26 +33,29 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.closeBtn = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.saveChangesBtn = new System.Windows.Forms.Button();
             this.resetChangesBtn = new System.Windows.Forms.Button();
             this.bufferSpeedNUP = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.checkUpdatesToggle = new FloatToolGUI.CustomControls.CustomToggleSwitch();
-            this.soundToggle = new FloatToolGUI.CustomControls.CustomToggleSwitch();
-            this.darkModeToggle = new FloatToolGUI.CustomControls.CustomToggleSwitch();
-            this.discordRpcToggle = new FloatToolGUI.CustomControls.CustomToggleSwitch();
             this.label5 = new System.Windows.Forms.Label();
             this.currencyComboBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.currencyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.currencyBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label7 = new System.Windows.Forms.Label();
+            this.themeSelectorComboBox = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.SettingsHints = new System.Windows.Forms.ToolTip(this.components);
+            this.discordRpcToggle = new FloatToolGUI.CustomControls.CustomToggleSwitch();
+            this.checkUpdatesToggle = new FloatToolGUI.CustomControls.CustomToggleSwitch();
+            this.soundToggle = new FloatToolGUI.CustomControls.CustomToggleSwitch();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bufferSpeedNUP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.currencyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.currencyBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -100,38 +103,29 @@
             this.label8.Text = "Настройки";
             this.label8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DragWindowMouseDown);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Inter", 14F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(75, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 23);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Тёмная тема";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Inter", 14F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(75, 95);
+            this.label2.Location = new System.Drawing.Point(74, 285);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(213, 23);
             this.label2.TabIndex = 3;
             this.label2.Text = "Звук при нахождении";
+            this.SettingsHints.SetToolTip(this.label2, "Проигрывать звуковой сигнал при нахождении комбинации");
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Inter", 14F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(75, 137);
+            this.label3.Location = new System.Drawing.Point(74, 327);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(217, 23);
             this.label3.TabIndex = 3;
             this.label3.Text = "Проверка обновлений";
+            this.SettingsHints.SetToolTip(this.label3, "Проверять наличие обновлений при запуске программы");
             // 
             // saveChangesBtn
             // 
@@ -143,11 +137,12 @@
             this.saveChangesBtn.Font = new System.Drawing.Font("Inter", 14F);
             this.saveChangesBtn.ForeColor = System.Drawing.Color.White;
             this.saveChangesBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.saveChangesBtn.Location = new System.Drawing.Point(8, 320);
+            this.saveChangesBtn.Location = new System.Drawing.Point(8, 512);
             this.saveChangesBtn.Name = "saveChangesBtn";
             this.saveChangesBtn.Size = new System.Drawing.Size(185, 32);
             this.saveChangesBtn.TabIndex = 4;
             this.saveChangesBtn.Text = "Применить";
+            this.SettingsHints.SetToolTip(this.saveChangesBtn, "Сохранить настройки");
             this.saveChangesBtn.UseVisualStyleBackColor = false;
             this.saveChangesBtn.Click += new System.EventHandler(this.saveChangesBtn_Click);
             // 
@@ -160,11 +155,12 @@
             this.resetChangesBtn.Font = new System.Drawing.Font("Inter", 14F);
             this.resetChangesBtn.ForeColor = System.Drawing.Color.White;
             this.resetChangesBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.resetChangesBtn.Location = new System.Drawing.Point(199, 320);
+            this.resetChangesBtn.Location = new System.Drawing.Point(199, 512);
             this.resetChangesBtn.Name = "resetChangesBtn";
             this.resetChangesBtn.Size = new System.Drawing.Size(185, 32);
             this.resetChangesBtn.TabIndex = 4;
             this.resetChangesBtn.Text = "Отмена";
+            this.SettingsHints.SetToolTip(this.resetChangesBtn, "Отменить изменения");
             this.resetChangesBtn.UseVisualStyleBackColor = false;
             this.resetChangesBtn.Click += new System.EventHandler(this.resetChangesBtn_Click);
             // 
@@ -174,7 +170,7 @@
             this.bufferSpeedNUP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bufferSpeedNUP.Font = new System.Drawing.Font("Inter", 14F);
             this.bufferSpeedNUP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.bufferSpeedNUP.Location = new System.Drawing.Point(8, 280);
+            this.bufferSpeedNUP.Location = new System.Drawing.Point(7, 470);
             this.bufferSpeedNUP.Maximum = new decimal(new int[] {
             5000,
             0,
@@ -188,6 +184,7 @@
             this.bufferSpeedNUP.Name = "bufferSpeedNUP";
             this.bufferSpeedNUP.Size = new System.Drawing.Size(376, 30);
             this.bufferSpeedNUP.TabIndex = 5;
+            this.SettingsHints.SetToolTip(this.bufferSpeedNUP, "Скорость с которой будет выводиться текст в консоль");
             this.bufferSpeedNUP.Value = new decimal(new int[] {
             250,
             0,
@@ -200,70 +197,25 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Inter", 14F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(4, 253);
+            this.label4.Location = new System.Drawing.Point(3, 443);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(333, 23);
             this.label4.TabIndex = 3;
             this.label4.Text = "Скорость обновления буфера (мс)";
-            // 
-            // checkUpdatesToggle
-            // 
-            this.checkUpdatesToggle.Checked = true;
-            this.checkUpdatesToggle.ForeColor = System.Drawing.Color.White;
-            this.checkUpdatesToggle.Location = new System.Drawing.Point(8, 131);
-            this.checkUpdatesToggle.Name = "checkUpdatesToggle";
-            this.checkUpdatesToggle.Size = new System.Drawing.Size(64, 36);
-            this.checkUpdatesToggle.TabIndex = 2;
-            this.checkUpdatesToggle.TurnedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.checkUpdatesToggle.TurnedOnColor = System.Drawing.Color.Green;
-            this.checkUpdatesToggle.OnToggled += new System.EventHandler(this.Toggle_OnToggled);
-            // 
-            // soundToggle
-            // 
-            this.soundToggle.Checked = true;
-            this.soundToggle.ForeColor = System.Drawing.Color.White;
-            this.soundToggle.Location = new System.Drawing.Point(8, 89);
-            this.soundToggle.Name = "soundToggle";
-            this.soundToggle.Size = new System.Drawing.Size(64, 36);
-            this.soundToggle.TabIndex = 2;
-            this.soundToggle.TurnedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.soundToggle.TurnedOnColor = System.Drawing.Color.Green;
-            this.soundToggle.OnToggled += new System.EventHandler(this.Toggle_OnToggled);
-            // 
-            // darkModeToggle
-            // 
-            this.darkModeToggle.Checked = true;
-            this.darkModeToggle.ForeColor = System.Drawing.Color.White;
-            this.darkModeToggle.Location = new System.Drawing.Point(8, 46);
-            this.darkModeToggle.Name = "darkModeToggle";
-            this.darkModeToggle.Size = new System.Drawing.Size(64, 36);
-            this.darkModeToggle.TabIndex = 2;
-            this.darkModeToggle.TurnedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.darkModeToggle.TurnedOnColor = System.Drawing.Color.Green;
-            this.darkModeToggle.OnToggled += new System.EventHandler(this.Toggle_OnToggled);
-            // 
-            // discordRpcToggle
-            // 
-            this.discordRpcToggle.Checked = true;
-            this.discordRpcToggle.ForeColor = System.Drawing.Color.White;
-            this.discordRpcToggle.Location = new System.Drawing.Point(8, 173);
-            this.discordRpcToggle.Name = "discordRpcToggle";
-            this.discordRpcToggle.Size = new System.Drawing.Size(64, 36);
-            this.discordRpcToggle.TabIndex = 2;
-            this.discordRpcToggle.TurnedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.discordRpcToggle.TurnedOnColor = System.Drawing.Color.Green;
-            this.discordRpcToggle.OnToggled += new System.EventHandler(this.Toggle_OnToggled);
+            this.SettingsHints.SetToolTip(this.label4, "Скорость с которой будет выводиться текст в консоль");
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Inter", 14F);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(75, 179);
+            this.label5.Location = new System.Drawing.Point(74, 369);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(197, 23);
             this.label5.TabIndex = 3;
             this.label5.Text = "Интеграция Discord";
+            this.SettingsHints.SetToolTip(this.label5, "Использовать интеграцию Discord Rich Presence чтобы показывать в статусе что вы к" +
+        "рафтите");
             // 
             // currencyComboBox
             // 
@@ -273,10 +225,11 @@
             this.currencyComboBox.Font = new System.Drawing.Font("Inter", 14F);
             this.currencyComboBox.ForeColor = System.Drawing.Color.White;
             this.currencyComboBox.FormattingEnabled = true;
-            this.currencyComboBox.Location = new System.Drawing.Point(90, 218);
+            this.currencyComboBox.Location = new System.Drawing.Point(89, 408);
             this.currencyComboBox.Name = "currencyComboBox";
             this.currencyComboBox.Size = new System.Drawing.Size(173, 31);
             this.currencyComboBox.TabIndex = 6;
+            this.SettingsHints.SetToolTip(this.currencyComboBox, "Валюта в которой будет отображатся часть интерфейса");
             this.currencyComboBox.SelectedIndexChanged += new System.EventHandler(this.bufferSpeedNUP_ValueChanged);
             // 
             // label6
@@ -284,11 +237,12 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Inter", 14F);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(4, 221);
+            this.label6.Location = new System.Drawing.Point(3, 411);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 23);
             this.label6.TabIndex = 3;
             this.label6.Text = "Валюта:";
+            this.SettingsHints.SetToolTip(this.label6, "Валюта в которой будет отображатся часть интерфейса");
             // 
             // currencyBindingSource
             // 
@@ -298,11 +252,94 @@
             // 
             this.currencyBindingSource1.DataSource = typeof(FloatToolGUI.Utils.Currency);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Inter", 14F);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(4, 49);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 23);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Тема:";
+            // 
+            // themeSelectorComboBox
+            // 
+            this.themeSelectorComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.themeSelectorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.themeSelectorComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.themeSelectorComboBox.Font = new System.Drawing.Font("Inter", 14F);
+            this.themeSelectorComboBox.ForeColor = System.Drawing.Color.White;
+            this.themeSelectorComboBox.FormattingEnabled = true;
+            this.themeSelectorComboBox.Items.AddRange(new object[] {
+            "Тёмная",
+            "Светлая",
+            "Кастомная"});
+            this.themeSelectorComboBox.Location = new System.Drawing.Point(78, 46);
+            this.themeSelectorComboBox.Name = "themeSelectorComboBox";
+            this.themeSelectorComboBox.Size = new System.Drawing.Size(305, 31);
+            this.themeSelectorComboBox.TabIndex = 8;
+            this.SettingsHints.SetToolTip(this.themeSelectorComboBox, "Выбор темы приложения");
+            this.themeSelectorComboBox.SelectedIndexChanged += new System.EventHandler(this.themeSelectorComboBox_SelectedIndexChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::FloatToolGUI.Properties.Resources.DarkThemePreview;
+            this.pictureBox1.Location = new System.Drawing.Point(8, 83);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(375, 190);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // discordRpcToggle
+            // 
+            this.discordRpcToggle.Checked = true;
+            this.discordRpcToggle.ForeColor = System.Drawing.Color.White;
+            this.discordRpcToggle.Location = new System.Drawing.Point(7, 363);
+            this.discordRpcToggle.Name = "discordRpcToggle";
+            this.discordRpcToggle.Size = new System.Drawing.Size(64, 36);
+            this.discordRpcToggle.TabIndex = 2;
+            this.SettingsHints.SetToolTip(this.discordRpcToggle, "Использовать интеграцию Discord Rich Presence чтобы показывать в статусе что вы к" +
+        "рафтите");
+            this.discordRpcToggle.TurnedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.discordRpcToggle.TurnedOnColor = System.Drawing.Color.Green;
+            this.discordRpcToggle.OnToggled += new System.EventHandler(this.Toggle_OnToggled);
+            // 
+            // checkUpdatesToggle
+            // 
+            this.checkUpdatesToggle.Checked = true;
+            this.checkUpdatesToggle.ForeColor = System.Drawing.Color.White;
+            this.checkUpdatesToggle.Location = new System.Drawing.Point(7, 321);
+            this.checkUpdatesToggle.Name = "checkUpdatesToggle";
+            this.checkUpdatesToggle.Size = new System.Drawing.Size(64, 36);
+            this.checkUpdatesToggle.TabIndex = 2;
+            this.SettingsHints.SetToolTip(this.checkUpdatesToggle, "Проверять наличие обновлений при запуске программы");
+            this.checkUpdatesToggle.TurnedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.checkUpdatesToggle.TurnedOnColor = System.Drawing.Color.Green;
+            this.checkUpdatesToggle.OnToggled += new System.EventHandler(this.Toggle_OnToggled);
+            // 
+            // soundToggle
+            // 
+            this.soundToggle.Checked = true;
+            this.soundToggle.ForeColor = System.Drawing.Color.White;
+            this.soundToggle.Location = new System.Drawing.Point(7, 279);
+            this.soundToggle.Name = "soundToggle";
+            this.soundToggle.Size = new System.Drawing.Size(64, 36);
+            this.soundToggle.TabIndex = 2;
+            this.SettingsHints.SetToolTip(this.soundToggle, "Проигрывать звуковой сигнал при нахождении комбинации");
+            this.soundToggle.TurnedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.soundToggle.TurnedOnColor = System.Drawing.Color.Green;
+            this.soundToggle.OnToggled += new System.EventHandler(this.Toggle_OnToggled);
+            // 
             // SettingsForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.ClientSize = new System.Drawing.Size(390, 364);
+            this.ClientSize = new System.Drawing.Size(390, 556);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.themeSelectorComboBox);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.currencyComboBox);
             this.Controls.Add(this.bufferSpeedNUP);
             this.Controls.Add(this.resetChangesBtn);
@@ -315,8 +352,6 @@
             this.Controls.Add(this.discordRpcToggle);
             this.Controls.Add(this.checkUpdatesToggle);
             this.Controls.Add(this.soundToggle);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.darkModeToggle);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -328,6 +363,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bufferSpeedNUP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.currencyBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.currencyBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,8 +374,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button closeBtn;
-        private CustomControls.CustomToggleSwitch darkModeToggle;
-        private System.Windows.Forms.Label label1;
         private CustomControls.CustomToggleSwitch soundToggle;
         private System.Windows.Forms.Label label2;
         private CustomControls.CustomToggleSwitch checkUpdatesToggle;
@@ -354,5 +388,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.BindingSource currencyBindingSource;
         private System.Windows.Forms.BindingSource currencyBindingSource1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox themeSelectorComboBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolTip SettingsHints;
     }
 }

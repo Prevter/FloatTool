@@ -9,6 +9,8 @@ namespace FloatToolGUI
 {
     static class Logger
     {
+        static string LaunchTime = DateTime.Now.ToString().Replace(' ', '_').Replace(':', '-');
+
         static public void Log(object data)
         {
             using (StreamWriter w = File.AppendText("debug.log"))
@@ -20,7 +22,7 @@ namespace FloatToolGUI
         static public void SaveCrashReport()
         {
             Directory.CreateDirectory("crashreports");
-            File.Copy("debug.log", @$"crashreports{Path.DirectorySeparatorChar}{DateTime.Now.ToString().Replace(' ', '_').Replace(':', '-')}.log");
+            File.Copy("debug.log", @$"crashreports{Path.DirectorySeparatorChar}{LaunchTime}.log", true);
         }
 
         static public void ClearLogs()

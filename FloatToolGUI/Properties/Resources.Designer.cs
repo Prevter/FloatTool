@@ -83,6 +83,16 @@ namespace FloatToolGUI.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DarkThemePreview {
+            get {
+                object obj = ResourceManager.GetObject("DarkThemePreview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gearBlack {
             get {
                 object obj = ResourceManager.GetObject("gearBlack", resourceCulture);
@@ -117,6 +127,16 @@ namespace FloatToolGUI.Properties {
             get {
                 object obj = ResourceManager.GetObject("Inter_Regular", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LightThemePreview {
+            get {
+                object obj = ResourceManager.GetObject("LightThemePreview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

@@ -32,17 +32,16 @@ namespace FloatToolGUI
         {
             decimal wantFloat = 1;
             if (CurrentSearchMode != SearchMode.Equal)
-                decimal.TryParse(want, System.Globalization.NumberStyles.Any, CultureInfo.InvariantCulture, out wantFloat);
+                decimal.TryParse(want, NumberStyles.Any, CultureInfo.InvariantCulture, out wantFloat);
 
-            foreach (var item in outputs)
+            for (int i = 0; i < outputs.Count; i++)
             {
-                decimal flotOrigin = Math.Round(craft(inputs, item.MinFloat, item.MaxFloat), 14);
-                string flot = craftF(inputs, item.MinFloat, item.MaxFloat);
+                decimal flotOrigin = Math.Round(craft(inputs, outputs[i].MinFloat, outputs[i].MaxFloat), 14);
 
                 if (
-                    ((flotOrigin.ToString(CultureInfo.InvariantCulture).StartsWith(want)) && CurrentSearchMode == SearchMode.Equal) ||
-                    ((flotOrigin < wantFloat) && CurrentSearchMode == SearchMode.Less) ||
-                    ((flotOrigin > wantFloat) && CurrentSearchMode == SearchMode.Greater)
+                    (flotOrigin.ToString(CultureInfo.InvariantCulture).StartsWith(want, StringComparison.Ordinal) && CurrentSearchMode == SearchMode.Equal) ||
+                    (CurrentSearchMode == SearchMode.Less && (flotOrigin < wantFloat)) ||
+                    (CurrentSearchMode == SearchMode.Greater && (flotOrigin > wantFloat))
                 )
                 {
                     return;
@@ -254,7 +253,7 @@ namespace FloatToolGUI
             try
             {
                 submitScoreBtn.Enabled = false;
-                HttpWebRequest req = (HttpWebRequest)WebRequest.Create($"{uri}addBenchmark.php?cpu={cpuNameLabel.Text} ({benchmarkThreadsNumericUpdown.Value.ToString()})&speed={speedLabel.Text.Split(' ')[0]}");
+                HttpWebRequest req = (HttpWebRequest)WebRequest.Create($"{uri}addBenchmark.php?cpu={cpuNameLabel.Text} ({benchmarkThreadsNumericUpdown.Value} Threads)&speed={speedLabel.Text.Split(' ')[0]}");
                 req.UserAgent = $"FloatTool/{versionLabel2.Text}";
                 HttpWebResponse res = (HttpWebResponse)req.GetResponse();
                 res.Close();

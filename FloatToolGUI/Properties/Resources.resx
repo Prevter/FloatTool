@@ -124,6 +124,9 @@
   <data name="benchmarkWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\benchmarkWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DarkThemePreview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DarkThemePreview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="gearBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gearBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -135,6 +138,9 @@
   </data>
   <data name="Inter_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Inter-Regular.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LightThemePreview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LightThemePreview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

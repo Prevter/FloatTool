@@ -22,7 +22,7 @@ namespace FloatToolGUI
             decimal avgFloat = 0;
             foreach (InputSkin f in ingridients)
             {
-                avgFloat += (decimal)f.WearValue;
+                avgFloat += f.WearValue;
             }
             avgFloat /= 10;
             return ((decimal)(maxFloat - minFloat) * avgFloat) + (decimal)minFloat;

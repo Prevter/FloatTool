@@ -193,6 +193,8 @@
   <ItemGroup>
     <Content Include="floattool.ico" />
     <Content Include="FodyWeavers.xml" />
+    <None Include="Resources\LightThemePreview.png" />
+    <None Include="Resources\DarkThemePreview.png" />
     <None Include="Resources\loading.gif" />
     <EmbeddedResource Include="itemData.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

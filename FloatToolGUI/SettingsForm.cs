@@ -20,14 +20,15 @@ namespace FloatToolGUI
         {
             InitializeComponent();
             currencyComboBox.DataSource = Enum.GetValues(typeof(Currency));
+            themeSelectorComboBox.DataSource = Enum.GetValues(typeof(Pallete));
             CheckRegistry();
             registryData = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\FloatTool");
-            darkModeToggle.Checked = Convert.ToBoolean(registryData.GetValue("darkMode"));
             soundToggle.Checked = Convert.ToBoolean(registryData.GetValue("sound"));
             checkUpdatesToggle.Checked = Convert.ToBoolean(registryData.GetValue("updateCheck"));
             bufferSpeedNUP.Value = (int)registryData.GetValue("bufferSpeed");
             discordRpcToggle.Checked = Convert.ToBoolean(registryData.GetValue("discordRPC"));
             currencyComboBox.SelectedItem = (Currency)registryData.GetValue("currency");
+            themeSelectorComboBox.SelectedItem = (Pallete)registryData.GetValue("theme");
             saveChangesBtn.Enabled = false;
             Logger.Log($"[{DateTime.Now}]: Settings window opened");
         }
@@ -71,12 +72,12 @@ namespace FloatToolGUI
         {
             CheckRegistry();
             registryData = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\FloatTool", true);
-            registryData.SetValue("darkMode", darkModeToggle.Checked);
             registryData.SetValue("sound", soundToggle.Checked);
             registryData.SetValue("updateCheck", checkUpdatesToggle.Checked);
             registryData.SetValue("bufferSpeed", (int)bufferSpeedNUP.Value);
             registryData.SetValue("discordRPC", discordRpcToggle.Checked);
             registryData.SetValue("currency", (int)currencyComboBox.SelectedValue);
+            registryData.SetValue("theme", (int)themeSelectorComboBox.SelectedItem);
             registryData.Close();
             saveChangesBtn.Enabled = false;
             Logger.Log($"[{DateTime.Now}]: Settings saved");
@@ -86,14 +87,31 @@ namespace FloatToolGUI
         {
             CheckRegistry();
             registryData = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\FloatTool");
-            darkModeToggle.Checked = Convert.ToBoolean(registryData.GetValue("darkMode"));
             soundToggle.Checked = Convert.ToBoolean(registryData.GetValue("sound"));
             checkUpdatesToggle.Checked = Convert.ToBoolean(registryData.GetValue("updateCheck"));
             bufferSpeedNUP.Value = (int)registryData.GetValue("bufferSpeed");
             discordRpcToggle.Checked = Convert.ToBoolean(registryData.GetValue("discordRPC"));
             currencyComboBox.SelectedItem = (Currency)registryData.GetValue("currency");
+            themeSelectorComboBox.SelectedItem = (Pallete)registryData.GetValue("theme");
             saveChangesBtn.Enabled = false;
             Logger.Log($"[{DateTime.Now}]: Settings reseted");
+        }
+
+        private void themeSelectorComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            saveChangesBtn.Enabled = true;
+            if ((Pallete)themeSelectorComboBox.SelectedItem == Pallete.Dark)
+                pictureBox1.Image = Properties.Resources.DarkThemePreview;
+            else if ((Pallete)themeSelectorComboBox.SelectedItem == Pallete.Light)
+                pictureBox1.Image = Properties.Resources.LightThemePreview;
+            else
+                pictureBox1.Image = CustomPalette.Thumbnail;
+        }
+
+
+        private void SetTheme(Pallete pallete)
+        {
+
         }
     }
 }

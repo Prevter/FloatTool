@@ -117,173 +117,87 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Skin Search</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
+  <data name="checkPossibilityBtn.Text" xml:space="preserve">
     <value>Check</value>
   </data>
-  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>255, 24</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 15</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Full name:</value>
-  </data>
-  <data name="checkBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 15</value>
+    <value>62, 19</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Quality:</value>
   </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="outcomeSelectorComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>212, 67</value>
   </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 15</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Skin:</value>
-  </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="outcomeSelectorComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 24</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 15</value>
+    <value>105, 19</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Weapon type:</value>
   </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Bruteforce</value>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 19</value>
   </data>
-  <data name="checkBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Full name:</value>
   </data>
-  <data name="checkBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 18</value>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 19</value>
   </data>
-  <data name="checkBox3.Text" xml:space="preserve">
-    <value>Ascending</value>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Outcomes:</value>
   </data>
-  <data name="checkBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 19</value>
   </data>
-  <data name="checkBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 96</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Skin:</value>
   </data>
-  <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 18</value>
+  <data name="startSearchSingleButton.Text" xml:space="preserve">
+    <value>Find one</value>
   </data>
-  <data name="checkBox2.Text" xml:space="preserve">
-    <value>Sort</value>
+  <data name="searchModeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 19</value>
   </data>
-  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 14</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Skip value:</value>
-  </data>
-  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 14</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Amount:</value>
-  </data>
-  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="searchModeLabel.Text" xml:space="preserve">
+    <value>Search mode:</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 14</value>
+    <value>104, 19</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
     <value>Desired float:</value>
   </data>
-  <data name="progressBar1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="ascendingCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 23</value>
   </data>
-  <data name="button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="ascendingCheckBox.Text" xml:space="preserve">
+    <value>Ascending</value>
   </data>
-  <data name="button2.Text" xml:space="preserve">
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 19</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Skip value:</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 19</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Amount:</value>
+  </data>
+  <data name="sortCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 23</value>
+  </data>
+  <data name="sortCheckBox.Text" xml:space="preserve">
+    <value>Sort</value>
+  </data>
+  <data name="startBtn.Text" xml:space="preserve">
     <value>Start</value>
-  </data>
-  <data name="groupBox3.Text" xml:space="preserve">
-    <value>Result</value>
-  </data>
-  <data name="textBox2.Text" xml:space="preserve">
-    <value>Welcome to FloatTool!
-A tool to create cool looking CS:GO skins wear values.</value>
-  </data>
-  <data name="настройкиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
-  </data>
-  <data name="настройкиToolStripMenuItem.Text" xml:space="preserve">
-    <value>Settings</value>
-  </data>
-  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="toolStripMenuItem2.Text" xml:space="preserve">
-    <value>Enable sound</value>
-  </data>
-  <data name="toolStripMenuItem2.ToolTipText" xml:space="preserve">
-    <value>Play sound when found combination</value>
-  </data>
-  <data name="перезапускToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="перезапускToolStripMenuItem.Text" xml:space="preserve">
-    <value>Restart</value>
-  </data>
-  <data name="перезапускToolStripMenuItem.ToolTipText" xml:space="preserve">
-    <value>Restart search after a certain time</value>
-  </data>
-  <data name="toolStripTextBox1.ToolTipText" xml:space="preserve">
-    <value>Minutes before restart</value>
-  </data>
-  <data name="информацияToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 20</value>
-  </data>
-  <data name="информацияToolStripMenuItem.Text" xml:space="preserve">
-    <value>Information</value>
-  </data>
-  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="туториалToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="туториалToolStripMenuItem.Text" xml:space="preserve">
-    <value>Tutorial</value>
-  </data>
-  <data name="оПрограммеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="оПрограммеToolStripMenuItem.Text" xml:space="preserve">
-    <value>About</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
