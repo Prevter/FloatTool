@@ -137,22 +137,22 @@ namespace FloatToolGUI
             // 
             // splitContainer1
             // 
-            resources.ApplyResources(this.splitContainer1, "splitContainer1");
             this.splitContainer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            resources.ApplyResources(this.splitContainer1, "splitContainer1");
             this.splitContainer1.ForeColor = System.Drawing.Color.White;
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
-            resources.ApplyResources(this.splitContainer1.Panel1, "splitContainer1.Panel1");
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.splitContainer1.Panel1.Controls.Add(this.foundCombinationContainer);
+            resources.ApplyResources(this.splitContainer1.Panel1, "splitContainer1.Panel1");
             // 
             // splitContainer1.Panel2
             // 
-            resources.ApplyResources(this.splitContainer1.Panel2, "splitContainer1.Panel2");
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.splitContainer1.Panel2.Controls.Add(this.outputConsoleBox);
+            resources.ApplyResources(this.splitContainer1.Panel2, "splitContainer1.Panel2");
             // 
             // foundCombinationContainer
             // 
@@ -162,10 +162,10 @@ namespace FloatToolGUI
             // 
             // outputConsoleBox
             // 
-            resources.ApplyResources(this.outputConsoleBox, "outputConsoleBox");
             this.outputConsoleBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.outputConsoleBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.outputConsoleBox.Cursor = System.Windows.Forms.Cursors.Default;
+            resources.ApplyResources(this.outputConsoleBox, "outputConsoleBox");
             this.outputConsoleBox.ForeColor = System.Drawing.Color.White;
             this.outputConsoleBox.Name = "outputConsoleBox";
             this.outputConsoleBox.ReadOnly = true;
@@ -179,70 +179,70 @@ namespace FloatToolGUI
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel7);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // panel8
             // 
-            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.Controls.Add(this.panel13);
             this.panel8.Controls.Add(this.panel10);
+            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.Name = "panel8";
             // 
             // panel13
             // 
-            resources.ApplyResources(this.panel13, "panel13");
             this.panel13.Controls.Add(this.panel11);
             this.panel13.Controls.Add(this.panel12);
+            resources.ApplyResources(this.panel13, "panel13");
             this.panel13.Name = "panel13";
             // 
             // panel11
             // 
-            resources.ApplyResources(this.panel11, "panel11");
             this.panel11.Controls.Add(this.splitContainer1);
+            resources.ApplyResources(this.panel11, "panel11");
             this.panel11.Name = "panel11";
             // 
             // panel12
             // 
-            resources.ApplyResources(this.panel12, "panel12");
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            resources.ApplyResources(this.panel12, "panel12");
             this.panel12.Name = "panel12";
             // 
             // panel10
             // 
-            resources.ApplyResources(this.panel10, "panel10");
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            resources.ApplyResources(this.panel10, "panel10");
             this.panel10.Name = "panel10";
             // 
             // panel7
             // 
-            resources.ApplyResources(this.panel7, "panel7");
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(227)))));
             this.panel7.Controls.Add(this.panel9);
             this.panel7.Controls.Add(this.button5);
             this.panel7.Controls.Add(this.button4);
             this.panel7.Controls.Add(this.button3);
+            resources.ApplyResources(this.panel7, "panel7");
             this.panel7.Name = "panel7";
             // 
             // panel9
             // 
-            resources.ApplyResources(this.panel9, "panel9");
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.panel9.Controls.Add(this.benchmarkButton);
             this.panel9.Controls.Add(this.settingsButton);
             this.panel9.Controls.Add(this.MaximizeButton);
             this.panel9.Controls.Add(this.minimizeBtn);
             this.panel9.Controls.Add(this.closeBtn);
+            resources.ApplyResources(this.panel9, "panel9");
             this.panel9.Name = "panel9";
             this.panel9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowDragEvent);
             // 
             // benchmarkButton
             // 
-            resources.ApplyResources(this.benchmarkButton, "benchmarkButton");
             this.benchmarkButton.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.benchmarkButton, "benchmarkButton");
             this.benchmarkButton.FlatAppearance.BorderSize = 0;
             this.benchmarkButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.benchmarkButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -253,8 +253,8 @@ namespace FloatToolGUI
             // 
             // settingsButton
             // 
-            resources.ApplyResources(this.settingsButton, "settingsButton");
             this.settingsButton.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.settingsButton, "settingsButton");
             this.settingsButton.FlatAppearance.BorderSize = 0;
             this.settingsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.settingsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -328,11 +328,11 @@ namespace FloatToolGUI
             // 
             // panel3
             // 
-            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.panel3.Controls.Add(this.label24);
             this.panel3.Controls.Add(this.versionLabel);
             this.panel3.Controls.Add(this.label8);
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowDragEvent);
             // 
@@ -341,6 +341,7 @@ namespace FloatToolGUI
             resources.ApplyResources(this.label24, "label24");
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.label24.Name = "label24";
+            this.label24.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.debugMenuShow);
             // 
             // versionLabel
             // 
@@ -357,7 +358,6 @@ namespace FloatToolGUI
             // 
             // panel6
             // 
-            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.panel6.Controls.Add(this.stattrackCheckBox);
             this.panel6.Controls.Add(this.checkPossibilityBtn);
@@ -372,13 +372,14 @@ namespace FloatToolGUI
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.fullSkinName);
             this.panel6.Controls.Add(this.weaponSkinBox);
+            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             // 
             // stattrackCheckBox
             // 
-            resources.ApplyResources(this.stattrackCheckBox, "stattrackCheckBox");
             this.stattrackCheckBox.Checked = false;
             this.stattrackCheckBox.ForeColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.stattrackCheckBox, "stattrackCheckBox");
             this.stattrackCheckBox.Name = "stattrackCheckBox";
             this.stattrackCheckBox.TurnedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.stattrackCheckBox.TurnedOnColor = System.Drawing.Color.Green;
@@ -508,9 +509,9 @@ namespace FloatToolGUI
             // 
             // fullSkinName
             // 
-            resources.ApplyResources(this.fullSkinName, "fullSkinName");
             this.fullSkinName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.fullSkinName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.fullSkinName, "fullSkinName");
             this.fullSkinName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.fullSkinName.Name = "fullSkinName";
             // 
@@ -526,15 +527,14 @@ namespace FloatToolGUI
             // 
             // panel5
             // 
-            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.panel5.Controls.Add(this.panel16);
             this.panel5.Controls.Add(this.panel15);
+            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
             // 
             // panel16
             // 
-            resources.ApplyResources(this.panel16, "panel16");
             this.panel16.BackColor = System.Drawing.Color.Transparent;
             this.panel16.Controls.Add(this.startSearchSingleButton);
             this.panel16.Controls.Add(this.downloadProgressBar);
@@ -551,6 +551,7 @@ namespace FloatToolGUI
             this.panel16.Controls.Add(this.searchFloatInput);
             this.panel16.Controls.Add(this.sortCheckBox);
             this.panel16.Controls.Add(this.startBtn);
+            resources.ApplyResources(this.panel16, "panel16");
             this.panel16.Name = "panel16";
             // 
             // startSearchSingleButton
@@ -706,13 +707,13 @@ namespace FloatToolGUI
             // 
             // panel15
             // 
-            resources.ApplyResources(this.panel15, "panel15");
             this.panel15.BackColor = System.Drawing.Color.Transparent;
             this.panel15.Controls.Add(this.speedStatusLabel);
             this.panel15.Controls.Add(this.combinationsStatusLabel);
             this.panel15.Controls.Add(this.gpuSearch_btn);
             this.panel15.Controls.Add(this.label10);
             this.panel15.Controls.Add(this.threadCountInput);
+            resources.ApplyResources(this.panel15, "panel15");
             this.panel15.Name = "panel15";
             // 
             // speedStatusLabel
@@ -745,9 +746,9 @@ namespace FloatToolGUI
             // 
             // threadCountInput
             // 
-            resources.ApplyResources(this.threadCountInput, "threadCountInput");
             this.threadCountInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.threadCountInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.threadCountInput, "threadCountInput");
             this.threadCountInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.threadCountInput.Maximum = new decimal(new int[] {
             1024,
@@ -768,16 +769,16 @@ namespace FloatToolGUI
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel3);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // panel4
             // 
-            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Controls.Add(this.panel1);
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
             // WorkStatusUpdater
@@ -788,9 +789,9 @@ namespace FloatToolGUI
             // 
             // FloatTool
             // 
-            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            resources.ApplyResources(this, "$this");
             this.ControlBox = false;
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);

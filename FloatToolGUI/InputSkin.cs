@@ -13,7 +13,6 @@ namespace FloatToolGUI
         public float Price { get; set; }
         public Currency SkinCurrency { get; set; }
 
-
         public InputSkin(decimal wear, float price, Currency currency) {
             WearValue = wear;
             Price = price;

@@ -51,10 +51,10 @@ namespace FloatToolGUI
 
         public void secndThread(List<Skin> craftList, string wanted, List<InputSkin> pool, int start, int skip)
         {
-            foreach (IEnumerable<InputSkin> pair in Combinations(pool, 10, start, skip))
+            foreach (IEnumerable<InputSkin> pair in Combinations(pool, start, skip))
             {
                 parseCraft(pair.ToList(), craftList, wanted);
-                currComb++;
+                Interlocked.Increment(ref currComb);
             }
         }
 
@@ -64,7 +64,7 @@ namespace FloatToolGUI
         }
 
         List<Thread> t2 = new List<Thread>();
-        int currComb;
+        long currComb;
         Thread thread1;
 
         private void StartCalculation()
@@ -100,7 +100,8 @@ namespace FloatToolGUI
             {
                 for (int i = 0; i < threads; i++)
                 {
-                    Thread newThread = new Thread(() => secndThread(outcomes, "1", inputSkins, i, threads));
+                    var startIndex = i;
+                    Thread newThread = new Thread(() => secndThread(outcomes, "1", inputSkins, startIndex, threads));
                     newThread.Start();
                     t2.Add(newThread);
                 }
@@ -131,7 +132,6 @@ namespace FloatToolGUI
             {
                 submitScoreBtn.Enabled = true;
                 speedLabel.Text = $"{Math.Round(currComb / timespan.TotalSeconds)} к/с";
-                currComb = 184756;
                 thread1.Abort();
             }
             ));

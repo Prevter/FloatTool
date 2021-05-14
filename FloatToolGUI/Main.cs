@@ -110,11 +110,11 @@ namespace FloatToolGUI
             decimal wantFloat = 1;
             if (CurrentSearchMode != SearchMode.Equal)
                 decimal.TryParse(want, NumberStyles.Any, CultureInfo.InvariantCulture, out wantFloat);
-            
+
             for (int i = 0; i < outputs.Count; i++)
             {
                 decimal flotOrigin = Math.Round(craft(inputs, outputs[i].MinFloat, outputs[i].MaxFloat), 14);
-
+                
                 if (
                     (flotOrigin.ToString(CultureInfo.InvariantCulture).StartsWith(want, StringComparison.Ordinal) && CurrentSearchMode == SearchMode.Equal) ||
                     (CurrentSearchMode == SearchMode.Less && (flotOrigin < wantFloat)) ||
@@ -126,6 +126,7 @@ namespace FloatToolGUI
                     {
                         float price = 0f;
                         List<string> floatStrings = new List<string>();
+
                         foreach (var fl in inputs)
                         {
                             floatStrings.Add(Math.Round(fl.WearValue, 14).ToString().Replace(",", "."));
@@ -144,6 +145,7 @@ namespace FloatToolGUI
                         ConsoleBuffer.Append($"{strings.TestFloat}: {flot}{newLine}");
                         ConsoleBuffer.Append($"Цена: {price} {inputs[0].SkinCurrency}{newLine}");
                         ConsoleBuffer.Append($"{strings.FloatList}: ");
+
 
                         if (SingleSearch) Searching = false;
 
@@ -337,7 +339,6 @@ namespace FloatToolGUI
 
                     if (string.Compare(skin["name"].ToString().Split('|')[0].TrimEnd(), weaponTypeBox.Text) == 0)
                     {
-                        Console.WriteLine(skin["name"].ToString().Split('|')[1].Remove(0, 1));
                         weaponSkinBox.Items.Add(skin["name"].ToString().Split('|')[1].Remove(0, 1));
                     }
                 }
@@ -411,11 +412,10 @@ namespace FloatToolGUI
 
         public void secndThread(List<Skin> craftList, string wanted, List<InputSkin> pool, int start, int skip)
         {
-            foreach (IEnumerable<InputSkin> pair in Combinations(pool, 10, start, skip))
+            foreach (IEnumerable<InputSkin> _ in Combinations(pool, start, skip))
             {
-                parseCraft(pair.ToList(), craftList, wanted);
-                currComb++;
-                //Console.WriteLine(currComb);
+                parseCraft(_.ToList(), craftList, wanted);
+                Interlocked.Increment(ref currComb);
             }
         }
 
@@ -499,7 +499,7 @@ namespace FloatToolGUI
 
         public List<Thread> t2 = new List<Thread>();
         BigInteger totalComb = 0;
-        BigInteger currComb = 0;
+        long currComb = 0;
         public bool Searching = false;
 
         private void StartCalculation()
@@ -523,7 +523,7 @@ namespace FloatToolGUI
 
             totalComb = quantityInput.Value == 10 ? 1 : Fact((int)quantityInput.Value) / (Fact(10) * Fact((int)quantityInput.Value - 10));
             currComb = 0;
-            this.Invoke((MethodInvoker)(() =>
+            Invoke((MethodInvoker)(() =>
                 {
                     outputConsoleBox.Text = "Добро пожаловать в FloatTool!" + newLine + "Инструмент для создания флоатов при помощи крафтов CS:GO" + newLine;
                     outputConsoleBox.AppendText( "Время начала процесса: " + DateTime.Now.ToString("HH:mm:ss tt") + newLine);
@@ -634,15 +634,10 @@ namespace FloatToolGUI
                     Console.WriteLine("Sorted descending");
                 }
             }
-            this.Invoke((MethodInvoker)(() =>
+            Invoke((MethodInvoker)(() =>
             {
                 outputConsoleBox.AppendText( "Поиск ауткамов..." + newLine);
                 outputConsoleBox.SelectionStart = fullSkinName.Text.Length;
-                /*string line = "[";
-                foreach(var i in floats)
-                    line += $"{i.ToString().Replace(',','.')}, ";
-                line = line.Remove(line.Length - 2);
-                textBox2.AppendText("Список флоатов:" + newLine + line + "]" + newLine);*/
 
                 Logger.Log($"[{DateTime.Now}] Float list: [{string.Join(", ", inputSkins)}]");
                 outputConsoleBox.ScrollToCaret();
@@ -699,9 +694,10 @@ namespace FloatToolGUI
             int threads = (int)threadCountInput.Value;
             try
             {
-                for (int i = 0; i < threads; i++)
+                for (int j = 0; j < threads; j++)
                 {
-                    Thread newThread = new Thread(() => secndThread(outcomes, wanted, inputSkins, i, threads));
+                    var startIndex = j;
+                    Thread newThread = new Thread(() => secndThread(outcomes, wanted, inputSkins, startIndex, threads));
                     newThread.Start();
                     t2.Add(newThread);
                 }
@@ -1176,7 +1172,7 @@ namespace FloatToolGUI
             }
 
             if (totalComb != 0 && currComb < totalComb && Searching)
-                downloadProgressBar.Value = ((float)((double)(currComb) / (double)(totalComb) * 1000));
+                downloadProgressBar.Value = ((float)(currComb / (double)totalComb * 1000));
         }
 
         private void changeSearchMode(object sender, EventArgs e)
@@ -1215,6 +1211,11 @@ namespace FloatToolGUI
             }
 
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void debugMenuShow(object sender, MouseEventArgs e)
+        {
+            
         }
     }
 }

@@ -9,15 +9,15 @@ namespace FloatToolGUI
     public class Skin
     {
         public string Name { get; set; }
-        public float MinFloat { get; set; }
-        public float MaxFloat { get; set; }
+        public decimal MinFloat { get; set; }
+        public decimal MaxFloat { get; set; }
         public Quality Rarity { get; set; }
 
         public Skin(string name, float minWear, float maxWear, Quality rarity)
         {
             Name = name;
-            MinFloat = minWear;
-            MaxFloat = maxWear;
+            MinFloat = (decimal)minWear;
+            MaxFloat = (decimal)maxWear;
             Rarity = rarity;
         }
 

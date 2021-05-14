@@ -117,710 +117,1899 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="splitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 26</value>
+  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="&gt;&gt;weaponSkinBox.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="searchmodeLess_btn.Text" xml:space="preserve">
-    <value>&lt;</value>
+  <data name="splitContainer1.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button4.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="foundCombinationContainer.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="threadCountInput.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="foundCombinationContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="&gt;&gt;panel9.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="foundCombinationContainer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
   </data>
-  <data name="&gt;&gt;panel8.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="foundCombinationContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 26</value>
-  </data>
-  <data name="ascendingCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>267, 38</value>
-  </data>
-  <data name="weaponTypeBox.Items6" xml:space="preserve">
-    <value>FAMAS</value>
-  </data>
-  <data name="&gt;&gt;checkPossibilityBtn.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="fullSkinName.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="panel10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 418</value>
-  </data>
-  <data name="ascendingCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 23</value>
-  </data>
-  <data name="closeBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 40</value>
-  </data>
-  <data name="panel10.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;speedStatusLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label11.Text" xml:space="preserve">
-    <value>Ауткамы:</value>
-  </data>
-  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>409, 0</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Количество:</value>
-  </data>
-  <data name="versionLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="quantityInput.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;stattrackCheckBox.Name" xml:space="preserve">
-    <value>stattrackCheckBox</value>
-  </data>
-  <data name="&gt;&gt;label24.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;sortCheckBox.Parent" xml:space="preserve">
-    <value>panel16</value>
+  <data name="foundCombinationContainer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>449, 226</value>
   </data>
   <data name="foundCombinationContainer.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;label12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;foundCombinationContainer.Name" xml:space="preserve">
+    <value>foundCombinationContainer</value>
   </data>
-  <data name="startSearchSingleButton.Text" xml:space="preserve">
-    <value>Найти одну</value>
+  <data name="&gt;&gt;foundCombinationContainer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;weaponSkinBox.ZOrder" xml:space="preserve">
-    <value>12</value>
+  <data name="&gt;&gt;foundCombinationContainer.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
   </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Нужный флоат:</value>
+  <data name="&gt;&gt;foundCombinationContainer.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>panel6</value>
+  <data name="splitContainer1.Panel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+  <data name="&gt;&gt;splitContainer1.Panel1.Name" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="outputConsoleBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="outputConsoleBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 9.75pt</value>
+  </data>
+  <data name="outputConsoleBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="outputConsoleBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>40, 40, 40, 40</value>
+  </data>
+  <data name="outputConsoleBox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="outputConsoleBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Both</value>
+  </data>
+  <data name="outputConsoleBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>449, 158</value>
+  </data>
+  <data name="outputConsoleBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="outputConsoleBox.Text" xml:space="preserve">
+    <value>Добро пожаловать в FloatTool!
+Инструмент для создания флоатов при помощи крафтов CS:GO</value>
+  </data>
+  <data name="&gt;&gt;outputConsoleBox.Name" xml:space="preserve">
+    <value>outputConsoleBox</value>
+  </data>
+  <data name="&gt;&gt;outputConsoleBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;outputConsoleBox.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;outputConsoleBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitContainer1.Panel2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>459, 408</value>
+  </data>
+  <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
+    <value>236</value>
+  </data>
+  <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="DiscordUpdater.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>65, 16</value>
+  </metadata>
+  <data name="panel11.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 10</value>
+  </data>
+  <data name="panel11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>459, 408</value>
+  </data>
+  <data name="panel11.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panel11.Name" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;panel11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel11.Parent" xml:space="preserve">
+    <value>panel13</value>
+  </data>
+  <data name="&gt;&gt;panel11.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel12.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panel12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>459, 10</value>
+  </data>
+  <data name="panel12.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panel12.Name" xml:space="preserve">
+    <value>panel12</value>
+  </data>
+  <data name="&gt;&gt;panel12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel12.Parent" xml:space="preserve">
+    <value>panel13</value>
+  </data>
+  <data name="&gt;&gt;panel12.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel13.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 0</value>
+  </data>
+  <data name="panel13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>459, 418</value>
+  </data>
+  <data name="panel13.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;panel13.Name" xml:space="preserve">
+    <value>panel13</value>
+  </data>
+  <data name="&gt;&gt;panel13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel13.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;panel13.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel10.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="panel10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 418</value>
+  </data>
+  <data name="panel10.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panel10.Name" xml:space="preserve">
+    <value>panel10</value>
+  </data>
+  <data name="&gt;&gt;panel10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel10.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;panel10.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel8.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 40</value>
+  </data>
+  <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>469, 418</value>
+  </data>
+  <data name="panel8.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panel8.Name" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;panel8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel8.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
-    <value>panel16</value>
+  <data name="&gt;&gt;panel8.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="benchmarkButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
   </data>
-  <data name="label24.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 8.25pt</value>
+  <data name="benchmarkButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
-  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
-    <value>panel5</value>
+  <data name="benchmarkButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft JhengHei Light, 40px</value>
+  </data>
+  <data name="benchmarkButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="benchmarkButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 0</value>
+  </data>
+  <data name="benchmarkButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="benchmarkButton.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="benchmarkButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="benchmarkButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;benchmarkButton.Name" xml:space="preserve">
+    <value>benchmarkButton</value>
+  </data>
+  <data name="&gt;&gt;benchmarkButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;benchmarkButton.Parent" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="&gt;&gt;benchmarkButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="settingsButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="settingsButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="settingsButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft JhengHei Light, 40px</value>
+  </data>
+  <data name="settingsButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="settingsButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="settingsButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="settingsButton.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="settingsButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="settingsButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;settingsButton.Name" xml:space="preserve">
+    <value>settingsButton</value>
+  </data>
+  <data name="&gt;&gt;settingsButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;settingsButton.Parent" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="&gt;&gt;settingsButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="MaximizeButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="MaximizeButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="MaximizeButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 18pt</value>
+  </data>
+  <data name="MaximizeButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="MaximizeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>389, 1</value>
+  </data>
+  <data name="MaximizeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="MaximizeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="MaximizeButton.Text" xml:space="preserve">
+    <value>O</value>
+  </data>
+  <data name="&gt;&gt;MaximizeButton.Name" xml:space="preserve">
+    <value>MaximizeButton</value>
+  </data>
+  <data name="&gt;&gt;MaximizeButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MaximizeButton.Parent" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="&gt;&gt;MaximizeButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="minimizeBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="minimizeBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="minimizeBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 18pt</value>
+  </data>
+  <data name="minimizeBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="minimizeBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>349, 1</value>
+  </data>
+  <data name="minimizeBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 39</value>
+  </data>
+  <data name="minimizeBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="minimizeBtn.Text" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="&gt;&gt;minimizeBtn.Name" xml:space="preserve">
+    <value>minimizeBtn</value>
+  </data>
+  <data name="&gt;&gt;minimizeBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;minimizeBtn.Parent" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="&gt;&gt;minimizeBtn.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="closeBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="closeBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="closeBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 18pt</value>
+  </data>
+  <data name="closeBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="closeBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>429, 1</value>
+  </data>
+  <data name="closeBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="closeBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="closeBtn.Text" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="&gt;&gt;closeBtn.Name" xml:space="preserve">
+    <value>closeBtn</value>
+  </data>
+  <data name="&gt;&gt;closeBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;closeBtn.Parent" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="&gt;&gt;closeBtn.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="panel9.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panel9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>469, 40</value>
+  </data>
+  <data name="panel9.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panel9.Name" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="&gt;&gt;panel9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel9.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;panel9.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="button5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="button5.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="button5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft JhengHei Light, 12pt</value>
+  </data>
+  <data name="button5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>379, 0</value>
+  </data>
+  <data name="button5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 26</value>
+  </data>
+  <data name="button5.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="button5.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;button5.Name" xml:space="preserve">
+    <value>button5</value>
+  </data>
+  <data name="&gt;&gt;button5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button5.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;button5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="button4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="button4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="button4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft JhengHei Light, 12pt</value>
+  </data>
+  <data name="button4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>409, 0</value>
+  </data>
+  <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 26</value>
+  </data>
+  <data name="button4.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="button4.Text" xml:space="preserve">
+    <value>O</value>
+  </data>
+  <data name="&gt;&gt;button4.Name" xml:space="preserve">
+    <value>button4</value>
+  </data>
+  <data name="&gt;&gt;button4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button4.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="button3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="button3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="button3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft JhengHei Light, 12pt</value>
+  </data>
+  <data name="button3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>439, 0</value>
+  </data>
+  <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 26</value>
+  </data>
+  <data name="button3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="&gt;&gt;button3.Name" xml:space="preserve">
+    <value>button3</value>
+  </data>
+  <data name="&gt;&gt;button3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button3.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panel7.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>469, 40</value>
+  </data>
+  <data name="panel7.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panel7.Name" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;panel7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;panel7.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>469, 458</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel9.Name" xml:space="preserve">
-    <value>panel9</value>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="quantityInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>131, 98</value>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;threadCountInput.Parent" xml:space="preserve">
-    <value>panel15</value>
+  <data name="label24.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
-  <data name="startBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>267, 73</value>
+  <data name="label24.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="minimizeBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="label24.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 8.25pt</value>
   </data>
-  <data name="fullSkinName.Text" xml:space="preserve">
-    <value>Nova | Predator (Field-Tested)</value>
+  <data name="label24.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="panel15.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
+  <data name="label24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 19</value>
   </data>
-  <data name="weaponTypeBox.Items20" xml:space="preserve">
-    <value>Nova</value>
+  <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 14</value>
   </data>
-  <data name="splitContainer1.Panel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+  <data name="label24.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="label24.Text" xml:space="preserve">
+    <value>by Prevter</value>
   </data>
-  <data name="&gt;&gt;quantityInput.Name" xml:space="preserve">
-    <value>quantityInput</value>
+  <data name="&gt;&gt;label24.Name" xml:space="preserve">
+    <value>label24</value>
   </data>
-  <data name="splitContainer1.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
+  <data name="&gt;&gt;label24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
-    <value>302</value>
+  <data name="&gt;&gt;label24.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="versionLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="versionLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 8.25pt</value>
+  </data>
+  <data name="versionLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="versionLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 19</value>
+  </data>
+  <data name="versionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 14</value>
+  </data>
+  <data name="versionLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="versionLabel.Text" xml:space="preserve">
+    <value>v.0.7.1</value>
+  </data>
+  <data name="&gt;&gt;versionLabel.Name" xml:space="preserve">
+    <value>versionLabel</value>
+  </data>
+  <data name="&gt;&gt;versionLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;versionLabel.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;versionLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 21.75pt</value>
+  </data>
+  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 2</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 35</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
     <value>FloatTool</value>
   </data>
-  <data name="&gt;&gt;weaponTypeBox.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
   </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 11.249999pt</value>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 40</value>
+  </data>
+  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="stattrackCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 66</value>
+  </data>
+  <data name="stattrackCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>48, 41, 48, 41</value>
+  </data>
+  <data name="stattrackCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 24</value>
+  </data>
+  <data name="stattrackCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;stattrackCheckBox.Name" xml:space="preserve">
+    <value>stattrackCheckBox</value>
+  </data>
+  <data name="&gt;&gt;stattrackCheckBox.Type" xml:space="preserve">
+    <value>FloatToolGUI.CustomControls.CustomToggleSwitch, FloatTool, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;stattrackCheckBox.Parent" xml:space="preserve">
     <value>panel6</value>
   </data>
-  <data name="ascendingCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="speedStatusLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="searchmodeLess_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;outputConsoleBox.Name" xml:space="preserve">
-    <value>outputConsoleBox</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Скин:</value>
-  </data>
-  <data name="benchmarkButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 0</value>
-  </data>
-  <data name="&gt;&gt;panel13.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;stattrackCheckBox.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="checkPossibilityBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="checkPossibilityBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="checkPossibilityBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 10.25pt</value>
+  </data>
+  <data name="checkPossibilityBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkPossibilityBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 98</value>
+  </data>
+  <data name="checkPossibilityBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 24</value>
+  </data>
+  <data name="checkPossibilityBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="checkPossibilityBtn.Text" xml:space="preserve">
+    <value>Проверить</value>
+  </data>
+  <data name="&gt;&gt;checkPossibilityBtn.Name" xml:space="preserve">
+    <value>checkPossibilityBtn</value>
+  </data>
+  <data name="&gt;&gt;checkPossibilityBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkPossibilityBtn.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;checkPossibilityBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>285, 13</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 19</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Качество:</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="outcomeSelectorComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="outcomeSelectorComboBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="outcomeSelectorComboBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 9.75pt</value>
+  </data>
+  <data name="outcomeSelectorComboBox.Items" xml:space="preserve">
+    <value>80% (AK-47 | Safari Mesh + 3)</value>
+  </data>
+  <data name="outcomeSelectorComboBox.Items1" xml:space="preserve">
+    <value>20% (Tec-9 | Varicamo)</value>
+  </data>
+  <data name="outcomeSelectorComboBox.Items2" xml:space="preserve">
+    <value>* Искать всё *</value>
+  </data>
+  <data name="outcomeSelectorComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 66</value>
+  </data>
+  <data name="outcomeSelectorComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 24</value>
+  </data>
+  <data name="outcomeSelectorComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="outcomeSelectorComboBox.Text" xml:space="preserve">
+    <value>80% (AK-47 | Safari Mesh + 3)</value>
+  </data>
+  <data name="&gt;&gt;outcomeSelectorComboBox.Name" xml:space="preserve">
+    <value>outcomeSelectorComboBox</value>
+  </data>
+  <data name="&gt;&gt;outcomeSelectorComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;outcomeSelectorComboBox.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;outcomeSelectorComboBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="weaponQualityBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="weaponQualityBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="weaponQualityBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 9.75pt</value>
+  </data>
+  <data name="weaponQualityBox.Items" xml:space="preserve">
+    <value>Factory New</value>
+  </data>
+  <data name="weaponQualityBox.Items1" xml:space="preserve">
+    <value>Minimal Wear</value>
+  </data>
+  <data name="weaponQualityBox.Items2" xml:space="preserve">
+    <value>Field-Tested</value>
+  </data>
+  <data name="weaponQualityBox.Items3" xml:space="preserve">
+    <value>Well-Worn</value>
+  </data>
+  <data name="weaponQualityBox.Items4" xml:space="preserve">
+    <value>Battle-Scarred</value>
+  </data>
+  <data name="weaponQualityBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>288, 34</value>
+  </data>
+  <data name="weaponQualityBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 24</value>
+  </data>
+  <data name="weaponQualityBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="weaponQualityBox.Text" xml:space="preserve">
+    <value>Field-Tested</value>
+  </data>
+  <data name="&gt;&gt;weaponQualityBox.Name" xml:space="preserve">
+    <value>weaponQualityBox</value>
+  </data>
+  <data name="&gt;&gt;weaponQualityBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;weaponQualityBox.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;weaponQualityBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label12.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 68</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 19</value>
+  </data>
+  <data name="label12.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>StatTrack:</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 13</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 19</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Тип оружия:</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 101</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 19</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Полное название:</value>
+  </data>
+  <data name="label4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="weaponTypeBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="weaponTypeBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="weaponTypeBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 9.75pt</value>
+  </data>
+  <data name="weaponTypeBox.Items" xml:space="preserve">
+    <value>AK-47</value>
+  </data>
+  <data name="weaponTypeBox.Items1" xml:space="preserve">
+    <value>AUG</value>
+  </data>
+  <data name="weaponTypeBox.Items2" xml:space="preserve">
+    <value>AWP</value>
   </data>
   <data name="weaponTypeBox.Items3" xml:space="preserve">
     <value>CZ75-Auto</value>
   </data>
-  <data name="&gt;&gt;weaponQualityBox.Parent" xml:space="preserve">
+  <data name="weaponTypeBox.Items4" xml:space="preserve">
+    <value>Desert Eagle</value>
+  </data>
+  <data name="weaponTypeBox.Items5" xml:space="preserve">
+    <value>Dual Berettas</value>
+  </data>
+  <data name="weaponTypeBox.Items6" xml:space="preserve">
+    <value>FAMAS</value>
+  </data>
+  <data name="weaponTypeBox.Items7" xml:space="preserve">
+    <value>Five-SeveN</value>
+  </data>
+  <data name="weaponTypeBox.Items8" xml:space="preserve">
+    <value>G3SG1</value>
+  </data>
+  <data name="weaponTypeBox.Items9" xml:space="preserve">
+    <value>Galil AR</value>
+  </data>
+  <data name="weaponTypeBox.Items10" xml:space="preserve">
+    <value>Glock-18</value>
+  </data>
+  <data name="weaponTypeBox.Items11" xml:space="preserve">
+    <value>M249</value>
+  </data>
+  <data name="weaponTypeBox.Items12" xml:space="preserve">
+    <value>M4A1-S</value>
+  </data>
+  <data name="weaponTypeBox.Items13" xml:space="preserve">
+    <value>M4A4</value>
+  </data>
+  <data name="weaponTypeBox.Items14" xml:space="preserve">
+    <value>MAC-10</value>
+  </data>
+  <data name="weaponTypeBox.Items15" xml:space="preserve">
+    <value>MAG-7</value>
+  </data>
+  <data name="weaponTypeBox.Items16" xml:space="preserve">
+    <value>MP5-SD</value>
+  </data>
+  <data name="weaponTypeBox.Items17" xml:space="preserve">
+    <value>MP7</value>
+  </data>
+  <data name="weaponTypeBox.Items18" xml:space="preserve">
+    <value>MP9</value>
+  </data>
+  <data name="weaponTypeBox.Items19" xml:space="preserve">
+    <value>Negev</value>
+  </data>
+  <data name="weaponTypeBox.Items20" xml:space="preserve">
+    <value>Nova</value>
+  </data>
+  <data name="weaponTypeBox.Items21" xml:space="preserve">
+    <value>P2000</value>
+  </data>
+  <data name="weaponTypeBox.Items22" xml:space="preserve">
+    <value>P250</value>
+  </data>
+  <data name="weaponTypeBox.Items23" xml:space="preserve">
+    <value>P90</value>
+  </data>
+  <data name="weaponTypeBox.Items24" xml:space="preserve">
+    <value>PP-Bizon</value>
+  </data>
+  <data name="weaponTypeBox.Items25" xml:space="preserve">
+    <value>R8 Revolver</value>
+  </data>
+  <data name="weaponTypeBox.Items26" xml:space="preserve">
+    <value>Sawed-Off</value>
+  </data>
+  <data name="weaponTypeBox.Items27" xml:space="preserve">
+    <value>SCAR-20</value>
+  </data>
+  <data name="weaponTypeBox.Items28" xml:space="preserve">
+    <value>SG 553</value>
+  </data>
+  <data name="weaponTypeBox.Items29" xml:space="preserve">
+    <value>SSG 08</value>
+  </data>
+  <data name="weaponTypeBox.Items30" xml:space="preserve">
+    <value>Tec-9</value>
+  </data>
+  <data name="weaponTypeBox.Items31" xml:space="preserve">
+    <value>UMP-45</value>
+  </data>
+  <data name="weaponTypeBox.Items32" xml:space="preserve">
+    <value>USP-S</value>
+  </data>
+  <data name="weaponTypeBox.Items33" xml:space="preserve">
+    <value>XM1014</value>
+  </data>
+  <data name="weaponTypeBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 34</value>
+  </data>
+  <data name="weaponTypeBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 24</value>
+  </data>
+  <data name="weaponTypeBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="weaponTypeBox.Text" xml:space="preserve">
+    <value>Nova</value>
+  </data>
+  <data name="&gt;&gt;weaponTypeBox.Name" xml:space="preserve">
+    <value>weaponTypeBox</value>
+  </data>
+  <data name="&gt;&gt;weaponTypeBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;weaponTypeBox.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;weaponTypeBox.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label11.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>127, 68</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 19</value>
+  </data>
+  <data name="label11.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Ауткамы:</value>
+  </data>
+  <data name="&gt;&gt;label11.Name" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>146, 12</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 19</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Скин:</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="fullSkinName.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="fullSkinName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 12pt</value>
+  </data>
+  <data name="fullSkinName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 126</value>
+  </data>
+  <data name="fullSkinName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 12, 10, 12</value>
+  </data>
+  <data name="fullSkinName.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>2, 25</value>
+  </data>
+  <data name="fullSkinName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 25</value>
+  </data>
+  <data name="fullSkinName.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="fullSkinName.Text" xml:space="preserve">
+    <value>Nova | Predator (Field-Tested)</value>
+  </data>
+  <data name="fullSkinName.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;fullSkinName.Name" xml:space="preserve">
+    <value>fullSkinName</value>
+  </data>
+  <data name="&gt;&gt;fullSkinName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fullSkinName.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;fullSkinName.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="weaponSkinBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="weaponSkinBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="weaponSkinBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 9.75pt</value>
+  </data>
+  <data name="weaponSkinBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 34</value>
+  </data>
+  <data name="weaponSkinBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 24</value>
+  </data>
+  <data name="weaponSkinBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="weaponSkinBox.Text" xml:space="preserve">
+    <value>Predator</value>
+  </data>
+  <data name="&gt;&gt;weaponSkinBox.Name" xml:space="preserve">
+    <value>weaponSkinBox</value>
+  </data>
+  <data name="&gt;&gt;weaponSkinBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;weaponSkinBox.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;weaponSkinBox.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="panel6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 40</value>
+  </data>
+  <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 151</value>
+  </data>
+  <data name="panel6.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panel6.Name" xml:space="preserve">
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;panel6.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;minimizeBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;startBtn.Parent" xml:space="preserve">
-    <value>panel16</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 70</value>
-  </data>
-  <data name="weaponTypeBox.Items7" xml:space="preserve">
-    <value>Five-SeveN</value>
-  </data>
-  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 19</value>
-  </data>
-  <data name="&gt;&gt;speedStatusLabel.Name" xml:space="preserve">
-    <value>speedStatusLabel</value>
-  </data>
-  <data name="&gt;&gt;closeBtn.Name" xml:space="preserve">
-    <value>closeBtn</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="closeBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>429, 1</value>
+  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
+    <value>panel2</value>
   </data>
   <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;searchFloatInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="startSearchSingleButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
-  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 2</value>
+  <data name="startSearchSingleButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
-    <value>splitContainer1</value>
-  </data>
-  <data name="gpuSearch_btn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="weaponQualityBox.Items3" xml:space="preserve">
-    <value>Well-Worn</value>
-  </data>
-  <data name="&gt;&gt;searchFloatInput.Parent" xml:space="preserve">
-    <value>panel16</value>
-  </data>
-  <data name="weaponQualityBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 34</value>
+  <data name="startSearchSingleButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 8pt</value>
   </data>
   <data name="startSearchSingleButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;panel11.ZOrder" xml:space="preserve">
+  <data name="startSearchSingleButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>267, 125</value>
+  </data>
+  <data name="startSearchSingleButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 21</value>
+  </data>
+  <data name="startSearchSingleButton.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="startSearchSingleButton.Text" xml:space="preserve">
+    <value>Найти одну</value>
+  </data>
+  <data name="&gt;&gt;startSearchSingleButton.Name" xml:space="preserve">
+    <value>startSearchSingleButton</value>
+  </data>
+  <data name="&gt;&gt;startSearchSingleButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;startSearchSingleButton.Parent" xml:space="preserve">
+    <value>panel16</value>
+  </data>
+  <data name="&gt;&gt;startSearchSingleButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;panel7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="minimizeBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 18pt</value>
-  </data>
-  <data name="label24.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Тип оружия:</value>
-  </data>
-  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="MaximizeButton.Text" xml:space="preserve">
-    <value>O</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FloatTool</value>
-  </data>
-  <data name="outcomeSelectorComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 24</value>
-  </data>
-  <data name="fullSkinName.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>2, 25</value>
-  </data>
-  <data name="fullSkinName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 126</value>
-  </data>
-  <data name="threadCountInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 22</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="foundCombinationContainer.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="outcomeSelectorComboBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 9.75pt</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Полное название:</value>
-  </data>
-  <data name="panel9.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="outcomeSelectorComboBox.Items1" xml:space="preserve">
-    <value>20% (Tec-9 | Varicamo)</value>
-  </data>
-  <data name="&gt;&gt;searchModeLabel.Name" xml:space="preserve">
-    <value>searchModeLabel</value>
-  </data>
-  <data name="&gt;&gt;panel8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fullSkinName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="outcomeSelectorComboBox.Text" xml:space="preserve">
-    <value>80% (AK-47 | Safari Mesh + 3)</value>
-  </data>
-  <data name="&gt;&gt;closeBtn.Parent" xml:space="preserve">
-    <value>panel9</value>
-  </data>
-  <data name="&gt;&gt;ascendingCheckBox.Name" xml:space="preserve">
-    <value>ascendingCheckBox</value>
-  </data>
-  <data name="minimizeBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;weaponQualityBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="speedStatusLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 9pt</value>
-  </data>
-  <data name="&gt;&gt;settingsButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="checkPossibilityBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 24</value>
-  </data>
-  <data name="weaponTypeBox.Items26" xml:space="preserve">
-    <value>Sawed-Off</value>
-  </data>
-  <data name="benchmarkButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="settingsButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft JhengHei Light, 40px</value>
-  </data>
-  <data name="checkPossibilityBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;speedStatusLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="weaponSkinBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="downloadProgressBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="searchModeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 19</value>
-  </data>
-  <data name="weaponTypeBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="downloadProgressBar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Inter, 9.75pt</value>
   </data>
-  <data name="label4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
+  <data name="downloadProgressBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 161</value>
   </data>
-  <data name="checkPossibilityBtn.Text" xml:space="preserve">
-    <value>Проверить</value>
+  <data name="downloadProgressBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="downloadProgressBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>406, 24</value>
   </data>
-  <data name="versionLabel.Text" xml:space="preserve">
-    <value>v.0.7.0</value>
+  <data name="downloadProgressBar.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
-  <data name="searchFloatInput.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;downloadProgressBar.Name" xml:space="preserve">
+    <value>downloadProgressBar</value>
+  </data>
+  <data name="&gt;&gt;downloadProgressBar.Type" xml:space="preserve">
+    <value>FloatToolGUI.CustomProgressBar, FloatTool, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;downloadProgressBar.Parent" xml:space="preserve">
+    <value>panel16</value>
+  </data>
+  <data name="&gt;&gt;downloadProgressBar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="searchmodeGreater_btn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="searchmodeGreater_btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="searchmodeGreater_btn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 14pt, style=Bold</value>
+  </data>
+  <data name="searchmodeGreater_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="searchmodeGreater_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 29</value>
+  </data>
+  <data name="searchmodeGreater_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 32</value>
+  </data>
+  <data name="searchmodeGreater_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="searchmodeGreater_btn.Text" xml:space="preserve">
+    <value>&gt;</value>
+  </data>
+  <data name="&gt;&gt;searchmodeGreater_btn.Name" xml:space="preserve">
+    <value>searchmodeGreater_btn</value>
+  </data>
+  <data name="&gt;&gt;searchmodeGreater_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;searchmodeGreater_btn.Parent" xml:space="preserve">
+    <value>panel16</value>
+  </data>
+  <data name="&gt;&gt;searchmodeGreater_btn.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="searchmodeEqual_btn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="combinationsStatusLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 9pt</value>
-  </data>
-  <data name="&gt;&gt;panel6.Name" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="&gt;&gt;panel15.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="gpuSearch_btn.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;closeBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>285, 13</value>
-  </data>
-  <data name="settingsButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 40</value>
-  </data>
-  <data name="&gt;&gt;label10.Name" xml:space="preserve">
-    <value>label10</value>
-  </data>
-  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="fullSkinName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 12pt</value>
-  </data>
-  <data name="&gt;&gt;panel12.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="settingsButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 0</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;startSearchSingleButton.Parent" xml:space="preserve">
-    <value>panel16</value>
-  </data>
-  <data name="&gt;&gt;label11.Name" xml:space="preserve">
-    <value>label11</value>
+  <data name="searchmodeEqual_btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="searchmodeEqual_btn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Inter, 14pt, style=Bold</value>
   </data>
-  <data name="label11.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="threadCountInput.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 11.25pt</value>
-  </data>
-  <data name="MaximizeButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>389, 1</value>
-  </data>
-  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="searchmodeEqual_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="searchmodeEqual_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 29</value>
   </data>
-  <data name="label8.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="skipValueInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 19</value>
-  </data>
-  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ascendingCheckBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="weaponQualityBox.Items" xml:space="preserve">
-    <value>Factory New</value>
-  </data>
-  <data name="searchModeLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="button5.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="button4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="weaponSkinBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 24</value>
-  </data>
-  <data name="searchFloatInput.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 9.75pt</value>
+  <data name="searchmodeEqual_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 32</value>
   </data>
   <data name="searchmodeEqual_btn.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="searchmodeEqual_btn.Text" xml:space="preserve">
+    <value>=</value>
   </data>
-  <data name="weaponQualityBox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="&gt;&gt;searchmodeEqual_btn.Name" xml:space="preserve">
+    <value>searchmodeEqual_btn</value>
   </data>
-  <data name="gpuSearch_btn.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="&gt;&gt;searchmodeEqual_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="weaponQualityBox.Items1" xml:space="preserve">
-    <value>Minimal Wear</value>
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="panel9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>469, 40</value>
-  </data>
-  <data name="startBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+  <data name="&gt;&gt;searchmodeEqual_btn.Parent" xml:space="preserve">
+    <value>panel16</value>
   </data>
   <data name="&gt;&gt;searchmodeEqual_btn.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="gpuSearch_btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="gpuSearch_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 0</value>
-  </data>
-  <data name="minimizeBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 0</value>
-  </data>
-  <data name="sortCheckBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="searchmodeLess_btn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="button3.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="checkPossibilityBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;label24.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Пропуск:</value>
-  </data>
-  <data name="&gt;&gt;weaponTypeBox.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="stattrackCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;panel16.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;weaponTypeBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="downloadProgressBar.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="button5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="outputConsoleBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;threadCountInput.Name" xml:space="preserve">
-    <value>threadCountInput</value>
-  </data>
-  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="benchmarkButton.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
-  </data>
-  <data name="&gt;&gt;foundCombinationContainer.Name" xml:space="preserve">
-    <value>foundCombinationContainer</value>
-  </data>
-  <data name="startBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
-    <value>panel15</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>FloatTool</value>
-  </data>
-  <data name="searchmodeEqual_btn.Text" xml:space="preserve">
-    <value>=</value>
-  </data>
-  <data name="benchmarkButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="searchmodeLess_btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="searchmodeLess_btn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 14pt, style=Bold</value>
   </data>
-  <data name="closeBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="searchmodeLess_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;panel11.Name" xml:space="preserve">
-    <value>panel11</value>
+  <data name="searchmodeLess_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 29</value>
   </data>
-  <data name="&gt;&gt;versionLabel.Parent" xml:space="preserve">
-    <value>panel3</value>
+  <data name="searchmodeLess_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 32</value>
   </data>
-  <data name="panel15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 191</value>
+  <data name="searchmodeLess_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
-  <data name="&gt;&gt;button4.Name" xml:space="preserve">
-    <value>button4</value>
+  <data name="searchmodeLess_btn.Text" xml:space="preserve">
+    <value>&lt;</value>
   </data>
-  <data name="&gt;&gt;minimizeBtn.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="checkPossibilityBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 98</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="checkPossibilityBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 10.25pt</value>
-  </data>
-  <data name="settingsButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="searchFloatInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 16</value>
+  <data name="&gt;&gt;searchmodeLess_btn.Name" xml:space="preserve">
+    <value>searchmodeLess_btn</value>
   </data>
   <data name="&gt;&gt;searchmodeLess_btn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="combinationsStatusLabel.Text" xml:space="preserve">
-    <value>Проверено комбинаций: 0 / 0</value>
+  <data name="&gt;&gt;searchmodeLess_btn.Parent" xml:space="preserve">
+    <value>panel16</value>
   </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
-    <value>panel3</value>
+  <data name="&gt;&gt;searchmodeLess_btn.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
-  <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="searchModeLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
-  <data name="&gt;&gt;panel13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="searchModeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;checkPossibilityBtn.Name" xml:space="preserve">
-    <value>checkPossibilityBtn</value>
+  <data name="searchModeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>427, 267</value>
+  <data name="searchModeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 7</value>
   </data>
-  <data name="&gt;&gt;panel9.Parent" xml:space="preserve">
-    <value>panel7</value>
+  <data name="searchModeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 19</value>
   </data>
-  <data name="fullSkinName.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="searchModeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
-  <data name="&gt;&gt;button5.Name" xml:space="preserve">
-    <value>button5</value>
+  <data name="searchModeLabel.Text" xml:space="preserve">
+    <value>Режим поиска:</value>
   </data>
-  <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>439, 0</value>
+  <data name="&gt;&gt;searchModeLabel.Name" xml:space="preserve">
+    <value>searchModeLabel</value>
   </data>
-  <data name="&gt;&gt;panel13.Parent" xml:space="preserve">
-    <value>panel8</value>
+  <data name="&gt;&gt;searchModeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;searchModeLabel.Parent" xml:space="preserve">
+    <value>panel16</value>
+  </data>
+  <data name="&gt;&gt;searchModeLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 70</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 19</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Нужный флоат:</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>panel16</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="quantityInput.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="quantityInput.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 9.75pt</value>
+  </data>
+  <data name="quantityInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 98</value>
+  </data>
+  <data name="quantityInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 19</value>
+  </data>
+  <data name="quantityInput.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;quantityInput.Name" xml:space="preserve">
+    <value>quantityInput</value>
+  </data>
+  <data name="&gt;&gt;quantityInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;quantityInput.Parent" xml:space="preserve">
+    <value>panel16</value>
+  </data>
+  <data name="&gt;&gt;quantityInput.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="skipValueInput.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="skipValueInput.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 9.75pt</value>
+  </data>
+  <data name="skipValueInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 127</value>
+  </data>
+  <data name="skipValueInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 19</value>
+  </data>
+  <data name="skipValueInput.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;skipValueInput.Name" xml:space="preserve">
+    <value>skipValueInput</value>
+  </data>
+  <data name="&gt;&gt;skipValueInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;skipValueInput.Parent" xml:space="preserve">
+    <value>panel16</value>
+  </data>
+  <data name="&gt;&gt;skipValueInput.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="ascendingCheckBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="ascendingCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ascendingCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ascendingCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>267, 38</value>
+  </data>
+  <data name="ascendingCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 23</value>
+  </data>
+  <data name="ascendingCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="ascendingCheckBox.Text" xml:space="preserve">
+    <value>По возрастанию</value>
+  </data>
+  <data name="&gt;&gt;ascendingCheckBox.Name" xml:space="preserve">
+    <value>ascendingCheckBox</value>
+  </data>
+  <data name="&gt;&gt;ascendingCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ascendingCheckBox.Parent" xml:space="preserve">
+    <value>panel16</value>
+  </data>
+  <data name="&gt;&gt;ascendingCheckBox.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 127</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 19</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Пропуск:</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>panel16</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 98</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 19</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Количество:</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>panel16</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="searchFloatInput.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="searchFloatInput.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 9.75pt</value>
+  </data>
+  <data name="searchFloatInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 73</value>
+  </data>
+  <data name="searchFloatInput.MaxLength" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="searchFloatInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 16</value>
+  </data>
+  <data name="searchFloatInput.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="searchFloatInput.Text" xml:space="preserve">
+    <value>0.25000000032783</value>
+  </data>
+  <data name="&gt;&gt;searchFloatInput.Name" xml:space="preserve">
+    <value>searchFloatInput</value>
+  </data>
+  <data name="&gt;&gt;searchFloatInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;searchFloatInput.Parent" xml:space="preserve">
+    <value>panel16</value>
+  </data>
+  <data name="&gt;&gt;searchFloatInput.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="sortCheckBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="sortCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="sortCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="sortCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>267, 15</value>
+  </data>
+  <data name="sortCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 23</value>
+  </data>
+  <data name="sortCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="sortCheckBox.Text" xml:space="preserve">
+    <value>Сортировать</value>
+  </data>
+  <data name="&gt;&gt;sortCheckBox.Name" xml:space="preserve">
+    <value>sortCheckBox</value>
+  </data>
+  <data name="&gt;&gt;sortCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sortCheckBox.Parent" xml:space="preserve">
+    <value>panel16</value>
+  </data>
+  <data name="&gt;&gt;sortCheckBox.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="startBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="startBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="startBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 20.25pt</value>
   </data>
   <data name="startBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;searchModeLabel.Type" xml:space="preserve">
+  <data name="startBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>267, 73</value>
+  </data>
+  <data name="startBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 50</value>
+  </data>
+  <data name="startBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="startBtn.Text" xml:space="preserve">
+    <value>Старт</value>
+  </data>
+  <data name="&gt;&gt;startBtn.Name" xml:space="preserve">
+    <value>startBtn</value>
+  </data>
+  <data name="&gt;&gt;startBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;startBtn.Parent" xml:space="preserve">
+    <value>panel16</value>
+  </data>
+  <data name="&gt;&gt;startBtn.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="panel16.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 191</value>
+  </data>
+  <data name="panel16.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;panel16.Name" xml:space="preserve">
+    <value>panel16</value>
+  </data>
+  <data name="&gt;&gt;panel16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel16.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;panel16.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="speedStatusLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="speedStatusLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 9pt</value>
+  </data>
+  <data name="speedStatusLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="speedStatusLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 33</value>
+  </data>
+  <data name="speedStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 15</value>
+  </data>
+  <data name="speedStatusLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="speedStatusLabel.Text" xml:space="preserve">
+    <value>Текущая скорость: 0 комбинаций/сек</value>
+  </data>
+  <data name="&gt;&gt;speedStatusLabel.Name" xml:space="preserve">
+    <value>speedStatusLabel</value>
+  </data>
+  <data name="&gt;&gt;speedStatusLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;speedStatusLabel.Parent" xml:space="preserve">
+    <value>panel15</value>
+  </data>
+  <data name="&gt;&gt;speedStatusLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="combinationsStatusLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="combinationsStatusLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 9pt</value>
+  </data>
+  <data name="combinationsStatusLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="combinationsStatusLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 50</value>
   </data>
   <data name="combinationsStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 15</value>
@@ -828,200 +2017,191 @@
   <data name="combinationsStatusLabel.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="startBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 20.25pt</value>
+  <data name="combinationsStatusLabel.Text" xml:space="preserve">
+    <value>Проверено комбинаций: 0 / 0</value>
   </data>
-  <data name="searchmodeGreater_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 29</value>
+  <data name="&gt;&gt;combinationsStatusLabel.Name" xml:space="preserve">
+    <value>combinationsStatusLabel</value>
   </data>
-  <data name="foundCombinationContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>449, 292</value>
+  <data name="&gt;&gt;combinationsStatusLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="sortCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;combinationsStatusLabel.Parent" xml:space="preserve">
+    <value>panel15</value>
   </data>
-  <data name="settingsButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;skipValueInput.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;panel10.Parent" xml:space="preserve">
-    <value>panel8</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Качество:</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panel6.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;combinationsStatusLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="weaponTypeBox.Items4" xml:space="preserve">
-    <value>Desert Eagle</value>
+  <data name="gpuSearch_btn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom</value>
   </data>
-  <data name="&gt;&gt;quantityInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="gpuSearch_btn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;fullSkinName.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="weaponQualityBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 9.75pt</value>
-  </data>
-  <data name="weaponSkinBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="gpuSearch_btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="downloadProgressBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>406, 24</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="checkPossibilityBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>469, 418</value>
-  </data>
-  <data name="&gt;&gt;panel11.Parent" xml:space="preserve">
-    <value>panel13</value>
-  </data>
-  <data name="searchmodeEqual_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 29</value>
-  </data>
-  <data name="benchmarkButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 19</value>
-  </data>
-  <data name="&gt;&gt;stattrackCheckBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="gpuSearch_btn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 16pt</value>
   </data>
   <data name="gpuSearch_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="outputConsoleBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 5</value>
+  <data name="gpuSearch_btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>244, 0</value>
   </data>
-  <data name="&gt;&gt;downloadProgressBar.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="gpuSearch_btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 71</value>
   </data>
-  <data name="&gt;&gt;minimizeBtn.Name" xml:space="preserve">
-    <value>minimizeBtn</value>
+  <data name="gpuSearch_btn.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="panel16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>427, 191</value>
+  <data name="gpuSearch_btn.Text" xml:space="preserve">
+    <value>GPU Тест</value>
   </data>
-  <data name="startSearchSingleButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="gpuSearch_btn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;gpuSearch_btn.Name" xml:space="preserve">
+    <value>gpuSearch_btn</value>
   </data>
-  <data name="versionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 19</value>
+  <data name="&gt;&gt;gpuSearch_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="panel7.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;gpuSearch_btn.Parent" xml:space="preserve">
+    <value>panel15</value>
   </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="button5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft JhengHei Light, 12pt</value>
-  </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;gpuSearch_btn.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;panel8.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 0</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 19</value>
+  </data>
+  <data name="label10.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Потоков: </value>
+  </data>
+  <data name="&gt;&gt;label10.Name" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+    <value>panel15</value>
+  </data>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="threadCountInput.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 11.25pt</value>
+  </data>
+  <data name="threadCountInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>92, 0</value>
+  </data>
+  <data name="threadCountInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 22</value>
+  </data>
+  <data name="threadCountInput.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;threadCountInput.Name" xml:space="preserve">
+    <value>threadCountInput</value>
+  </data>
+  <data name="&gt;&gt;threadCountInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;threadCountInput.Parent" xml:space="preserve">
+    <value>panel15</value>
   </data>
   <data name="&gt;&gt;threadCountInput.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 21.75pt</value>
+  <data name="panel15.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
   </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="panel15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 191</value>
   </data>
-  <data name="label12.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+  <data name="panel15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 76</value>
   </data>
-  <data name="button3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft JhengHei Light, 12pt</value>
+  <data name="panel15.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
-  <data name="&gt;&gt;settingsButton.Name" xml:space="preserve">
-    <value>settingsButton</value>
+  <data name="&gt;&gt;panel15.Name" xml:space="preserve">
+    <value>panel15</value>
   </data>
-  <data name="&gt;&gt;foundCombinationContainer.Parent" xml:space="preserve">
-    <value>splitContainer1.Panel1</value>
+  <data name="&gt;&gt;panel15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="panel7.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="&gt;&gt;panel15.Parent" xml:space="preserve">
+    <value>panel5</value>
   </data>
-  <data name="&gt;&gt;weaponSkinBox.Name" xml:space="preserve">
-    <value>weaponSkinBox</value>
-  </data>
-  <data name="speedStatusLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="searchmodeGreater_btn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 14pt, style=Bold</value>
-  </data>
-  <data name="label24.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;panel15.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>900, 460</value>
+  <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>panel4</value>
+  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 191</value>
   </data>
-  <data name="searchmodeEqual_btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 267</value>
   </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 98</value>
+  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 35</value>
+  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
+    <value>panel5</value>
   </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>469, 458</value>
+  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="outcomeSelectorComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>204, 66</value>
+  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
+    <value>panel2</value>
   </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 127</value>
+  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;WorkStatusUpdater.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
   </data>
-  <data name="weaponTypeBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 0</value>
   </data>
-  <data name="&gt;&gt;versionLabel.ZOrder" xml:space="preserve">
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>427, 458</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;fullSkinName.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="&gt;&gt;startBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ascendingCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
     <value>429, 0</value>
@@ -1029,101 +2209,38 @@
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>469, 458</value>
   </data>
-  <data name="fullSkinName.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="&gt;&gt;panel15.Parent" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="sortCheckBox.Text" xml:space="preserve">
-    <value>Сортировать</value>
-  </data>
-  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;quantityInput.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="stattrackCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>86, 66</value>
-  </data>
-  <data name="&gt;&gt;downloadProgressBar.Parent" xml:space="preserve">
-    <value>panel16</value>
-  </data>
-  <data name="button3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="startSearchSingleButton.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;searchmodeLess_btn.Name" xml:space="preserve">
-    <value>searchmodeLess_btn</value>
-  </data>
-  <data name="&gt;&gt;panel12.Parent" xml:space="preserve">
-    <value>panel13</value>
-  </data>
-  <data name="closeBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="weaponTypeBox.Items8" xml:space="preserve">
-    <value>G3SG1</value>
-  </data>
-  <data name="searchFloatInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>131, 73</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;speedStatusLabel.Parent" xml:space="preserve">
-    <value>panel15</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 19</value>
-  </data>
-  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label24.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel1.Parent" xml:space="preserve">
-    <value>splitContainer1</value>
-  </data>
-  <data name="&gt;&gt;startBtn.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
   <data name="panel4.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="WorkStatusUpdater.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>198, 16</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>60</value>
+  </metadata>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
   </data>
-  <data name="&gt;&gt;closeBtn.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>900, 460</value>
   </data>
-  <data name="MaximizeButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;combinationsStatusLabel.Name" xml:space="preserve">
-    <value>combinationsStatusLabel</value>
-  </data>
-  <data name="label6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="panel12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 68</value>
-  </data>
-  <data name="&gt;&gt;downloadProgressBar.Type" xml:space="preserve">
-    <value>FloatToolGUI.CustomProgressBar, FloatTool, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 19</value>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inter, 11.249999pt</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1371,1151 +2488,37 @@
         lcEgDkWiqA6FUR2O4OL8XLzY1sG2H8tA/j8A3hg1hV1H6QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="&gt;&gt;label12.Name" xml:space="preserve">
-    <value>label12</value>
-  </data>
-  <data name="button5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>379, 0</value>
-  </data>
-  <data name="skipValueInput.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="weaponQualityBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="versionLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="speedStatusLabel.Text" xml:space="preserve">
-    <value>Текущая скорость: 0 комбинаций/сек</value>
-  </data>
-  <data name="searchmodeGreater_btn.Text" xml:space="preserve">
-    <value>&gt;</value>
-  </data>
-  <data name="fullSkinName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>10, 12, 10, 12</value>
-  </data>
-  <data name="weaponQualityBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 24</value>
-  </data>
-  <data name="label4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="startBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 50</value>
-  </data>
-  <data name="splitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="weaponTypeBox.Items18" xml:space="preserve">
-    <value>MP9</value>
-  </data>
-  <data name="weaponTypeBox.Items19" xml:space="preserve">
-    <value>Negev</value>
-  </data>
-  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="downloadProgressBar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 9.75pt</value>
-  </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
-  </data>
-  <data name="weaponTypeBox.Items13" xml:space="preserve">
-    <value>M4A4</value>
-  </data>
-  <data name="weaponTypeBox.Items10" xml:space="preserve">
-    <value>Glock-18</value>
-  </data>
-  <data name="weaponTypeBox.Items11" xml:space="preserve">
-    <value>M249</value>
-  </data>
-  <data name="weaponTypeBox.Items16" xml:space="preserve">
-    <value>MP5-SD</value>
-  </data>
-  <data name="weaponTypeBox.Items17" xml:space="preserve">
-    <value>MP7</value>
-  </data>
-  <data name="panel12.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="weaponTypeBox.Items15" xml:space="preserve">
-    <value>MAG-7</value>
-  </data>
-  <data name="&gt;&gt;startSearchSingleButton.Name" xml:space="preserve">
-    <value>startSearchSingleButton</value>
-  </data>
-  <data name="&gt;&gt;settingsButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DiscordUpdater.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;combinationsStatusLabel.Parent" xml:space="preserve">
-    <value>panel15</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="MaximizeButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Parent" xml:space="preserve">
-    <value>panel11</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="outcomeSelectorComboBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="startSearchSingleButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 21</value>
-  </data>
-  <data name="&gt;&gt;panel10.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="versionLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 8.25pt</value>
-  </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panel16.Parent" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;foundCombinationContainer.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="closeBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 18pt</value>
-  </data>
-  <data name="&gt;&gt;searchmodeLess_btn.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;button4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;outputConsoleBox.Parent" xml:space="preserve">
-    <value>splitContainer1.Panel2</value>
-  </data>
-  <data name="&gt;&gt;ascendingCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="searchmodeGreater_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 32</value>
-  </data>
-  <data name="&gt;&gt;benchmarkButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="skipValueInput.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;versionLabel.Name" xml:space="preserve">
-    <value>versionLabel</value>
-  </data>
-  <data name="outputConsoleBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>40, 40, 40, 40</value>
-  </data>
-  <data name="label7.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;button5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;searchmodeEqual_btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel8.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>427, 151</value>
-  </data>
-  <data name="searchmodeLess_btn.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;searchmodeGreater_btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="searchModeLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;skipValueInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;WorkStatusUpdater.Name" xml:space="preserve">
-    <value>WorkStatusUpdater</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="closeBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;versionLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;outputConsoleBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panel9.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="&gt;&gt;settingsButton.Parent" xml:space="preserve">
-    <value>panel9</value>
-  </data>
-  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>459, 408</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
-    <value>splitContainer1.Panel2</value>
-  </data>
-  <data name="&gt;&gt;outcomeSelectorComboBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="ascendingCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="benchmarkButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 40</value>
-  </data>
-  <data name="closeBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="sortCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>267, 15</value>
-  </data>
-  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="benchmarkButton.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="weaponTypeBox.Items14" xml:space="preserve">
-    <value>MAC-10</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel13.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="button5.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="searchModeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 19</value>
-  </data>
-  <data name="outcomeSelectorComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="outcomeSelectorComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 19</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="weaponTypeBox.Items5" xml:space="preserve">
-    <value>Dual Berettas</value>
-  </data>
-  <data name="versionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 14</value>
-  </data>
-  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 19</value>
-  </data>
-  <data name="button4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="label10.Text" xml:space="preserve">
-    <value>Потоков: </value>
-  </data>
-  <data name="panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="gpuSearch_btn.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>427, 458</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ascendingCheckBox.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="settingsButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;threadCountInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="weaponQualityBox.Items4" xml:space="preserve">
-    <value>Battle-Scarred</value>
-  </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>900, 460</value>
   </data>
-  <data name="panel15.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="searchmodeLess_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 32</value>
-  </data>
-  <data name="weaponQualityBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 12</value>
-  </data>
-  <data name="startBtn.Text" xml:space="preserve">
-    <value>Старт</value>
-  </data>
-  <data name="startSearchSingleButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="MaximizeButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 40</value>
-  </data>
-  <data name="&gt;&gt;outputConsoleBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;searchModeLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;weaponTypeBox.Name" xml:space="preserve">
-    <value>weaponTypeBox</value>
-  </data>
-  <data name="&gt;&gt;button3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;startSearchSingleButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="sortCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="searchmodeGreater_btn.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>panel16</value>
-  </data>
-  <data name="outputConsoleBox.Text" xml:space="preserve">
-    <value>Добро пожаловать в FloatTool!
-Инструмент для создания флоатов при помощи крафтов CS:GO</value>
-  </data>
-  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;benchmarkButton.Parent" xml:space="preserve">
-    <value>panel9</value>
-  </data>
-  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 19</value>
-  </data>
-  <data name="panel12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>459, 10</value>
-  </data>
-  <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="gpuSearch_btn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 16pt</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 19</value>
-  </data>
-  <data name="&gt;&gt;startSearchSingleButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 191</value>
-  </data>
-  <data name="searchmodeGreater_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;button4.Parent" xml:space="preserve">
-    <value>panel7</value>
-  </data>
-  <data name="&gt;&gt;panel7.Name" xml:space="preserve">
-    <value>panel7</value>
-  </data>
-  <data name="stattrackCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 24</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>panel16</value>
-  </data>
-  <data name="button5.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;gpuSearch_btn.Name" xml:space="preserve">
-    <value>gpuSearch_btn</value>
-  </data>
-  <data name="outcomeSelectorComboBox.Items2" xml:space="preserve">
-    <value>* Искать всё *</value>
-  </data>
-  <data name="panel13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 0</value>
-  </data>
-  <data name="MaximizeButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 18pt</value>
-  </data>
-  <data name="minimizeBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 39</value>
-  </data>
-  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 2</value>
   </data>
-  <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 14</value>
-  </data>
-  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="skipValueInput.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 9.75pt</value>
-  </data>
-  <data name="&gt;&gt;gpuSearch_btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="searchmodeGreater_btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="searchFloatInput.Text" xml:space="preserve">
-    <value>0.25000000032783</value>
-  </data>
-  <data name="weaponSkinBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 34</value>
-  </data>
-  <data name="minimizeBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="label24.Text" xml:space="preserve">
-    <value>by Prevter</value>
-  </data>
-  <data name="weaponTypeBox.Items31" xml:space="preserve">
-    <value>UMP-45</value>
-  </data>
-  <data name="panel11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>459, 408</value>
-  </data>
-  <data name="&gt;&gt;ascendingCheckBox.Parent" xml:space="preserve">
-    <value>panel16</value>
-  </data>
-  <data name="outputConsoleBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 9.75pt</value>
-  </data>
-  <data name="panel6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="&gt;&gt;button5.Parent" xml:space="preserve">
-    <value>panel7</value>
-  </data>
-  <data name="searchFloatInput.MaxLength" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;searchModeLabel.Parent" xml:space="preserve">
-    <value>panel16</value>
-  </data>
-  <data name="&gt;&gt;searchmodeGreater_btn.Parent" xml:space="preserve">
-    <value>panel16</value>
-  </data>
-  <data name="panel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="panel13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>459, 418</value>
-  </data>
-  <data name="minimizeBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 1</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel1.Name" xml:space="preserve">
-    <value>splitContainer1.Panel1</value>
-  </data>
-  <data name="&gt;&gt;panel13.Name" xml:space="preserve">
-    <value>panel13</value>
-  </data>
-  <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 40</value>
-  </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="quantityInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 19</value>
-  </data>
-  <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 26</value>
-  </data>
-  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>127, 68</value>
-  </data>
-  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;foundCombinationContainer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;quantityInput.Parent" xml:space="preserve">
-    <value>panel16</value>
-  </data>
-  <data name="quantityInput.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="outputConsoleBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="speedStatusLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 15</value>
-  </data>
-  <data name="outputConsoleBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Both</value>
-  </data>
-  <data name="label5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="weaponTypeBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 34</value>
-  </data>
-  <data name="weaponTypeBox.Items28" xml:space="preserve">
-    <value>SG 553</value>
-  </data>
-  <data name="weaponTypeBox.Items29" xml:space="preserve">
-    <value>SSG 08</value>
-  </data>
-  <data name="stattrackCheckBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>6, 6, 6, 6</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;panel10.Name" xml:space="preserve">
-    <value>panel10</value>
-  </data>
-  <data name="weaponTypeBox.Items22" xml:space="preserve">
-    <value>P250</value>
-  </data>
-  <data name="weaponTypeBox.Items23" xml:space="preserve">
-    <value>P90</value>
-  </data>
-  <data name="&gt;&gt;searchmodeGreater_btn.Name" xml:space="preserve">
-    <value>searchmodeGreater_btn</value>
-  </data>
-  <data name="weaponTypeBox.Items21" xml:space="preserve">
-    <value>P2000</value>
-  </data>
-  <data name="panel10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="weaponTypeBox.Items27" xml:space="preserve">
-    <value>SCAR-20</value>
-  </data>
-  <data name="weaponTypeBox.Items24" xml:space="preserve">
-    <value>PP-Bizon</value>
-  </data>
-  <data name="weaponTypeBox.Items25" xml:space="preserve">
-    <value>R8 Revolver</value>
-  </data>
-  <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="combinationsStatusLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 50</value>
-  </data>
-  <data name="settingsButton.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
-  </data>
-  <data name="panel16.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="searchmodeLess_btn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 14pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;checkPossibilityBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="weaponQualityBox.Items2" xml:space="preserve">
-    <value>Field-Tested</value>
-  </data>
-  <data name="downloadProgressBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="label10.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;button5.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="panel8.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="label11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;weaponSkinBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="weaponTypeBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="button3.Text" xml:space="preserve">
-    <value>X</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;panel10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;startBtn.Name" xml:space="preserve">
-    <value>startBtn</value>
-  </data>
-  <data name="speedStatusLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="label7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="weaponTypeBox.Items1" xml:space="preserve">
-    <value>AUG</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="startSearchSingleButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>267, 125</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="weaponSkinBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;weaponQualityBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="startBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;outcomeSelectorComboBox.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="panel11.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="searchModeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 7</value>
-  </data>
-  <data name="&gt;&gt;button3.Parent" xml:space="preserve">
-    <value>panel7</value>
-  </data>
-  <data name="&gt;&gt;panel11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ascendingCheckBox.Text" xml:space="preserve">
-    <value>По возрастанию</value>
-  </data>
-  <data name="&gt;&gt;MaximizeButton.Parent" xml:space="preserve">
-    <value>panel9</value>
-  </data>
-  <data name="&gt;&gt;MaximizeButton.Name" xml:space="preserve">
-    <value>MaximizeButton</value>
-  </data>
-  <data name="&gt;&gt;combinationsStatusLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="foundCombinationContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="button4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>469, 40</value>
-  </data>
-  <data name="&gt;&gt;outcomeSelectorComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label12.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="searchmodeGreater_btn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 13</value>
-  </data>
-  <data name="panel11.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;panel9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel16.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 101</value>
-  </data>
-  <data name="weaponQualityBox.Text" xml:space="preserve">
-    <value>Field-Tested</value>
-  </data>
-  <data name="settingsButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;searchmodeLess_btn.Parent" xml:space="preserve">
-    <value>panel16</value>
-  </data>
-  <data name="&gt;&gt;panel15.Name" xml:space="preserve">
-    <value>panel15</value>
-  </data>
-  <data name="panel13.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;weaponQualityBox.Name" xml:space="preserve">
-    <value>weaponQualityBox</value>
-  </data>
-  <data name="panel15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>427, 76</value>
-  </data>
-  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>427, 40</value>
-  </data>
-  <data name="&gt;&gt;stattrackCheckBox.Type" xml:space="preserve">
-    <value>FloatToolGUI.CustomControls.CustomToggleSwitch, FloatTool, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="foundCombinationContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="button4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft JhengHei Light, 12pt</value>
-  </data>
-  <data name="searchmodeEqual_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 32</value>
-  </data>
-  <data name="&gt;&gt;minimizeBtn.Parent" xml:space="preserve">
-    <value>panel9</value>
-  </data>
-  <data name="benchmarkButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 40</value>
-  </data>
-  <data name="searchFloatInput.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;panel12.Name" xml:space="preserve">
-    <value>panel12</value>
-  </data>
-  <data name="checkPossibilityBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="panel16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;benchmarkButton.Name" xml:space="preserve">
-    <value>benchmarkButton</value>
-  </data>
-  <data name="weaponTypeBox.Items2" xml:space="preserve">
-    <value>AWP</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;combinationsStatusLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="minimizeBtn.Text" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="sortCheckBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="panel10.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="&gt;&gt;searchmodeEqual_btn.Name" xml:space="preserve">
-    <value>searchmodeEqual_btn</value>
-  </data>
-  <data name="&gt;&gt;sortCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel15.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="weaponSkinBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 9.75pt</value>
-  </data>
-  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="searchmodeLess_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 29</value>
-  </data>
-  <data name="gpuSearch_btn.Text" xml:space="preserve">
-    <value>GPU Тест</value>
-  </data>
-  <data name="outputConsoleBox.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="outcomeSelectorComboBox.Items" xml:space="preserve">
-    <value>80% (AK-47 | Safari Mesh + 3)</value>
-  </data>
-  <data name="&gt;&gt;fullSkinName.Name" xml:space="preserve">
-    <value>fullSkinName</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="outputConsoleBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>449, 92</value>
-  </data>
-  <data name="&gt;&gt;panel12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="startSearchSingleButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 8pt</value>
-  </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;sortCheckBox.Name" xml:space="preserve">
-    <value>sortCheckBox</value>
-  </data>
-  <data name="searchmodeEqual_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="MaximizeButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="&gt;&gt;skipValueInput.Parent" xml:space="preserve">
-    <value>panel16</value>
-  </data>
-  <data name="button3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;MaximizeButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="splitContainer1.Panel2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="weaponTypeBox.Items" xml:space="preserve">
-    <value>AK-47</value>
-  </data>
-  <data name="&gt;&gt;gpuSearch_btn.Parent" xml:space="preserve">
-    <value>panel15</value>
-  </data>
-  <data name="sortCheckBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 23</value>
-  </data>
-  <data name="weaponTypeBox.Text" xml:space="preserve">
-    <value>Nova</value>
-  </data>
-  <data name="fullSkinName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>427, 25</value>
-  </data>
-  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;button3.Name" xml:space="preserve">
-    <value>button3</value>
-  </data>
-  <data name="&gt;&gt;panel16.Name" xml:space="preserve">
-    <value>panel16</value>
-  </data>
-  <data name="&gt;&gt;panel8.Name" xml:space="preserve">
-    <value>panel8</value>
-  </data>
-  <data name="searchmodeLess_btn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="panel11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 10</value>
-  </data>
-  <data name="&gt;&gt;sortCheckBox.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="button3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="combinationsStatusLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;label24.Name" xml:space="preserve">
-    <value>label24</value>
-  </data>
-  <data name="&gt;&gt;gpuSearch_btn.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 19</value>
-  </data>
-  <data name="&gt;&gt;downloadProgressBar.Name" xml:space="preserve">
-    <value>downloadProgressBar</value>
-  </data>
-  <data name="quantityInput.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Inter, 9.75pt</value>
-  </data>
-  <data name="combinationsStatusLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="downloadProgressBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;MaximizeButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;searchFloatInput.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="gpuSearch_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 71</value>
-  </data>
-  <data name="&gt;&gt;checkPossibilityBtn.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="button4.Text" xml:space="preserve">
-    <value>O</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
-    <value>splitContainer1</value>
-  </data>
-  <data name="&gt;&gt;panel16.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>FloatTool</value>
   </data>
   <data name="&gt;&gt;DiscordUpdater.Name" xml:space="preserve">
     <value>DiscordUpdater</value>
   </data>
-  <data name="&gt;&gt;label10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;DiscordUpdater.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="foundCombinationContainer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 5</value>
+  <data name="&gt;&gt;WorkStatusUpdater.Name" xml:space="preserve">
+    <value>WorkStatusUpdater</value>
   </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
+  <data name="&gt;&gt;WorkStatusUpdater.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="settingsButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FloatTool</value>
   </data>
-  <data name="weaponSkinBox.Text" xml:space="preserve">
-    <value>Predator</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="searchModeLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="weaponTypeBox.Items12" xml:space="preserve">
-    <value>M4A1-S</value>
-  </data>
-  <data name="searchmodeLess_btn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="MaximizeButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="weaponTypeBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="benchmarkButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft JhengHei Light, 40px</value>
-  </data>
-  <data name="weaponTypeBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 24</value>
-  </data>
-  <data name="&gt;&gt;label11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="downloadProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 161</value>
-  </data>
-  <data name="threadCountInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 0</value>
-  </data>
-  <data name="label3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="label24.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="versionLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="weaponTypeBox.Items9" xml:space="preserve">
-    <value>Galil AR</value>
-  </data>
-  <data name="label24.Location" type="System.Drawing.Point, System.Drawing">
-    <value>177, 19</value>
-  </data>
-  <data name="&gt;&gt;benchmarkButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="panel12.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="searchModeLabel.Text" xml:space="preserve">
-    <value>Режим поиска:</value>
-  </data>
-  <data name="label12.Text" xml:space="preserve">
-    <value>StatTrack:</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="skipValueInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>131, 127</value>
-  </data>
-  <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;skipValueInput.Name" xml:space="preserve">
-    <value>skipValueInput</value>
-  </data>
-  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;searchmodeGreater_btn.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;searchmodeEqual_btn.Parent" xml:space="preserve">
-    <value>panel16</value>
-  </data>
-  <data name="speedStatusLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 33</value>
-  </data>
-  <data name="&gt;&gt;searchFloatInput.Name" xml:space="preserve">
-    <value>searchFloatInput</value>
-  </data>
-  <data name="label11.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;outcomeSelectorComboBox.Name" xml:space="preserve">
-    <value>outcomeSelectorComboBox</value>
-  </data>
-  <data name="weaponTypeBox.Items32" xml:space="preserve">
-    <value>USP-S</value>
-  </data>
-  <data name="weaponTypeBox.Items33" xml:space="preserve">
-    <value>XM1014</value>
-  </data>
-  <data name="weaponTypeBox.Items30" xml:space="preserve">
-    <value>Tec-9</value>
-  </data>
-  <data name="closeBtn.Text" xml:space="preserve">
-    <value>X</value>
-  </data>
-  <metadata name="DiscordUpdater.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>65, 16</value>
-  </metadata>
-  <metadata name="WorkStatusUpdater.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>198, 16</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>60</value>
-  </metadata>
 </root>

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatToolGUI", "FloatToolGUI\FloatToolGUI.csproj", "{A5906B52-BA1B-481C-BF4C-3028EF52A925}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Updater", "Updater\Updater.csproj", "{239C41D8-4405-461B-9706-7C03D7A87903}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Updater", "Updater\Updater.csproj", "{239C41D8-4405-461B-9706-7C03D7A87903}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
