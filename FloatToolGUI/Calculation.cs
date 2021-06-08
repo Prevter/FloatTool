@@ -11,8 +11,14 @@ namespace FloatToolGUI
 {
     static class Calculation
     {
-        [DllImport("FloatCore.dll")]
-        static public extern double GetOutputWear(double[] floats, float minWear, float maxWear);
+        [DllImport("FloatCore.dll", CallingConvention = CallingConvention.Cdecl)]
+        static public extern void GetOutputWear(float[] floats, float minWear, float maxWear, StringBuilder stringBuilder);
+
+        static public string GetOutputWearString(float[] floats, float minWear, float maxWear) {
+            StringBuilder sb = new StringBuilder(19);
+            GetOutputWear(floats, minWear, maxWear, sb);
+            return sb.ToString();
+        }
 
         /// <summary>
         /// Calculates wear value based of input skins and min/max value of outcome
@@ -21,7 +27,7 @@ namespace FloatToolGUI
         /// <param name="minFloat">Minimal wear value of skin that is going to be crafted</param>
         /// <param name="maxFloat">Maximum wear value of skin that is going to be crafted</param>
         /// <returns>Wear value represented in decimal type</returns>
-        static public decimal craft(List<InputSkin> ingridients, decimal minFloat, decimal maxFloat)
+        static public decimal craft(InputSkin[] ingridients, decimal minFloat, decimal floatRange)
         {
             decimal avgFloat = ingridients[0].WearValue;
             for (int i = 1; i < 10; i++)
@@ -29,61 +35,24 @@ namespace FloatToolGUI
                 avgFloat += ingridients[i].WearValue;
             }
             avgFloat /= 10;
-            return (maxFloat - minFloat) * avgFloat + minFloat;
+            return floatRange * avgFloat + minFloat;
         }
 
         /// <summary>
-        /// Does same job as craft(List<InputSkin>, float, float), but uses float as type
+        /// Does same job as craft(List<InputSkin>, float, float), but uses c++ dll with IEEE754 precision
         /// </summary>
         /// <param name="ingridients">List of 10 skins</param>
         /// <param name="minFloat">Minimal wear value of skin that is going to be crafted</param>
         /// <param name="maxFloat">Maximum wear value of skin that is going to be crafted</param>
         /// <returns>Float wear value in string</returns>
-        static public string craftF(List<InputSkin> ingridients, decimal minFloat, decimal maxFloat)
+        static public string craftF(List<InputSkin> ingridients, float minFloat, float maxFloat)
         {
-            float avgFloat = 0;
             float[] arrInput = new float[10];
             for (int i = 0; i < 10; i++)
             {
-                arrInput[i] = Convert.ToSingle(ingridients[i].WearValue);
+                arrInput[i] = (float)ingridients[i].WearValue;
             }
-            for (int i = 0; i < 10; i++)
-            {
-                avgFloat += Convert.ToSingle(arrInput[i]);
-            }
-            avgFloat /= 10;
-            return setprecission(((float)(maxFloat - minFloat) * avgFloat) + (float)minFloat, 10);
-        }
-
-        public static string setprecission(double number, int figures)
-        {
-            int e = 0;
-            while (number >= 10.0)
-            {
-                e += 1;
-                number /= 10;
-            }
-            while (number < 1.0)
-            {
-                e -= 1;
-                number *= 10;
-            }
-            figures--;
-            number = (float)Math.Round(number, figures);
-            figures += 0 - e;
-            while (e > 0)
-            {
-                number *= 10;
-                e -= 1;
-            }
-            while (e < 0)
-            {
-                number /= 10;
-                e += 1;
-            }
-            if (figures < 0)
-                figures = 0;
-            return number.ToString($"f{figures}", CultureInfo.InvariantCulture);
+            return GetOutputWearString(arrInput, minFloat, maxFloat);
         }
 
         public static Quality FromString(string value)
@@ -154,8 +123,5 @@ namespace FloatToolGUI
                 step++;
             } while (NextCombination(numbers, size));
         }
-
-        
-
     }
 }

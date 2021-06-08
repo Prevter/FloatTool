@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static FloatToolGUI.Calculation;
+using static FloatToolGUI.Utils;
 
 namespace FloatToolGUI
 {
@@ -27,6 +29,7 @@ namespace FloatToolGUI
             Greater
         }
         SearchMode CurrentSearchMode = SearchMode.Equal;
+        private Pallete CurrentPallete;
 
         public void parseCraft(List<InputSkin> inputs, List<Skin> outputs, string want)
         {
@@ -34,9 +37,11 @@ namespace FloatToolGUI
             if (CurrentSearchMode != SearchMode.Equal)
                 decimal.TryParse(want, NumberStyles.Any, CultureInfo.InvariantCulture, out wantFloat);
 
+            var inputArr = inputs.ToArray();
+
             for (int i = 0; i < outputs.Count; i++)
             {
-                decimal flotOrigin = Math.Round(craft(inputs, outputs[i].MinFloat, outputs[i].MaxFloat), 14);
+                decimal flotOrigin = Math.Round(craft(inputArr, outputs[i].MinFloat, outputs[i].FloatRange), 14);
 
                 if (
                     (flotOrigin.ToString(CultureInfo.InvariantCulture).StartsWith(want, StringComparison.Ordinal) && CurrentSearchMode == SearchMode.Equal) ||
@@ -56,6 +61,42 @@ namespace FloatToolGUI
                 parseCraft(pair.ToList(), craftList, wanted);
                 Interlocked.Increment(ref currComb);
             }
+        }
+
+        public void SetTheme()
+        {
+            panel3.BackColor = GetPalleteColor(CurrentPallete, PalleteColor.Primary3);
+            label8.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            closeBtn.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            panel4.BackColor = GetPalleteColor(CurrentPallete, PalleteColor.Primary1);
+
+            benchmarkScoreboardLayout.BackColor = GetPalleteColor(CurrentPallete, PalleteColor.Primary4);
+            benchmarkScoreboardLayout.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+
+            cpuNameLabel.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            threadCountLabel.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            versionLabel2.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            label4.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            speedLabel.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            label2.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+
+            benchmarkThreadsNumericUpdown.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            benchmarkThreadsNumericUpdown.BackColor = GetPalleteColor(CurrentPallete, PalleteColor.Primary6);
+
+            updateBenchmarksButton.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            updateBenchmarksButton.BackColor = GetPalleteColor(CurrentPallete, PalleteColor.Primary5);
+            submitScoreBtn.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            submitScoreBtn.BackColor = GetPalleteColor(CurrentPallete, PalleteColor.Primary5);
+            startBenchmarkBtn.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            startBenchmarkBtn.BackColor = GetPalleteColor(CurrentPallete, PalleteColor.Primary5);
+
+            updateBenchmarksButton.FlatAppearance.MouseOverBackColor = GetPalleteColor(CurrentPallete, PalleteColor.OverBackColor2);
+            submitScoreBtn.FlatAppearance.MouseOverBackColor = GetPalleteColor(CurrentPallete, PalleteColor.OverBackColor2);
+            startBenchmarkBtn.FlatAppearance.MouseOverBackColor = GetPalleteColor(CurrentPallete, PalleteColor.OverBackColor2);
+
+            customProgressBar1.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            customProgressBar1.ProgressColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary3);
+            customProgressBar1.BackColor = GetPalleteColor(CurrentPallete, PalleteColor.Primary4);
         }
 
         private void runCycle()
@@ -152,6 +193,12 @@ namespace FloatToolGUI
             warningPic.Image = SystemIcons.Warning.ToBitmap();
             Thread t = new Thread(new ThreadStart(LoadStats));
             t.Start();
+
+            CheckRegistry();
+            var registryData = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\FloatTool", true);
+            var themeRK = registryData.GetValue("theme");
+            CurrentPallete = (Pallete)themeRK;
+            SetTheme();
         }
 
         private void startBenchmarkBtn_Click(object sender, EventArgs e)

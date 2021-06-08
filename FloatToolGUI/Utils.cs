@@ -272,17 +272,12 @@ namespace FloatToolGUI
 
         public static string CheckUpdates()
         {
-            using (var client = new HttpClient())
+            using (var client = new WebClient())
             {
-                client.DefaultRequestHeaders.Add("User-Agent",
-                    "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)");
-                using (var response = client.GetAsync("https://api.github.com/repos/prevter/FloatTool-GUI/releases/latest").Result)
-                {
-                    var json = response.Content.ReadAsStringAsync().Result;
-
-                    dynamic release = JsonConvert.DeserializeObject(json);
-                    return release["tag_name"]+"|"+release["assets"][0]["browser_download_url"];
-                }
+                client.Headers.Add("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)");
+                string response = client.DownloadString("https://api.github.com/repos/prevter/FloatTool-GUI/releases/latest");
+                dynamic release = JsonConvert.DeserializeObject(response);
+                return release["tag_name"]+"|"+release["assets"][0]["browser_download_url"];
             }
         }
 

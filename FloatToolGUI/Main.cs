@@ -111,9 +111,11 @@ namespace FloatToolGUI
             if (CurrentSearchMode != SearchMode.Equal)
                 decimal.TryParse(want, NumberStyles.Any, CultureInfo.InvariantCulture, out wantFloat);
 
+            var inputArr = inputs.ToArray();
+
             for (int i = 0; i < outputs.Count; i++)
             {
-                decimal flotOrigin = Math.Round(craft(inputs, outputs[i].MinFloat, outputs[i].MaxFloat), 14);
+                decimal flotOrigin = Math.Round(craft(inputArr, outputs[i].MinFloat, outputs[i].FloatRange), 14);
                 
                 if (
                     (flotOrigin.ToString(CultureInfo.InvariantCulture).StartsWith(want, StringComparison.Ordinal) && CurrentSearchMode == SearchMode.Equal) ||
@@ -121,7 +123,7 @@ namespace FloatToolGUI
                     (CurrentSearchMode == SearchMode.Greater && (flotOrigin > wantFloat))
                 )
                 {
-                    string flot = craftF(inputs, outputs[i].MinFloat, outputs[i].MaxFloat);
+                    string flot = craftF(inputs, (float)outputs[i].MinFloat, (float)outputs[i].MaxFloat);
                     Invoke((MethodInvoker)(() =>
                     {
                         float price = 0f;
@@ -129,13 +131,13 @@ namespace FloatToolGUI
 
                         foreach (var fl in inputs)
                         {
-                            floatStrings.Add(Math.Round(fl.WearValue, 14).ToString().Replace(",", "."));
+                            floatStrings.Add(Math.Round(fl.WearValue, 14).ToString(CultureInfo.InvariantCulture));
                             price += fl.Price;
                         }
 
                         Logger.Log($"[{DateTime.Now}]: Found coombination {{");
                         Logger.Log($"   Float      = {flotOrigin}{newLine}" +
-                                   $"   Test Float = {flot}{newLine}" +
+                                   $"   IEEE754    = {flot}{newLine}" +
                                    $"   Price      = {price} {inputs[0].SkinCurrency}{newLine}" +
                                    $"   Float list = [{string.Join(", ", floatStrings)}]{newLine}}}");
 
@@ -191,10 +193,14 @@ namespace FloatToolGUI
             ascendingCheckBox.Enabled = !ascendingCheckBox.Enabled;
             outcomeSelectorComboBox.Enabled = !outcomeSelectorComboBox.Enabled;
             threadCountInput.Enabled = !threadCountInput.Enabled;
+            startSearchSingleButton.Enabled = !startSearchSingleButton.Enabled;
         }
+
+        public List<Skin> twentyfour = new List<Skin>();
 
         public void UpdateOutcomes()
         {
+            twentyfour.Clear();
             string skin = $"{weaponTypeBox.Text} | {weaponSkinBox.Text}";
             outcomeSelectorComboBox.Items.Clear();
             List<dynamic> craftList = new List<dynamic>();
@@ -220,6 +226,7 @@ namespace FloatToolGUI
                 foreach (var skinRange in GroupOutcomes(craftList))
                 {
                     string tmp = (skinRange.Count > 1) ? $" + {(skinRange.Count - 1)}" : "";
+                    twentyfour.Add(skinRange[0]);
                     outcomeSelectorComboBox.Items.Add($"{((float)skinRange.Count) / totalSkins * 100}% ({skinRange[0].Name}{tmp})");
                 }
                 outcomeSelectorComboBox.Items.Add("* Искать всё *");
@@ -240,6 +247,9 @@ namespace FloatToolGUI
             search += " (" + weaponQualityBox.Text + ")";
             fullSkinName.Text = search;
             UpdateOutcomes();
+
+
+
             Logger.Log($"[{DateTime.Now}]: Changed search skin to: {search}");
         }
 
@@ -436,7 +446,7 @@ namespace FloatToolGUI
                         {
                             AutoSize = true,
                             Location = new Point(3,3),
-                            Text = $"{outcomeSelectorComboBox.Text}\nВозможный флоат: {flotOrigin.ToString(CultureInfo.InvariantCulture)}\nПроверочный флоат: {flot}"
+                            Text = $"{outcomeSelectorComboBox.Text}\nВозможный флоат: {flotOrigin.ToString(CultureInfo.InvariantCulture)}\nIEEE754: {flot}"
                         });
                         tmpPanel.Controls.Add(new Label
                         {
@@ -576,21 +586,20 @@ namespace FloatToolGUI
                     }
                     ));
                     int counter = 0;
+
+                    List<Thread> downloadThreads = new List<Thread>();
+
                     foreach (var el in r["listinginfo"])
                     {
-                        string lid = r["listinginfo"][el.Name]["listingid"];
-                        string aid = r["listinginfo"][el.Name]["asset"]["id"];
-                        string link = r["listinginfo"][el.Name]["asset"]["market_actions"][0]["link"];
-
-                        counter++;
-
-                        using (WebClient wcf = new WebClient())
+                        var eltemp = el;
+                        var t = new Thread((eltemp) =>
                         {
+                            string lid = r["listinginfo"][el.Name]["listingid"];
+                            string aid = r["listinginfo"][el.Name]["asset"]["id"];
+                            string link = r["listinginfo"][el.Name]["asset"]["market_actions"][0]["link"];
+
                             try
                             {
-                                wcf.Headers.Add("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)");
-                                string jsonf = wcf.DownloadString(url);
-                                dynamic rf = JsonConvert.DeserializeObject(jsonf);
                                 inputSkins.Add(new InputSkin(
                                     GetWearFromInspectURL(link.Replace("%assetid%", aid).Replace("%listingid%", lid)),
                                     (float.Parse(r["listinginfo"][el.Name]["converted_price"].ToString()) + float.Parse(r["listinginfo"][el.Name]["converted_fee"].ToString())) / 100,
@@ -605,11 +614,29 @@ namespace FloatToolGUI
                                     Logger.SaveCrashReport();
                                 }
                             }
-                        }
-                        Invoke((MethodInvoker)(() =>
+
+                            Interlocked.Increment(ref counter);
+                            Invoke((MethodInvoker)(() =>
+                            {
+                                downloadProgressBar.Value = counter;
+                            }));
+                        });
+                        t.Start();
+                        downloadThreads.Add(t);
+                    }
+
+                    while (true)
+                    {
+                        bool okey = true;
+                        foreach (Thread t in downloadThreads)
                         {
-                            downloadProgressBar.Value = counter;
-                        }));
+                            if (t.IsAlive)
+                            {
+                                okey = false;
+                                break;
+                            }
+                        }
+                        if (okey) break;
                     }
                 }
             }
@@ -1037,16 +1064,17 @@ namespace FloatToolGUI
             panel3.BackColor = GetPalleteColor(CurrentPallete, PalleteColor.Primary3);
             panel9.BackColor = GetPalleteColor(CurrentPallete, PalleteColor.Primary3);
 
-            label1.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
-            label2.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
-            label3.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
-            label4.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
-            label5.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
-            label6.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
-            label7.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
-            label8.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
-            label11.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
-            label12.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            weaponTypeLabel.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            skinLabel.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            qualityLabel.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            fullnameLabel.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            neededfloatLabel.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            countLabel.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            skipLabel.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            floattoolTitle.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            outcomesLabel.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            stattrackLabel.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            craftRangeLabel.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
 
             panel5.BackColor = GetPalleteColor(CurrentPallete, PalleteColor.Primary1);
             panel6.BackColor = GetPalleteColor(CurrentPallete, PalleteColor.Primary1);
@@ -1103,7 +1131,7 @@ namespace FloatToolGUI
             skipValueInput.BackColor = GetPalleteColor(CurrentPallete, PalleteColor.Primary4);
             skipValueInput.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary2);
 
-            label10.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
+            threadsLabel.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
             threadCountInput.BackColor = GetPalleteColor(CurrentPallete, PalleteColor.Primary4);
             threadCountInput.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary2);
 
@@ -1124,6 +1152,59 @@ namespace FloatToolGUI
             downloadProgressBar.ForeColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary1);
             downloadProgressBar.ProgressColor = GetPalleteColor(CurrentPallete, PalleteColor.Secondary3);
             downloadProgressBar.BackColor = GetPalleteColor(CurrentPallete, PalleteColor.Primary4);
+        }
+
+        private void outcomeSelectorComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (outcomeSelectorComboBox.SelectedIndex > twentyfour.Count - 1)
+            {
+                craftRangeLabel.Text = $"Диапазон крафта:{newLine}0 - 1";
+                return;
+            }
+            float lowestWear = 0;
+            float highestWear = 1;
+
+            switch (weaponQualityBox.Text)
+            {
+                case "Factory New":
+                    lowestWear = 0f;
+                    highestWear = 0.07f;
+                    break;
+                case "Minimal Wear":
+                    lowestWear = 0.07f;
+                    highestWear = 0.15f;
+                    break;
+                case "Field-Tested":
+                    lowestWear = 0.15f;
+                    highestWear = 0.38f;
+                    break;
+                case "Well-Worn":
+                    lowestWear = 0.38f;
+                    highestWear = 0.45f;
+                    break;
+                case "Battle-Scarred":
+                    lowestWear = 0.45f;
+                    highestWear = 1f;
+                    break;
+                default:
+                    lowestWear = 0f;
+                    highestWear = 1f;
+                    break;
+            }
+
+            List<InputSkin> lowest = new List<InputSkin>();
+            for (int i = 0; i < 10; i++)
+                lowest.Add(new InputSkin(lowestWear, 0, currentCurr));
+
+            List<InputSkin> highest = new List<InputSkin>();
+            for (int i = 0; i < 10; i++)
+                highest.Add(new InputSkin(highestWear, 0, currentCurr));
+
+            var currSkin = twentyfour[outcomeSelectorComboBox.SelectedIndex];
+            float minCraftWear = Convert.ToSingle(craftF(lowest, (float)currSkin.MinFloat, (float)currSkin.MaxFloat), CultureInfo.InvariantCulture);
+            float maxCraftWear = Convert.ToSingle(craftF(highest, (float)currSkin.MinFloat, (float)currSkin.MaxFloat), CultureInfo.InvariantCulture);
+
+            craftRangeLabel.Text = $"Диапазон крафта:{newLine}{minCraftWear.ToString("0.00", CultureInfo.InvariantCulture)} - {maxCraftWear.ToString("0.00", CultureInfo.InvariantCulture)}";
         }
 
         private void gpuSearch_btn_Click(object sender, EventArgs e)
@@ -1215,7 +1296,54 @@ namespace FloatToolGUI
 
         private void debugMenuShow(object sender, MouseEventArgs e)
         {
+            /*double[] pool = {
+                0.246938750147820, 0.196652039885521, 0.154839321970940,
+                0.333326697349548, 0.163415759801865, 0.291821509599686,
+                0.374309629201889, 0.378754675388336, 0.231419935822487,
+                0.311867892742157
+            };
+            List<InputSkin> ingridients = new List<InputSkin>();
+            foreach (double f in pool) ingridients.Add(new InputSkin(f, 1, currentCurr));
+
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            for (int i = 0; i < 10000000; i++)
+            {
+                for(int j = 0; j < 10; j++)
+                {
+                    var output = ingridients[j].WearValue;
+                }
+            }
+            stopwatch.Stop();
+            double newSpeed = stopwatch.ElapsedMilliseconds;
+            stopwatch.Reset();
+            var ingridientsArr = ingridients.ToArray();
+            stopwatch.Start();
+            for (int i = 0; i < 10000000; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    var output = ingridientsArr[j].WearValue;
+                }
+            }
+            stopwatch.Stop();
+            double oldSpeed = stopwatch.ElapsedMilliseconds;
+            MessageBox.Show($"list - {newSpeed} ms / 1000000\n\rarr  - {oldSpeed} ms / 1000000");*/
+
+
+            /*double[] pool = {
+                0.246938750147820, 0.196652039885521, 0.154839321970940,
+                0.333326697349548, 0.163415759801865, 0.291821509599686,
+                0.374309629201889, 0.378754675388336, 0.231419935822487,
+                0.311867892742157
+            };
+            List<InputSkin> inputSkins = new List<InputSkin>();
+            foreach (double f in pool) inputSkins.Add(new InputSkin(f, 1, currentCurr));
+            string output = "";
+
             
+
+            MessageBox.Show($"c++ - {output} ({newSpeed} ms / 100000)\n\rc#  - {outputOld} ({oldSpeed} ms / 100000)");*/
         }
     }
 }

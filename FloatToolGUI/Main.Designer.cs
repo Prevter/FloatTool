@@ -70,49 +70,50 @@ namespace FloatToolGUI
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label24 = new System.Windows.Forms.Label();
+            this.byPrevterlabel = new System.Windows.Forms.Label();
             this.versionLabel = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.floattoolTitle = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.stattrackCheckBox = new FloatToolGUI.CustomControls.CustomToggleSwitch();
             this.checkPossibilityBtn = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.qualityLabel = new System.Windows.Forms.Label();
             this.outcomeSelectorComboBox = new System.Windows.Forms.ComboBox();
             this.weaponQualityBox = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.stattrackLabel = new System.Windows.Forms.Label();
+            this.weaponTypeLabel = new System.Windows.Forms.Label();
+            this.fullnameLabel = new System.Windows.Forms.Label();
             this.weaponTypeBox = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.outcomesLabel = new System.Windows.Forms.Label();
+            this.skinLabel = new System.Windows.Forms.Label();
             this.fullSkinName = new System.Windows.Forms.TextBox();
             this.weaponSkinBox = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.startSearchSingleButton = new System.Windows.Forms.Button();
-            this.downloadProgressBar = new FloatToolGUI.CustomProgressBar();
             this.searchmodeGreater_btn = new System.Windows.Forms.Button();
             this.searchmodeEqual_btn = new System.Windows.Forms.Button();
             this.searchmodeLess_btn = new System.Windows.Forms.Button();
             this.searchModeLabel = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.neededfloatLabel = new System.Windows.Forms.Label();
             this.quantityInput = new System.Windows.Forms.NumericUpDown();
             this.skipValueInput = new System.Windows.Forms.NumericUpDown();
             this.ascendingCheckBox = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.skipLabel = new System.Windows.Forms.Label();
+            this.countLabel = new System.Windows.Forms.Label();
             this.searchFloatInput = new System.Windows.Forms.TextBox();
             this.sortCheckBox = new System.Windows.Forms.CheckBox();
             this.startBtn = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.craftRangeLabel = new System.Windows.Forms.Label();
             this.speedStatusLabel = new System.Windows.Forms.Label();
             this.combinationsStatusLabel = new System.Windows.Forms.Label();
             this.gpuSearch_btn = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
+            this.threadsLabel = new System.Windows.Forms.Label();
             this.threadCountInput = new System.Windows.Forms.NumericUpDown();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.WorkStatusUpdater = new System.Windows.Forms.Timer(this.components);
+            this.downloadProgressBar = new FloatToolGUI.CustomProgressBar();
+            this.stattrackCheckBox = new FloatToolGUI.CustomControls.CustomToggleSwitch();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -242,6 +243,7 @@ namespace FloatToolGUI
             // benchmarkButton
             // 
             this.benchmarkButton.BackColor = System.Drawing.Color.Transparent;
+            this.benchmarkButton.BackgroundImage = global::FloatToolGUI.Properties.Resources.benchmarkWhite;
             resources.ApplyResources(this.benchmarkButton, "benchmarkButton");
             this.benchmarkButton.FlatAppearance.BorderSize = 0;
             this.benchmarkButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
@@ -254,6 +256,7 @@ namespace FloatToolGUI
             // settingsButton
             // 
             this.settingsButton.BackColor = System.Drawing.Color.Transparent;
+            this.settingsButton.BackgroundImage = global::FloatToolGUI.Properties.Resources.gearWhite;
             resources.ApplyResources(this.settingsButton, "settingsButton");
             this.settingsButton.FlatAppearance.BorderSize = 0;
             this.settingsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
@@ -329,19 +332,19 @@ namespace FloatToolGUI
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.panel3.Controls.Add(this.label24);
+            this.panel3.Controls.Add(this.byPrevterlabel);
             this.panel3.Controls.Add(this.versionLabel);
-            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.floattoolTitle);
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowDragEvent);
             // 
-            // label24
+            // byPrevterlabel
             // 
-            resources.ApplyResources(this.label24, "label24");
-            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.label24.Name = "label24";
-            this.label24.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.debugMenuShow);
+            resources.ApplyResources(this.byPrevterlabel, "byPrevterlabel");
+            this.byPrevterlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.byPrevterlabel.Name = "byPrevterlabel";
+            this.byPrevterlabel.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.debugMenuShow);
             // 
             // versionLabel
             // 
@@ -349,41 +352,31 @@ namespace FloatToolGUI
             this.versionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.versionLabel.Name = "versionLabel";
             // 
-            // label8
+            // floattoolTitle
             // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Name = "label8";
+            resources.ApplyResources(this.floattoolTitle, "floattoolTitle");
+            this.floattoolTitle.BackColor = System.Drawing.Color.Transparent;
+            this.floattoolTitle.ForeColor = System.Drawing.Color.White;
+            this.floattoolTitle.Name = "floattoolTitle";
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.panel6.Controls.Add(this.stattrackCheckBox);
             this.panel6.Controls.Add(this.checkPossibilityBtn);
-            this.panel6.Controls.Add(this.label3);
+            this.panel6.Controls.Add(this.qualityLabel);
             this.panel6.Controls.Add(this.outcomeSelectorComboBox);
             this.panel6.Controls.Add(this.weaponQualityBox);
-            this.panel6.Controls.Add(this.label12);
-            this.panel6.Controls.Add(this.label1);
-            this.panel6.Controls.Add(this.label4);
+            this.panel6.Controls.Add(this.stattrackLabel);
+            this.panel6.Controls.Add(this.weaponTypeLabel);
+            this.panel6.Controls.Add(this.fullnameLabel);
             this.panel6.Controls.Add(this.weaponTypeBox);
-            this.panel6.Controls.Add(this.label11);
-            this.panel6.Controls.Add(this.label2);
+            this.panel6.Controls.Add(this.outcomesLabel);
+            this.panel6.Controls.Add(this.skinLabel);
             this.panel6.Controls.Add(this.fullSkinName);
             this.panel6.Controls.Add(this.weaponSkinBox);
             resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
-            // 
-            // stattrackCheckBox
-            // 
-            this.stattrackCheckBox.Checked = false;
-            this.stattrackCheckBox.ForeColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.stattrackCheckBox, "stattrackCheckBox");
-            this.stattrackCheckBox.Name = "stattrackCheckBox";
-            this.stattrackCheckBox.TurnedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.stattrackCheckBox.TurnedOnColor = System.Drawing.Color.Green;
-            this.stattrackCheckBox.OnToggled += new System.EventHandler(this.SkinComboboxChanged);
             // 
             // checkPossibilityBtn
             // 
@@ -397,11 +390,11 @@ namespace FloatToolGUI
             this.checkPossibilityBtn.UseVisualStyleBackColor = false;
             this.checkPossibilityBtn.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label3
+            // qualityLabel
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Name = "label3";
+            resources.ApplyResources(this.qualityLabel, "qualityLabel");
+            this.qualityLabel.ForeColor = System.Drawing.Color.White;
+            this.qualityLabel.Name = "qualityLabel";
             // 
             // outcomeSelectorComboBox
             // 
@@ -415,6 +408,7 @@ namespace FloatToolGUI
             resources.GetString("outcomeSelectorComboBox.Items1"),
             resources.GetString("outcomeSelectorComboBox.Items2")});
             this.outcomeSelectorComboBox.Name = "outcomeSelectorComboBox";
+            this.outcomeSelectorComboBox.SelectedIndexChanged += new System.EventHandler(this.outcomeSelectorComboBox_SelectedIndexChanged);
             // 
             // weaponQualityBox
             // 
@@ -432,23 +426,23 @@ namespace FloatToolGUI
             this.weaponQualityBox.Name = "weaponQualityBox";
             this.weaponQualityBox.SelectedIndexChanged += new System.EventHandler(this.SkinComboboxChanged);
             // 
-            // label12
+            // stattrackLabel
             // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Name = "label12";
+            resources.ApplyResources(this.stattrackLabel, "stattrackLabel");
+            this.stattrackLabel.ForeColor = System.Drawing.Color.White;
+            this.stattrackLabel.Name = "stattrackLabel";
             // 
-            // label1
+            // weaponTypeLabel
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.weaponTypeLabel, "weaponTypeLabel");
+            this.weaponTypeLabel.ForeColor = System.Drawing.Color.White;
+            this.weaponTypeLabel.Name = "weaponTypeLabel";
             // 
-            // label4
+            // fullnameLabel
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Name = "label4";
+            resources.ApplyResources(this.fullnameLabel, "fullnameLabel");
+            this.fullnameLabel.ForeColor = System.Drawing.Color.White;
+            this.fullnameLabel.Name = "fullnameLabel";
             // 
             // weaponTypeBox
             // 
@@ -495,17 +489,17 @@ namespace FloatToolGUI
             this.weaponTypeBox.Name = "weaponTypeBox";
             this.weaponTypeBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // label11
+            // outcomesLabel
             // 
-            resources.ApplyResources(this.label11, "label11");
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Name = "label11";
+            resources.ApplyResources(this.outcomesLabel, "outcomesLabel");
+            this.outcomesLabel.ForeColor = System.Drawing.Color.White;
+            this.outcomesLabel.Name = "outcomesLabel";
             // 
-            // label2
+            // skinLabel
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.skinLabel, "skinLabel");
+            this.skinLabel.ForeColor = System.Drawing.Color.White;
+            this.skinLabel.Name = "skinLabel";
             // 
             // fullSkinName
             // 
@@ -542,12 +536,12 @@ namespace FloatToolGUI
             this.panel16.Controls.Add(this.searchmodeEqual_btn);
             this.panel16.Controls.Add(this.searchmodeLess_btn);
             this.panel16.Controls.Add(this.searchModeLabel);
-            this.panel16.Controls.Add(this.label5);
+            this.panel16.Controls.Add(this.neededfloatLabel);
             this.panel16.Controls.Add(this.quantityInput);
             this.panel16.Controls.Add(this.skipValueInput);
             this.panel16.Controls.Add(this.ascendingCheckBox);
-            this.panel16.Controls.Add(this.label7);
-            this.panel16.Controls.Add(this.label6);
+            this.panel16.Controls.Add(this.skipLabel);
+            this.panel16.Controls.Add(this.countLabel);
             this.panel16.Controls.Add(this.searchFloatInput);
             this.panel16.Controls.Add(this.sortCheckBox);
             this.panel16.Controls.Add(this.startBtn);
@@ -565,18 +559,6 @@ namespace FloatToolGUI
             this.startSearchSingleButton.Name = "startSearchSingleButton";
             this.startSearchSingleButton.UseVisualStyleBackColor = false;
             this.startSearchSingleButton.Click += new System.EventHandler(this.StartButtonClick);
-            // 
-            // downloadProgressBar
-            // 
-            resources.ApplyResources(this.downloadProgressBar, "downloadProgressBar");
-            this.downloadProgressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.downloadProgressBar.ForeColor = System.Drawing.Color.White;
-            this.downloadProgressBar.Maximum = 100;
-            this.downloadProgressBar.Minimum = 0;
-            this.downloadProgressBar.Name = "downloadProgressBar";
-            this.downloadProgressBar.ProgressColor = System.Drawing.Color.Green;
-            this.downloadProgressBar.ProgressFont = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold);
-            this.downloadProgressBar.Value = 0F;
             // 
             // searchmodeGreater_btn
             // 
@@ -617,11 +599,11 @@ namespace FloatToolGUI
             this.searchModeLabel.ForeColor = System.Drawing.Color.White;
             this.searchModeLabel.Name = "searchModeLabel";
             // 
-            // label5
+            // neededfloatLabel
             // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Name = "label5";
+            resources.ApplyResources(this.neededfloatLabel, "neededfloatLabel");
+            this.neededfloatLabel.ForeColor = System.Drawing.Color.White;
+            this.neededfloatLabel.Name = "neededfloatLabel";
             // 
             // quantityInput
             // 
@@ -666,17 +648,17 @@ namespace FloatToolGUI
             this.ascendingCheckBox.Name = "ascendingCheckBox";
             this.ascendingCheckBox.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // skipLabel
             // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Name = "label7";
+            resources.ApplyResources(this.skipLabel, "skipLabel");
+            this.skipLabel.ForeColor = System.Drawing.Color.White;
+            this.skipLabel.Name = "skipLabel";
             // 
-            // label6
+            // countLabel
             // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Name = "label6";
+            resources.ApplyResources(this.countLabel, "countLabel");
+            this.countLabel.ForeColor = System.Drawing.Color.White;
+            this.countLabel.Name = "countLabel";
             // 
             // searchFloatInput
             // 
@@ -708,13 +690,20 @@ namespace FloatToolGUI
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.Transparent;
+            this.panel15.Controls.Add(this.craftRangeLabel);
             this.panel15.Controls.Add(this.speedStatusLabel);
             this.panel15.Controls.Add(this.combinationsStatusLabel);
             this.panel15.Controls.Add(this.gpuSearch_btn);
-            this.panel15.Controls.Add(this.label10);
+            this.panel15.Controls.Add(this.threadsLabel);
             this.panel15.Controls.Add(this.threadCountInput);
             resources.ApplyResources(this.panel15, "panel15");
             this.panel15.Name = "panel15";
+            // 
+            // craftRangeLabel
+            // 
+            resources.ApplyResources(this.craftRangeLabel, "craftRangeLabel");
+            this.craftRangeLabel.ForeColor = System.Drawing.Color.White;
+            this.craftRangeLabel.Name = "craftRangeLabel";
             // 
             // speedStatusLabel
             // 
@@ -738,11 +727,11 @@ namespace FloatToolGUI
             this.gpuSearch_btn.UseVisualStyleBackColor = false;
             this.gpuSearch_btn.Click += new System.EventHandler(this.gpuSearch_btn_Click);
             // 
-            // label10
+            // threadsLabel
             // 
-            resources.ApplyResources(this.label10, "label10");
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Name = "label10";
+            resources.ApplyResources(this.threadsLabel, "threadsLabel");
+            this.threadsLabel.ForeColor = System.Drawing.Color.White;
+            this.threadsLabel.Name = "threadsLabel";
             // 
             // threadCountInput
             // 
@@ -786,6 +775,28 @@ namespace FloatToolGUI
             this.WorkStatusUpdater.Enabled = true;
             this.WorkStatusUpdater.Interval = 250;
             this.WorkStatusUpdater.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // downloadProgressBar
+            // 
+            this.downloadProgressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            resources.ApplyResources(this.downloadProgressBar, "downloadProgressBar");
+            this.downloadProgressBar.ForeColor = System.Drawing.Color.White;
+            this.downloadProgressBar.Maximum = 100;
+            this.downloadProgressBar.Minimum = 0;
+            this.downloadProgressBar.Name = "downloadProgressBar";
+            this.downloadProgressBar.ProgressColor = System.Drawing.Color.Green;
+            this.downloadProgressBar.ProgressFont = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Bold);
+            this.downloadProgressBar.Value = 0F;
+            // 
+            // stattrackCheckBox
+            // 
+            this.stattrackCheckBox.Checked = false;
+            this.stattrackCheckBox.ForeColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.stattrackCheckBox, "stattrackCheckBox");
+            this.stattrackCheckBox.Name = "stattrackCheckBox";
+            this.stattrackCheckBox.TurnedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.stattrackCheckBox.TurnedOnColor = System.Drawing.Color.Green;
+            this.stattrackCheckBox.OnToggled += new System.EventHandler(this.SkinComboboxChanged);
             // 
             // FloatTool
             // 
@@ -838,22 +849,22 @@ namespace FloatToolGUI
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button checkPossibilityBtn;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label qualityLabel;
         private System.Windows.Forms.ComboBox weaponQualityBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label weaponTypeLabel;
+        private System.Windows.Forms.Label fullnameLabel;
         private System.Windows.Forms.ComboBox weaponTypeBox;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label skinLabel;
         private System.Windows.Forms.TextBox fullSkinName;
         private System.Windows.Forms.ComboBox weaponSkinBox;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.CheckBox ascendingCheckBox;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label countLabel;
         private System.Windows.Forms.CheckBox sortCheckBox;
         private System.Windows.Forms.Button startBtn;
         private System.Windows.Forms.TextBox searchFloatInput;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label skipLabel;
+        private System.Windows.Forms.Label neededfloatLabel;
         private System.Windows.Forms.NumericUpDown skipValueInput;
         private System.Windows.Forms.NumericUpDown quantityInput;
         private System.Windows.Forms.Panel panel2;
@@ -864,7 +875,7 @@ namespace FloatToolGUI
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button minimizeBtn;
         private System.Windows.Forms.Button closeBtn;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label floattoolTitle;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
@@ -873,7 +884,7 @@ namespace FloatToolGUI
         private System.Windows.Forms.Label versionLabel;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label threadsLabel;
         private System.Windows.Forms.NumericUpDown threadCountInput;
         private System.Windows.Forms.Button gpuSearch_btn;
         private System.Windows.Forms.Label combinationsStatusLabel;
@@ -886,14 +897,15 @@ namespace FloatToolGUI
         private System.Windows.Forms.Button MaximizeButton;
         private CustomProgressBar downloadProgressBar;
         private System.Windows.Forms.ComboBox outcomeSelectorComboBox;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label outcomesLabel;
         private CustomControls.CustomToggleSwitch stattrackCheckBox;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label stattrackLabel;
         private System.Windows.Forms.Button benchmarkButton;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.FlowLayoutPanel foundCombinationContainer;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label byPrevterlabel;
         private System.Windows.Forms.Button startSearchSingleButton;
+        private System.Windows.Forms.Label craftRangeLabel;
     }
 }
 
