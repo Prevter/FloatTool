@@ -14,10 +14,10 @@ namespace FloatToolGUI.CustomControls
     public partial class CustomToggleSwitch : UserControl
     {
         private bool check = false;
-        public bool Checked { get {return check; } set {check = value; Invalidate(); } }
-        public Color TurnedOffColor { get; set; }
+        public bool Checked { get { return check; } set { check = value; Invalidate(); } }
+        public Color TurnedOffColor { get; set; } = Color.FromArgb(44, 44, 44);
 
-        public Color TurnedOnColor { get; set; }
+        public Color TurnedOnColor { get; set; } = Color.Green;
 
         public CustomToggleSwitch()
         {

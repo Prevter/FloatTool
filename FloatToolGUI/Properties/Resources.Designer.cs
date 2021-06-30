@@ -93,6 +93,26 @@ namespace FloatToolGUI.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DiscordBlack {
+            get {
+                object obj = ResourceManager.GetObject("DiscordBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DiscordWhite {
+            get {
+                object obj = ResourceManager.GetObject("DiscordWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gearBlack {
             get {
                 object obj = ResourceManager.GetObject("gearBlack", resourceCulture);

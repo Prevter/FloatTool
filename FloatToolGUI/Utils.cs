@@ -272,7 +272,7 @@ namespace FloatToolGUI
 
         public static string CheckUpdates()
         {
-            using (var client = new WebClient())
+            using (WebClient client = new WebClient())
             {
                 client.Headers.Add("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)");
                 string response = client.DownloadString("https://api.github.com/repos/prevter/FloatTool-GUI/releases/latest");

@@ -19,7 +19,7 @@ namespace FloatToolGUI
             Name = name;
             MinFloat = (decimal)minWear;
             MaxFloat = (decimal)maxWear;
-            FloatRange = MaxFloat - MinFloat;
+            FloatRange = (MaxFloat - MinFloat) / 10;
             Rarity = rarity;
         }
 

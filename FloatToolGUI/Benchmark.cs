@@ -31,20 +31,18 @@ namespace FloatToolGUI
         SearchMode CurrentSearchMode = SearchMode.Equal;
         private Pallete CurrentPallete;
 
-        public void parseCraft(List<InputSkin> inputs, List<Skin> outputs, string want)
+        public void parseCraft(InputSkin[] inputs, Skin[] outputs, string want)
         {
             decimal wantFloat = 1;
             if (CurrentSearchMode != SearchMode.Equal)
                 decimal.TryParse(want, NumberStyles.Any, CultureInfo.InvariantCulture, out wantFloat);
 
-            var inputArr = inputs.ToArray();
-
-            for (int i = 0; i < outputs.Count; i++)
+            for (int i = 0; i < outputs.Length; ++i)
             {
-                decimal flotOrigin = Math.Round(craft(inputArr, outputs[i].MinFloat, outputs[i].FloatRange), 14);
+                decimal flotOrigin = Math.Round(craft(inputs, outputs[i].MinFloat, outputs[i].FloatRange), 14);
 
                 if (
-                    (flotOrigin.ToString(CultureInfo.InvariantCulture).StartsWith(want, StringComparison.Ordinal) && CurrentSearchMode == SearchMode.Equal) ||
+                    flotOrigin.ToString(CultureInfo.InvariantCulture).StartsWith(want, StringComparison.Ordinal) ||
                     (CurrentSearchMode == SearchMode.Less && (flotOrigin < wantFloat)) ||
                     (CurrentSearchMode == SearchMode.Greater && (flotOrigin > wantFloat))
                 )
@@ -54,11 +52,11 @@ namespace FloatToolGUI
             }
         }
 
-        public void secndThread(List<Skin> craftList, string wanted, List<InputSkin> pool, int start, int skip)
+        public void secndThread(Skin[] craftList, string wanted, InputSkin[] pool, int start, int skip)
         {
-            foreach (IEnumerable<InputSkin> pair in Combinations(pool, start, skip))
+            foreach (InputSkin[] _ in Combinations(pool, start, skip))
             {
-                parseCraft(pair.ToList(), craftList, wanted);
+                parseCraft(_, craftList, wanted);
                 Interlocked.Increment(ref currComb);
             }
         }
@@ -142,7 +140,7 @@ namespace FloatToolGUI
                 for (int i = 0; i < threads; i++)
                 {
                     var startIndex = i;
-                    Thread newThread = new Thread(() => secndThread(outcomes, "1", inputSkins, startIndex, threads));
+                    Thread newThread = new Thread(() => secndThread(outcomes.ToArray(), "1", inputSkins.ToArray(), startIndex, threads));
                     newThread.Start();
                     t2.Add(newThread);
                 }
@@ -168,11 +166,11 @@ namespace FloatToolGUI
 
             timer.Stop();
             TimeSpan timespan = timer.Elapsed;
-            Logger.Log($"[{DateTime.Now}]: Benchmark ended, speed = {Math.Round(currComb / timespan.TotalSeconds)}");
+            Logger.Log($"[{DateTime.Now}]: Benchmark ended, speed = {(uint)((double)currComb * (double)Stopwatch.Frequency / timer.ElapsedTicks)}");
             Invoke((MethodInvoker)(() =>
             {
                 submitScoreBtn.Enabled = true;
-                speedLabel.Text = $"{Math.Round(currComb / timespan.TotalSeconds)} к/с";
+                speedLabel.Text = $"{(uint)((double)currComb * (double)Stopwatch.Frequency / timer.ElapsedTicks)} к/с";
                 thread1.Abort();
             }
             ));

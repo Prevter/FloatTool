@@ -69,20 +69,21 @@ namespace FloatToolGUI
         public bool muteSound = false;
         string newLine;
         public StringBuilder ConsoleBuffer;
+        private bool[] flags = { false };
         public enum SearchMode
         {
             Less,
             Equal,
             Greater
         }
-        
+
         public SearchMode CurrentSearchMode = SearchMode.Equal;
         public Currency currentCurr = Currency.USD;
         public bool discordWorker = true;
 
         static public string getSkinData(string name)
         {
-            name = name.Replace("StatTrak™ ",""); //remove stattrack
+            name = name.Replace("StatTrak™ ", ""); //remove stattrack
             using (StreamReader r = new StreamReader("itemData.json"))
             {
                 string json = r.ReadToEnd();
@@ -99,26 +100,23 @@ namespace FloatToolGUI
                         break;
                     }
                 }
-                
+
                 return collection + "," + rarity;//json;
             }
         }
 
-        public void parseCraft(List<InputSkin> inputs, List<Skin> outputs, string want)
+        public void parseCraft(InputSkin[] inputs, Skin[] outputs, string want)
         {
-            //List<double> results = new List<double>();
             decimal wantFloat = 1;
             if (CurrentSearchMode != SearchMode.Equal)
                 decimal.TryParse(want, NumberStyles.Any, CultureInfo.InvariantCulture, out wantFloat);
 
-            var inputArr = inputs.ToArray();
-
-            for (int i = 0; i < outputs.Count; i++)
+            for (int i = 0; i < outputs.Length; ++i)
             {
-                decimal flotOrigin = Math.Round(craft(inputArr, outputs[i].MinFloat, outputs[i].FloatRange), 14);
-                
+                decimal flotOrigin = Math.Round(craft(inputs, outputs[i].MinFloat, outputs[i].FloatRange), 14, MidpointRounding.AwayFromZero);
+
                 if (
-                    (flotOrigin.ToString(CultureInfo.InvariantCulture).StartsWith(want, StringComparison.Ordinal) && CurrentSearchMode == SearchMode.Equal) ||
+                    flotOrigin.ToString(CultureInfo.InvariantCulture).StartsWith(want, StringComparison.Ordinal) ||
                     (CurrentSearchMode == SearchMode.Less && (flotOrigin < wantFloat)) ||
                     (CurrentSearchMode == SearchMode.Greater && (flotOrigin > wantFloat))
                 )
@@ -170,7 +168,7 @@ namespace FloatToolGUI
                                 }
                             });
                         }
-                        
+
                         ConsoleBuffer.Append($"[{string.Join(", ", floatStrings)}]{newLine}====================================={newLine}");
                     }
                     ));
@@ -255,27 +253,35 @@ namespace FloatToolGUI
 
         public void AutoUpdater()
         {
-            string ver = versionLabel.Text;
-            string data = CheckUpdates();
-            string lastver = data.Split('|')[0];
-            Logger.Log($"Checked version is: {lastver}{newLine}Installed: {ver}");
-            if (ver != lastver)
+            try
             {
-                DialogResult result = MessageBox.Show(
-                    $"Доступна версия {lastver}! Хотите обновить?",
-                    "Доступно обновление",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Information,
-                    MessageBoxDefaultButton.Button1,
-                    MessageBoxOptions.DefaultDesktopOnly);
-
-                if (result == DialogResult.Yes)
+                string ver = versionLabel.Text;
+                string data = CheckUpdates();
+                string lastver = data.Split('|')[0];
+                Logger.Log($"Checked version is: {lastver}{newLine}Installed: {ver}");
+                if (ver != lastver)
                 {
-                    string strExeFilePath = Assembly.GetExecutingAssembly().Location;
-                    string strWorkPath = Path.GetDirectoryName(strExeFilePath);
-                    Process.Start($@"{strWorkPath}\Updater.exe", data.Split('|')[1]);
-                    Invoke((MethodInvoker)(() => { Close(); } ));
+                    DialogResult result = MessageBox.Show(
+                        $"Доступна версия {lastver}! Хотите обновить?",
+                        "Доступно обновление",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Information,
+                        MessageBoxDefaultButton.Button1,
+                        MessageBoxOptions.DefaultDesktopOnly);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        string strExeFilePath = Assembly.GetExecutingAssembly().Location;
+                        string strWorkPath = Path.GetDirectoryName(strExeFilePath);
+                        Process.Start($@"{strWorkPath}\Updater.exe", data.Split('|')[1]);
+                        Invoke((MethodInvoker)(() => { Close(); }));
+                    }
                 }
+            }
+            catch(Exception ex)
+            {
+                Logger.Log($"[{DateTime.Now}]: {{EXCEPTION}} {ex.Message}{newLine}{ex.StackTrace}");
+                Logger.SaveCrashReport();
             }
         }
 
@@ -293,7 +299,11 @@ namespace FloatToolGUI
             UpdateCustomPalette();
             registryData = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\FloatTool", true);
 
-            
+            AutoScaleDimensions = new SizeF(8F, 16F);
+            AutoScaleMode = AutoScaleMode.Font;
+
+            InitOpenCL();
+
             var soundRK = registryData.GetValue("sound");
             var bufferSpeedRK = registryData.GetValue("bufferSpeed");
             var discordRPCRK = registryData.GetValue("discordRPC");
@@ -327,7 +337,7 @@ namespace FloatToolGUI
                     Thread updater = new Thread(AutoUpdater);
                     updater.Start();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     Logger.Log($"[{DateTime.Now}]: {{EXCEPTION}} {ex.Message}{newLine}{ex.StackTrace}");
                     Logger.SaveCrashReport();
@@ -340,19 +350,33 @@ namespace FloatToolGUI
         private void Form1_Load(object sender, EventArgs e)
         {
             weaponSkinBox.Items.Clear();
-            using (StreamReader r = new StreamReader("itemData.json"))
+            try
             {
-                string json = r.ReadToEnd();
-                dynamic items = JsonConvert.DeserializeObject(json);
-                foreach (var skin in items)
+                using (StreamReader r = new StreamReader("itemData.json"))
                 {
-
-                    if (string.Compare(skin["name"].ToString().Split('|')[0].TrimEnd(), weaponTypeBox.Text) == 0)
+                    string json = r.ReadToEnd();
+                    dynamic items = JsonConvert.DeserializeObject(json);
+                    foreach (var skin in items)
                     {
-                        weaponSkinBox.Items.Add(skin["name"].ToString().Split('|')[1].Remove(0, 1));
+
+                        if (string.Compare(skin["name"].ToString().Split('|')[0].TrimEnd(), weaponTypeBox.Text) == 0)
+                        {
+                            weaponSkinBox.Items.Add(skin["name"].ToString().Split('|')[1].Remove(0, 1));
+                        }
                     }
                 }
             }
+            catch (FileNotFoundException)
+            {
+                Logger.Log($"[{DateTime.Now}]: itemData.json not found! Trying to redownload it...");
+                using (var client = new WebClient())
+                {
+                    client.Headers.Add("User-Agent", "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)");
+                    client.DownloadFile("https://raw.githubusercontent.com/Prevter/FloatTool-GUI/master/FloatToolGUI/itemData.json", "itemData.json");
+                    MessageBox.Show("Библиотека скинов была перезагружена! Перезапустите приложение.");
+                }
+            }
+            
             updateSearchStr();
 
             //dev  = 824349399688937543
@@ -403,16 +427,16 @@ namespace FloatToolGUI
                 dynamic items = JsonConvert.DeserializeObject(json);
                 foreach (var skin in items)
                 {
-                    
+
                     if (skin["name"].ToString().Split('|')[0].TrimEnd() == weaponTypeBox.Text)
                     {
                         //Console.WriteLine(skin["name"].ToString().Split('|')[1].Remove(0,1));
-                        weaponSkinBox.Items.Add(skin["name"].ToString().Split('|')[1].Remove(0,1));
+                        weaponSkinBox.Items.Add(skin["name"].ToString().Split('|')[1].Remove(0, 1));
                     }
                 }
             }
             updateSearchStr();
-            
+
         }
 
         private void SkinComboboxChanged(object sender, EventArgs e)
@@ -420,11 +444,24 @@ namespace FloatToolGUI
             updateSearchStr();
         }
 
-        public void secndThread(List<Skin> craftList, string wanted, List<InputSkin> pool, int start, int skip)
+        public void secndThread(Skin[] craftList, string wanted, InputSkin[] pool, int start, int skip)
         {
-            foreach (IEnumerable<InputSkin> _ in Combinations(pool, start, skip))
+           /* var combs = Combinations(pool, start, skip).GetEnumerator();
+            while (combs.MoveNext())
             {
-                parseCraft(_.ToList(), craftList, wanted);
+                parseCraft((InputSkin[])combs.Current, craftList, wanted);
+                Interlocked.Increment(ref currComb);
+            }*/
+
+            /*for (IEnumerator i = Combinations(pool, start, skip).GetEnumerator(); i.MoveNext(); )
+            {
+                parseCraft((InputSkin[])i.Current, craftList, wanted);
+                Interlocked.Increment(ref currComb);
+            }*/
+
+            foreach (InputSkin[] _ in Combinations(pool, start, skip))
+            {
+                parseCraft(_, craftList, wanted);
                 Interlocked.Increment(ref currComb);
             }
         }
@@ -442,29 +479,29 @@ namespace FloatToolGUI
                 Font = new Font("Inter", 10f)
             };
             #region Labels
-                        tmpPanel.Controls.Add(new Label
-                        {
-                            AutoSize = true,
-                            Location = new Point(3,3),
-                            Text = $"{outcomeSelectorComboBox.Text}\nВозможный флоат: {flotOrigin.ToString(CultureInfo.InvariantCulture)}\nIEEE754: {flot}"
-                        });
-                        tmpPanel.Controls.Add(new Label
-                        {
-                            AutoSize = false,
-                            Size = new Size(160, 54),
-                            Location = new Point(263, 3),
-                            TextAlign = ContentAlignment.MiddleRight,
-                            Text = $"{time}\nЦена: {price.ToString("0.00")} {currentCurr}"
-                        });
-                        tmpPanel.Controls.Add(new Label
-                        {
-                            AutoSize = true,
-                            Location = new Point(3, 62),
-                            Text = "Ингредиенты:"
-                        });
+            tmpPanel.Controls.Add(new Label
+            {
+                AutoSize = true,
+                Location = new Point(3, 3),
+                Text = $"{outcomeSelectorComboBox.Text}\nВозможный флоат: {flotOrigin.ToString(CultureInfo.InvariantCulture)}\nIEEE754: {flot}"
+            });
+            tmpPanel.Controls.Add(new Label
+            {
+                AutoSize = false,
+                Size = new Size(160, 54),
+                Location = new Point(263, 3),
+                TextAlign = ContentAlignment.MiddleRight,
+                Text = $"{time}\nЦена: {price.ToString("0.00")} {currentCurr}"
+            });
+            tmpPanel.Controls.Add(new Label
+            {
+                AutoSize = true,
+                Location = new Point(3, 62),
+                Text = "Ингредиенты:"
+            });
             #endregion
             #region TextBoxes & Buttons
-            for(int i = 0; i < 10; i++)
+            for (int i = 0; i < 10; i++)
             {
                 int y = 27 * (i % 5) + 81;
                 int x = i > 4 ? 220 : 6;
@@ -511,10 +548,11 @@ namespace FloatToolGUI
         BigInteger totalComb = 0;
         long currComb = 0;
         public bool Searching = false;
+        List<Thread> downloadThreads = new List<Thread>();
 
         private void StartCalculation()
         {
-            Logger.Log($"[{DateTime.Now.ToString()}]: Started search");
+            Logger.Log($"[{DateTime.Now}]: Started search");
             if (discordWorker) {
                 client.SetPresence(new RichPresence()
                 {
@@ -529,14 +567,22 @@ namespace FloatToolGUI
                 });
             }
 
-            registryData.SetValue("lastThreads", (int)threadCountInput.Value);
-
+            try
+            {
+                registryData.SetValue("lastThreads", (int)threadCountInput.Value);
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                Logger.Log($"[{DateTime.Now}]: {{EXCEPTION}} {ex.Message}{Environment.NewLine}{ex.StackTrace}");
+                Logger.SaveCrashReport();
+                registryData = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\FloatTool", true);
+            }
             totalComb = quantityInput.Value == 10 ? 1 : Fact((int)quantityInput.Value) / (Fact(10) * Fact((int)quantityInput.Value - 10));
             currComb = 0;
             Invoke((MethodInvoker)(() =>
                 {
                     outputConsoleBox.Text = "Добро пожаловать в FloatTool!" + newLine + "Инструмент для создания флоатов при помощи крафтов CS:GO" + newLine;
-                    outputConsoleBox.AppendText( "Время начала процесса: " + DateTime.Now.ToString("HH:mm:ss tt") + newLine);
+                    outputConsoleBox.AppendText("Время начала процесса: " + DateTime.Now.ToString("HH:mm:ss tt") + newLine);
                     startBtn.Text = "Стоп";
                     fullSkinName.SelectionStart = fullSkinName.Text.Length;
                     outputConsoleBox.ScrollToCaret();
@@ -558,10 +604,10 @@ namespace FloatToolGUI
 
             string url = $"https://steamcommunity.com/market/listings/730/{ q }/render/?query=&language=russian&count={ count }&start={ start }&currency={ (int)currentCurr }";
             Console.WriteLine(url);
-           
+
             this.Invoke((MethodInvoker)(() =>
             {
-                outputConsoleBox.AppendText( "Загрузка скинов с торговой площадки..." + newLine);
+                outputConsoleBox.AppendText("Загрузка скинов с торговой площадки..." + newLine);
                 downloadProgressBar.Maximum = int.Parse(count);
                 downloadProgressBar.Value = 0;
                 fullSkinName.SelectionStart = fullSkinName.Text.Length;
@@ -569,7 +615,7 @@ namespace FloatToolGUI
                 combinationsStatusLabel.Text = $"Проверено комбинаций: 0 / {totalComb}";
             }
             ));
-            
+
             List<InputSkin> inputSkins = new List<InputSkin>();
             try
             {
@@ -578,7 +624,7 @@ namespace FloatToolGUI
                     string json = wc.DownloadString(url);
                     Console.WriteLine(json);
                     dynamic r = JsonConvert.DeserializeObject(json);
-                    this.Invoke((MethodInvoker)(() =>
+                    Invoke((MethodInvoker)(() =>
                     {
                         outputConsoleBox.AppendText("Получение флоатов..." + newLine);
                         fullSkinName.SelectionStart = fullSkinName.Text.Length;
@@ -586,8 +632,6 @@ namespace FloatToolGUI
                     }
                     ));
                     int counter = 0;
-
-                    List<Thread> downloadThreads = new List<Thread>();
 
                     foreach (var el in r["listinginfo"])
                     {
@@ -600,8 +644,10 @@ namespace FloatToolGUI
 
                             try
                             {
+                                decimal wear = GetWearFromInspectURL(link.Replace("%assetid%", aid).Replace("%listingid%", lid));
+                                //if(wear != 0)
                                 inputSkins.Add(new InputSkin(
-                                    GetWearFromInspectURL(link.Replace("%assetid%", aid).Replace("%listingid%", lid)),
+                                    wear,
                                     (float.Parse(r["listinginfo"][el.Name]["converted_price"].ToString()) + float.Parse(r["listinginfo"][el.Name]["converted_fee"].ToString())) / 100,
                                     currentCurr)
                                 );
@@ -638,11 +684,20 @@ namespace FloatToolGUI
                         }
                         if (okey) break;
                     }
+
+                    if (inputSkins.Count < 10) throw new Exception("Couldn't download more than 10 floats.");
                 }
             }
             catch (Exception ex)
             {
-                if(ex.GetType() != typeof(ThreadAbortException))
+                var tmpArr = downloadThreads.ToArray();
+
+                foreach(var t in tmpArr)
+                {
+                    t.Abort();
+                }
+
+                if (ex.GetType() != typeof(ThreadAbortException))
                 {
                     Logger.Log($"[{DateTime.Now}]: {{EXCEPTION}} {ex.Message}{Environment.NewLine}{ex.StackTrace}");
                     Logger.SaveCrashReport();
@@ -663,7 +718,7 @@ namespace FloatToolGUI
             }
             Invoke((MethodInvoker)(() =>
             {
-                outputConsoleBox.AppendText( "Поиск ауткамов..." + newLine);
+                outputConsoleBox.AppendText("Поиск ауткамов..." + newLine);
                 outputConsoleBox.SelectionStart = fullSkinName.Text.Length;
 
                 Logger.Log($"[{DateTime.Now}] Float list: [{string.Join(", ", inputSkins)}]");
@@ -692,12 +747,12 @@ namespace FloatToolGUI
             }
 
             int outcomeIndex = 0;
-            Invoke((MethodInvoker)(() => { outcomeIndex  = outcomeSelectorComboBox.SelectedIndex; } ));
-            
+            Invoke((MethodInvoker)(() => { outcomeIndex = outcomeSelectorComboBox.SelectedIndex; }));
+
             var allOutcomes = GroupOutcomes(craftList);
             List<Skin> outcomes = new List<Skin>();
 
-            if(allOutcomes.Length > outcomeIndex) {
+            if (allOutcomes.Length > outcomeIndex) {
                 outcomes.Add(allOutcomes[outcomeIndex][0]);
             }
             else
@@ -708,7 +763,7 @@ namespace FloatToolGUI
 
             this.Invoke((MethodInvoker)(() =>
             {
-                outputConsoleBox.AppendText( "Ауткамы найдены! Начинаю подбор..." + newLine + "Выбрано для поиска:" + newLine + String.Join(newLine, outcomes) + newLine + newLine);
+                outputConsoleBox.AppendText("Ауткамы найдены! Начинаю подбор..." + newLine + "Выбрано для поиска:" + newLine + String.Join(newLine, outcomes) + newLine + newLine);
                 fullSkinName.SelectionStart = fullSkinName.Text.Length;
                 outputConsoleBox.ScrollToCaret();
                 downloadProgressBar.Value = 0;
@@ -724,7 +779,7 @@ namespace FloatToolGUI
                 for (int j = 0; j < threads; j++)
                 {
                     var startIndex = j;
-                    Thread newThread = new Thread(() => secndThread(outcomes, wanted, inputSkins, startIndex, threads));
+                    Thread newThread = new Thread(() => secndThread(outcomes.ToArray(), wanted, inputSkins.ToArray(), startIndex, threads));
                     newThread.Start();
                     t2.Add(newThread);
                 }
@@ -733,13 +788,13 @@ namespace FloatToolGUI
             {
                 Console.WriteLine(ex.Message);
             }
-            
+
             Console.WriteLine($"[DEBUG] {threads} threads started!");
 
             while (Searching)
-            {   
+            {
                 bool okey = true;
-                
+
                 foreach (Thread t in t2)
                 {
                     if (t.IsAlive)
@@ -758,9 +813,9 @@ namespace FloatToolGUI
                 t.Abort();
             }
 
-            Invoke((MethodInvoker)(() => 
+            Invoke((MethodInvoker)(() =>
             {
-                outputConsoleBox.AppendText( "Программа завершила проверку всех комбинаций!" + newLine);
+                outputConsoleBox.AppendText("Программа завершила проверку всех комбинаций!" + newLine);
                 fullSkinName.SelectionStart = fullSkinName.Text.Length;
                 outputConsoleBox.ScrollToCaret();
                 thread1.Abort();
@@ -768,10 +823,8 @@ namespace FloatToolGUI
                 downloadProgressBar.Value = 0;
                 SwitchEnabled();
             }));
-            
+
         }
-
-
 
         private void StartButtonClick(object sender, EventArgs e)
         {
@@ -837,24 +890,24 @@ namespace FloatToolGUI
                     if (skn["name"].ToString() == skin)
                     {
                         #region Float ranges
-                                                /* 
-                                                List<dynamic> craftList = new List<dynamic>();
+                        /* 
+                        List<dynamic> craftList = new List<dynamic>();
 
-                                                foreach (var skin2 in items)
-                                                    if (skn["case"].ToString() == skin2["case"].ToString())
-                                                    {
-                                                        if (skin2["rarity"].ToString().Split(' ')[0] == getNextRarity(skn["rarity"].ToString().Split(' ')[0]))
-                                                            craftList.Add(skin2);
-                                                    }
-                                
+                        foreach (var skin2 in items)
+                            if (skn["case"].ToString() == skin2["case"].ToString())
+                            {
+                                if (skin2["rarity"].ToString().Split(' ')[0] == getNextRarity(skn["rarity"].ToString().Split(' ')[0]))
+                                    craftList.Add(skin2);
+                            }
 
-                                                foreach (var skinRange in GroupOutcomes(craftList))
-                                                {
-                                                    ConsoleBuffer.Append($"{newLine}--------Length: {skinRange.Count}--------");
-                                                    foreach (var skinObj in skinRange)
-                                                        ConsoleBuffer.Append(newLine+skinObj.ToString());
-                                                }
-                                                */
+
+                        foreach (var skinRange in GroupOutcomes(craftList))
+                        {
+                            ConsoleBuffer.Append($"{newLine}--------Length: {skinRange.Count}--------");
+                            foreach (var skinObj in skinRange)
+                                ConsoleBuffer.Append(newLine+skinObj.ToString());
+                        }
+                        */
                         #endregion
 
                         if (skn["highestRarity"] == "False")
@@ -881,12 +934,12 @@ namespace FloatToolGUI
             MessageBox.Show("Такого скина не существует! Перепроверьте настройки.", "FloatTool", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        
+
 
         private bool floatRangeText(string text, string minVal, string maxVal)
         {
             Console.WriteLine(text + " in float range [" + minVal + ", " + maxVal + "]");
-            float minWear = float.Parse(minVal.Replace('.',','));
+            float minWear = float.Parse(minVal.Replace('.', ','));
             float maxWear = float.Parse(maxVal.Replace('.', ','));
 
 
@@ -927,7 +980,7 @@ namespace FloatToolGUI
         private void MaximizeMinimizeButton(object sender, EventArgs e)
         {
             var buttonText = ((Button)sender).Text;
-            if(buttonText == "_") WindowState = FormWindowState.Minimized;
+            if (buttonText == "_") WindowState = FormWindowState.Minimized;
             else
             {
                 WindowState = WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
@@ -938,9 +991,9 @@ namespace FloatToolGUI
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
 
@@ -1027,11 +1080,13 @@ namespace FloatToolGUI
             {
                 settingsButton.BackgroundImage = Properties.Resources.gearWhite;
                 benchmarkButton.BackgroundImage = Properties.Resources.benchmarkWhite;
+                openDiscordChat.BackgroundImage = Properties.Resources.DiscordWhite;
             }
             else if (CurrentPallete == Pallete.Light)
             {
                 settingsButton.BackgroundImage = Properties.Resources.gearBlack;
                 benchmarkButton.BackgroundImage = Properties.Resources.benchmarkBlack;
+                openDiscordChat.BackgroundImage = Properties.Resources.DiscordBlack;
             }
 
             if (CurrentPallete == Pallete.Custom)
@@ -1041,11 +1096,13 @@ namespace FloatToolGUI
                 {
                     settingsButton.BackgroundImage = Properties.Resources.gearBlack;
                     benchmarkButton.BackgroundImage = Properties.Resources.benchmarkBlack;
+                    openDiscordChat.BackgroundImage = Properties.Resources.DiscordBlack;
                 }
                 else
                 {
                     settingsButton.BackgroundImage = Properties.Resources.gearWhite;
                     benchmarkButton.BackgroundImage = Properties.Resources.benchmarkWhite;
+                    openDiscordChat.BackgroundImage = Properties.Resources.DiscordWhite;
                 }
             }
 
@@ -1201,15 +1258,49 @@ namespace FloatToolGUI
                 highest.Add(new InputSkin(highestWear, 0, currentCurr));
 
             var currSkin = twentyfour[outcomeSelectorComboBox.SelectedIndex];
-            float minCraftWear = Convert.ToSingle(craftF(lowest, (float)currSkin.MinFloat, (float)currSkin.MaxFloat), CultureInfo.InvariantCulture);
-            float maxCraftWear = Convert.ToSingle(craftF(highest, (float)currSkin.MinFloat, (float)currSkin.MaxFloat), CultureInfo.InvariantCulture);
+            float minCraftWear = Convert.ToSingle(craftF(lowest.ToArray(), (float)currSkin.MinFloat, (float)currSkin.MaxFloat), CultureInfo.InvariantCulture);
+            float maxCraftWear = Convert.ToSingle(craftF(highest.ToArray(), (float)currSkin.MinFloat, (float)currSkin.MaxFloat), CultureInfo.InvariantCulture);
 
             craftRangeLabel.Text = $"Диапазон крафта:{newLine}{minCraftWear.ToString("0.00", CultureInfo.InvariantCulture)} - {maxCraftWear.ToString("0.00", CultureInfo.InvariantCulture)}";
         }
 
+        private void openDiscordChat_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://discord.gg/RM9VrzMfhP");
+        }
+
+        public OpenCLTemplate.CLCalc.Program.Kernel floatCraft;
+
+        private void InitOpenCL()
+        {
+            string floatCraftKernel = @"
+                __kernel void floatCraftKernel(__global float * inputs, __global float * wearRange, __global float * outputs)
+                {
+                    int i = get_global_id(0);
+                    int currI = i * 10;
+                    float sum = inputs[currI];
+                    sum += inputs[currI + 1];
+                    sum += inputs[currI + 2];
+                    sum += inputs[currI + 3];
+                    sum += inputs[currI + 4];
+                    sum += inputs[currI + 5];
+                    sum += inputs[currI + 6];
+                    sum += inputs[currI + 7];
+                    sum += inputs[currI + 8];
+                    sum += inputs[currI + 9];
+                    float avg = sum / 10;
+                    outputs[i] = (wearRange[1] - wearRange[0]) * avg + wearRange[0];
+                }
+            ";
+
+            OpenCLTemplate.CLCalc.InitCL();
+            OpenCLTemplate.CLCalc.Program.Compile(new string[] { floatCraftKernel });
+            floatCraft = new OpenCLTemplate.CLCalc.Program.Kernel("floatCraftKernel");
+        }
+
         private void gpuSearch_btn_Click(object sender, EventArgs e)
         {
-            if (discordWorker)
+            /*if (discordWorker)
             {
                 client.SetPresence(new RichPresence()
                 {
@@ -1222,11 +1313,87 @@ namespace FloatToolGUI
                         LargeImageText = "FloatTool"
                     }
                 });
+            }*/
+            //SwitchEnabled();
+
+            float[] pool = {
+                0.246938750147820f, 0.196652039885521f, 0.154839321970940f,
+                0.333326697349548f, 0.163415759801865f, 0.291821509599686f,
+                0.374309629201889f, 0.378754675388336f, 0.231419935822487f,
+                0.311867892742157f, 0.374067693948746f, 0.377068012952805f,
+                0.244467452168465f, 0.355135351419449f, 0.352264583110809f,
+                0.227853879332542f, 0.340960860252380f, 0.375657349824905f,
+                0.157685652375221f, 0.217334255576134f
+            };
+
+            int arraySize = 150 * 100;
+
+            Stopwatch computeTime = new Stopwatch();
+            Stopwatch memoryTime = new Stopwatch();
+            Stopwatch cpuTime = new Stopwatch();
+            Stopwatch checkTime = new Stopwatch();
+
+            List<InputSkin> inputSkins = new List<InputSkin>();
+            for(int i = 0; i < pool.Length; ++i)
+            {
+                inputSkins.Add(new InputSkin(pool[i], 10f, currentCurr));
             }
-            SwitchEnabled();
+
+            List<float> combinations = new List<float>();
+
+            for (int i=0; i<25; i++)
+            {
+                cpuTime.Start();
+                int count = 0;
+                combinations.Clear();
+                foreach (InputSkin[] a in Combinations(inputSkins.ToArray(), arraySize * i, 1))
+                {
+                    if (count == arraySize) break;
+                    for(int k = 0; k < 10; ++k)
+                        combinations.Add((float)a[k].WearValue);
+                }
+                float[] combs = combinations.ToArray();
+                float[] outputs = new float[arraySize];
+                int[] workers = new int[1] { arraySize };
+                cpuTime.Stop();
+
+
+                memoryTime.Start();
+                OpenCLTemplate.CLCalc.Program.Variable inputs = new OpenCLTemplate.CLCalc.Program.Variable(combs);
+                OpenCLTemplate.CLCalc.Program.Variable outs = new OpenCLTemplate.CLCalc.Program.Variable(outputs);
+                OpenCLTemplate.CLCalc.Program.Variable wearRange = new OpenCLTemplate.CLCalc.Program.Variable(new float[] { 0.06f, 0.8f });
+                OpenCLTemplate.CLCalc.Program.Variable[] args = new OpenCLTemplate.CLCalc.Program.Variable[] { inputs, wearRange, outs };
+                memoryTime.Stop();    
+
+                computeTime.Start();
+                floatCraft.Execute(args, workers);
+                outs.ReadFromDeviceTo(outputs);
+                computeTime.Stop();
+
+                checkTime.Start();
+                for(int j = 0; j < arraySize; j++)
+                {
+                    if (outputs[j].ToString(CultureInfo.InvariantCulture).StartsWith("0.2500000", StringComparison.Ordinal)){
+                        var str = string.Join(", ", combinations.GetRange(j * 10, 10));
+                        Console.WriteLine($"{outputs[j]} - [{str}]");
+                        MessageBox.Show($"{outputs[j]} - [{str}]");
+                    }
+                }
+                checkTime.Stop();
+            }
+            MessageBox.Show($"OpenCL kernel finished!{newLine}Time: gpu {computeTime.ElapsedMilliseconds}ms; memory {memoryTime.ElapsedMilliseconds}ms; cpu {cpuTime.ElapsedMilliseconds}ms; check {checkTime.ElapsedMilliseconds}ms;{newLine}Speed: {(long)arraySize * 100000 / computeTime.ElapsedMilliseconds}/sec");
+
+
+            /*foreach (float f in outputs)
+            {
+                Logger.Log($"{Math.Round(f, 14).ToString(CultureInfo.InvariantCulture)}");
+            }*/
         }
 
         BigInteger last = 0;
+
+        
+
         private Pallete CurrentPallete;
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -1258,7 +1425,7 @@ namespace FloatToolGUI
 
         private void changeSearchMode(object sender, EventArgs e)
         {
-            var selectedMode = ((System.Windows.Forms.Button)sender).Text;
+            var selectedMode = ((Button)sender).Text;
 
             if(selectedMode == "=")
             {
@@ -1287,63 +1454,84 @@ namespace FloatToolGUI
         {
             if (keyData == Keys.F1)
             {
-                System.Diagnostics.Process.Start("https://prevter.github.io/FloatTool-GUI/table.html");
+                Process.Start("https://prevter.github.io/FloatTool-GUI/table.html");
                 return true;
             }
-
+            else if(keyData == Keys.F2)
+            {
+                Process.Start("https://prevter.github.io/FloatTool-GUI/utils.html");
+                return true;
+            }
+        
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        Queue<char> buffer = new Queue<char>();
+
+        private void KeyPressEvent(object sender, KeyPressEventArgs e)
+        {
+            CheatCodeKeyPress(e.KeyChar);
+        }
+
+        void CheatCodeKeyPress(char c) {
+            string[] cheatCodes = { "gpupower" };
+            buffer.Enqueue(c);
+            if (buffer.Count() > 8) 
+                buffer.Dequeue();
+            var bufferString = new string(buffer.ToArray());
+            foreach (string code in cheatCodes)
+            {
+                if (bufferString.ToLower().EndsWith(code))
+                {
+                    switch (code)
+                    {
+                        case "gpupower":
+                            gpuSearch_btn.Enabled = !gpuSearch_btn.Enabled;
+                            gpuSearch_btn.Visible = !gpuSearch_btn.Visible;
+                            break;
+                    }        
+                }
+            }
+        }
+
+        public decimal FastRound(decimal value, uint point)
+        {
+            ulong pow = 10;
+            for (int i = 1; i < point; ++i) pow *= 10;
+            ulong tmp = (ulong)(value * pow);
+            return (decimal)tmp / pow;
         }
 
         private void debugMenuShow(object sender, MouseEventArgs e)
         {
-            /*double[] pool = {
-                0.246938750147820, 0.196652039885521, 0.154839321970940,
-                0.333326697349548, 0.163415759801865, 0.291821509599686,
-                0.374309629201889, 0.378754675388336, 0.231419935822487,
-                0.311867892742157
+            InputSkin[] testing = { 
+                new InputSkin(0.32214124M, 21.214f, currentCurr), 
+                new InputSkin(0.32214124M, 21.214f, currentCurr), 
+                new InputSkin(0.32214124M, 21.214f, currentCurr), 
+                new InputSkin(0.32214124M, 21.214f, currentCurr), 
+                new InputSkin(0.32214124M, 21.214f, currentCurr), 
+                new InputSkin(0.32214124M, 21.214f, currentCurr), 
+                new InputSkin(0.32214124M, 21.214f, currentCurr), 
+                new InputSkin(0.32214124M, 21.214f, currentCurr), 
+                new InputSkin(0.32214124M, 21.214f, currentCurr), 
+                new InputSkin(0.32214124M, 21.214f, currentCurr), 
             };
-            List<InputSkin> ingridients = new List<InputSkin>();
-            foreach (double f in pool) ingridients.Add(new InputSkin(f, 1, currentCurr));
 
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
-            for (int i = 0; i < 10000000; i++)
-            {
-                for(int j = 0; j < 10; j++)
-                {
-                    var output = ingridients[j].WearValue;
-                }
+            Stopwatch stopwatch1 = new Stopwatch();
+            stopwatch1.Start();
+            for(long i = 0; i < 1000000; i++) {
+                if (CurrentSearchMode.CompareTo(SearchMode.Equal) != 0) continue;
             }
-            stopwatch.Stop();
-            double newSpeed = stopwatch.ElapsedMilliseconds;
-            stopwatch.Reset();
-            var ingridientsArr = ingridients.ToArray();
-            stopwatch.Start();
-            for (int i = 0; i < 10000000; i++)
-            {
-                for (int j = 0; j < 10; j++)
-                {
-                    var output = ingridientsArr[j].WearValue;
-                }
+            stopwatch1.Stop();
+
+            Stopwatch stopwatch2 = new Stopwatch();
+            stopwatch2.Start();
+            for (long i = 0; i < 1000000; i++) {
+                if (CurrentSearchMode != SearchMode.Equal) continue;
             }
-            stopwatch.Stop();
-            double oldSpeed = stopwatch.ElapsedMilliseconds;
-            MessageBox.Show($"list - {newSpeed} ms / 1000000\n\rarr  - {oldSpeed} ms / 1000000");*/
+            stopwatch2.Stop();
 
-
-            /*double[] pool = {
-                0.246938750147820, 0.196652039885521, 0.154839321970940,
-                0.333326697349548, 0.163415759801865, 0.291821509599686,
-                0.374309629201889, 0.378754675388336, 0.231419935822487,
-                0.311867892742157
-            };
-            List<InputSkin> inputSkins = new List<InputSkin>();
-            foreach (double f in pool) inputSkins.Add(new InputSkin(f, 1, currentCurr));
-            string output = "";
-
-            
-
-            MessageBox.Show($"c++ - {output} ({newSpeed} ms / 100000)\n\rc#  - {outputOld} ({oldSpeed} ms / 100000)");*/
+            MessageBox.Show($"arr[i]: {stopwatch1.ElapsedMilliseconds}ms{newLine}GetValue(i): {stopwatch2.ElapsedMilliseconds}ms");
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace FloatToolGUI
@@ -30,11 +31,21 @@ namespace FloatToolGUI
         static public decimal craft(InputSkin[] ingridients, decimal minFloat, decimal floatRange)
         {
             decimal avgFloat = ingridients[0].WearValue;
-            for (int i = 1; i < 10; i++)
+            avgFloat += ingridients[1].WearValue;
+            avgFloat += ingridients[2].WearValue;
+            avgFloat += ingridients[3].WearValue;
+            avgFloat += ingridients[4].WearValue;
+            avgFloat += ingridients[5].WearValue;
+            avgFloat += ingridients[6].WearValue;
+            avgFloat += ingridients[7].WearValue;
+            avgFloat += ingridients[8].WearValue;
+            avgFloat += ingridients[9].WearValue;
+
+            /*for (int i = 1; i < 10; ++i)
             {
                 avgFloat += ingridients[i].WearValue;
-            }
-            avgFloat /= 10;
+            }*/
+            //avgFloat /= 10;
             return floatRange * avgFloat + minFloat;
         }
 
@@ -45,10 +56,10 @@ namespace FloatToolGUI
         /// <param name="minFloat">Minimal wear value of skin that is going to be crafted</param>
         /// <param name="maxFloat">Maximum wear value of skin that is going to be crafted</param>
         /// <returns>Float wear value in string</returns>
-        static public string craftF(List<InputSkin> ingridients, float minFloat, float maxFloat)
+        static public string craftF(InputSkin[] ingridients, float minFloat, float maxFloat)
         {
             float[] arrInput = new float[10];
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 10; ++i)
             {
                 arrInput[i] = (float)ingridients[i].WearValue;
             }
@@ -90,37 +101,41 @@ namespace FloatToolGUI
             return allList.ToArray();
         }
 
-        static public bool NextCombination(IList<int> num, int n)
+        static public bool NextCombination(int[] num, int n)
         {
-            bool finished;
-            var changed = finished = false;
-            for (var i = 9; !finished && !changed; i--)
+            bool finished = false;
+            bool changed = false;
+            for (int i = 9; !finished && !changed; --i)
             {
-                if (num[i] < n - 10 + i)
+                if (num[i] < n + i)
                 {
-                    num[i]++;
+                    ++num[i];
                     if (i < 9)
-                        for (var j = i + 1; j < 10; j++)
+                        for (int j = i + 1; j < 10; ++j)
                             num[j] = num[j - 1] + 1;
-                    changed = true;
+                    return true;
                 }
                 finished = i == 0;
             }
             return changed;
         }
 
-        static public IEnumerable Combinations<T>(IEnumerable<T> elements, int start, int skip)
+        static public IEnumerable<InputSkin[]> Combinations(InputSkin[] elem, int start, int skip)
         {
-            var elem = elements.ToArray();
-            var size = elem.Length;
-            if (10 > size) yield break;
-            var numbers = new int[10] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            uint step = 0;
+            int size = elem.Length - 10;
+            int[] numbers = new int[10] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            long step = 0;
+            InputSkin[] resultList = new InputSkin[10];
+
             do
             {
                 if ((step - start) % skip == 0)
-                    yield return numbers.Select(n => elem[n]);
-                step++;
+                {
+                    for (int i = 0; i < 10; ++i) resultList[i] = elem[numbers[i]];
+                    yield return resultList;
+                }
+                ++step;
+                //Interlocked.Increment(ref step);
             } while (NextCombination(numbers, size));
         }
     }
