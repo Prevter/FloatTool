@@ -1,0 +1,13 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    >
+    <Geometry x:Key="CloseIcon">
+        M 21.598028 19.825707 20.707014 20.716709 34.465 34.474517 20.707014 48.232707 21.598028 49.123327 35.356014 35.36552 49.114003 49.123327 50.004634 48.232707 36.246648 34.474517 50.004634 20.716709 49.114003 19.825707 35.356014 33.583897 Z
+    </Geometry>
+    <Geometry x:Key="MaximizeIcon">
+        m 24.651955 20.770647 h 20.836309 c 1.662 0 3 1.338 3 3 v 20.836309 c 0 1.662 -1.338 3 -3 3 H 24.651955 c -1.662 0 -3 -1.338 -3 -3 V 23.770647 c 0 -1.662 1.338 -3 3 -3 z
+    </Geometry>
+    <Geometry x:Key="MinimizeIcon">
+        M 17.494216 34.566778 H 53.401953
+    </Geometry>
+</ResourceDictionary>

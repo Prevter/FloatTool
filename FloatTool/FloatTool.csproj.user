@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="Views\BenchmarkWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SettingsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Languages\Lang.ru.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Languages\Lang.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Theme\ComboBoxStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Theme\MainButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Theme\MainTextBoxStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Theme\Schemes\Dark.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Theme\ScrollBarStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Theme\SwitchButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Theme\TooltipStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\BenchmarkWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SettingsWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

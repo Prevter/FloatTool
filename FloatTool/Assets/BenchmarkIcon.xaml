@@ -1,0 +1,7 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    >
+    <Geometry x:Key="BenchmarkIcon">
+        M 53.160328 73.32662 V 16.606488 c 0 -5.3683 13.728579 -5.696576 13.728579 0 V 73.350767 Z M 32.80832 73.36781 V 32.045845 c 0 -4.92034 13.72858 -5.261315 13.72858 0 V 73.387738 Z M 13.250169 73.312773 V 46.386718 c 0 -5.210027 13.72858 -5.168115 13.72858 0 v 26.937518 z
+    </Geometry>
+</ResourceDictionary>

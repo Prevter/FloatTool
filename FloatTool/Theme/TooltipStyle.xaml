@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="ToolTip" BasedOn="{StaticResource {x:Type ToolTip}}" x:Key="TooltipStyle">
+        <Setter Property="Foreground" Value="{DynamicResource TooltipForeground}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToolTip">
+                    <Border Name="Border"
+                            Background="{DynamicResource TooltipBackground}"
+                            BorderBrush="{DynamicResource TooltipBorder}"
+                            BorderThickness="1"
+                            CornerRadius="4"
+                            Margin="2"
+                            Width="{TemplateBinding Width}"
+                            Height="{TemplateBinding Height}">
+                        <ContentPresenter Margin="4" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="2" ShadowDepth="1" Opacity="0.5"/>
+                        </Border.Effect>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,56 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <!-- Main window -->
+    <v:String x:Key="m_WeaponType">Weapon Type:</v:String>
+    <v:String x:Key="m_Skin">Skin:</v:String>
+    <v:String x:Key="m_Quality">Quality:</v:String>
+    <v:String x:Key="m_Outcomes">Outcomes:</v:String>
+    <v:String x:Key="m_SearchMode">Search Mode:</v:String>
+    <v:String x:Key="m_DesiredFloat">Desired Float:</v:String>
+    <v:String x:Key="m_Count">Count:</v:String>
+    <v:String x:Key="m_Skip">Skip:</v:String>
+    <v:String x:Key="m_Start">Start</v:String>
+    <v:String x:Key="m_Stop">Stop</v:String>
+    <v:String x:Key="m_FindOne">Find one</v:String>
+    <v:String x:Key="m_Sort">Sort</v:String>
+    <v:String x:Key="m_Descending">Descending</v:String>
+    <v:String x:Key="m_ThreadCount">Thread count:</v:String>
+    <v:String x:Key="m_CraftRange">Craft range:</v:String>
+    <v:String x:Key="m_CurrentSpeed">Current speed:</v:String>
+    <v:String x:Key="m_CombinationsPerSecond">combinations/second</v:String>
+    <v:String x:Key="m_CheckedCombinations">Checked combinations:</v:String>
+    <v:String x:Key="m_SkinNotFound">Error! This skin can not have this quality.</v:String>
+
+    <!-- Settings window -->
+    <v:String x:Key="m_Settings">Settings</v:String>
+    <v:String x:Key="m_Language">Language:</v:String>
+    <v:String x:Key="m_Currency">Currency:</v:String>
+    <v:String x:Key="m_Theme">Theme:</v:String>
+    <v:String x:Key="m_GetThemes">Get themes</v:String>
+    <v:String x:Key="m_OpenThemesFolder">Open themes folder</v:String>
+    <v:String x:Key="m_EnableSound">Enable sound</v:String>
+    <v:String x:Key="m_CheckForUpdates">Check for updates</v:String>
+    
+    <!-- Benchmark window -->
+    <v:String x:Key="m_Benchmark">Benchmark</v:String>
+    <v:String x:Key="m_MultipleThreads">Multiple threads</v:String>
+    <v:String x:Key="m_SingleThread">Single thread</v:String>
+    <v:String x:Key="m_StartBenchmark">Start benchmark</v:String>
+    <v:String x:Key="m_Update">Update</v:String>
+    <v:String x:Key="m_Threads">Threads</v:String>
+    <v:String x:Key="m_Thread">Thread</v:String>
+    <v:String x:Key="m_PublishResult">Publish result</v:String>
+    
+    <!-- Combination -->
+    <v:String x:Key="m_Copy">Copy</v:String>
+    <v:String x:Key="m_PossibleFloat">Possible float:</v:String>
+    <v:String x:Key="m_Ingredients">Ingredients:</v:String>
+    <v:String x:Key="m_Price">Price:</v:String>
+
+    <!-- Discord RPC -->
+    <v:String x:Key="m_SettingUpSearch">Setting up search</v:String>
+    <v:String x:Key="m_Benchmarking">Benchmarking</v:String>
+    <v:String x:Key="m_Searching">Searching</v:String>
+
+</ResourceDictionary>

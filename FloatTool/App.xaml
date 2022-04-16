@@ -1,0 +1,32 @@
+﻿<Application x:Class="FloatTool.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FloatTool"
+             StartupUri="Views/MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Color Schemes -->
+                <ResourceDictionary Source="Theme/Schemes/Dark.xaml"/>
+                <!-- Themes -->
+                <ResourceDictionary Source="Theme/ScrollBarStyle.xaml"/>
+                <ResourceDictionary Source="Theme/TooltipStyle.xaml"/>
+                <ResourceDictionary Source="Theme/TopButtonStyle.xaml"/>
+                <ResourceDictionary Source="Theme/BigTextBoxStyle.xaml"/>
+                <ResourceDictionary Source="Theme/ComboBoxStyle.xaml"/>
+                <ResourceDictionary Source="Theme/SwitchButtonStyle.xaml"/>
+                <ResourceDictionary Source="Theme/MainButtonStyle.xaml"/>
+                <ResourceDictionary Source="Theme/MainTextBoxStyle.xaml"/>
+                <!-- SVG Assets -->
+                <ResourceDictionary Source="Assets/DiscordLogo.xaml"/>
+                <ResourceDictionary Source="Assets/SettingsIcon.xaml"/>
+                <ResourceDictionary Source="Assets/BenchmarkIcon.xaml"/>
+                <ResourceDictionary Source="Assets/ButtonIcons.xaml"/>
+                <!-- Translations -->
+                <ResourceDictionary Source="Languages/Lang.ru.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.uk.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

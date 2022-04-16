@@ -1,0 +1,85 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Background colors -->
+    <SolidColorBrush x:Key="WindowBorder" Color="#3D3D3D"/>
+    <SolidColorBrush x:Key="OptionsBackground" Color="#DEDEDE"/>
+    <SolidColorBrush x:Key="TopBarBackground" Color="#F9F9F9"/>
+    <SolidColorBrush x:Key="ResultsBackground" Color="White"/>
+    <SolidColorBrush x:Key="ConsoleBackground" Color="#F9F9F9"/>
+    <SolidColorBrush x:Key="SettingsBackground" Color="#DEDEDE"/>
+    <SolidColorBrush x:Key="SettingsTopBarBackground" Color="#F9F9F9"/>
+    <SolidColorBrush x:Key="BenchmarkWindowBackground" Color="#DEDEDE"/>
+    <SolidColorBrush x:Key="BenchmarkWindowTopBarBackground" Color="#F9F9F9"/>
+
+    <!-- Text colors -->
+    <SolidColorBrush x:Key="MainForeground" Color="Black"/>
+    <SolidColorBrush x:Key="SettingsMainForeground" Color="Black"/>
+    <SolidColorBrush x:Key="SettingsTopBarForeground" Color="Black"/>
+    <SolidColorBrush x:Key="BenchmarkWindowMainForeground" Color="Black"/>
+    <SolidColorBrush x:Key="BenchmarkWindowTopBarForeground" Color="Black"/>
+    <SolidColorBrush x:Key="TopBarForeground" Color="Black"/>
+    <SolidColorBrush x:Key="ConsoleForeground" Color="Black"/>
+    <SolidColorBrush x:Key="SubtitleColor" Color="#969696"/>
+
+    <!-- Top bar buttons -->
+    <SolidColorBrush x:Key="TopBarButtonsColor" Color="Black"/>
+    <SolidColorBrush x:Key="TopBarButtonsHoverColor" Color="#E6E6E6"/>
+    
+    <!-- Buttons -->
+    <SolidColorBrush x:Key="ButtonsBackground" Color="#F0F0F0"/>
+    <SolidColorBrush x:Key="ButtonsForeground" Color="Black"/>
+    <SolidColorBrush x:Key="ButtonsDisabledBackground" Color="#999999"/>
+    <SolidColorBrush x:Key="ButtonsDisabledForeground" Color="#141414"/>
+    <SolidColorBrush x:Key="ButtonsSelected" Color="#AAAAAA"/>
+    <SolidColorBrush x:Key="ButtonsHoverBackground" Color="#C0C0C0"/>
+
+    <!-- Switches -->
+    <SolidColorBrush x:Key="SwitchCircleColor" Color="White"/>
+    <SolidColorBrush x:Key="SwitchCircleStroke" Color="Gray"/>
+    <SolidColorBrush x:Key="SwitchBackgroundOff" Color="#C8C8C8"/>
+    <SolidColorBrush x:Key="SwitchBackgroundOn" Color="#77C277"/>
+
+    <!-- ComboBox -->
+    <SolidColorBrush x:Key="ComboboxBackground" Color="White"/>
+    <SolidColorBrush x:Key="ComboboxHoverBackground" Color="#BBBBBB"/>
+    <SolidColorBrush x:Key="ComboboxBorder" Color="#CCCCCC"/>
+    <SolidColorBrush x:Key="ComboboxArrowColor" Color="Black"/>
+    <SolidColorBrush x:Key="ComboboxForeground" Color="Black"/>
+    
+    <!-- Inputs -->
+    <SolidColorBrush x:Key="InputBackground" Color="White"/>
+    <SolidColorBrush x:Key="InputBorder" Color="#CCCCCC"/>
+    <SolidColorBrush x:Key="InputForeground" Color="Black"/>
+
+    <!-- Progress bar -->
+    <SolidColorBrush x:Key="ProgressBackground" Color="White"/>
+    <SolidColorBrush x:Key="ProgressFill" Color="#77C277"/>
+    <SolidColorBrush x:Key="ProgressForeground" Color="Black"/>
+
+    <!-- Benchmark -->
+    <LinearGradientBrush x:Key="AmdBenchmarkFill" EndPoint="1,-1" StartPoint="0,0.5">
+        <GradientStop Color="#FFE64444" />
+        <GradientStop Color="#FFED524D" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="IntelBenchmarkFill" EndPoint="1,-1" StartPoint="0,0.5">
+        <GradientStop Color="#FF107DC3"/>
+        <GradientStop Color="#FF1590D8" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="CurrentBenchmarkFill" EndPoint="1,-1" StartPoint="0,0.5">
+        <GradientStop Color="#3CA55C"/>
+        <GradientStop Color="#55AC49" Offset="1"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="BenchmarkBackground" Color="#DDDDDD"/>
+    <SolidColorBrush x:Key="BenchmarkForeground" Color="Black"/>
+    <SolidColorBrush x:Key="BenchmarkListBackground" Color="White"/>
+    <SolidColorBrush x:Key="BenchmarkLoadingCircles" Color="Black"/>
+
+    <!-- Combination -->
+    <SolidColorBrush x:Key="CombinationBackground" Color="#DEDEDE"/>
+    <SolidColorBrush x:Key="CombinationForeground" Color="Black"/>
+
+    <!-- Scroll bar -->
+    <SolidColorBrush x:Key="ScrollBarBackground" Color="#DEDEDE"/>
+    <SolidColorBrush x:Key="ScrollBarForeground" Color="#707070"/>
+    <SolidColorBrush x:Key="ScrollBarDragForeground" Color="#A0A0A0"/>
+</ResourceDictionary>
