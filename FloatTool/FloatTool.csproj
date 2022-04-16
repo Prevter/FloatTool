@@ -15,7 +15,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\Dark.png" />
     <None Remove="Assets\SkinList.json" />
   </ItemGroup>
 
@@ -24,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Assets\Dark.png" />
     <EmbeddedResource Include="Assets\SkinList.json" />
   </ItemGroup>
 
