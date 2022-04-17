@@ -1,4 +1,7 @@
 # FloatTool
+[![Build status](https://ci.appveyor.com/api/projects/status/pbudy8wm35ybxpuf?svg=true)](https://ci.appveyor.com/project/Prevter/floattool-gui)
+[![Discord](https://img.shields.io/discord/852481556019019786?label=discord&logo=discord)](https://discord.gg/RM9VrzMfhP)
+
 ![Program Working](https://github.com/Prevter/FloatTool-GUI/blob/master/doc/program.png?raw=true)  
 Utility to create any float for your CS:GO skins.
 
