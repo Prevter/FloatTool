@@ -1,5 +1,6 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/pbudy8wm35ybxpuf?svg=true)](https://ci.appveyor.com/project/Prevter/floattool)
 [![Discord](https://img.shields.io/discord/852481556019019786?label=discord&logo=discord)](https://discord.gg/RM9VrzMfhP)
+[![CodeQL](https://github.com/Prevter/FloatTool-GUI/actions/workflows/codeql-analysis.yml/badge.svg?branch=master)](https://github.com/Prevter/FloatTool-GUI/actions/workflows/codeql-analysis.yml)
 <br />
 <div align="center">
    <a href="https://github.com/Prevter/FloatTool">
