@@ -1,7 +1,9 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/pbudy8wm35ybxpuf?svg=true)](https://ci.appveyor.com/project/Prevter/floattool)
 [![Discord](https://img.shields.io/discord/852481556019019786?label=discord&logo=discord)](https://discord.gg/RM9VrzMfhP)
 [![CodeQL](https://github.com/Prevter/FloatTool-GUI/workflows/CodeQL/badge.svg)](https://github.com/Prevter/FloatTool-GUI/actions/workflows/codeql-analysis.yml)
-<br />
+![GitHub all releases](https://img.shields.io/github/downloads/Prevter/FloatTool-GUI/total)
+![GitHub](https://img.shields.io/github/license/Prevter/FloatTool-GUI)
+<br/>
 <div align="center">
    <a href="https://github.com/Prevter/FloatTool">
       <img src="doc/icon.png" alt="Logo" width="80" height="80">
@@ -32,7 +34,7 @@ This is probably the fastest app you can find, as it can achieve more than 10,00
 4. Run **FloatTool.exe**
 
 ## Usage
-_Please see [Documentation](https://prevter.github.io/FloatTool/usage.html) for complete tutorial in usage_
+_Please see [Documentation](https://prevter.github.io/FloatTool/tutorial.html) for complete tutorial in usage_
 
 ## Version History
 * 0.8.0
