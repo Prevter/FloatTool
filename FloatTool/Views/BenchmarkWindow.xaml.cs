@@ -34,6 +34,7 @@ namespace FloatTool
 
         public BenchmarkWindow(Settings settings)
         {
+            Logger.Log.Info("Opened benchmark window");
             Context = new BenchmarkViewModel(settings);
             DataContext = Context;
 
@@ -114,6 +115,8 @@ namespace FloatTool
 
         private void StartBenchmark_Click(object sender, RoutedEventArgs e)
         {
+            Logger.Log.Info("Started benchmarking");
+
             new Thread(() =>
             {
                 Skin[] outcomes = new Skin[] {
@@ -175,14 +178,12 @@ namespace FloatTool
                                 ThreadCount = threads,
                             }
                         ));
-
-                        //newThread.Start();
                         threadPool.Add(newThread);
                     }
                 }
                 catch (Exception ex)
                 {
-                    Trace.WriteLine(ex.Message);
+                    Logger.Log.Error("Error starting up thread pool", ex);
                 }
 
                 while (true)
@@ -214,6 +215,7 @@ namespace FloatTool
                 Context.CanPublish = true;
                 Context.ButtonsEnabled = true;
 
+                Logger.Log.Info($"Benchmarking finished. Speed = {speed}; Threads = {threads}");
             }).Start();
         }
     }

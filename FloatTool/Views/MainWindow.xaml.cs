@@ -73,6 +73,8 @@ namespace FloatTool
             UpdateRichPresence();
             InitializeComponent();
             DataContext = ViewModel;
+
+            Logger.Log.Info("Main window started");
         }
 
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
@@ -86,6 +88,7 @@ namespace FloatTool
             switch (((Button)sender).Name)
             {
                 case "CloseButton":
+                    Logger.Log.Info("Closing");
                     Environment.Exit(Environment.ExitCode);
                     break;
                 case "MaximizeButton":
@@ -179,6 +182,8 @@ namespace FloatTool
 
             new Thread(() =>
             {
+                Logger.Log.Info("Starting up search");
+
                 PassedCombinations = 0;
                 ViewModel.CanEditSettings = false;
                 ViewModel.ProgressPercentage = 0;
@@ -240,7 +245,10 @@ namespace FloatTool
                         ViewModel.ProgressPercentage = (float)inputSkinBag.Count * 100 / floatTasks.Count;
                     }
                 }
-                catch (Exception ex) { Trace.WriteLine($"Error: {ex.Message}\n{ex.StackTrace}"); }
+                catch (Exception ex)
+                {
+                    Logger.Log.Error("Error getting floats from marketplace", ex);
+                }
 
                 List<InputSkin> inputSkinList = inputSkinBag.ToList();
                 if (ViewModel.Sort)
@@ -287,7 +295,7 @@ namespace FloatTool
                 }
                 catch (Exception ex)
                 {
-                    Trace.WriteLine(ex.Message);
+                    Logger.Log.Error("Error starting up thread pool", ex);
                 }
 
                 ViewModel.ConsoleOutput += $"Started threads\n";
@@ -328,6 +336,7 @@ namespace FloatTool
                     Thread.Sleep(100);                    
                 }
 
+                Logger.Log.Info("Finished searching");
                 ViewModel.CanEditSettings = true;
 
             }).Start();

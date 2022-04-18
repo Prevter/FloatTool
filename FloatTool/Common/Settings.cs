@@ -92,7 +92,7 @@ namespace FloatTool
             }
             catch (Exception ex)
             {
-                Trace.WriteLine($"{ex.Message}\n{ex.StackTrace}");
+                Logger.Log.Error("Error loading settings", ex);
             }
         }
 
@@ -112,6 +112,11 @@ namespace FloatTool
             Registry.SetValue(keyName, "sound", Sound.ToString());
             Registry.SetValue(keyName, "updateCheck", CheckForUpdates.ToString());
             Registry.SetValue(keyName, "discordRPC", DiscordRPC.ToString());
+        }
+
+        public override string ToString()
+        {
+            return $"{{LanguageCode: {LanguageCode}, Currency: {Currency}, ThemeURI: {ThemeURI}, Sound: {Sound}, CheckForUpdates: {CheckForUpdates}, DiscordRPC: {DiscordRPC}, ThreadCount: {ThreadCount}}}";
         }
     }
 }

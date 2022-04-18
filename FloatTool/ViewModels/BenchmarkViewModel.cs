@@ -133,6 +133,7 @@ namespace FloatTool
 
         public async void PollBenchmarkResults()
         {
+            Logger.Log.Info("Getting benchmark results");
             IsUpdatingEnabled = false;
             try
             {
@@ -143,7 +144,7 @@ namespace FloatTool
                 string responseBody = await response.Content.ReadAsStringAsync();
                 dynamic result = JsonConvert.DeserializeObject(responseBody);
 
-                if (result.status == 200 && result.count > 0)
+                if (result["status"] == 200 && result["count"] > 0)
                 {
                     float maxspeed = result.items[0].multithread;
 
@@ -179,8 +180,10 @@ namespace FloatTool
                         });
                     }
                 }
+
+                Logger.Log.Info("Benchmark results loaded");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 BenchmarkResults.Add(new BenchmarkResult
                 {
@@ -188,12 +191,14 @@ namespace FloatTool
                     FillSize = new GridLength(0, GridUnitType.Star),
                     EmptySize = new GridLength(1, GridUnitType.Star),
                 });
+                Logger.Log.Error("Error getting benchmark results", ex);
             }
             IsUpdatingEnabled = true;
         }
 
         public async void PushBenchmarkResults()
         {
+            Logger.Log.Info("Sending benchmark result");
             try
             {
                 BenchmarkResults.Clear();
@@ -204,9 +209,13 @@ namespace FloatTool
                 HttpResponseMessage response = await client.GetAsync(Utils.API_URL + paramedURL);
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
-                MessageBox.Show(responseBody);
+
+                Logger.Log.Info("Sended benchmark result");
             }
-            catch (Exception) { }
+            catch (Exception ex)
+            {
+                Logger.Log.Error("Error sending benchmark result", ex);
+            }
             CanPublish = false;
             PollBenchmarkResults();
         }
@@ -218,6 +227,9 @@ namespace FloatTool
             string path = @"HKEY_LOCAL_MACHINE\HARDWARE\DESCRIPTION\System\CentralProcessor\0";
             string cpu = (string)Registry.GetValue(path, "ProcessorNameString", "Unknown");
             CurrentCpuName = Utils.ShortCpuName(cpu);
+
+            Logger.Log.Info($"CPU: {CurrentCpuName}");
+            Logger.Log.Info($"Threads: {CurrentCpuThreads}");
 
             BenchmarkResults = new ObservableCollection<BenchmarkResult>();
             PollBenchmarkResults();

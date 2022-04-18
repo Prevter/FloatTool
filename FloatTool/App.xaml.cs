@@ -94,7 +94,12 @@ namespace FloatTool
         {
             var version = Assembly.GetExecutingAssembly().GetName().Version;
             VersionCode = $"v.{version.Major}.{version.MajorRevision}.{version.Minor}";
-
+            Logger.Initialize();
+            Logger.Log.Info($"FloatTool {VersionCode}");
+            Logger.Log.Info($"OS: {Environment.OSVersion}");
+            Logger.Log.Info($"Memory: {Environment.WorkingSet / 1024 / 1024} MB");
+            Logger.Log.Info($"Culture: {Thread.CurrentThread.CurrentCulture}");
+            
             //Get path for %AppData%
             var appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             var subfolder = "floattool";

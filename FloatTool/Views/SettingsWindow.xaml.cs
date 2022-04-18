@@ -32,6 +32,7 @@ namespace FloatTool
             Settings = settings;
             InitializeComponent();
             DataContext = new SettingsViewModel(settings);
+            Logger.Log.Info("Opened settings window");
         }
 
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
@@ -43,6 +44,8 @@ namespace FloatTool
         private void WindowButton_Click(object sender, RoutedEventArgs e)
         {
             Settings.Save();
+            Logger.Log.Info($"Saved settings: {Settings}");
+            Logger.Log.Info($"Closed settings window");
             Close();
         }
 
@@ -51,6 +54,7 @@ namespace FloatTool
             var appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             var subfolder = "floattool\\themes";
             var combined = Path.Combine(appdata, subfolder);
+            Logger.Log.Info("Opened themes folder: " + combined);
             Process.Start("explorer.exe", combined);
         }
 
