@@ -1,43 +1,37 @@
-# FloatTool
 [![Build status](https://ci.appveyor.com/api/projects/status/pbudy8wm35ybxpuf?svg=true)](https://ci.appveyor.com/project/Prevter/floattool)
 [![Discord](https://img.shields.io/discord/852481556019019786?label=discord&logo=discord)](https://discord.gg/RM9VrzMfhP)
-
-![Program Working](https://github.com/Prevter/FloatTool-GUI/blob/master/doc/program.png?raw=true)  
-Utility to create any float for your CS:GO skins.
+<br />
+<div align="center">
+   <a href="https://github.com/Prevter/FloatTool">
+      <img src="doc/icon.png" alt="Logo" width="80" height="80">
+   </a>
+   <h3 align="center">FloatTool</h3>
+   <p align="center">
+      Utility to create any float for your CS:GO skins.
+   </p>
+</div>
 
 ## Description
+![Program Working](https://github.com/Prevter/FloatTool-GUI/blob/master/doc/program.png?raw=true)  
 
 This app allows you to quickly search combinations to craft skins in CS:GO with (almost) any float you want. All you have to do is set some search settings, wait a bit and all you have to do next is to buy skins from marketplace, that the app found to be needed.  
 This is probably the fastest app you can find, as it can achieve more than 10,000,000 combinations per second on a i9-9900K.
 
 ## Getting Started
 
-### Dependencies
+### Prerequisites
 
-* Windows 10 or greater recommended. Windows 7 can have some minor issues with connection and ui.
-* .NET Framework 4.7.2
+* .NET 6.0 Runtime. _You can download it here: [https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime)_
 
-### Installing
+### Installation
 
-* Proceed to releases page
-* Download latest release archive
-* Unzip to any folder
-* Run **FloatTool.exe**
+1. Proceed to [releases page](https://github.com/Prevter/FloatTool/releases)
+2. Download latest release archive
+3. Unzip to any folder
+4. Run **FloatTool.exe**
 
-### Setting up search
-
-* TO-DO
-
-## Help
-
-If you have any issues with this software, you can post an issue or contact me:
-
-## Contacts
-
-[Steam](https://steamcommunity.com/id/prevter)  
-[Discord Server](https://discord.gg/RM9VrzMfhP)  
-Discord: Prevter#4666  
-[Telegram](https://t.me/prevter)
+## Usage
+_Please see [Documentation](https://prevter.github.io/FloatTool/usage.html) for complete tutorial in usage_
 
 ## Version History
 * 0.8.0
@@ -133,4 +127,13 @@ Discord: Prevter#4666
 
 ## License
 
-This project is licensed under the GPL v3 License - see the LICENSE.md file for details
+Distributed under the GPL v3 License. See `LICENSE` for more information.
+
+## Contact
+
+[Steam](https://steamcommunity.com/id/prevter)  
+[Discord Server](https://discord.gg/RM9VrzMfhP)  
+Discord: Prevter#4666  
+[Telegram](https://t.me/prevter)
+
+Project Link: [https://github.com/Prevter/FloatTool](https://github.com/Prevter/FloatTool)
