@@ -137,23 +137,30 @@ namespace FloatTool
                             gotResult = Math.Abs(resultFloat - options.SearchTarget) < options.TargetPrecision;
                             break;
                         case SearchMode.Less:
-                            decimal neededLess = decimal.Parse(options.SearchFilter, CultureInfo.InvariantCulture);
-                            gotResult = resultFloat < neededLess;
+                            gotResult = resultFloat < options.SearchTarget;
                             break;
                         case SearchMode.Greater:
-                            decimal neededGreater = decimal.Parse(options.SearchFilter, CultureInfo.InvariantCulture);
-                            gotResult = resultFloat > neededGreater;
+                            gotResult = resultFloat > options.SearchTarget;
                             break;
                     }
 
                     if (gotResult)
                     {
-                        if (options.SearchMode == SearchMode.Equal)
+                        if (options.SearchMode != SearchMode.Equal ||
+                            Math.Round(resultFloat, 14, MidpointRounding.AwayFromZero)
+                            .ToString(CultureInfo.InvariantCulture)
+                            .StartsWith(options.SearchFilter, StringComparison.Ordinal))
                         {
                             float price = 0;
+                            float ieeesum = 0;
                             foreach (var skin in resultList)
+                            {
                                 price += skin.Price;
-
+                                ieeesum += (float)skin.WearValue;
+                            }
+                            ieeesum /= 10;
+                            float ieee = ((float)options.Outcomes[i].MaxFloat - (float)options.Outcomes[i].MinFloat) * ieeesum + (float)options.Outcomes[i].MinFloat;
+                            
                             Dispatcher.Invoke(new Action(() =>
                             {
                                 ViewModel.FoundCombinations.Add(new Combination
@@ -162,7 +169,8 @@ namespace FloatTool
                                     OutcomeName = options.Outcomes[i].Name,
                                     Inputs = resultList,
                                     Currency = resultList[0].SkinCurrency,
-                                    Price = price
+                                    Price = price,
+                                    IEEE754 = ((double)ieee).ToString("0.000000000000000", CultureInfo.InvariantCulture)
                                 });
                             }), DispatcherPriority.ContextIdle);
                         }
