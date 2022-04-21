@@ -186,6 +186,8 @@ namespace FloatTool
 
         private void StartSearchButton_Click(object sender, RoutedEventArgs e)
         {
+            bool stopAfterHit = (sender as Button).Name == "FindOneButton";
+
             if (ViewModel.CanEditSettings)
             {
                 ViewModel.FoundCombinations.Clear();
@@ -412,6 +414,12 @@ namespace FloatTool
 
                         if (!isAnyRunning)
                             break;
+
+                        if (stopAfterHit && ViewModel.FoundCombinations.Count >= 1)
+                        {
+                            TokenSource.Cancel();
+                            break;
+                        }
 
                         Thread.Sleep(100);
                     }

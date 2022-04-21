@@ -207,8 +207,16 @@
                               Foreground="{DynamicResource MainForeground}" 
                               FontSize="14" IsChecked="{Binding SortDescending}"/>
 
-                    <Button x:Name="StartButton" Content="{DynamicResource m_Start}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="260,48,0,0" Width="150" Height="60" FontSize="32" Style="{DynamicResource MainButtonStyle}" Click="StartSearchButton_Click"/>
-                    <Button IsEnabled="{Binding CanEditSettings}" Content="{DynamicResource m_FindOne}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="260,109,0,0" Width="150" Height="24" FontSize="14" Style="{DynamicResource MainButtonStyle}"/>
+                    <Button x:Name="StartButton" Content="{DynamicResource m_Start}" 
+                            HorizontalAlignment="Left" VerticalAlignment="Top" 
+                            Margin="260,48,0,0" Width="150" Height="60" FontSize="32" 
+                            Style="{DynamicResource MainButtonStyle}" 
+                            Click="StartSearchButton_Click"/>
+                    <Button IsEnabled="{Binding CanEditSettings}" Content="{DynamicResource m_FindOne}" 
+                            HorizontalAlignment="Left" VerticalAlignment="Top" Margin="260,109,0,0" 
+                            Width="150" Height="24" FontSize="14" 
+                            Style="{DynamicResource MainButtonStyle}" 
+                            Click="StartSearchButton_Click" x:Name="FindOneButton"/>
                 </Grid>
 
                 <ProgressBar Grid.Row="2" Value="{Binding ProgressPercentage}" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="28" Background="{DynamicResource ProgressBackground}" BorderThickness="0" Foreground="{DynamicResource ProgressFill}"/>
