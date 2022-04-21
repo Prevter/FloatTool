@@ -194,8 +194,18 @@
                         <theme:NumericBox IsEnabled="{Binding CanEditSettings}" Height="22" Grid.Row="2" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" FontSize="14" Minimum="0" Maximum="10000" Value="{Binding SkinSkipCount}"/>
                     </Grid>
 
-                    <CheckBox IsEnabled="{Binding CanEditSettings}" Content="{DynamicResource m_Sort}" Margin="260,5,0,0" VerticalAlignment="Top" Height="20" Foreground="{DynamicResource MainForeground}" FontSize="14" IsChecked="{Binding Sort}"/>
-                    <CheckBox IsEnabled="{Binding CanEditSettings}" Content="{DynamicResource m_Descending}" Margin="260,24,0,0" VerticalAlignment="Top" Height="20" Foreground="{DynamicResource MainForeground}" FontSize="14" IsChecked="{Binding SortDescending}"/>
+                    <CheckBox IsEnabled="{Binding CanEditSettings}"
+                              Style="{DynamicResource CheckBoxStyle}" 
+                              Content="{DynamicResource m_Sort}" 
+                              Margin="260,5,0,0" VerticalAlignment="Top" Height="20" 
+                              Foreground="{DynamicResource MainForeground}" 
+                              FontSize="14" IsChecked="{Binding Sort}"/>
+                    <CheckBox IsEnabled="{Binding CanEditSettings}" 
+                              Style="{DynamicResource CheckBoxStyle}" 
+                              Content="{DynamicResource m_Descending}" 
+                              Margin="260,24,0,0" VerticalAlignment="Top" Height="20" 
+                              Foreground="{DynamicResource MainForeground}" 
+                              FontSize="14" IsChecked="{Binding SortDescending}"/>
 
                     <Button x:Name="StartButton" Content="{DynamicResource m_Start}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="260,48,0,0" Width="150" Height="60" FontSize="32" Style="{DynamicResource MainButtonStyle}" Click="StartSearchButton_Click"/>
                     <Button IsEnabled="{Binding CanEditSettings}" Content="{DynamicResource m_FindOne}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="260,109,0,0" Width="150" Height="24" FontSize="14" Style="{DynamicResource MainButtonStyle}"/>
@@ -229,8 +239,7 @@
             <Grid Grid.Column="1" Grid.Row="1">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
-                    <RowDefinition Height="5" />
-                    <RowDefinition MinHeight="50" Height="108"/>
+                    <RowDefinition Height="36"/>
                 </Grid.RowDefinitions>
 
                 <ScrollViewer VerticalScrollBarVisibility="Visible">
@@ -394,18 +403,13 @@
                     </ItemsControl>
                 </ScrollViewer>
 
-                <GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" Background="Transparent"/>
-                <Rectangle Fill="{DynamicResource ConsoleBackground}" Grid.Row="2" RadiusX="8" RadiusY="8"/>
+                <Rectangle Fill="{DynamicResource ConsoleBackground}" Grid.Row="1" RadiusX="8" RadiusY="8"/>
 
-                <TextBox Grid.Row="2" Background="Transparent" BorderThickness="0" Text="{Binding ConsoleOutput, NotifyOnTargetUpdated=True}" IsReadOnly="True" TextWrapping="Wrap" Margin="8" FontSize="14" TargetUpdated="ConsoleBoxUpdated" Foreground="{DynamicResource ConsoleForeground}" VerticalScrollBarVisibility="Visible">
-                    <TextBox.Resources>
-                        <Style TargetType="{x:Type ScrollBar}" BasedOn="{StaticResource ScrollBarStyle}"/>
-                    </TextBox.Resources>
-                </TextBox>
+                <TextBlock Grid.Row="1" Background="Transparent" 
+                           x:Name="StatusBar" Margin="8" FontSize="14" 
+                           Foreground="{DynamicResource ConsoleForeground}"/>
 
             </Grid>
-
-
         </Grid>
     </Border>
 </Window>

@@ -1,0 +1,80 @@
+﻿<!--
+- Copyright (C) 2022 Prevter
+-
+- This program is free software: you can redistribute it and/or modify
+- it under the terms of the GNU General Public License as published by
+- the Free Software Foundation, either version 3 of the License, or
+- (at your option) any later version.
+-
+- This program is distributed in the hope that it will be useful,
+- but WITHOUT ANY WARRANTY; without even the implied warranty of
+- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+- GNU General Public License for more details.
+-
+- You should have received a copy of the GNU General Public License
+- along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <!-- Main window -->
+    <v:String x:Key="m_WeaponType">武器类型：</v:String>
+    <v:String x:Key="m_Skin">皮肤：</v:String>
+    <v:String x:Key="m_Quality">质量：</v:String>
+    <v:String x:Key="m_Outcomes">结果：</v:String>
+    <v:String x:Key="m_SearchMode">搜索模式：</v:String>
+    <v:String x:Key="m_DesiredFloat">所需的浮动：</v:String>
+    <v:String x:Key="m_Count">数数：</v:String>
+    <v:String x:Key="m_Skip">跳过：</v:String>
+    <v:String x:Key="m_Start">开始</v:String>
+    <v:String x:Key="m_Stop">停止</v:String>
+    <v:String x:Key="m_FindOne">找一个</v:String>
+    <v:String x:Key="m_Sort">种类</v:String>
+    <v:String x:Key="m_Descending">降序</v:String>
+    <v:String x:Key="m_ThreadCount">线程数：</v:String>
+    <v:String x:Key="m_CraftRange">工艺范围：</v:String>
+    <v:String x:Key="m_CurrentSpeed">现在的速度：</v:String>
+    <v:String x:Key="m_CombinationsPerSecond">组合/秒</v:String>
+    <v:String x:Key="m_CheckedCombinations">检查组合：</v:String>
+    <v:String x:Key="m_SkinNotFound">错误！这种皮肤不可能有这种品质。</v:String>
+
+    <!-- Settings window -->
+    <v:String x:Key="m_Settings">设置</v:String>
+    <v:String x:Key="m_Language">语言：</v:String>
+    <v:String x:Key="m_Currency">货币：</v:String>
+    <v:String x:Key="m_Theme">主题：</v:String>
+    <v:String x:Key="m_GetThemes">获取主题</v:String>
+    <v:String x:Key="m_OpenThemesFolder">打开主题文件夹</v:String>
+    <v:String x:Key="m_EnableSound">启用声音</v:String>
+    <v:String x:Key="m_CheckForUpdates">检查更新</v:String>
+    
+    <!-- Benchmark window -->
+    <v:String x:Key="m_Benchmark">基准</v:String>
+    <v:String x:Key="m_MultipleThreads">多线程</v:String>
+    <v:String x:Key="m_SingleThread">单线程</v:String>
+    <v:String x:Key="m_StartBenchmark">开始基准测试</v:String>
+    <v:String x:Key="m_Update">更新</v:String>
+    <v:String x:Key="m_Threads">线程</v:String>
+    <v:String x:Key="m_Thread">线</v:String>
+    <v:String x:Key="m_PublishResult">发布结果</v:String>
+    
+    <!-- Combination -->
+    <v:String x:Key="m_Copy">复制</v:String>
+    <v:String x:Key="m_PossibleFloat">可能的浮动：</v:String>
+    <v:String x:Key="m_Ingredients">原料：</v:String>
+    <v:String x:Key="m_Price">价格：</v:String>
+
+    <!-- Discord RPC -->
+    <v:String x:Key="m_SettingUpSearch">设置搜索</v:String>
+    <v:String x:Key="m_Benchmarking">基准测试</v:String>
+    <v:String x:Key="m_Searching">搜索</v:String>
+
+    <!-- Status bar -->
+    <v:String x:Key="m_SearchingSkin">在市场上搜索皮肤</v:String>
+    <v:String x:Key="m_GettingFloats">从市场上获取花车</v:String>
+    <v:String x:Key="m_ErrorCouldntGetFloats">错误！无法从市场获得花车</v:String>
+    <v:String x:Key="m_ErrorLessThan10">错误！无法从市场上获得超过 10 个花车</v:String>
+    <v:String x:Key="m_StartingUpSearch">启动搜索</v:String>
+    <v:String x:Key="m_FinishedSearching">完成搜索</v:String>
+    
+</ResourceDictionary>

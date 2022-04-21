@@ -1,0 +1,80 @@
+﻿<!--
+- Copyright (C) 2022 Prevter
+-
+- This program is free software: you can redistribute it and/or modify
+- it under the terms of the GNU General Public License as published by
+- the Free Software Foundation, either version 3 of the License, or
+- (at your option) any later version.
+-
+- This program is distributed in the hope that it will be useful,
+- but WITHOUT ANY WARRANTY; without even the implied warranty of
+- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+- GNU General Public License for more details.
+-
+- You should have received a copy of the GNU General Public License
+- along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <!-- Main window -->
+    <v:String x:Key="m_WeaponType">Type d'arme :</v:String>
+    <v:String x:Key="m_Skin">La peau:</v:String>
+    <v:String x:Key="m_Quality">Qualité:</v:String>
+    <v:String x:Key="m_Outcomes">Résultats:</v:String>
+    <v:String x:Key="m_SearchMode">Mode de recherche:</v:String>
+    <v:String x:Key="m_DesiredFloat">Flotteur souhaité:</v:String>
+    <v:String x:Key="m_Count">Compter:</v:String>
+    <v:String x:Key="m_Skip">Sauter:</v:String>
+    <v:String x:Key="m_Start">Démarrer</v:String>
+    <v:String x:Key="m_Stop">Arrêt</v:String>
+    <v:String x:Key="m_FindOne">Trouvez-en un</v:String>
+    <v:String x:Key="m_Sort">Sorte</v:String>
+    <v:String x:Key="m_Descending">Descendant</v:String>
+    <v:String x:Key="m_ThreadCount">Nombre de fils:</v:String>
+    <v:String x:Key="m_CraftRange">Gamme artisanale:</v:String>
+    <v:String x:Key="m_CurrentSpeed">Vitesse actuelle:</v:String>
+    <v:String x:Key="m_CombinationsPerSecond">combinaisons/seconde</v:String>
+    <v:String x:Key="m_CheckedCombinations">Combinaisons cochées:</v:String>
+    <v:String x:Key="m_SkinNotFound">Erreur! Cette peau ne peut pas avoir cette qualité.</v:String>
+
+    <!-- Settings window -->
+    <v:String x:Key="m_Settings">Réglages</v:String>
+    <v:String x:Key="m_Language">Langue:</v:String>
+    <v:String x:Key="m_Currency">Monnaie:</v:String>
+    <v:String x:Key="m_Theme">Thème:</v:String>
+    <v:String x:Key="m_GetThemes">Obtenir thèmes</v:String>
+    <v:String x:Key="m_OpenThemesFolder">Ouvrir le dossier des thèmes</v:String>
+    <v:String x:Key="m_EnableSound">Activer le son</v:String>
+    <v:String x:Key="m_CheckForUpdates">Vérifier les mises à jour</v:String>
+    
+    <!-- Benchmark window -->
+    <v:String x:Key="m_Benchmark">Référence</v:String>
+    <v:String x:Key="m_MultipleThreads">Plusieurs fils</v:String>
+    <v:String x:Key="m_SingleThread">Fil unique</v:String>
+    <v:String x:Key="m_StartBenchmark">Commencer le benchmark</v:String>
+    <v:String x:Key="m_Update">Mise à jour</v:String>
+    <v:String x:Key="m_Threads">Fils</v:String>
+    <v:String x:Key="m_Thread">Le fil</v:String>
+    <v:String x:Key="m_PublishResult">Publier le résultat</v:String>
+    
+    <!-- Combination -->
+    <v:String x:Key="m_Copy">Copie</v:String>
+    <v:String x:Key="m_PossibleFloat">Flottant éventuel:</v:String>
+    <v:String x:Key="m_Ingredients">Ingrédients:</v:String>
+    <v:String x:Key="m_Price">Prix:</v:String>
+
+    <!-- Discord RPC -->
+    <v:String x:Key="m_SettingUpSearch">Configuration de la recherche</v:String>
+    <v:String x:Key="m_Benchmarking">Analyse comparative</v:String>
+    <v:String x:Key="m_Searching">Recherche</v:String>
+
+    <!-- Status bar -->
+    <v:String x:Key="m_SearchingSkin">Recherche de peau sur le marché</v:String>
+    <v:String x:Key="m_GettingFloats">Obtenir des flotteurs du marché</v:String>
+    <v:String x:Key="m_ErrorCouldntGetFloats">Erreur! Impossible d'obtenir des flotteurs du marché</v:String>
+    <v:String x:Key="m_ErrorLessThan10">Erreur! Impossible d'obtenir plus de 10 flotteurs du marché</v:String>
+    <v:String x:Key="m_StartingUpSearch">Lancement de la recherche</v:String>
+    <v:String x:Key="m_FinishedSearching">Recherche terminée</v:String>
+    
+</ResourceDictionary>

@@ -68,4 +68,12 @@
     <v:String x:Key="m_SettingUpSearch">Настраиваю поиск</v:String>
     <v:String x:Key="m_Benchmarking">Бенчмаркинг</v:String>
     <v:String x:Key="m_Searching">Поиск</v:String>
+
+    <!-- Status bar -->
+    <v:String x:Key="m_SearchingSkin">Ищю скин на торговой площадке</v:String>
+    <v:String x:Key="m_GettingFloats">Получаю флоаты з торговой площадки</v:String>
+    <v:String x:Key="m_ErrorCouldntGetFloats">Ошибка! Не удалось получить флоаты с торговой площадки</v:String>
+    <v:String x:Key="m_ErrorLessThan10">Ошибка! Не удалось получить больше 10-ти флоатов</v:String>
+    <v:String x:Key="m_StartingUpSearch">Начинаю поиск</v:String>
+    <v:String x:Key="m_FinishedSearching">Завершил поиск</v:String>
 </ResourceDictionary>

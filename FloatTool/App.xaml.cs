@@ -24,6 +24,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
 using System.Windows.Threading;
@@ -94,11 +95,28 @@ namespace FloatTool
         {
             var version = Assembly.GetExecutingAssembly().GetName().Version;
             VersionCode = $"v.{version.Major}.{version.MajorRevision}.{version.Minor}";
+
             Logger.Initialize();
             Logger.Log.Info($"FloatTool {VersionCode}");
             Logger.Log.Info($"OS: {Environment.OSVersion}");
             Logger.Log.Info($"Memory: {Environment.WorkingSet / 1024 / 1024} MB");
             Logger.Log.Info($"Culture: {Thread.CurrentThread.CurrentCulture}");
+
+            AppDomain.CurrentDomain.UnhandledException += (s, e) =>
+                Logger.Log.Error("Unhandled exception", (Exception)e.ExceptionObject);
+            
+
+            DispatcherUnhandledException += (s, e) =>
+            {
+                Logger.Log.Error("Dispatcher Unhandled Exception", e.Exception);
+                e.Handled = true;
+            };
+
+            TaskScheduler.UnobservedTaskException += (s, e) =>
+            {
+                Logger.Log.Error("Unobserved Unhandled Exception", e.Exception);
+                e.SetObserved();
+            };
             
             //Get path for %AppData%
             var appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);

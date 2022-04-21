@@ -69,4 +69,12 @@
     <v:String x:Key="m_Benchmarking">Benchmarking</v:String>
     <v:String x:Key="m_Searching">Searching</v:String>
 
+    <!-- Status bar -->
+    <v:String x:Key="m_SearchingSkin">Searching skin on marketplace</v:String>
+    <v:String x:Key="m_GettingFloats">Getting floats from marketplace</v:String>
+    <v:String x:Key="m_ErrorCouldntGetFloats">Error! Couldn't get floats from marketplace</v:String>
+    <v:String x:Key="m_ErrorLessThan10">Error! Couldn't get more than 10 floats from marketplace</v:String>
+    <v:String x:Key="m_StartingUpSearch">Starting up search</v:String>
+    <v:String x:Key="m_FinishedSearching">Finished searching</v:String>
+    
 </ResourceDictionary>

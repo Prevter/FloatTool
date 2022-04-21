@@ -152,15 +152,19 @@ namespace FloatTool
         public static List<string> LanguageCodes = new()
         {
             "en",
+            "fr",
+            "ja",
+            "pl",
             "uk",
-            "ru"
+            "ru",
+            "zh",
         };
 
         public SettingsViewModel(Settings settings)
         {
             Settings = settings;
             Languages = new List<string>();
-
+            
             foreach (var lang in LanguageCodes)
             {
                 var locale = new System.Globalization.CultureInfo(lang);

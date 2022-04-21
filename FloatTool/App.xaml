@@ -27,6 +27,7 @@
                 <ResourceDictionary Source="Theme/Schemes/Dark.xaml"/>
                 <!-- Themes -->
                 <ResourceDictionary Source="Theme/ScrollBarStyle.xaml"/>
+                <ResourceDictionary Source="Theme/CheckboxStyle.xaml"/>
                 <ResourceDictionary Source="Theme/TooltipStyle.xaml"/>
                 <ResourceDictionary Source="Theme/TopButtonStyle.xaml"/>
                 <ResourceDictionary Source="Theme/BigTextBoxStyle.xaml"/>
@@ -40,6 +41,10 @@
                 <ResourceDictionary Source="Assets/BenchmarkIcon.xaml"/>
                 <ResourceDictionary Source="Assets/ButtonIcons.xaml"/>
                 <!-- Translations -->
+                <ResourceDictionary Source="Languages/Lang.ja.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.zh.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.pl.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.fr.xaml"/>
                 <ResourceDictionary Source="Languages/Lang.ru.xaml"/>
                 <ResourceDictionary Source="Languages/Lang.uk.xaml"/>
                 <ResourceDictionary Source="Languages/Lang.xaml"/>

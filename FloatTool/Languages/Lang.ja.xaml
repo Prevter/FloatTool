@@ -1,0 +1,80 @@
+﻿<!--
+- Copyright (C) 2022 Prevter
+-
+- This program is free software: you can redistribute it and/or modify
+- it under the terms of the GNU General Public License as published by
+- the Free Software Foundation, either version 3 of the License, or
+- (at your option) any later version.
+-
+- This program is distributed in the hope that it will be useful,
+- but WITHOUT ANY WARRANTY; without even the implied warranty of
+- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+- GNU General Public License for more details.
+-
+- You should have received a copy of the GNU General Public License
+- along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <!-- Main window -->
+    <v:String x:Key="m_WeaponType">武器の種類：</v:String>
+    <v:String x:Key="m_Skin">肌：</v:String>
+    <v:String x:Key="m_Quality">品質：</v:String>
+    <v:String x:Key="m_Outcomes">結果：</v:String>
+    <v:String x:Key="m_SearchMode">検索モード：</v:String>
+    <v:String x:Key="m_DesiredFloat">希望するフロート：</v:String>
+    <v:String x:Key="m_Count">カウント：</v:String>
+    <v:String x:Key="m_Skip">スキップ：</v:String>
+    <v:String x:Key="m_Start">始める</v:String>
+    <v:String x:Key="m_Stop">止まる</v:String>
+    <v:String x:Key="m_FindOne">1つ見つける</v:String>
+    <v:String x:Key="m_Sort">選別</v:String>
+    <v:String x:Key="m_Descending">降順</v:String>
+    <v:String x:Key="m_ThreadCount">スレッド数：</v:String>
+    <v:String x:Key="m_CraftRange">クラフト範囲：</v:String>
+    <v:String x:Key="m_CurrentSpeed">現在の速度：</v:String>
+    <v:String x:Key="m_CombinationsPerSecond">組み合わせ/秒</v:String>
+    <v:String x:Key="m_CheckedCombinations">チェックされた組み合わせ：</v:String>
+    <v:String x:Key="m_SkinNotFound">エラー！この肌はこの品質を持つことはできません。</v:String>
+
+    <!-- Settings window -->
+    <v:String x:Key="m_Settings">設定</v:String>
+    <v:String x:Key="m_Language">言語：</v:String>
+    <v:String x:Key="m_Currency">通貨：</v:String>
+    <v:String x:Key="m_Theme">テーマ：</v:String>
+    <v:String x:Key="m_GetThemes">テーマを取得</v:String>
+    <v:String x:Key="m_OpenThemesFolder">テーマフォルダを開く</v:String>
+    <v:String x:Key="m_EnableSound">サウンドを有効にする</v:String>
+    <v:String x:Key="m_CheckForUpdates">更新を確認する</v:String>
+    
+    <!-- Benchmark window -->
+    <v:String x:Key="m_Benchmark">基準</v:String>
+    <v:String x:Key="m_MultipleThreads">複数のスレッド</v:String>
+    <v:String x:Key="m_SingleThread">シングルスレッド</v:String>
+    <v:String x:Key="m_StartBenchmark">ベンチマークを開始</v:String>
+    <v:String x:Key="m_Update">アップデート</v:String>
+    <v:String x:Key="m_Threads">スレッド</v:String>
+    <v:String x:Key="m_Thread">スレッド</v:String>
+    <v:String x:Key="m_PublishResult">結果を公開する</v:String>
+    
+    <!-- Combination -->
+    <v:String x:Key="m_Copy">コピー</v:String>
+    <v:String x:Key="m_PossibleFloat">可能なフロート：</v:String>
+    <v:String x:Key="m_Ingredients">材料：</v:String>
+    <v:String x:Key="m_Price">価格：</v:String>
+
+    <!-- Discord RPC -->
+    <v:String x:Key="m_SettingUpSearch">検索の設定</v:String>
+    <v:String x:Key="m_Benchmarking">ベンチマーク</v:String>
+    <v:String x:Key="m_Searching">検索</v:String>
+
+    <!-- Status bar -->
+    <v:String x:Key="m_SearchingSkin">マーケットプレイスでスキンを検索する</v:String>
+    <v:String x:Key="m_GettingFloats">市場からフロートを取得する</v:String>
+    <v:String x:Key="m_ErrorCouldntGetFloats">エラー！マーケットプレイスからフロートを取得できませんでした</v:String>
+    <v:String x:Key="m_ErrorLessThan10">エラー！マーケットプレイスから10個以上のフロートを入手できませんでした</v:String>
+    <v:String x:Key="m_StartingUpSearch">検索を開始する</v:String>
+    <v:String x:Key="m_FinishedSearching">検索を終了しました</v:String>
+    
+</ResourceDictionary>

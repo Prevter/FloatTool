@@ -16,6 +16,9 @@
     <Page Update="Languages\Lang.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Theme\CheckboxStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Theme\ComboBoxStyle.xaml">
       <SubType>Designer</SubType>
     </Page>

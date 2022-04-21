@@ -66,8 +66,6 @@ namespace FloatTool
         private float progressPercentage;
         private string currentSpeed = "0";
 
-        private string consoleOutput;
-
         private readonly List<string> qualityList = new()
         {
             "Factory New",
@@ -143,12 +141,6 @@ namespace FloatTool
         {
             get { return currentSpeed; }
             set { currentSpeed = value; OnPropertyChanged(); }
-        }
-
-        public string ConsoleOutput
-        {
-            get { return consoleOutput; }
-            set { consoleOutput = value; OnPropertyChanged(); }
         }
 
         public string SearchFilter
@@ -455,10 +447,9 @@ namespace FloatTool
 
             FoundCombinations = new();
 
-            ConsoleOutput = "Welcome to FloatTool!\nTool for creating floats with CS:GO contracts.\n";
-
             Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("FloatTool.Assets.SkinList.json")!;
-            if (stream is null) throw new NullReferenceException("Could not find SkinList.json");
+            if (stream is null) 
+                throw new NullReferenceException("Could not find SkinList.json");
 
             using (StreamReader reader = new(stream))
             {
