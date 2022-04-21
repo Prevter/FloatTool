@@ -150,13 +150,19 @@ namespace FloatTool
                     {
                         if (options.SearchMode == SearchMode.Equal)
                         {
+                            float price = 0;
+                            foreach (var skin in resultList)
+                                price += skin.Price;
+
                             Dispatcher.Invoke(new Action(() =>
                             {
                                 ViewModel.FoundCombinations.Add(new Combination
                                 {
                                     Wear = resultFloat,
-                                    OutcomeName = ViewModel.OutcomeList[i],
+                                    OutcomeName = options.Outcomes[i].Name,
                                     Inputs = resultList,
+                                    Currency = resultList[0].SkinCurrency,
+                                    Price = price
                                 });
                             }), DispatcherPriority.ContextIdle);
                         }
@@ -207,20 +213,23 @@ namespace FloatTool
 
                     int index = 0;
                     Skin[] outcomes = Array.Empty<Skin>();
-
+                    bool found = false;
                     foreach (var outcome in ViewModel.Outcomes.Values)
                     {
                         if (index++ == ViewModel.OutcomeIndex)
                         {
-                            outcomes = outcome.ToArray();
+                            outcomes = new Skin[] { outcome[0] };
+                            found = true;
                             break;
                         }
                     }
-
-                    // TODO: Have to debug wrong setup settings
-                    outcomes = new Skin[] {
-                        new Skin("AK-47 | Safari Mesh", 0.06f, 0.8f, Skin.Quality.Industrial)
-                    };
+                    if (!found)
+                    {
+                        List<Skin> everything = new();
+                        foreach (var outcome in ViewModel.Outcomes.Values)
+                            everything.Add(outcome[0]);
+                        outcomes = everything.ToArray();
+                    }
 
                     ConcurrentBag<InputSkin> inputSkinBag = new();
                     List<Task> downloaderTasks = new();
