@@ -39,7 +39,7 @@ namespace FloatTool
         public Settings Settings;
         public static long PassedCombinations;
         public static List<Task> ThreadPool;
-        public static CancellationTokenSource TokenSource = new CancellationTokenSource();
+        public static CancellationTokenSource TokenSource = new();
         public CancellationToken CancellationToken;
 
         public void UpdateRichPresence()
@@ -62,6 +62,10 @@ namespace FloatTool
         {
             Settings = new Settings();
             Settings.TryLoad();
+
+            if (!Settings.Migrated)
+                Settings.MigrateFromOldVersion();
+            
             App.SelectCulture(Settings.LanguageCode);
             App.SelectTheme(Settings.ThemeURI);
 
@@ -75,6 +79,24 @@ namespace FloatTool
             DataContext = ViewModel;
 
             Logger.Log.Info("Main window started");
+
+            if (Settings.CheckForUpdates)
+            {
+                Task.Factory.StartNew(() =>
+                {
+                    var update = Utils.CheckForUpdates().Result;
+                    if (update != null && update.tag_name != App.VersionCode)
+                    {
+                        Dispatcher.Invoke(new Action(() =>
+                        {
+                            Logger.Log.Info("New version available");
+                            var updateWindow = new UpdateWindow(update, Settings);
+                            updateWindow.Owner = this;
+                            updateWindow.ShowDialog();
+                        }));
+                    }
+                });
+            }
         }
 
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)

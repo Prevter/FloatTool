@@ -1,0 +1,84 @@
+<!--
+- Copyright (C) 2022 Prevter
+-
+- This program is free software: you can redistribute it and/or modify
+- it under the terms of the GNU General Public License as published by
+- the Free Software Foundation, either version 3 of the License, or
+- (at your option) any later version.
+-
+- This program is distributed in the hope that it will be useful,
+- but WITHOUT ANY WARRANTY; without even the implied warranty of
+- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+- GNU General Public License for more details.
+-
+- You should have received a copy of the GNU General Public License
+- along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <!-- Main window -->
+    <v:String x:Key="m_WeaponType">Ieroča veids:</v:String>
+    <v:String x:Key="m_Skin">Āda:</v:String>
+    <v:String x:Key="m_Quality">Kvalitāte:</v:String>
+    <v:String x:Key="m_Outcomes">Rezultāti:</v:String>
+    <v:String x:Key="m_SearchMode">Meklēšanas režīms:</v:String>
+    <v:String x:Key="m_DesiredFloat">Vēlamais pludiņš:</v:String>
+    <v:String x:Key="m_Count">Skaits:</v:String>
+    <v:String x:Key="m_Skip">Izlaist:</v:String>
+    <v:String x:Key="m_Start">Sākt</v:String>
+    <v:String x:Key="m_Stop">Pietura</v:String>
+    <v:String x:Key="m_FindOne">Atrodi vienu</v:String>
+    <v:String x:Key="m_Sort">Kārtot</v:String>
+    <v:String x:Key="m_Descending">lejupejoša</v:String>
+    <v:String x:Key="m_ThreadCount">Pavedienu skaits:</v:String>
+    <v:String x:Key="m_CraftRange">Amatniecības klāsts:</v:String>
+    <v:String x:Key="m_CurrentSpeed">Pašreizējais ātrums:</v:String>
+    <v:String x:Key="m_CombinationsPerSecond">kombinācijas/sekundē</v:String>
+    <v:String x:Key="m_CheckedCombinations">Pārbaudītās kombinācijas:</v:String>
+    <v:String x:Key="m_SkinNotFound">Kļūda! Šai ādai nevar būt šāda kvalitāte.</v:String>
+
+    <!-- Settings window -->
+    <v:String x:Key="m_Settings">Iestatījumi</v:String>
+    <v:String x:Key="m_Language">Valoda:</v:String>
+    <v:String x:Key="m_Currency">Valūta:</v:String>
+    <v:String x:Key="m_Theme">Tēma:</v:String>
+    <v:String x:Key="m_GetThemes">Iegūstiet motīvus</v:String>
+    <v:String x:Key="m_OpenThemesFolder">Atveriet motīvu mapi</v:String>
+    <v:String x:Key="m_EnableSound">Iespējot skaņu</v:String>
+    <v:String x:Key="m_CheckForUpdates">Meklēt atjauninājumus</v:String>
+    
+    <!-- Benchmark window -->
+    <v:String x:Key="m_Benchmark">Etalons</v:String>
+    <v:String x:Key="m_MultipleThreads">Vairāki pavedieni</v:String>
+    <v:String x:Key="m_SingleThread">Viens pavediens</v:String>
+    <v:String x:Key="m_StartBenchmark">Sāciet etalonu</v:String>
+    <v:String x:Key="m_Update">Atjaunināt</v:String>
+    <v:String x:Key="m_Threads">Pavedieni</v:String>
+    <v:String x:Key="m_Thread">Pavediens</v:String>
+    <v:String x:Key="m_PublishResult">Publicēt rezultātu</v:String>
+    
+    <!-- Combination -->
+    <v:String x:Key="m_Copy">Kopēt</v:String>
+    <v:String x:Key="m_PossibleFloat">Possible float:</v:String>
+    <v:String x:Key="m_Ingredients">Sastāvdaļas:</v:String>
+    <v:String x:Key="m_Price">Cena:</v:String>
+
+    <!-- Discord RPC -->
+    <v:String x:Key="m_SettingUpSearch">Meklēšanas iestatīšana</v:String>
+    <v:String x:Key="m_Benchmarking">Salīdzinošā novērtēšana</v:String>
+    <v:String x:Key="m_Searching">Meklēšana</v:String>
+
+    <!-- Status bar -->
+    <v:String x:Key="m_SearchingSkin">Searching skin on marketplace</v:String>
+    <v:String x:Key="m_GettingFloats">Pludiņu iegūšana no tirgus</v:String>
+    <v:String x:Key="m_ErrorCouldntGetFloats">Kļūda! Nevarēja dabūt pludiņus no tirgus</v:String>
+    <v:String x:Key="m_ErrorLessThan10">Kļūda! Nevarēja iegūt vairāk par 10 pludiņiem no tirgus</v:String>
+    <v:String x:Key="m_StartingUpSearch">Starting up search</v:String>
+    <v:String x:Key="m_FinishedSearching">Meklēšana pabeigta</v:String>
+    
+    <!-- Update window -->
+    <v:String x:Key="m_UpdateAvailable">Pieejams atjauninājums</v:String>
+    <v:String x:Key="m_Later">Vēlāk</v:String>
+    <v:String x:Key="m_DoNotAsk">Neprasi</v:String>
+</ResourceDictionary>

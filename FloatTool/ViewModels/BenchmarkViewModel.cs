@@ -124,7 +124,7 @@ namespace FloatTool
         public static LinearGradientBrush IntelBrush = Application.Current.Resources["IntelBenchmarkFill"] as LinearGradientBrush;
         public static LinearGradientBrush CurrentBrush = Application.Current.Resources["CurrentBenchmarkFill"] as LinearGradientBrush;
 
-        private bool isUpdatingEnabled { get; set; }
+        private bool isUpdatingEnabled;
         public bool IsUpdatingEnabled
         {
             get { return isUpdatingEnabled; }

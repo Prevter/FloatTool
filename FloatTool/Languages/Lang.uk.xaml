@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 - Copyright (C) 2022 Prevter
 -
 - This program is free software: you can redistribute it and/or modify
@@ -47,7 +47,7 @@
     <v:String x:Key="m_OpenThemesFolder">Відкрити папку тем</v:String>
     <v:String x:Key="m_EnableSound">Ввімкнути звук</v:String>
     <v:String x:Key="m_CheckForUpdates">Перевіряти оновлення</v:String>
-
+    
     <!-- Benchmark window -->
     <v:String x:Key="m_Benchmark">Бенчмарк</v:String>
     <v:String x:Key="m_MultipleThreads">Багатопоточний</v:String>
@@ -76,4 +76,9 @@
     <v:String x:Key="m_ErrorLessThan10">Помилка! Не вдалося отримати більше 10-ти флоатів</v:String>
     <v:String x:Key="m_StartingUpSearch">Починаю пошук</v:String>
     <v:String x:Key="m_FinishedSearching">Закінчив пошук</v:String>
+    
+    <!-- Update window -->
+    <v:String x:Key="m_UpdateAvailable">Доступне оновлення</v:String>
+    <v:String x:Key="m_Later">Пізніше</v:String>
+    <v:String x:Key="m_DoNotAsk">Не нагадувати</v:String>
 </ResourceDictionary>

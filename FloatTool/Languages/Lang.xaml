@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 - Copyright (C) 2022 Prevter
 -
 - This program is free software: you can redistribute it and/or modify
@@ -77,4 +77,8 @@
     <v:String x:Key="m_StartingUpSearch">Starting up search</v:String>
     <v:String x:Key="m_FinishedSearching">Finished searching</v:String>
     
+    <!-- Update window -->
+    <v:String x:Key="m_UpdateAvailable">Update available</v:String>
+    <v:String x:Key="m_Later">Later</v:String>
+    <v:String x:Key="m_DoNotAsk">Do not ask</v:String>
 </ResourceDictionary>

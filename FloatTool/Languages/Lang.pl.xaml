@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 - Copyright (C) 2022 Prevter
 -
 - This program is free software: you can redistribute it and/or modify
@@ -23,39 +23,39 @@
     <v:String x:Key="m_Quality">Jakość:</v:String>
     <v:String x:Key="m_Outcomes">Wyniki:</v:String>
     <v:String x:Key="m_SearchMode">Tryb szukania:</v:String>
-    <v:String x:Key="m_DesiredFloat">Wymagany pływak:</v:String>
-    <v:String x:Key="m_Count">Numer:</v:String>
-    <v:String x:Key="m_Skip">Przechodzić:</v:String>
+    <v:String x:Key="m_DesiredFloat">Pożądany pływak:</v:String>
+    <v:String x:Key="m_Count">Liczyć:</v:String>
+    <v:String x:Key="m_Skip">Pomijać:</v:String>
     <v:String x:Key="m_Start">Początek</v:String>
     <v:String x:Key="m_Stop">Zatrzymać</v:String>
     <v:String x:Key="m_FindOne">Znajdź jeden</v:String>
     <v:String x:Key="m_Sort">Sortować</v:String>
     <v:String x:Key="m_Descending">Malejąco</v:String>
-    <v:String x:Key="m_ThreadCount">Liczba wątków:</v:String>
+    <v:String x:Key="m_ThreadCount">Ilość wątków:</v:String>
     <v:String x:Key="m_CraftRange">Zakres rzemiosła:</v:String>
     <v:String x:Key="m_CurrentSpeed">Obecna prędkość:</v:String>
-    <v:String x:Key="m_CombinationsPerSecond">kombinacje/sekundę</v:String>
+    <v:String x:Key="m_CombinationsPerSecond">kombinacje/sekunda</v:String>
     <v:String x:Key="m_CheckedCombinations">Sprawdzone kombinacje:</v:String>
-    <v:String x:Key="m_SkinNotFound">Błąd! Ta skóra nie może mieć takiej jakości.</v:String>
+    <v:String x:Key="m_SkinNotFound">Błąd! Ta skóra nie może mieć tej jakości.</v:String>
 
     <!-- Settings window -->
     <v:String x:Key="m_Settings">Ustawienia</v:String>
     <v:String x:Key="m_Language">Język:</v:String>
     <v:String x:Key="m_Currency">Waluta:</v:String>
     <v:String x:Key="m_Theme">Temat:</v:String>
-    <v:String x:Key="m_GetThemes">Pobierz tematy</v:String>
+    <v:String x:Key="m_GetThemes">Pobierz motywy</v:String>
     <v:String x:Key="m_OpenThemesFolder">Otwórz folder motywów</v:String>
-    <v:String x:Key="m_EnableSound">Włącz dźwięk</v:String>
+    <v:String x:Key="m_EnableSound">Włączyć dźwięk</v:String>
     <v:String x:Key="m_CheckForUpdates">Sprawdź aktualizacje</v:String>
-
+    
     <!-- Benchmark window -->
     <v:String x:Key="m_Benchmark">Reper</v:String>
-    <v:String x:Key="m_MultipleThreads">Wielowątkowy</v:String>
-    <v:String x:Key="m_SingleThread">Jednowątkowy</v:String>
-    <v:String x:Key="m_StartBenchmark">Uruchom test</v:String>
+    <v:String x:Key="m_MultipleThreads">Wiele wątków</v:String>
+    <v:String x:Key="m_SingleThread">Pojedynczy wątek</v:String>
+    <v:String x:Key="m_StartBenchmark">Uruchom test porównawczy</v:String>
     <v:String x:Key="m_Update">Aktualizacja</v:String>
-    <v:String x:Key="m_Threads">Strumienie</v:String>
-    <v:String x:Key="m_Thread">Strumień</v:String>
+    <v:String x:Key="m_Threads">Wątki</v:String>
+    <v:String x:Key="m_Thread">Wątek</v:String>
     <v:String x:Key="m_PublishResult">Opublikuj wynik</v:String>
     
     <!-- Combination -->
@@ -65,15 +65,20 @@
     <v:String x:Key="m_Price">Cena £:</v:String>
 
     <!-- Discord RPC -->
-    <v:String x:Key="m_SettingUpSearch">Nietypowe wyszukiwanie</v:String>
+    <v:String x:Key="m_SettingUpSearch">Konfigurowanie wyszukiwania</v:String>
     <v:String x:Key="m_Benchmarking">Analiza porównawcza</v:String>
-    <v:String x:Key="m_Searching">Szukaj</v:String>
+    <v:String x:Key="m_Searching">Badawczy</v:String>
 
     <!-- Status bar -->
-    <v:String x:Key="m_SearchingSkin">Szukam skina i parkietu</v:String>
-    <v:String x:Key="m_GettingFloats">Dostaję pływaki z parkietu</v:String>
-    <v:String x:Key="m_ErrorCouldntGetFloats">Błąd! Nie udało się uzyskać pływaków z parkietu</v:String>
-    <v:String x:Key="m_ErrorLessThan10">Błąd! Nie udało się uzyskać więcej niż 10 pływaków</v:String>
-    <v:String x:Key="m_StartingUpSearch">Zaczynam poszukiwania</v:String>
+    <v:String x:Key="m_SearchingSkin">Wyszukiwanie skórki na rynku</v:String>
+    <v:String x:Key="m_GettingFloats">Pobieranie pływaków z rynku</v:String>
+    <v:String x:Key="m_ErrorCouldntGetFloats">Błąd! Nie udało się pobrać pływaków z rynku</v:String>
+    <v:String x:Key="m_ErrorLessThan10">Błąd! Nie udało się uzyskać więcej niż 10 pływaków z rynku</v:String>
+    <v:String x:Key="m_StartingUpSearch">Rozpoczęcie wyszukiwania</v:String>
     <v:String x:Key="m_FinishedSearching">Zakończono wyszukiwanie</v:String>
+    
+    <!-- Update window -->
+    <v:String x:Key="m_UpdateAvailable">Dostępna aktualizacja</v:String>
+    <v:String x:Key="m_Later">Później</v:String>
+    <v:String x:Key="m_DoNotAsk">Nie pytaj</v:String>
 </ResourceDictionary>

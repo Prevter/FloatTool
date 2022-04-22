@@ -33,7 +33,7 @@ namespace FloatTool
         {
             Hierarchy hierarchy = (Hierarchy)LogManager.GetRepository();
 
-            PatternLayout patternLayout = new PatternLayout{
+            PatternLayout patternLayout = new() {
                 ConversionPattern = "%date [%thread] %-5level - %message%newline"
             };
             patternLayout.ActivateOptions();

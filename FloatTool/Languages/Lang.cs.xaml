@@ -1,0 +1,84 @@
+<!--
+- Copyright (C) 2022 Prevter
+-
+- This program is free software: you can redistribute it and/or modify
+- it under the terms of the GNU General Public License as published by
+- the Free Software Foundation, either version 3 of the License, or
+- (at your option) any later version.
+-
+- This program is distributed in the hope that it will be useful,
+- but WITHOUT ANY WARRANTY; without even the implied warranty of
+- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+- GNU General Public License for more details.
+-
+- You should have received a copy of the GNU General Public License
+- along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <!-- Main window -->
+    <v:String x:Key="m_WeaponType">Typ zbraně:</v:String>
+    <v:String x:Key="m_Skin">Kůže:</v:String>
+    <v:String x:Key="m_Quality">Kvalitní:</v:String>
+    <v:String x:Key="m_Outcomes">výsledky:</v:String>
+    <v:String x:Key="m_SearchMode">Režim vyhledávání:</v:String>
+    <v:String x:Key="m_DesiredFloat">Požadovaný plovák:</v:String>
+    <v:String x:Key="m_Count">Počet:</v:String>
+    <v:String x:Key="m_Skip">Přeskočit:</v:String>
+    <v:String x:Key="m_Start">Start</v:String>
+    <v:String x:Key="m_Stop">Stop</v:String>
+    <v:String x:Key="m_FindOne">Najdi jednu</v:String>
+    <v:String x:Key="m_Sort">Seřadit</v:String>
+    <v:String x:Key="m_Descending">Klesající</v:String>
+    <v:String x:Key="m_ThreadCount">Počet vláken:</v:String>
+    <v:String x:Key="m_CraftRange">Rozsah řemesel:</v:String>
+    <v:String x:Key="m_CurrentSpeed">Aktuální rychlost:</v:String>
+    <v:String x:Key="m_CombinationsPerSecond">kombinace/sekundu</v:String>
+    <v:String x:Key="m_CheckedCombinations">Kontrolované kombinace:</v:String>
+    <v:String x:Key="m_SkinNotFound">Chyba! Tato kůže nemůže mít tuto kvalitu.</v:String>
+
+    <!-- Settings window -->
+    <v:String x:Key="m_Settings">Nastavení</v:String>
+    <v:String x:Key="m_Language">Jazyk:</v:String>
+    <v:String x:Key="m_Currency">Měna:</v:String>
+    <v:String x:Key="m_Theme">Téma:</v:String>
+    <v:String x:Key="m_GetThemes">Získejte témata</v:String>
+    <v:String x:Key="m_OpenThemesFolder">Otevřete složku motivů</v:String>
+    <v:String x:Key="m_EnableSound">Povolit zvuk</v:String>
+    <v:String x:Key="m_CheckForUpdates">Kontrola aktualizací</v:String>
+    
+    <!-- Benchmark window -->
+    <v:String x:Key="m_Benchmark">Benchmark</v:String>
+    <v:String x:Key="m_MultipleThreads">Více vláken</v:String>
+    <v:String x:Key="m_SingleThread">Jedno vlákno</v:String>
+    <v:String x:Key="m_StartBenchmark">Spustit benchmark</v:String>
+    <v:String x:Key="m_Update">Aktualizace</v:String>
+    <v:String x:Key="m_Threads">Vlákna</v:String>
+    <v:String x:Key="m_Thread">Vlákno</v:String>
+    <v:String x:Key="m_PublishResult">Zveřejnit výsledek</v:String>
+    
+    <!-- Combination -->
+    <v:String x:Key="m_Copy">kopírovat</v:String>
+    <v:String x:Key="m_PossibleFloat">Možný plovák:</v:String>
+    <v:String x:Key="m_Ingredients">Ingredience:</v:String>
+    <v:String x:Key="m_Price">Cena:</v:String>
+
+    <!-- Discord RPC -->
+    <v:String x:Key="m_SettingUpSearch">Nastavení vyhledávání</v:String>
+    <v:String x:Key="m_Benchmarking">Benchmarking</v:String>
+    <v:String x:Key="m_Searching">Hledání</v:String>
+
+    <!-- Status bar -->
+    <v:String x:Key="m_SearchingSkin">Hledání skinu na trhu</v:String>
+    <v:String x:Key="m_GettingFloats">Získávání plavidel z tržiště</v:String>
+    <v:String x:Key="m_ErrorCouldntGetFloats">Chyba! Nepodařilo se získat plováky z tržiště</v:String>
+    <v:String x:Key="m_ErrorLessThan10">Chyba! Z tržiště se nepodařilo získat více než 10 plaváků</v:String>
+    <v:String x:Key="m_StartingUpSearch">Spouštění vyhledávání</v:String>
+    <v:String x:Key="m_FinishedSearching">Hledání dokončeno</v:String>
+    
+    <!-- Update window -->
+    <v:String x:Key="m_UpdateAvailable">Aktualizace k dispozici</v:String>
+    <v:String x:Key="m_Later">Později</v:String>
+    <v:String x:Key="m_DoNotAsk">Neptej se</v:String>
+</ResourceDictionary>

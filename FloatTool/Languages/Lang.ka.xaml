@@ -1,0 +1,84 @@
+<!--
+- Copyright (C) 2022 Prevter
+-
+- This program is free software: you can redistribute it and/or modify
+- it under the terms of the GNU General Public License as published by
+- the Free Software Foundation, either version 3 of the License, or
+- (at your option) any later version.
+-
+- This program is distributed in the hope that it will be useful,
+- but WITHOUT ANY WARRANTY; without even the implied warranty of
+- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+- GNU General Public License for more details.
+-
+- You should have received a copy of the GNU General Public License
+- along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <!-- Main window -->
+    <v:String x:Key="m_WeaponType">იარაღის ტიპი:</v:String>
+    <v:String x:Key="m_Skin">Კანი:</v:String>
+    <v:String x:Key="m_Quality">ხარისხი:</v:String>
+    <v:String x:Key="m_Outcomes">შედეგები:</v:String>
+    <v:String x:Key="m_SearchMode">ძიების რეჟიმი:</v:String>
+    <v:String x:Key="m_DesiredFloat">სასურველი ფლოტი:</v:String>
+    <v:String x:Key="m_Count">დათვლა:</v:String>
+    <v:String x:Key="m_Skip">გამოტოვება:</v:String>
+    <v:String x:Key="m_Start">დაწყება</v:String>
+    <v:String x:Key="m_Stop">გაჩერდი</v:String>
+    <v:String x:Key="m_FindOne">იპოვე ერთი</v:String>
+    <v:String x:Key="m_Sort">დალაგება</v:String>
+    <v:String x:Key="m_Descending">Დაღმავალი</v:String>
+    <v:String x:Key="m_ThreadCount">თემების რაოდენობა:</v:String>
+    <v:String x:Key="m_CraftRange">ხელნაკეთობების დიაპაზონი:</v:String>
+    <v:String x:Key="m_CurrentSpeed">მიმდინარე სიჩქარე:</v:String>
+    <v:String x:Key="m_CombinationsPerSecond">კომბინაციები/მეორე</v:String>
+    <v:String x:Key="m_CheckedCombinations">შემოწმებული კომბინაციები:</v:String>
+    <v:String x:Key="m_SkinNotFound">შეცდომა! ამ კანს არ შეიძლება ჰქონდეს ეს ხარისხი.</v:String>
+
+    <!-- Settings window -->
+    <v:String x:Key="m_Settings">პარამეტრები</v:String>
+    <v:String x:Key="m_Language">Ენა:</v:String>
+    <v:String x:Key="m_Currency">ვალუტა:</v:String>
+    <v:String x:Key="m_Theme">თემა:</v:String>
+    <v:String x:Key="m_GetThemes">მიიღეთ თემები</v:String>
+    <v:String x:Key="m_OpenThemesFolder">გახსენით თემების საქაღალდე</v:String>
+    <v:String x:Key="m_EnableSound">ხმის ჩართვა</v:String>
+    <v:String x:Key="m_CheckForUpdates">Შეამოწმოთ განახლებები</v:String>
+    
+    <!-- Benchmark window -->
+    <v:String x:Key="m_Benchmark">ნიშნული</v:String>
+    <v:String x:Key="m_MultipleThreads">მრავალი ძაფი</v:String>
+    <v:String x:Key="m_SingleThread">ერთი ძაფი</v:String>
+    <v:String x:Key="m_StartBenchmark">დაწყება საორიენტაციო</v:String>
+    <v:String x:Key="m_Update">განახლება</v:String>
+    <v:String x:Key="m_Threads">ძაფები</v:String>
+    <v:String x:Key="m_Thread">ძაფი</v:String>
+    <v:String x:Key="m_PublishResult">შედეგის გამოქვეყნება</v:String>
+    
+    <!-- Combination -->
+    <v:String x:Key="m_Copy">კოპირება</v:String>
+    <v:String x:Key="m_PossibleFloat">შესაძლო ცურვა:</v:String>
+    <v:String x:Key="m_Ingredients">ინგრედიენტები:</v:String>
+    <v:String x:Key="m_Price">ფასი:</v:String>
+
+    <!-- Discord RPC -->
+    <v:String x:Key="m_SettingUpSearch">ძიების დაყენება</v:String>
+    <v:String x:Key="m_Benchmarking">Benchmarking</v:String>
+    <v:String x:Key="m_Searching">ეძებს</v:String>
+
+    <!-- Status bar -->
+    <v:String x:Key="m_SearchingSkin">კანის ძებნა ბაზარზე</v:String>
+    <v:String x:Key="m_GettingFloats">ფლოტის მიღება ბაზრიდან</v:String>
+    <v:String x:Key="m_ErrorCouldntGetFloats">შეცდომა! ბაზრიდან მოძრავი ფურცლების მიღება ვერ მოხერხდა</v:String>
+    <v:String x:Key="m_ErrorLessThan10">შეცდომა! ბაზრიდან 10-ზე მეტი ცურვის მიღება ვერ მოხერხდა</v:String>
+    <v:String x:Key="m_StartingUpSearch">ძიების დაწყება</v:String>
+    <v:String x:Key="m_FinishedSearching">დაასრულა ძებნა</v:String>
+    
+    <!-- Update window -->
+    <v:String x:Key="m_UpdateAvailable">Განახლება შესაძლებელია</v:String>
+    <v:String x:Key="m_Later">მოგვიანებით</v:String>
+    <v:String x:Key="m_DoNotAsk">Არ იკითხო</v:String>
+</ResourceDictionary>

@@ -1,0 +1,84 @@
+<!--
+- Copyright (C) 2022 Prevter
+-
+- This program is free software: you can redistribute it and/or modify
+- it under the terms of the GNU General Public License as published by
+- the Free Software Foundation, either version 3 of the License, or
+- (at your option) any later version.
+-
+- This program is distributed in the hope that it will be useful,
+- but WITHOUT ANY WARRANTY; without even the implied warranty of
+- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+- GNU General Public License for more details.
+-
+- You should have received a copy of the GNU General Public License
+- along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <!-- Main window -->
+    <v:String x:Key="m_WeaponType">Cineál Airm:</v:String>
+    <v:String x:Key="m_Skin">Craiceann:</v:String>
+    <v:String x:Key="m_Quality">Cáilíocht:</v:String>
+    <v:String x:Key="m_Outcomes">Torthaí:</v:String>
+    <v:String x:Key="m_SearchMode">Mód Cuardaigh:</v:String>
+    <v:String x:Key="m_DesiredFloat">Snámhán Inmhianaithe:</v:String>
+    <v:String x:Key="m_Count">Comhair:</v:String>
+    <v:String x:Key="m_Skip">Scipeáil:</v:String>
+    <v:String x:Key="m_Start">Tosaigh</v:String>
+    <v:String x:Key="m_Stop">Stop</v:String>
+    <v:String x:Key="m_FindOne">Faigh ceann</v:String>
+    <v:String x:Key="m_Sort">Sórtáil</v:String>
+    <v:String x:Key="m_Descending">íslitheach</v:String>
+    <v:String x:Key="m_ThreadCount">Comhaireamh snáithe:</v:String>
+    <v:String x:Key="m_CraftRange">Raon ceardaíochta:</v:String>
+    <v:String x:Key="m_CurrentSpeed">Luas reatha:</v:String>
+    <v:String x:Key="m_CombinationsPerSecond">teaglamaí/dara</v:String>
+    <v:String x:Key="m_CheckedCombinations">Comhcheangail sheiceáil:</v:String>
+    <v:String x:Key="m_SkinNotFound">Earráid! Ní féidir an caighdeán seo a bheith ag an gcraiceann seo.</v:String>
+
+    <!-- Settings window -->
+    <v:String x:Key="m_Settings">Socruithe</v:String>
+    <v:String x:Key="m_Language">Teanga:</v:String>
+    <v:String x:Key="m_Currency">Airgeadra:</v:String>
+    <v:String x:Key="m_Theme">Téama:</v:String>
+    <v:String x:Key="m_GetThemes">Faigh téamaí</v:String>
+    <v:String x:Key="m_OpenThemesFolder">Oscail fillteán téamaí</v:String>
+    <v:String x:Key="m_EnableSound">Cumasaigh fuaim</v:String>
+    <v:String x:Key="m_CheckForUpdates">Seiceáil do nuashrónaithe</v:String>
+    
+    <!-- Benchmark window -->
+    <v:String x:Key="m_Benchmark">Tagarmharc</v:String>
+    <v:String x:Key="m_MultipleThreads">Snáitheanna iolracha</v:String>
+    <v:String x:Key="m_SingleThread">Snáithe aonair</v:String>
+    <v:String x:Key="m_StartBenchmark">Tosaigh tagarmharc</v:String>
+    <v:String x:Key="m_Update">Nuashonrú</v:String>
+    <v:String x:Key="m_Threads">Snáitheanna</v:String>
+    <v:String x:Key="m_Thread">Snáithe</v:String>
+    <v:String x:Key="m_PublishResult">Foilsigh an toradh</v:String>
+    
+    <!-- Combination -->
+    <v:String x:Key="m_Copy">Cóipeáil</v:String>
+    <v:String x:Key="m_PossibleFloat">Snámhán féideartha:</v:String>
+    <v:String x:Key="m_Ingredients">Comhábhair:</v:String>
+    <v:String x:Key="m_Price">Praghas:</v:String>
+
+    <!-- Discord RPC -->
+    <v:String x:Key="m_SettingUpSearch">Cuardach a shocrú</v:String>
+    <v:String x:Key="m_Benchmarking">Tagarmharcáil</v:String>
+    <v:String x:Key="m_Searching">Cuardach</v:String>
+
+    <!-- Status bar -->
+    <v:String x:Key="m_SearchingSkin">Craicne a chuardach ar an margadh</v:String>
+    <v:String x:Key="m_GettingFloats">Snámhóga a fháil ón margadh</v:String>
+    <v:String x:Key="m_ErrorCouldntGetFloats">Earráid! Níorbh fhéidir snámháin a fháil ón margadh</v:String>
+    <v:String x:Key="m_ErrorLessThan10">Earráid! Níorbh fhéidir níos mó ná 10 snámhán a fháil ón margadh</v:String>
+    <v:String x:Key="m_StartingUpSearch">Cuardach a thosú</v:String>
+    <v:String x:Key="m_FinishedSearching">Críochnaíodh an cuardach</v:String>
+    
+    <!-- Update window -->
+    <v:String x:Key="m_UpdateAvailable">Nuashonrú ar fáil</v:String>
+    <v:String x:Key="m_Later">Níos déanaí</v:String>
+    <v:String x:Key="m_DoNotAsk">Ná fiafraigh</v:String>
+</ResourceDictionary>

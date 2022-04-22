@@ -19,7 +19,7 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:FloatTool"
-             StartupUri="Views/MainWindow.xaml">
+             StartupUri="Views/MainWindow.xaml" Startup="AppLoaded">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -41,12 +41,26 @@
                 <ResourceDictionary Source="Assets/BenchmarkIcon.xaml"/>
                 <ResourceDictionary Source="Assets/ButtonIcons.xaml"/>
                 <!-- Translations -->
-                <ResourceDictionary Source="Languages/Lang.ja.xaml"/>
-                <ResourceDictionary Source="Languages/Lang.zh.xaml"/>
-                <ResourceDictionary Source="Languages/Lang.pl.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.cs.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.da.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.de.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.es.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.fi.xaml"/>
                 <ResourceDictionary Source="Languages/Lang.fr.xaml"/>
-                <ResourceDictionary Source="Languages/Lang.ru.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.ga.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.he.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.hr.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.it.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.ja.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.ka.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.lt.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.lv.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.pl.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.pt.xaml"/>
                 <ResourceDictionary Source="Languages/Lang.uk.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.tr.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.ru.xaml"/>
+                <ResourceDictionary Source="Languages/Lang.zh.xaml"/>
                 <ResourceDictionary Source="Languages/Lang.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

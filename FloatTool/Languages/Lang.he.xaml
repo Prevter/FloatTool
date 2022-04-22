@@ -1,0 +1,84 @@
+<!--
+- Copyright (C) 2022 Prevter
+-
+- This program is free software: you can redistribute it and/or modify
+- it under the terms of the GNU General Public License as published by
+- the Free Software Foundation, either version 3 of the License, or
+- (at your option) any later version.
+-
+- This program is distributed in the hope that it will be useful,
+- but WITHOUT ANY WARRANTY; without even the implied warranty of
+- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+- GNU General Public License for more details.
+-
+- You should have received a copy of the GNU General Public License
+- along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <!-- Main window -->
+    <v:String x:Key="m_WeaponType">סוג נשק:</v:String>
+    <v:String x:Key="m_Skin">עור:</v:String>
+    <v:String x:Key="m_Quality">איכות:</v:String>
+    <v:String x:Key="m_Outcomes">תוצאות:</v:String>
+    <v:String x:Key="m_SearchMode">מצב חיפוש:</v:String>
+    <v:String x:Key="m_DesiredFloat">ציפה רצויה:</v:String>
+    <v:String x:Key="m_Count">לספור:</v:String>
+    <v:String x:Key="m_Skip">לדלג:</v:String>
+    <v:String x:Key="m_Start">הַתחָלָה</v:String>
+    <v:String x:Key="m_Stop">תפסיק</v:String>
+    <v:String x:Key="m_FindOne">מצא אחד</v:String>
+    <v:String x:Key="m_Sort">סוג</v:String>
+    <v:String x:Key="m_Descending">יורד</v:String>
+    <v:String x:Key="m_ThreadCount">ספירת חוטים:</v:String>
+    <v:String x:Key="m_CraftRange">טווח מלאכה:</v:String>
+    <v:String x:Key="m_CurrentSpeed">מהירות נוכחית:</v:String>
+    <v:String x:Key="m_CombinationsPerSecond">שילובים/שנייה</v:String>
+    <v:String x:Key="m_CheckedCombinations">שילובים מסומנים:</v:String>
+    <v:String x:Key="m_SkinNotFound">שְׁגִיאָה! העור הזה לא יכול לקבל את האיכות הזו.</v:String>
+
+    <!-- Settings window -->
+    <v:String x:Key="m_Settings">הגדרות</v:String>
+    <v:String x:Key="m_Language">שפה:</v:String>
+    <v:String x:Key="m_Currency">מַטְבֵּעַ:</v:String>
+    <v:String x:Key="m_Theme">נושא:</v:String>
+    <v:String x:Key="m_GetThemes">קבל ערכות נושא</v:String>
+    <v:String x:Key="m_OpenThemesFolder">פתח את תיקיית הנושאים</v:String>
+    <v:String x:Key="m_EnableSound">אפשר צליל</v:String>
+    <v:String x:Key="m_CheckForUpdates">בדוק עדכונים</v:String>
+    
+    <!-- Benchmark window -->
+    <v:String x:Key="m_Benchmark">Benchmark</v:String>
+    <v:String x:Key="m_MultipleThreads">חוטים מרובים</v:String>
+    <v:String x:Key="m_SingleThread">חוט בודד</v:String>
+    <v:String x:Key="m_StartBenchmark">התחל benchmark</v:String>
+    <v:String x:Key="m_Update">עדכון</v:String>
+    <v:String x:Key="m_Threads">חוטים</v:String>
+    <v:String x:Key="m_Thread">פְּתִיל</v:String>
+    <v:String x:Key="m_PublishResult">פרסם תוצאה</v:String>
+    
+    <!-- Combination -->
+    <v:String x:Key="m_Copy">עותק</v:String>
+    <v:String x:Key="m_PossibleFloat">ציפה אפשרית:</v:String>
+    <v:String x:Key="m_Ingredients">רכיבים:</v:String>
+    <v:String x:Key="m_Price">מחיר:</v:String>
+
+    <!-- Discord RPC -->
+    <v:String x:Key="m_SettingUpSearch">הגדרת חיפוש</v:String>
+    <v:String x:Key="m_Benchmarking">Benchmarking</v:String>
+    <v:String x:Key="m_Searching">מחפש</v:String>
+
+    <!-- Status bar -->
+    <v:String x:Key="m_SearchingSkin">מחפש עור בשוק</v:String>
+    <v:String x:Key="m_GettingFloats">קבלת מצופים משוק</v:String>
+    <v:String x:Key="m_ErrorCouldntGetFloats">שְׁגִיאָה! לא ניתן היה להשיג צפים משוק</v:String>
+    <v:String x:Key="m_ErrorLessThan10">שְׁגִיאָה! לא ניתן היה להשיג יותר מ-10 צפים מ-marketplace</v:String>
+    <v:String x:Key="m_StartingUpSearch">מתחילים בחיפוש</v:String>
+    <v:String x:Key="m_FinishedSearching">סיים לחפש</v:String>
+    
+    <!-- Update window -->
+    <v:String x:Key="m_UpdateAvailable">עדכון זמין</v:String>
+    <v:String x:Key="m_Later">יותר מאוחר</v:String>
+    <v:String x:Key="m_DoNotAsk">אל תשאלו</v:String>
+</ResourceDictionary>

@@ -38,7 +38,7 @@ namespace FloatTool
     public static class Utils
     {
         public static string API_URL = "https://prevterapi.000webhostapp.com";
-        private static HttpClient Client = new();
+        private static readonly HttpClient Client = new();
 
         public static async Task<decimal> GetWearFromInspectURL(string inspect_url)
         {
@@ -47,6 +47,24 @@ namespace FloatTool
             string response = await result.Content.ReadAsStringAsync();
             dynamic json = JsonConvert.DeserializeObject(response);
             return Convert.ToDecimal(json["iteminfo"]["floatvalue"]);
+        }
+
+        public static async Task<UpdateResult> CheckForUpdates()
+        {
+            try
+            {
+                HttpClient client = new();
+                client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36");
+                var result = await client.GetAsync("https://api.github.com/repos/prevter/floattool/releases/latest");
+                result.EnsureSuccessStatusCode();
+                string response = await result.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<UpdateResult>(response);
+            }
+            catch(Exception ex)
+            {
+                Logger.Log.Error("Failed to get latest version", ex);
+                return null;
+            }
         }
 
         public static string ShortCpuName(string cpu)
@@ -77,6 +95,21 @@ namespace FloatTool
         }
     }
 
+    #pragma warning disable IDE1006 // Naming Styles
+    public class UpdateResult
+    {
+        public class Asset
+        {
+            public string browser_download_url { get; set; }
+        }
+
+        public string tag_name { get; set; }
+        public string name { get; set; }
+        public List<Asset> assets { get; set; }
+        public string body { get; set; }
+    }
+    #pragma warning restore IDE1006 // Naming Styles
+    
     public class CraftSearchSetup
     {
         public decimal SearchTarget { get; set; }

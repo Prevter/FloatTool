@@ -151,12 +151,16 @@ namespace FloatTool
         public static List<string> Languages { get; private set; }
         public static List<string> LanguageCodes = new()
         {
-            "en",
-            "fr",
-            "ja",
-            "pl",
-            "uk",
-            "ru",
+            "cs", "da",
+            "de", "en",
+            "es", "fi",
+            "fr", "ga",
+            "he", "hr",
+            "it", "ja",
+            "ka", "lt",
+            "lv", "pl",
+            "pt", "uk",
+            "tr", "ru",
             "zh",
         };
 

@@ -94,7 +94,7 @@ namespace FloatTool
         public App()
         {
             var version = Assembly.GetExecutingAssembly().GetName().Version;
-            VersionCode = $"v.{version.Major}.{version.MajorRevision}.{version.Minor}";
+            VersionCode = $"v.{version.Major}.{version.Minor}.{version.Build}";
 
             Logger.Initialize();
             Logger.Log.Info($"FloatTool {VersionCode}");
@@ -162,9 +162,24 @@ namespace FloatTool
             DiscordClient.Initialize();
         }
 
+        public static void CleanOldFiles()
+        {
+            string folderPath = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+            foreach (var oldFile in Directory.GetFiles(folderPath, "*.old", SearchOption.TopDirectoryOnly))
+                File.Delete(oldFile);
+        }
+
+        void AppLoaded(object sender, StartupEventArgs e)
+        {
+            if (e.Args.Length > 0 && e.Args.Contains("--clean-update"))
+            {
+                CleanOldFiles();
+            }
+        }
+
         const int ERROR_SHARING_VIOLATION = 32;
         const int ERROR_LOCK_VIOLATION = 33;
-        private static bool IsFileLocked(string file)
+        public static bool IsFileLocked(string file)
         {
             if (File.Exists(file) == true)
             {

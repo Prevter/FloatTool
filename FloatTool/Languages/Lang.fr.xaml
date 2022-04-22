@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 - Copyright (C) 2022 Prevter
 -
 - This program is free software: you can redistribute it and/or modify
@@ -18,12 +18,12 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:v="clr-namespace:System;assembly=mscorlib">
     <!-- Main window -->
-    <v:String x:Key="m_WeaponType">Type d'arme :</v:String>
+    <v:String x:Key="m_WeaponType">Type d'arme :</v:String>
     <v:String x:Key="m_Skin">La peau:</v:String>
     <v:String x:Key="m_Quality">Qualité:</v:String>
-    <v:String x:Key="m_Outcomes">Résultats:</v:String>
-    <v:String x:Key="m_SearchMode">Mode de recherche:</v:String>
-    <v:String x:Key="m_DesiredFloat">Flotteur souhaité:</v:String>
+    <v:String x:Key="m_Outcomes">Résultats :</v:String>
+    <v:String x:Key="m_SearchMode">Mode de recherche :</v:String>
+    <v:String x:Key="m_DesiredFloat">Flotteur souhaité :</v:String>
     <v:String x:Key="m_Count">Compter:</v:String>
     <v:String x:Key="m_Skip">Sauter:</v:String>
     <v:String x:Key="m_Start">Démarrer</v:String>
@@ -31,11 +31,11 @@
     <v:String x:Key="m_FindOne">Trouvez-en un</v:String>
     <v:String x:Key="m_Sort">Sorte</v:String>
     <v:String x:Key="m_Descending">Descendant</v:String>
-    <v:String x:Key="m_ThreadCount">Nombre de fils:</v:String>
-    <v:String x:Key="m_CraftRange">Gamme artisanale:</v:String>
+    <v:String x:Key="m_ThreadCount">Nombre de fils :</v:String>
+    <v:String x:Key="m_CraftRange">Gamme artisanale :</v:String>
     <v:String x:Key="m_CurrentSpeed">Vitesse actuelle:</v:String>
     <v:String x:Key="m_CombinationsPerSecond">combinaisons/seconde</v:String>
-    <v:String x:Key="m_CheckedCombinations">Combinaisons cochées:</v:String>
+    <v:String x:Key="m_CheckedCombinations">Combinaisons cochées :</v:String>
     <v:String x:Key="m_SkinNotFound">Erreur! Cette peau ne peut pas avoir cette qualité.</v:String>
 
     <!-- Settings window -->
@@ -55,12 +55,12 @@
     <v:String x:Key="m_StartBenchmark">Commencer le benchmark</v:String>
     <v:String x:Key="m_Update">Mise à jour</v:String>
     <v:String x:Key="m_Threads">Fils</v:String>
-    <v:String x:Key="m_Thread">Le fil</v:String>
+    <v:String x:Key="m_Thread">Fil de discussion</v:String>
     <v:String x:Key="m_PublishResult">Publier le résultat</v:String>
     
     <!-- Combination -->
     <v:String x:Key="m_Copy">Copie</v:String>
-    <v:String x:Key="m_PossibleFloat">Flottant éventuel:</v:String>
+    <v:String x:Key="m_PossibleFloat">Flottant éventuel :</v:String>
     <v:String x:Key="m_Ingredients">Ingrédients:</v:String>
     <v:String x:Key="m_Price">Prix:</v:String>
 
@@ -77,4 +77,8 @@
     <v:String x:Key="m_StartingUpSearch">Lancement de la recherche</v:String>
     <v:String x:Key="m_FinishedSearching">Recherche terminée</v:String>
     
+    <!-- Update window -->
+    <v:String x:Key="m_UpdateAvailable">Mise à jour disponible</v:String>
+    <v:String x:Key="m_Later">Plus tard</v:String>
+    <v:String x:Key="m_DoNotAsk">Ne demandez pas</v:String>
 </ResourceDictionary>

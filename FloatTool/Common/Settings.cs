@@ -17,6 +17,8 @@
 
 using Microsoft.Win32;
 using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Threading;
 
 namespace FloatTool
@@ -70,6 +72,7 @@ namespace FloatTool
         public bool CheckForUpdates { get; set; } = true;
         public bool DiscordRPC { get; set; } = true;
         public int ThreadCount { get; set; } = Environment.ProcessorCount;
+        public bool Migrated { get; set; } = false;
 
         public void TryLoad()
         {
@@ -83,11 +86,10 @@ namespace FloatTool
                 Currency = (Currency)Registry.GetValue(keyName, "currency", Currency.USD);
                 ThemeURI = (string)Registry.GetValue(keyName, "themeURI", "/Theme/Schemes/Dark.xaml");
                 ThreadCount = (int)Registry.GetValue(keyName, "lastThreads", Environment.ProcessorCount);
-
-                // Using ToString to be compatible with older versions
                 Sound = (string)Registry.GetValue(keyName, "sound", "True") == "True";
                 CheckForUpdates = (string)Registry.GetValue(keyName, "updateCheck", "True") == "True";
                 DiscordRPC = (string)Registry.GetValue(keyName, "discordRPC", "True") == "True";
+                Migrated = (string)Registry.GetValue(keyName, "migrated", "False") == "True";
             }
             catch (Exception ex)
             {
@@ -106,16 +108,41 @@ namespace FloatTool
             Registry.SetValue(keyName, "currency", (int)Currency);
             Registry.SetValue(keyName, "themeURI", ThemeURI);
             Registry.SetValue(keyName, "lastThreads", ThreadCount);
-
-            // Using ToString to be compatible with older versions
-            Registry.SetValue(keyName, "sound", Sound.ToString());
-            Registry.SetValue(keyName, "updateCheck", CheckForUpdates.ToString());
-            Registry.SetValue(keyName, "discordRPC", DiscordRPC.ToString());
+            Registry.SetValue(keyName, "sound", Sound);
+            Registry.SetValue(keyName, "updateCheck", CheckForUpdates);
+            Registry.SetValue(keyName, "discordRPC", DiscordRPC);
+            Registry.SetValue(keyName, "migrated", Migrated);
         }
 
+        public void MigrateFromOldVersion()
+        {
+            // This method cleans up old settings and data            
+            List<string> oldFiles = new() { 
+                "debug.log", 
+                "FloatCore.dll", 
+                "FloatTool.exe.config",
+                "FloatTool.pdb",
+                "itemData.json",
+                "theme.json",
+                "Updater.exe"
+            };
+
+            foreach(var file in oldFiles)
+            {
+                if (File.Exists(file))
+                    File.Delete(file);                    
+            }
+
+            App.CleanOldFiles();
+
+            // Finally save that we migrated to not do this every time
+            Migrated = true;
+            Save();
+        }        
+        
         public override string ToString()
         {
-            return $"{{LanguageCode: {LanguageCode}, Currency: {Currency}, ThemeURI: {ThemeURI}, Sound: {Sound}, CheckForUpdates: {CheckForUpdates}, DiscordRPC: {DiscordRPC}, ThreadCount: {ThreadCount}}}";
+            return $"{{LanguageCode: {LanguageCode}, Currency: {Currency}, ThemeURI: {ThemeURI}, Sound: {Sound}, CheckForUpdates: {CheckForUpdates}, DiscordRPC: {DiscordRPC}, ThreadCount: {ThreadCount}, HaveUpdated: {Migrated}}}";
         }
     }
 }
