@@ -15,13 +15,12 @@
 - along with this program. If not, see <https://www.gnu.org/licenses/>.
 */
 
-using System;
-using System.Reflection;
 using log4net;
-using log4net.Repository.Hierarchy;
-using log4net.Core;
 using log4net.Appender;
+using log4net.Core;
 using log4net.Layout;
+using log4net.Repository.Hierarchy;
+using System.Reflection;
 
 namespace FloatTool
 {
@@ -33,7 +32,8 @@ namespace FloatTool
         {
             Hierarchy hierarchy = (Hierarchy)LogManager.GetRepository();
 
-            PatternLayout patternLayout = new() {
+            PatternLayout patternLayout = new()
+            {
                 ConversionPattern = "%date [%thread] %-5level - %message%newline"
             };
             patternLayout.ActivateOptions();

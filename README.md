@@ -1,8 +1,9 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/pbudy8wm35ybxpuf?svg=true)](https://ci.appveyor.com/project/Prevter/floattool)
 [![Discord](https://img.shields.io/discord/852481556019019786?label=discord&logo=discord)](https://discord.gg/RM9VrzMfhP)
-[![CodeQL](https://github.com/Prevter/FloatTool-GUI/workflows/CodeQL/badge.svg)](https://github.com/Prevter/FloatTool-GUI/actions/workflows/codeql-analysis.yml)
-![GitHub all releases](https://img.shields.io/github/downloads/Prevter/FloatTool-GUI/total)
-![GitHub](https://img.shields.io/github/license/Prevter/FloatTool-GUI)
+[![CodeQL](https://github.com/Prevter/FloatTool/workflows/CodeQL/badge.svg)](https://github.com/Prevter/FloatTool/actions/workflows/codeql-analysis.yml)
+![GitHub all releases](https://img.shields.io/github/downloads/Prevter/FloatTool/total)
+![GitHub](https://img.shields.io/github/license/Prevter/FloatTool)
+[![POEditor](https://img.shields.io/badge/translation-join-yellow)](https://poeditor.com/join/project/7ewXWFXF0h)
 <br/>
 <div align="center">
    <a href="https://github.com/Prevter/FloatTool">
@@ -15,7 +16,7 @@
 </div>
 
 ## Description
-![Program Working](https://github.com/Prevter/FloatTool-GUI/blob/master/doc/program.png?raw=true)  
+![Program Working](https://github.com/Prevter/FloatTool/blob/master/doc/program.png?raw=true)  
 
 This app allows you to quickly search combinations to craft skins in CS:GO with (almost) any float you want. All you have to do is set some search settings, wait a bit and all you have to do next is to buy skins from marketplace, that the app found to be needed.  
 This is probably the fastest app you can find, as it can achieve more than 10,000,000 combinations per second on a i9-9900K.

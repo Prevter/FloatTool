@@ -136,7 +136,7 @@ namespace FloatTool
             get { return $"{ParsedCombinations}/{TotalCombinations}"; }
             set { OnPropertyChanged(); }
         }
-            
+
         public string CurrentSpeedLabel
         {
             get { return currentSpeed; }
@@ -146,27 +146,30 @@ namespace FloatTool
         public string SearchFilter
         {
             get { return searchFilter; }
-            set { 
+            set
+            {
                 searchFilter = value;
-                OnPropertyChanged(); 
+                OnPropertyChanged();
             }
         }
 
         public int SkinCount
         {
             get { return skinCount; }
-            set { 
-                skinCount = value; 
-                OnPropertyChanged(); 
+            set
+            {
+                skinCount = value;
+                OnPropertyChanged();
             }
         }
 
         public int SkinSkipCount
         {
             get { return skinSkipCount; }
-            set { 
-                skinSkipCount = value; 
-                OnPropertyChanged(); 
+            set
+            {
+                skinSkipCount = value;
+                OnPropertyChanged();
             }
         }
 
@@ -287,7 +290,8 @@ namespace FloatTool
             set { isError = value; OnPropertyChanged(); }
         }
 
-        public float ProgressPercentage {
+        public float ProgressPercentage
+        {
             get { return progressPercentage; }
             set { progressPercentage = value; OnPropertyChanged(); }
         }
@@ -448,7 +452,7 @@ namespace FloatTool
             FoundCombinations = new();
 
             Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("FloatTool.Assets.SkinList.json")!;
-            if (stream is null) 
+            if (stream is null)
                 throw new NullReferenceException("Could not find SkinList.json");
 
             using (StreamReader reader = new(stream))

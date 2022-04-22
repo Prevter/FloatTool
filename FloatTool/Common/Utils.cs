@@ -60,7 +60,7 @@ namespace FloatTool
                 string response = await result.Content.ReadAsStringAsync();
                 return JsonConvert.DeserializeObject<UpdateResult>(response);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Logger.Log.Error("Failed to get latest version", ex);
                 return null;
@@ -95,7 +95,7 @@ namespace FloatTool
         }
     }
 
-    #pragma warning disable IDE1006 // Naming Styles
+#pragma warning disable IDE1006 // Naming Styles
     public class UpdateResult
     {
         public class Asset
@@ -108,8 +108,8 @@ namespace FloatTool
         public List<Asset> assets { get; set; }
         public string body { get; set; }
     }
-    #pragma warning restore IDE1006 // Naming Styles
-    
+#pragma warning restore IDE1006 // Naming Styles
+
     public class CraftSearchSetup
     {
         public decimal SearchTarget { get; set; }

@@ -158,7 +158,7 @@ namespace FloatTool
             {
                 return copyCommand ??= new RelayCommand(obj =>
                 {
-                    Clipboard.SetText(WearValue.ToString(CultureInfo.InvariantCulture));
+                    Clipboard.SetText(WearValue.ToString("0.00000000000000", CultureInfo.InvariantCulture));
                 });
             }
         }

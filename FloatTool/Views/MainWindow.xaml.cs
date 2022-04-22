@@ -21,8 +21,11 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Net.Http;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -41,6 +44,7 @@ namespace FloatTool
         public static List<Task> ThreadPool;
         public static CancellationTokenSource TokenSource = new();
         public CancellationToken CancellationToken;
+        public static SoundPlayer CombinationFoundSound;
 
         public void UpdateRichPresence()
         {
@@ -60,12 +64,18 @@ namespace FloatTool
 
         public MainWindow()
         {
+            using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("FloatTool.Assets.Found.wav"))
+            {
+                CombinationFoundSound = new SoundPlayer(stream);
+                CombinationFoundSound.Load();
+            }          
+
             Settings = new Settings();
             Settings.TryLoad();
 
             if (!Settings.Migrated)
                 Settings.MigrateFromOldVersion();
-            
+
             App.SelectCulture(Settings.LanguageCode);
             App.SelectTheme(Settings.ThemeURI);
 
@@ -103,6 +113,19 @@ namespace FloatTool
         {
             base.OnMouseLeftButtonDown(e);
             if (e.GetPosition(this).Y < 40) DragMove();
+        }
+
+        private void Window_KeyUp(object sender, KeyEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case Key.F1:
+                    Process.Start(new ProcessStartInfo { FileName = "https://prevter.github.io/FloatTool/table.html", UseShellExecute = true });
+                    break;
+                case Key.F2:
+                    Process.Start(new ProcessStartInfo { FileName = "https://prevter.github.io/FloatTool/utils.html", UseShellExecute = true });
+                    break;
+            }
         }
 
         private void WindowButton_Click(object sender, RoutedEventArgs e)
@@ -182,7 +205,7 @@ namespace FloatTool
                             }
                             ieeesum /= 10;
                             float ieee = ((float)options.Outcomes[i].MaxFloat - (float)options.Outcomes[i].MinFloat) * ieeesum + (float)options.Outcomes[i].MinFloat;
-                            
+
                             Dispatcher.Invoke(new Action(() =>
                             {
                                 ViewModel.FoundCombinations.Add(new Combination
@@ -194,6 +217,8 @@ namespace FloatTool
                                     Price = price,
                                     IEEE754 = ((double)ieee).ToString("0.000000000000000", CultureInfo.InvariantCulture)
                                 });
+                                if (Settings.Sound)
+                                    CombinationFoundSound.Play();
                             }), DispatcherPriority.ContextIdle);
                         }
                     }
@@ -218,7 +243,7 @@ namespace FloatTool
                 TokenSource.Dispose();
                 TokenSource = new CancellationTokenSource();
                 CancellationToken = TokenSource.Token;
-                
+
                 if (Settings.DiscordRPC)
                 {
                     App.DiscordClient.SetPresence(new DiscordRPC.RichPresence()
@@ -233,7 +258,7 @@ namespace FloatTool
                         Timestamps = DiscordRPC.Timestamps.Now,
                     });
                 }
-                
+
                 new Thread(() =>
                 {
                     Logger.Log.Info("Starting up search");
@@ -274,13 +299,13 @@ namespace FloatTool
                         response.EnsureSuccessStatusCode();
                         string responseBody = response.Content.ReadAsStringAsync().Result;
                         dynamic r = JsonConvert.DeserializeObject(responseBody);
-                        
+
                         if (r["success"] == false)
                         {
                             Logger.Log.Error($"Steam haven't returned a success code\n{r.ToString()}");
                             throw new ValueUnavailableException("Steam server returned error.");
                         }
-                        
+
                         SetStatus("m_GettingFloats");
 
                         Dictionary<Task<decimal>, float> floatTasks = new();

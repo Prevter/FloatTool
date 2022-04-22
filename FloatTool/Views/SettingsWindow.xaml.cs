@@ -60,7 +60,7 @@ namespace FloatTool
 
         private void GetThemes_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start(new ProcessStartInfo { FileName = "https://prevter.github.io/FloatTool-GUI/themes.html", UseShellExecute = true });
+            Process.Start(new ProcessStartInfo { FileName = "https://prevter.github.io/FloatTool/themes.html", UseShellExecute = true });
         }
     }
 }

@@ -63,8 +63,9 @@ namespace FloatTool
         public bool DiscordRPC
         {
             get { return Settings.DiscordRPC; }
-            set { 
-                Settings.DiscordRPC = value; 
+            set
+            {
+                Settings.DiscordRPC = value;
                 OnPropertyChanged();
 
                 // Re-enabling does not work. Probably bug in the library
@@ -151,16 +152,26 @@ namespace FloatTool
         public static List<string> Languages { get; private set; }
         public static List<string> LanguageCodes = new()
         {
-            "cs", "da",
-            "de", "en",
-            "es", "fi",
-            "fr", "ga",
-            "he", "hr",
-            "it", "ja",
-            "ka", "lt",
-            "lv", "pl",
-            "pt", "uk",
-            "tr", "ru",
+            "cs",
+            "da",
+            "de",
+            "en",
+            "es",
+            "fi",
+            "fr",
+            "ga",
+            "he",
+            "hr",
+            "it",
+            "ja",
+            "ka",
+            "lt",
+            "lv",
+            "pl",
+            "pt",
+            "uk",
+            "tr",
+            "ru",
             "zh",
         };
 
@@ -168,7 +179,7 @@ namespace FloatTool
         {
             Settings = settings;
             Languages = new List<string>();
-            
+
             foreach (var lang in LanguageCodes)
             {
                 var locale = new System.Globalization.CultureInfo(lang);

@@ -117,9 +117,10 @@ namespace FloatTool
         public void MigrateFromOldVersion()
         {
             // This method cleans up old settings and data            
-            List<string> oldFiles = new() { 
-                "debug.log", 
-                "FloatCore.dll", 
+            List<string> oldFiles = new()
+            {
+                "debug.log",
+                "FloatCore.dll",
                 "FloatTool.exe.config",
                 "FloatTool.pdb",
                 "itemData.json",
@@ -127,10 +128,10 @@ namespace FloatTool
                 "Updater.exe"
             };
 
-            foreach(var file in oldFiles)
+            foreach (var file in oldFiles)
             {
                 if (File.Exists(file))
-                    File.Delete(file);                    
+                    File.Delete(file);
             }
 
             App.CleanOldFiles();
@@ -138,8 +139,8 @@ namespace FloatTool
             // Finally save that we migrated to not do this every time
             Migrated = true;
             Save();
-        }        
-        
+        }
+
         public override string ToString()
         {
             return $"{{LanguageCode: {LanguageCode}, Currency: {Currency}, ThemeURI: {ThemeURI}, Sound: {Sound}, CheckForUpdates: {CheckForUpdates}, DiscordRPC: {DiscordRPC}, ThreadCount: {ThreadCount}, HaveUpdated: {Migrated}}}";

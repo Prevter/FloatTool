@@ -97,7 +97,7 @@ namespace FloatTool
 
                 File.Delete("update.zip");
                 ProcessStartInfo startInfo = new()
-                {                
+                {
                     FileName = "FloatTool.exe",
                     Arguments = "--clean-update"
                 };
