@@ -37,6 +37,7 @@
     <v:String x:Key="m_CombinationsPerSecond">kombinacije/drugi</v:String>
     <v:String x:Key="m_CheckedCombinations">Provjerene kombinacije:</v:String>
     <v:String x:Key="m_SkinNotFound">Greška! Ova koža ne može imati ovu kvalitetu.</v:String>
+    <v:String x:Key="m_CantBeStattrak">Greška! Ova koža ne može biti StatTrak.</v:String>
 
     <!-- Settings window -->
     <v:String x:Key="m_Settings">Postavke</v:String>

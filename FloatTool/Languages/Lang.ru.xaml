@@ -37,6 +37,7 @@
     <v:String x:Key="m_CombinationsPerSecond">комбинаций/секунду</v:String>
     <v:String x:Key="m_CheckedCombinations">Проверено комбинаций:</v:String>
     <v:String x:Key="m_SkinNotFound">Ошибка! Этот скин не может иметь это качество.</v:String>
+    <v:String x:Key="m_CantBeStattrak">Ошибка! Этот скин не может быть StatTrak.</v:String>
 
     <!-- Settings window -->
     <v:String x:Key="m_Settings">Настройки</v:String>

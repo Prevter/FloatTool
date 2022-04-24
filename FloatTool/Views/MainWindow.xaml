@@ -102,7 +102,7 @@
                 <ComboBox IsEnabled="{Binding CanEditSettings}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,30,0,0" Width="130" Height="24" SelectedValue="{Binding SkinName}" ItemsSource="{Binding SkinList, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" IsSynchronizedWithCurrentItem="True" Style="{DynamicResource DarkComboBox}"/>
                 <ComboBox IsEnabled="{Binding CanEditSettings}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="280,30,0,0" Width="130" Height="24" ItemsSource="{Binding QualityList}" SelectedValue="{Binding SkinQuality}" IsSynchronizedWithCurrentItem="True" Style="{DynamicResource DarkComboBox}"/>
 
-                <ToggleButton IsEnabled="{Binding CanEditSettings}" Content="StatTrack:" FontSize="13" Width="107" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,60,0,0" IsChecked="{Binding IsStatTrack}" Style="{DynamicResource SwitchButton}"/>
+                <ToggleButton IsEnabled="{Binding CanEditSettings}" Content="StatTrak:" FontSize="13" Width="107" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,60,0,0" IsChecked="{Binding IsStatTrak}" Style="{DynamicResource SwitchButton}"/>
 
                 <Grid Margin="129,61,0,0" Height="24" Width="281" VerticalAlignment="Top" HorizontalAlignment="Left">
                     <Grid.ColumnDefinitions>
@@ -122,7 +122,7 @@
 
                     <TextBox Text="{Binding FullSkinName, UpdateSourceTrigger=PropertyChanged}" FontSize="16" IsReadOnly="True" Grid.ColumnSpan="2" Style="{DynamicResource BigTextBox}"/>
 
-                    <Viewbox ToolTip="{DynamicResource m_SkinNotFound}" ToolTipService.InitialShowDelay="100" Visibility="{Binding IsError}" Margin="4" VerticalAlignment="Center" Width="16">
+                    <Viewbox x:Name="ErrorTooltip" ToolTipService.InitialShowDelay="100" Visibility="{Binding IsError}" Margin="4" VerticalAlignment="Center" Width="16">
                         <Viewbox.Resources>
                             <Style BasedOn="{StaticResource TooltipStyle}" TargetType="{x:Type ToolTip}"/>
                         </Viewbox.Resources>

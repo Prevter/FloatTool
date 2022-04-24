@@ -82,9 +82,10 @@ namespace FloatTool
             {
                 for (int i = 0; i < options.Outcomes.Length; ++i)
                 {
-                    decimal resultFloat = Math.Round(Calculations.Craft(
-                        resultList, options.Outcomes[i].MinFloat, options.Outcomes[i].FloatRange)
-                        , 14);
+                    decimal resultFloat = Calculations.Craft(
+                        resultList, options.Outcomes[i].MinFloat, options.Outcomes[i].FloatRange
+                    );
+
                     bool gotResult = false;
 
                     switch (options.SearchMode)
@@ -93,19 +94,22 @@ namespace FloatTool
                             gotResult = Math.Abs(resultFloat - options.SearchTarget) < options.TargetPrecision;
                             break;
                         case SearchMode.Less:
-                            decimal neededLess = decimal.Parse(options.SearchFilter, CultureInfo.InvariantCulture);
-                            gotResult = resultFloat < neededLess;
+                            gotResult = resultFloat < options.SearchTarget;
                             break;
                         case SearchMode.Greater:
-                            decimal neededGreater = decimal.Parse(options.SearchFilter, CultureInfo.InvariantCulture);
-                            gotResult = resultFloat > neededGreater;
+                            gotResult = resultFloat > options.SearchTarget;
                             break;
                     }
 
                     if (gotResult)
                     {
-                        if (options.SearchMode == SearchMode.Equal) { }
-
+                        if (options.SearchMode != SearchMode.Equal ||
+                             Math.Round(resultFloat, 14, MidpointRounding.AwayFromZero)
+                             .ToString(CultureInfo.InvariantCulture)
+                             .StartsWith(options.SearchFilter, StringComparison.Ordinal))
+                        {
+                            InputSkin[] result = (InputSkin[])resultList.Clone();
+                        }
                     }
                 }
 

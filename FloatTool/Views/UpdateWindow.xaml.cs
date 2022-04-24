@@ -80,11 +80,12 @@ namespace FloatTool
                 foreach (string file in Directory.GetFiles(folderPath, "*", SearchOption.TopDirectoryOnly))
                 {
                     Logger.Log.Debug($"Checking {file}");
-                    if (App.IsFileLocked(file))
+                    if (App.IsFileLocked(file) || file.EndsWith(".json"))
                     {
                         File.Move(file, file + ".old");
                     }
                 }
+
                 // Extract the archive
                 try
                 {

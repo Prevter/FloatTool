@@ -64,11 +64,12 @@ namespace FloatTool
 
         public MainWindow()
         {
+            InitializeComponent();
             using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("FloatTool.Assets.Found.wav"))
             {
                 CombinationFoundSound = new SoundPlayer(stream);
                 CombinationFoundSound.Load();
-            }          
+            }
 
             Settings = new Settings();
             Settings.TryLoad();
@@ -79,13 +80,12 @@ namespace FloatTool
             App.SelectCulture(Settings.LanguageCode);
             App.SelectTheme(Settings.ThemeURI);
 
-            ViewModel = new MainViewModel("Nova", "Predator", "Field-Tested", "0.25000000032783", 100, 20, Settings);
+            ViewModel = new MainViewModel("Nova", "Predator", "Field-Tested", "0.25000000032783", 100, 20, Settings, ErrorTooltip);
 
             MaxHeight = SystemParameters.WorkArea.Height + 12;
             MaxWidth = SystemParameters.WorkArea.Width + 12;
 
             UpdateRichPresence();
-            InitializeComponent();
             DataContext = ViewModel;
 
             Logger.Log.Info("Main window started");
@@ -174,6 +174,7 @@ namespace FloatTool
                     decimal resultFloat = Calculations.Craft(
                         resultList, options.Outcomes[i].MinFloat, options.Outcomes[i].FloatRange
                     );
+
                     bool gotResult = false;
 
                     switch (options.SearchMode)
@@ -196,9 +197,10 @@ namespace FloatTool
                             .ToString(CultureInfo.InvariantCulture)
                             .StartsWith(options.SearchFilter, StringComparison.Ordinal))
                         {
+                            InputSkin[] result = (InputSkin[])resultList.Clone();
                             float price = 0;
                             float ieeesum = 0;
-                            foreach (var skin in resultList)
+                            foreach (var skin in result)
                             {
                                 price += skin.Price;
                                 ieeesum += (float)skin.WearValue;
@@ -212,14 +214,14 @@ namespace FloatTool
                                 {
                                     Wear = resultFloat,
                                     OutcomeName = options.Outcomes[i].Name,
-                                    Inputs = resultList,
-                                    Currency = resultList[0].SkinCurrency,
+                                    Inputs = result,
+                                    Currency = result[0].SkinCurrency,
                                     Price = price,
                                     IEEE754 = ((double)ieee).ToString("0.000000000000000", CultureInfo.InvariantCulture)
                                 });
                                 if (Settings.Sound)
                                     CombinationFoundSound.Play();
-                            }), DispatcherPriority.ContextIdle);
+                            }));
                         }
                     }
                 }

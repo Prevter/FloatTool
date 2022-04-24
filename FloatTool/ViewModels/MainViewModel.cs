@@ -25,6 +25,7 @@ using System.IO;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace FloatTool
 {
@@ -48,7 +49,7 @@ namespace FloatTool
     {
         private bool isSearching;
 
-        private bool isStatTrack;
+        private bool isStatTrak;
         private string weaponName;
         private string skinName;
         private string skinQuality;
@@ -61,6 +62,7 @@ namespace FloatTool
         private int skinCount;
         private int skinSkipCount;
         private Visibility isError = Visibility.Hidden;
+        private Viewbox errorMessage;
         private bool sort;
         private bool sortDescending;
         private float progressPercentage;
@@ -110,10 +112,9 @@ namespace FloatTool
 
         private List<string> skinList = new();
         private List<string> outcomeList = new();
-
         public Dictionary<Tuple<float, float>, List<Skin>> Outcomes = new();
 
-        public List<SkinModel> SkinsDatabase;
+        public List<Collection> SkinsDatabase;
         public Settings Settings { get; set; }
 
         #region Properties
@@ -251,12 +252,12 @@ namespace FloatTool
             }
         }
 
-        public bool IsStatTrack
+        public bool IsStatTrak
         {
-            get { return isStatTrack; }
+            get { return isStatTrak; }
             set
             {
-                isStatTrack = value;
+                isStatTrak = value;
                 UpdateFullSkinName();
                 OnPropertyChanged();
             }
@@ -303,17 +304,32 @@ namespace FloatTool
 
         private void UpdateFullSkinName()
         {
-            FullSkinName = $"{(IsStatTrack ? "StatTrak™ " : "")}{WeaponName} | {SkinName} ({SkinQuality})";
+            FullSkinName = $"{(IsStatTrak ? "StatTrak™ " : "")}{WeaponName} | {SkinName} ({SkinQuality})";
 
             if (SkinsDatabase is null)
                 return;
 
-            foreach (var skin in SkinsDatabase)
+            foreach (var collection in SkinsDatabase)
             {
-                if (skin.Name == $"{WeaponName} | {SkinName}")
+                foreach (var skin in collection.Skins)
                 {
-                    IsError = skin.IsQualityInRange(SkinQuality) ? Visibility.Hidden : Visibility.Visible;
-                    break;
+                    if (skin.Name == $"{WeaponName} | {SkinName}")
+                    {
+                        if (!skin.IsQualityInRange(SkinQuality))
+                        {
+                            errorMessage.SetResourceReference(Viewbox.ToolTipProperty, "m_SkinNotFound");
+                            IsError = Visibility.Visible;
+                        }
+                        else if (IsStatTrak && !collection.CanBeStattrak)
+                        {
+                            errorMessage.SetResourceReference(Viewbox.ToolTipProperty, "m_CantBeStattrak");
+                            IsError = Visibility.Visible;
+                        }
+                        else
+                        {
+                            IsError = Visibility.Hidden;
+                        }
+                    }
                 }
             }
         }
@@ -369,6 +385,26 @@ namespace FloatTool
             FloatRange = $"{minCraftWear.ToString("0.00", CultureInfo.InvariantCulture)} - {maxCraftWear.ToString("0.00", CultureInfo.InvariantCulture)}";
         }
 
+        public Collection FindSkinCollection(string skin)
+        {
+            if (SkinsDatabase is null)
+                return null;
+
+            foreach (var collection in SkinsDatabase)
+            {
+                foreach (var skinObj in collection.Skins)
+                {
+                    if (skinObj.Name == skin)
+                    {
+                        return collection;
+                    }
+
+                }
+            }
+
+            return null;
+        }
+
         public void UpdateOutcomes()
         {
             if (SkinsDatabase is null)
@@ -377,21 +413,24 @@ namespace FloatTool
             string skin = $"{WeaponName} | {SkinName}";
             var skinlist = new List<SkinModel>();
 
-            for (int i = 0; i < SkinsDatabase.Count; i++)
+            var collection = FindSkinCollection(skin);
+            if (collection is null)
+                return;
+
+            foreach (var skinObj in collection.Skins)
             {
-                if (SkinsDatabase[i].Name == skin)
+                if (skinObj.Name == skin)
                 {
-                    for (int j = 0; j < SkinsDatabase.Count; j++)
+                    foreach (var otherSkinModel in collection.Skins)
                     {
-                        if (SkinsDatabase[i].Case == SkinsDatabase[j].Case &&
-                            SkinsDatabase[j].Rarity == Skin.NextRarity(SkinsDatabase[i].Rarity))
+                        if (Skin.NextRarity(skinObj.Rarity) == otherSkinModel.Rarity)
                         {
-                            skinlist.Add(SkinsDatabase[j]);
+                            skinlist.Add(otherSkinModel);
                         }
                     }
+                    break;
                 }
             }
-
             Outcomes.Clear();
 
             for (int i = 0; i < skinlist.Count; i++)
@@ -427,18 +466,24 @@ namespace FloatTool
 
             var list = new List<string>();
 
-            for (int i = 0; i < SkinsDatabase.Count; ++i)
+            foreach (var collection in SkinsDatabase)
             {
-                if (SkinsDatabase[i].Name.StartsWith(WeaponName) && !SkinsDatabase[i].IsHighest)
-                    list.Add(SkinsDatabase[i].Name.Split(" | ")[1]);
+                foreach (var skin in collection.Skins)
+                {
+                    if (skin.Name.Contains(WeaponName) && collection.HighestRarity != skin.Rarity)
+                    {
+                        list.Add(skin.Name.Split(" | ")[1]);
+                    }
+                }
             }
 
             list.Sort();
             SkinList = list;
         }
 
-        public MainViewModel(string weapon, string skin, string quality, string filter, int count, int skip, Settings settings)
+        public MainViewModel(string weapon, string skin, string quality, string filter, int count, int skip, Settings settings, Viewbox errorTooltip)
         {
+            errorMessage = errorTooltip;
             Settings = settings;
             WeaponName = weapon;
             SkinName = skin;
@@ -458,7 +503,7 @@ namespace FloatTool
             using (StreamReader reader = new(stream))
             {
                 var jsonFileContent = reader.ReadToEnd();
-                SkinsDatabase = JsonConvert.DeserializeObject<List<SkinModel>>(jsonFileContent)!;
+                SkinsDatabase = JsonConvert.DeserializeObject<List<Collection>>(jsonFileContent)!;
             }
 
             UpdateSkinList();

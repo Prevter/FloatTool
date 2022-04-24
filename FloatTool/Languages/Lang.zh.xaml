@@ -37,6 +37,7 @@
     <v:String x:Key="m_CombinationsPerSecond">组合/秒</v:String>
     <v:String x:Key="m_CheckedCombinations">检查组合：</v:String>
     <v:String x:Key="m_SkinNotFound">错误！这种皮肤不可能有这种品质。</v:String>
+    <v:String x:Key="m_CantBeStattrak">错误！这个皮肤不能是 StatTrak。</v:String>
 
     <!-- Settings window -->
     <v:String x:Key="m_Settings">设置</v:String>

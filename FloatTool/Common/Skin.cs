@@ -15,20 +15,27 @@
 - along with this program. If not, see <https://www.gnu.org/licenses/>.
 */
 
+using System.Collections.Generic;
 using System.Globalization;
 using System.Windows;
 
 namespace FloatTool
 {
+    public class Collection
+    {
+        public string Name { get; set; }
+        public bool CanBeStattrak { get; set; }
+        public string LowestRarity { get; set; }
+        public string HighestRarity { get; set; }
+        public List<SkinModel> Skins { get; set; }
+    }
+
     public class SkinModel
     {
         public string Name { get; set; }
         public string Rarity { get; set; }
         public float MinWear { get; set; }
         public float MaxWear { get; set; }
-        public string Case { get; set; }
-        public bool IsLowest { get; set; }
-        public bool IsHighest { get; set; }
 
         public bool IsQualityInRange(string quality)
         {

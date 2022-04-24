@@ -25,7 +25,8 @@ This is probably the fastest app you can find, as it can achieve more than 10,00
 
 ### Prerequisites
 
-* .NET 6.0 Runtime. _You can download it here: [https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime)_
+* Windows
+* .NET 6.0 Desktop Runtime. _You can download it here: [https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime)_
 
 ### Installation
 
@@ -38,6 +39,27 @@ This is probably the fastest app you can find, as it can achieve more than 10,00
 _Please see [Documentation](https://prevter.github.io/FloatTool/tutorial.html) for complete tutorial in usage_
 
 ## Version History
+* 1.0.1
+    * Fixed critical bug that showed incorrect combinations.
+    * Added new collections:
+        - The Dreams & Nightmares Case
+        - The 2021 Train Collection
+        - The 2021 Mirage Collection
+        - The 2021 Dust 2 Collection
+        - The 2021 Vertigo Collection
+        - Operation Riptide Case
+        - Snakebite Case
+        - The Ancient Collection
+        - The Control Collection
+        - The Havoc Collection
+        - Operation Broken Fang Case
+    * You can now see if a skin can't be StatTrak
+    * Fixed update issue (this update will contain two zips: first is a patch for 1.0.0 and second is release)
+* **1.0.0**
+    * App was rewritten from ground up.
+    * Now using WPF as UI framework.
+    * Code have been optimized.
+    * More changes can be seen in commit history
 * 0.8.0
     * Speed have been increased x3 times
     * Fixed some minor bugs
