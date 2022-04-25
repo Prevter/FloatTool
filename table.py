@@ -2,11 +2,11 @@ import json
 from bs4 import BeautifulSoup as bs
 
 class Collection:
-    def __init__(self, name, lowestRarity, skins):
+    def __init__(self, name, lowestRarity, skins, link):
         self.name = name
         self.lowestRarity = lowestRarity
         self.skins = skins
-        
+        self.link = link
     def __repr__(self):
         return f"{self.name}"
 
@@ -81,7 +81,7 @@ if __name__ == "__main__":
             for skin in i["Skins"]:
                 if skin["Rarity"] != i["LowestRarity"]:
                     skins.append(Skin(skin["Name"], skin["Rarity"], skin["MinWear"], skin["MaxWear"]))
-            collections.append(Collection(i["Name"], i["LowestRarity"], skins))
+            collections.append(Collection(i["Name"], i["LowestRarity"], skins, i["Link"]))
 
     rowCounter = 0
     root = ""
@@ -112,7 +112,7 @@ if __name__ == "__main__":
                 </div>
                 <hr>
                 <p>
-                    <a class="btn btn-secondary" href="https://csgostash.com/case/308/Operation-Broken-Fang-Case" role="button">Details &raquo;</a>
+                    <a class="btn btn-secondary" href="{collection.link}" role="button">Details &raquo;</a>
                 </p>
             </div>
             """
@@ -122,5 +122,5 @@ if __name__ == "__main__":
             if rowCounter % 3 == 0:
                 root += '<hr>\n</div>\n<hr>\n'
 
-        soup = bs(root, features="html.parser")            #make BeautifulSoup
-        h.write(soup.prettify())   #prettify the html
+        soup = bs(root, features="html.parser")
+        h.write(soup.prettify())
