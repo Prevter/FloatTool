@@ -57,7 +57,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="tutorial.html">Tutorial</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="faq.html">FAQ</a>
                 </li>
                 <li class="nav-item">
@@ -66,7 +66,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="utils.html">Utilities</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="themes.html">Themes</a>
                 </li>
             </ul>
@@ -74,75 +74,66 @@
     </nav>
 
     <main role="main" style="background-color: #1F1F1F; color: #fff;">
-      <div class="jumbotron" style="background-color: #2C2C2C; color: #fff;">
+        <div class="jumbotron" style="background-color: #2C2C2C; color: #fff;">
+            <div class="container">
+                <h1 class="display-4">
+                    Themes
+                </h1>
+                <p>Open settings, click on "Open themes folder" button and move files to that place.<br>
+                Then reopen settings window and select your new theme.</p>
+                <a class="btn btn-secondary btn-sm" href="/themebuilder" role="button">Try theme builder&raquo;</a>
+            </div>
+        </div>
         <div class="container">
-          <h1 class="display-4">
-            FAQ
-          </h1>
-          <h3>Answers to most asked questions</h3>
-          <hr>
-          <div class="row">
-            <div class="col-md-4">
-              <h5>Can I get banned on Steam?</h5>
-              <p>No. The app only parses open data and doesn't require your account.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Amoled theme</h4>
+                    <p>For enjoyers of dark.</p>
+                    <p><img class="w-100" src="Themes/Amoled.png"></p>
+                    <a class="btn btn-success btn-sm" href="Themes/Amoled.xaml" role="button" download>Get
+                        &raquo;</a>
+                </div>
+                <div class="col-md-6">
+                    <h4>Haven't found theme you like?</h4>
+                    <p>Try making your own using theme builder.</p>
+                    <a class="btn btn-secondary btn-sm" href="/themebuilder" role="button">Try theme builder&raquo;</a>
+                </div>
             </div>
-            <div class="col-md-4">
-              <h5>How does it work?</h5>
-              <p>
-                First step is to get wear values from Steam marketplace. Next step is to try all combinations possible.
-                <br>The main reason why this works is this formula:
-                <p>OutputWear = (MaximumOutcomeWear - MinimumOutcomeWear) * AverageInputWear + MinimumOutcomeWear</p>
-                So everything you need to know is average float of your ingridients, and wear range of skin you want to craft.
-              </p>
-            </div>
-            <div class="col-md-4">
-              <h5>I haven't got the float I wanted</h5>
-              <p>
-                The main thing you have to know is that floats in CS:GO can't be very precise.
-                They use IEEE754 32-bit floating point format.
-                <br>
-                This means there is a limit of how precise floats can be. But also makes some round floats like 0.25, 0.5, 0.75 and more.
-                <p>For the reason why it sometimes misscalculates those numbers is simple:<br>
-                  No one actually knows how CS:GO makes floats from contracts. We only know the math. 
-                  So there are always would be a chance to get a float that is not exactly what you want.
-                </p>
-              </p>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-5">
-            <blockquote class="blockquote">
-              <p class="mb-0">Haven't found an answer?</p>
-            </blockquote>
-            <p>
-              You can ask a question on our <a href="https://discord.gg/9kNFJcK5ea">Discord server</a>, or in my DM: Prevter#4666.
-            </p>
-          </div>
-        </div>
-      </div>
-      <hr>
+        <hr>
     </main>
 
-    <footer class="container">
-      <p>&copy; Prevter 2022</p>
-  </footer>
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content bg-dark">
+                <div class="modal-header" style="border: 0px;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"
+                            style="color: #fff;">&times;</span></button>
+                </div>
+                <div class="modal-body" style="padding: 0px;">
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/@popperjs/core@2"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"></script>
-  <script>
-      $(document).on('click', 'img', function () {
-          $('#modal .modal-body').html($(this).clone()[0]);
-          $('#modal').modal('show');
-      })
-  </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container">
+        <p>&copy; Prevter 2022</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).on('click', 'img', function () {
+            $('#modal .modal-body').html($(this).clone()[0]);
+            $('#modal').modal('show');
+        })
+    </script>
 
 </body>
 

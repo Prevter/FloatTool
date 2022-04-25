@@ -1,232 +1,290 @@
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="apple-touch-icon" sizes="57x57" href="Icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="Icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="Icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="Icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="Icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="Icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="Icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="Icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="Icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="Icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="Icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="Icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="Icons/favicon-16x16.png">
-    <link rel="manifest" href="Icons/manifest.json">
-    <meta name="msapplication-TileColor" content="#F24941">
-    <meta name="msapplication-TileImage" content="Icons/ms-icon-144x144.png">
+    <meta name="description" content="Utility to create any float for your CS:GO skins.">
+    <meta name="author" content="Prevter">
+    <link rel="apple-touch-icon" sizes="180x180" href="/Icons/apple-touch-icon.png?v=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Icons/favicon-32x32.png?v=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Icons/favicon-16x16.png?v=1">
+    <link rel="manifest" href="/Icons/site.webmanifest?v=1">
+    <link rel="mask-icon" href="/Icons/safari-pinned-tab.svg?v=1" color="#5bbad5">
+    <link rel="shortcut icon" href="/Icons/favicon.ico?v=1">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/Icons/browserconfig.xml?v=1">
+    <meta name="theme-color" content="#ffffff">
     <meta name="theme-color" content="#F24941">
     <title>FloatTool</title>
     <meta name="title" content="FloatTool">
-    <meta name="description" content="Инструмент для создания контрактов в CS:GO с красивыми флоатами">
+    <meta name="description" content="Utility to create any float for your CS:GO skins.">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nemeshio.github.io/FloatTool-GUI">
+    <meta property="og:url" content="https://prevter.github.io/FloatTool">
     <meta property="og:title" content="FloatTool">
-    <meta property="og:description" content="Инструмент для создания контрактов в CS:GO с красивыми флоатами">
+    <meta property="og:description" content="Utility to create any float for your CS:GO skins.">
     <meta property="og:image" content="Screens/App.png">
 
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://nemeshio.github.io/FloatTool-GUI">
+    <meta property="twitter:url" content="https://prevter.github.io/FloatTool">
     <meta property="twitter:title" content="FloatTool">
-    <meta property="twitter:description" content="Инструмент для создания контрактов в CS:GO с красивыми флоатами">
+    <meta property="twitter:description" content="Utility to create any float for your CS:GO skins.">
     <meta property="twitter:image" content="Screens/App.png">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <link href="jumbotron.css" rel="stylesheet">
-  </head>
+</head>
 
-  <body style="background-color: #2C2C2C; color: #fff;">
+<body style="background-color: #2C2C2C; color: #fff;">
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #252525;">
-      <a class="navbar-brand" href="#">
-          <img src="Icons/favicon-96x96.png" width="30" height="30" class="d-inline-block align-top" alt="">
-          FloatTool
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <a class="navbar-brand" href="/">
+            <img src="Icons/Icon.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            FloatTool
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Главная <span class="sr-only">(Текущая)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="tutorial.html">Как использовать?</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="faq.html">FAQ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="table.html">Таблица коллекций</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="utils.html">Утилиты<span class="sr-only">(Текущая)</span></a>
-          </li>
-        </ul>
-      </div>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tutorial.html">Tutorial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faq.html">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="table.html">Drop table</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="utils.html">Utilities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="themes.html">Themes</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <main role="main" style="background-color: #1F1F1F; color: #fff;">
-      <div class="jumbotron" style="background-color: #1f1f1f; color: #fff;">
-        <div class="row">
-            <div class="col-md-5">
-                <h2 class="text-center">Калькулятор комбинации</h2>
-                <br>
-                <p>
-                    <div class="input-group">
-                        <input type="text" id="inputWear1" class="form-control" style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;" onkeyup="updateComb()" value="0.37281695008278" aria-describedby="basic-addon1">
-                        <input type="text" id="inputWear2" class="form-control" style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;" onkeyup="updateComb()" value="0.18730621039867" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group">
-                        <input type="text" id="inputWear3" class="form-control" style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;" onkeyup="updateComb()" value="0.37467443943024" aria-describedby="basic-addon1">
-                        <input type="text" id="inputWear4" class="form-control" style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;" onkeyup="updateComb()" value="0.21176333725452" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group">
-                        <input type="text" id="inputWear5" class="form-control" style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;" onkeyup="updateComb()" value="0.26935261487961" aria-describedby="basic-addon1">
-                        <input type="text" id="inputWear6" class="form-control" style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;" onkeyup="updateComb()" value="0.28138923645020" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group">
-                        <input type="text" id="inputWear7" class="form-control" style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;" onkeyup="updateComb()" value="0.25680887699127" aria-describedby="basic-addon1">
-                        <input type="text" id="inputWear8" class="form-control" style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;" onkeyup="updateComb()" value="0.19612702727318" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="text" id="inputWear9" class="form-control" style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;" onkeyup="updateComb()" value="0.26228189468384" aria-describedby="basic-addon1">
-                        <input type="text" id="inputWear10" class="form-control" style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;" onkeyup="updateComb()" value="0.15504698455334" aria-describedby="basic-addon1">
-                    </div>
-
-
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="basic-addon1" style="background-color: #2f2f2f; color: #ccc; border: 1px solid #4c4c4c;">Мин. флоат</span>
+        <div class="jumbotron" style="background-color: #2C2C2C; color: #fff;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <h2 class="text-center">Combination calculator</h2>
+                        <br>
+                        <p>
+                        <div class="input-group">
+                            <input type="text" id="inputWear1" class="form-control"
+                                style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;"
+                                onkeyup="updateComb()" value="0.37281695008278" aria-describedby="basic-addon1">
+                            <input type="text" id="inputWear2" class="form-control"
+                                style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;"
+                                onkeyup="updateComb()" value="0.18730621039867" aria-describedby="basic-addon1">
                         </div>
-                        <input type="text" id="minWear" class="form-control" style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;" onkeyup="updateComb()" placeholder="0.06" value="0.06" aria-describedby="basic-addon1">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1" style="background-color: #2f2f2f; color: #ccc; border: 1px solid #4c4c4c;">Макс. флоат</span>
+                        <div class="input-group">
+                            <input type="text" id="inputWear3" class="form-control"
+                                style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;"
+                                onkeyup="updateComb()" value="0.37467443943024" aria-describedby="basic-addon1">
+                            <input type="text" id="inputWear4" class="form-control"
+                                style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;"
+                                onkeyup="updateComb()" value="0.21176333725452" aria-describedby="basic-addon1">
                         </div>
-                        <input type="text" id="maxWear" class="form-control" style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;" onkeyup="updateComb()" placeholder="0.80" value="0.80" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1" style="background-color: #2f2f2f; color: #ccc; border: 1px solid #4c4c4c;">Желаемый флоат</span>
+                        <div class="input-group">
+                            <input type="text" id="inputWear5" class="form-control"
+                                style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;"
+                                onkeyup="updateComb()" value="0.26935261487961" aria-describedby="basic-addon1">
+                            <input type="text" id="inputWear6" class="form-control"
+                                style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;"
+                                onkeyup="updateComb()" value="0.28138923645020" aria-describedby="basic-addon1">
                         </div>
-                        <input type="text" id="desireWear" class="form-control" style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;"  placeholder="0.25" value="0.25" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1" style="background-color: #2f2f2f; color: #ccc; border: 1px solid #4c4c4c;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Текущий средний флоат&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <div class="input-group">
+                            <input type="text" id="inputWear7" class="form-control"
+                                style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;"
+                                onkeyup="updateComb()" value="0.25680887699127" aria-describedby="basic-addon1">
+                            <input type="text" id="inputWear8" class="form-control"
+                                style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;"
+                                onkeyup="updateComb()" value="0.19612702727318" aria-describedby="basic-addon1">
                         </div>
-                        <input type="text" id="avgWear" class="form-control" readonly="" style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;" value="0.2567567527294159" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1" style="background-color: #2f2f2f; color: #ccc; border: 1px solid #4c4c4c;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Текущий результат&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <div class="input-group mb-3">
+                            <input type="text" id="inputWear9" class="form-control"
+                                style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;"
+                                onkeyup="updateComb()" value="0.26228189468384" aria-describedby="basic-addon1">
+                            <input type="text" id="inputWear10" class="form-control"
+                                style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;"
+                                onkeyup="updateComb()" value="0.15504698455334" aria-describedby="basic-addon1">
                         </div>
-                        <input type="text" id="currWear" class="form-control" readonly="" style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;" value="0.25" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1" style="background-color: #2f2f2f; color: #ccc; border: 1px solid #4c4c4c;">Необходимый средний флоат</span>
+
+
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"
+                                    style="background-color: #2f2f2f; color: #ccc; border: 1px solid #4c4c4c;">Min.
+                                    wear</span>
+                            </div>
+                            <input type="text" id="minWear" class="form-control"
+                                style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;"
+                                onkeyup="updateComb()" placeholder="0.06" value="0.06" aria-describedby="basic-addon1">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"
+                                    style="background-color: #2f2f2f; color: #ccc; border: 1px solid #4c4c4c;">Max.
+                                    wear</span>
+                            </div>
+                            <input type="text" id="maxWear" class="form-control"
+                                style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;"
+                                onkeyup="updateComb()" placeholder="0.80" value="0.80" aria-describedby="basic-addon1">
                         </div>
-                        <input type="text" id="needAvgWear" class="form-control" readonly="" style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;" value="0.25675675396755115" aria-describedby="basic-addon1">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"
+                                    style="background-color: #2f2f2f; color: #ccc; border: 1px solid #4c4c4c;">Desired
+                                    wear</span>
+                            </div>
+                            <input type="text" id="desireWear" class="form-control"
+                                style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;"
+                                placeholder="0.25" value="0.25" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"
+                                    style="background-color: #2f2f2f; color: #ccc; border: 1px solid #4c4c4c;">Current
+                                    average wear&nbsp;</span>
+                            </div>
+                            <input type="text" id="avgWear" class="form-control" readonly=""
+                                style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;"
+                                value="0.2567567527294159" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"
+                                    style="background-color: #2f2f2f; color: #ccc; border: 1px solid #4c4c4c;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Current
+                                    result&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            </div>
+                            <input type="text" id="currWear" class="form-control" readonly=""
+                                style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;" value="0.25"
+                                aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"
+                                    style="background-color: #2f2f2f; color: #ccc; border: 1px solid #4c4c4c;">Needed
+                                    average wear</span>
+                            </div>
+                            <input type="text" id="needAvgWear" class="form-control" readonly=""
+                                style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;"
+                                value="0.25675675396755115" aria-describedby="basic-addon1">
+                        </div>
+                        </p>
+
+                        <script>
+                            let wearInputs = [
+                                document.getElementById("inputWear1"),
+                                document.getElementById("inputWear2"),
+                                document.getElementById("inputWear3"),
+                                document.getElementById("inputWear4"),
+                                document.getElementById("inputWear5"),
+                                document.getElementById("inputWear6"),
+                                document.getElementById("inputWear7"),
+                                document.getElementById("inputWear8"),
+                                document.getElementById("inputWear9"),
+                                document.getElementById("inputWear10")
+                            ];
+
+                            let minWear = document.getElementById("minWear");
+                            let maxWear = document.getElementById("maxWear");
+                            let desireWear = document.getElementById("desireWear");
+
+                            let avgWear = document.getElementById("avgWear");
+                            let currWear = document.getElementById("currWear");
+                            let needAvgWear = document.getElementById("needAvgWear");
+
+                            function getIEEE754(x) {
+                                var float = new Float32Array(1);
+                                float[0] = x;
+                                return float[0];
+                            }
+
+                            function updateComb() {
+                                var max = getIEEE754(maxWear.value);
+                                var min = getIEEE754(minWear.value);
+                                var desired = getIEEE754(desireWear.value);
+
+                                var sum = 0;
+                                for (var i = 0; i < 10; i++) {
+                                    sum += parseFloat(wearInputs[i].value);
+                                }
+                                sum = getIEEE754(sum / 10);
+                                avgWear.value = sum;
+
+                                currWear.value = getIEEE754((max - min) * sum + min);
+
+                                needAvgWear.value = (desired - min) / (max - min);
+                            }
+                        </script>
                     </div>
-                </p>
-
-                <script>
-                    let wearInputs = [
-                        document.getElementById("inputWear1"),
-                        document.getElementById("inputWear2"),
-                        document.getElementById("inputWear3"),
-                        document.getElementById("inputWear4"),
-                        document.getElementById("inputWear5"),
-                        document.getElementById("inputWear6"),
-                        document.getElementById("inputWear7"),
-                        document.getElementById("inputWear8"),
-                        document.getElementById("inputWear9"),
-                        document.getElementById("inputWear10")
-                    ];
-
-                    let minWear = document.getElementById("minWear");
-                    let maxWear = document.getElementById("maxWear");
-                    let desireWear = document.getElementById("desireWear");
-
-                    let avgWear = document.getElementById("avgWear");
-                    let currWear = document.getElementById("currWear");
-                    let needAvgWear = document.getElementById("needAvgWear");
-
-                    function getIEEE754(x){
-                        var float = new Float32Array(1);
-                        float[0] = x;
-                        return float[0];
-                    }
-
-                    function updateComb(){
-                        var max = getIEEE754(maxWear.value);
-                        var min = getIEEE754(minWear.value);
-                        var desired = getIEEE754(desireWear.value);
-
-                        var sum = 0;
-                        for(var i = 0; i < 10; i++){
-                            sum += parseFloat(wearInputs[i].value);
-                        }
-                        sum = getIEEE754(sum/10);
-                        avgWear.value = sum;
-
-                        currWear.value = getIEEE754((max - min) * sum + min);
-
-                        needAvgWear.value = (desired - min) / (max - min);
-                    }
-                </script>
+                    <div class="col-md-5">
+                        <h2 class="text-center">IEEE754 Converter</h2>
+                        <br>
+                        <p>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"
+                                    style="background-color: #2f2f2f; color: #ccc; border: 1px solid #4c4c4c;">&#8239;&#8239;&#8239;&#8239;&#8239;Float&#8239;&#8239;&#8239;&#8239;</span>
+                            </div>
+                            <input type="text" id="inputWear" class="form-control"
+                                style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;"
+                                onkeyup="updateIEEE(this.value)" placeholder="0.250000000" value="0.250000000"
+                                aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"
+                                    style="background-color: #2f2f2f; color: #ccc; border: 1px solid #4c4c4c;">IEEE754</span>
+                            </div>
+                            <input type="text" id="outputWear" class="form-control" readonly=""
+                                placeholder="0.250000000"
+                                style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;" value="0.25"
+                                aria-describedby="basic-addon1">
+                        </div>
+                        </p>
+                        <script>
+                            function updateIEEE(val) {
+                                var float = new Float32Array(1);
+                                float[0] = val;
+                                document.getElementById("outputWear").value = float[0];
+                            }
+                        </script>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-5">
-                <h2 class="text-center">Калькулятор IEEE754</h2>
-                <br>
-                <p>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="basic-addon1" style="background-color: #2f2f2f; color: #ccc; border: 1px solid #4c4c4c;">&#8239;&#8239;Флоат&#8239;&#8239;</span>
-                        </div>
-                        <input type="text" id="inputWear" class="form-control" style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;" onkeyup="updateIEEE(this.value)" placeholder="0.250000000" value="0.250000000" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="basic-addon1" style="background-color: #2f2f2f; color: #ccc; border: 1px solid #4c4c4c;">IEEE754</span>
-                        </div>
-                        <input type="text" id="outputWear" class="form-control" readonly="" placeholder="0.250000000" style="background-color: #242424; color: #fff; border: 1px solid #4c4c4c;" value="0.25" aria-describedby="basic-addon1">
-                    </div>
-                </p>
-                <script>
-                    function updateIEEE(val) {
-                        var float = new Float32Array(1);
-                        float[0] = val;
-                        document.getElementById("outputWear").value = float[0];
-                    }
-                </script>
-            </div>
-        </div> 
-      </div>
+        </div>
     </main>
 
     <footer class="container">
-      <p>&copy; Prevter 2021</p>
+        <p>&copy; Prevter 2022</p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
     <script>
-        $(document).on('click','img',function(){
-	        $('#modal .modal-body').html($(this).clone()[0]);
+        $(document).on('click', 'img', function () {
+            $('#modal .modal-body').html($(this).clone()[0]);
             $('#modal').modal('show');
         })
-      </script>
+    </script>
 
-    </body>
+</body>
+
 </html>
