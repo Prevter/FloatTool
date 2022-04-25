@@ -8,31 +8,36 @@ body {
 }
 
 .progress-bar:last-child {
-  border: none; 
+  border: none;
 }
 
-@font-face { 
-  font-family: 'Stratum2-Bold'; 
-  src: url('fonts/stratum2-bold-webfont.eot'); 
-  src: url('fonts/stratum2-bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/stratum2-bold-webfont.woff') format('woff'), url('fonts/stratum2-bold-webfont.ttf') format('truetype'), url('fonts/stratum2-bold-webfont.svg#webfont') format('svg'); 
+@font-face {
+  font-family: 'Stratum2-Bold';
+  src: url('fonts/stratum2-bold-webfont.eot');
+  src: url('fonts/stratum2-bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/stratum2-bold-webfont.woff') format('woff'), url('fonts/stratum2-bold-webfont.ttf') format('truetype'), url('fonts/stratum2-bold-webfont.svg#webfont') format('svg');
 }
 
-.navbar-brand, .display-4 {
+.navbar-brand,
+.display-4 {
   font-family: 'Stratum2-Bold';
 }
 
 div.bg-dangers {
-  background-color: #eb4b4b!important;
+  background-color: #eb4b4b !important;
 }
+
 div.bg-success {
-  background-color: #d32ce6!important;
+  background-color: #d32ce6 !important;
 }
+
 div.bg-primary {
-  background-color: #8847ff!important;
+  background-color: #8847ff !important;
 }
+
 div.bg-info {
-  background-color: #4b69ff!important;
+  background-color: #4b69ff !important;
 }
+
 div.bg-secondary {
-  background-color: #5080b8!important;
+  background-color: #5080b8 !important;
 }
