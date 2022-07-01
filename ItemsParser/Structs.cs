@@ -1,6 +1,10 @@
-﻿public class Collection
+﻿using Newtonsoft.Json;
+
+public class Collection
 {
     public string Name { get; set; }
+    //[JsonIgnore]
+    public string Link { get; set; }
     public bool CanBeStattrak { get; set; }
     public string LowestRarity { get; set; }
     public string HighestRarity { get; set; }

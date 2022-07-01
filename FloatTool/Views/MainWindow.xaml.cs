@@ -125,6 +125,11 @@ namespace FloatTool
                 case Key.F2:
                     Process.Start(new ProcessStartInfo { FileName = "https://prevter.github.io/FloatTool/utils.html", UseShellExecute = true });
                     break;
+                case Key.F3:
+                    string skin = $"{ViewModel.WeaponName} | {ViewModel.SkinName}";
+                    var collection = ViewModel.FindSkinCollection(skin);
+                    Process.Start(new ProcessStartInfo { FileName = collection.Link, UseShellExecute = true });
+                    break;
             }
         }
 

@@ -27,6 +27,7 @@ namespace FloatTool
         public bool CanBeStattrak { get; set; }
         public string LowestRarity { get; set; }
         public string HighestRarity { get; set; }
+        public string Link { get; set; }
         public List<SkinModel> Skins { get; set; }
     }
 

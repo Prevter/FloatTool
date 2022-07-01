@@ -50,6 +50,7 @@ static async Task<Collection> LoadCollection(string url)
 {
     Collection collection = new();
     collection.CanBeStattrak = false;
+    collection.Link = url;
     string collectionName = Utils.ReplaceInvalidChars(url.Split('/').Last());
     string collectionPath = $"cache/{collectionName}";
 
