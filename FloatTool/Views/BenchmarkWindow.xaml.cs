@@ -30,7 +30,7 @@ namespace FloatTool
     {
         public BenchmarkViewModel Context;
         public Settings Settings;
-        public static long PassedCombinations;
+        private static long PassedCombinations;
 
         public BenchmarkWindow(Settings settings)
         {
@@ -40,14 +40,14 @@ namespace FloatTool
 
             if (settings.DiscordRPC)
             {
-                App.DiscordClient.SetPresence(new DiscordRPC.RichPresence()
+                AppHelpers.DiscordClient.SetPresence(new DiscordRPC.RichPresence()
                 {
                     Details = Application.Current.Resources["m_Benchmarking"] as string,
                     State = $"CPU: {Context.CurrentCpuName}",
                     Assets = new DiscordRPC.Assets()
                     {
                         LargeImageKey = "icon_new",
-                        LargeImageText = $"FloatTool {App.VersionCode}",
+                        LargeImageText = $"FloatTool {AppHelpers.VersionCode}",
                     },
                 });
             }
@@ -103,12 +103,12 @@ namespace FloatTool
 
                     if (gotResult)
                     {
-                        if (options.SearchMode != SearchMode.Equal ||
-                             Math.Round(resultFloat, 14, MidpointRounding.AwayFromZero)
-                             .ToString(CultureInfo.InvariantCulture)
-                             .StartsWith(options.SearchFilter, StringComparison.Ordinal))
+                        if (Math.Round(resultFloat, 14, MidpointRounding.AwayFromZero)
+                            .ToString(CultureInfo.InvariantCulture)
+                            .StartsWith(options.SearchFilter, StringComparison.Ordinal)
+                            || options.SearchMode != SearchMode.Equal)
                         {
-                            InputSkin[] result = (InputSkin[])resultList.Clone();
+                            _ = (InputSkin[])resultList.Clone();
                         }
                     }
                 }

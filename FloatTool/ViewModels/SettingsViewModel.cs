@@ -31,7 +31,7 @@ namespace FloatTool
             get
             {
                 var tmpList = new List<string>();
-                foreach (var theme in App.ThemesFound)
+                foreach (var theme in AppHelpers.ThemesFound)
                     tmpList.Add(Path.GetFileNameWithoutExtension(theme));
                 return tmpList;
             }
@@ -39,10 +39,10 @@ namespace FloatTool
 
         public int ThemeIndex
         {
-            get { return App.ThemesFound.IndexOf(Settings.ThemeURI); }
+            get { return AppHelpers.ThemesFound.IndexOf(Settings.ThemeURI); }
             set
             {
-                Settings.ThemeURI = App.ThemesFound[value];
+                Settings.ThemeURI = AppHelpers.ThemesFound[value];
                 App.SelectTheme(Settings.ThemeURI);
                 OnPropertyChanged();
             }
@@ -70,9 +70,9 @@ namespace FloatTool
 
                 // Re-enabling does not work. Probably bug in the library
                 if (!value)
-                    App.DiscordClient.Deinitialize();
+                    AppHelpers.DiscordClient.Deinitialize();
                 else
-                    App.DiscordClient.Initialize();
+                    AppHelpers.DiscordClient.Initialize();
             }
         }
 
@@ -150,7 +150,7 @@ namespace FloatTool
         }
 
         public static List<string> Languages { get; private set; }
-        public static List<string> LanguageCodes = new()
+        public readonly static List<string> LanguageCodes = new()
         {
             "cs",
             "da",

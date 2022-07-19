@@ -56,8 +56,8 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <StackPanel Margin="10" VerticalAlignment="Stretch">
-                    <TextBlock Text="{Binding name}" FontSize="18" Foreground="{DynamicResource SettingsMainForeground}"/>
-                    <TextBlock Text="{Binding tag_name}" FontSize="16" Foreground="{DynamicResource SettingsMainForeground}"/>
+                    <TextBlock Text="{Binding Name}" FontSize="18" Foreground="{DynamicResource SettingsMainForeground}"/>
+                    <TextBlock Text="{Binding TagName}" FontSize="16" Foreground="{DynamicResource SettingsMainForeground}"/>
                 </StackPanel>
 
                 <Border CornerRadius="4" Grid.Row="1" Margin="10,0" Background="{DynamicResource ResultsBackground}">

@@ -38,14 +38,16 @@ namespace FloatTool
             };
             patternLayout.ActivateOptions();
 
-            RollingFileAppender roller = new();
-            roller.AppendToFile = false;
-            roller.File = @"logs/log.txt";
-            roller.Layout = patternLayout;
-            roller.MaxSizeRollBackups = 5;
-            roller.MaximumFileSize = "250KB";
-            roller.RollingStyle = RollingFileAppender.RollingMode.Size;
-            roller.StaticLogFileName = true;
+            RollingFileAppender roller = new()
+            {
+                AppendToFile = false,
+                File = @"logs/log.txt",
+                Layout = patternLayout,
+                MaxSizeRollBackups = 5,
+                MaximumFileSize = "250KB",
+                RollingStyle = RollingFileAppender.RollingMode.Size,
+                StaticLogFileName = true
+            };
             roller.ActivateOptions();
             hierarchy.Root.AddAppender(roller);
 

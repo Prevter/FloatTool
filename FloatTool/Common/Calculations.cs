@@ -24,24 +24,22 @@ namespace FloatTool
     {
         static public decimal Craft(InputSkin[] ingridients, decimal minFloat, decimal floatRange)
         {
-            decimal avgFloat = ingridients[0].WearValue;
-            avgFloat += ingridients[1].WearValue;
-            avgFloat += ingridients[2].WearValue;
-            avgFloat += ingridients[3].WearValue;
-            avgFloat += ingridients[4].WearValue;
-            avgFloat += ingridients[5].WearValue;
-            avgFloat += ingridients[6].WearValue;
-            avgFloat += ingridients[7].WearValue;
-            avgFloat += ingridients[8].WearValue;
-            avgFloat += ingridients[9].WearValue;
-            return floatRange * avgFloat + minFloat;
+            return floatRange * (ingridients[0].WearValue
+                + ingridients[1].WearValue
+                + ingridients[2].WearValue
+                + ingridients[3].WearValue
+                + ingridients[4].WearValue
+                + ingridients[5].WearValue
+                + ingridients[6].WearValue
+                + ingridients[7].WearValue
+                + ingridients[8].WearValue
+                + ingridients[9].WearValue) + minFloat;
         }
 
         static public bool NextCombination(int[] num, int n)
         {
             bool finished = false;
-            bool changed = false;
-            for (int i = 9; !finished && !changed; --i)
+            for (int i = 9; !finished; --i)
             {
                 if (num[i] < n + i)
                 {
@@ -53,7 +51,7 @@ namespace FloatTool
                 }
                 finished = i == 0;
             }
-            return changed;
+            return false;
         }
 
         static public IEnumerable<InputSkin[]> Combinations(InputSkin[] elem, int start, int skip)

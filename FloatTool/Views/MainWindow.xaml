@@ -189,6 +189,41 @@
                         <TextBlock Text="{DynamicResource m_Skip}" Grid.Row="2" FontSize="13" Margin="0,0,10,0" VerticalAlignment="Top" Foreground="{DynamicResource MainForeground}"/>
 
                         <TextBox Text="{Binding SearchFilter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Height="22" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Stretch" IsEnabled="{Binding CanEditSettings}" Style="{DynamicResource MainTextBoxStyle}"/>
+                        <Viewbox x:Name="ErrorTooltipFloat" ToolTipService.InitialShowDelay="100" Visibility="{Binding IsErrorFloat}" Grid.Column="1" Margin="4" VerticalAlignment="Center" Width="16" HorizontalAlignment="Right">
+                            <Viewbox.Resources>
+                                <Style BasedOn="{StaticResource TooltipStyle}" TargetType="{x:Type ToolTip}"/>
+                            </Viewbox.Resources>
+                            <Canvas Width="44.165245" Height="40.250214">
+                                <Canvas.RenderTransform>
+                                    <TranslateTransform X="0" Y="0"/>
+                                </Canvas.RenderTransform>
+                                <Canvas.Resources>
+                                    <Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="57.155586" Canvas.Top="13.096207" Width="47.146343" Height="50.046219" Fill="#000000" x:Key="rect1089"/>
+                                </Canvas.Resources>
+                                <Canvas>
+                                    <Canvas.RenderTransform>
+                                        <TranslateTransform X="-5.2323218" Y="-2.1803265"/>
+                                    </Canvas.RenderTransform>
+                                    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Fill="#FFFFFF00" StrokeThickness="2" Stroke="#FF000000" StrokeMiterLimit="4.1" StrokeLineJoin="Miter">
+                                        <Path.Data>
+                                            <PathGeometry Figures="m 27.314946 3.1803265 c 2.937508 0 22.450958 33.7982875 20.982203 36.3422445 C 46.828395 42.066528 7.8014947 42.066527 6.3327405 39.52257 4.8639862 36.978613 24.377437 3.1803264 27.314946 3.1803265 Z" FillRule="NonZero"/>
+                                        </Path.Data>
+                                    </Path>
+                                    <Canvas Opacity="1">
+                                        <Canvas.RenderTransform>
+                                            <TranslateTransform X="-36.993461" Y="-6.705847"/>
+                                        </Canvas.RenderTransform>
+                                        <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Fill="#FF000000">
+                                            <Path.Data>
+                                                <PathGeometry Figures="m 64.046006 43.655103 q -1.185334 -0.148166 -1.629835 -1.333501 -0.07408 -0.296333 -0.07408 -0.66675 v -0.22225 q 0 -1.185335 0.963084 -1.778002 1.037168 -0.592667 2.000252 0 0.963084 0.592667 0.963084 1.778002 v 0.22225 q 0 0.889001 -0.666751 1.481668 -0.592667 0.592667 -1.555751 0.518583 z m 0.22225 -7.112006 q -1.185334 -0.07408 -1.778001 -1.111251 -0.148167 -0.518583 -0.148167 -0.889 V 20.911501 q 0 -1.111251 0.963084 -1.703919 1.037168 -0.592667 2.000252 0 0.963084 0.592668 0.963084 1.703919 v 13.631345 q 0 0.889 -0.518584 1.407584 -0.592667 0.592667 -1.481668 0.592667 z" FillRule="NonZero"/>
+                                            </Path.Data>
+                                        </Path>
+                                    </Canvas>
+                                </Canvas>
+                            </Canvas>
+                        </Viewbox>
+
+
                         <theme:NumericBox IsEnabled="{Binding CanEditSettings}" Height="22" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" FontSize="14" Minimum="11" Maximum="100" Value="{Binding SkinCount}"/>
                         <theme:NumericBox IsEnabled="{Binding CanEditSettings}" Height="22" Grid.Row="2" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" FontSize="14" Minimum="0" Maximum="10000" Value="{Binding SkinSkipCount}"/>
                     </Grid>

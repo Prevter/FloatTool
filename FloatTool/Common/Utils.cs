@@ -18,6 +18,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -37,7 +38,7 @@ namespace FloatTool
 
     public static class Utils
     {
-        public static string API_URL = "https://prevterapi.000webhostapp.com";
+        public const string API_URL = "https://prevterapi.000webhostapp.com";
         private static readonly HttpClient Client = new();
 
         public static async Task<decimal> GetWearFromInspectURL(string inspect_url)
@@ -80,7 +81,7 @@ namespace FloatTool
             Regex regex = new(@"( \S{1,}-Core)");
             MatchCollection matches = regex.Matches(cpu);
             if (matches.Count > 0)
-                foreach (Match match in matches)
+                foreach (Match match in matches.Cast<Match>())
                     cpu = cpu.Replace(match.Value, "");
 
             var index = cpu.IndexOf('@');
@@ -95,20 +96,28 @@ namespace FloatTool
         }
     }
 
-#pragma warning disable IDE1006 // Naming Styles
     public class UpdateResult
     {
         public class Asset
         {
-            public string browser_download_url { get; set; }
+            [JsonRequired]
+            [JsonProperty("browser_download_url")]
+            public string BrowserDownloadUrl { get; set; }
         }
 
-        public string tag_name { get; set; }
-        public string name { get; set; }
-        public List<Asset> assets { get; set; }
-        public string body { get; set; }
+        [JsonRequired]
+        [JsonProperty("tag_name")]
+        public string TagName { get; set; }
+        [JsonRequired]
+        [JsonProperty("name")]
+        public string Name { get; set; }
+        [JsonRequired]
+        [JsonProperty("assets")]
+        public List<Asset> Assets { get; set; }
+        [JsonRequired]
+        [JsonProperty("body")]
+        public string Body { get; set; }
     }
-#pragma warning restore IDE1006 // Naming Styles
 
     public class CraftSearchSetup
     {

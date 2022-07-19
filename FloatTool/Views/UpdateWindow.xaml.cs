@@ -39,7 +39,7 @@ namespace FloatTool
             DataContext = updateResult;
             UpdateResult = updateResult;
             Markdown.Xaml.Markdown engine = new();
-            var document = engine.Transform(updateResult.body);
+            var document = engine.Transform(updateResult.Body);
             document.FontFamily = new System.Windows.Media.FontFamily("Segoe UI");
             document.FontSize = 14;
             ChangelogTextBox.Document = document;
@@ -65,7 +65,7 @@ namespace FloatTool
 
         private void UpdateButtonClick(object sender, RoutedEventArgs e)
         {
-            string archiveUrl = UpdateResult.assets[0].browser_download_url;
+            string archiveUrl = UpdateResult.Assets[0].BrowserDownloadUrl;
             Task.Run(async () =>
             {
                 // Download the archive

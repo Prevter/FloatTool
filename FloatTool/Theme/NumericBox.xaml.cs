@@ -72,13 +72,13 @@ namespace FloatTool.Theme
                 SetValue(ValueProperty, Maximum);
         }
 
-        private void cmdUp_Click(object sender, RoutedEventArgs e)
+        private void Up_Click(object sender, RoutedEventArgs e)
         {
             Value++;
             ValueChanged?.Invoke(this, Value);
         }
 
-        private void cmdDown_Click(object sender, RoutedEventArgs e)
+        private void Down_Click(object sender, RoutedEventArgs e)
         {
             Value--;
             ValueChanged?.Invoke(this, Value);
@@ -118,7 +118,7 @@ namespace FloatTool.Theme
             e.Handled = !IsTextAllowed(e.Text);
         }
 
-        private void inputBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void InputBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (!IsTextAllowed(inputBox.Text) || string.IsNullOrEmpty(inputBox.Text))
                 return;

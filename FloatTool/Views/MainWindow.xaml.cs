@@ -40,23 +40,23 @@ namespace FloatTool
     {
         public MainViewModel ViewModel;
         public Settings Settings;
-        public static long PassedCombinations;
-        public static List<Task> ThreadPool;
-        public static CancellationTokenSource TokenSource = new();
+        private static long PassedCombinations;
+        private static List<Task> ThreadPool;
+        private static CancellationTokenSource TokenSource = new();
         public CancellationToken CancellationToken;
-        public static SoundPlayer CombinationFoundSound;
+        private static SoundPlayer CombinationFoundSound;
 
         public void UpdateRichPresence()
         {
             if (Settings.DiscordRPC)
             {
-                App.DiscordClient.SetPresence(new DiscordRPC.RichPresence()
+                AppHelpers.DiscordClient.SetPresence(new DiscordRPC.RichPresence()
                 {
                     Details = Application.Current.Resources["m_SettingUpSearch"] as string,
                     Assets = new DiscordRPC.Assets()
                     {
                         LargeImageKey = "icon_new",
-                        LargeImageText = $"FloatTool {App.VersionCode}",
+                        LargeImageText = $"FloatTool {AppHelpers.VersionCode}",
                     }
                 });
             }
@@ -80,7 +80,7 @@ namespace FloatTool
             App.SelectCulture(Settings.LanguageCode);
             App.SelectTheme(Settings.ThemeURI);
 
-            ViewModel = new MainViewModel("Nova", "Predator", "Field-Tested", "0.25000000032783", 100, 20, Settings, ErrorTooltip);
+            ViewModel = new MainViewModel("Nova", "Predator", "Field-Tested", "0.250000000", 100, 20, Settings, ErrorTooltip, ErrorTooltipFloat);
 
             MaxHeight = SystemParameters.WorkArea.Height + 12;
             MaxWidth = SystemParameters.WorkArea.Width + 12;
@@ -95,13 +95,15 @@ namespace FloatTool
                 Task.Factory.StartNew(() =>
                 {
                     var update = Utils.CheckForUpdates().Result;
-                    if (update != null && update.tag_name != App.VersionCode)
+                    if (update != null && update.TagName != AppHelpers.VersionCode)
                     {
                         Dispatcher.Invoke(new Action(() =>
                         {
                             Logger.Log.Info("New version available");
-                            var updateWindow = new UpdateWindow(update, Settings);
-                            updateWindow.Owner = this;
+                            var updateWindow = new UpdateWindow(update, Settings)
+                            {
+                                Owner = this
+                            };
                             updateWindow.ShowDialog();
                         }));
                     }
@@ -129,6 +131,13 @@ namespace FloatTool
                     string skin = $"{ViewModel.WeaponName} | {ViewModel.SkinName}";
                     var collection = ViewModel.FindSkinCollection(skin);
                     Process.Start(new ProcessStartInfo { FileName = collection.Link, UseShellExecute = true });
+                    break;
+                case Key.F4:
+                    var link = $"https://steamcommunity.com/market/listings/730/{ViewModel.FullSkinName}";
+                    Process.Start(new ProcessStartInfo { FileName = link, UseShellExecute = true });
+                    break;
+                case Key.F12:
+                    // TODO: Create a dev tools window
                     break;
             }
         }
@@ -197,10 +206,10 @@ namespace FloatTool
 
                     if (gotResult)
                     {
-                        if (options.SearchMode != SearchMode.Equal ||
-                            Math.Round(resultFloat, 14, MidpointRounding.AwayFromZero)
+                        if (Math.Round(resultFloat, 14, MidpointRounding.AwayFromZero)
                             .ToString(CultureInfo.InvariantCulture)
-                            .StartsWith(options.SearchFilter, StringComparison.Ordinal))
+                            .StartsWith(options.SearchFilter, StringComparison.Ordinal)
+                            || options.SearchMode != SearchMode.Equal)
                         {
                             InputSkin[] result = (InputSkin[])resultList.Clone();
                             float price = 0;
@@ -253,14 +262,14 @@ namespace FloatTool
 
                 if (Settings.DiscordRPC)
                 {
-                    App.DiscordClient.SetPresence(new DiscordRPC.RichPresence()
+                    AppHelpers.DiscordClient.SetPresence(new DiscordRPC.RichPresence()
                     {
-                        Details = Application.Current.Resources["m_Searching"] as string,
+                        Details = $"{Application.Current.Resources["m_Searching"] as string} {ViewModel.FullSkinName}",
                         State = $"{Application.Current.Resources["m_DesiredFloat"] as string} {ViewModel.SearchFilter}",
                         Assets = new DiscordRPC.Assets()
                         {
                             LargeImageKey = "icon_new",
-                            LargeImageText = $"FloatTool {App.VersionCode}",
+                            LargeImageText = $"FloatTool {AppHelpers.VersionCode}",
                         },
                         Timestamps = DiscordRPC.Timestamps.Now,
                     });
@@ -298,7 +307,7 @@ namespace FloatTool
                     ConcurrentBag<InputSkin> inputSkinBag = new();
                     List<Task> downloaderTasks = new();
 
-                    string url = $"https://steamcommunity.com/market/listings/730/{ ViewModel.FullSkinName }/render/?count={ ViewModel.SkinCount }&start={ ViewModel.SkinSkipCount }&currency={ (int)Settings.Currency }";
+                    string url = $"https://steamcommunity.com/market/listings/730/{ViewModel.FullSkinName}/render/?count={ViewModel.SkinCount}&start={ViewModel.SkinSkipCount}&currency={(int)Settings.Currency}";
                     try
                     {
                         using var client = new HttpClient();

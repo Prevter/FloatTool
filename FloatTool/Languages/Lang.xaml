@@ -38,7 +38,9 @@
     <v:String x:Key="m_CheckedCombinations">Checked combinations:</v:String>
     <v:String x:Key="m_SkinNotFound">Error! This skin can not have this quality.</v:String>
     <v:String x:Key="m_CantBeStattrak">Error! This skin can not be StatTrak.</v:String>
-
+    <v:String x:Key="m_OutOfBounds">Warning! You've entered value that is out of bounds for current settings.</v:String>
+    <v:String x:Key="m_CantParse">Error! Can't convert this to number.</v:String>
+    
     <!-- Settings window -->
     <v:String x:Key="m_Settings">Settings</v:String>
     <v:String x:Key="m_Language">Language:</v:String>

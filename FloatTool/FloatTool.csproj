@@ -9,7 +9,7 @@
     <PackageProjectUrl>https://prevter.github.io/FloatTool</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Prevter/FloatTool</RepositoryUrl>
     <NeutralLanguage>en</NeutralLanguage>
-    <AssemblyVersion>1.0.2</AssemblyVersion>
+    <AssemblyVersion>1.1.0</AssemblyVersion>
     <FileVersion>$(AssemblyVersion)</FileVersion>
     <ApplicationIcon>Assets\Icon.ico</ApplicationIcon>
     <DebugType>embedded</DebugType>

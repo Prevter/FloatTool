@@ -15,6 +15,7 @@
 - along with this program. If not, see <https://www.gnu.org/licenses/>.
 */
 
+using DiscordRPC;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -28,17 +29,12 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
 using System.Windows.Threading;
-using DiscordRPC;
 
 namespace FloatTool
 {
     public partial class App : Application
     {
         public static ResourceDictionary ThemeDictionary { get; set; }
-        public static List<string> ThemesFound { get; set; }
-        public static FileSystemWatcher Watcher;
-        public static DiscordRpcClient DiscordClient;
-        public static string VersionCode;
 
         public static void SelectCulture(string culture)
         {
@@ -94,17 +90,17 @@ namespace FloatTool
         public App()
         {
             var version = Assembly.GetExecutingAssembly().GetName().Version;
-            VersionCode = $"v.{version.Major}.{version.Minor}.{version.Build}";
+            AppHelpers.VersionCode = $"v.{version.Major}.{version.Minor}.{version.Build}";
 
             Logger.Initialize();
-            Logger.Log.Info($"FloatTool {VersionCode}");
+            Logger.Log.Info($"FloatTool {AppHelpers.VersionCode}");
             Logger.Log.Info($"OS: {Environment.OSVersion}");
             Logger.Log.Info($"Memory: {Environment.WorkingSet / 1024 / 1024} MB");
             Logger.Log.Info($"Culture: {Thread.CurrentThread.CurrentCulture}");
 
             AppDomain.CurrentDomain.UnhandledException += (s, e) =>
                 Logger.Log.Error("Unhandled exception", (Exception)e.ExceptionObject);
-            
+
 
             DispatcherUnhandledException += (s, e) =>
             {
@@ -117,7 +113,7 @@ namespace FloatTool
                 Logger.Log.Error("Unobserved Unhandled Exception", e.Exception);
                 e.SetObserved();
             };
-            
+
             //Get path for %AppData%
             var appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             var subfolder = "floattool";
@@ -131,8 +127,8 @@ namespace FloatTool
             var themesFolder = Path.Combine(combined, "themes");
             if (!Directory.Exists(themesFolder))
                 Directory.CreateDirectory(themesFolder);
-
-            ThemesFound = new List<string>
+            AppHelpers.
+                        ThemesFound = new List<string>
             {
                 "/Theme/Schemes/Dark.xaml", "/Theme/Schemes/Light.xaml"
             };
@@ -141,25 +137,26 @@ namespace FloatTool
             FileInfo[] Files = d.GetFiles("*.xaml");
 
             foreach (FileInfo file in Files)
-                ThemesFound.Add(file.FullName);
+                AppHelpers.ThemesFound.Add(file.FullName);
+            AppHelpers.
+                        Watcher = new FileSystemWatcher
+                        {
+                            Path = themesFolder,
+                            NotifyFilter = NotifyFilters.LastAccess | NotifyFilters.LastWrite | NotifyFilters.FileName | NotifyFilters.DirectoryName
+                        };
+            AppHelpers.
 
-            Watcher = new FileSystemWatcher
-            {
-                Path = themesFolder,
-                NotifyFilter = NotifyFilters.LastAccess | NotifyFilters.LastWrite | NotifyFilters.FileName | NotifyFilters.DirectoryName
-            };
-
-            // Add event handlers.
-            Watcher.Changed += new FileSystemEventHandler(OnChanged);
-            Watcher.Created += new FileSystemEventHandler(OnChanged);
-            Watcher.Deleted += new FileSystemEventHandler(OnChanged);
-            Watcher.Renamed += new RenamedEventHandler(OnRenamed);
-
-            Watcher.EnableRaisingEvents = true;
+                        // Add event handlers.
+                        Watcher.Changed += new FileSystemEventHandler(OnChanged);
+            AppHelpers.Watcher.Created += new FileSystemEventHandler(OnChanged);
+            AppHelpers.Watcher.Deleted += new FileSystemEventHandler(OnChanged);
+            AppHelpers.Watcher.Renamed += new RenamedEventHandler(OnRenamed);
+            AppHelpers.
+                        Watcher.EnableRaisingEvents = true;
             Trace.WriteLine("Started FileWatcher");
-
-            DiscordClient = new DiscordRpcClient("734042978246721537");
-            DiscordClient.Initialize();
+            AppHelpers.
+                        DiscordClient = new DiscordRpcClient("734042978246721537");
+            AppHelpers.DiscordClient.Initialize();
         }
 
         public static void CleanOldFiles()
@@ -212,10 +209,10 @@ namespace FloatTool
             switch (e.ChangeType)
             {
                 case WatcherChangeTypes.Deleted:
-                    ThemesFound.Remove(e.FullPath);
+                    AppHelpers.ThemesFound.Remove(e.FullPath);
                     break;
                 case WatcherChangeTypes.Created:
-                    ThemesFound.Add(e.FullPath);
+                    AppHelpers.ThemesFound.Add(e.FullPath);
                     break;
                 case WatcherChangeTypes.Changed:
                     if (ThemeDictionary.Source.IsAbsoluteUri && e.FullPath == ThemeDictionary.Source.LocalPath)
@@ -237,7 +234,7 @@ namespace FloatTool
         private void OnRenamed(object source, RenamedEventArgs e)
         {
             Trace.WriteLine($"File: {e.OldFullPath} renamed to {e.FullPath}");
-            ThemesFound[ThemesFound.IndexOf(e.OldFullPath)] = e.FullPath;
+            AppHelpers.ThemesFound[AppHelpers.ThemesFound.IndexOf(e.OldFullPath)] = e.FullPath;
         }
     }
 

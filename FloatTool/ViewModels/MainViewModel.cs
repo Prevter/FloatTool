@@ -62,7 +62,9 @@ namespace FloatTool
         private int skinCount;
         private int skinSkipCount;
         private Visibility isError = Visibility.Hidden;
-        private Viewbox errorMessage;
+        private Visibility isErrorFloat = Visibility.Hidden;
+        private readonly Viewbox errorMessage;
+        private readonly Viewbox errorMessageFloat;
         private bool sort;
         private bool sortDescending;
         private float progressPercentage;
@@ -82,6 +84,7 @@ namespace FloatTool
             "AK-47",
             "AUG",
             "AWP",
+            "CZ75-Auto",
             "Desert Eagle",
             "Dual Berettas",
             "FAMAS",
@@ -100,13 +103,17 @@ namespace FloatTool
             "Negev",
             "Nova",
             "P2000",
+            "P250",
             "P90",
             "PP-Bizon",
             "R8 Revolver",
-            "Sawed-Off",
             "SCAR-20",
             "SG 553",
+            "SSG 08",
+            "Sawed-Off",
+            "Tec-9",
             "UMP-45",
+            "USP-S",
             "XM1014"
         };
 
@@ -123,7 +130,7 @@ namespace FloatTool
 
         public static string CurrentVersionSubtitle
         {
-            get { return $"{App.VersionCode} by Prevter"; }
+            get { return $"{AppHelpers.VersionCode} by Prevter"; }
         }
 
         public int ThreadCount
@@ -150,6 +157,7 @@ namespace FloatTool
             set
             {
                 searchFilter = value;
+                UpdateFloatError();
                 OnPropertyChanged();
             }
         }
@@ -291,6 +299,12 @@ namespace FloatTool
             set { isError = value; OnPropertyChanged(); }
         }
 
+        public Visibility IsErrorFloat
+        {
+            get { return isErrorFloat; }
+            set { isErrorFloat = value; OnPropertyChanged(); }
+        }
+
         public float ProgressPercentage
         {
             get { return progressPercentage; }
@@ -382,8 +396,32 @@ namespace FloatTool
                 }
             }
 
+            UpdateFloatError();
             FloatRange = $"{minCraftWear.ToString("0.00", CultureInfo.InvariantCulture)} - {maxCraftWear.ToString("0.00", CultureInfo.InvariantCulture)}";
         }
+
+        public void UpdateFloatError()
+        {
+            try
+            {
+                decimal searchFilterDecimal = decimal.Parse(searchFilter, CultureInfo.InvariantCulture);
+                if (searchFilterDecimal < (decimal)minCraftWear || searchFilterDecimal > (decimal)maxCraftWear)
+                {
+                    IsErrorFloat = Visibility.Visible;
+                    errorMessageFloat.SetResourceReference(Viewbox.ToolTipProperty, "m_OutOfBounds");
+                }
+                else
+                {
+                    IsErrorFloat = Visibility.Hidden;
+                }
+            }
+            catch (FormatException)
+            {
+                IsErrorFloat = Visibility.Visible;
+                errorMessageFloat.SetResourceReference(Viewbox.ToolTipProperty, "m_CantParse");
+            }
+        }
+
 
         public Collection FindSkinCollection(string skin)
         {
@@ -481,9 +519,10 @@ namespace FloatTool
             SkinList = list;
         }
 
-        public MainViewModel(string weapon, string skin, string quality, string filter, int count, int skip, Settings settings, Viewbox errorTooltip)
+        public MainViewModel(string weapon, string skin, string quality, string filter, int count, int skip, Settings settings, Viewbox errorTooltip, Viewbox errorTooltipFloat)
         {
             errorMessage = errorTooltip;
+            errorMessageFloat = errorTooltipFloat;
             Settings = settings;
             WeaponName = weapon;
             SkinName = skin;

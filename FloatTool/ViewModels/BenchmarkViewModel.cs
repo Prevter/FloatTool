@@ -120,9 +120,9 @@ namespace FloatTool
         public string CurrentCpuName { get; set; }
         public static string CurrentCpuThreads { get { return $"{Environment.ProcessorCount}"; } }
 
-        public static LinearGradientBrush AMDBrush = Application.Current.Resources["AmdBenchmarkFill"] as LinearGradientBrush;
-        public static LinearGradientBrush IntelBrush = Application.Current.Resources["IntelBenchmarkFill"] as LinearGradientBrush;
-        public static LinearGradientBrush CurrentBrush = Application.Current.Resources["CurrentBenchmarkFill"] as LinearGradientBrush;
+        private static readonly LinearGradientBrush AMDBrush = Application.Current.Resources["AmdBenchmarkFill"] as LinearGradientBrush;
+        private static readonly LinearGradientBrush IntelBrush = Application.Current.Resources["IntelBenchmarkFill"] as LinearGradientBrush;
+        private static readonly LinearGradientBrush CurrentBrush = Application.Current.Resources["CurrentBenchmarkFill"] as LinearGradientBrush;
 
         private bool isUpdatingEnabled;
         public bool IsUpdatingEnabled
@@ -204,7 +204,7 @@ namespace FloatTool
                 BenchmarkResults.Clear();
                 using var client = new HttpClient();
                 var version = Assembly.GetExecutingAssembly().GetName().Version;
-                client.DefaultRequestHeaders.Add("User-Agent", $"FloatTool/{App.VersionCode}");
+                client.DefaultRequestHeaders.Add("User-Agent", $"FloatTool/{AppHelpers.VersionCode}");
                 string paramedURL = $"/AddBenchmark.php?cpu={CurrentCpuName}&threads={ThreadCount}&multicore={MultithreadedSpeed}&singlecore={SinglethreadedSpeed}";
                 HttpResponseMessage response = await client.GetAsync(Utils.API_URL + paramedURL);
                 response.EnsureSuccessStatusCode();

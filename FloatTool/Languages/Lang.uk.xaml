@@ -38,7 +38,9 @@
     <v:String x:Key="m_CheckedCombinations">Перевірено комбінацій:</v:String>
     <v:String x:Key="m_SkinNotFound">Помилка! Цей скін не можете мати цю якість.</v:String>
     <v:String x:Key="m_CantBeStattrak">Помилка! Цей скін не може бути StatTrak.</v:String>
-
+    <v:String x:Key="m_OutOfBounds">Увага! Ви ввели значення яке виходить за рамки для поточних налаштувань.</v:String>
+    <v:String x:Key="m_CantParse">Помилка! Не вдалося перевести в число.</v:String>
+    
     <!-- Settings window -->
     <v:String x:Key="m_Settings">Налаштування</v:String>
     <v:String x:Key="m_Language">Мова:</v:String>

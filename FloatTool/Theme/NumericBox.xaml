@@ -40,12 +40,12 @@
                      BorderThickness="0"
                      PreviewTextInput="PreviewTextInputHandler"
                      DataObject.Pasting="TextBox_Pasting" 
-                     TextChanged="inputBox_TextChanged"/>
+                     TextChanged="InputBox_TextChanged"/>
             <Button x:Name="cmdUp" 
                     FontSize="8" 
                     Padding="0,-2,0,0"
                     Width="20"
-                    Click="cmdUp_Click"
+                    Click="Up_Click"
                     Style="{DynamicResource MainButtonStyle}"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Stretch">
@@ -69,7 +69,7 @@
                     FontSize="8" 
                     Padding="0,-1,0,0" 
                     Width="20"
-                    Click="cmdDown_Click"
+                    Click="Down_Click"
                     HorizontalAlignment="Right"
                     Style="{DynamicResource MainButtonStyle}"
                     VerticalAlignment="Stretch"
