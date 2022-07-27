@@ -19,7 +19,7 @@
 ![Program Working](https://github.com/Prevter/FloatTool/blob/master/doc/program.png?raw=true)  
 
 This app allows you to quickly search combinations to craft skins in CS:GO with (almost) any float you want. All you have to do is set some search settings, wait a bit and all you have to do next is to buy skins from marketplace, that the app found to be needed.  
-This is probably the fastest app you can find, as it can achieve more than 10,000,000 combinations per second on a i9-9900K.
+This is probably the fastest app you can find, as it can achieve more than 15,000,000 combinations per second on an old Ryzen 5 2600.
 
 ## Getting Started
 
@@ -39,6 +39,18 @@ This is probably the fastest app you can find, as it can achieve more than 10,00
 _Please see [Documentation](https://prevter.github.io/FloatTool/tutorial.html) for complete tutorial in usage_
 
 ## Version History
+* 1.1.1
+    * Added a progress bar to updating process
+* 1.1.0
+    * Minor bug fixes
+    * Small optimizations
+    * Added CZ75, P250, SSG 08, Tec-9 and USP-S to list (haven't realized until now)
+    * Fixed all warnings and messages in VS
+    * Added search filter check, it'l show a warning if you entered incorrect settings
+    * If you press F4, it will open steam marketplace for current skin
+* 1.0.2
+    * Added Recoil case
+    * You can now press F3 to open current collection on CSGOStash
 * 1.0.1
     * Fixed critical bug that showed incorrect combinations.
     * Added new collections:

@@ -79,9 +79,11 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
 
-                    <Button Content="{DynamicResource m_Update}" Grid.Column="2" Style="{DynamicResource MainButtonStyle}" Click="UpdateButtonClick"/>
+                    <Button Content="{DynamicResource m_Update}" Grid.Column="2" Style="{DynamicResource MainButtonStyle}" Click="UpdateButtonClick" x:Name="UpdateButton"/>
                     <Button Content="{DynamicResource m_Later}" Grid.Column="1" Style="{DynamicResource MainButtonStyle}" Margin="2,0" Click="LaterButtonClick"/>
                     <Button Content="{DynamicResource m_DoNotAsk}" Grid.Column="0" Style="{DynamicResource MainButtonStyle}" Click="DoNotAskButtonClick"/>
+
+                    <ProgressBar Visibility="Hidden" Grid.Column="0" Grid.ColumnSpan="2" Background="{DynamicResource ProgressBackground}" BorderThickness="0" Foreground="{DynamicResource ProgressFill}" x:Name="DownloadProgress"/>
                 </Grid>
             </Grid>
         </Grid>

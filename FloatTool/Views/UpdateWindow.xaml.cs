@@ -65,16 +65,23 @@ namespace FloatTool
 
         private void UpdateButtonClick(object sender, RoutedEventArgs e)
         {
+            UpdateButton.IsEnabled = false;
+            DownloadProgress.Visibility = Visibility.Visible;
             string archiveUrl = UpdateResult.Assets[0].BrowserDownloadUrl;
             Task.Run(async () =>
             {
                 // Download the archive
                 using HttpClient client = new();
-                using (var s = await client.GetStreamAsync(archiveUrl))
+                var progress = new Progress<float>(value =>
                 {
-                    using var fs = new FileStream("update.zip", FileMode.CreateNew);
-                    await s.CopyToAsync(fs);
+                    DownloadProgress.Dispatcher.Invoke(() => DownloadProgress.Value = value * 100);
+                });
+
+                using (var file = new FileStream("update.zip", FileMode.Create, FileAccess.Write, FileShare.None))
+                {
+                    await client.DownloadAsync(archiveUrl, file, progress);
                 }
+
                 // Rename all locked files to .old
                 string folderPath = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
                 foreach (string file in Directory.GetFiles(folderPath, "*", SearchOption.TopDirectoryOnly))
