@@ -40,25 +40,26 @@ namespace FloatTool
     {
         public MainViewModel ViewModel;
         public Settings Settings;
+        private RPCSettingsPersist RPCSettings = new();
+        
         private static long PassedCombinations;
         private static List<Task> ThreadPool;
         private static CancellationTokenSource TokenSource = new();
         public CancellationToken CancellationToken;
         private static SoundPlayer CombinationFoundSound;
 
-        public void UpdateRichPresence()
+        public void UpdateRichPresence(bool clear=false)
         {
+            if (clear)
+            {
+                RPCSettings.Details = "%m_SettingUpSearch%";
+                RPCSettings.State = "";
+                RPCSettings.ShowTime = false;
+            }
+
             if (Settings.DiscordRPC)
             {
-                AppHelpers.DiscordClient.SetPresence(new DiscordRPC.RichPresence()
-                {
-                    Details = Application.Current.Resources["m_SettingUpSearch"] as string,
-                    Assets = new DiscordRPC.Assets()
-                    {
-                        LargeImageKey = "icon_new",
-                        LargeImageText = $"FloatTool {AppHelpers.VersionCode}",
-                    }
-                });
+                AppHelpers.DiscordClient.SetPresence(RPCSettings.GetPresense());
             }
         }
 
@@ -85,7 +86,7 @@ namespace FloatTool
             MaxHeight = SystemParameters.WorkArea.Height + 12;
             MaxWidth = SystemParameters.WorkArea.Width + 12;
 
-            UpdateRichPresence();
+            UpdateRichPresence(true);
             DataContext = ViewModel;
 
             Logger.Log.Info("Main window started");
@@ -167,7 +168,7 @@ namespace FloatTool
                     break;
             }
 
-            // Update RPC after closing any window
+            // This will return rich presense to last state and update the language
             UpdateRichPresence();
         }
 
@@ -262,17 +263,12 @@ namespace FloatTool
 
                 if (Settings.DiscordRPC)
                 {
-                    AppHelpers.DiscordClient.SetPresence(new DiscordRPC.RichPresence()
-                    {
-                        Details = $"{Application.Current.Resources["m_Searching"] as string} {ViewModel.FullSkinName}",
-                        State = $"{Application.Current.Resources["m_DesiredFloat"] as string} {ViewModel.SearchFilter}",
-                        Assets = new DiscordRPC.Assets()
-                        {
-                            LargeImageKey = "icon_new",
-                            LargeImageText = $"FloatTool {AppHelpers.VersionCode}",
-                        },
-                        Timestamps = DiscordRPC.Timestamps.Now,
-                    });
+                    RPCSettings.Details = $"%m_Searching% {ViewModel.FullSkinName}";
+                    RPCSettings.Details = $"%m_DesiredFloat% {ViewModel.SearchFilter}";
+                    RPCSettings.Timestamp = DiscordRPC.Timestamps.Now;
+                    RPCSettings.ShowTime = true;
+
+                    UpdateRichPresence();
                 }
 
                 new Thread(() =>
@@ -396,6 +392,10 @@ namespace FloatTool
                     }
 
                     List<InputSkin> inputSkinList = inputSkinBag.ToList();
+
+                    // sort skins by price in ascending order
+                    inputSkinList.Sort((a, b) => a.Price.CompareTo(b.Price));
+
                     if (ViewModel.Sort)
                     {
                         if (ViewModel.SortDescending)
@@ -487,6 +487,7 @@ namespace FloatTool
                         Thread.Sleep(100);
                     }
 
+                    UpdateRichPresence(true);
                     Logger.Log.Info("Finished searching");
                     Dispatcher.Invoke(
                         new Action(() =>
@@ -503,6 +504,7 @@ namespace FloatTool
             {
                 Logger.Log.Info("Canceling task");
                 TokenSource.Cancel();
+                UpdateRichPresence(true);
             }
         }
     }

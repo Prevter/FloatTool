@@ -24,6 +24,7 @@ using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace FloatTool
 {
@@ -151,6 +152,21 @@ namespace FloatTool
 
             return cpu.Trim();
         }
+
+        public static string EscapeLocalization(string input)
+        {
+            string regex = @"%(m_[^%]{1,})%";
+            var matches = Regex.Matches(input, regex);
+
+            foreach (Match m in matches.Cast<Match>())
+            {
+                string key = m.Groups[1].Value;
+                string localization = Application.Current.Resources[key] as string;
+                input = input.Replace(m.Value, localization);
+            }
+
+            return input;
+        }
     }
 
     public class UpdateResult
@@ -210,4 +226,39 @@ namespace FloatTool
         public float Min { get { return min; } }
         public float Max { get { return max; } }
     }
+
+    /// <summary>
+    /// Used to store current Discord Presense and update language if needed
+    /// </summary>
+    public class RPCSettingsPersist
+    {
+        public string Details { get; set; }
+        public string State { get; set; }
+        
+        public DiscordRPC.Timestamps Timestamp { get; set; }
+        public bool ShowTime { get; set; }
+
+        public DiscordRPC.RichPresence GetPresense()
+        {
+            string details = Utils.EscapeLocalization(Details);
+            string state = Utils.EscapeLocalization(State);
+
+            var rpc = new DiscordRPC.RichPresence()
+            {
+                Details = details,
+                State = state,
+                Assets = new DiscordRPC.Assets()
+                {
+                    LargeImageKey = "icon_new",
+                    LargeImageText = $"FloatTool {AppHelpers.VersionCode}",
+                },
+            };
+
+            if (ShowTime)
+                rpc.Timestamps = Timestamp;
+
+            return rpc;
+        }
+    }
+
 }
