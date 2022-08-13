@@ -60,6 +60,7 @@
     <v:String x:Key="m_Threads">Threads</v:String>
     <v:String x:Key="m_Thread">Thread</v:String>
     <v:String x:Key="m_PublishResult">Publish result</v:String>
+    <v:String x:Key="m_OnlyVersion">Show only current version</v:String>
     
     <!-- Combination -->
     <v:String x:Key="m_Copy">Copy</v:String>

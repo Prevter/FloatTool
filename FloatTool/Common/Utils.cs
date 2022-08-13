@@ -96,7 +96,7 @@ namespace FloatTool
 
     public static class Utils
     {
-        public const string API_URL = "https://prevterapi.000webhostapp.com";
+        public const string API_URL = "https://git.prevter.ml/api/floattool";
         private static readonly HttpClient Client = new();
 
         public static async Task<decimal> GetWearFromInspectURL(string inspect_url)

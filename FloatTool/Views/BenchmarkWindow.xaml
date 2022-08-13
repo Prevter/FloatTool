@@ -83,6 +83,12 @@
                     
                 </StackPanel>
                 <StackPanel VerticalAlignment="Bottom" Margin="10">
+                    <CheckBox Style="{DynamicResource CheckBoxStyle}" 
+                              Content="{DynamicResource m_OnlyVersion}" 
+                              FontSize="14" 
+                              Foreground="{DynamicResource BenchmarkWindowMainForeground}" 
+                              Margin="0,0,0,8"
+                              IsChecked="{Binding ShowOnlyCurrent}"/>
                     <Border Height="52" CornerRadius="8" Margin="0,0,0,2">
                         <Grid>
                             <Grid.ColumnDefinitions>

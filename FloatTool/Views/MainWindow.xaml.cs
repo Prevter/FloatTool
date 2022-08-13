@@ -123,10 +123,10 @@ namespace FloatTool
             switch (e.Key)
             {
                 case Key.F1:
-                    Process.Start(new ProcessStartInfo { FileName = "https://prevter.github.io/FloatTool/table.html", UseShellExecute = true });
+                    Process.Start(new ProcessStartInfo { FileName = "https://git.prevter.ml/floattool/table", UseShellExecute = true });
                     break;
                 case Key.F2:
-                    Process.Start(new ProcessStartInfo { FileName = "https://prevter.github.io/FloatTool/utils.html", UseShellExecute = true });
+                    Process.Start(new ProcessStartInfo { FileName = "https://git.prevter.ml/floattool/tools", UseShellExecute = true });
                     break;
                 case Key.F3:
                     string skin = $"{ViewModel.WeaponName} | {ViewModel.SkinName}";

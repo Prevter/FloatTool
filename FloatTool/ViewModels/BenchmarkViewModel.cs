@@ -48,7 +48,16 @@ namespace FloatTool
         private int progressPercentage;
         private bool buttonsEnabled = true;
         private bool canPublish = false;
+        private bool showOnlyCurrent = false;
+        private int multithreadedSpeed = 0;
+        private int threadCount = Environment.ProcessorCount;
+        private int singlethreadedSpeed = 0;
+        private bool isUpdatingEnabled;
 
+        private static readonly LinearGradientBrush AMDBrush = Application.Current.Resources["AmdBenchmarkFill"] as LinearGradientBrush;
+        private static readonly LinearGradientBrush IntelBrush = Application.Current.Resources["IntelBenchmarkFill"] as LinearGradientBrush;
+        private static readonly LinearGradientBrush CurrentBrush = Application.Current.Resources["CurrentBenchmarkFill"] as LinearGradientBrush;
+        
         public int ProgressPercentage
         {
             get { return progressPercentage; }
@@ -77,8 +86,7 @@ namespace FloatTool
                 OnPropertyChanged();
             }
         }
-
-        private int threadCount = Environment.ProcessorCount;
+        
         public int ThreadCount
         {
             get
@@ -91,8 +99,20 @@ namespace FloatTool
                 OnPropertyChanged();
             }
         }
+        public bool ShowOnlyCurrent
+        {
+            get
+            {
+                return showOnlyCurrent;
+            }
+            set
+            {
+                showOnlyCurrent = value;
+                PollBenchmarkResults();
+                OnPropertyChanged();
+            }
+        }
 
-        private int multithreadedSpeed = 0;
         public int MultithreadedSpeed
         {
             get { return multithreadedSpeed; }
@@ -104,7 +124,6 @@ namespace FloatTool
         }
         public string MultithreadedSpeedText { get { return $"{multithreadedSpeed:n0}"; } }
 
-        private int singlethreadedSpeed = 0;
         public int SinglethreadedSpeed
         {
             get { return singlethreadedSpeed; }
@@ -120,11 +139,6 @@ namespace FloatTool
         public string CurrentCpuName { get; set; }
         public static string CurrentCpuThreads { get { return $"{Environment.ProcessorCount}"; } }
 
-        private static readonly LinearGradientBrush AMDBrush = Application.Current.Resources["AmdBenchmarkFill"] as LinearGradientBrush;
-        private static readonly LinearGradientBrush IntelBrush = Application.Current.Resources["IntelBenchmarkFill"] as LinearGradientBrush;
-        private static readonly LinearGradientBrush CurrentBrush = Application.Current.Resources["CurrentBenchmarkFill"] as LinearGradientBrush;
-
-        private bool isUpdatingEnabled;
         public bool IsUpdatingEnabled
         {
             get { return isUpdatingEnabled; }
@@ -133,13 +147,16 @@ namespace FloatTool
 
         public async void PollBenchmarkResults()
         {
-            Logger.Log.Info("Getting benchmark results");
+            var url = Utils.API_URL + "/load";
+            if (ShowOnlyCurrent) url += $"?version={AppHelpers.VersionCode}";
+            Logger.Log.Info($"Getting benchmark results from {url}");
             IsUpdatingEnabled = false;
             try
             {
                 BenchmarkResults.Clear();
                 using var client = new HttpClient();
-                HttpResponseMessage response = await client.GetAsync(Utils.API_URL + "/LoadBenchmarks.php");
+
+                HttpResponseMessage response = await client.GetAsync(url);
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
                 dynamic result = JsonConvert.DeserializeObject(responseBody);
@@ -181,13 +198,16 @@ namespace FloatTool
                     }
                 }
 
-                Logger.Log.Info("Benchmark results loaded");
+                Logger.Log.Info($"Benchmark results loaded: {BenchmarkResults.Count} items");
+
+                if (BenchmarkResults.Count == 0)
+                    throw new Exception("0 results");
             }
             catch (Exception ex)
             {
                 BenchmarkResults.Add(new BenchmarkResult
                 {
-                    CpuName = "Error loading benchmark table.",
+                    CpuName = "Error loading benchmark table: " + ex.Message,
                     FillSize = new GridLength(0, GridUnitType.Star),
                     EmptySize = new GridLength(1, GridUnitType.Star),
                 });
@@ -205,7 +225,7 @@ namespace FloatTool
                 using var client = new HttpClient();
                 var version = Assembly.GetExecutingAssembly().GetName().Version;
                 client.DefaultRequestHeaders.Add("User-Agent", $"FloatTool/{AppHelpers.VersionCode}");
-                string paramedURL = $"/AddBenchmark.php?cpu={CurrentCpuName}&threads={ThreadCount}&multicore={MultithreadedSpeed}&singlecore={SinglethreadedSpeed}";
+                string paramedURL = $"/submit?cpu={CurrentCpuName}&threads={ThreadCount}&multicore={MultithreadedSpeed}&singlecore={SinglethreadedSpeed}";
                 HttpResponseMessage response = await client.GetAsync(Utils.API_URL + paramedURL);
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
