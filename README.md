@@ -39,6 +39,13 @@ This is probably the fastest app you can find, as it can achieve more than 15,00
 _Please see [Documentation](https://prevter.github.io/FloatTool/tutorial.html) for complete tutorial in usage_
 
 ## Version History
+* 1.2.0
+    * Discord RPC now changes correctly according to current language and state
+    * Before search starts, skins are sorted by price to get more relevant crafts
+    * Moved website and API to a single website
+    * Added a checkbox in benchmark window to only show results for current version\
+    * Added sorting of results by price when you press F5
+    * "Checked combinations" now show number with spaces (made it easier to see)
 * 1.1.1
     * Added a progress bar to updating process
 * 1.1.0
