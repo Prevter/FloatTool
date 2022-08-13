@@ -141,7 +141,7 @@ namespace FloatTool
 
         public string CombinationsLabel
         {
-            get { return $"{ParsedCombinations}/{TotalCombinations}"; }
+            get { return $"{ParsedCombinations:n0}/{TotalCombinations}"; }
             set { OnPropertyChanged(); }
         }
 

@@ -41,14 +41,14 @@ namespace FloatTool
         public MainViewModel ViewModel;
         public Settings Settings;
         private RPCSettingsPersist RPCSettings = new();
-        
+
         private static long PassedCombinations;
         private static List<Task> ThreadPool;
         private static CancellationTokenSource TokenSource = new();
         public CancellationToken CancellationToken;
         private static SoundPlayer CombinationFoundSound;
 
-        public void UpdateRichPresence(bool clear=false)
+        public void UpdateRichPresence(bool clear = false)
         {
             if (clear)
             {
@@ -136,6 +136,9 @@ namespace FloatTool
                 case Key.F4:
                     var link = $"https://steamcommunity.com/market/listings/730/{ViewModel.FullSkinName}";
                     Process.Start(new ProcessStartInfo { FileName = link, UseShellExecute = true });
+                    break;
+                case Key.F5:
+                    ViewModel.FoundCombinations.Sort((a, b) => a.Price.CompareTo(b.Price));
                     break;
                 case Key.F12:
                     // TODO: Create a dev tools window
