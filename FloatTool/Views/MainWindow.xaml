@@ -337,7 +337,7 @@
                                                     <ColumnDefinition/>
                                                     <ColumnDefinition Width="Auto"/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding WearValue, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
+                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
                                                 <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding CopyCommand}">
                                                     <TextBlock Text="{DynamicResource m_Copy}" Margin="8,0"/>
                                                 </Button>
@@ -347,7 +347,7 @@
                                                     <ColumnDefinition/>
                                                     <ColumnDefinition Width="Auto"/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding WearValue, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
+                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
                                                 <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding CopyCommand}">
                                                     <TextBlock Text="{DynamicResource m_Copy}" Margin="8,0"/>
                                                 </Button>
@@ -357,7 +357,7 @@
                                                     <ColumnDefinition/>
                                                     <ColumnDefinition Width="Auto"/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding WearValue, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
+                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
                                                 <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding CopyCommand}">
                                                     <TextBlock Text="{DynamicResource m_Copy}" Margin="8,0"/>
                                                 </Button>
@@ -367,7 +367,7 @@
                                                     <ColumnDefinition/>
                                                     <ColumnDefinition Width="Auto"/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding WearValue, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
+                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
                                                 <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding CopyCommand}">
                                                     <TextBlock Text="{DynamicResource m_Copy}" Margin="8,0"/>
                                                 </Button>
@@ -377,7 +377,7 @@
                                                     <ColumnDefinition/>
                                                     <ColumnDefinition Width="Auto"/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding WearValue, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
+                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
                                                 <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding CopyCommand}">
                                                     <TextBlock Text="{DynamicResource m_Copy}" Margin="8,0"/>
                                                 </Button>
@@ -387,7 +387,7 @@
                                                     <ColumnDefinition/>
                                                     <ColumnDefinition Width="Auto"/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding WearValue, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
+                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
                                                 <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding CopyCommand}">
                                                     <TextBlock Text="{DynamicResource m_Copy}" Margin="8,0"/>
                                                 </Button>
@@ -397,7 +397,7 @@
                                                     <ColumnDefinition/>
                                                     <ColumnDefinition Width="Auto"/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding WearValue, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
+                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
                                                 <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding CopyCommand}">
                                                     <TextBlock Text="{DynamicResource m_Copy}" Margin="8,0"/>
                                                 </Button>
@@ -407,7 +407,7 @@
                                                     <ColumnDefinition/>
                                                     <ColumnDefinition Width="Auto"/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding WearValue, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
+                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
                                                 <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding CopyCommand}">
                                                     <TextBlock Text="{DynamicResource m_Copy}" Margin="8,0"/>
                                                 </Button>
@@ -417,7 +417,7 @@
                                                     <ColumnDefinition/>
                                                     <ColumnDefinition Width="Auto"/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding WearValue, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
+                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
                                                 <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding CopyCommand}">
                                                     <TextBlock Text="{DynamicResource m_Copy}" Margin="8,0"/>
                                                 </Button>
@@ -427,7 +427,7 @@
                                                     <ColumnDefinition/>
                                                     <ColumnDefinition Width="Auto"/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding WearValue, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
+                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
                                                 <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding CopyCommand}">
                                                     <TextBlock Text="{DynamicResource m_Copy}" Margin="8,0"/>
                                                 </Button>

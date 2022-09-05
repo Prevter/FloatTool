@@ -204,22 +204,22 @@ namespace FloatTool
         public string Body { get; set; }
     }
 
-    public class CraftSearchSetup
+    public struct CraftSearchSetup
     {
-        public decimal SearchTarget { get; set; }
-        public decimal TargetPrecision { get; set; }
-        public string SearchFilter { get; set; }
+        public decimal SearchTarget;
+        public decimal TargetPrecision;
+        public string SearchFilter;
 
-        public Skin[] Outcomes { get; set; }
-        public InputSkin[] SkinPool { get; set; }
+        public Skin[] Outcomes;
+        public InputSkin[] SkinPool;
 
-        public SearchMode SearchMode { get; set; }
+        public SearchMode SearchMode;
 
-        public int ThreadID { get; set; }
-        public int ThreadCount { get; set; }
+        public int ThreadID;
+        public int ThreadCount;
     }
 
-    public class FloatRange
+    public struct FloatRange
     {
         readonly float min;
         readonly float max;

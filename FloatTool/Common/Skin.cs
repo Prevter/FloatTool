@@ -23,20 +23,20 @@ namespace FloatTool
 {
     public class Collection
     {
-        public string Name { get; set; }
-        public bool CanBeStattrak { get; set; }
-        public string LowestRarity { get; set; }
-        public string HighestRarity { get; set; }
-        public string Link { get; set; }
-        public List<SkinModel> Skins { get; set; }
+        public string Name;
+        public bool CanBeStattrak;
+        public string LowestRarity;
+        public string HighestRarity;
+        public string Link;
+        public List<SkinModel> Skins;
     }
 
     public class SkinModel
     {
-        public string Name { get; set; }
-        public string Rarity { get; set; }
-        public float MinWear { get; set; }
-        public float MaxWear { get; set; }
+        public string Name;
+        public string Rarity;
+        public float MinWear;
+        public float MaxWear;
 
         public bool IsQualityInRange(string quality)
         {
@@ -45,7 +45,7 @@ namespace FloatTool
         }
     }
 
-    public class Skin
+    public struct Skin
     {
         public enum Quality
         {
@@ -57,11 +57,11 @@ namespace FloatTool
             Covert
         }
 
-        public string Name { get; set; }
-        public decimal MinFloat { get; set; }
-        public decimal MaxFloat { get; set; }
-        public decimal FloatRange { get; set; }
-        public Quality Rarity { get; set; }
+        public string Name;
+        public decimal MinFloat;
+        public decimal MaxFloat;
+        public decimal FloatRange;
+        public Quality Rarity;
 
         public Skin(string name, float minWear, float maxWear, Quality rarity)
         {
@@ -140,9 +140,18 @@ namespace FloatTool
 
     public class InputSkin
     {
-        public decimal WearValue { get; set; }
-        public float Price { get; set; }
-        public Currency SkinCurrency { get; set; }
+        public decimal WearValue;
+        public float Price;
+        public Currency SkinCurrency;
+
+        private RelayCommand copyCommand;
+        public RelayCommand CopyCommand { 
+            get {
+                return copyCommand ??= new RelayCommand(obj => Clipboard.SetText(WearValue.ToString("0.00000000000000", CultureInfo.InvariantCulture)));
+            }
+        }
+
+        public decimal GetWearValue => WearValue;
 
         public InputSkin(decimal wear, float price, Currency currency)
         {
@@ -150,25 +159,12 @@ namespace FloatTool
             Price = price;
             SkinCurrency = currency;
         }
-
+        
         public InputSkin(double wear, float price, Currency currency) : this((decimal)wear, price, currency) { }
 
         internal int CompareTo(InputSkin b)
         {
             return WearValue > b.WearValue ? 1 : (WearValue < b.WearValue ? -1 : 0);
-        }
-
-        private RelayCommand copyCommand;
-
-        public RelayCommand CopyCommand
-        {
-            get
-            {
-                return copyCommand ??= new RelayCommand(obj =>
-                {
-                    Clipboard.SetText(WearValue.ToString("0.00000000000000", CultureInfo.InvariantCulture));
-                });
-            }
         }
     }
 }
