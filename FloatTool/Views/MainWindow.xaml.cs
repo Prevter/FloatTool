@@ -267,7 +267,7 @@ namespace FloatTool
                 if (Settings.DiscordRPC)
                 {
                     RPCSettings.Details = $"%m_Searching% {ViewModel.FullSkinName}";
-                    RPCSettings.Details = $"%m_DesiredFloat% {ViewModel.SearchFilter}";
+                    RPCSettings.State = $"%m_DesiredFloat% {ViewModel.SearchFilter}";
                     RPCSettings.Timestamp = DiscordRPC.Timestamps.Now;
                     RPCSettings.ShowTime = true;
 
@@ -282,7 +282,7 @@ namespace FloatTool
                     ViewModel.CanEditSettings = false;
                     ViewModel.ProgressPercentage = 0;
                     ViewModel.TotalCombinations = Calculations.GetCombinationsCount(ViewModel.SkinCount);
-
+                    
                     int index = 0;
                     Skin[] outcomes = Array.Empty<Skin>();
                     bool found = false;
