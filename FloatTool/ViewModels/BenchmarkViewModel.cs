@@ -57,7 +57,7 @@ namespace FloatTool
         private static readonly LinearGradientBrush AMDBrush = Application.Current.Resources["AmdBenchmarkFill"] as LinearGradientBrush;
         private static readonly LinearGradientBrush IntelBrush = Application.Current.Resources["IntelBenchmarkFill"] as LinearGradientBrush;
         private static readonly LinearGradientBrush CurrentBrush = Application.Current.Resources["CurrentBenchmarkFill"] as LinearGradientBrush;
-        
+
         public int ProgressPercentage
         {
             get { return progressPercentage; }
@@ -86,7 +86,7 @@ namespace FloatTool
                 OnPropertyChanged();
             }
         }
-        
+
         public int ThreadCount
         {
             get

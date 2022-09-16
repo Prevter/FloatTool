@@ -26,6 +26,7 @@ using System.Linq;
 using System.Media;
 using System.Net.Http;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -40,7 +41,7 @@ namespace FloatTool
     {
         public MainViewModel ViewModel;
         public Settings Settings;
-        private RPCSettingsPersist RPCSettings = new();
+        private readonly RPCSettingsPersist RPCSettings = new();
 
         private static long PassedCombinations;
         private static List<Task> ThreadPool;
@@ -189,7 +190,7 @@ namespace FloatTool
             {
                 for (int i = 0; i < options.Outcomes.Length; ++i)
                 {
-                    decimal resultFloat = Calculations.Craft(
+                    double resultFloat = Calculations.Craft(
                         resultList, options.Outcomes[i].MinFloat, options.Outcomes[i].FloatRange
                     );
 
@@ -235,7 +236,7 @@ namespace FloatTool
                                     Inputs = result,
                                     Currency = result[0].SkinCurrency,
                                     Price = price,
-                                    IEEE754 = ((double)ieee).ToString("0.000000000000000", CultureInfo.InvariantCulture)
+                                    Wear32Bit = ((double)ieee).ToString("0.000000000000000", CultureInfo.InvariantCulture),
                                 });
                                 if (Settings.Sound)
                                     CombinationFoundSound.Play();
@@ -282,7 +283,7 @@ namespace FloatTool
                     ViewModel.CanEditSettings = false;
                     ViewModel.ProgressPercentage = 0;
                     ViewModel.TotalCombinations = Calculations.GetCombinationsCount(ViewModel.SkinCount);
-                    
+
                     int index = 0;
                     Skin[] outcomes = Array.Empty<Skin>();
                     bool found = false;
@@ -304,7 +305,6 @@ namespace FloatTool
                     }
 
                     ConcurrentBag<InputSkin> inputSkinBag = new();
-                    List<Task> downloaderTasks = new();
 
                     string url = $"https://steamcommunity.com/market/listings/730/{ViewModel.FullSkinName}/render/?count={ViewModel.SkinCount}&start={ViewModel.SkinSkipCount}&currency={(int)Settings.Currency}";
                     try
@@ -323,7 +323,7 @@ namespace FloatTool
 
                         SetStatus("m_GettingFloats");
 
-                        Dictionary<Task<decimal>, float> floatTasks = new();
+                        Dictionary<Task<double>, float> floatTasks = new();
                         foreach (var skin in r["listinginfo"])
                         {
                             string lid = r["listinginfo"][skin.Name]["listingid"].ToString();
@@ -413,8 +413,8 @@ namespace FloatTool
 
                     string searchFilter = ViewModel.SearchFilter;
 
-                    decimal searched = decimal.Parse(searchFilter, CultureInfo.InvariantCulture);
-                    decimal precission = (decimal)Math.Pow(0.1, searchFilter.Length - 2);
+                    double searched = double.Parse(searchFilter, CultureInfo.InvariantCulture);
+                    double precission = Math.Pow(0.1, searchFilter.Length - 2);
 
                     // Create thread pool
                     ThreadPool = new();
@@ -456,7 +456,7 @@ namespace FloatTool
                         timer.Restart();
 
                         bool isAnyRunning = false;
-                        foreach (Task t in ThreadPool)
+                        foreach (Task t in CollectionsMarshal.AsSpan(ThreadPool))
                         {
                             if (t.Status != TaskStatus.RanToCompletion)
                             {
@@ -476,7 +476,7 @@ namespace FloatTool
                         LastCombinationCount = PassedCombinations;
                         ViewModel.ProgressPercentage = (float)PassedCombinations * 100 / ViewModel.TotalCombinations;
                         ViewModel.ParsedCombinations = PassedCombinations;
-                        ViewModel.CombinationsLabel = String.Empty;
+                        ViewModel.CombinationsLabel = string.Empty;
 
                         if (!isAnyRunning)
                             break;

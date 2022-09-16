@@ -306,8 +306,8 @@
                                                 <TextBlock Text="{Binding Wear, StringFormat=n14}" Foreground="{DynamicResource CombinationForeground}" FontSize="13"/>
                                             </StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="IEEE754:" Foreground="{DynamicResource CombinationForeground}" FontSize="13" Margin="0,0,4,0"/>
-                                                <TextBlock Text="{Binding IEEE754}" Foreground="{DynamicResource CombinationForeground}" FontSize="13"/>
+                                                <TextBlock Text="32-bit:" Foreground="{DynamicResource CombinationForeground}" FontSize="13" Margin="0,0,4,0"/>
+                                                <TextBlock Text="{Binding Wear32Bit}" Foreground="{DynamicResource CombinationForeground}" FontSize="13"/>
                                             </StackPanel>
                                         </StackPanel>
                                         <StackPanel Margin="8" Grid.Column="1" VerticalAlignment="Center">

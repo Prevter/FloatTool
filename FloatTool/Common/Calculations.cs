@@ -22,7 +22,7 @@ namespace FloatTool
 {
     static public class Calculations
     {
-        static public decimal Craft(InputSkin[] ingridients, decimal minFloat, decimal floatRange)
+        public static double Craft(InputSkin[] ingridients, double minFloat, double floatRange)
         {
             return floatRange * (ingridients[0].WearValue
                 + ingridients[1].WearValue
@@ -36,7 +36,7 @@ namespace FloatTool
                 + ingridients[9].WearValue) + minFloat;
         }
 
-        static public bool NextCombination(int[] num, int n)
+        public static bool NextCombination(int[] num, int n)
         {
             bool finished = false;
             for (int i = 9; !finished; --i)
@@ -54,7 +54,7 @@ namespace FloatTool
             return false;
         }
 
-        static public IEnumerable<InputSkin[]> Combinations(InputSkin[] elem, int start, int skip)
+        public static IEnumerable<InputSkin[]> Combinations(InputSkin[] elem, int start, int skip)
         {
             int size = elem.Length - 10;
             int[] numbers = new int[10] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -63,14 +63,14 @@ namespace FloatTool
 
             for (int i = 0; i < start; i++)
                 running = NextCombination(numbers, size);
-            
+
             while (running)
             {
                 for (int i = 0; i < 10; ++i)
                     resultList[i] = elem[numbers[i]];
                 yield return resultList;
 
-                for (int i = 0; i < skip && running; i++)
+                for (int i = 0; i < skip; i++)
                     running = NextCombination(numbers, size);
             }
         }

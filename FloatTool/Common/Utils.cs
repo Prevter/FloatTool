@@ -100,13 +100,13 @@ namespace FloatTool
         public const string API_URL = "https://git.prevter.ml/api/floattool";
         private static readonly HttpClient Client = new();
 
-        public static async Task<decimal> GetWearFromInspectURL(string inspect_url)
+        public static async Task<double> GetWearFromInspectURL(string inspect_url)
         {
             var result = await Client.GetAsync($"https://api.csgofloat.com/?url={inspect_url}");
             result.EnsureSuccessStatusCode();
             string response = await result.Content.ReadAsStringAsync();
             dynamic json = JsonConvert.DeserializeObject(response);
-            return Convert.ToDecimal(json["iteminfo"]["floatvalue"]);
+            return Convert.ToDouble(json["iteminfo"]["floatvalue"]);
         }
 
         public static async Task<UpdateResult> CheckForUpdates()
@@ -206,8 +206,8 @@ namespace FloatTool
 
     public struct CraftSearchSetup
     {
-        public decimal SearchTarget;
-        public decimal TargetPrecision;
+        public double SearchTarget;
+        public double TargetPrecision;
         public string SearchFilter;
 
         public Skin[] Outcomes;
@@ -221,10 +221,10 @@ namespace FloatTool
 
     public struct FloatRange
     {
-        readonly float min;
-        readonly float max;
+        readonly double min;
+        readonly double max;
 
-        public FloatRange(float min, float max)
+        public FloatRange(double min, double max)
         {
             this.min = min;
             this.max = max;
@@ -235,8 +235,8 @@ namespace FloatTool
             return Min <= other.Max && other.Min <= Max;
         }
 
-        public float Min { get { return min; } }
-        public float Max { get { return max; } }
+        public double Min { get { return min; } }
+        public double Max { get { return max; } }
     }
 
     /// <summary>
@@ -246,7 +246,7 @@ namespace FloatTool
     {
         public string Details { get; set; }
         public string State { get; set; }
-        
+
         public DiscordRPC.Timestamps Timestamp { get; set; }
         public bool ShowTime { get; set; }
 

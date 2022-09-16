@@ -35,8 +35,8 @@ namespace FloatTool
     {
         public string Name;
         public string Rarity;
-        public float MinWear;
-        public float MaxWear;
+        public double MinWear;
+        public double MaxWear;
 
         public bool IsQualityInRange(string quality)
         {
@@ -58,16 +58,16 @@ namespace FloatTool
         }
 
         public string Name;
-        public decimal MinFloat;
-        public decimal MaxFloat;
-        public decimal FloatRange;
+        public double MinFloat;
+        public double MaxFloat;
+        public double FloatRange;
         public Quality Rarity;
 
-        public Skin(string name, float minWear, float maxWear, Quality rarity)
+        public Skin(string name, double minWear, double maxWear, Quality rarity)
         {
             Name = name;
-            MinFloat = (decimal)minWear;
-            MaxFloat = (decimal)maxWear;
+            MinFloat = minWear;
+            MaxFloat = maxWear;
             FloatRange = (MaxFloat - MinFloat) / 10;
             Rarity = rarity;
         }
@@ -140,27 +140,27 @@ namespace FloatTool
 
     public sealed class InputSkin
     {
-        public decimal WearValue;
+        public double WearValue;
         public float Price;
         public Currency SkinCurrency;
 
         private RelayCommand copyCommand;
-        public RelayCommand CopyCommand { 
-            get {
+        public RelayCommand CopyCommand
+        {
+            get
+            {
                 return copyCommand ??= new RelayCommand(obj => Clipboard.SetText(WearValue.ToString("0.00000000000000", CultureInfo.InvariantCulture)));
             }
         }
 
-        public decimal GetWearValue => WearValue;
+        public double GetWearValue => WearValue;
 
-        public InputSkin(decimal wear, float price, Currency currency)
+        public InputSkin(double wear, float price, Currency currency)
         {
             WearValue = wear;
             Price = price;
             SkinCurrency = currency;
         }
-        
-        public InputSkin(double wear, float price, Currency currency) : this((decimal)wear, price, currency) { }
 
         internal int CompareTo(InputSkin b)
         {

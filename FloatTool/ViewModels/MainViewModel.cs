@@ -36,8 +36,9 @@ namespace FloatTool
 
     public sealed class Combination
     {
-        public decimal Wear { get; set; }
-        public string IEEE754 { get; set; }
+        public double Wear { get; set; }
+        public string Wear32Bit { get; set; }
+        public string Wear128Bit { get; set; }
         public InputSkin[] Inputs { get; set; }
         public string OutcomeName { get; set; }
         public Currency Currency { get; set; }
@@ -119,7 +120,7 @@ namespace FloatTool
 
         private List<string> skinList = new();
         private List<string> outcomeList = new();
-        public Dictionary<Tuple<float, float>, List<Skin>> Outcomes = new();
+        public Dictionary<Tuple<double, double>, List<Skin>> Outcomes = new();
 
         public List<Collection> SkinsDatabase;
         public Settings Settings { get; set; }
@@ -473,7 +474,7 @@ namespace FloatTool
 
             for (int i = 0; i < skinlist.Count; i++)
             {
-                var range = new Tuple<float, float>(skinlist[i].MinWear, skinlist[i].MaxWear);
+                var range = new Tuple<double, double>(skinlist[i].MinWear, skinlist[i].MaxWear);
                 if (Outcomes.ContainsKey(range))
                     Outcomes[range].Add(new Skin(skinlist[i]));
                 else

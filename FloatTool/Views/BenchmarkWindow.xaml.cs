@@ -83,7 +83,7 @@ namespace FloatTool
             {
                 for (int i = 0; i < options.Outcomes.Length; ++i)
                 {
-                    decimal resultFloat = Calculations.Craft(
+                    double resultFloat = Calculations.Craft(
                         resultList, options.Outcomes[i].MinFloat, options.Outcomes[i].FloatRange
                     );
 
@@ -125,7 +125,7 @@ namespace FloatTool
             new Thread(() =>
             {
                 Skin[] outcomes = new Skin[] {
-                    new Skin("AK-47 | Safari Mesh", 0.06f, 0.8f, Skin.Quality.Industrial)
+                    new Skin("AK-47 | Safari Mesh", 0.06, 0.8, Skin.Quality.Industrial)
                 };
 
                 double[] pool = {
@@ -156,8 +156,8 @@ namespace FloatTool
 
                 string searchFilter = "0.250000000";
 
-                decimal searched = decimal.Parse(searchFilter, CultureInfo.InvariantCulture);
-                decimal precission = (decimal)Math.Pow(0.1, searchFilter.Length - 2);
+                double searched = double.Parse(searchFilter, CultureInfo.InvariantCulture);
+                double precission = Math.Pow(0.1, searchFilter.Length - 2);
 
                 // Create thread pool
                 List<Task> threadPool = new();
