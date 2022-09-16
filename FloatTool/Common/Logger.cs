@@ -24,7 +24,7 @@ using System.Reflection;
 
 namespace FloatTool
 {
-    public class Logger
+    public sealed class Logger
     {
         public static ILog Log { get; } = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 

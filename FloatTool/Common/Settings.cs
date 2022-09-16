@@ -63,7 +63,7 @@ namespace FloatTool
         }
     }
 
-    public class Settings
+    public sealed class Settings
     {
         public string LanguageCode { get; set; }
         public Currency Currency { get; set; } = Currency.USD;

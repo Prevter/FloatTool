@@ -181,7 +181,7 @@ namespace FloatTool
         }
     }
 
-    public class UpdateResult
+    public sealed class UpdateResult
     {
         public class Asset
         {
@@ -242,7 +242,7 @@ namespace FloatTool
     /// <summary>
     /// Used to store current Discord Presense and update language if needed
     /// </summary>
-    public class RPCSettingsPersist
+    public sealed class RPCSettingsPersist
     {
         public string Details { get; set; }
         public string State { get; set; }

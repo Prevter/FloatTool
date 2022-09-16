@@ -36,7 +36,7 @@ using System.Windows.Threading;
 
 namespace FloatTool
 {
-    public partial class MainWindow : Window
+    public sealed partial class MainWindow : Window
     {
         public MainViewModel ViewModel;
         public Settings Settings;

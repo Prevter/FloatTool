@@ -22,7 +22,7 @@ using System.Runtime.CompilerServices;
 
 namespace FloatTool
 {
-    public class SettingsViewModel : INotifyPropertyChanged
+    public sealed class SettingsViewModel : INotifyPropertyChanged
     {
         public Settings Settings { get; set; }
 

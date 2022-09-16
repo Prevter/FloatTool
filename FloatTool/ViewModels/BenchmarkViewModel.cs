@@ -28,9 +28,9 @@ using System.Windows.Media;
 
 namespace FloatTool
 {
-    public class BenchmarkViewModel : INotifyPropertyChanged
+    public sealed class BenchmarkViewModel : INotifyPropertyChanged
     {
-        public class BenchmarkResult
+        public sealed class BenchmarkResult
         {
             public string CpuName { get; set; }
             public string ThreadCount { get; set; }

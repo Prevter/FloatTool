@@ -34,7 +34,7 @@ namespace FloatTool
         Less, Equal, Greater
     }
 
-    public class Combination
+    public sealed class Combination
     {
         public decimal Wear { get; set; }
         public string IEEE754 { get; set; }
@@ -45,7 +45,7 @@ namespace FloatTool
         public DateTime Time { get; set; } = DateTime.Now;
     }
 
-    public class MainViewModel : INotifyPropertyChanged
+    public sealed class MainViewModel : INotifyPropertyChanged
     {
         private bool isSearching;
 

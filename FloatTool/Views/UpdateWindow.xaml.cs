@@ -27,7 +27,7 @@ using System.Windows.Input;
 
 namespace FloatTool
 {
-    public partial class UpdateWindow : Window
+    public sealed partial class UpdateWindow : Window
     {
         public Settings Settings;
         public UpdateResult UpdateResult;

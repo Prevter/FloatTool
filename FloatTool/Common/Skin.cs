@@ -21,7 +21,7 @@ using System.Windows;
 
 namespace FloatTool
 {
-    public class Collection
+    public sealed class Collection
     {
         public string Name;
         public bool CanBeStattrak;
@@ -31,7 +31,7 @@ namespace FloatTool
         public List<SkinModel> Skins;
     }
 
-    public class SkinModel
+    public struct SkinModel
     {
         public string Name;
         public string Rarity;
@@ -138,7 +138,7 @@ namespace FloatTool
 
     }
 
-    public class InputSkin
+    public sealed class InputSkin
     {
         public decimal WearValue;
         public float Price;

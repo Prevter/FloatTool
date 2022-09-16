@@ -20,7 +20,7 @@ using System.Windows.Input;
 
 namespace FloatTool
 {
-    public class RelayCommand : ICommand
+    public sealed class RelayCommand : ICommand
     {
         readonly Action<object> _execute;
         readonly Predicate<object> _canExecute;

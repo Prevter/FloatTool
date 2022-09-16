@@ -19,6 +19,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
+using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -26,7 +27,7 @@ using System.Windows.Input;
 
 namespace FloatTool
 {
-    public partial class BenchmarkWindow : Window
+    public sealed partial class BenchmarkWindow : Window
     {
         public BenchmarkViewModel Context;
         public Settings Settings;
@@ -153,7 +154,7 @@ namespace FloatTool
                 Context.SinglethreadedSpeed = 0;
                 Context.ProgressPercentage = 0;
 
-                string searchFilter = "0.25000000";
+                string searchFilter = "0.250000000";
 
                 decimal searched = decimal.Parse(searchFilter, CultureInfo.InvariantCulture);
                 decimal precission = (decimal)Math.Pow(0.1, searchFilter.Length - 2);
@@ -193,7 +194,7 @@ namespace FloatTool
                 while (true)
                 {
                     bool isAnyRunning = false;
-                    foreach (Task t in threadPool)
+                    foreach (Task t in CollectionsMarshal.AsSpan(threadPool))
                     {
                         if (t.Status != TaskStatus.RanToCompletion)
                         {

@@ -23,7 +23,7 @@ using System.Windows.Input;
 
 namespace FloatTool
 {
-    public partial class SettingsWindow : Window
+    public sealed partial class SettingsWindow : Window
     {
         public Settings Settings;
 
