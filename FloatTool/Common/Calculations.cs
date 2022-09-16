@@ -58,18 +58,21 @@ namespace FloatTool
         {
             int size = elem.Length - 10;
             int[] numbers = new int[10] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            long step = -start;
             InputSkin[] resultList = new InputSkin[10];
+            bool running = true;
 
-            do
+            for (int i = 0; i < start; i++)
+                running = NextCombination(numbers, size);
+            
+            while (running)
             {
-                if (step++ % skip == 0)
-                {
-                    for (int i = 0; i < 10; ++i)
-                        resultList[i] = elem[numbers[i]];
-                    yield return resultList;
-                }
-            } while (NextCombination(numbers, size));
+                for (int i = 0; i < 10; ++i)
+                    resultList[i] = elem[numbers[i]];
+                yield return resultList;
+
+                for (int i = 0; i < skip && running; i++)
+                    running = NextCombination(numbers, size);
+            }
         }
 
         public static long GetCombinationsCount(int poolSize)
