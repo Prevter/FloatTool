@@ -53,28 +53,7 @@ namespace FloatTool
             }
             return false;
         }
-
-        public static IEnumerable<InputSkin[]> Combinations(InputSkin[] elem, int start, int skip)
-        {
-            int size = elem.Length - 10;
-            int[] numbers = new int[10] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            InputSkin[] resultList = new InputSkin[10];
-            bool running = true;
-
-            for (int i = 0; i < start; i++)
-                running = NextCombination(numbers, size);
-
-            while (running)
-            {
-                for (int i = 0; i < 10; ++i)
-                    resultList[i] = elem[numbers[i]];
-                yield return resultList;
-
-                for (int i = 0; i < skip; i++)
-                    running = NextCombination(numbers, size);
-            }
-        }
-
+        
         public static long GetCombinationsCount(int poolSize)
         {
             BigInteger fact1 = poolSize;

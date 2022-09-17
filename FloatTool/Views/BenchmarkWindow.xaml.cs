@@ -79,8 +79,21 @@ namespace FloatTool
 
         private static void FloatCraftWorkerThread(CraftSearchSetup options)
         {
-            foreach (InputSkin[] resultList in Calculations.Combinations(options.SkinPool, options.ThreadID, options.ThreadCount))
+            int size = options.SkinPool.Length - 10;
+            int[] numbers = new int[10] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            InputSkin[] resultList = new InputSkin[10];
+            bool running = true;
+
+            for (int i = 0; i < options.ThreadID; i++)
+                running = Calculations.NextCombination(numbers, size);
+
+            while (running)
             {
+                for (int i = 0; i < 10; ++i)
+                    resultList[i] = options.SkinPool[numbers[i]];
+
+                // Check if the combination is valid
+
                 for (int i = 0; i < options.Outcomes.Length; ++i)
                 {
                     double resultFloat = Calculations.Craft(
@@ -115,7 +128,12 @@ namespace FloatTool
                 }
 
                 Interlocked.Increment(ref PassedCombinations);
+
+                // Get next combination
+                for (int i = 0; i < options.ThreadCount; i++)
+                    running = Calculations.NextCombination(numbers, size);
             }
+
         }
 
         private void StartBenchmark_Click(object sender, RoutedEventArgs e)
