@@ -16,8 +16,6 @@
 */
 
 using System.Collections.Generic;
-using System.Globalization;
-using System.Windows;
 
 namespace FloatTool
 {
@@ -143,15 +141,6 @@ namespace FloatTool
         public double WearValue;
         public float Price;
         public Currency SkinCurrency;
-
-        private RelayCommand copyCommand;
-        public RelayCommand CopyCommand
-        {
-            get
-            {
-                return copyCommand ??= new RelayCommand(obj => Clipboard.SetText(WearValue.ToString("0.00000000000000", CultureInfo.InvariantCulture)));
-            }
-        }
 
         public double GetWearValue => WearValue;
 

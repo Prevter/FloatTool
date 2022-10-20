@@ -24,7 +24,7 @@
     xmlns:theme="clr-namespace:FloatTool.Theme" 
     mc:Ignorable="d" KeyUp="Window_KeyUp"
     MinWidth="875" MinHeight="420" 
-    Width="875" Height="420" 
+    Width="875" Height="420" x:Name="mainWindow"
     WindowStartupLocation="CenterScreen" 
     WindowStyle="None" AllowsTransparency="True" 
     Background="Transparent" Title="FloatTool">
@@ -337,8 +337,8 @@
                                                     <ColumnDefinition/>
                                                     <ColumnDefinition Width="Auto"/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
-                                                <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding CopyCommand}">
+                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center" x:Name="field1"/>
+                                                <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding ElementName=mainWindow, Path=DataContext.CopyCommand}" CommandParameter="{Binding ElementName=field1}">
                                                     <TextBlock Text="{DynamicResource m_Copy}" Margin="8,0"/>
                                                 </Button>
                                             </Grid>
@@ -347,8 +347,8 @@
                                                     <ColumnDefinition/>
                                                     <ColumnDefinition Width="Auto"/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
-                                                <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding CopyCommand}">
+                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center" x:Name="field2"/>
+                                                <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding ElementName=mainWindow, Path=DataContext.CopyCommand}" CommandParameter="{Binding ElementName=field2}">
                                                     <TextBlock Text="{DynamicResource m_Copy}" Margin="8,0"/>
                                                 </Button>
                                             </Grid>
@@ -357,8 +357,8 @@
                                                     <ColumnDefinition/>
                                                     <ColumnDefinition Width="Auto"/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
-                                                <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding CopyCommand}">
+                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center" x:Name="field3"/>
+                                                <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding ElementName=mainWindow, Path=DataContext.CopyCommand}" CommandParameter="{Binding ElementName=field3}">
                                                     <TextBlock Text="{DynamicResource m_Copy}" Margin="8,0"/>
                                                 </Button>
                                             </Grid>
@@ -367,8 +367,8 @@
                                                     <ColumnDefinition/>
                                                     <ColumnDefinition Width="Auto"/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
-                                                <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding CopyCommand}">
+                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center" x:Name="field4"/>
+                                                <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding ElementName=mainWindow, Path=DataContext.CopyCommand}" CommandParameter="{Binding ElementName=field4}">
                                                     <TextBlock Text="{DynamicResource m_Copy}" Margin="8,0"/>
                                                 </Button>
                                             </Grid>
@@ -377,8 +377,8 @@
                                                     <ColumnDefinition/>
                                                     <ColumnDefinition Width="Auto"/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
-                                                <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding CopyCommand}">
+                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center" x:Name="field5"/>
+                                                <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding ElementName=mainWindow, Path=DataContext.CopyCommand}" CommandParameter="{Binding ElementName=field5}">
                                                     <TextBlock Text="{DynamicResource m_Copy}" Margin="8,0"/>
                                                 </Button>
                                             </Grid>
@@ -387,8 +387,8 @@
                                                     <ColumnDefinition/>
                                                     <ColumnDefinition Width="Auto"/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
-                                                <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding CopyCommand}">
+                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center" x:Name="field6"/>
+                                                <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding ElementName=mainWindow, Path=DataContext.CopyCommand}" CommandParameter="{Binding ElementName=field6}">
                                                     <TextBlock Text="{DynamicResource m_Copy}" Margin="8,0"/>
                                                 </Button>
                                             </Grid>
@@ -397,8 +397,8 @@
                                                     <ColumnDefinition/>
                                                     <ColumnDefinition Width="Auto"/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
-                                                <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding CopyCommand}">
+                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center" x:Name="field7"/>
+                                                <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding ElementName=mainWindow, Path=DataContext.CopyCommand}" CommandParameter="{Binding ElementName=field7}">
                                                     <TextBlock Text="{DynamicResource m_Copy}" Margin="8,0"/>
                                                 </Button>
                                             </Grid>
@@ -407,8 +407,8 @@
                                                     <ColumnDefinition/>
                                                     <ColumnDefinition Width="Auto"/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
-                                                <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding CopyCommand}">
+                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center" x:Name="field8"/>
+                                                <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding ElementName=mainWindow, Path=DataContext.CopyCommand}" CommandParameter="{Binding ElementName=field8}">
                                                     <TextBlock Text="{DynamicResource m_Copy}" Margin="8,0"/>
                                                 </Button>
                                             </Grid>
@@ -417,8 +417,8 @@
                                                     <ColumnDefinition/>
                                                     <ColumnDefinition Width="Auto"/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
-                                                <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding CopyCommand}">
+                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center" x:Name="field9"/>
+                                                <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding ElementName=mainWindow, Path=DataContext.CopyCommand}" CommandParameter="{Binding ElementName=field9}">
                                                     <TextBlock Text="{DynamicResource m_Copy}" Margin="8,0"/>
                                                 </Button>
                                             </Grid>
@@ -427,8 +427,8 @@
                                                     <ColumnDefinition/>
                                                     <ColumnDefinition Width="Auto"/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center"/>
-                                                <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding CopyCommand}">
+                                                <TextBox Style="{DynamicResource MainTextBoxStyle}" IsReadOnly="true" FontSize="13" Text="{Binding GetWearValue, Mode=OneWay, StringFormat=0.00000000000000}" VerticalContentAlignment="Center" x:Name="field10"/>
+                                                <Button Grid.Column="1" Style="{DynamicResource MainButtonStyle}" HorizontalAlignment="Right" Command="{Binding ElementName=mainWindow, Path=DataContext.CopyCommand}" CommandParameter="{Binding ElementName=field10}">
                                                     <TextBlock Text="{DynamicResource m_Copy}" Margin="8,0"/>
                                                 </Button>
                                             </Grid>

@@ -315,6 +315,21 @@ namespace FloatTool
         public long ParsedCombinations { get; internal set; }
         public long TotalCombinations { get; internal set; }
 
+        private RelayCommand copyCommand;
+        public RelayCommand CopyCommand
+        {
+            get
+            {
+                return copyCommand ??= new RelayCommand(field =>
+                {
+                    var textbox = field as TextBox;
+                    Clipboard.SetText(textbox.Text);
+                    textbox?.Focus();
+                    textbox?.SelectAll();
+                });
+            }
+        }
+
         #endregion
 
         private void UpdateFullSkinName()
