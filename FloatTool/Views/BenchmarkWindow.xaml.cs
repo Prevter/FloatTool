@@ -171,6 +171,7 @@ namespace FloatTool
                 Context.MultithreadedSpeed = 0;
                 Context.SinglethreadedSpeed = 0;
                 Context.ProgressPercentage = 0;
+                Context.ThreadCountTested = Context.ThreadCount;
 
                 string searchFilter = "0.250000000";
 

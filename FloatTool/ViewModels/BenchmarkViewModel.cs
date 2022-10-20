@@ -51,6 +51,7 @@ namespace FloatTool
         private bool showOnlyCurrent = false;
         private int multithreadedSpeed = 0;
         private int threadCount = Environment.ProcessorCount;
+        public int ThreadCountTested = 0;
         private int singlethreadedSpeed = 0;
         private bool isUpdatingEnabled;
 
@@ -225,7 +226,7 @@ namespace FloatTool
                 using var client = new HttpClient();
                 var version = Assembly.GetExecutingAssembly().GetName().Version;
                 client.DefaultRequestHeaders.Add("User-Agent", $"FloatTool/{AppHelpers.VersionCode}");
-                string paramedURL = $"/submit?cpu={CurrentCpuName}&threads={ThreadCount}&multicore={MultithreadedSpeed}&singlecore={SinglethreadedSpeed}";
+                string paramedURL = $"/submit?cpu={CurrentCpuName}&threads={ThreadCountTested}&multicore={MultithreadedSpeed}&singlecore={SinglethreadedSpeed}";
                 HttpResponseMessage response = await client.GetAsync(Utils.API_URL + paramedURL);
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
