@@ -182,14 +182,14 @@ namespace FloatTool
                 List<Task> threadPool = new();
                 int threads = Context.ThreadCount;
 
-                Stopwatch timer = Stopwatch.StartNew();
+                long startTime = Stopwatch.GetTimestamp();
 
                 try
                 {
                     for (int i = 0; i < threads; i++)
                     {
-                        var startIndex = i;
-                        var newThread = Task.Factory.StartNew(() => FloatCraftWorkerThread(
+                        int startIndex = i;
+                        Task newThread = Task.Factory.StartNew(() => FloatCraftWorkerThread(
                             new CraftSearchSetup
                             {
                                 SkinPool = inputSkins,
@@ -230,9 +230,9 @@ namespace FloatTool
                     Thread.Sleep(5);
                 }
 
-                timer.Stop();
-
-                float speed = PassedCombinations * 1000 / timer.ElapsedMilliseconds;
+                long endTime = Stopwatch.GetTimestamp();
+                double millis = Utils.GetTimePassed(startTime, endTime).TotalMilliseconds;
+                double speed = PassedCombinations * 1000 / millis;
 
                 Context.MultithreadedSpeed = (int)speed;
                 Context.SinglethreadedSpeed = (int)(speed / threads);

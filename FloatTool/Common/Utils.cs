@@ -19,9 +19,11 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
@@ -178,6 +180,25 @@ namespace FloatTool
             {
                 collection.Move(collection.IndexOf(sortableList[i]), i);
             }
+        }
+        
+        private const long TicksPerMillisecond = 10000;
+        private const long TicksPerSecond = TicksPerMillisecond * 1000;
+        [DllImport("kernel32.dll")]
+        private static extern bool QueryPerformanceFrequency(out long lpFrequency);
+        public static readonly long Frequency = QueryPerformanceFrequency(out long value) ? value : 0;
+        private static readonly double s_tickFrequency = (double)TicksPerSecond / Frequency;
+        
+
+        public static TimeSpan GetTimePassed(long starttime)
+        {
+            long endtime = Stopwatch.GetTimestamp();
+            return GetTimePassed(starttime, endtime);
+        }
+
+        public static TimeSpan GetTimePassed(long starttime, long endtime)
+        {
+            return new TimeSpan((long)((endtime - starttime) * s_tickFrequency));
         }
     }
 

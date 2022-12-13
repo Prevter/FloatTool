@@ -465,13 +465,14 @@ namespace FloatTool
                     }
 
                     SetStatus("m_Searching");
-                    Stopwatch timer = Stopwatch.StartNew();
+                    var startTime = Stopwatch.GetTimestamp();
                     long LastCombinationCount = 0;
 
                     while (true)
                     {
-                        long timeSinceLast = timer.ElapsedMilliseconds;
-                        timer.Restart();
+                        long newTime = Stopwatch.GetTimestamp();
+                        double timeSinceLast = Utils.GetTimePassed(startTime, newTime).TotalMilliseconds;
+                        startTime = newTime;
 
                         bool isAnyRunning = false;
                         foreach (Task t in CollectionsMarshal.AsSpan(ThreadPool))
