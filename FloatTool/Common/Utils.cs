@@ -184,12 +184,8 @@ namespace FloatTool
         
         private const long TicksPerMillisecond = 10000;
         private const long TicksPerSecond = TicksPerMillisecond * 1000;
-        [DllImport("kernel32.dll")]
-        private static extern bool QueryPerformanceFrequency(out long lpFrequency);
-        public static readonly long Frequency = QueryPerformanceFrequency(out long value) ? value : 0;
-        private static readonly double s_tickFrequency = (double)TicksPerSecond / Frequency;
+        private static readonly double s_tickFrequency = (double)TicksPerSecond / Stopwatch.Frequency;
         
-
         public static TimeSpan GetTimePassed(long starttime)
         {
             long endtime = Stopwatch.GetTimestamp();
