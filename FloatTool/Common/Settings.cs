@@ -16,6 +16,7 @@
 */
 
 using Microsoft.Win32;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -47,6 +48,19 @@ namespace FloatTool
         CRC = 40, UYU = 41,
         RMB = 9000, NXP = 9001
     }
+    
+    // These are currently the same, but that can change later.
+    public enum FloatAPI
+    {
+        CSGOFloat,
+        SteamInventoryHelper
+    }
+
+    public enum ExtensionType
+    {
+        CSGOFloat,
+        SteamInventoryHelper
+    }
 
     public static class CurrencyHelper
     {
@@ -65,31 +79,40 @@ namespace FloatTool
 
     public sealed class Settings
     {
-        public string LanguageCode { get; set; }
+        public string LanguageCode { get; set; } = Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName;
         public Currency Currency { get; set; } = Currency.USD;
         public string ThemeURI { get; set; } = "/Theme/Schemes/Dark.xaml";
         public bool Sound { get; set; } = true;
         public bool CheckForUpdates { get; set; } = true;
         public bool DiscordRPC { get; set; } = true;
         public int ThreadCount { get; set; } = Environment.ProcessorCount;
-        public bool Migrated { get; set; } = false;
+        public FloatAPI FloatAPI { get; set; } = FloatAPI.CSGOFloat;
+        public ExtensionType ExtensionType { get; set; } = ExtensionType.CSGOFloat;
 
-        public void TryLoad()
+        public void Load()
         {
-            // Load settings from registry
-            const string userRoot = "HKEY_CURRENT_USER";
-            const string subkey = "Software\\FloatTool";
-            const string keyName = userRoot + "\\" + subkey;
             try
             {
-                LanguageCode = (string)Registry.GetValue(keyName, "languageCode", Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName);
-                Currency = (Currency)Registry.GetValue(keyName, "currency", Currency.USD);
-                ThemeURI = (string)Registry.GetValue(keyName, "themeURI", "/Theme/Schemes/Dark.xaml");
-                ThreadCount = (int)Registry.GetValue(keyName, "lastThreads", Environment.ProcessorCount);
-                Sound = (string)Registry.GetValue(keyName, "sound", "True") == "True";
-                CheckForUpdates = (string)Registry.GetValue(keyName, "updateCheck", "True") == "True";
-                DiscordRPC = (string)Registry.GetValue(keyName, "discordRPC", "True") == "True";
-                Migrated = (string)Registry.GetValue(keyName, "migrated", "False") == "True";
+                string settingsPath = Path.Join(AppHelpers.AppDirectory, "settings.json");
+                if (File.Exists(settingsPath))
+                {
+                    var settings = File.ReadAllText(settingsPath);
+                    var tmpSettings = JsonConvert.DeserializeObject<Settings>(settings);
+                    LanguageCode = tmpSettings.LanguageCode;
+                    Currency = tmpSettings.Currency;
+                    ThemeURI = tmpSettings.ThemeURI;
+                    Sound = tmpSettings.Sound;
+                    CheckForUpdates = tmpSettings.CheckForUpdates;
+                    DiscordRPC = tmpSettings.DiscordRPC;
+                    ThreadCount = tmpSettings.ThreadCount;
+                    FloatAPI = tmpSettings.FloatAPI;
+                    ExtensionType = tmpSettings.ExtensionType;
+                }
+                else
+                {
+                    LoadOld();
+                    Save();
+                }
             }
             catch (Exception ex)
             {
@@ -97,26 +120,69 @@ namespace FloatTool
             }
         }
 
-        public void Save()
+        public void LoadOld()
         {
-            // Save settings to registry
+            // Load settings from registry
             const string userRoot = "HKEY_CURRENT_USER";
             const string subkey = "Software\\FloatTool";
             const string keyName = userRoot + "\\" + subkey;
 
-            Registry.SetValue(keyName, "languageCode", LanguageCode);
-            Registry.SetValue(keyName, "currency", (int)Currency);
-            Registry.SetValue(keyName, "themeURI", ThemeURI);
-            Registry.SetValue(keyName, "lastThreads", ThreadCount);
-            Registry.SetValue(keyName, "sound", Sound);
-            Registry.SetValue(keyName, "updateCheck", CheckForUpdates);
-            Registry.SetValue(keyName, "discordRPC", DiscordRPC);
-            Registry.SetValue(keyName, "migrated", Migrated);
+            try
+            {
+                using var hkcu = RegistryKey.OpenBaseKey(RegistryHive.CurrentUser, RegistryView.Registry64);
+                var key = hkcu.OpenSubKey(@"SOFTWARE\FloatTool");
+
+                if (key == null) return;
+
+                LanguageCode = (string)Registry.GetValue(keyName, "languageCode", LanguageCode);
+                Currency = (Currency)Registry.GetValue(keyName, "currency", Currency);
+                ThemeURI = (string)Registry.GetValue(keyName, "themeURI", ThemeURI);
+                ThreadCount = (int)Registry.GetValue(keyName, "lastThreads", ThreadCount);
+                Sound = (string)Registry.GetValue(keyName, "sound", Sound ? "True" : "False") == "True";
+                CheckForUpdates = (string)Registry.GetValue(keyName, "updateCheck", CheckForUpdates ? "True" : "False") == "True";
+                DiscordRPC = (string)Registry.GetValue(keyName, "discordRPC", DiscordRPC ? "True" : "False") == "True";
+
+                key.Close();
+                Logger.Log.Info("Loaded settings from registry");
+
+                MigrateFromOldVersion();
+            }
+            catch (Exception ex)
+            {
+                Logger.Log.Error("Error loading settings from registry", ex);
+            }
+        }
+
+        public void Save()
+        {
+            try
+            {
+                if (!Directory.Exists(AppHelpers.AppDirectory))
+                    Directory.CreateDirectory(AppHelpers.AppDirectory);
+
+                var settings = JsonConvert.SerializeObject(this, Formatting.Indented);
+                File.WriteAllText(Path.Join(AppHelpers.AppDirectory, "settings.json"), settings);
+            }
+            catch (Exception ex)
+            {
+                Logger.Log.Error("Error saving settings", ex);
+            }
         }
 
         public void MigrateFromOldVersion()
         {
-            // This method cleans up old settings and data            
+            // This method cleans up old settings and data
+            try
+            {
+                RegistryKey regkeySoftware = Registry.CurrentUser.OpenSubKey("SOFTWARE", true);
+                regkeySoftware.DeleteSubKeyTree("FloatTool");
+                regkeySoftware.Close();
+            }
+            catch (Exception ex)
+            {
+                Logger.Log.Error("Error saving settings", ex);
+            }
+
             List<string> oldFiles = new()
             {
                 "debug.log",
@@ -135,15 +201,12 @@ namespace FloatTool
             }
 
             App.CleanOldFiles();
-
-            // Finally save that we migrated to not do this every time
-            Migrated = true;
             Save();
         }
 
         public override string ToString()
         {
-            return $"{{LanguageCode: {LanguageCode}, Currency: {Currency}, ThemeURI: {ThemeURI}, Sound: {Sound}, CheckForUpdates: {CheckForUpdates}, DiscordRPC: {DiscordRPC}, ThreadCount: {ThreadCount}, HaveUpdated: {Migrated}}}";
+            return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
     }
 }

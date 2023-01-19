@@ -25,13 +25,10 @@ namespace FloatTool
 {
     public sealed partial class SettingsWindow : Window
     {
-        public Settings Settings;
-
-        public SettingsWindow(Settings settings)
+        public SettingsWindow()
         {
-            Settings = settings;
             InitializeComponent();
-            DataContext = new SettingsViewModel(settings);
+            DataContext = new SettingsViewModel(this);
             Logger.Log.Info("Opened settings window");
         }
 
@@ -43,8 +40,8 @@ namespace FloatTool
 
         private void WindowButton_Click(object sender, RoutedEventArgs e)
         {
-            Settings.Save();
-            Logger.Log.Info($"Saved settings: {Settings}");
+            AppHelpers.Settings.Save();
+            Logger.Log.Info($"Saved settings: {AppHelpers.Settings}");
             Logger.Log.Info($"Closed settings window");
             Close();
         }
@@ -56,11 +53,6 @@ namespace FloatTool
             var combined = Path.Combine(appdata, subfolder);
             Logger.Log.Info("Opened themes folder: " + combined);
             Process.Start("explorer.exe", combined);
-        }
-
-        private void GetThemes_Click(object sender, RoutedEventArgs e)
-        {
-            Process.Start(new ProcessStartInfo { FileName = "https://git.prevter.ml/floattool/themes", UseShellExecute = true });
         }
     }
 }

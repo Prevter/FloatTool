@@ -123,8 +123,7 @@ namespace FloatTool
         public Dictionary<Tuple<double, double>, List<Skin>> Outcomes = new();
 
         public List<Collection> SkinsDatabase;
-        public Settings Settings { get; set; }
-
+        
         #region Properties
 
         public ObservableCollection<Combination> FoundCombinations { get; set; }
@@ -136,8 +135,8 @@ namespace FloatTool
 
         public int ThreadCount
         {
-            get { return Settings.ThreadCount; }
-            set { Settings.ThreadCount = value; OnPropertyChanged(); }
+            get { return AppHelpers.Settings.ThreadCount; }
+            set { AppHelpers.Settings.ThreadCount = value; OnPropertyChanged(); }
         }
 
         public string CombinationsLabel
@@ -535,11 +534,10 @@ namespace FloatTool
             SkinList = list;
         }
 
-        public MainViewModel(string weapon, string skin, string quality, string filter, int count, int skip, Settings settings, Viewbox errorTooltip, Viewbox errorTooltipFloat)
+        public MainViewModel(string weapon, string skin, string quality, string filter, int count, int skip, Viewbox errorTooltip, Viewbox errorTooltipFloat)
         {
             errorMessage = errorTooltip;
             errorMessageFloat = errorTooltipFloat;
-            Settings = settings;
             WeaponName = weapon;
             SkinName = skin;
             SkinQuality = quality;

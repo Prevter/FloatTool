@@ -29,13 +29,11 @@ namespace FloatTool
 {
     public sealed partial class UpdateWindow : Window
     {
-        public Settings Settings;
         public UpdateResult UpdateResult;
 
-        public UpdateWindow(UpdateResult updateResult, Settings settings)
+        public UpdateWindow(UpdateResult updateResult)
         {
             InitializeComponent();
-            Settings = settings;
             DataContext = updateResult;
             UpdateResult = updateResult;
             Markdown.Xaml.Markdown engine = new();
@@ -58,8 +56,8 @@ namespace FloatTool
 
         private void DoNotAskButtonClick(object sender, RoutedEventArgs e)
         {
-            Settings.CheckForUpdates = false;
-            Settings.Save();
+            AppHelpers.Settings.CheckForUpdates = false;
+            AppHelpers.Settings.Save();
             Close();
         }
 

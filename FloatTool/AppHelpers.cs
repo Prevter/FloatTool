@@ -26,6 +26,8 @@ namespace FloatTool
         public static FileSystemWatcher Watcher;
         public static DiscordRpcClient DiscordClient;
         public static string VersionCode;
+        public static string AppDirectory;
+        public static Settings Settings;
         public static List<string> ThemesFound { get; set; }
     }
 }

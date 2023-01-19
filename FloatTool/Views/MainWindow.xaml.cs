@@ -40,7 +40,6 @@ namespace FloatTool
     public sealed partial class MainWindow : Window
     {
         public MainViewModel ViewModel;
-        public Settings Settings;
         private readonly RPCSettingsPersist RPCSettings = new();
 
         private static long PassedCombinations;
@@ -58,7 +57,7 @@ namespace FloatTool
                 RPCSettings.ShowTime = false;
             }
 
-            if (Settings.DiscordRPC)
+            if (AppHelpers.Settings.DiscordRPC)
             {
                 AppHelpers.DiscordClient.SetPresence(RPCSettings.GetPresense());
             }
@@ -73,16 +72,12 @@ namespace FloatTool
                 CombinationFoundSound.Load();
             }
 
-            Settings = new Settings();
-            Settings.TryLoad();
+            App.SelectCulture(AppHelpers.Settings.LanguageCode);
+            App.SelectTheme(AppHelpers.Settings.ThemeURI);
 
             if (!Settings.Migrated)
                 Settings.MigrateFromOldVersion();
-
-            App.SelectCulture(Settings.LanguageCode);
-            App.SelectTheme(Settings.ThemeURI);
-
-            ViewModel = new MainViewModel("Nova", "Predator", "Field-Tested", "0.250000000", 100, 20, Settings, ErrorTooltip, ErrorTooltipFloat);
+            ViewModel = new MainViewModel("Nova", "Predator", "Field-Tested", "0.250000000", 100, 20, ErrorTooltip, ErrorTooltipFloat);
 
             MaxHeight = SystemParameters.WorkArea.Height + 12;
             MaxWidth = SystemParameters.WorkArea.Width + 12;
@@ -92,7 +87,7 @@ namespace FloatTool
 
             Logger.Log.Info("Main window started");
 
-            if (Settings.CheckForUpdates)
+            if (AppHelpers.Settings.CheckForUpdates)
             {
                 Task.Factory.StartNew(() =>
                 {
@@ -102,7 +97,7 @@ namespace FloatTool
                         Dispatcher.Invoke(new Action(() =>
                         {
                             Logger.Log.Info("New version available");
-                            var updateWindow = new UpdateWindow(update, Settings)
+                            var updateWindow = new UpdateWindow(update)
                             {
                                 Owner = this
                             };
@@ -120,6 +115,7 @@ namespace FloatTool
         }
 
         private void Window_KeyUp(object sender, KeyEventArgs e)
+        private async void Window_KeyUp(object sender, KeyEventArgs e)
         {
             switch (e.Key)
             {
@@ -143,6 +139,9 @@ namespace FloatTool
                     break;
                 case Key.F12:
                     // TODO: Create a dev tools window
+                    var client = new SteamClient();
+                    var qrcode = await client.LoginWithQR();
+                    MessageBox.Show(qrcode);
                     break;
             }
         }
@@ -165,10 +164,10 @@ namespace FloatTool
                     Process.Start(new ProcessStartInfo { FileName = "https://discord.gg/RM9VrzMfhP", UseShellExecute = true });
                     break;
                 case "BenchmarkButton":
-                    new BenchmarkWindow(Settings).ShowDialog();
+                    new BenchmarkWindow().ShowDialog();
                     break;
                 case "SettingsButton":
-                    new SettingsWindow(Settings).ShowDialog();
+                    new SettingsWindow().ShowDialog();
                     break;
             }
 
@@ -251,7 +250,7 @@ namespace FloatTool
                                     Price = price,
                                     Wear32Bit = ((double)ieee).ToString("0.000000000000000", CultureInfo.InvariantCulture),
                                 });
-                                if (Settings.Sound)
+                                if (AppHelpers.Settings.Sound)
                                     CombinationFoundSound.Play();
                             }));
                         }
@@ -283,7 +282,7 @@ namespace FloatTool
                 TokenSource = new CancellationTokenSource();
                 CancellationToken = TokenSource.Token;
 
-                if (Settings.DiscordRPC)
+                if (AppHelpers.Settings.DiscordRPC)
                 {
                     RPCSettings.Details = $"%m_Searching% {ViewModel.FullSkinName}";
                     RPCSettings.State = $"%m_DesiredFloat% {ViewModel.SearchFilter}";
@@ -324,7 +323,7 @@ namespace FloatTool
 
                     ConcurrentBag<InputSkin> inputSkinBag = new();
 
-                    string url = $"https://steamcommunity.com/market/listings/730/{ViewModel.FullSkinName}/render/?count={ViewModel.SkinCount}&start={ViewModel.SkinSkipCount}&currency={(int)Settings.Currency}";
+                    string url = $"https://steamcommunity.com/market/listings/730/{ViewModel.FullSkinName}/render/?count={ViewModel.SkinCount}&start={ViewModel.SkinSkipCount}&currency={(int)AppHelpers.Settings.Currency}";
                     try
                     {
                         using var client = new HttpClient();

@@ -30,16 +30,15 @@ namespace FloatTool
     public sealed partial class BenchmarkWindow : Window
     {
         public BenchmarkViewModel Context;
-        public Settings Settings;
         private static long PassedCombinations;
 
-        public BenchmarkWindow(Settings settings)
+        public BenchmarkWindow()
         {
             Logger.Log.Info("Opened benchmark window");
-            Context = new BenchmarkViewModel(settings);
+            Context = new BenchmarkViewModel();
             DataContext = Context;
 
-            if (settings.DiscordRPC)
+            if (AppHelpers.Settings.DiscordRPC)
             {
                 AppHelpers.DiscordClient.SetPresence(new DiscordRPC.RichPresence()
                 {

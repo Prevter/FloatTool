@@ -40,9 +40,6 @@ namespace FloatTool
             public GridLength FillSize { get; set; }
             public GridLength EmptySize { get; set; }
         }
-
-        public Settings Settings;
-
         public long TotalCombinations { get; set; }
 
         private int progressPercentage;
@@ -182,14 +179,10 @@ namespace FloatTool
                         else if (cpuName.StartsWith("Intel"))
                             currentFill = IntelBrush;
 
-                        string threadsString = Application.Current.Resources["m_Threads"] as string;
-                        if ((int)benchmark.threads == 1)
-                            threadsString = Application.Current.Resources["m_Thread"] as string;
-
                         BenchmarkResults.Add(new BenchmarkResult
                         {
                             CpuName = cpuName,
-                            ThreadCount = $"{benchmark.threads} {threadsString} [{benchmark.version}]",
+                            ThreadCount = Utils.EscapeLocalization($"{benchmark.threads} {((int)benchmark.threads == 1 ? "%m_Thread%" : "%m_Threads%")} [{benchmark.version}]"),
                             MultithreadedScore = $"{(int)benchmark.multithread:n0}",
                             SinglethreadedScore = $"{(int)benchmark.singlethread:n0}",
                             FillSize = new GridLength(percentage, GridUnitType.Star),
@@ -241,10 +234,9 @@ namespace FloatTool
             PollBenchmarkResults();
         }
 
-        public BenchmarkViewModel(Settings settings)
+        public BenchmarkViewModel()
         {
-            Settings = settings;
-            ThreadCount = settings.ThreadCount;
+            ThreadCount = AppHelpers.Settings.ThreadCount;
             string path = @"HKEY_LOCAL_MACHINE\HARDWARE\DESCRIPTION\System\CentralProcessor\0";
             string cpu = (string)Registry.GetValue(path, "ProcessorNameString", "Unknown");
             CurrentCpuName = Utils.ShortCpuName(cpu);

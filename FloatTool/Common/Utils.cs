@@ -23,7 +23,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
-using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
@@ -99,12 +98,18 @@ namespace FloatTool
 
     public static class Utils
     {
-        public const string API_URL = "https://git.prevter.ml/api/floattool";
+        public const string API_URL = "https://prevter.ml/api/floattool";
         private static readonly HttpClient Client = new();
 
         public static async Task<double> GetWearFromInspectURL(string inspect_url)
         {
-            var result = await Client.GetAsync($"https://api.csgofloat.com/?url={inspect_url}");
+            string url = AppHelpers.Settings.FloatAPI switch
+            {
+                FloatAPI.SteamInventoryHelper => "https://floats.steaminventoryhelper.com/?url=",
+                _ => "https://api.csgofloat.com/?url=",
+            };
+
+            var result = await Client.GetAsync(url + inspect_url);
             result.EnsureSuccessStatusCode();
             string response = await result.Content.ReadAsStringAsync();
             dynamic json = JsonConvert.DeserializeObject(response);
@@ -181,11 +186,11 @@ namespace FloatTool
                 collection.Move(collection.IndexOf(sortableList[i]), i);
             }
         }
-        
+
         private const long TicksPerMillisecond = 10000;
         private const long TicksPerSecond = TicksPerMillisecond * 1000;
         private static readonly double s_tickFrequency = (double)TicksPerSecond / Stopwatch.Frequency;
-        
+
         public static TimeSpan GetTimePassed(long starttime)
         {
             long endtime = Stopwatch.GetTimestamp();
@@ -196,6 +201,7 @@ namespace FloatTool
         {
             return new TimeSpan((long)((endtime - starttime) * s_tickFrequency));
         }
+
     }
 
     public sealed class UpdateResult

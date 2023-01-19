@@ -24,8 +24,6 @@ namespace FloatTool
 {
     public sealed class SettingsViewModel : INotifyPropertyChanged
     {
-        public Settings Settings { get; set; }
-
         public static List<string> ThemesList
         {
             get
@@ -39,33 +37,33 @@ namespace FloatTool
 
         public int ThemeIndex
         {
-            get { return AppHelpers.ThemesFound.IndexOf(Settings.ThemeURI); }
+            get { return AppHelpers.ThemesFound.IndexOf(AppHelpers.Settings.ThemeURI); }
             set
             {
-                Settings.ThemeURI = AppHelpers.ThemesFound[value];
-                App.SelectTheme(Settings.ThemeURI);
+                AppHelpers.Settings.ThemeURI = AppHelpers.ThemesFound[value];
+                App.SelectTheme(AppHelpers.Settings.ThemeURI);
                 OnPropertyChanged();
             }
         }
 
         public bool EnableSound
         {
-            get { return Settings.Sound; }
-            set { Settings.Sound = value; OnPropertyChanged(); }
+            get { return AppHelpers.Settings.Sound; }
+            set { AppHelpers.Settings.Sound = value; OnPropertyChanged(); }
         }
 
         public bool CheckUpdates
         {
-            get { return Settings.CheckForUpdates; }
-            set { Settings.CheckForUpdates = value; OnPropertyChanged(); }
+            get { return AppHelpers.Settings.CheckForUpdates; }
+            set { AppHelpers.Settings.CheckForUpdates = value; OnPropertyChanged(); }
         }
 
         public bool DiscordRPC
         {
-            get { return Settings.DiscordRPC; }
+            get { return AppHelpers.Settings.DiscordRPC; }
             set
             {
-                Settings.DiscordRPC = value;
+                AppHelpers.Settings.DiscordRPC = value;
                 OnPropertyChanged();
 
                 // Re-enabling does not work. Probably bug in the library
@@ -80,11 +78,11 @@ namespace FloatTool
         {
             get
             {
-                return CurrencyHelper.GetIndexFromCurrency(Settings.Currency);
+                return CurrencyHelper.GetIndexFromCurrency(AppHelpers.Settings.Currency);
             }
             set
             {
-                Settings.Currency = CurrencyHelper.GetCurrencyByIndex(value);
+                AppHelpers.Settings.Currency = CurrencyHelper.GetCurrencyByIndex(value);
                 OnPropertyChanged();
             }
         }
@@ -139,12 +137,12 @@ namespace FloatTool
         {
             get
             {
-                return LanguageCodes.IndexOf(Settings.LanguageCode);
+                return LanguageCodes.IndexOf(AppHelpers.Settings.LanguageCode);
             }
             set
             {
-                Settings.LanguageCode = LanguageCodes[value];
-                App.SelectCulture(Settings.LanguageCode);
+                AppHelpers.Settings.LanguageCode = LanguageCodes[value];
+                App.SelectCulture(AppHelpers.Settings.LanguageCode);
                 OnPropertyChanged();
             }
         }
@@ -175,10 +173,63 @@ namespace FloatTool
             "zh",
         };
 
-        public SettingsViewModel(Settings settings)
+        public List<string> FloatAPIList { get; private set; } = new()
         {
-            Settings = settings;
+            "CSGOFloat (api.csgofloat.com)",
+            "SIH (floats.steaminventoryhelper.com)"
+        };
+
+        public List<string> ExtensionNames { get; private set; } = new()
+        {
+            "CSGOFloat Market Checker",
+            "Steam Inventory Helper"
+        };
+
+        public int SelectedFloatAPI
+        {
+            get { return (int)AppHelpers.Settings.FloatAPI; }
+            set
+            {
+                AppHelpers.Settings.FloatAPI = (FloatAPI)value;
+                OnPropertyChanged();
+            }
+        }
+
+        public int SelectedExtension
+        {
+            get { return (int)AppHelpers.Settings.ExtensionType; }
+            set
+            {
+                AppHelpers.Settings.ExtensionType = (ExtensionType)value;
+                OnPropertyChanged();
+            }
+        }
+        
+        private bool isShowingAdvanced = false;
+        private RelayCommand showAdvanced;
+        public RelayCommand ShowAdvancedCommand
+        {
+            get
+            {
+                return showAdvanced ??= new RelayCommand(obj =>
+                {
+                    isShowingAdvanced = !isShowingAdvanced;
+
+                    if (isShowingAdvanced)
+                        window.Height = 370;
+                    else
+                        window.Height = 310;
+
+                });
+            }
+        }
+        
+        private readonly SettingsWindow window;
+
+        public SettingsViewModel(SettingsWindow window)
+        {
             Languages = new List<string>();
+            this.window = window;
 
             foreach (var lang in LanguageCodes)
             {

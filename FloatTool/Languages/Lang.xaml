@@ -50,6 +50,9 @@
     <v:String x:Key="m_OpenThemesFolder">Open themes folder</v:String>
     <v:String x:Key="m_EnableSound">Enable sound</v:String>
     <v:String x:Key="m_CheckForUpdates">Check for updates</v:String>
+    <v:String x:Key="m_OpenAdvancedSettings">Show advanced</v:String>
+    <v:String x:Key="m_FloatAPI">Float fetcher API:</v:String>
+    <v:String x:Key="m_CopyFormat">Format for:</v:String>
     
     <!-- Benchmark window -->
     <v:String x:Key="m_Benchmark">Benchmark</v:String>
