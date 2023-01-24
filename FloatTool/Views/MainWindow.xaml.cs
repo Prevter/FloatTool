@@ -75,8 +75,6 @@ namespace FloatTool
             App.SelectCulture(AppHelpers.Settings.LanguageCode);
             App.SelectTheme(AppHelpers.Settings.ThemeURI);
 
-            if (!Settings.Migrated)
-                Settings.MigrateFromOldVersion();
             ViewModel = new MainViewModel("Nova", "Predator", "Field-Tested", "0.250000000", 100, 20, ErrorTooltip, ErrorTooltipFloat);
 
             MaxHeight = SystemParameters.WorkArea.Height + 12;
@@ -114,7 +112,6 @@ namespace FloatTool
             if (e.GetPosition(this).Y < 40) DragMove();
         }
 
-        private void Window_KeyUp(object sender, KeyEventArgs e)
         private async void Window_KeyUp(object sender, KeyEventArgs e)
         {
             switch (e.Key)
