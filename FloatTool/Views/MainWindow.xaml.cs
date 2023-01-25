@@ -136,9 +136,9 @@ namespace FloatTool
                     break;
                 case Key.F12:
                     // TODO: Create a dev tools window
-                    var client = new SteamClient();
-                    var qrcode = await client.LoginWithQR();
-                    MessageBox.Show(qrcode);
+                    // var client = new SteamClient();
+                    // var qrcode = await client.LoginWithQR();
+                    // MessageBox.Show(qrcode);
                     break;
             }
         }
