@@ -117,10 +117,10 @@ namespace FloatTool
             switch (e.Key)
             {
                 case Key.F1:
-                    Process.Start(new ProcessStartInfo { FileName = "https://git.prevter.ml/floattool/table", UseShellExecute = true });
+                    Process.Start(new ProcessStartInfo { FileName = "https://prevter.ml/floattool/table", UseShellExecute = true });
                     break;
                 case Key.F2:
-                    Process.Start(new ProcessStartInfo { FileName = "https://git.prevter.ml/floattool/tools", UseShellExecute = true });
+                    Process.Start(new ProcessStartInfo { FileName = "https://prevter.ml/floattool/tools", UseShellExecute = true });
                     break;
                 case Key.F3:
                     string skin = $"{ViewModel.WeaponName} | {ViewModel.SkinName}";
@@ -135,10 +135,6 @@ namespace FloatTool
                     ViewModel.FoundCombinations.Sort((a, b) => a.Price.CompareTo(b.Price));
                     break;
                 case Key.F12:
-                    // TODO: Create a dev tools window
-                    // var client = new SteamClient();
-                    // var qrcode = await client.LoginWithQR();
-                    // MessageBox.Show(qrcode);
                     break;
             }
         }
@@ -337,7 +333,7 @@ namespace FloatTool
 
                         SetStatus("m_GettingFloats");
 
-                        Dictionary<Task<double>, float> floatTasks = new();
+                        Dictionary<Task<double>, (string, float)> floatTasks = new();
                         foreach (var skin in r["listinginfo"])
                         {
                             string lid = r["listinginfo"][skin.Name]["listingid"].ToString();
@@ -348,8 +344,8 @@ namespace FloatTool
                             {
                                 floatTasks.Add(
                                     Utils.GetWearFromInspectURL(link),
-                                    (float.Parse(r["listinginfo"][skin.Name]["converted_price"].ToString()) +
-                                    float.Parse(r["listinginfo"][skin.Name]["converted_fee"].ToString())) / 100
+                                    (lid, (float.Parse(r["listinginfo"][skin.Name]["converted_price"].ToString()) +
+                                    float.Parse(r["listinginfo"][skin.Name]["converted_fee"].ToString())) / 100)
                                 );
                             }
                             catch (Exception ex)
@@ -364,8 +360,9 @@ namespace FloatTool
                             {
                                 inputSkinBag.Add(new InputSkin(
                                     task.Result,
-                                    floatTasks[task],
-                                    Settings.Currency
+                                    floatTasks[task].Item2,
+                                    AppHelpers.Settings.Currency,
+                                    floatTasks[task].Item1
                                 ));
 
                                 ViewModel.ProgressPercentage = (float)inputSkinBag.Count * 100 / floatTasks.Count;

@@ -1,5 +1,116 @@
 [
   {
+    "Name": "Revolution Case",
+    "Link": "https://csgostash.com/case/376/Revolution-Case",
+    "CanBeStattrak": true,
+    "LowestRarity": "Mil-Spec",
+    "HighestRarity": "Covert",
+    "Skins": [
+      {
+        "Name": "AK-47 | Head Shot",
+        "Rarity": "Covert",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "M4A4 | Temukau",
+        "Rarity": "Covert",
+        "MinWear": 0.0,
+        "MaxWear": 0.8
+      },
+      {
+        "Name": "AWP | Doodle Lore",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 0.8
+      },
+      {
+        "Name": "P2000 | Wicked Sick",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "UMP-45 | Wild Child",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "M4A1-S | Emphorosaur-S",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.8
+      },
+      {
+        "Name": "Glock-18 | Umbral Rabbit",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.75
+      },
+      {
+        "Name": "R8 Revolver | Banana Cannon",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "P90 | Neoqueen",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "MAC-10 | Sakkaku",
+        "Rarity": "Restricted",
+        "MinWear": 0.21,
+        "MaxWear": 0.79
+      },
+      {
+        "Name": "MP5-SD | Liquidation",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "P250 | Re.built",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.9
+      },
+      {
+        "Name": "SCAR-20 | Fragments",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.78
+      },
+      {
+        "Name": "MP9 | Featherweight",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "Tec-9 | Rebel",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "MAG-7 | Insomnia",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "SG 553 | Cyberforce",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.9
+      }
+    ]
+  },
+  {
     "Name": "Recoil Case",
     "Link": "https://csgostash.com/case/355/Recoil-Case",
     "CanBeStattrak": true,

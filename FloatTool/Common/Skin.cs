@@ -141,14 +141,16 @@ namespace FloatTool
         public double WearValue;
         public float Price;
         public Currency SkinCurrency;
+        public string ListingID;
 
         public double GetWearValue => WearValue;
 
-        public InputSkin(double wear, float price, Currency currency)
+        public InputSkin(double wear, float price, Currency currency, string listingId = "")
         {
             WearValue = wear;
             Price = price;
             SkinCurrency = currency;
+            ListingID = listingId;
         }
 
         internal int CompareTo(InputSkin b)
