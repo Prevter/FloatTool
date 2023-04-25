@@ -39,6 +39,27 @@ This is probably the fastest app you can find, as it can achieve more than 15,00
 _Please see [Documentation](https://prevter.github.io/FloatTool/tutorial.html) for complete tutorial in usage_
 
 ## Version History
+* 1.4.1
+    * Added new Anubis Collection and changed "AWP | Doodle Lore"
+    * Rewrote ItemsParser to use game files instead of csgostash.com
+    * Remade NextCombination method to actually support skipping, instead of running in a loop.
+    * Added toggle to use Parallel.For instead of task pools. Testing shows a slight improvement on AMD CPUs.
+    * Synced all namespaces to organize codebase
+* 1.4.0
+    * Added new Revolution Case
+    * Remade "Copy" button. Now it autoselects the corresponding textbox
+    * Fixed a benchmark exploit
+    * Remade Stopwatch to work like in .NET 7 (Doesn't allocate on heap, should work faster)
+    * Settings now use JSON instead of registry
+    * Added two new options to settings:
+        * API selector to choose from two different methods of getting floats
+        * Format selector to correctly format floats for selected extension
+* 1.3.0
+    * Changed from decimal (128 bit) to double (64 bit). This made calculations faster, while not changing the precision
+    * Made all classes sealed. This prohibits the use of inheritance in classes and slightly improves performance
+    * Rewrote combinations finding algorithm and embeded it in main loop
+    * Fixed minor bug in Discord RPC
+    * Fixed link to the themes list in settings
 * 1.2.0
     * Discord RPC now changes correctly according to current language and state
     * Before search starts, skins are sorted by price to get more relevant crafts

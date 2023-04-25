@@ -6,14 +6,15 @@
     <UseWPF>true</UseWPF>
     <PlatformTarget>x64</PlatformTarget>
     <Authors>Prevter</Authors>
-    <PackageProjectUrl>https://prevter.github.io/FloatTool</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Prevter/FloatTool</RepositoryUrl>
+    <PackageProjectUrl>https://prevter.ml/floattool</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/prevter/floattool</RepositoryUrl>
     <NeutralLanguage>en</NeutralLanguage>
-    <AssemblyVersion>1.4.0</AssemblyVersion>
+    <AssemblyVersion>1.4.1</AssemblyVersion>
     <FileVersion>$(AssemblyVersion)</FileVersion>
     <ApplicationIcon>Assets\Icon.ico</ApplicationIcon>
     <DebugType>embedded</DebugType>
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
