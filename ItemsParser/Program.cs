@@ -1,153 +1,57 @@
-﻿using HtmlAgilityPack;
+﻿/*
+- Copyright(C) 2023 Prevter
+-
+- This program is free software: you can redistribute it and/or modify
+- it under the terms of the GNU General Public License as published by
+- the Free Software Foundation, either version 3 of the License, or
+- (at your option) any later version.
+-
+- This program is distributed in the hope that it will be useful,
+- but WITHOUT ANY WARRANTY; without even the implied warranty of
+- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+- GNU General Public License for more details.
+-
+- You should have received a copy of the GNU General Public License
+- along with this program. If not, see <https://www.gnu.org/licenses/>.
+*/
 using ItemsParser;
 using Newtonsoft.Json;
-using System.Diagnostics;
-using System.Globalization;
-using System.Web;
 
-if (!Directory.Exists("cache"))
-    Directory.CreateDirectory("cache");
-
-if (args.Contains("--redownload") || args.Contains("-r") || !File.Exists("cache/index.html"))
+// Download game files
+if (args.Contains("--redownload") || args.Contains("-r")
+|| !File.Exists("items_game.vdf") || !File.Exists("csgo_english.vdf"))
 {
-    await Utils.DownloadFile("https://csgostash.com/", "cache/index.html");
+	Console.WriteLine("Downloading files...");
+	await Utils.DownloadFile("https://raw.githubusercontent.com/SteamDatabase/GameTracking-CSGO/master/csgo/scripts/items/items_game.txt", "items_game.vdf");
+	await Utils.DownloadFile("https://raw.githubusercontent.com/SteamDatabase/GameTracking-CSGO/master/csgo/resource/csgo_english.txt", "csgo_english.vdf");
 }
 
-List<Collection> collections = new();
-var doc = new HtmlDocument();
-doc.Load("cache/index.html");
+// Parse game files
+Console.WriteLine("Parsing items_game.vdf...");
+var items_game = VdfConvert.Parse(File.ReadAllText("items_game.vdf"));
 
-var navbar = doc.DocumentNode.SelectSingleNode("//body/div[@class=\"container header\"]/div[@class=\"navbar-wrapper\"]/nav/div/div[@id=\"navbar-expandable\"]/ul");
-var casesLinks = navbar.ChildNodes[13].SelectSingleNode("ul").ChildNodes;
-var collectionsLinks = navbar.ChildNodes[15].SelectSingleNode("ul").ChildNodes;
+Console.WriteLine("Parsing csgo_english.vdf...");
+var csgo_english = VdfConvert.Parse(File.ReadAllText("csgo_english.vdf"));
 
-foreach (var caseLink in casesLinks)
+// Optionally convert to JSON
+if (args.Contains("--json") || args.Contains("-j"))
 {
-    if (caseLink.FirstChild is null || caseLink.FirstChild.Name != "a")
-        continue;
-    string href = caseLink.FirstChild.GetAttributeValue("href", "").Trim();
-    if (!href.StartsWith("https://csgostash.com/case/"))
-        continue;
+	Console.WriteLine("Saving items_game.json");
+	File.WriteAllText("items_game.json", JsonConvert.SerializeObject(items_game, Formatting.Indented));
 
-    collections.Add(await LoadCollection(href));
+	Console.WriteLine("Saving csgo_english.json");
+	File.WriteAllText("csgo_english.json", JsonConvert.SerializeObject(csgo_english, Formatting.Indented));
 }
 
-foreach (var collectionLink in collectionsLinks)
-{
-    if (collectionLink.FirstChild is null || collectionLink.FirstChild.Name != "a")
-        continue;
-    string href = collectionLink.FirstChild.GetAttributeValue("href", "").Trim();
+// Make all language keys lowercase for easier access
+Dictionary<string, string> tokens = new();
+foreach (var key in csgo_english["lang"]["Tokens"].Keys)
+	tokens[key.ToLower()] = csgo_english["lang"]["Tokens"][key];
+csgo_english["lang"]["Tokens"] = tokens;
 
-    collections.Add(await LoadCollection(href));
-}
+// Parse data
+ItemParser parser = new(items_game, csgo_english);
+List<Collection> collections = parser.ComposeData();
 
-string json = JsonConvert.SerializeObject(collections, Formatting.Indented);
-File.WriteAllText("SkinList.json", json);
-
-static async Task<Collection> LoadCollection(string url)
-{
-    Collection collection = new()
-    {
-        CanBeStattrak = false,
-        Link = url
-    };
-    string collectionName = Utils.ReplaceInvalidChars(url.Split('/').Last());
-    string collectionPath = $"cache/{collectionName}";
-
-    Console.Write($"Loading {collectionName}...");
-    Stopwatch sw = Stopwatch.StartNew();
-    if (!Directory.Exists(collectionPath))
-        Directory.CreateDirectory(collectionPath);
-
-    if (!File.Exists($"{collectionPath}/index.html"))
-        await Utils.DownloadFile(url, $"{collectionPath}/index.html");
-
-    var doc = new HtmlDocument();
-    doc.Load($"{collectionPath}/index.html");
-    var collectionNameFull = doc.DocumentNode.SelectSingleNode("//body/div[2]/div[2]/div/div[2]/h1").InnerText;
-    collection.Name = HttpUtility.HtmlDecode(collectionNameFull.Trim());
-
-    var contentNodes = doc.DocumentNode.SelectSingleNode("(//body/div[@class=\"container main-content\"]/div[@class=\"row\"])[4]");
-    foreach (var row in contentNodes.ChildNodes)
-    {
-        if (row.InnerHtml.Contains("Knives"))
-            continue;
-        else if (row.InnerHtml.Contains("<script>"))
-            continue;
-        else if (row.InnerHtml.Contains("https://csgostash.com/skin"))
-        {
-            string name = "";
-            string rarity = "";
-
-            foreach (var child in row.ChildNodes[1].ChildNodes)
-            {
-                if (child.Name == "#text")
-                    continue;
-
-                if (child.Name == "h3")
-                {
-                    name = child.InnerText;
-                }
-                else if (child.Name == "div" && child.GetAttributeValue("class", "") == "stattrak")
-                {
-                    collection.CanBeStattrak = true;
-                }
-                else if (child.Name == "a")
-                {
-                    string href = child.GetAttributeValue("href", "");
-                    if (href.Contains("https://csgostash.com/skin-rarity/"))
-                    {
-                        rarity = href.Replace("https://csgostash.com/skin-rarity/", "");
-                    }
-                    else if (href.Contains("https://csgostash.com/skin/"))
-                    {
-                        collection.Skins.Add(await LoadSkin(href, collectionPath, name, rarity));
-                    }
-                }
-            }
-        }
-    }
-
-    collection.HighestRarity = collection.Skins.First().Rarity;
-    collection.LowestRarity = collection.Skins.Last().Rarity;
-
-    sw.Stop();
-    Console.WriteLine($" Done in {sw.Elapsed.TotalSeconds.ToString("0.00", CultureInfo.InvariantCulture)}s");
-    return collection;
-}
-
-static async Task<Skin> LoadSkin(string url, string path, string name, string rarity)
-{
-    Skin skin = new()
-    {
-        Name = name,
-        Rarity = rarity.Replace("+Grade", "")
-    };
-
-    string skinFileName = Utils.ReplaceInvalidChars(url.Split('/').Last());
-    string skinDirPath = $"{path}/items";
-    string skinFilePath = $"{skinDirPath}/{skinFileName}.html";
-
-    if (!Directory.Exists(skinDirPath))
-        Directory.CreateDirectory(skinDirPath);
-
-    if (!File.Exists(skinFilePath))
-        await Utils.DownloadFile(url, skinFilePath);
-
-    var doc = new HtmlDocument();
-    doc.Load(skinFilePath);
-
-    var containerNode = doc.DocumentNode.SelectSingleNode(
-        "//body/div[@class=\"container main-content\"]/div[@class=\"row text-center\"]" +
-        "/div[@class=\"col-md-10\"]/div/div[@class=\"col-md-5 col-widen text-center\"]" +
-        "/div[@class=\"well text-left wear-well\"]/div/div/div"
-    );
-
-    var minWearNode = containerNode.ChildNodes[1].InnerText.Trim();
-    var maxWearNode = containerNode.ChildNodes[3].InnerText.Trim();
-
-    skin.MinWear = float.Parse(minWearNode, CultureInfo.InvariantCulture);
-    skin.MaxWear = float.Parse(maxWearNode, CultureInfo.InvariantCulture);
-
-    return skin;
-}
+// Save result
+File.WriteAllText("SkinList.json", JsonConvert.SerializeObject(collections, Formatting.Indented));
