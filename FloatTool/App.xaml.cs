@@ -16,6 +16,7 @@
 */
 
 using DiscordRPC;
+using FloatTool.Common;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -31,7 +32,7 @@ using System.Windows.Threading;
 
 namespace FloatTool
 {
-    public partial class App : Application
+	public partial class App : Application
     {
         public static ResourceDictionary ThemeDictionary { get; set; }
 

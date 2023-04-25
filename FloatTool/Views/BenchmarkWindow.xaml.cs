@@ -15,6 +15,8 @@
 - along with this program. If not, see <https://www.gnu.org/licenses/>.
 */
 
+using FloatTool.Common;
+using FloatTool.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -27,7 +29,7 @@ using System.Windows.Input;
 
 namespace FloatTool
 {
-    public sealed partial class BenchmarkWindow : Window
+	public sealed partial class BenchmarkWindow : Window
     {
         public BenchmarkViewModel Context;
         private static long PassedCombinations;
@@ -83,8 +85,7 @@ namespace FloatTool
             InputSkin[] resultList = new InputSkin[10];
             bool running = true;
 
-            for (int i = 0; i < options.ThreadID; i++)
-                running = Calculations.NextCombination(numbers, size);
+            running = Calculations.NextCombination(numbers, size, options.ThreadID);
 
             while (running)
             {
@@ -129,8 +130,7 @@ namespace FloatTool
                 Interlocked.Increment(ref PassedCombinations);
 
                 // Get next combination
-                for (int i = 0; i < options.ThreadCount; i++)
-                    running = Calculations.NextCombination(numbers, size);
+                running = Calculations.NextCombination(numbers, size, options.ThreadCount);
             }
 
         }
@@ -142,7 +142,7 @@ namespace FloatTool
             new Thread(() =>
             {
                 Skin[] outcomes = new Skin[] {
-                    new Skin("AK-47 | Safari Mesh", 0.06, 0.8, Skin.Quality.Industrial)
+                    new Skin("AK-47 | Safari Mesh", 0.06, 0.8, Quality.Industrial)
                 };
 
                 double[] pool = {
@@ -155,8 +155,9 @@ namespace FloatTool
                     0.157685652375221, 0.217334255576134, 0.217334255576134,
                     0.157685652375221, 0.217334255576134, 0.217334255576134,
                     0.157685652375221, 0.217334255576134, 0.217334255576134,
-                    0.157685652375221, 0.217334255576134, 0.217334255576134
-                };
+                    0.157685652375221, 0.217334255576134, 0.217334255576134,
+					0.157685652375221, 0.217334255576134, 0.217334255576134,
+				};
 
                 List<InputSkin> inputSkinsList = new();
                 foreach (double f in pool)
@@ -182,27 +183,51 @@ namespace FloatTool
                 int threads = Context.ThreadCount;
 
                 long startTime = Stopwatch.GetTimestamp();
+				ParallelLoopResult? parallel = null;
 
-                try
-                {
-                    for (int i = 0; i < threads; i++)
+				try
+				{
+                    if (AppHelpers.Settings.UseParallel)
                     {
-                        int startIndex = i;
-                        Task newThread = Task.Factory.StartNew(() => FloatCraftWorkerThread(
-                            new CraftSearchSetup
+                        Task.Run(() =>
+                        {
+                            parallel = Parallel.For(0, threads, i =>
                             {
-                                SkinPool = inputSkins,
-                                Outcomes = outcomes,
-                                SearchTarget = searched,
-                                TargetPrecision = precission,
-                                SearchFilter = searchFilter,
-                                SearchMode = SearchMode.Equal,
-                                ThreadID = startIndex,
-                                ThreadCount = threads,
-                            }
-                        ));
-                        threadPool.Add(newThread);
+                                FloatCraftWorkerThread(new CraftSearchSetup
+                                {
+                                    SkinPool = inputSkins,
+                                    Outcomes = outcomes,
+                                    SearchTarget = searched,
+                                    TargetPrecision = precission,
+                                    SearchFilter = searchFilter,
+                                    SearchMode = SearchMode.Equal,
+                                    ThreadID = i,
+                                    ThreadCount = threads,
+                                });
+                            });
+                        });
                     }
+                    else
+                    {
+						for (int i = 0; i < threads; i++)
+						{
+							int startIndex = i;
+							Task newThread = Task.Factory.StartNew(() => FloatCraftWorkerThread(
+								new CraftSearchSetup
+								{
+									SkinPool = inputSkins,
+									Outcomes = outcomes,
+									SearchTarget = searched,
+									TargetPrecision = precission,
+									SearchFilter = searchFilter,
+									SearchMode = SearchMode.Equal,
+									ThreadID = startIndex,
+									ThreadCount = threads,
+								}
+							));
+							threadPool.Add(newThread);
+						}
+					}
                 }
                 catch (Exception ex)
                 {
@@ -211,15 +236,27 @@ namespace FloatTool
 
                 while (true)
                 {
-                    bool isAnyRunning = false;
-                    foreach (Task t in CollectionsMarshal.AsSpan(threadPool))
+                    bool isAnyRunning;
+					if (AppHelpers.Settings.UseParallel)
                     {
-                        if (t.Status != TaskStatus.RanToCompletion)
-                        {
-                            isAnyRunning = true;
-                            break;
-                        }
-                    }
+						isAnyRunning = true;
+						if (parallel.HasValue)
+						{
+							isAnyRunning = !parallel.Value.IsCompleted;
+						}
+					}
+                    else
+                    {
+						isAnyRunning = false;
+						foreach (Task t in CollectionsMarshal.AsSpan(threadPool))
+						{
+							if (t.Status != TaskStatus.RanToCompletion)
+							{
+								isAnyRunning = true;
+								break;
+							}
+						}
+					}
 
                     Context.ProgressPercentage = (int)(PassedCombinations * 100 / Context.TotalCombinations);
 

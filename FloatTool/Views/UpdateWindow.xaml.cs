@@ -15,6 +15,7 @@
 - along with this program. If not, see <https://www.gnu.org/licenses/>.
 */
 
+using FloatTool.Common;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -27,7 +28,7 @@ using System.Windows.Input;
 
 namespace FloatTool
 {
-    public sealed partial class UpdateWindow : Window
+	public sealed partial class UpdateWindow : Window
     {
         public UpdateResult UpdateResult;
 

@@ -15,6 +15,8 @@
 - along with this program. If not, see <https://www.gnu.org/licenses/>.
 */
 
+using FloatTool.Common;
+using FloatTool.ViewModels;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -23,7 +25,7 @@ using System.Windows.Input;
 
 namespace FloatTool
 {
-    public sealed partial class SettingsWindow : Window
+	public sealed partial class SettingsWindow : Window
     {
         public SettingsWindow()
         {

@@ -15,56 +15,81 @@
 - along with this program. If not, see <https://www.gnu.org/licenses/>.
 */
 
-using System.Collections.Generic;
 using System.Numerics;
 
-namespace FloatTool
+namespace FloatTool.Common
 {
-    static public class Calculations
-    {
-        public static double Craft(InputSkin[] ingridients, double minFloat, double floatRange)
-        {
-            return floatRange * (ingridients[0].WearValue
-                + ingridients[1].WearValue
-                + ingridients[2].WearValue
-                + ingridients[3].WearValue
-                + ingridients[4].WearValue
-                + ingridients[5].WearValue
-                + ingridients[6].WearValue
-                + ingridients[7].WearValue
-                + ingridients[8].WearValue
-                + ingridients[9].WearValue) + minFloat;
-        }
+	static public class Calculations
+	{
+		public static double Craft(InputSkin[] ingridients, double minFloat, double floatRange)
+		{
+			return floatRange * (ingridients[0].WearValue
+				+ ingridients[1].WearValue
+				+ ingridients[2].WearValue
+				+ ingridients[3].WearValue
+				+ ingridients[4].WearValue
+				+ ingridients[5].WearValue
+				+ ingridients[6].WearValue
+				+ ingridients[7].WearValue
+				+ ingridients[8].WearValue
+				+ ingridients[9].WearValue) + minFloat;
+		}
 
-        public static bool NextCombination(int[] num, int n)
-        {
-            bool finished = false;
-            for (int i = 9; !finished; --i)
-            {
-                if (num[i] < n + i)
-                {
-                    ++num[i];
-                    if (i < 9)
-                        for (int j = i + 1; j < 10; ++j)
-                            num[j] = num[j - 1] + 1;
-                    return true;
-                }
-                finished = i == 0;
-            }
-            return false;
-        }
-        
-        public static long GetCombinationsCount(int poolSize)
-        {
-            BigInteger fact1 = poolSize;
-            for (int i = poolSize - 1; i > 10; i--)
-                fact1 *= i;
+		public static bool NextCombination(int[] num, int n)
+		{
+			bool finished = false;
+			for (int i = 9; !finished; --i)
+			{
+				if (num[i] < n + i)
+				{
+					++num[i];
+					if (i < 9)
+						for (int j = i + 1; j < 10; ++j)
+							num[j] = num[j - 1] + 1;
+					return true;
+				}
+				finished = i == 0;
+			}
+			return false;
+		}
 
-            BigInteger fact2 = poolSize - 10;
-            for (int i = poolSize - 11; i > 1; i--)
-                fact2 *= i;
+		public static bool NextCombination(int[] arr, int n, int step)
+		{
+			arr[9] += step;
+			if (arr[9] < n + 10) return true;
+			else
+			{
+			fix_loop:
+				int overflow = arr[9] - (n + 10);
+				for (int i = 9; i >= 0; --i)
+				{
+					if (arr[i] < n + i)
+					{
+						++arr[i];
+						for (int j = i + 1; j < 10; ++j)
+							arr[j] = arr[j - 1] + 1;
 
-            return (long)(fact1 / fact2);
-        }
-    }
+						arr[9] += overflow;
+
+						if (arr[9] < n + 10) return true;
+						else goto fix_loop;
+					}
+				}
+				return false;
+			}
+		}
+
+		public static long GetCombinationsCount(int poolSize)
+		{
+			BigInteger fact1 = poolSize;
+			for (int i = poolSize - 1; i > 10; i--)
+				fact1 *= i;
+
+			BigInteger fact2 = poolSize - 10;
+			for (int i = poolSize - 11; i > 1; i--)
+				fact2 *= i;
+
+			return (long)(fact1 / fact2);
+		}
+	}
 }

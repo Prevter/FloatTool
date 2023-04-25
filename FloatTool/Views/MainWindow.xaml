@@ -21,6 +21,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:FloatTool"
+    xmlns:models="clr-namespace:FloatTool.ViewModels"
     xmlns:theme="clr-namespace:FloatTool.Theme" 
     mc:Ignorable="d" KeyUp="Window_KeyUp"
     MinWidth="875" MinHeight="420" 
@@ -168,9 +169,9 @@
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <RadioButton IsEnabled="{Binding CanEditSettings}" Content="&lt;" Height="30" Margin="1,0" Style="{DynamicResource MainToggleButtonStyle}" FontSize="18" VerticalContentAlignment="Top" VerticalAlignment="Top" IsChecked="{Binding SearchModeSelected, Converter={StaticResource enumToBoolConverter}, ConverterParameter={x:Static local:SearchMode.Less}}" />
-                        <RadioButton IsEnabled="{Binding CanEditSettings}" Content="=" Height="30" Margin="1,0" Style="{DynamicResource MainToggleButtonStyle}" FontSize="18" BorderThickness="1" VerticalContentAlignment="Top" VerticalAlignment="Top" IsChecked="{Binding SearchModeSelected, Converter={StaticResource enumToBoolConverter}, ConverterParameter={x:Static local:SearchMode.Equal}}" Grid.Column="1"/>
-                        <RadioButton IsEnabled="{Binding CanEditSettings}" Content="&gt;" Height="30" Margin="1,0" Style="{DynamicResource MainToggleButtonStyle}" FontSize="18" VerticalContentAlignment="Top" VerticalAlignment="Top" IsChecked="{Binding SearchModeSelected, Converter={StaticResource enumToBoolConverter}, ConverterParameter={x:Static local:SearchMode.Greater}}" Grid.Column="2"/>
+                        <RadioButton IsEnabled="{Binding CanEditSettings}" Content="&lt;" Height="30" Margin="1,0" Style="{DynamicResource MainToggleButtonStyle}" FontSize="18" VerticalContentAlignment="Top" VerticalAlignment="Top" IsChecked="{Binding SearchModeSelected, Converter={StaticResource enumToBoolConverter}, ConverterParameter={x:Static models:SearchMode.Less}}" />
+                        <RadioButton IsEnabled="{Binding CanEditSettings}" Content="=" Height="30" Margin="1,0" Style="{DynamicResource MainToggleButtonStyle}" FontSize="18" BorderThickness="1" VerticalContentAlignment="Top" VerticalAlignment="Top" IsChecked="{Binding SearchModeSelected, Converter={StaticResource enumToBoolConverter}, ConverterParameter={x:Static models:SearchMode.Equal}}" Grid.Column="1"/>
+                        <RadioButton IsEnabled="{Binding CanEditSettings}" Content="&gt;" Height="30" Margin="1,0" Style="{DynamicResource MainToggleButtonStyle}" FontSize="18" VerticalContentAlignment="Top" VerticalAlignment="Top" IsChecked="{Binding SearchModeSelected, Converter={StaticResource enumToBoolConverter}, ConverterParameter={x:Static models:SearchMode.Greater}}" Grid.Column="2"/>
                     </Grid>
 
 

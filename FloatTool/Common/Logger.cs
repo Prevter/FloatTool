@@ -22,47 +22,47 @@ using log4net.Layout;
 using log4net.Repository.Hierarchy;
 using System.Reflection;
 
-namespace FloatTool
+namespace FloatTool.Common
 {
-    public sealed class Logger
-    {
-        public static ILog Log { get; } = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+	public sealed class Logger
+	{
+		public static ILog Log { get; } = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
-        public static void Initialize()
-        {
-            Hierarchy hierarchy = (Hierarchy)LogManager.GetRepository();
+		public static void Initialize()
+		{
+			Hierarchy hierarchy = (Hierarchy)LogManager.GetRepository();
 
-            PatternLayout patternLayout = new()
-            {
-                ConversionPattern = "%date [%thread] %-5level - %message%newline"
-            };
-            patternLayout.ActivateOptions();
+			PatternLayout patternLayout = new()
+			{
+				ConversionPattern = "%date [%thread] %-5level - %message%newline"
+			};
+			patternLayout.ActivateOptions();
 
-            RollingFileAppender roller = new()
-            {
-                AppendToFile = false,
-                File = @"logs/log.txt",
-                Layout = patternLayout,
-                MaxSizeRollBackups = 5,
-                MaximumFileSize = "250KB",
-                RollingStyle = RollingFileAppender.RollingMode.Size,
-                StaticLogFileName = true
-            };
-            roller.ActivateOptions();
-            hierarchy.Root.AddAppender(roller);
+			RollingFileAppender roller = new()
+			{
+				AppendToFile = false,
+				File = @"logs/log.txt",
+				Layout = patternLayout,
+				MaxSizeRollBackups = 5,
+				MaximumFileSize = "250KB",
+				RollingStyle = RollingFileAppender.RollingMode.Size,
+				StaticLogFileName = true
+			};
+			roller.ActivateOptions();
+			hierarchy.Root.AddAppender(roller);
 
-            MemoryAppender memory = new();
-            memory.ActivateOptions();
-            hierarchy.Root.AddAppender(memory);
+			MemoryAppender memory = new();
+			memory.ActivateOptions();
+			hierarchy.Root.AddAppender(memory);
 
-            hierarchy.Root.Level = Level.Info;
-            hierarchy.Configured = true;
-        }
+			hierarchy.Root.Level = Level.Info;
+			hierarchy.Configured = true;
+		}
 
-        public static void Debug(object message) => Log.Debug(message);
-        public static void Info(object message) => Log.Info(message);
-        public static void Warn(object message) => Log.Warn(message);
-        public static void Error(object message) => Log.Error(message);
-        public static void Fatal(object message) => Log.Fatal(message);
-    }
+		public static void Debug(object message) => Log.Debug(message);
+		public static void Info(object message) => Log.Info(message);
+		public static void Warn(object message) => Log.Warn(message);
+		public static void Error(object message) => Log.Error(message);
+		public static void Fatal(object message) => Log.Fatal(message);
+	}
 }

@@ -16,12 +16,13 @@
 */
 
 using DiscordRPC;
+using FloatTool.Common;
 using System.Collections.Generic;
 using System.IO;
 
 namespace FloatTool
 {
-    internal static class AppHelpers
+	internal static class AppHelpers
     {
         public static FileSystemWatcher Watcher;
         public static DiscordRpcClient DiscordClient;
