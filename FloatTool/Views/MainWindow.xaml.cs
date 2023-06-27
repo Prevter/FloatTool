@@ -321,13 +321,18 @@ namespace FloatTool
 					{
 						using var client = new HttpClient();
 						HttpResponseMessage response = client.GetAsync(url).Result;
-						response.EnsureSuccessStatusCode();
 						string responseBody = response.Content.ReadAsStringAsync().Result;
+						if (!response.IsSuccessStatusCode)
+						{
+							Logger.Error($"Steam haven't returned a success code: {(int)response.StatusCode} {response.ReasonPhrase}\n{responseBody}");
+							throw new ValueUnavailableException("Steam server returned error.");
+						}
+						
 						dynamic r = JsonConvert.DeserializeObject(responseBody);
 
 						if (r["success"] == false)
 						{
-							Logger.Error($"Steam haven't returned a success code\n{r.ToString()}");
+							Logger.Error($"Steam haven't returned a success code\n{responseBody}");
 							throw new ValueUnavailableException("Steam server returned error.");
 						}
 
@@ -376,6 +381,7 @@ namespace FloatTool
 					catch (ValueUnavailableException)
 					{
 						SetStatus("m_ErrorCouldntGetFloats");
+						UpdateRichPresence(true);
 						Dispatcher.Invoke(
 							new Action(() =>
 							{
@@ -389,12 +395,22 @@ namespace FloatTool
 					{
 						Logger.Log.Error("Error getting floats from marketplace", ex);
 						SetStatus("m_ErrorCouldntGetFloats");
+						UpdateRichPresence(true);
+						Dispatcher.Invoke(
+							new Action(() =>
+							{
+								StartButton.SetResourceReference(ContentProperty, "m_Start");
+								ViewModel.CanEditSettings = true;
+							})
+						);
+						return;
 					}
 
 					if (inputSkinBag.Count < 10)
 					{
 						Logger.Error("Couldn't get more than 10 floats from marketplace");
 						SetStatus("m_ErrorLessThan10");
+						UpdateRichPresence(true);
 						Dispatcher.Invoke(
 							new Action(() =>
 							{
