@@ -1,5 +1,5 @@
 ﻿/*
-- Copyright(C) 2022 Prevter
+- Copyright(C) 2022-2023 Prevter
 -
 - This program is free software: you can redistribute it and/or modify
 - it under the terms of the GNU General Public License as published by
@@ -23,6 +23,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -99,8 +100,21 @@ namespace FloatTool.Common
 
 	public static class Utils
 	{
-		public const string API_URL = "https://prevter.ml/api/floattool";
+		public static string API_URL = "";
+		public static string HOME_URL = "";
 		private static readonly HttpClient Client = new();
+
+		/// <summary>
+		/// Fetches home URL to allow for dynamic updates
+		/// </summary>
+		public static void GetApiUrl()
+		{
+			string global_settings_url = "https://raw.githubusercontent.com/Prevter/Prevter/main/globals.json";
+			string global_settings = Client.GetStringAsync(global_settings_url).Result;
+			dynamic json = JsonConvert.DeserializeObject(global_settings);
+			HOME_URL = json["home_url"] + "floattool";
+			API_URL = json["home_url"] + "api/floattool";
+		}
 
 		public static async Task<double> GetWearFromInspectURL(string inspect_url)
 		{

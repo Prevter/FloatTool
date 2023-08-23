@@ -1,5 +1,5 @@
 ﻿/*
-- Copyright(C) 2022 Prevter
+- Copyright(C) 2022-2023 Prevter
 -
 - This program is free software: you can redistribute it and/or modify
 - it under the terms of the GNU General Public License as published by
@@ -119,10 +119,10 @@ namespace FloatTool
 			switch (e.Key)
 			{
 				case Key.F1:
-					Process.Start(new ProcessStartInfo { FileName = "https://prevter.ml/floattool/table", UseShellExecute = true });
+					Process.Start(new ProcessStartInfo { FileName = $"{Utils.HOME_URL}/table", UseShellExecute = true });
 					break;
 				case Key.F2:
-					Process.Start(new ProcessStartInfo { FileName = "https://prevter.ml/floattool/tools", UseShellExecute = true });
+					Process.Start(new ProcessStartInfo { FileName = $"{Utils.HOME_URL}/tools", UseShellExecute = true });
 					break;
 				case Key.F3:
 					string skin = $"{ViewModel.WeaponName} | {ViewModel.SkinName}";

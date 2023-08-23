@@ -1,5 +1,5 @@
 ﻿/*
-- Copyright(C) 2022 Prevter
+- Copyright(C) 2022-2023 Prevter
 -
 - This program is free software: you can redistribute it and/or modify
 - it under the terms of the GNU General Public License as published by
@@ -112,8 +112,10 @@ namespace FloatTool
                 e.SetObserved();
             };
 
-            //Get path for %AppData%
-            var appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            Utils.GetApiUrl();
+
+			//Get path for %AppData%
+			var appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             var subfolder = "floattool";
             var combined = Path.Combine(appdata, subfolder);
 
