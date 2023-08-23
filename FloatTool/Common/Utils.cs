@@ -120,15 +120,45 @@ namespace FloatTool.Common
 		{
 			string url = AppHelpers.Settings.FloatAPI switch
 			{
-				FloatAPI.SteamInventoryHelper => "https://floats.steaminventoryhelper.com/?url=",
-				_ => "https://api.csgofloat.com/?url=",
+				FloatAPI.SteamInventoryHelper => $"https://floats.steaminventoryhelper.com/?url={inspect_url}",
+				_ => $"https://api.csfloat.com/?url={inspect_url}&minimal=true",
 			};
 
-			var result = await Client.GetAsync(url + inspect_url);
-			result.EnsureSuccessStatusCode();
+			Logger.Info($"Getting float from: {url}");
+
+			var request = new HttpRequestMessage(HttpMethod.Get, url);
+
+			if (AppHelpers.Settings.FloatAPI == FloatAPI.CSFloat) {
+				request.Version = HttpVersion.Version30;
+				request.VersionPolicy = HttpVersionPolicy.RequestVersionExact;
+				
+				request.Headers.Add("authority", "api.csgofloat.com");
+				request.Headers.Add("accept", "*/*");
+				request.Headers.Add("accept-language", "uk");
+				request.Headers.Add("cache-control", "no-cache");
+				request.Headers.Add("origin", "chrome-extension://jjicbefpemnphinccgikpdaagjebbnhg");
+				request.Headers.Add("pragma", "no-cache");
+				request.Headers.Add("sec-fetch-dest", "empty");
+				request.Headers.Add("sec-fetch-mode", "cors");
+				request.Headers.Add("sec-fetch-site", "cross-site");
+				request.Headers.Add("sec-gpc", "1");
+				request.Headers.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36");
+			}
+
+			var result = await Client.SendAsync(request);
 			string response = await result.Content.ReadAsStringAsync();
-			dynamic json = JsonConvert.DeserializeObject(response);
-			return Convert.ToDouble(json["iteminfo"]["floatvalue"]);
+
+			try
+			{
+				result.EnsureSuccessStatusCode();
+				dynamic json = JsonConvert.DeserializeObject(response);
+				return Convert.ToDouble(json["iteminfo"]["floatvalue"]);
+			}
+			catch (Exception ex)
+			{
+				Logger.Log.Warn(response, ex);
+				throw new Exception("Failed to fetch data from API");
+			}
 		}
 
 		public static async Task<UpdateResult> CheckForUpdates()

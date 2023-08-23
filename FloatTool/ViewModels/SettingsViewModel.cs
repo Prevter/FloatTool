@@ -1,5 +1,5 @@
 ﻿/*
-- Copyright(C) 2022 Prevter
+- Copyright(C) 2022-2023 Prevter
 -
 - This program is free software: you can redistribute it and/or modify
 - it under the terms of the GNU General Public License as published by
@@ -182,13 +182,13 @@ namespace FloatTool.ViewModels
 
 		public List<string> FloatAPIList { get; private set; } = new()
 		{
-			"CSGOFloat (api.csgofloat.com)",
+			"CSFloat (api.csfloat.com)",
 			"SIH (floats.steaminventoryhelper.com)"
 		};
 
 		public List<string> ExtensionNames { get; private set; } = new()
 		{
-			"CSGOFloat Market Checker",
+			"CSFloat Market Checker",
 			"Steam Inventory Helper"
 		};
 

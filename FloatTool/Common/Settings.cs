@@ -1,5 +1,5 @@
 ﻿/*
-- Copyright(C) 2022 Prevter
+- Copyright(C) 2022-2023 Prevter
 -
 - This program is free software: you can redistribute it and/or modify
 - it under the terms of the GNU General Public License as published by
@@ -52,13 +52,13 @@ namespace FloatTool.Common
 	// These are currently the same, but that can change later.
 	public enum FloatAPI
 	{
-		CSGOFloat,
+		CSFloat,
 		SteamInventoryHelper
 	}
 
 	public enum ExtensionType
 	{
-		CSGOFloat,
+		CSFloat,
 		SteamInventoryHelper
 	}
 
@@ -87,8 +87,8 @@ namespace FloatTool.Common
 		public bool DiscordRPC { get; set; } = true;
 		public bool UseParallel { get; set; } = false;
 		public int ThreadCount { get; set; } = Environment.ProcessorCount;
-		public FloatAPI FloatAPI { get; set; } = FloatAPI.CSGOFloat;
-		public ExtensionType ExtensionType { get; set; } = ExtensionType.CSGOFloat;
+		public FloatAPI FloatAPI { get; set; } = FloatAPI.CSFloat;
+		public ExtensionType ExtensionType { get; set; } = ExtensionType.CSFloat;
 
 		public void Load()
 		{
