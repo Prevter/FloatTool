@@ -22,20 +22,19 @@ namespace ItemsParser
 	public sealed class ItemParser
 	{
 		// I hate valve for this...
-		string[] ExcludeStattrak = new string[]
+		readonly string[] ExcludeStattrak = new string[]
 		{
 			"Anubis Collection Package"
 		};
-
-		Dictionary<string, dynamic> items_game;
-		Dictionary<string, dynamic> language;
+		readonly Dictionary<string, dynamic> items_game;
+		readonly Dictionary<string, dynamic> language;
 
 		List<PaintKit>? paintKits;
 		List<SkinSet>? lootLists;
 		Dictionary<string, string>? rarities;
-		Dictionary<string, string> translatedWeapons = new();
+		readonly Dictionary<string, string> translatedWeapons = new();
 
-		Regex weaponPaintKitRegex = new(@"\[([a-zA-Z0-9_-]{1,})\]([a-z0-9_]{1,})");
+		readonly Regex weaponPaintKitRegex = new(@"\[([a-zA-Z0-9_-]{1,})\]([a-z0-9_]{1,})");
 
 		public ItemParser(dynamic items_game, dynamic language)
 		{
@@ -296,6 +295,20 @@ namespace ItemsParser
 					string weapon = match.Groups[2].Value;
 					string paintKitName = match.Groups[1].Value;
 					PaintKit paintKit = FindByName(paintKitName)!;
+					string name = $"{GetTranslatedWeaponName(weapon)} | {paintKit.PaintKitName}";
+					bool found = false;
+					foreach (var s in collectionObj.Skins)
+					{
+						if (s.Name == name)
+						{
+							Console.WriteLine($"Duplicate skin {name} found in collection {collection.Name}!");
+							found = true;
+							break;
+						}
+					}
+
+					if (found) continue;
+
 					string rarity = FindRarity(skin, paintKitName);
 
 					if (CompareRarity(rarity, lowestRarity) < 0)
@@ -306,7 +319,7 @@ namespace ItemsParser
 
 					collectionObj.Skins.Add(new Skin
 					{
-						Name = $"{GetTranslatedWeaponName(weapon)} | {paintKit.PaintKitName}",
+						Name = name,
 						Rarity = rarity,
 						MinWear = (float)paintKit.WearRemapMin,
 						MaxWear = (float)paintKit.WearRemapMax,
