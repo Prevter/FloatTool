@@ -47,7 +47,7 @@ namespace FloatTool.ViewModels
 		public DateTime Time { get; set; } = DateTime.Now;
 	}
 
-	public sealed class MainViewModel : INotifyPropertyChanged
+	public sealed class MainViewModel : BaseViewModel
 	{
 		private bool isSearching;
 
@@ -71,6 +71,8 @@ namespace FloatTool.ViewModels
 		private bool sortDescending;
 		private float progressPercentage;
 		private string currentSpeed = "0";
+
+		private double currentMinWear = -1, currentMaxWear = -1;
 
 		private readonly List<string> qualityList = new()
 		{
@@ -131,30 +133,30 @@ namespace FloatTool.ViewModels
 
 		public static string CurrentVersionSubtitle
 		{
-			get { return $"{AppHelpers.VersionCode} by Prevter"; }
+			get => $"{AppHelpers.VersionCode} by Prevter";
 		}
 
 		public int ThreadCount
 		{
-			get { return AppHelpers.Settings.ThreadCount; }
+			get => AppHelpers.Settings.ThreadCount;
 			set { AppHelpers.Settings.ThreadCount = value; OnPropertyChanged(); }
 		}
 
 		public string CombinationsLabel
 		{
-			get { return $"{ParsedCombinations:n0}/{TotalCombinations}"; }
+			get => $"{ParsedCombinations:n0}/{TotalCombinations}";
 			set { OnPropertyChanged(); }
 		}
 
 		public string CurrentSpeedLabel
 		{
-			get { return currentSpeed; }
-			set { currentSpeed = value; OnPropertyChanged(); }
+			get => currentSpeed;
+			set => SetField(ref currentSpeed, value);
 		}
 
 		public string SearchFilter
 		{
-			get { return searchFilter; }
+			get => searchFilter;
 			set
 			{
 				searchFilter = value;
@@ -165,51 +167,43 @@ namespace FloatTool.ViewModels
 
 		public int SkinCount
 		{
-			get { return skinCount; }
-			set
-			{
-				skinCount = value;
-				OnPropertyChanged();
-			}
+			get => skinCount;
+			set => SetField(ref skinCount, value);
 		}
 
 		public int SkinSkipCount
 		{
-			get { return skinSkipCount; }
-			set
-			{
-				skinSkipCount = value;
-				OnPropertyChanged();
-			}
+			get => skinSkipCount;
+			set => SetField(ref skinSkipCount, value);
 		}
 
 		public bool Sort
 		{
-			get { return sort; }
-			set { sort = value; OnPropertyChanged(); }
+			get => sort;
+			set => SetField(ref sort, value);
 		}
 
 		public bool SortDescending
 		{
-			get { return sortDescending; }
-			set { sortDescending = value; OnPropertyChanged(); }
+			get => sortDescending;
+			set => SetField(ref sortDescending, value);
 		}
 
 		public SearchMode SearchModeSelected
 		{
-			get { return searchMode; }
-			set { searchMode = value; OnPropertyChanged(); }
+			get => searchMode;
+			set => SetField(ref searchMode, value);
 		}
 
 		public string FloatRange
 		{
-			get { return floatRange; }
-			set { floatRange = value; OnPropertyChanged(); }
+			get => floatRange;
+			set => SetField(ref floatRange, value);
 		}
 
 		public int OutcomeIndex
 		{
-			get { return outcomeIndex; }
+			get => outcomeIndex;
 			set
 			{
 				outcomeIndex = value;
@@ -220,13 +214,13 @@ namespace FloatTool.ViewModels
 
 		public bool CanEditSettings
 		{
-			get { return !isSearching; }
-			set { isSearching = !value; OnPropertyChanged(); }
+			get => !isSearching;
+			set => SetField(ref isSearching, !value);
 		}
 
 		public string WeaponName
 		{
-			get { return weaponName; }
+			get => weaponName;
 			set
 			{
 				weaponName = value;
@@ -239,7 +233,7 @@ namespace FloatTool.ViewModels
 
 		public string SkinName
 		{
-			get { return skinName; }
+			get => skinName;
 			set
 			{
 				skinName = value;
@@ -251,7 +245,7 @@ namespace FloatTool.ViewModels
 
 		public string SkinQuality
 		{
-			get { return skinQuality; }
+			get => skinQuality;
 			set
 			{
 				skinQuality = value;
@@ -263,7 +257,7 @@ namespace FloatTool.ViewModels
 
 		public bool IsStatTrak
 		{
-			get { return isStatTrak; }
+			get => isStatTrak;
 			set
 			{
 				isStatTrak = value;
@@ -274,42 +268,54 @@ namespace FloatTool.ViewModels
 
 		public string FullSkinName
 		{
-			get { return fullSkinName; }
-			set { fullSkinName = value; OnPropertyChanged(); }
+			get => fullSkinName;
+			set => SetField(ref fullSkinName, value);
 		}
 
-		public List<string> WeaponList { get { return weaponList; } }
+		public List<string> WeaponList { get => weaponList; }
 
 		public List<string> SkinList
 		{
-			get { return skinList; }
-			set { skinList = value; OnPropertyChanged(); }
+			get => skinList;
+			set => SetField(ref skinList, value);
 		}
 
-		public List<string> QualityList { get { return qualityList; } }
+		public List<string> QualityList { get => qualityList; }
 
 		public List<string> OutcomeList
 		{
-			get { return outcomeList; }
-			set { outcomeList = value; OnPropertyChanged(); }
+			get => outcomeList;
+			set => SetField(ref outcomeList, value);
 		}
 
 		public Visibility IsError
 		{
-			get { return isError; }
-			set { isError = value; OnPropertyChanged(); }
+			get => isError;
+			set => SetField(ref isError, value);
 		}
 
 		public Visibility IsErrorFloat
 		{
-			get { return isErrorFloat; }
-			set { isErrorFloat = value; OnPropertyChanged(); }
+			get => isErrorFloat;
+			set => SetField(ref isErrorFloat, value);
 		}
 
 		public float ProgressPercentage
 		{
-			get { return progressPercentage; }
-			set { progressPercentage = value; OnPropertyChanged(); }
+			get => progressPercentage;
+			set => SetField(ref progressPercentage, value);
+		}
+
+		public double CurrentMinWear
+		{
+			get => currentMinWear;
+			set => SetField(ref currentMinWear, value);
+		}
+
+		public double CurrentMaxWear
+		{
+			get => currentMaxWear;
+			set => SetField(ref currentMaxWear, value);
 		}
 
 		public long ParsedCombinations { get; internal set; }
@@ -318,16 +324,13 @@ namespace FloatTool.ViewModels
 		private RelayCommand copyCommand;
 		public RelayCommand CopyCommand
 		{
-			get
+			get => copyCommand ??= new RelayCommand(field =>
 			{
-				return copyCommand ??= new RelayCommand(field =>
-				{
-					var textbox = field as TextBox;
-					Clipboard.SetText(textbox.Text);
-					textbox?.Focus();
-					textbox?.SelectAll();
-				});
-			}
+				var textbox = field as TextBox;
+				Clipboard.SetText(textbox.Text);
+				textbox?.Focus();
+				textbox?.SelectAll();
+			});
 		}
 
 		#endregion
@@ -366,11 +369,20 @@ namespace FloatTool.ViewModels
 
 		private float minCraftWear, maxCraftWear;
 
-		private void UpdateFloatRange()
+		public void UpdateFloatRange()
 		{
 			if (OutcomeIndex > Outcomes.Count - 1)
 			{
 				FloatRange = "No data";
+				return;
+			}
+
+			if (isSearching && currentMinWear != -1)
+			{
+				minCraftWear = (float)currentMinWear;
+				maxCraftWear = (float)currentMaxWear;
+				UpdateFloatError();
+				FloatRange = $"{minCraftWear.ToString("0.00", CultureInfo.InvariantCulture)} - {maxCraftWear.ToString("0.00", CultureInfo.InvariantCulture)}";
 				return;
 			}
 
@@ -560,12 +572,6 @@ namespace FloatTool.ViewModels
 
 			UpdateSkinList();
 			UpdateOutcomes();
-		}
-
-		public event PropertyChangedEventHandler PropertyChanged;
-		private void OnPropertyChanged([CallerMemberName] string name = null)
-		{
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 		}
 	}
 }

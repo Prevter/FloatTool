@@ -17,6 +17,7 @@
 
 using FloatTool.Common;
 using FloatTool.ViewModels;
+using FloatTool.Views;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Concurrent;
@@ -382,13 +383,11 @@ namespace FloatTool
 					{
 						SetStatus("m_ErrorCouldntGetFloats");
 						UpdateRichPresence(true);
-						Dispatcher.Invoke(
-							new Action(() =>
-							{
-								StartButton.SetResourceReference(ContentProperty, "m_Start");
-								ViewModel.CanEditSettings = true;
-							})
-						);
+						Dispatcher.Invoke(new Action(() =>
+						{
+							StartButton.SetResourceReference(ContentProperty, "m_Start");
+							ViewModel.CanEditSettings = true;
+						}));
 						return;
 					}
 					catch (Exception ex)
@@ -435,6 +434,30 @@ namespace FloatTool
 					}
 					InputSkin[] inputSkins = inputSkinList.ToArray();
 					ViewModel.TotalCombinations = Calculations.GetCombinationsCount(inputSkinBag.Count);
+
+					// Check max and min possible floats if searching for one skin
+					if (outcomes.Length == 1)
+					{
+						// Get 10 lowest and 10 highest floats
+						List<InputSkin> sorted = inputSkinList.ToList();
+						sorted.Sort((a, b) => a.CompareTo(b));
+						InputSkin[] best = sorted.Take(10).ToArray();
+						InputSkin[] worst = sorted.TakeLast(10).ToArray();
+
+						// Get min and max floats by running the craft function
+						double minFloat = Calculations.Craft(best, outcomes[0].MinFloat, outcomes[0].FloatRange);
+						double maxFloat = Calculations.Craft(worst, outcomes[0].MinFloat, outcomes[0].FloatRange);
+
+						Dispatcher.Invoke(new Action(() =>
+						{
+							// Set them to datacontext
+							ViewModel.CurrentMinWear = minFloat;
+							ViewModel.CurrentMaxWear = maxFloat;
+
+							// And update the label
+							ViewModel.UpdateFloatRange();
+						}));
+					}
 
 					SetStatus("m_StartingUpSearch");
 
