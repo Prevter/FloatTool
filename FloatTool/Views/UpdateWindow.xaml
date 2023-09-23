@@ -24,7 +24,7 @@
         Width="600" Height="400"
         MinWidth="600" MinHeight="400"
         WindowStartupLocation="CenterScreen" 
-        WindowStyle="None"
+        WindowStyle="None" Title="{DynamicResource m_UpdateAvailable}"
         AllowsTransparency="True"
         Background="Transparent">
     <Window.Effect>

@@ -25,7 +25,7 @@
         Height="396" Width="700"
         MinHeight="396" MinWidth="700"
         WindowStartupLocation="CenterScreen" 
-        WindowStyle="None"
+        WindowStyle="None" Title="{DynamicResource m_Benchmark}"
         AllowsTransparency="True"
         Background="Transparent">
     <Window.Effect>

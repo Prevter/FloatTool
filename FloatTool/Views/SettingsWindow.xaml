@@ -23,7 +23,7 @@
         mc:Ignorable="d" x:Name="settingsWindow"
         Height="310" Width="350"
         WindowStartupLocation="CenterScreen" 
-        WindowStyle="None" 
+        WindowStyle="None" Title="{DynamicResource m_Settings}"
         AllowsTransparency="True" ResizeMode="NoResize"
         Background="Transparent" d:DesignHeight="400">
     <Window.Effect>

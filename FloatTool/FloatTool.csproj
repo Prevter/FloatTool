@@ -1,4 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -7,6 +8,7 @@
     <PlatformTarget>x64</PlatformTarget>
     <Authors>Prevter</Authors>
     <PackageProjectUrl>https://prevter.ml/floattool</PackageProjectUrl>
+    <PackageProjectUrl>https://prevter.tk/floattool</PackageProjectUrl>
     <RepositoryUrl>https://github.com/prevter/floattool</RepositoryUrl>
     <NeutralLanguage>en</NeutralLanguage>
     <AssemblyVersion>1.4.1</AssemblyVersion>
