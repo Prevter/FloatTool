@@ -98,7 +98,7 @@ namespace FloatTool.Common
 			};
 	}
 
-	public static class Utils
+	public static partial class Utils
 	{
 		public static string API_URL = "";
 		public static string HOME_URL = "";
@@ -179,31 +179,17 @@ namespace FloatTool.Common
 			}
 		}
 
+		[GeneratedRegex(@"(?:\d{1,}th Gen)?(?:Genuine)? ?(?'vendor'AMD|Intel|Qualcomm|Samsung|MediaTek)(?:\(R\)|\(r\))? (?'family'[a-zA-Z]*)(?:\(TM\)|\(tm\))?(?'model'.*?)( [a-zA-Z]{1,}-Core| with| CPU @| @|$)")]
+		private static partial Regex CpuNameRegex();
+
 		public static string ShortCpuName(string cpu)
 		{
-			cpu = cpu.Replace("(R)", "");
-			cpu = cpu.Replace("(TM)", "");
-			cpu = cpu.Replace("(tm)", "");
-			cpu = cpu.Replace(" with Radeon Graphics", "");
-			cpu = cpu.Replace(" with Radeon Vega Mobile Gfx", "");
-			cpu = cpu.Replace(" CPU", "");
-			cpu = cpu.Replace(" Processor", "");
-
-			Regex regex = new(@"( \S{1,}-Core)");
-			MatchCollection matches = regex.Matches(cpu);
-			if (matches.Count > 0)
-				foreach (Match match in matches.Cast<Match>())
-					cpu = cpu.Replace(match.Value, "");
-
-			var index = cpu.IndexOf('@');
-			if (index != -1)
-				cpu = cpu[..index];
-
-			index = cpu.IndexOf('(');
-			if (index != -1)
-				cpu = cpu[..index];
-
-			return cpu.Trim();
+			Regex regex = CpuNameRegex();
+			Match match = regex.Match(cpu);
+			string vendor = match.Groups["vendor"].Value;
+			string family = match.Groups["family"].Value;
+			string model = match.Groups["model"].Value;
+			return $"{vendor} {family}{model}";
 		}
 
 		public static string EscapeLocalization(string input)

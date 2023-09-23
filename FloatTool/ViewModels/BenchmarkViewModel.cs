@@ -177,7 +177,7 @@ namespace FloatTool.ViewModels
 							MultithreadedSpeed = Math.Max((int)benchmark.multithread, MultithreadedSpeed);
 							SinglethreadedSpeed = Math.Max((int)benchmark.singlethread, SinglethreadedSpeed);
 						}
-						else if (cpuName.StartsWith("Intel"))
+						else if (cpuName.Contains("Intel"))
 							currentFill = IntelBrush;
 
 						BenchmarkResults.Add(new BenchmarkResult
