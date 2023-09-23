@@ -4,6 +4,9 @@
     <_LastSelectedProfileId>E:\PROJECTS\FloatTool\FloatTool\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="Views\AboutWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\BenchmarkWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -43,6 +46,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Theme\TooltipStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AboutWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\BenchmarkWindow.xaml">

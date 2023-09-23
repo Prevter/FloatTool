@@ -165,6 +165,9 @@ namespace FloatTool
 				case "SettingsButton":
 					new SettingsWindow().ShowDialog();
 					break;
+				case "AboutButton":
+					new AboutWindow().ShowDialog();
+					break;
 			}
 
 			// This will return rich presense to last state and update the language

@@ -89,4 +89,16 @@
     <v:String x:Key="m_UpdateAvailable">Update available</v:String>
     <v:String x:Key="m_Later">Later</v:String>
     <v:String x:Key="m_DoNotAsk">Do not ask</v:String>
+    
+    <!-- About window -->
+    <v:String x:Key="m_About">About</v:String>
+    <v:String x:Key="m_Version">Version:</v:String>
+    <v:String x:Key="m_Author">Author:</v:String>
+    <v:String x:Key="m_License">License:</v:String>
+    <v:String x:Key="m_SourceCode">Source code:</v:String>
+    <v:String x:Key="m_Thanks">Thanks to:</v:String>
+    <v:String x:Key="m_UsedLibraries">Used libraries:</v:String>
+    <v:String x:Key="m_CheckUpdates">Check for updates</v:String>
+    <v:String x:Key="m_DiscordServer">Discord server:</v:String>
+
 </ResourceDictionary>

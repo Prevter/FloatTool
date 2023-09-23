@@ -39,6 +39,7 @@
                 <ResourceDictionary Source="Assets/DiscordLogo.xaml"/>
                 <ResourceDictionary Source="Assets/SettingsIcon.xaml"/>
                 <ResourceDictionary Source="Assets/BenchmarkIcon.xaml"/>
+                <ResourceDictionary Source="Assets/AboutIcon.xaml"/>
                 <ResourceDictionary Source="Assets/ButtonIcons.xaml"/>
                 <!-- Translations -->
                 <ResourceDictionary Source="Languages/Lang.cs.xaml"/>

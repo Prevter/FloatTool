@@ -71,6 +71,9 @@
                 <Button Style="{DynamicResource TopButton}" Click="WindowButton_Click" x:Name="DiscordButton">
                     <Path Stretch="Uniform" Fill="{DynamicResource TopBarButtonsColor}" Data="{DynamicResource DiscordLogo}"/>
                 </Button>
+                <Button Style="{DynamicResource TopButton}" Click="WindowButton_Click" x:Name="AboutButton">
+                    <Path Stretch="Uniform" Fill="{DynamicResource TopBarButtonsColor}" Data="{DynamicResource AboutIcon}"/>
+                </Button>
             </StackPanel>
 
             <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">

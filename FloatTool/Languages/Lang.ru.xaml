@@ -84,4 +84,16 @@
     <v:String x:Key="m_UpdateAvailable">Доступно обновление</v:String>
     <v:String x:Key="m_Later">Позже</v:String>
     <v:String x:Key="m_DoNotAsk">Не напоминать</v:String>
+
+    <!-- About window -->
+    <v:String x:Key="m_About">Информация</v:String>
+    <v:String x:Key="m_Version">Версия:</v:String>
+    <v:String x:Key="m_Author">Автор:</v:String>
+    <v:String x:Key="m_License">Лицензия:</v:String>
+    <v:String x:Key="m_SourceCode">Исходный код:</v:String>
+    <v:String x:Key="m_Thanks">Благодарности:</v:String>
+    <v:String x:Key="m_UsedLibraries">Использованные библиотеки:</v:String>
+    <v:String x:Key="m_CheckUpdates">Проверить обновления</v:String>
+    <v:String x:Key="m_DiscordServer">Discord сервер:</v:String>
+    
 </ResourceDictionary>
