@@ -19,14 +19,14 @@
 ![Program Working](https://github.com/Prevter/FloatTool/blob/master/doc/program.png?raw=true)  
 
 This app allows you to quickly search combinations to craft skins in CS:GO with (almost) any float you want. All you have to do is set some search settings, wait a bit and all you have to do next is to buy skins from marketplace, that the app found to be needed.  
-This is probably the fastest app you can find, as it can achieve more than 15,000,000 combinations per second on an old Ryzen 5 2600.
+This is probably the fastest app you can find, as it can achieve more than 60,000,000 combinations per second on Ryzen 5 5600H.
 
 ## Getting Started
 
 ### Prerequisites
 
 * Windows
-* .NET 6.0 Desktop Runtime. _You can download it here: [https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime)_
+* .NET 7.0 Desktop Runtime. _You can download it here: [https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime](https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime)_
 
 ### Installation
 
@@ -36,9 +36,17 @@ This is probably the fastest app you can find, as it can achieve more than 15,00
 4. Run **FloatTool.exe**
 
 ## Usage
-_Please see [Documentation](https://prevter.github.io/FloatTool/tutorial.html) for complete tutorial in usage_
+_Please see [Documentation](https://prevter.tk/floattool/tutorial) for complete tutorial in usage_
 
 ## Version History
+* 1.5.0
+    * About window which contains links to source code, license, tutorial, discord server and more
+    * Fixed some logging messages for better understanding in case of a problem
+    * Fixed ItemsParser to exclude duplicated items
+    * Made a fix for changing domain name
+    * Fixed issues with CSGOFloat (now CSFloat). Float fetching should work fine
+    * "Craft Range" value now updates to show actual range from loaded items
+    * Fixed short CPU name for new processors
 * 1.4.1
     * Added new Anubis Collection and changed "AWP | Doodle Lore"
     * Rewrote ItemsParser to use game files instead of csgostash.com
