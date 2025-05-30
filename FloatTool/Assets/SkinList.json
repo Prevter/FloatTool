@@ -1,7 +1,1762 @@
 [
   {
+    "Name": "Limited Edition Item",
+    "Link": "https://stash.clash.gg/collection/Limited+Edition+Item",
+    "CanBeStattrak": false,
+    "LowestRarity": "Restricted",
+    "HighestRarity": "Classified",
+    "Skins": [
+      {
+        "Name": "XM1014 | Solitude",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "Desert Eagle | Heat Treated",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      }
+    ]
+  },
+  {
+    "Name": "The Train 2025 Collection",
+    "Link": "https://stash.clash.gg/collection/The+Train+2025+Collection",
+    "CanBeStattrak": false,
+    "LowestRarity": "Industrial",
+    "HighestRarity": "Covert",
+    "Skins": [
+      {
+        "Name": "Galil AR | Green Apple",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.3
+      },
+      {
+        "Name": "P250 | Constructivist",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.35
+      },
+      {
+        "Name": "P90 | Straight Dimes",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "CZ75-Auto | Copper Fiber",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.563291
+      },
+      {
+        "Name": "AUG | Steel Sentinel",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "Nova | Rain Station",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.35
+      },
+      {
+        "Name": "UMP-45 | Late Night Transit",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "XM1014 | Run Run Run",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.746575
+      },
+      {
+        "Name": "Glock-18 | Green Line",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "FAMAS | 2A2F",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.86
+      },
+      {
+        "Name": "Tec-9 | Whiteout",
+        "Rarity": "Restricted",
+        "MinWear": 0.06,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "MAC-10 | Derailment",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "Zeus x27 | Charged Up",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "M4A4 | Hellish",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "MP9 | Latte Rush",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "AWP | LongDog",
+        "Rarity": "Covert",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      }
+    ]
+  },
+  {
+    "Name": "The Radiant Collection",
+    "Link": "https://stash.clash.gg/collection/The+Radiant+Collection",
+    "CanBeStattrak": false,
+    "LowestRarity": "Consumer",
+    "HighestRarity": "Classified",
+    "Skins": [
+      {
+        "Name": "MP7 | Short Ochre",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.746575
+      },
+      {
+        "Name": "SCAR-20 | Short Ochre",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.746575
+      },
+      {
+        "Name": "Dual Berettas | BorDeux",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.8
+      },
+      {
+        "Name": "Five-SeveN | Autumn Thicket",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.636986
+      },
+      {
+        "Name": "MAC-10 | Bronzer",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.8
+      },
+      {
+        "Name": "XM1014 | Canvas Cloud",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "PP-Bizon | Wood Block Camo",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "Nova | Marsh Grass",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.55
+      },
+      {
+        "Name": "G3SG1 | Red Jasper",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.637288
+      },
+      {
+        "Name": "P90 | Desert Halftone",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.65
+      },
+      {
+        "Name": "CZ75-Auto | Pink Pearl",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "MP9 | Multi-Terrain",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "SG 553 | Basket Halftone",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "P250 | Sedimentary",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.68
+      },
+      {
+        "Name": "FAMAS | Grey Ghost",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.637288
+      },
+      {
+        "Name": "Tec-9 | Citric Acid",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "Galil AR | O-Ranger",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.75
+      },
+      {
+        "Name": "M4A4 | Steel Work",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "M4A1-S | Rose Hex",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.5
+      },
+      {
+        "Name": "AWP | Arsenic Spill",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.501961
+      },
+      {
+        "Name": "SSG 08 | Blush Pour",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.678431
+      },
+      {
+        "Name": "P250 | Red Tide",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.75
+      },
+      {
+        "Name": "Glock-18 | Coral Bloom",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.752941
+      },
+      {
+        "Name": "MP9 | Shredded",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "Desert Eagle | Mulberry",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.75
+      },
+      {
+        "Name": "USP-S | Bleeding Edge",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "M4A1-S | Glitched Paint",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.67
+      },
+      {
+        "Name": "AK-47 | Nouveau Rouge",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      }
+    ]
+  },
+  {
+    "Name": "The Boreal Collection",
+    "Link": "https://stash.clash.gg/collection/The+Boreal+Collection",
+    "CanBeStattrak": false,
+    "LowestRarity": "Consumer",
+    "HighestRarity": "Classified",
+    "Skins": [
+      {
+        "Name": "G3SG1 | Green Cell",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.65
+      },
+      {
+        "Name": "M249 | Sage Camo",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "Zeus x27 | Swamp DDPAT",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "AUG | Commando Company",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.65
+      },
+      {
+        "Name": "FAMAS | Palm",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.75
+      },
+      {
+        "Name": "SSG 08 | Green Ceramic",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.75
+      },
+      {
+        "Name": "MP9 | Pine",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "Tec-9 | Raw Ceramic",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.75
+      },
+      {
+        "Name": "Negev | Raw Ceramic",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.75
+      },
+      {
+        "Name": "MAG-7 | Copper Oxide",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.65
+      },
+      {
+        "Name": "P250 | Copper Oxide",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.65
+      },
+      {
+        "Name": "UMP-45 | Green Swirl",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "Dual Berettas | Polished Malachite",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.8
+      },
+      {
+        "Name": "R8 Revolver | Leafhopper",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.65098
+      },
+      {
+        "Name": "MAC-10 | Acid Hex",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.58
+      },
+      {
+        "Name": "SSG 08 | Tiger Tear",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.55
+      },
+      {
+        "Name": "Galil AR | Acid Dart",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "P90 | Mustard Gas",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.63
+      },
+      {
+        "Name": "AK-47 | VariCamo Grey",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.671875
+      },
+      {
+        "Name": "P2000 | Marsh",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "Tec-9 | Garter-9",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "MP5-SD | Gold Leaf",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "MAC-10 | Poplar Thicket",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.68
+      },
+      {
+        "Name": "XM1014 | Copperflage",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "USP-S | Tropical Breeze",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.55
+      },
+      {
+        "Name": "AK-47 | Wintergreen",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.75
+      },
+      {
+        "Name": "M4A4 | Sheet Lightning",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.75
+      },
+      {
+        "Name": "Glock-18 | Glockingbird",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.67
+      },
+      {
+        "Name": "AWP | Green Energy",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 0.75
+      }
+    ]
+  },
+  {
+    "Name": "The Ascent Collection",
+    "Link": "https://stash.clash.gg/collection/The+Ascent+Collection",
+    "CanBeStattrak": false,
+    "LowestRarity": "Consumer",
+    "HighestRarity": "Classified",
+    "Skins": [
+      {
+        "Name": "Sawed-Off | Runoff",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.780822
+      },
+      {
+        "Name": "P90 | Blue Tac",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "P250 | Plum Netting",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "MP5-SD | Lime Hex",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.638225
+      },
+      {
+        "Name": "MP9 | Buff Blue",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "SG 553 | Night Camo",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.795222
+      },
+      {
+        "Name": "R8 Revolver | Cobalt Grip",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.80339
+      },
+      {
+        "Name": "SSG 08 | Grey Smoke",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "Galil AR | Grey Smoke",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "MAC-10 | Storm Camo",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.637288
+      },
+      {
+        "Name": "Tec-9 | Blue Blast",
+        "Rarity": "Consumer",
+        "MinWear": 0.0,
+        "MaxWear": 0.8
+      },
+      {
+        "Name": "XM1014 | Gum Wall Camo",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "Negev | Sour Grapes",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.8
+      },
+      {
+        "Name": "Five-SeveN | Sky Blue",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "Zeus x27 | Electric Blue",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.75
+      },
+      {
+        "Name": "Galil AR | Robin's Egg",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "Nova | Turquoise Pour",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.678431
+      },
+      {
+        "Name": "Dual Berettas | Rose Nacre",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "Glock-18 | Ocean Topo",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "M4A4 | Naval Shred Camo",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "P2000 | Royal Baroque",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "P90 | Reef Grief",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "MP9 | Cobalt Paisley",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.65
+      },
+      {
+        "Name": "FAMAS | Yeti Camo",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "Desert Eagle | Mint Fan",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "AK-47 | Midnight Laminate",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.75
+      },
+      {
+        "Name": "USP-S | Royal Guard",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "M4A1-S | Stratosphere",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 0.8
+      }
+    ]
+  },
+  {
+    "Name": "The Sport & Field Collection",
+    "Link": "https://stash.clash.gg/collection/The+Sport+&+Field+Collection",
+    "CanBeStattrak": false,
+    "LowestRarity": "Industrial",
+    "HighestRarity": "Covert",
+    "Skins": [
+      {
+        "Name": "MP5-SD | Savannah Halftone",
+        "Rarity": "Industrial",
+        "MinWear": 0.25,
+        "MaxWear": 0.75
+      },
+      {
+        "Name": "Tec-9 | Tiger Stencil",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "FAMAS | Half Sleeve",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "AK-47 | Olive Polycam",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.5
+      },
+      {
+        "Name": "PP-Bizon | Cold Cell",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.4
+      },
+      {
+        "Name": "MAG-7 | Wildwood",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "SSG 08 | Zeno",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "P250 | Small Game",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "Nova | Yorkshire",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "USP-S | Alpine Camo",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.68
+      },
+      {
+        "Name": "Five-SeveN | Heat Treated",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "MP9 | Arctic Tri-Tone",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "UMP-45 | Crimson Foil",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.68
+      },
+      {
+        "Name": "Galil AR | Rainbow Spoon",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 0.554422
+      },
+      {
+        "Name": "Glock-18 | AXIA",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "M4A1-S | Fade",
+        "Rarity": "Covert",
+        "MinWear": 0.0,
+        "MaxWear": 0.08
+      }
+    ]
+  },
+  {
+    "Name": "The Overpass 2024 Collection",
+    "Link": "https://stash.clash.gg/collection/The+Overpass+2024+Collection",
+    "CanBeStattrak": false,
+    "LowestRarity": "Industrial",
+    "HighestRarity": "Covert",
+    "Skins": [
+      {
+        "Name": "Five-SeveN | Midnight Paintover",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.5
+      },
+      {
+        "Name": "P90 | Wash me",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.5
+      },
+      {
+        "Name": "MP5-SD | Neon Squeezer",
+        "Rarity": "Industrial",
+        "MinWear": 0.2,
+        "MaxWear": 0.9
+      },
+      {
+        "Name": "M4A1-S | Wash me plz",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.58
+      },
+      {
+        "Name": "Desert Eagle | Tilted",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.75
+      },
+      {
+        "Name": "Negev | Wall Bang",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "Galil AR | Metallic Squeezer",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "MAC-10 | Pipsqueak",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.9
+      },
+      {
+        "Name": "Nova | Wurst Hölle",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "Glock-18 | Teal Graf",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.5
+      },
+      {
+        "Name": "Dual Berettas | Sweet Little Angels",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.82
+      },
+      {
+        "Name": "XM1014 | Monster Melt",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.75
+      },
+      {
+        "Name": "AUG | Eye of Zapems",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.85
+      },
+      {
+        "Name": "AWP | Crakow!",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "Zeus x27 | Dragon Snore",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 0.8
+      },
+      {
+        "Name": "AK-47 | B the Monster",
+        "Rarity": "Covert",
+        "MinWear": 0.0,
+        "MaxWear": 0.8
+      }
+    ]
+  },
+  {
+    "Name": "The Graphic Design Collection",
+    "Link": "https://stash.clash.gg/collection/The+Graphic+Design+Collection",
+    "CanBeStattrak": false,
+    "LowestRarity": "Industrial",
+    "HighestRarity": "Covert",
+    "Skins": [
+      {
+        "Name": "M249 | Spectrogram",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.5
+      },
+      {
+        "Name": "SSG 08 | Halftone Whorl",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.5
+      },
+      {
+        "Name": "FAMAS | Halftone Wash",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.5
+      },
+      {
+        "Name": "MP7 | Astrolabe",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "Galil AR | NV",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.47
+      },
+      {
+        "Name": "P2000 | Coral Halftone",
+        "Rarity": "Industrial",
+        "MinWear": 0.0,
+        "MaxWear": 0.52
+      },
+      {
+        "Name": "SCAR-20 | Wild Berry",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.65
+      },
+      {
+        "Name": "SG 553 | Berry Gel Coat",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.8
+      },
+      {
+        "Name": "AK-47 | Crossfade",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.5
+      },
+      {
+        "Name": "XM1014 | Halftone Shift",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "CZ75-Auto | Slalom",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.57
+      },
+      {
+        "Name": "P90 | Attack Vector",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.55
+      },
+      {
+        "Name": "M4A4 | Polysoup",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.64
+      },
+      {
+        "Name": "Desert Eagle | Starcade",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 0.75
+      },
+      {
+        "Name": "AUG | Lil' Pig",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 0.8
+      },
+      {
+        "Name": "AWP | CMYK",
+        "Rarity": "Covert",
+        "MinWear": 0.0,
+        "MaxWear": 0.8
+      }
+    ]
+  },
+  {
+    "Name": "Fever Case",
+    "Link": "https://stash.clash.gg/case/430/The-Fever-Collection",
+    "CanBeStattrak": true,
+    "LowestRarity": "Mil-Spec",
+    "HighestRarity": "Covert",
+    "Skins": [
+      {
+        "Name": "M4A4 | Choppa",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "MAG-7 | Resupply",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "SSG 08 | Memorial",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "P2000 | Sure Grip",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.9
+      },
+      {
+        "Name": "USP-S | PC-GRN",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.9
+      },
+      {
+        "Name": "MP9 | Nexus",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "XM1014 | Mockingbird",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "Desert Eagle | Serpent Strike",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.57
+      },
+      {
+        "Name": "Zeus x27 | Tosai",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "Nova | Rising Sun",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "Galil AR | Control",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.798995
+      },
+      {
+        "Name": "P90 | Wave Breaker",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.950549
+      },
+      {
+        "Name": "AK-47 | Searing Rage",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "Glock-18 | Shinobu",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "UMP-45 | K.O. Factory",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "FAMAS | Bad Trip",
+        "Rarity": "Covert",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "AWP | Printstream",
+        "Rarity": "Covert",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      }
+    ]
+  },
+  {
+    "Name": "Gallery Case",
+    "Link": "https://stash.clash.gg/case/412/The-Gallery-Collection",
+    "CanBeStattrak": true,
+    "LowestRarity": "Mil-Spec",
+    "HighestRarity": "Covert",
+    "Skins": [
+      {
+        "Name": "USP-S | 027",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "Desert Eagle | Calligraffiti",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "MP5-SD | Statics",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "AUG | Luxe Trim",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.9
+      },
+      {
+        "Name": "M249 | Hypnosis",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "R8 Revolver | Tango",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.851064
+      },
+      {
+        "Name": "SCAR-20 | Trail Blazer",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.702614
+      },
+      {
+        "Name": "M4A4 | Turbine",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.85
+      },
+      {
+        "Name": "Dual Berettas | Hydro Strike",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.801418
+      },
+      {
+        "Name": "MAC-10 | Saibā Oni",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.66
+      },
+      {
+        "Name": "P90 | Randy Rush",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.75
+      },
+      {
+        "Name": "SSG 08 | Rapid Transit",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.75
+      },
+      {
+        "Name": "AK-47 | The Outsiders",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 0.9
+      },
+      {
+        "Name": "P250 | Epicenter",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 0.8
+      },
+      {
+        "Name": "UMP-45 | Neo-Noir",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "Glock-18 | Gold Toof",
+        "Rarity": "Covert",
+        "MinWear": 0.0,
+        "MaxWear": 0.730496
+      },
+      {
+        "Name": "M4A1-S | Vaporwave",
+        "Rarity": "Covert",
+        "MinWear": 0.0,
+        "MaxWear": 0.597321
+      }
+    ]
+  },
+  {
+    "Name": "Kilowatt Case",
+    "Link": "https://stash.clash.gg/case/393/The-Kilowatt-Collection",
+    "CanBeStattrak": true,
+    "LowestRarity": "Mil-Spec",
+    "HighestRarity": "Covert",
+    "Skins": [
+      {
+        "Name": "Dual Berettas | Hideout",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.698529
+      },
+      {
+        "Name": "MAC-10 | Light Box",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "Nova | Dark Sigil",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.698529
+      },
+      {
+        "Name": "SSG 08 | Dezastre",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "Tec-9 | Slag",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.9
+      },
+      {
+        "Name": "UMP-45 | Motorized",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.801418
+      },
+      {
+        "Name": "XM1014 | Irezumi",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.799353
+      },
+      {
+        "Name": "Glock-18 | Block-18",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.671875
+      },
+      {
+        "Name": "M4A4 | Etch Lord",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "Five-SeveN | Hybrid",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "MP7 | Just Smile",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "Sawed-Off | Analog Input",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.61886
+      },
+      {
+        "Name": "M4A1-S | Black Lotus",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "Zeus x27 | Olympus",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 0.67
+      },
+      {
+        "Name": "USP-S | Jawbreaker",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "AWP | Chrome Cannon",
+        "Rarity": "Covert",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "AK-47 | Inheritance",
+        "Rarity": "Covert",
+        "MinWear": 0.0,
+        "MaxWear": 0.797346
+      }
+    ]
+  },
+  {
+    "Name": "Revolution Case",
+    "Link": "https://stash.clash.gg/case/376/The-Revolution-Collection",
+    "CanBeStattrak": true,
+    "LowestRarity": "Mil-Spec",
+    "HighestRarity": "Covert",
+    "Skins": [
+      {
+        "Name": "MAG-7 | Insomnia",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "MP9 | Featherweight",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "SCAR-20 | Fragments",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.78
+      },
+      {
+        "Name": "P250 | Re.built",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.9
+      },
+      {
+        "Name": "MP5-SD | Liquidation",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "SG 553 | Cyberforce",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.9
+      },
+      {
+        "Name": "Tec-9 | Rebel",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "M4A1-S | Emphorosaur-S",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.8
+      },
+      {
+        "Name": "Glock-18 | Umbral Rabbit",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.75
+      },
+      {
+        "Name": "MAC-10 | Sakkaku",
+        "Rarity": "Restricted",
+        "MinWear": 0.21,
+        "MaxWear": 0.79
+      },
+      {
+        "Name": "R8 Revolver | Banana Cannon",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "P90 | Neoqueen",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "UMP-45 | Wild Child",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "P2000 | Wicked Sick",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "AWP | Duality",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 0.8
+      },
+      {
+        "Name": "AK-47 | Head Shot",
+        "Rarity": "Covert",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "M4A4 | Temukau",
+        "Rarity": "Covert",
+        "MinWear": 0.0,
+        "MaxWear": 0.8
+      }
+    ]
+  },
+  {
+    "Name": "Recoil Case",
+    "Link": "https://stash.clash.gg/case/355/The-Recoil-Collection",
+    "CanBeStattrak": true,
+    "LowestRarity": "Mil-Spec",
+    "HighestRarity": "Covert",
+    "Skins": [
+      {
+        "Name": "FAMAS | Meow 36",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "Galil AR | Destroyer",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "M4A4 | Poly Mag",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "MAC-10 | Monkeyflage",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "Negev | Drop Me",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "UMP-45 | Roadblock",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "Glock-18 | Winterized",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "R8 Revolver | Crazy 8",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "M249 | Downtown",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.65
+      },
+      {
+        "Name": "SG 553 | Dragon Tech",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "P90 | Vent Rush",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "Dual Berettas | Flora Carnivora",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "AK-47 | Ice Coaled",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 0.77
+      },
+      {
+        "Name": "P250 | Visions",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "Sawed-Off | Kiss♥Love",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "USP-S | Printstream",
+        "Rarity": "Covert",
+        "MinWear": 0.0,
+        "MaxWear": 0.85
+      },
+      {
+        "Name": "AWP | Chromatic Aberration",
+        "Rarity": "Covert",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      }
+    ]
+  },
+  {
+    "Name": "Dreams & Nightmares Case",
+    "Link": "https://stash.clash.gg/case/339/The-Dreams-&-Nightmares-Collection",
+    "CanBeStattrak": true,
+    "LowestRarity": "Mil-Spec",
+    "HighestRarity": "Covert",
+    "Skins": [
+      {
+        "Name": "Five-SeveN | Scrawl",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "MAC-10 | Ensnared",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.9
+      },
+      {
+        "Name": "MAG-7 | Foresight",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "MP5-SD | Necro Jr.",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "P2000 | Lifted Spirits",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "SCAR-20 | Poultrygeist",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.57
+      },
+      {
+        "Name": "Sawed-Off | Spirit Board",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "PP-Bizon | Space Cat",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.67
+      },
+      {
+        "Name": "G3SG1 | Dream Glade",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "M4A1-S | Night Terror",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "XM1014 | Zombie Offensive",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.5
+      },
+      {
+        "Name": "USP-S | Ticket to Hell",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.76
+      },
+      {
+        "Name": "Dual Berettas | Melondrama",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "FAMAS | Rapid Eye Movement",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "MP7 | Abyssal Apparition",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "AK-47 | Nightwish",
+        "Rarity": "Covert",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "MP9 | Starlight Protector",
+        "Rarity": "Covert",
+        "MinWear": 0.0,
+        "MaxWear": 0.8
+      }
+    ]
+  },
+  {
+    "Name": "Operation Riptide Case",
+    "Link": "https://stash.clash.gg/case/321/The-Operation-Riptide-Collection",
+    "CanBeStattrak": true,
+    "LowestRarity": "Mil-Spec",
+    "HighestRarity": "Covert",
+    "Skins": [
+      {
+        "Name": "AUG | Plague",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.76
+      },
+      {
+        "Name": "Dual Berettas | Tread",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "G3SG1 | Keeping Tabs",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.7
+      },
+      {
+        "Name": "MP7 | Guerrilla",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "PP-Bizon | Lumen",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.77
+      },
+      {
+        "Name": "USP-S | Black Lotus",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 0.9
+      },
+      {
+        "Name": "XM1014 | Watchdog",
+        "Rarity": "Mil-Spec",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "MAG-7 | BI83 Spectrum",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "FAMAS | ZX Spectron",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "Five-SeveN | Boost Protocol",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.41
+      },
+      {
+        "Name": "MP9 | Mount Fuji",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 0.55
+      },
+      {
+        "Name": "M4A4 | Spider Lily",
+        "Rarity": "Restricted",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "MAC-10 | Toybox",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "Glock-18 | Snack Attack",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "SSG 08 | Turbo Peek",
+        "Rarity": "Classified",
+        "MinWear": 0.0,
+        "MaxWear": 0.6
+      },
+      {
+        "Name": "Desert Eagle | Ocean Drive",
+        "Rarity": "Covert",
+        "MinWear": 0.0,
+        "MaxWear": 1.0
+      },
+      {
+        "Name": "AK-47 | Leet Museo",
+        "Rarity": "Covert",
+        "MinWear": 0.0,
+        "MaxWear": 0.65
+      }
+    ]
+  },
+  {
     "Name": "Anubis Collection Package",
-    "Link": "https://csgostash.com/case/378/The-Anubis-Collection",
+    "Link": "https://stash.clash.gg/case/378/The-Anubis-Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Covert",
@@ -123,452 +1878,8 @@
     ]
   },
   {
-    "Name": "Revolution Case",
-    "Link": "https://csgostash.com/case/376/The-Revolution-Collection",
-    "CanBeStattrak": true,
-    "LowestRarity": "Mil-Spec",
-    "HighestRarity": "Covert",
-    "Skins": [
-      {
-        "Name": "MAG-7 | Insomnia",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "MP9 | Featherweight",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "SCAR-20 | Fragments",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 0.78
-      },
-      {
-        "Name": "P250 | Re.built",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 0.9
-      },
-      {
-        "Name": "MP5-SD | Liquidation",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "SG 553 | Cyberforce",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 0.9
-      },
-      {
-        "Name": "Tec-9 | Rebel",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "M4A1-S | Emphorosaur-S",
-        "Rarity": "Restricted",
-        "MinWear": 0.0,
-        "MaxWear": 0.8
-      },
-      {
-        "Name": "Glock-18 | Umbral Rabbit",
-        "Rarity": "Restricted",
-        "MinWear": 0.0,
-        "MaxWear": 0.75
-      },
-      {
-        "Name": "MAC-10 | Sakkaku",
-        "Rarity": "Restricted",
-        "MinWear": 0.21,
-        "MaxWear": 0.79
-      },
-      {
-        "Name": "R8 Revolver | Banana Cannon",
-        "Rarity": "Restricted",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "P90 | Neoqueen",
-        "Rarity": "Restricted",
-        "MinWear": 0.0,
-        "MaxWear": 0.6
-      },
-      {
-        "Name": "UMP-45 | Wild Child",
-        "Rarity": "Classified",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "P2000 | Wicked Sick",
-        "Rarity": "Classified",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "AWP | Duality",
-        "Rarity": "Classified",
-        "MinWear": 0.0,
-        "MaxWear": 0.8
-      },
-      {
-        "Name": "AK-47 | Head Shot",
-        "Rarity": "Covert",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "M4A4 | Temukau",
-        "Rarity": "Covert",
-        "MinWear": 0.0,
-        "MaxWear": 0.8
-      }
-    ]
-  },
-  {
-    "Name": "Recoil Case",
-    "Link": "https://csgostash.com/case/355/The-Recoil-Collection",
-    "CanBeStattrak": true,
-    "LowestRarity": "Mil-Spec",
-    "HighestRarity": "Covert",
-    "Skins": [
-      {
-        "Name": "FAMAS | Meow 36",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "Galil AR | Destroyer",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 0.7
-      },
-      {
-        "Name": "M4A4 | Poly Mag",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "MAC-10 | Monkeyflage",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "Negev | Drop Me",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "UMP-45 | Roadblock",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "Glock-18 | Winterized",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "R8 Revolver | Crazy 8",
-        "Rarity": "Restricted",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "M249 | Downtown",
-        "Rarity": "Restricted",
-        "MinWear": 0.0,
-        "MaxWear": 0.65
-      },
-      {
-        "Name": "SG 553 | Dragon Tech",
-        "Rarity": "Restricted",
-        "MinWear": 0.0,
-        "MaxWear": 0.7
-      },
-      {
-        "Name": "P90 | Vent Rush",
-        "Rarity": "Restricted",
-        "MinWear": 0.0,
-        "MaxWear": 0.7
-      },
-      {
-        "Name": "Dual Berettas | Flora Carnivora",
-        "Rarity": "Restricted",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "AK-47 | Ice Coaled",
-        "Rarity": "Classified",
-        "MinWear": 0.0,
-        "MaxWear": 0.77
-      },
-      {
-        "Name": "P250 | Visions",
-        "Rarity": "Classified",
-        "MinWear": 0.0,
-        "MaxWear": 0.7
-      },
-      {
-        "Name": "Sawed-Off | Kiss♥Love",
-        "Rarity": "Classified",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "USP-S | Printstream",
-        "Rarity": "Covert",
-        "MinWear": 0.0,
-        "MaxWear": 0.85
-      },
-      {
-        "Name": "AWP | Chromatic Aberration",
-        "Rarity": "Covert",
-        "MinWear": 0.0,
-        "MaxWear": 0.7
-      }
-    ]
-  },
-  {
-    "Name": "Dreams & Nightmares Case",
-    "Link": "https://csgostash.com/case/339/The-Dreams-&-Nightmares-Collection",
-    "CanBeStattrak": true,
-    "LowestRarity": "Mil-Spec",
-    "HighestRarity": "Covert",
-    "Skins": [
-      {
-        "Name": "Five-SeveN | Scrawl",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "MAC-10 | Ensnared",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 0.9
-      },
-      {
-        "Name": "MAG-7 | Foresight",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 0.7
-      },
-      {
-        "Name": "MP5-SD | Necro Jr.",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "P2000 | Lifted Spirits",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "SCAR-20 | Poultrygeist",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 0.57
-      },
-      {
-        "Name": "Sawed-Off | Spirit Board",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "PP-Bizon | Space Cat",
-        "Rarity": "Restricted",
-        "MinWear": 0.0,
-        "MaxWear": 0.67
-      },
-      {
-        "Name": "G3SG1 | Dream Glade",
-        "Rarity": "Restricted",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "M4A1-S | Night Terror",
-        "Rarity": "Restricted",
-        "MinWear": 0.0,
-        "MaxWear": 0.7
-      },
-      {
-        "Name": "XM1014 | Zombie Offensive",
-        "Rarity": "Restricted",
-        "MinWear": 0.0,
-        "MaxWear": 0.5
-      },
-      {
-        "Name": "USP-S | Ticket to Hell",
-        "Rarity": "Restricted",
-        "MinWear": 0.0,
-        "MaxWear": 0.76
-      },
-      {
-        "Name": "Dual Berettas | Melondrama",
-        "Rarity": "Classified",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "FAMAS | Rapid Eye Movement",
-        "Rarity": "Classified",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "MP7 | Abyssal Apparition",
-        "Rarity": "Classified",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "AK-47 | Nightwish",
-        "Rarity": "Covert",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "MP9 | Starlight Protector",
-        "Rarity": "Covert",
-        "MinWear": 0.0,
-        "MaxWear": 0.8
-      }
-    ]
-  },
-  {
-    "Name": "Operation Riptide Case",
-    "Link": "https://csgostash.com/case/321/The-Operation-Riptide-Collection",
-    "CanBeStattrak": true,
-    "LowestRarity": "Mil-Spec",
-    "HighestRarity": "Covert",
-    "Skins": [
-      {
-        "Name": "AUG | Plague",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 0.76
-      },
-      {
-        "Name": "Dual Berettas | Tread",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "G3SG1 | Keeping Tabs",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 0.7
-      },
-      {
-        "Name": "MP7 | Guerrilla",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "PP-Bizon | Lumen",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 0.77
-      },
-      {
-        "Name": "USP-S | Black Lotus",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 0.9
-      },
-      {
-        "Name": "XM1014 | Watchdog",
-        "Rarity": "Mil-Spec",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "MAG-7 | BI83 Spectrum",
-        "Rarity": "Restricted",
-        "MinWear": 0.0,
-        "MaxWear": 0.6
-      },
-      {
-        "Name": "FAMAS | ZX Spectron",
-        "Rarity": "Restricted",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "Five-SeveN | Boost Protocol",
-        "Rarity": "Restricted",
-        "MinWear": 0.0,
-        "MaxWear": 0.41
-      },
-      {
-        "Name": "MP9 | Mount Fuji",
-        "Rarity": "Restricted",
-        "MinWear": 0.0,
-        "MaxWear": 0.55
-      },
-      {
-        "Name": "M4A4 | Spider Lily",
-        "Rarity": "Restricted",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "MAC-10 | Toybox",
-        "Rarity": "Classified",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "Glock-18 | Snack Attack",
-        "Rarity": "Classified",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "SSG 08 | Turbo Peek",
-        "Rarity": "Classified",
-        "MinWear": 0.0,
-        "MaxWear": 0.6
-      },
-      {
-        "Name": "Desert Eagle | Ocean Drive",
-        "Rarity": "Covert",
-        "MinWear": 0.0,
-        "MaxWear": 1.0
-      },
-      {
-        "Name": "AK-47 | Leet Museo",
-        "Rarity": "Covert",
-        "MinWear": 0.0,
-        "MaxWear": 0.65
-      }
-    ]
-  },
-  {
     "Name": "The 2021 Vertigo Collection",
-    "Link": "https://csgostash.com/collection/The+2021+Vertigo+Collection",
+    "Link": "https://stash.clash.gg/collection/The+2021+Vertigo+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Covert",
@@ -691,7 +2002,7 @@
   },
   {
     "Name": "The 2021 Train Collection",
-    "Link": "https://csgostash.com/collection/The+2021+Train+Collection",
+    "Link": "https://stash.clash.gg/collection/The+2021+Train+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -802,7 +2113,7 @@
   },
   {
     "Name": "Snakebite Case",
-    "Link": "https://csgostash.com/case/315/The-Snakebite-Collection",
+    "Link": "https://stash.clash.gg/case/315/The-Snakebite-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -913,7 +2224,7 @@
   },
   {
     "Name": "The Ancient Collection",
-    "Link": "https://csgostash.com/collection/The+Ancient+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Ancient+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Covert",
@@ -1036,7 +2347,7 @@
   },
   {
     "Name": "The Havoc Collection",
-    "Link": "https://csgostash.com/collection/The+Havoc+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Havoc+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Covert",
@@ -1159,7 +2470,7 @@
   },
   {
     "Name": "The Control Collection",
-    "Link": "https://csgostash.com/collection/The+Control+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Control+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Covert",
@@ -1282,7 +2593,7 @@
   },
   {
     "Name": "Operation Broken Fang Case",
-    "Link": "https://csgostash.com/case/308/The-Operation-Broken-Fang-Collection",
+    "Link": "https://stash.clash.gg/case/308/The-Operation-Broken-Fang-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -1393,7 +2704,7 @@
   },
   {
     "Name": "Fracture Case",
-    "Link": "https://csgostash.com/case/307/The-Fracture-Collection",
+    "Link": "https://stash.clash.gg/case/307/The-Fracture-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -1504,7 +2815,7 @@
   },
   {
     "Name": "Prisma 2 Case",
-    "Link": "https://csgostash.com/case/303/The-Prisma-2-Collection",
+    "Link": "https://stash.clash.gg/case/303/The-Prisma-2-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -1615,7 +2926,7 @@
   },
   {
     "Name": "The 2021 Mirage Collection",
-    "Link": "https://csgostash.com/collection/The+2021+Mirage+Collection",
+    "Link": "https://stash.clash.gg/collection/The+2021+Mirage+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Covert",
@@ -1738,7 +3049,7 @@
   },
   {
     "Name": "The 2021 Dust 2 Collection",
-    "Link": "https://csgostash.com/collection/The+2021+Dust+2+Collection",
+    "Link": "https://stash.clash.gg/collection/The+2021+Dust+2+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Covert",
@@ -1861,7 +3172,7 @@
   },
   {
     "Name": "CS20 Case",
-    "Link": "https://csgostash.com/case/293/The-CS20-Collection",
+    "Link": "https://stash.clash.gg/case/293/The-CS20-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -1972,7 +3283,7 @@
   },
   {
     "Name": "Shattered Web Case",
-    "Link": "https://csgostash.com/case/277/The-Shattered-Web-Collection",
+    "Link": "https://stash.clash.gg/case/277/The-Shattered-Web-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -2083,7 +3394,7 @@
   },
   {
     "Name": "Prisma Case",
-    "Link": "https://csgostash.com/case/274/The-Prisma-Collection",
+    "Link": "https://stash.clash.gg/case/274/The-Prisma-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -2194,7 +3505,7 @@
   },
   {
     "Name": "Danger Zone Case",
-    "Link": "https://csgostash.com/case/259/The-Danger-Zone-Collection",
+    "Link": "https://stash.clash.gg/case/259/The-Danger-Zone-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -2305,7 +3616,7 @@
   },
   {
     "Name": "The Norse Collection",
-    "Link": "https://csgostash.com/collection/The+Norse+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Norse+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Covert",
@@ -2422,7 +3733,7 @@
   },
   {
     "Name": "The Canals Collection",
-    "Link": "https://csgostash.com/collection/The+Canals+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Canals+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Covert",
@@ -2539,7 +3850,7 @@
   },
   {
     "Name": "The St. Marc Collection",
-    "Link": "https://csgostash.com/collection/The+St.+Marc+Collection",
+    "Link": "https://stash.clash.gg/collection/The+St.+Marc+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Covert",
@@ -2656,7 +3967,7 @@
   },
   {
     "Name": "Horizon Case",
-    "Link": "https://csgostash.com/case/244/The-Horizon-Collection",
+    "Link": "https://stash.clash.gg/case/244/The-Horizon-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -2767,7 +4078,7 @@
   },
   {
     "Name": "Clutch Case",
-    "Link": "https://csgostash.com/case/238/The-Clutch-Collection",
+    "Link": "https://stash.clash.gg/case/238/The-Clutch-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -2878,7 +4189,7 @@
   },
   {
     "Name": "The Blacksite Collection",
-    "Link": "https://csgostash.com/collection/The+Blacksite+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Blacksite+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Restricted",
     "HighestRarity": "Restricted",
@@ -2893,7 +4204,7 @@
   },
   {
     "Name": "Spectrum 2 Case",
-    "Link": "https://csgostash.com/case/220/The-Spectrum-2-Collection",
+    "Link": "https://stash.clash.gg/case/220/The-Spectrum-2-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -3004,7 +4315,7 @@
   },
   {
     "Name": "Operation Hydra Case",
-    "Link": "https://csgostash.com/case/208/The-Operation-Hydra-Collection",
+    "Link": "https://stash.clash.gg/case/208/The-Operation-Hydra-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -3115,7 +4426,7 @@
   },
   {
     "Name": "Spectrum Case",
-    "Link": "https://csgostash.com/case/207/The-Spectrum-Collection",
+    "Link": "https://stash.clash.gg/case/207/The-Spectrum-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -3226,7 +4537,7 @@
   },
   {
     "Name": "Glove Case",
-    "Link": "https://csgostash.com/case/179/The-Glove-Collection",
+    "Link": "https://stash.clash.gg/case/179/The-Glove-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -3337,7 +4648,7 @@
   },
   {
     "Name": "Gamma 2 Case",
-    "Link": "https://csgostash.com/case/172/The-Gamma-2-Collection",
+    "Link": "https://stash.clash.gg/case/172/The-Gamma-2-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -3448,7 +4759,7 @@
   },
   {
     "Name": "Gamma Case",
-    "Link": "https://csgostash.com/case/144/The-Gamma-Collection",
+    "Link": "https://stash.clash.gg/case/144/The-Gamma-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -3559,7 +4870,7 @@
   },
   {
     "Name": "Chroma 3 Case",
-    "Link": "https://csgostash.com/case/141/The-Chroma-3-Collection",
+    "Link": "https://stash.clash.gg/case/141/The-Chroma-3-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -3670,7 +4981,7 @@
   },
   {
     "Name": "X-Ray P250 Package",
-    "Link": "https://csgostash.com/case/292/The-X-Ray-Collection",
+    "Link": "https://stash.clash.gg/case/292/The-X-Ray-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Restricted",
     "HighestRarity": "Restricted",
@@ -3685,7 +4996,7 @@
   },
   {
     "Name": "The 2018 Inferno Collection",
-    "Link": "https://csgostash.com/collection/The+2018+Inferno+Collection",
+    "Link": "https://stash.clash.gg/collection/The+2018+Inferno+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Classified",
@@ -3802,7 +5113,7 @@
   },
   {
     "Name": "The 2018 Nuke Collection",
-    "Link": "https://csgostash.com/collection/The+2018+Nuke+Collection",
+    "Link": "https://stash.clash.gg/collection/The+2018+Nuke+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Classified",
@@ -3919,7 +5230,7 @@
   },
   {
     "Name": "Operation Wildfire Case",
-    "Link": "https://csgostash.com/case/112/The-Wildfire-Collection",
+    "Link": "https://stash.clash.gg/case/112/The-Wildfire-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -4024,7 +5335,7 @@
   },
   {
     "Name": "Revolver Case",
-    "Link": "https://csgostash.com/case/111/The-Revolver-Case-Collection",
+    "Link": "https://stash.clash.gg/case/111/The-Revolver-Case-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -4135,7 +5446,7 @@
   },
   {
     "Name": "Shadow Case",
-    "Link": "https://csgostash.com/case/80/The-Shadow-Collection",
+    "Link": "https://stash.clash.gg/case/80/The-Shadow-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -4240,7 +5551,7 @@
   },
   {
     "Name": "Falchion Case",
-    "Link": "https://csgostash.com/case/50/The-Falchion-Collection",
+    "Link": "https://stash.clash.gg/case/50/The-Falchion-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -4345,7 +5656,7 @@
   },
   {
     "Name": "The Rising Sun Collection",
-    "Link": "https://csgostash.com/collection/The+Rising+Sun+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Rising+Sun+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Covert",
@@ -4450,7 +5761,7 @@
   },
   {
     "Name": "The Chop Shop Collection",
-    "Link": "https://csgostash.com/collection/The+Chop+Shop+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Chop+Shop+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Classified",
@@ -4555,7 +5866,7 @@
   },
   {
     "Name": "The Gods and Monsters Collection",
-    "Link": "https://csgostash.com/collection/The+Gods+and+Monsters+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Gods+and+Monsters+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Covert",
@@ -4648,7 +5959,7 @@
   },
   {
     "Name": "The Cache Collection",
-    "Link": "https://csgostash.com/collection/The+Cache+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Cache+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Industrial",
     "HighestRarity": "Restricted",
@@ -4735,7 +6046,7 @@
   },
   {
     "Name": "The Baggage Collection",
-    "Link": "https://csgostash.com/collection/The+Baggage+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Baggage+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Classified",
@@ -4834,7 +6145,7 @@
   },
   {
     "Name": "The Cobblestone Collection",
-    "Link": "https://csgostash.com/collection/The+Cobblestone+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Cobblestone+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Covert",
@@ -4933,7 +6244,7 @@
   },
   {
     "Name": "The Overpass Collection",
-    "Link": "https://csgostash.com/collection/The+Overpass+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Overpass+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Classified",
@@ -5032,7 +6343,7 @@
   },
   {
     "Name": "The Bank Collection",
-    "Link": "https://csgostash.com/collection/The+Bank+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Bank+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Classified",
@@ -5137,7 +6448,7 @@
   },
   {
     "Name": "The Safehouse Collection",
-    "Link": "https://csgostash.com/collection/The+Safehouse+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Safehouse+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Restricted",
@@ -5236,7 +6547,7 @@
   },
   {
     "Name": "The Lake Collection",
-    "Link": "https://csgostash.com/collection/The+Lake+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Lake+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Restricted",
@@ -5335,7 +6646,7 @@
   },
   {
     "Name": "The Italy Collection",
-    "Link": "https://csgostash.com/collection/The+Italy+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Italy+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Restricted",
@@ -5434,7 +6745,7 @@
   },
   {
     "Name": "The Mirage Collection",
-    "Link": "https://csgostash.com/collection/The+Mirage+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Mirage+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Restricted",
@@ -5533,7 +6844,7 @@
   },
   {
     "Name": "The Train Collection",
-    "Link": "https://csgostash.com/collection/The+Train+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Train+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Restricted",
@@ -5632,7 +6943,7 @@
   },
   {
     "Name": "The Dust 2 Collection",
-    "Link": "https://csgostash.com/collection/The+Dust+2+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Dust+2+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Classified",
@@ -5737,7 +7048,7 @@
   },
   {
     "Name": "The Alpha Collection",
-    "Link": "https://csgostash.com/collection/The+Alpha+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Alpha+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Restricted",
@@ -5842,7 +7153,7 @@
   },
   {
     "Name": "The Assault Collection",
-    "Link": "https://csgostash.com/collection/The+Assault+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Assault+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Restricted",
@@ -5893,7 +7204,7 @@
   },
   {
     "Name": "The Office Collection",
-    "Link": "https://csgostash.com/collection/The+Office+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Office+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Mil-Spec",
@@ -5938,7 +7249,7 @@
   },
   {
     "Name": "The Nuke Collection",
-    "Link": "https://csgostash.com/collection/The+Nuke+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Nuke+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Restricted",
@@ -6001,7 +7312,7 @@
   },
   {
     "Name": "The Militia Collection",
-    "Link": "https://csgostash.com/collection/The+Militia+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Militia+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Classified",
@@ -6076,7 +7387,7 @@
   },
   {
     "Name": "The Inferno Collection",
-    "Link": "https://csgostash.com/collection/The+Inferno+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Inferno+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Mil-Spec",
@@ -6121,7 +7432,7 @@
   },
   {
     "Name": "The Vertigo Collection",
-    "Link": "https://csgostash.com/collection/The+Vertigo+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Vertigo+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Restricted",
@@ -6166,7 +7477,7 @@
   },
   {
     "Name": "The Aztec Collection",
-    "Link": "https://csgostash.com/collection/The+Aztec+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Aztec+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Consumer",
     "HighestRarity": "Mil-Spec",
@@ -6211,7 +7522,7 @@
   },
   {
     "Name": "The Dust Collection",
-    "Link": "https://csgostash.com/collection/The+Dust+Collection",
+    "Link": "https://stash.clash.gg/collection/The+Dust+Collection",
     "CanBeStattrak": false,
     "LowestRarity": "Industrial",
     "HighestRarity": "Restricted",
@@ -6274,7 +7585,7 @@
   },
   {
     "Name": "Chroma 2 Case",
-    "Link": "https://csgostash.com/case/48/The-Chroma-2-Collection",
+    "Link": "https://stash.clash.gg/case/48/The-Chroma-2-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -6373,7 +7684,7 @@
   },
   {
     "Name": "Chroma Case",
-    "Link": "https://csgostash.com/case/38/The-Chroma-Collection",
+    "Link": "https://stash.clash.gg/case/38/The-Chroma-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -6466,7 +7777,7 @@
   },
   {
     "Name": "Operation Vanguard Weapon Case",
-    "Link": "https://csgostash.com/case/29/The-Vanguard-Collection",
+    "Link": "https://stash.clash.gg/case/29/The-Vanguard-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -6559,7 +7870,7 @@
   },
   {
     "Name": "eSports 2014 Summer Case",
-    "Link": "https://csgostash.com/case/19/The-eSports-2014-Summer-Collection",
+    "Link": "https://stash.clash.gg/case/19/The-eSports-2014-Summer-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -6670,7 +7981,7 @@
   },
   {
     "Name": "Operation Breakout Weapon Case",
-    "Link": "https://csgostash.com/case/18/The-Breakout-Collection",
+    "Link": "https://stash.clash.gg/case/18/The-Breakout-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -6763,7 +8074,7 @@
   },
   {
     "Name": "Operation Phoenix Weapon Case",
-    "Link": "https://csgostash.com/case/11/The-Phoenix-Collection",
+    "Link": "https://stash.clash.gg/case/11/The-Phoenix-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -6850,7 +8161,7 @@
   },
   {
     "Name": "CS:GO Weapon Case 3",
-    "Link": "https://csgostash.com/case/10/The-Arms-Deal-3-Collection",
+    "Link": "https://stash.clash.gg/case/10/The-Arms-Deal-3-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -6931,7 +8242,7 @@
   },
   {
     "Name": "Winter Offensive Weapon Case",
-    "Link": "https://csgostash.com/case/7/The-Winter-Offensive-Collection",
+    "Link": "https://stash.clash.gg/case/7/The-Winter-Offensive-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -7018,7 +8329,7 @@
   },
   {
     "Name": "eSports 2013 Winter Case",
-    "Link": "https://csgostash.com/case/5/The-eSports-2013-Winter-Collection",
+    "Link": "https://stash.clash.gg/case/5/The-eSports-2013-Winter-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -7099,7 +8410,7 @@
   },
   {
     "Name": "CS:GO Weapon Case 2",
-    "Link": "https://csgostash.com/case/4/The-Arms-Deal-2-Collection",
+    "Link": "https://stash.clash.gg/case/4/The-Arms-Deal-2-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -7180,7 +8491,7 @@
   },
   {
     "Name": "Operation Bravo Case",
-    "Link": "https://csgostash.com/case/3/The-Bravo-Collection",
+    "Link": "https://stash.clash.gg/case/3/The-Bravo-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -7279,7 +8590,7 @@
   },
   {
     "Name": "eSports 2013 Case",
-    "Link": "https://csgostash.com/case/2/The-eSports-2013-Collection",
+    "Link": "https://stash.clash.gg/case/2/The-eSports-2013-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -7342,7 +8653,7 @@
   },
   {
     "Name": "CS:GO Weapon Case",
-    "Link": "https://csgostash.com/case/1/The-Arms-Deal-Collection",
+    "Link": "https://stash.clash.gg/case/1/The-Arms-Deal-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",
@@ -7405,7 +8716,7 @@
   },
   {
     "Name": "Huntsman Weapon Case",
-    "Link": "https://csgostash.com/case/17/The-Huntsman-Collection",
+    "Link": "https://stash.clash.gg/case/17/The-Huntsman-Collection",
     "CanBeStattrak": true,
     "LowestRarity": "Mil-Spec",
     "HighestRarity": "Covert",

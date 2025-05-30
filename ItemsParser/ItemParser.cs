@@ -271,7 +271,7 @@ namespace ItemsParser
 				if (caseSet is null)
 				{
 					collectionObj.Name = collection.Name;
-					collectionObj.Link = $"https://csgostash.com/collection/{collection.Name.Replace(' ', '+')}";
+					collectionObj.Link = $"https://stash.clash.gg/collection/{collection.Name.Replace(' ', '+')}";
 				}
 				else
 				{
@@ -283,7 +283,7 @@ namespace ItemsParser
 
 					var set = GetLootLists().FirstOrDefault(set => set.Name == caseSet.Name || set.Name == caseSet.ImageInventory, null);
 					var set_id = set is null ? caseSet.Id : set.Id;
-					collectionObj.Link = $"https://csgostash.com/case/{set_id}/{collection.Name.Replace(' ', '-')}";
+					collectionObj.Link = $"https://stash.clash.gg/case/{set_id}/{collection.Name.Replace(' ', '-')}";
 				}
 
 				string lowestRarity = "Contraband";

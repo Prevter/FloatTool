@@ -22,8 +22,8 @@ if (args.Contains("--redownload") || args.Contains("-r")
 || !File.Exists("items_game.vdf") || !File.Exists("csgo_english.vdf"))
 {
 	Console.WriteLine("Downloading files...");
-	await Utils.DownloadFile("https://raw.githubusercontent.com/SteamDatabase/GameTracking-CSGO/master/csgo/scripts/items/items_game.txt", "items_game.vdf");
-	await Utils.DownloadFile("https://raw.githubusercontent.com/SteamDatabase/GameTracking-CSGO/master/csgo/resource/csgo_english.txt", "csgo_english.vdf");
+	await Utils.DownloadFile("https://raw.githubusercontent.com/SteamDatabase/GameTracking-CS2/master/game/csgo/pak01_dir/scripts/items/items_game.txt", "items_game.vdf");
+	await Utils.DownloadFile("https://raw.githubusercontent.com/SteamDatabase/GameTracking-CS2/master/game/csgo/pak01_dir/resource/csgo_english.txt", "csgo_english.vdf");
 }
 
 // Parse game files
