@@ -109,11 +109,13 @@ namespace FloatTool.Common
 		/// </summary>
 		public static void GetApiUrl()
 		{
-			string global_settings_url = "https://raw.githubusercontent.com/Prevter/Prevter/main/globals.json";
-			string global_settings = Client.GetStringAsync(global_settings_url).Result;
-			dynamic json = JsonConvert.DeserializeObject(global_settings);
-			HOME_URL = json["home_url"] + "floattool";
-			API_URL = json["home_url"] + "api/floattool";
+			//string global_settings_url = "https://raw.githubusercontent.com/Prevter/Prevter/main/globals.json";
+			//string global_settings = Client.GetStringAsync(global_settings_url).Result;
+			//dynamic json = JsonConvert.DeserializeObject(global_settings);
+			//HOME_URL = json["home_url"] + "floattool";
+			//API_URL = json["home_url"] + "api/floattool";
+			HOME_URL = "https://prevter.me/floattool";
+			API_URL = "https://api.prevter.me/api/floattool";
 		}
 
 		public static async Task<double> GetWearFromInspectURL(string inspect_url)
@@ -129,9 +131,6 @@ namespace FloatTool.Common
 			var request = new HttpRequestMessage(HttpMethod.Get, url);
 
 			if (AppHelpers.Settings.FloatAPI == FloatAPI.CSFloat) {
-				request.Version = HttpVersion.Version30;
-				request.VersionPolicy = HttpVersionPolicy.RequestVersionExact;
-				
 				request.Headers.Add("authority", "api.csgofloat.com");
 				request.Headers.Add("accept", "*/*");
 				request.Headers.Add("accept-language", "uk");
@@ -142,7 +141,7 @@ namespace FloatTool.Common
 				request.Headers.Add("sec-fetch-mode", "cors");
 				request.Headers.Add("sec-fetch-site", "cross-site");
 				request.Headers.Add("sec-gpc", "1");
-				request.Headers.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36");
+				request.Headers.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36");
 			}
 
 			var result = await Client.SendAsync(request);

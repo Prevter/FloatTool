@@ -1,0 +1,35 @@
+name: Build C# Projects
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build solution
+        run: dotnet build --no-restore --configuration Release
+
+      - name: Publish FloatTool project
+        run: dotnet publish ./FloatTool/FloatTool.csproj --configuration Release /p:PublishProfile=FolderProfile --output ./publish
+
+      - name: Upload published artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: FloatTool-publish
+          path: ./publish
